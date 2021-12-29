@@ -1,10 +1,7 @@
-Welcome to Lumache's documentation!
+Welcome to Mautic documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Mautic** is an open source marketing automation platform that provides you with the greatest level of audience intelligence, thus enabling you to make more meaningful customer connections
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
