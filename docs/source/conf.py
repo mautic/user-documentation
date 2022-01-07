@@ -1,5 +1,14 @@
 # Configuration file for the Sphinx documentation builder.
 
+import sys, os
+import sphinx_rtd_theme
+
+sys.path.append(os.path.abspath('ext'))
+sys.path.append('.')
+
+from links.link import *
+from links import *
+
 # -- Project information
 
 project = 'Mautic Documentation'
