@@ -1,0 +1,2 @@
+Installing from GitHub
+====================
