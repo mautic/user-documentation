@@ -26,11 +26,9 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'xref',
-    'phpdomain',
     'sphinx_rtd_theme',
     'sphinx.ext.viewcode',
-    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autosectionlabel'
 ]
 
 intersphinx_mapping = {
@@ -47,7 +45,6 @@ templates_path = ['_templates']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
