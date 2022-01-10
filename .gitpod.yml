@@ -1,6 +1,6 @@
 tasks:
   - init: |
-      pip3 install -r docs/requirements.txt
+      pip3 install -r requirements.txt
       brew install vale
   - name: Open workspace on welcome page
     command: gp open .vscode/welcome.md
