@@ -16,9 +16,8 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   new
    home/overview.rst
-   home/installing-from-production-package
+   home/installing-from-production-package.rst
    home/installing-from-github.rst
    
    
