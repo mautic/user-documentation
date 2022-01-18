@@ -15,8 +15,10 @@ Contents
  
 .. toctree::
    :maxdepth: 2
-   :caption: home
-   :hidden:
 
-   home/intalling_from_github
+   new
+   home/overview.rst
+   home/installing-from-production-package
+   home/installing-from-github.rst
+   
    
