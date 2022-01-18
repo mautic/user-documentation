@@ -12,8 +12,11 @@ how to :ref:`installation` the project.
 
 Contents
 --------
-
+ 
 .. toctree::
+   :maxdepth: 2
+   :caption: home
+   :hidden:
 
-   usage
-   api
+   home/intalling_from_github
+   
