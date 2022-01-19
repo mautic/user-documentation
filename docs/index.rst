@@ -17,6 +17,7 @@ Contents
    :maxdepth: 2
 
    home/overview.rst
+   home/getting-started.rst
    home/installing-from-production-package.rst
    home/installing-from-github.rst
    
