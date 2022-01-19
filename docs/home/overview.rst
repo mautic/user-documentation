@@ -16,6 +16,8 @@ How it works
 
 Let us understand how the different pieces of Mautic fit together to give you a holistic marketing platform experience.
 
+|
+
 .. image:: images/mautic-overview.png
    :width: 600
    :align: center
