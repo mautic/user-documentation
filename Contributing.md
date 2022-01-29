@@ -64,8 +64,85 @@ Previously GitBook was used to manage the Mautic documentation. However, this be
 1. Send a message on the [Documentation slack channel][mautic-docs-slack] to have your account raised to 'editor' - get a Slack invite [here][mautic-slack-invite].
 1. When logged in, go to the admin panel (ask the team for the link) and make your changes.
 
+### Using GitHub
 
- Mautic documentation is written with [Markdown markup][markup], a simple but flexible text formatting language. The Markdown files are appended with the *.md* extension.
+1. Fork this [GitHub][mautic-docs-github] repository.
+1. Select a file to edit on your fork.
+1. Make your commits.
+1. Open a pull request to `base fork: mautic/mautic-documentation` with `base: master`.
+1. Include and reference any [Issues][doc-issues] your Pull Request addresses. Be sure to write 'closes #0001' if your PR will close an existing issue, so that they are automatically linked.
+
+#### Editing documentation using the command-line
+
+If you want to edit documents using the Git command-line system, read this section. You can also use the GitHub CLI utility that makes working at the command line easy.
+
+1. In the command-line `cd` to where you want the documentation repository to be located.
+1. Clone this repository.
+
+
+ ```console
+ git clone https://github.com/mautic/mautic-documentation.git --origin upstream
+ ```
+
+1. Fork this repository at [GitHub][mautic-docs-github] or use the [`hub`][hub] utility.
+
+    ```console
+    hub fork --remote-name origin
+    ```
+
+1. Once cloning has completed, open the project in the editor of your choice.
+1. Create a new branch for your edits. Please name your branch something descriptive like `{yourusername}-revision-readme-file`
+
+    ```console
+    git checkout -b {yourusername}-revision-readme-file upstream/master
+    ```
+    . Make your changes.
+1. Stage and commit your changes to your _local_ repository.
+
+    ```console
+    git status --short
+    git add <new and modified files>
+    git commit --message 'move contributing to new file'
+    ```
+
+1. Push to `origin`.
+
+    ```console
+    git push origin
+    ```
+
+1. Review the changes at your fork -`https://github.com/{yourusername}/mautic-documentation`.
+1. Submit your pull request using one of these methods:
+   - Direct link - `https://github.com/{yourusername}/mautic-documentation/pull/new/{yourusername}-revision-readme-file`
+   - GitHub web interface - `base fork: mautic/mautic-documentation` and `base: master` at [GitHub][mautic-docs-github]
+   - Use the [`hub`][hub] utility
+
+    ```console
+    hub pull-request
+    ```
+    
+    #### Editing documents in the GitHub browser interface
+
+If you're unfamiliar with the Git command-line but still want to contribute to the Mautic documentation via GitHub, read this section.
+
+Using *README.md* as an example:
+
+1. [Fork][mautic-docs-fork] this repository under your account so you'll have permission to edit.
+1. Select the *README.md* file . Refer to the [Mautic Documentation Repository Structure](#mautic-documentation-repository-structure) section. 
+1. With the content of *README.md* visible, click on the pencil icon to begin editing the file.
+1. After you've made a change, scroll down to the *Commit changes* form. Saving your change requires describing what was changed and why.
+1. Before submitting your commit, select the box for *Creates a new branch* to start a new branch for your change. Name your branch something like `{yourusername}-revision-readme-file`
+1. Select *Propose file change*.
+1. In the next dialogue box, describe what you've changed and why then select *Create pull request* to open a pull request proposing we add your changes to our official repository.
+
+>**Note**: If you are updating more than one file,  then you can select the newly created branch to switch to the branch, and then repeat this process until you have made all the required edits, before creating a pull request.
+
+## Mautic specific information
+
+### Example domain references
+
+
+
 
 
 
