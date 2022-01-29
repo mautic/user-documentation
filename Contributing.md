@@ -139,7 +139,62 @@ Using *README.md* as an example:
 
 ## Mautic specific information
 
-### Example domain references
+### Example domain referencesUse `example.com` as the reference domain for documentation.
+
+For the various installation types, use
+
+- standard Mautic URL example
+
+ ```http
+    https://example.com
+  ```
+
+  - include `www` if relevant
+
+      ```http
+      https://www.example.com
+      ```
+      
+      - Mautic installed as subdomain URL
+
+    ```http
+    https://mautic.example.com
+    ```
+
+- Mautic installed as subdirectory URL
+
+    ```http
+    https://example.com/mautic
+    ```
+
+#### Protocol scheme: http vs https
+
+- Prefer the `https://` protocol in documentation.
+
+    ```http
+    https://example.com
+    ```
+
+- If you need to show both protocols, add brackets around the `(s)`
+
+    ```http
+    http(s)://example.com
+    ```
+    ### Linking to Release versions
+
+- Use an [absolute external link](#absolute-links) to reference the [official released versions][release-list] of [Mautic].  The project adheres to [Semantic Versioning][semver], so all version numbers have three components: `<MAJOR>.<MINOR>.<PATCH>`
+
+- Prefix the version with the word `Mautic` in the text, and the full three-part version number in the link macro.
+  - A `<MAJOR>.<MINOR>` release version without `<PATCHES>` may be used in the text, but still use the full three-part version number in the link.
+- Wrapping the version number in `<code>` backticks "`" is optional.
+
+> Since [Mautic `2.9`][release-2.9.0], when...
+```markdown
+Since [Mautic `2.9`][release-2.9.0], when...
+
+[release-2.9.0]: <https://github.com/mautic/mautic/releases/tag/2.9.0>
+```
+
 
 
 
