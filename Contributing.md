@@ -194,6 +194,68 @@ Since [Mautic `2.9`][release-2.9.0], when...
 
 [release-2.9.0]: <https://github.com/mautic/mautic/releases/tag/2.9.0>
 ```
+#### `latest` version
+
+Avoid using the term _**`current`**_ or _**`latest`**_ if you actually mean _"the currently released version of Mautic that I installed."
+
+In most cases, it has no meaning when a new version is released. Instead, check the [latest release][release-latest] and explicitly use that version number.
+
+Do NOT do this:
+
+> In ~~the [`latest`][release-latest] version of Mautic~~...
+
+DO this instead:
+
+> In [Mautic `2.15.3`][release-2.15.3] ...
+
+```markdown
+> In [Mautic `2.15.3`][release-2.15.3] ...
+
+[release-2.15.3]: <https://github.com/mautic/mautic/releases/tag/2.15.3>
+```
+### References to _leads_ and _lead lists_
+
+Include this **Note** if there are references to outdated terminology that cannot be updated.
+
+> **Note**
+>
+> In this document, there may be references to outdated terminology such as
+>
+> - _leads_,
+> - _lists_ or _lead lists_, and
+> - _anonymous leads_
+>
+> In [Mautic version `1.4`][release-1.4.0],
+>
+> - _leads_ were renamed to _**contacts**_
+> - _lead lists_ were renamed to _**segments**_
+> - _anonymous leads_ were renamed to _**visitors**_
+
+<details><summary>markdown syntax</summary>
+
+##### reference note
+
+```markdown
+> **Note**
+>
+> In this document, there may be references to outdated terminology such as
+>
+> - _leads_,
+> - _lists_ or _lead lists_, and
+> - _anonymous leads_
+>
+> In [Mautic version `1.4`][release-1.4.0],
+>
+> - _leads_ were renamed to _**contacts**_
+> - _lead lists_ were renamed to _**segments**_
+> - _anonymous leads_ were renamed to _**visitors**_
+
+[release-1.4.0]: <https://github.com/mautic/mautic/releases/tag/1.4.0>
+```
+
+</details>
+
+<!-- markdown style links -->
 
 
 
