@@ -6,3 +6,4 @@ sphinx_rtd_theme==1.0.0
 readthedocs-sphinx-search==0.1.0
 snooty-lextudio==1.11.5
 rstcheck==3.3.1
+myst-parser==0.16.1 
