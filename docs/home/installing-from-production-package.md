@@ -1,4 +1,4 @@
-## Installing a production package
+# Installing a production package
 
 The Mautic production package can be installed either by uploading the zipped installation package into the server location or using command line installations. The Mautic production package also requires access to a database server.
 
@@ -10,23 +10,23 @@ The Mautic installation is a three-step process:
 ### Preparing for installation
 
 Before installing a package, ensure that:
-* Your server environment meets the [minimum requirements][minimum-requirements] for the version you are installing. 
+* Your server environment meets the [minimum requirements](https://www.mautic.org/download/requirements) for the version you are installing. 
 * Your server directory is writable by the Mautic web server.
-* Your database meets the [minimum requirements][minimum-requirements] for the supported databases and valid user permissions to access to the database. 
+* Your database meets the [minimum requirements](https://www.mautic.org/download/requirements) for the supported databases and valid user permissions to access to the database. 
 * Your server has enough free disk space to run the installation. Consider the database size as well.
 * PHP's `max_execution_time` is at least 240 seconds.
 
 ## Downloading a production package
 
-Download the latest stable release as a zip file from [mautic.org/download][download-mautic]. 
+Download the latest stable release as a zip file from [mautic.org/download](https://www.mautic.org/download). 
 
-For more information about the available Mautic packages, visit [the Mautic Releases][mautic-releases] page.
+For more information about the available Mautic packages, visit [the Mautic Releases](https://www.mautic.org/mautic-releases) page.
 
 ## Uploading the production package
 
 After downloading a desired package, upload the package zip file to your web server, and unzip it in the directory where the Mautic instance will be hosted.
 
-Your web server must have the permissions to access the unzipped files. For more information on file and folder permissions, visit [this page][file-permissions].
+Your web server must have the permissions to access the unzipped files. For more information on file and folder permissions, visit [this page](troubleshooting/file-ownership-and-permissions).
 
 ### Using the web-based installer
 
@@ -38,7 +38,7 @@ After loading the package in the server, the Mautic installer checks if it can r
 
 Installation errors, displayed in red, must be resolved for completing the Mautic package installation successfully. Warnings, displayed in orange, are often recommendations for a better Mautic experience.
 
-![Screenshot showing Mautic pre-flight checks with warning about installing on a non-SSL connection](mautic-install-pre-flight-check.png)
+![Screenshot showing Mautic pre-flight checks with warning about installing on a non-SSL connection](images/mautic-install-pre-flight-check.png)
 
 If the environment check is successful (green), click **Next Step** to begin the installation process.
 
@@ -54,7 +54,7 @@ For setting the database server on the **Mautic Installation-Database Setup** wi
 * If desired, you can also enter values for **Database Port**, **Database Table Prefix**, **Database Password**, and **Prefix for backup tables**.
 * By default, **Backup existing tables?** is turned on, but you must turn it off for a new installation.
 
-![Screenshot of database configuration screen](mautic-database-configuration.png)
+![Screenshot of database configuration screen](images/mautic-database-configuration.png)
 
 Click **Next Step**.
 
@@ -62,15 +62,15 @@ Click **Next Step**.
 
 To create an administrator account for your Mautic instance, enter values for the different fields on the **Mautic Installation - Administrative User** window. 
 
-![Screenshot showing the create user screen](mautic-create-admin-user.png)
+![Screenshot showing the create user screen](images/mautic-create-admin-user.png)
 
 Click **Next Step**.
 
 ## Configuring email settings
 
-To configure your email settings for your Mautic instance, enter details of your email provider on the **Mautic Installation - Email Configuration** window. You can use a tool such as [Mailhog][mailhog] to configure a local instance for testing. 
+To configure your email settings for your Mautic instance, enter details of your email provider on the **Mautic Installation - Email Configuration** window. You can use a tool such as [Mailhog](https://github.com/mailhog/MailHog) to configure a local instance for testing. 
 
-![Screenshot showing the email configuration screen](mautic-email-configuration.png)
+![Screenshot showing the email configuration screen](images/mautic-email-configuration.png)
 
 For configuring your email sender settings:
 * Enter the name and email address of the user whose credentials will be used by default for all outgoing email communications. Verify that the provided email address has been successfully authorized by your email provider.
@@ -86,7 +86,7 @@ Click **Next Step** to log into the Mautic server.
 
 On the Mautic login window, enter your Mautic administrator credentials to log into your Mautic instance. 
 
-![Screenshot of Mautic login screen](mautic-login-screen.png)
+![Screenshot of Mautic login screen](images/mautic-login-screen.png)
 
 Click **login** to continue working on your Mautic instance.
 
@@ -166,6 +166,7 @@ path/to/php bin/console mautic:install https://m.example.com
 --db_driver="pdo_mysql" --db_host="db" --db_port="3306" --db_name="db" --db_user="db" --db_password="db" 
 --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="mautic"
 ```
+
 As the installation process begins, it flags up warnings and aborts if there are any critical errors.
 
 ```
@@ -187,10 +188,5 @@ Ready to Install!
 Install complete
 ================
 ```
-[download-mautic]: <https://www.mautic.org/download>
-[mautic-releases]: <https://www.mautic.org/mautic-releases>
-[minimum-requirements]: <https://www.mautic.org/download/requirements>
-[file-permissions]: <troubleshooting/file-ownership-and-permissions>
-[mailhog]: <https://github.com/mailhog/MailHog>
 
 You can now login to your Mautic instance with your Mautic admin credentials.
