@@ -20,6 +20,8 @@ version = '0.1.0'
 
 # -- General configuration
 
+source_suffix = ['.rst', '.md']
+
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
@@ -30,6 +32,10 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.autosectionlabel',
     'myst_parser'
+]
+
+myst_enable_extensions = [
+    "linkify",
 ]
 
 intersphinx_mapping = {
