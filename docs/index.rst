@@ -18,7 +18,7 @@ Contents
 
    home/overview.rst
    home/getting-started.rst
-   home/installing-from-production-package.rst
+   home/installing-from-production-package.md
    home/installing-from-github.rst
    
    
