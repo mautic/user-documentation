@@ -3,4 +3,5 @@ Installing from GitHub
 .. autosummary::
    :toctree: generated
 
-   lumache
+   lumachelr;;'l
+   '
