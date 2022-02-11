@@ -1,20 +1,6 @@
----
-title: 'Contributing to the Mautic documentation'
-taxonomy:
-    category:
-        - docs
-twitterenable: true
-twittercardoptions: summary
-articleenabled: false
-orgaenabled: false
-orga:
-    ratingValue: 2.5
-orgaratingenabled: false
-personenabled: false
-facebookenable: true
----
 
----
+# Contributing to the Mautic documentation
+
 
 We welcome contributions to improve and maintain Mautic documentation.
 
@@ -394,13 +380,13 @@ To launch your local Mautic workspace in your browser using Gitpod:
 1. In the browser’s address bar, prefix the entire URL with gitpod.io/# (For example, https://mautic-userdocumentati-gzaubqw95cb.ws-us30.gitpod.io/), and press **Enter**.
 1. Within the Mautic ephemeral developer environment, **'welcome.md'** displays suggesting the next steps.
 
-   ![Screenshot of Gitpod Welcome.md screen](GitpodWelcome.png)
+   ![Screenshot of Gitpod Welcome.md screen](https://github.com/mautic/user-documentation/blob/main/Images/GitpodWelcome.png)
 1. Edit your documents.
 1. To commit your changes, click on the ** source control** icon in the navigation side bar.
 1. On the Source Control page, click on the **checkmark icon** in the header to commit the changes.
 1. Enter a brief description to explain your commits.
 
-   ![Screenshot of Gitpod commit screen](Gitpodsync.png)
+   ![Screenshot of Gitpod commit screen](https://github.com/mautic/user-documentation/blob/main/Images/Gitpodsync.png)
 1. Click **Sync Changes** to push and pull commits from the main origin.
 
 ### Creating a Pull Request
