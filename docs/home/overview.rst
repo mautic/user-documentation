@@ -112,7 +112,3 @@ Analyze trends and assess the performance of your marketing strategy using vario
 - Stages_: A customizable feature that enables you to keep a track of where your Contacts are in their marketing/sales journey
 
 .. _Stages:
-
-.. note::
-
-   Found errors? Think you can improve this documentation? Click on Edit on Github that is located at the top right of the page.

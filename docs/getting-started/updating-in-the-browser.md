@@ -2,7 +2,9 @@
 
 When updating Mautic, there are several tasks which can take a long time to complete depending on the size of your Mautic instance.
 
->>>> If you have a lot of contacts and/or use shared hosting, you might run into problems when updating with the notification 'bell' icon in Mautic. 
+> 🚧 Warning
+>
+> If you have a lot of contacts and/or use shared hosting, you might run into problems when updating with the notification 'bell' icon in Mautic. 
 
 When updating within the browser, problems usually manifest as the update hanging part way through, or crashing with an error. They often arise as a result of resource limitation, particularly on shared hosting environments. 
 
@@ -16,6 +18,9 @@ When Mautic makes a new release, a notification appears in your Mautic instance.
 
 The notification links to an announcement post which explains what the release includes.
 
+> 📘 Tip
+>
+> It's a good idea to read the announcement link for information about the release. There may be important information or steps that you may need to take before updating.
 
 Once you have thoroughly read the release notes, and have tested your backup Mautic instance, you can click the notification to complete the update.
 
@@ -23,6 +28,7 @@ The update takes time to complete, and each step updates in the browser as it pr
 
 ## The update wasn't successful
 
-If this has happened to you, head over to the Update Failed page for a step-by-step walk-through of how to complete the update. Maybe consider using the command line next time.
+If this has happened to you, head over to the [Update Failed][failed-page] page for a step-by-step walk-through of how to complete the update. Maybe consider using the command line next time.
 
 [command-line-update]: </home/updating-in-command-line>
+[failed-page]: </troubleshooting/failed-update>

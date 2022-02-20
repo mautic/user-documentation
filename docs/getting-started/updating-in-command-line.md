@@ -14,7 +14,9 @@ The first step is to find out if there are any updates available using the follo
 
 The output from this command tells you if there are any updates to apply. The notification links to an announcement post which explains what the release includes.
 
->>>>>> It's a good idea to review the announcement link for information about the release. There may be important information or steps that you may need to take before updating.
+> 📘 Tip
+>
+> It's a good idea to review the announcement link for information about the release. There may be important information or steps that you may need to take before updating.
 
 If there are updates available, run the following command to apply them:
 

@@ -16,9 +16,9 @@ Contents
     - [Updating from command line][cli]
     - [Updating in the browser][browser]
 
-[install-github]: </home/installing-from-github>
-[prod-package]: </home/installing-from-production-package>
-[install-composer]: </home/installing-with-composer>
-[update-mautic]: </home/how-to-update-mautic>
-[cli]: </home/updating-in-command-line>
-[browser]: </home/updating-in-the-browser>
+[install-github]: </getting-started/installing-from-github>
+[prod-package]: </getting-started/installing-from-production-package>
+[install-composer]: </getting-started/installing-with-composer>
+[update-mautic]: </getting-started/how-to-update-mautic>
+[cli]: </getting-started/updating-in-command-line>
+[browser]: </getting-started/updating-in-the-browser>
