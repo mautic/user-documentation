@@ -16,11 +16,10 @@ If your instance is in production, has a large number of contacts and/or is  on 
 
 By default, Mautic receives notifications both in the user interface and at the command line for stable releases only.
 
-If you wish to help with testing early access releases in a development environment, please edit your configuration and set the stability level to Alpha, Beta, or Release Candidate. This allows you to receive notifications for early access releases. **Always** read the release notes before updating to an early access release.
-
-> 🚧 *Warning*
->
-> Never enable early access releases for production instances
+If you wish to help with testing early access releases in a development environment, do the following
+- Edit your configuration and set the stability level to Alpha, Beta, or Release Candidate. This allows you to receive notifications for early access releases. 
+- Always read the release notes before updating to an early access release.
+- Never enable early access releases for production instances.
 
 ## What to do if you need help updating Mautic
 
