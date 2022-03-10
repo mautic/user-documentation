@@ -25,16 +25,16 @@ If you wish to help with testing early access releases in a development environm
 
 If you need help, you can ask for it in several places. You should remember that most members of the Community Forums, Slack, and GitHub are volunteers.
 
-[Mautic Community Forums][support-forums] is the place where you can ask questions about your configuration if you think it is the cause of the problem. Please search before posting your question, since someone may have already answered it.
+- [Mautic Community Forums][support-forums] is the place where you can ask questions about your configuration if you think it is the cause of the problem. Please search before posting your question, since someone may have already answered it.
 
-The live [Community Chat][mautic-slack] is also available, but all support requests have to be posted on the forums. Post there first, then drop a link in Slack if you plan to discuss it there.
+- The live [Community Chat][mautic-slack] is also available, but all support requests have to be posted on the forums. Post there first, then drop a link in Slack if you plan to discuss it there.
 
 In all cases, it is important to provide details about the issue, as well as the steps you have taken to resolve it. At a minimum, include the following:
 
 * Steps to reproduce your problem - a step-by-step walk-through of what you have done so far
 * Your server's PHP version.
 * The version of Mautic you are on, and the version you are aiming to update to
-* The error messages you are seeing - if you don't see the error message directly, search for it in the var/logs folder within your Mautic directory and in the server logs. Server logs are in different places depending on your setup. Ubuntu servers generally have logs in /var/log/apache2/error.log. Sometimes your hosting provider might offer a graphical interface to view logs in your Control Panel.
+* The error messages you are seeing - if you don't see the error message directly, search for it in the var/logs folder within your Mautic directory and in the server logs. Server logs are in different places depending on your setup. Ubuntu servers generally have logs in `/var/log/apache2/error.log`. Sometimes your hosting provider might offer a graphical interface to view logs in your Control Panel.
 
 If you don't provide the information requested as a minimum, the person who might try to help you has to ask you for it, so please save them the trouble and provide the information upfront. Also, importantly, please be polite. Mautic is an Open Source project, and people are giving their free time to help you.
 
