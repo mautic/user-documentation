@@ -23,17 +23,18 @@ The update feature within the Mautic user interface (UI) has been deprecated fro
 
 ![Depracted update feature for Mautic 5.0 and less versions ](https://www.mautic.org/sites/default/files/2022-02/update-deprecated.png)
 
-Before starting to upgrade, it is highly recommended take a backup of your instance. If updates are available, you will receive an update notification followed by step-by-step instructions in the CLI to complete the process.
+Before starting to upgrade, it is highly recommended to take a backup of your instance. If updates are available, you will receive an update notification followed by step-by-step instructions in the CLI to complete the process.
 
  To update a Mautic instance: 
 
+1. Backup your Mautic instance.
+   >NOTE: You are strongly advised to back up your Mautic instance before updating it.
 1. Navigate to the Mautic root directory.
 
    ```
     cd /your/mautic/directory
-   ```
-1. Backup your Mautic instance.
-   >NOTE: You are strongly advised to back up your Mautic instance before updating it.
+    ```
+
 1. Check for any available updates.
 
    ```
