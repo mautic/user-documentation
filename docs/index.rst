@@ -17,13 +17,12 @@ Contents
    :maxdepth: 2
 
    home/overview.rst
-   
-
 
 
 .. toctree::
    :caption: Getting Started
    :maxdepth: 2
+   :hidden:
 
    getting_started/getting-started
    getting_started/installing-from-production-package
