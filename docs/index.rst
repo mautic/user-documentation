@@ -25,7 +25,6 @@ Contents
    :caption: Themes
    :maxdepth: 2
 
-   getting-started/overview.rst
-   getting-started/getting-started.rst
-   getting-started/installing-from-production-package.md
-   getting-started/installing-from-github.rst
+   getting_started/getting-started.rst
+   getting_started/installing-from-production-package.md
+   getting_started/installing-from-github.rst
