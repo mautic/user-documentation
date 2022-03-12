@@ -26,3 +26,12 @@ how to :ref:`installation` the project.
    getting_started/getting-started
    getting_started/installing-from-production-package
    getting_started/installing-from-github
+
+.. toctree::
+   :caption: Set Up
+   :maxdepth: 2
+   :hidden:
+
+   getting_started/getting-started
+   getting_started/installing-from-production-package
+   getting_started/installing-from-github
