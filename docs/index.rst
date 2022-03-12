@@ -32,6 +32,6 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :hidden:
 
-   set_up/cron-job
+   set_up/cron-jobs
    set_up/tracking-script
    set_up/maxmind-license
