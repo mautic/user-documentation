@@ -1,5 +1,8 @@
 {
     "restructuredtext.builtDocumentationPath": "${workspaceFolder}/build/html",
     "vale.core.useCLI": true,
-    "restructuredtext.confPath": "${workspaceFolder}/docs"
+    "restructuredtext.confPath": "${workspaceFolder}/docs",
+    "esbonio.server.enabled": true,
+    "esbonio.sphinx.buildDir": "/workspace/user-documentation/build",
+    "esbonio.sphinx.confDir": "/workspace/user-documentation/docs"
 }

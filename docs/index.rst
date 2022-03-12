@@ -17,8 +17,15 @@ Contents
    :maxdepth: 2
 
    home/overview.rst
-   home/getting-started.rst
-   home/installing-from-production-package.md
-   home/installing-from-github.rst
    
-   
+
+
+
+.. toctree::
+   :caption: Themes
+   :maxdepth: 2
+
+   getting-started/overview.rst
+   getting-started/getting-started.rst
+   getting-started/installing-from-production-package.md
+   getting-started/installing-from-github.rst
