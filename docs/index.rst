@@ -22,7 +22,7 @@ Contents
 
 
 .. toctree::
-   :caption: Themes
+   :caption: Getting Started
    :maxdepth: 2
 
    getting_started/getting-started
