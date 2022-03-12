@@ -13,5 +13,5 @@ or install a Mautic integration for the more common Content Management System pl
     mt('send', 'pageview');
    ```
    You should change the site URL,  `example.com/mautic` with the URL to your Mautic instance - in the  example provided, but it's recommended to copy
-   it from the tracking settings in your instance.
+   the whole code block from the tracking settings in your Mautic instance.
   
