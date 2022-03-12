@@ -32,6 +32,6 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :hidden:
 
-   getting_started/getting-started
-   getting_started/installing-from-production-package
-   getting_started/installing-from-github
+   set_up/cron-job
+   set_up/tracking-script
+   set_up/maxmind-license
