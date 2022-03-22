@@ -43,6 +43,6 @@ If you are sure that you have discovered a bug and you want to report it to deve
 
 [command-line-update]: </home/updating-in-command-line>
 [user-interface-update]: </home/updating-in-the-browser>
-[support-forums]: <https://forum.mautic.org/support>
+[support-forums]: <https://forum.mautic.org/c/support/8>
 [mautic-slack]: <https://mautic.org/slack>
 [mautic-github]: <https://github.com/mautic/mautic/issues/new>
