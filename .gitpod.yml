@@ -1,16 +1,17 @@
+# Since Gitpod doesn't support caching custom Dockerfiles yet, we temporarily
+# use this once which has Python 3.9 and Vale preinstalled.
+image: dennisameling/python-vale:latest
+
 tasks:
-  - init: |
-      pip3 install -r requirements.txt
-      brew install vale
-  - name: Open workspace on welcome page
+  - before: pip install -r docs/requirements.txt
     command: gp open .vscode/welcome.md
 
 vscode:
   extensions:
+    - ms-python.python
     - lextudio.restructuredtext
     - trond-snekvik.simple-rst
     - errata-ai.vale-server
-    - ms-python.python
     - eamodio.gitlens
 
 github:
