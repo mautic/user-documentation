@@ -1,8 +1,8 @@
 {
-    "restructuredtext.builtDocumentationPath": "${workspaceFolder}/build/html",
     "vale.core.useCLI": true,
-    "restructuredtext.confPath": "${workspaceFolder}/docs",
     "esbonio.server.enabled": true,
-    "esbonio.sphinx.buildDir": "/workspace/user-documentation/build",
-    "esbonio.sphinx.confDir": "/workspace/user-documentation/docs"
+    "vale.valeCLI.path": "/sphinx-tools/vale/vale",
+    "esbonio.sphinx.buildDir": "${workspaceFolder}/build",
+    "esbonio.sphinx.confDir": "${workspaceFolder}/docs",
+    "restructuredtext.pythonRecommendation.disabled": true
 }
