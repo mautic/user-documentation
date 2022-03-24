@@ -17,7 +17,6 @@ how to :ref:`installation` the project.
 
    home/overview.rst
 
-
 .. toctree::
    :caption: Getting Started
    :maxdepth: 2
@@ -35,3 +34,10 @@ how to :ref:`installation` the project.
    set_up/cron-jobs
    set_up/tracking-script
    set_up/maxmind-license
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Campaigns
+   :hidden:
+
+   campaigns/campaigns_overview
