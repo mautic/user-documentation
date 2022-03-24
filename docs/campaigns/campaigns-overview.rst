@@ -8,23 +8,23 @@ Campaigns are useful for contact management, marketing operations, and sales ena
 One of the main benefits of the Campaign workflow process is the ability to predefine these workflows and have them respond automatically to your Contacts and timelines. This automation minimizes the amount of time required for manual Contact activity and improves reliability of Contact nurturing.
 
 Campaign types
-==============
+--------------
 
 Campaigns can be broadly categorized into three types:
 
 Time driven Campaigns
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Time driven Campaigns are the type of Campaigns that center around specific timed events. These events can be anything, but are usually in the form of Emails. For instance, you can choose to trigger such Email events after a delay of a predefined number of days or on a specific date in the future.
 
 Contact driven Campaigns
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Contact driven Campaigns are used to trigger events based on interactions with specific Contacts. These interactions can occur as a result of the Contact landing on a certain Page, opening an Email, spending a specified amount of time on a website, or any other activities. Such Campaigns can be set up to respond to these actions typically by sending an Email to the Contact either immediately or at a
 specific time in future.
 
 Mixed Campaigns
----------------
+~~~~~~~~~~~~~~~
 
 Mautic allows you to create Campaigns which consist a mix of both time
 driven Campaigns as well as Contact driven actions. This powerful mixed

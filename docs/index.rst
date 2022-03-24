@@ -41,3 +41,4 @@ how to :ref:`installation` the project.
    :hidden:
 
    campaigns/campaigns-overview.rst
+   campaigns/creating-campaigns.rst
