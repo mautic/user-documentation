@@ -1,9 +1,0 @@
-{
-    "recommendations": [
-        "lextudio.restructuredtext",
-        "trond-snekvik.simple-rst",
-        "errata-ai.vale-server",
-        "ms-python.python",
-        "eamodio.gitlens"
-    ]
-}
