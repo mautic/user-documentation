@@ -59,7 +59,7 @@ Add or remove Contacts in batch
 After creating your Campaign, you can add or remove Contacts in batch
 for Campaigns using the following command:
 
-.. code-block:: console
+.. code-block:: shell
 
    php /path/to/mautic/bin/console mautic:campaigns:update
 
