@@ -40,4 +40,4 @@ how to :ref:`installation` the project.
    :caption: Campaigns
    :hidden:
 
-   campaigns/campaigns-overview
+   campaigns/campaigns-overview.rst
