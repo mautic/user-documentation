@@ -3,9 +3,9 @@ How to install Mautic
 
 There are several ways to install Mautic, you should select the most appropriate method for your situation and technical knowledge.
 
-- Installing from the production package, in the browser or at the command line
-- Installing locally by cloning from GitHub - for testing and local development
-- Installing with Composer
+- :ref:`Installing from the production package`, either :ref:`using the web-based installer` or :ref:`installing at the command line<Installing with command line>`,
+- Installing locally by :ref:`cloning from GitHub<Installing from GitHub>` - for testing and local development,
+- :ref:`Installing with Composer`
 
 Installing from the production package
 **************************************
