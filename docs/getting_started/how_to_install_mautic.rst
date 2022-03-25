@@ -25,11 +25,11 @@ Preparing for installation
 
 Before installing a package, ensure that:
 
-* Your server environment meets the minimum requirements for the version you are installing. Read more in :xref:`Mautic's Download Requirements`.
+* Your server environment meets the minimum requirements for the version you are installing. Read more in :xref:`Mautic's Requirements`.
   
 * Your server directory is writable by the Mautic web server.
   
-* Your database meets the minimum requirements for the supported databases and valid user permissions to access to the database. Read more in :xref:`Mautic's Download Requirements`.
+* Your database meets the minimum requirements for the supported databases and valid user permissions to access to the database. Read more in :xref:`Mautic's Requirements`.
   
 * Your server has enough free disk space to run the installation. Consider the database size as well.
   
@@ -247,4 +247,139 @@ TODO
 
 Installing with Composer
 ************************
-TODO
+Since :xref:`Mautic 4.0` it's possible to install and manage Mautic using the full power of Composer. Mautic uses the lastest version of :xref:`Composer`.
+
+Mautic is in the process of decoupling plugins and themes from core, however at present while they have been technically mirrored out into separate repositories, the source files remain in the main :xref:`Mautic GitHub repository`.
+
+When you clone from GitHub, running ``composer install`` installs all the dependencies, there are some other handy features which you can take advantage of when installing and managing Mautic.
+
+Using the Recommended Project
+=============================
+
+The Mautic :xref:`Recommended Project` is a template which provides a starter kit for managing your Mautic dependencies with Composer.
+
+.. note::
+  The instructions below refer to the global composer installation. You might need to replace composer with ``php composer.phar`` or something similar for your setup.
+
+The basic command to use the Recommended Project is:
+
+.. code-block:: shell
+
+  composer create-project mautic/recommended-project:^4 some-dir --no-interaction
+
+With Composer you can be required to download new dependencies to your installation.
+
+.. code-block:: shell
+
+  cd your-directory
+  composer require mautic/mautic-saelos-bundle:~2.0
+
+The Composer ``create-project`` command passes ownership of all files to the created project. You should create a new git repository, and commit all files not excluded by the .gitignore file.
+
+What does the Recommended Project template actually do?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When installing the given composer.json the following occurs:
+
+- Install Mautic in the docroot directory.
+- Autoloader uses the generated composer autoloader in vendor/autoload.php, instead of the one provided by Mautic in docroot/vendor/autoload.php.
+- Plugins - packages of type mautic-plugin - are in docroot/plugins/.
+- Themes - packages of type mautic-theme - are in docroot/themes/.
+- Creates docroot/media directory.
+- Creates environment variables based on your .env file. See .env.example.
+
+Updating Mautic Core
+~~~~~~~~~~~~~~~~~~~~
+
+The Recommended Project attempts to keep all of your Mautic core files up-to-date.
+
+The project ``mautic/core-composer-scaffold`` updates your scaffold files whenever there is an update to ``mautic/core-lib``.
+
+If you customize any of the "scaffolding" files - commonly .htaccess - you may need to merge conflicts if new release of Mautic Core result in changes to your modified files.
+
+Follow the steps below to update your core files.
+
+1 Run ``composer update mautic/core-lib --with-dependencies`` to update Mautic core and its dependencies.
+
+2 Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to .htaccess or others.
+
+3 Commit everything all together in a single commit, so the docroot remains in sync with the core when checking out branches or running git bisect.
+
+4 In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple; keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
+
+5 Run the following commands to update your database with any changes from the release:
+
+.. code-block:: shell
+
+  bin/console cache:clear 
+  bin/console mautic:update:apply --finish 
+  bin/console doctrine:migration:migrate --no-interaction 
+  bin/console doctrine:schema:update --no-interaction --force 
+  bin/console cache:clear
+
+Composer FAQs
+=============
+
+Should you commit downloaded third party plugins?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Composer says that the :xref:`Composer commit dependencies`. They provide arguments against but also workarounds if a project decides to do it anyway.
+
+Should you commit the scaffolding files?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The :xref:`Mautic Composer scaffold` plugin can download the scaffold files - for example index.php, .htaccess - to the docroot/ directory of your project.
+
+
+If you haven't customized those files you could choose to not commit them in your version control system - for example, git. If that's the case for your project it might be convenient to automatically run the Mautic Scaffold plugin after every install or update of your project.
+
+You can achieve that by registering `@composer mautic:scaffold` as post-install and post-update command in your composer.json:
+
+.. code-block:: json
+
+  "scripts": {
+      "post-install-cmd": [
+          "@composer mautic:scaffold",
+          "..."
+      ],
+      "post-update-cmd": [
+          "@composer mautic:scaffold",
+          "..."
+      ]
+  },
+
+How can you apply patches to downloaded plugins?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you need to apply patches - depending on the plugin, a pull request is often a better solution - you can do so with the composer-patches plugin.
+
+To add a patch to Mautic plugin foobar insert the patches section in the extra section of composer.json:
+
+
+.. code-block:: json
+
+  "extra": {
+      "patches": {
+          "mautic/foobar": {
+              "Patch description": "URL or local path to patch"
+          }
+      }
+  }
+
+How can you specify a PHP version?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This project supports PHP 7.4 as the minimum version currently (check :xref:`Mautic's Requirements`), however, it's possible that a Composer update may upgrade some package that could then require PHP 7+ or 8+.
+
+To prevent this you can add this code to specify the PHP version you want to use in the config section of composer.json:
+
+.. code-block:: json
+
+  "config": {
+      "sort-packages": true,
+      "platform": {
+          "php": "7.4"
+      }
+  },
+
+
