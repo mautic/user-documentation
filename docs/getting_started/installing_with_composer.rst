@@ -1,2 +1,0 @@
-Installing with Composer
-===================================

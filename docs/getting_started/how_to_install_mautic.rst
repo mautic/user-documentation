@@ -1,5 +1,5 @@
 How to install Mautic
-=====================
+#####################
 
 There are several ways to install Mautic, you should select the most appropriate method for your situation and technical knowledge.
 
@@ -8,7 +8,7 @@ There are several ways to install Mautic, you should select the most appropriate
 - Installing with Composer
 
 Installing from the production package
---------------------------------------
+**************************************
 
 The Mautic production package can be installed either by uploading the zipped installation package into the server location or using command line installations. The Mautic production package also requires access to a database server.
 
@@ -21,7 +21,7 @@ The Mautic installation is a three-step process:
 3. Set up the email server for email marketing automation.
 
 Preparing for installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========================
 
 Before installing a package, ensure that:
 
@@ -50,7 +50,7 @@ After downloading a desired package, upload the package zip file to your web ser
 Your web server must have the permissions to access the unzipped files. For more information on file and folder permissions, visit [this page](troubleshooting/file-ownership-and-permissions).
 
 Using the web-based installer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=============================
 
 To access the Mautic server from your browser, enter the URL that corresponds to the Mautic instance (for example, `https://m.example.com`) in your web browser. It is recommended to secure your installation with an SSL certificate (https).
 
@@ -138,7 +138,7 @@ On the Mautic login window, enter your Mautic administrator credentials to log i
 Click **login** to continue working on your Mautic instance.
 
 Installing with command line
-----------------------------
+============================
 
 Mautic can also be installed using the command line. You can either pass the settings parameters in the command, or create a local PHP file with your database settings. You can also define properties in this file using the syntax expected by the command-line options. 
 
@@ -240,3 +240,11 @@ As the installation process begins, it flags up warnings and aborts if there are
   ================
 
 You can now login to your Mautic instance with your Mautic admin credentials.
+
+Installing from GitHub
+**********************
+TODO
+
+Installing with Composer
+************************
+TODO
