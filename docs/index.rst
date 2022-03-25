@@ -1,4 +1,4 @@
-Welcome to Mautic documentation!
+Welcome to the Mautic documentation!
 ===================================
 
 **Mautic** is an open source marketing automation platform that provides you with the greatest level of audience intelligence, thus enabling you to make more meaningful customer connections
