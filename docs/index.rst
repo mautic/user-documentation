@@ -15,7 +15,7 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :hidden:
 
-   home/overview.rst
+   overview/overview
 
 .. toctree::
    :caption: Getting Started
