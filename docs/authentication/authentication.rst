@@ -9,7 +9,7 @@ SAML is a single sign on protocol that allows single sign on and User creation i
 
 Enabling SAML
 ~~~~~~~~~~~~~
-To enable SAML support in Mautic, you first need the IDP's metadata XML. This is provided to you by the IDP. If it's a URL, browse to the URL then save the content into an XML file.
+To enable SAML support in Mautic, you first need the IDP's metadata XML. Your IDP will provide this information. If it's a URL, browse to the URL then save the content into an XML file.
 
 Go to Configuration -> User/Authentication Settings. Then upload this file as the Identity provider metadata file.
 
