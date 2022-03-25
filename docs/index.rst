@@ -35,3 +35,10 @@ how to :ref:`installation` the project.
    set_up/cron-jobs
    set_up/tracking-script
    set_up/maxmind-license
+
+   .. toctree::
+   :caption: Authentication
+   :maxdepth: 2
+   :hidden:
+
+   authentication/authentication
