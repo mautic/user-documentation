@@ -22,9 +22,9 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :hidden:
 
-   getting_started/getting-started
-   getting_started/installing-from-production-package
-   getting_started/installing-from-github
+   getting_started/getting_started
+   getting_started/how_to_install_mautic
+   getting_started/how_to_update_mautic
 
 .. toctree::
    :caption: Set Up
@@ -52,4 +52,3 @@ how to :ref:`installation` the project.
    campaigns/creating-campaigns
    campaigns/campaign-builder
    campaigns/managing-campaigns
-
