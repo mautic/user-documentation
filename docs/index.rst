@@ -10,6 +10,11 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   contributing/contributing
  
 .. toctree::
    :maxdepth: 2
