@@ -17,7 +17,6 @@ how to :ref:`installation` the project.
 
    home/overview.rst
 
-
 .. toctree::
    :caption: Getting Started
    :maxdepth: 2
@@ -36,9 +35,21 @@ how to :ref:`installation` the project.
    set_up/tracking-script
    set_up/maxmind-license
 
+
    .. toctree::
    :caption: Authentication
    :maxdepth: 2
    :hidden:
 
    authentication/authentication
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Campaigns
+   :hidden:
+
+   campaigns/campaigns-overview
+   campaigns/creating-campaigns
+   campaigns/campaign-builder
+   campaigns/managing-campaigns
+
