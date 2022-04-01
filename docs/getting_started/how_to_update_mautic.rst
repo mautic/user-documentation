@@ -11,14 +11,25 @@ If your instance is in production, has a large number of contacts and/or is  on 
 .. warning::
     Updating in the user interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. This can lead to failed updates and corrupted data. This feature will be completely removed in Mautic 5.0 and you will have to update at the command line.
 
-Updating at the command line
-****************************
+Updating at the command line (non-composer based installations)
+***************************************************************
 Before you commence updating Mautic, **please ensure that you have a tested backup of your Mautic instance**. 
 
 This means that you have downloaded the files and database of your Mautic instance, and you have re-created it in a test environment somewhere and tested that everything is working as expected. This is your only recourse if there are any problems with the update. Never update without having a working, up-to-date backup.
 
 Checking for updates at the command line
 ========================================
+
+Mautic can only be updated using Composer via the command line from version 5.0. 
+
+The update feature within the Mautic user interface (UI) has been deprecated from Mautic 4.2, but you will be alerted within the UI (see below figure) when a new version of the Mautic is available. 
+
+.. image:: images/gui-update-deprecated.png
+  :width: 400
+  :alt: Screenshot showing depracted update feature warning
+
+.. warning::
+    Before starting to upgrade, it is highly recommended to take a backup of your instance. If updates are available, you will receive an update notification followed by step-by-step instructions in the CLI to complete the process.
 
 Log in via the command line, and change directory to the Mautic directory using the command
 
@@ -28,10 +39,12 @@ The first step is to find out if there are any updates available using the follo
 
 ``php bin/console mautic:update:find``
 
-The output from this command tells you if there are any updates to apply. The notification links to an announcement post which explains what the release includes.
+The output from this command tells you if there are any updates to apply. The notification links to an announcement post which explains what the release includes, and the recommended environment requirements if they are not being met (for example, a higher version of PHP must be installed or plugins that must be updated).
 
 .. note::
     It's a good idea to review the announcement link for information about the release. There may be important information or steps that you may need to take before updating.
+
+1. After a system readiness check, you can apply the updates.
 
 Installing updates at the command line
 ======================================
