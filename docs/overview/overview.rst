@@ -34,7 +34,7 @@ Build a rich and functional database of Contacts for your business, group them t
 
 .. _Contacts: 
 
-- Segments_: A group of your Contacts that share certain attributes. For example, you may segment Contacts based on a contact’s location. This may help you easily send out location-based offers or promotions to this specific group of Contacts.
+- Segments_: A group of your Contacts that share certain attributes. For example, you may segment Contacts based on a contact's location. This may help you easily send out location-based offers or promotions to this specific group of Contacts.
 
 .. _Segments:
 
@@ -75,7 +75,7 @@ Channels
 
 Choose one or more Channels to deliver the content and messages to your Contacts.
 
-- `Marketing Messages`_ : A way to personalize communication with your contacts. With marketing messages, contacts will receive your content on a channel they’ve set as their preference.
+- `Marketing Messages`_ : A way to personalize communication with your contacts. With marketing messages, contacts will receive your content on a channel they've set as their preference.
 
 .. _Marketing Messages:
 

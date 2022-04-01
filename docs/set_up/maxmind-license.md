@@ -1,1 +1,0 @@
-## Maxmind license
