@@ -247,7 +247,7 @@ TODO
 
 Installing with Composer
 ************************
-Since :xref:`Mautic 4.0` it's possible to install and manage Mautic using the full power of Composer. Mautic uses the lastest version of :xref:`Composer`.
+Since :xref:`Mautic 4` it's possible to install and manage Mautic using the full power of Composer. Mautic uses the lastest version of :xref:`Composer`.
 
 Mautic is in the process of decoupling plugins and themes from core, however at present while they have been technically mirrored out into separate repositories, the source files remain in the main :xref:`Mautic GitHub repository`.
 
