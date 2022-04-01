@@ -382,4 +382,11 @@ To prevent this you can add this code to specify the PHP version you want to use
       }
   },
 
+Setting up a local testing environment with DDEV
+************************************************
 
+Often there is a need to have a local environment for testing Mautic - for example making a backup, testing new features or bug fixes.
+
+We use DDEV as our tool of choice for this purpose. It is very easy to work with.
+
+To learn how to set up DDEV with Mautic, read our documentation: :xref:`Setting up Mautic with DDEV`.
