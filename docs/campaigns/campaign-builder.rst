@@ -60,7 +60,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Change Contact's Stage**  
      - Moves a Contact to the specified Stage.
    * - **Delete Contact**  
-     - Permanently deletes the Contact record along with all the information about that Contact, including the Campaign event log record about that Contact. See the `Segment docs</contacts/manage-segments>`__ about how to use this action to delete all Contacts in a Segment.
+     - Permanently deletes the Contact record along with all the information about that Contact, including the Campaign event log record about that Contact. See the :doc:`Segment docs</contacts/manage-segments>` about how to use this action to delete all Contacts in a Segment.
    * - **Jump to Event**  
      - Moves Contacts from one point in a Campaign to another without rebuilding events. Use this action to send the Contact to a different path in the Campaign.
    * - **Modify Contact's Segments**
@@ -82,7 +82,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Update Contact**
      - Updates the existing Contact's fields with the specified values.
    * - **Update Contact's primary Company**
-     - Updates the existing Contact's primary Company fields with the specified value. See `documentation on Companies <contacts/companies>`__.
+     - Updates the existing Contact's primary Company fields with the specified value. See :doc:`documentation on Companies <contacts/companies>`.
    * - **Update Contact owner**
      - Updates the Contact's owner.
 
@@ -205,7 +205,7 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
      - Checks if the Contact's email address has a valid syntax, for example name@example.com without spaces, other invalid characters or formats.	
 	
 Notes on delayed conditions and dates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Mautic respects delays set on the condition itself before passing down to a delay on any connected action. For example, if you are coming from a negative path on 'Opens Email', you can set a condition of 'has active notification' with a relative date of 1 day, followed by 'Send Email' on the negative path with a relative date of 2 days. Mautic checks after 1 day if there is an active notification and if there isn't, schedules the Email for two days later.
 
 Using a custom date field to trigger a Campaign
@@ -228,9 +228,9 @@ This **doesn't work** for the Anniversary option.
 If a Contact appears again at a later date in that Segment because the value of the date has changed, then the Contact passes through the Campaign only once, and hence will NOT be included in the Campaign again.
 
 Triggering Campaign events
------------------------
+--------------------------
 
-Actions and Decisions in Mautic require a `cron job </setup/cron-jobs>`__ which executes the following command at the desired interval:
+Actions and Decisions in Mautic require a :doc:`cron job</set_up/cron_jobs>` which executes the following command at the desired interval:
 
 .. code-block:: shell
 
