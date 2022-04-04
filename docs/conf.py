@@ -23,6 +23,7 @@ version = '0.1.0'
 source_suffix = ['.rst', '.md']
 
 extensions = [
+    'xref',
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
