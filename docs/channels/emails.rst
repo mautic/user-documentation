@@ -25,7 +25,7 @@ Segment (Broadcast) Emails
 
 Segment Emails are marketing Emails by default. On creation the marketer assigns Segments to the Email. This determines which Contacts receive the communication. Note that each Contact can only receive the Email once - it's like a mailing list.
 
-Mautic initiates the sending of these emails with a :doc:`<cron job>setup/cron_jobs`. See [Send Scheduled Broadcasts (e.g. segment emails)][cron-send-broadcast] for more details on this.
+Mautic initiates the sending of these emails with a :doc:`/set_up/cron_jobs` - see section on Send Scheduled Broadcasts (e.g. segment emails) for more details on this.
 
 Email formats
 *************
@@ -37,7 +37,7 @@ Email delivery
 
 Mautic delivers emails using the method defined by the system administrator. If you are the system administrator for your company, then you need to add the email protocol for your Mautic instance to use. Mautic integrates with any email service provider which offers SMTP mail servers as well as several distinct services such as :xref:`Mandrill`, :xref:`Gmail`, :xref:`Sendgrid`, :xref:`Mailjet`, :xref:`Postmark`, :xref:`Sendmail` and :xref:`Amazon SES`.
 
-The system can either send Emails immediately or queue them for processing in batches by a :doc:`<cron job>setup/cron_jobs`.
+The system can either send Emails immediately or queue them for processing in batches by a :doc:`<cron job>/set_up/cron_jobs`.
 
 Immediate delivery
 ==================
@@ -47,20 +47,20 @@ This is the default means of delivery. As soon as an action in Mautic triggers a
 Queued delivery
 ===============
 
-Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`<cron job>setup/cron_jobs` at the desired interval to run the command:
+Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`<cron job>/set_up/cron_jobs` at the desired interval to run the command:
 
 .. code-block:: shell
     
     php /path/to/mautic/bin/console mautic:email:process
 
-Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration.  See the :doc:`<cron job documentation>setup/cron_jobs` for more specifics.
+Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration.  See the :doc:`<cron job documentation>/setup/cron_jobs` for more specifics.
 
 Email fields
 ************
 
 You have access to any number of Contact fields to use in your Emails. These can be easily placed within your Emails and are  automatically replaced with the appropriate text once sent.
 
-Check the :doc:`setup/variables` page for a list of all the available default fields.
+Check the :doc:`/setup/variables` page for a list of all the available default fields.
 
 Tracking Opened Emails
 **********************
@@ -83,7 +83,8 @@ The unsubscribe URL token inserts the URL into your custom written instructions.
 
 For example:
 
-.. code_block:: html
+.. code-block:: html
+
         <a href="{unsubscribe_url}" target="_blank">Want to unsubscribe?</a>
 
 You can find the configuration of the unsubscribe text in the global settings.
@@ -96,4 +97,5 @@ Mautic also enables the hosting of an online version of the Email sent. To use t
 For example:
 
 .. code-block:: html
+    
     <a href="{webview_url}" target="_blank">View in your browser</a>
