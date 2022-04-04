@@ -21,9 +21,9 @@ The IDP may ask for the following settings:
 
 1. Entity ID - this is site URL, displayed at the top of User/Authentication Settings. Copy this exactly 'as is' to the IDP.
 
-2. Service Provider Metadata - if the provider requires a URL, use https://example.com/saml/metadata.xml. If a file is required, then browse to that URL and save the content as an XML file.
+2. Service Provider Metadata - if the provider requires a URL, use ``https://example.com/saml/metadata.xml``. To use as a file rather than a URL, browse to that URL and save the content as an XML file.
 
-3. Assertion Consumer Service - Use https://example.com/s/saml/login_check
+3. Assertion Consumer Service - Use ``https://example.com/s/saml/login_check``.
 
 4. Issuer - this should come from the IDP but is often configurable. If it's a URL, be sure that the scheme - http:// and https:// - aren't part of it.
 
@@ -38,9 +38,9 @@ Once configured with the IDP and the IDP with Mautic, Mautic redirects all login
 Login to the IDP, which then redirects you back to Mautic. If the exchange is successful Mautic creates a User if it doesn't already exist, and the User is logged in.
 
 Turning off SAML
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 To turn off SAML, click the Remove link to the right of the Identity provider metadata file label.
 
 .. image:: images/authentication-settings.png
   :width: 800
-  :alt: Alternative text
+  :alt: Screenshot of the authentication settings section
