@@ -29,6 +29,8 @@ Segment Emails are marketing Emails by default. On creation the marketer assigns
   :width: 400
   :alt: Screenshot showing selecting email segments in Mautic
 
+This entry field is a multi-select which allows you to choose several segments if necessary.
+
 Mautic initiates the sending of these emails with a :doc:`/set_up/cron_jobs` - see section on Send Scheduled Broadcasts (e.g. segment emails) for more details on this.
 
 Email formats
@@ -51,8 +53,63 @@ When creating the Email, an option is given to assign a language and a translati
 
 It is also possible to have translations of A/B test variants.
 
+Base64 encoded images
+*********************
+
+It is possible to encode all images in the email text as base64. It will attach the image inside the email body. It has several implications:
+
+.. image:: images/base64-images.png
+  :width: 400
+  :alt: Screenshot showing Base64 settings for images in emails
+
+- The main idea with this option is that most of the email clients will display the images directly, without the need to allow images to be displayed.
+- Some email clients like Gmail will require the approval to display Base64 encoded images due to the tracking pixel being an image, and won't display the Base64 encoded images as a result. See the next paragraph for possible solution.
+- The Email body will increase significantly if the Email contains many and/or large sized images. Some email clients like Gmail will "clip" such email and won't display it directly.
+
+Tokens
+******
+
+Tokens can be used in emails which enables the integration of a number of Contact fields to use in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
+
+Check the :doc:`/setup/variables` page for a list of all the available default fields.
+
+Default value
+=============
+
+A token can have a default value for cases when the contact doesn't have the value known. The default value can be specified after a ``|`` character, for example:
+
+.. code-block:: php
+
+    Hello {contactfield=firstname|friend}
+
+The |friend tells Mautic to use 'friend' if there is no first name present in the Contact field.
+
+Encoded value
+=============
+
+It is possible to encode values used in a token using the following syntax:
+
+.. code-block:: php
+
+    Hello {contactfield=firstname|true}
+
+The ``|true`` tells Mautic to encode the value used, for example in URLs.
+
+Date formats
+============
+
+To use custom date fields in tokens, use the following format:
+
+.. code-block:: php
+
+    {contactfield=DATEFIELDALIAS|datetime}
+    {contactfield=DATEFIELDALIAS|date}
+    {contactfield=DATEFIELDALIAS|time}
+
+The date will be displayed in a human-readable format taken from the settings in your Global Configuration > System Settings for 'Default format for date only' and 'Default time only format'.
+
 Email delivery
-**************
+##############
 
 Mautic delivers emails using the method defined by the system administrator. If you are the system administrator for your company, then you need to add the email protocol for your Mautic instance to use. Mautic integrates with any email service provider which offers SMTP mail servers as well as several distinct services such as :xref:`Mandrill`, :xref:`Gmail`, :xref:`Sendgrid`, :xref:`Mailjet`, :xref:`Postmark`, :xref:`Sendmail` and :xref:`Amazon SES`.
 
@@ -74,22 +131,17 @@ Mautic works most effectively with high send volumes if you use the queued deliv
 
 Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration.  See the :doc:`<cron job documentation>/setup/cron_jobs` for more specifics.
 
-Email fields
-************
-
-You have access to any number of Contact fields to use in your Emails. These can be easily placed within your Emails and are  automatically replaced with the appropriate text once sent.
-
-Check the :doc:`/setup/variables` page for a list of all the available default fields.
-
 Tracking Opened Emails
 **********************
 
 Mautic automatically tags each Email with a tracking pixel image. This allows Mautic to track when a Contact opens the Email and execute actions accordingly. Note that there are limitations to this technology - the Contact's email client supporting HTML and auto-loading of images, and not blocking the loading of pixels. If the email client doesn't load the image, there's no way for Mautic to know the opened status of the Email.
 
-By default, Mautic adds the tracking pixel image at the end of the message, just before the ``</body>`` tag. If needed, one could use the ``{tracking_pixel}`` variable within the body content token to have it placed elsewhere.
+By default, Mautic adds the tracking pixel image at the end of the message, just before the ``</body>`` tag. If needed, one could use the ``{tracking_pixel}`` variable within the body content token to have it placed elsewhere.  Beware that it should not be inserted directly after the opening ``<body>`` because this prevents correct display of pre-header text on some email clients.
+
+It is possible to turn off the tracking pixel entirely if you do not need to use it, in the Global Settings.
 
 Tracking links in Emails
-==================================
+========================
 
 Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail page under the Click Counts tab.
 
