@@ -389,4 +389,4 @@ Often there is a need to have a local environment for testing Mautic - for examp
 
 We use DDEV as our tool of choice for this purpose. It is very easy to work with.
 
-To learn how to set up DDEV with Mautic, read our documentation: :xref:`Setting up Mautic with DDEV`.
+To learn how to set up DDEV with Mautic, read our documentation: :xref:`Setting up DDEV`.
