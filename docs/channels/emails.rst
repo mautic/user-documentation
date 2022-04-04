@@ -108,6 +108,39 @@ To use custom date fields in tokens, use the following format:
 
 The date will be displayed in a human-readable format taken from the settings in your Global Configuration > System Settings for 'Default format for date only' and 'Default time only format'.
 
+Contact replies
+***************
+
+To make use of monitoring replies from Contacts, you must have access to an IMAP server **other than Google or Yahoo** (as they overwrite the return path, which prevents this feature from working).
+
+.. note::
+  To use the Monitored email feature you must have the PHP IMAP extension enabled (most shared hosts will already have this turned on).
+
+1. Configure all Mautic sender/reply-to email addresses to send a copy to one single inbox (most email providers support this feature in their configuration panel).
+
+.. note::
+  It is best to create an email address specifically for this purpose, as Mautic will read each message it finds in the given folder.
+
+2. Go to the Mautic configuration and set up the inbox to monitor replies.
+
+.. image:: images/contact-replies-imap-folder.png
+  :width: 400
+  :alt: Screenshot showing IMAP mailbox setting for reply monitoring
+
+3. To fetch and process the replies, run the following cron command:
+
+``php path/to/mautic/bin/console mautic:email:fetch``
+
+Usage
+~~~~~
+Contact replies can be used within Campaigns as decision after an Email has been sent, to take action based on whether the user has replied to the Email. Mautic tries to read the inbox, parse messages, and find replies from the specified Contact. The Contact, when a match is found, will proceed down the positive path immediately after the reply is detected.
+
+
+.. image:: images/contact-replies-campaign-decision.png
+  :width: 400
+  :alt: Screenshot showing contact replies campaign action
+
+
 Email delivery
 ##############
 
@@ -116,12 +149,12 @@ Mautic delivers emails using the method defined by the system administrator. If 
 The system can either send Emails immediately or queue them for processing in batches by a :doc:`<cron job>/set_up/cron_jobs`.
 
 Immediate delivery
-==================
+******************
 
 This is the default means of delivery. As soon as an action in Mautic triggers an Email to send, it's sent immediately. If you expect to send a large number of Emails, you should use the queue. Sending Email immediately may slow the response time of Mautic if using a remote mail service, since Mautic has to establish a connection with that service before sending the mail. Also attempting to send large batches of Emails at once may hit your server's resource limits or Email sending limits if on a shared host.
 
 Queued delivery
-===============
+***************
 
 Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`<cron job>/set_up/cron_jobs` at the desired interval to run the command:
 
