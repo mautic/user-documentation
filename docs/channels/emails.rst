@@ -25,12 +25,31 @@ Segment (Broadcast) Emails
 
 Segment Emails are marketing Emails by default. On creation the marketer assigns Segments to the Email. This determines which Contacts receive the communication. Note that each Contact can only receive the Email once - it's like a mailing list.
 
+.. image:: images/email-segments.jpg
+  :width: 400
+  :alt: Screenshot showing selecting email segments in Mautic
+
 Mautic initiates the sending of these emails with a :doc:`/set_up/cron_jobs` - see section on Send Scheduled Broadcasts (e.g. segment emails) for more details on this.
 
 Email formats
 *************
 
 In Mautic, it's possible to create Emails in both full HTML as well as basic text format - delivered as necessary to Contacts based on what their client supports. This is an important part of creating a strong relationship with Contacts by providing relevant information in the correct format.
+
+Managing Emails
+###############
+
+Email overview
+**************
+
+The Email overview allows at-a-glance information regarding the success or failure of a particular Email. You can quickly see relevant information in regards to opens, bounces, successful click-throughs and other important statistics.
+
+Translations
+************
+
+When creating the Email, an option is given to assign a language and a translation parent. By selecting a translation parent, the current item is then considered to be a translation in the selected language of that parent item. If a Contact has a preferred language set, they will receive the translated version in their preferred language if it exists. Otherwise, they will receive the parent in the default language.
+
+It is also possible to have translations of A/B test variants.
 
 Email delivery
 **************
@@ -97,5 +116,5 @@ Mautic also enables the hosting of an online version of the Email sent. To use t
 For example:
 
 .. code-block:: html
-    
+
     <a href="{webview_url}" target="_blank">View in your browser</a>
