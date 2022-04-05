@@ -298,6 +298,135 @@ Mautic supports the bounce and complaint management from Amazon Simple Email Ser
 
 4. The subscriber will be in the pending state until it is confirmed. SES will call your Amazon Webhook with a ``SubscriptionConfirmation`` request including a callback url. To confirm, Mautic will send a request back to this callback url to validate the subscription. Therefore make sure your Mautic installation is allowed to connect to the internet, otherwise the subscription will remain in the pending state and won't work. If your Webhook is HTTPS, you also need to make sure that your site is using a valid SSL certificate which can be verified by Amazon.
 
+Check the logfile for more information. If you are having problems getting the subscription out of the pending state, it may also help to configure the topic's 'Delivery status logging' settings, so that delivery status (at least for HTTP/S) gets logged to CloudWatch. Then you can visit the Logs section of the CloudWatch Management Console and see the exact details of delivery failures. For example, an invalid SSL certificate might result in an event like the following appearing in the CloudWatch logs:
+
+.. code-block:: json
+
+  {
+      "notification": {
+          "messageId": "337517be-f32c-4137-bc8d-93dc29f45ff9",
+          "topicArn": "arn:aws:sns:eu-west-1:012345678901:Mautic",
+          "timestamp": "2019-05-31 15:34:13.687"
+      },
+      "delivery": {
+          "deliveryId": "a5dab35d-83f9-53c3-8ca6-e636c82668d4",
+          "destination": "https://mautic.example.com/mailer/amazon/callback",
+          "providerResponse": "SSLPeerUnverifiedException in HttpClient",
+          "dwellTimeMs": 42266,
+          "attempts": 3
+      },
+      "status": "FAILURE"
+  }
+
+  .. image:: images/bounce-management/amazon_webhook_6.png
+  :width: 400
+  :alt: Screenshot showing confirmation pending
+
+  5. The last step is to configure Amazon SES to deliver bounce and complaint messages using our SNS topic.
+
+  .. image:: images/bounce-management/amazon_webhook_7.png
+  :width: 400
+  :alt: Screenshot showing the configuring of SES
+
+  .. image:: images/bounce-management/amazon_webhook_8.png
+  :width: 400
+  :alt: Screenshot showing the selection of the SNS topic
+
+Mandrill Webhook
+================
+
+Mautic supports a few of Mandrill's webhooks for bounces.
+
+1. Login to your Mandrill account and go to Settings -> Webhooks
+
+  .. image:: images/bounce-management/mandrill_webhook_1.png
+  :width: 400
+  :alt: Screenshot showing Mandrill Webhooks
+
+2. Click Add a Webhook
+
+ .. image:: images/bounce-management/mandrill_webhook_2.png
+  :width: 400
+  :alt: Screenshot showing addition of Mandrill Webhooks
+
+Mautic supports the following webhooks: Message is Bounced, Message is Soft-Bounced, Message is Rejected, Message is Marked as Spam and Message Recipient Unsubscribes.
+
+1. Fill in the Post To Url as ``https://mautic.example.com/mailer/mandrill/callback`` then click Create Webhook.
+
+2. Click Custom Metadata and create two new metadata fields: ``hashId`` and ``contactId``
+
+ .. image:: images/bounce-management/mandrill_webhook_5.png
+  :width: 400
+  :alt: Screenshot showing addition of metadata
+
+ .. image:: images/bounce-management/mandrill_webhook_4.png
+  :width: 400
+  :alt: Screenshot showing addition of metadata
+
+Mailjet Webhook
+===============
+Mautic supports Mailjet's webhooks for bounces, spam and blocked. Before any configuration, you'll need to create an account on :xref:`Mailjet`.
+
+1. Login to your Mailjet account and go to My Account > Event tracking (triggers)
+
+ .. image:: images/bounce-management/mailjet_webhook_1.png
+  :width: 400
+  :alt: Screenshot showing Mailjet webhooks
+
+2. On the event type list, select the one you want to link to your Mautic account
+
+ .. image:: images/bounce-management/mailjet_webhook_2.png
+  :width: 400
+  :alt: Screenshot showing adding Webhooks
+
+Mautic supports the following webhooks: Message is Bounced, Message is Blocked, Message is Spam.
+
+3. Fill in the URL boxes as ``https://mautic.example.com/mailer/mailjet/callback``.
+
+Sparkpost Webhook
+=================
+1. Login to your Sparkpost account and go to Account -> Webhooks.
+
+ .. image:: images/bounce-management/sparkpost_webhook_1.png
+  :width: 400
+  :alt: Screenshot showing Sparkpost webhooks
+
+2. Click the New Webhook button top right
+
+ .. image:: images/bounce-management/sparkpost_webhook_2.png
+  :width: 400
+  :alt: Screenshot showing new Webhooks
+
+3. Fill in the Target URL as ``https://mautic.example.com/mailer/sparkpost/callback``
+
+4. Select the following Events
+
+ .. image:: images/bounce-management/sparkpost_webhook_2.png
+  :width: 400
+  :alt: Screenshot showing events
+
+Sendgrid Webhook
+================
+
+1. Login to your SendGrid account and go to Settings > Mail Setting > Mail Settings
+
+ .. image:: images/bounce-management/sendgrid_webhook_1.png
+  :width: 400
+  :alt: Screenshot showing SendGrid webhooks
+
+2. Fill in the Target URL as `https://mautic.example.com/mailer/sendgrid_api/callback`
+
+3. Select the following Events
+
+ .. image:: images/bounce-management/sendgrid_webhook_2.png
+  :width: 400
+  :alt: Screenshot showing Events
+
+4. Save setting (on the right side of "Event Notification" row):
+
+ .. image:: images/bounce-management/sendgrid_webhook_3.png
+  :width: 400
+  :alt: Screenshot showing save settings
 
 Create a segment with bounced emails
 ************************************
