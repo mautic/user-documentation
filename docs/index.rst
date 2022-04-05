@@ -47,6 +47,7 @@ how to :ref:`installation` the project.
    :hidden:
 
    channels/emails
+   channels/sms
 
 .. toctree::
    :caption: Authentication
