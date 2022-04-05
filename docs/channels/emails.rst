@@ -58,7 +58,7 @@ Base64 encoded images
 
 It is possible to encode all images in the email text as base64. It will attach the image inside the email body. It has several implications:
 
-.. image:: images/base64-images.png
+.. image:: images/base64-images.jpg
   :width: 400
   :alt: Screenshot showing Base64 settings for images in emails
 
@@ -71,7 +71,7 @@ Tokens
 
 Tokens can be used in emails which enables the integration of a number of Contact fields to use in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
 
-Check the :doc:`/setup/variables` page for a list of all the available default fields.
+Check the :doc:`/set_up/variables` page for a list of all the available default fields.
 
 Default value
 =============
@@ -82,7 +82,7 @@ A token can have a default value for cases when the contact doesn't have the val
 
     Hello {contactfield=firstname|friend}
 
-The |friend tells Mautic to use 'friend' if there is no first name present in the Contact field.
+The ``|friend`` tells Mautic to use 'friend' if there is no first name present in the Contact field.
 
 Encoded value
 =============

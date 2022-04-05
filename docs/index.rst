@@ -1,5 +1,5 @@
 Welcome to the Mautic documentation!
-===================================
+====================================
 
 **Mautic** is an open source marketing automation platform that provides you with the greatest level of audience intelligence, thus enabling you to make more meaningful customer connections
 
@@ -36,12 +36,18 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :hidden:
 
-   set_up/cron-jobs
-   set_up/tracking-script
-   set_up/maxmind-license
+   set_up/cron_jobs
+   set_up/tracking_script
+   set_up/maxmind_license
 
+.. toctree::
+   :caption: Channels
+   :maxdepth: 2
+   :hidden:
 
-   .. toctree::
+   channels/emails
+
+.. toctree::
    :caption: Authentication
    :maxdepth: 2
    :hidden:
@@ -53,7 +59,8 @@ how to :ref:`installation` the project.
    :caption: Campaigns
    :hidden:
 
-   campaigns/campaigns-overview
-   campaigns/creating-campaigns
-   campaigns/campaign-builder
-   campaigns/managing-campaigns
+   campaigns/campaigns_overview
+   campaigns/creating_campaigns
+   campaigns/campaign_builder
+   campaigns/managing_campaigns
+   campaigns/troubleshooting_campaigns
