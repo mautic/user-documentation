@@ -7,7 +7,7 @@ With the SMS channel it is possible to send text messages from Campaigns in Maut
     To use this channel you must first set up an SMS transport, such as :doc:`plugins/Twilio`.
 
 Type of Text Messages
-********************
+*********************
 
 Mautic allows you to create two types of Text Messages, in the same way as you can create different types of Emails.
 

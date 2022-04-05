@@ -278,7 +278,7 @@ Monitored Inbox Settings
 
 To use the Monitored Email feature you must have the PHP IMAP extension enabled (most shared hosts will already have this turned on).  Go to the Mautic configuration and fill in the account details for the inbox(es) you wish to monitor.
 
-.. image:: images/bounce-management/asset-monitored-inbox-settings.png
+.. image:: images/bounce_management/asset-monitored-inbox-settings.png
   :width: 400
   :alt: Screenshot showing IMAP mailbox setting for reply monitoring
 
@@ -308,7 +308,7 @@ Elastic Email Webhook
 
 3. Check these actions: Unsubscribed, Complaints, Bounce/Error
 
-.. image:: images/bounce-management/elasticemail_webhook_1.png
+.. image:: images/bounce_management/elasticemail_webhook_1.png
   :width: 400
   :alt: Screenshot showing Elastic Email webhook settings
 
@@ -325,21 +325,21 @@ Mautic supports the bounce and complaint management from Amazon Simple Email Ser
 
 1. Go to the Amazon Simple Notification Service (SNS) and create a new topic:
 
-.. image:: images/bounce-management/amazon_webhook_1.png
+.. image:: images/bounce_management/amazon_webhook_1.png
   :width: 400
   :alt: Screenshot showing Amazon SNS create new topic
 
-.. image:: images/bounce-management/amazon_webhook_2.png
+.. image:: images/bounce_management/amazon_webhook_2.png
   :width: 400
   :alt: Screenshot showing naming your SNS topic
 
 2. Click on the newly created topic to create a subscriber
 
-.. image:: images/bounce-management/amazon_webhook_3.png
+.. image:: images/bounce_management/amazon_webhook_3.png
   :width: 400
   :alt: Screenshot showing go to the topic
 
-.. image:: images/bounce-management/amazon_webhook_4.png
+.. image:: images/bounce_management/amazon_webhook_4.png
   :width: 400
   :alt: Screenshot showing new subscriber
 
@@ -350,7 +350,7 @@ Mautic supports the bounce and complaint management from Amazon Simple Email Ser
 
   When using the **API method** (available since Mautic 3.2), the callback URL will be your Mautic URL followed by ``/mailer/amazon_api/callback``.
 
-  .. image:: images/bounce-management/amazon_webhook_5.png
+  .. image:: images/bounce_management/amazon_webhook_5.png
     :width: 400
     :alt: Enter URL in Mautic
 
@@ -376,17 +376,17 @@ Check the logfile for more information. If you are having problems getting the s
       "status": "FAILURE"
   }
 
-  .. image:: images/bounce-management/amazon_webhook_6.png
+  .. image:: images/bounce_management/amazon_webhook_6.png
   :width: 400
   :alt: Screenshot showing confirmation pending
 
   5. The last step is to configure Amazon SES to deliver bounce and complaint messages using our SNS topic.
 
-  .. image:: images/bounce-management/amazon_webhook_7.png
+  .. image:: images/bounce_management/amazon_webhook_7.png
   :width: 400
   :alt: Screenshot showing the configuring of SES
 
-  .. image:: images/bounce-management/amazon_webhook_8.png
+  .. image:: images/bounce_management/amazon_webhook_8.png
   :width: 400
   :alt: Screenshot showing the selection of the SNS topic
 
@@ -397,13 +397,13 @@ Mautic supports a few of Mandrill's webhooks for bounces.
 
 1. Login to your Mandrill account and go to Settings -> Webhooks
 
-  .. image:: images/bounce-management/mandrill_webhook_1.png
+  .. image:: images/bounce_management/mandrill_webhook_1.png
     :width: 400
     :alt: Screenshot showing Mandrill Webhooks
 
 2. Click Add a Webhook
 
- .. image:: images/bounce-management/mandrill_webhook_2.png
+ .. image:: images/bounce_management/mandrill_webhook_2.png
   :width: 400
   :alt: Screenshot showing addition of Mandrill Webhooks
 
@@ -413,11 +413,11 @@ Mautic supports the following webhooks: Message is Bounced, Message is Soft-Boun
 
 2. Click Custom Metadata and create two new metadata fields: ``hashId`` and ``contactId``
 
- .. image:: images/bounce-management/mandrill_webhook_5.png
+ .. image:: images/bounce_management/mandrill_webhook_5.png
   :width: 400
   :alt: Screenshot showing addition of metadata
 
- .. image:: images/bounce-management/mandrill_webhook_4.png
+ .. image:: images/bounce_management/mandrill_webhook_4.png
   :width: 400
   :alt: Screenshot showing addition of metadata
 
@@ -427,13 +427,13 @@ Mautic supports Mailjet's webhooks for bounces, spam and blocked. Before any con
 
 1. Login to your Mailjet account and go to My Account > Event tracking (triggers)
 
- .. image:: images/bounce-management/mailjet_webhook_1.png
+ .. image:: images/bounce_management/mailjet_webhook_1.png
   :width: 400
   :alt: Screenshot showing Mailjet webhooks
 
 2. On the event type list, select the one you want to link to your Mautic account
 
- .. image:: images/bounce-management/mailjet_webhook_2.png
+ .. image:: images/bounce_management/mailjet_webhook_2.png
   :width: 400
   :alt: Screenshot showing adding Webhooks
 
@@ -445,13 +445,13 @@ Sparkpost Webhook
 =================
 1. Login to your Sparkpost account and go to Account -> Webhooks.
 
- .. image:: images/bounce-management/sparkpost_webhook_1.png
+ .. image:: images/bounce_management/sparkpost_webhook_1.png
   :width: 400
   :alt: Screenshot showing Sparkpost webhooks
 
 2. Click the New Webhook button top right
 
- .. image:: images/bounce-management/sparkpost_webhook_2.png
+ .. image:: images/bounce_management/sparkpost_webhook_2.png
   :width: 400
   :alt: Screenshot showing new Webhooks
 
@@ -459,7 +459,7 @@ Sparkpost Webhook
 
 4. Select the following Events
 
- .. image:: images/bounce-management/sparkpost_webhook_2.png
+ .. image:: images/bounce_management/sparkpost_webhook_2.png
   :width: 400
   :alt: Screenshot showing events
 
@@ -468,7 +468,7 @@ Sendgrid Webhook
 
 1. Login to your SendGrid account and go to Settings > Mail Setting > Mail Settings
 
- .. image:: images/bounce-management/sendgrid_webhook_1.png
+ .. image:: images/bounce_management/sendgrid_webhook_1.png
   :width: 400
   :alt: Screenshot showing SendGrid webhooks
 
@@ -476,13 +476,13 @@ Sendgrid Webhook
 
 3. Select the following Events
 
- .. image:: images/bounce-management/sendgrid_webhook_2.png
+ .. image:: images/bounce_management/sendgrid_webhook_2.png
   :width: 400
   :alt: Screenshot showing Events
 
 4. Save setting (on the right side of "Event Notification" row):
 
- .. image:: images/bounce-management/sendgrid_webhook_3.png
+ .. image:: images/bounce_management/sendgrid_webhook_3.png
   :width: 400
   :alt: Screenshot showing save settings
 

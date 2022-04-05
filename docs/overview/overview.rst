@@ -46,7 +46,6 @@ Create and manage various types of content that you will use for your marketing 
 
 - :doc:`/components/dynamic_web_content` A feature that you can use to personalize the web experience for your contacts. Marketers can display different content to different people in specific areas of a webpage.
 
-
 Campaigns
 *********
 
