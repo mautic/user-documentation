@@ -14,14 +14,14 @@ These guidelines outline how to contribute to the Mautic documentation hosted on
 - :ref:`Finding an Issue`
 - :ref:`Reporting an Issue`
 - :ref:`Contributing Changes`
-  * :ref:`Using Git on the Command Line`
-  * :ref:`Using GitHub Desktop`
-  * :ref:`Cloning Repository`
-  * :ref:`Creating a Branch`
-  * :ref:`Commiting Edits`
-  * :ref:`Creating a Pull Request`
-  * :ref:`Using Web Browser`
-  * :ref:`Using Gitpod`
+   - :ref:`Using Git on the Command Line`
+   - :ref:`Using GitHub Desktop`
+   - :ref:`Cloning Repository`
+   - :ref:`Creating a Branch`
+   - :ref:`Commiting Edits`
+   - :ref:`Creating a Pull Request`
+   - :ref:`Using Web Browser`
+   - :ref:`Using Gitpod`
 - :ref:`Looking for help`
 
 Understanding the Repository Structure
@@ -31,19 +31,19 @@ Mautic documentation is written using ReStructuredText (:xref:`RST`). The files 
 
 When you fork the Mautic user documentation repository, the repository includes the following files and folders:
 
-- **`README.md`** file introduces and describes the repository, but does not contain any product documentation.
-- **`docs`** folder contains folders for each section in the Mautic user guide. 
-- **`docs/links`** folder contains a file for each external link used in this repository
+- **README.md** file introduces and describes the repository, but does not contain any product documentation.
+- **docs** folder contains folders for each section in the Mautic user guide. 
+- **docs/links** folder contains a file for each external link used in this repository
 
 Reading the Style Guide
 ***********************
 
-We encourage you to read the [Mautic Style Guide][style guide] for submitting content with a consistent tone, voice, and messaging across the Mautic user documentation. You can find the Mautic Style Guide [here][style guide].
+We encourage you to read the :doc:`/contributing/mautic_style_guide` for submitting content with a consistent tone, voice, and messaging across the Mautic user documentation. You can find the Mautic Style Guide [here][style guide].
 
 Finding an Issue
 ****************
 
-You can familiarize yourself with the Mautic contribution process by reviewing the list of **`good first issues`**, earmarked for new contributors on the :xref:`Mautic Docs issues` section. These issues have a relatively limited scope. 
+You can familiarize yourself with the Mautic contribution process by reviewing the list of **good first issues**, earmarked for new contributors on the :xref:`Mautic Docs issues` section. These issues have a relatively limited scope. 
 
 After you have selected an issue on the [Mautic Documentation Issues][doc-issues] page, follow the below steps:
  1. Add a comment indicating that you would like to own the ticket. This is to avoid conflicts with others also working on the issue.
@@ -74,21 +74,21 @@ Alternatively, you can also install GitHub CLI to use GitHub from the command li
 
 To edit documents using Git:
 
-1. Launch the command-line tool on your machine.
-2. Change the working directory in the terminal to the location where the documentation repository will reside using the ``cd `` command.
-3. Clone the Mautic user documentation repository.
+#. Launch the command-line tool on your machine.
+#. Change the working directory in the terminal to the location where the documentation repository will reside using the ``cd`` command.
+#. Clone the Mautic user documentation repository.
 
    .. code-block:: shell
 
    gh repo clone mautic/mautic-documentation
    
-4. Create a new branch to manage your edits, and name it descriptively. For example, ``{yourusername}-revision-readme-file``. You can do this either at the command line using the syntax below:
+#. Create a new branch to manage your edits, and name it descriptively. For example, ``{yourusername}-revision-readme-file``. You can do this either at the command line using the syntax below:
 
     .. code-block:: shell
 
     git checkout -b {yourusername}-revision-readme-file upstream/main
     
-5. After editing the documents, commit your edits to your local repository, and add a commit message. The Git commit command requires a commit message that describes what has changed and why so that collaborators to track, review, and merge the edits.
+#. After editing the documents, commit your edits to your local repository, and add a commit message. The Git commit command requires a commit message that describes what has changed and why so that collaborators to track, review, and merge the edits.
 
    .. code-block:: shell
 
@@ -96,7 +96,7 @@ To edit documents using Git:
       git add <new and modified files>
       git commit --message "move contributing to new file"
 
-6. Push the current branch to GitHub to synchronize the changes, and set the remote as upstream.
+#. Push the current branch to GitHub to synchronize the changes, and set the remote as upstream.
 
    .. code-block:: shell
 
@@ -104,9 +104,9 @@ To edit documents using Git:
 
    You will be prompted to enter your GitHub login credentials.
 
-7. After you’ve pushed your commits, visit your repository on GitHub to view the reflected changes and the commit history. Review the changes at your fork - ``https://github.com/{yourusername}/user-documentation.``
+#. After you’ve pushed your commits, visit your repository on GitHub to view the reflected changes and the commit history. Review the changes at your fork - ``https://github.com/{yourusername}/user-documentation.``
 
-8. Submit a pull request for a review of the commited changes. For more information, visit the :ref:`Creating a Pull Request` section.
+#. Submit a pull request for a review of the commited changes. For more information, visit the :ref:`Creating a Pull Request` section.
    
 For more Git command line instructions, view the :xref:`Git Cheatsheet`. 
 

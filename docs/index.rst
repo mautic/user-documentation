@@ -15,6 +15,7 @@ how to :ref:`installation` the project.
    :hidden:
 
    contributing/contributing
+   contributing/mautic_style_guide
  
 .. toctree::
    :maxdepth: 2

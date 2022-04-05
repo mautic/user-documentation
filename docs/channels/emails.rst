@@ -39,22 +39,22 @@ Email formats
 In Mautic, it's possible to create Emails in both full HTML as well as basic text format - delivered as necessary to Contacts based on what their client supports. This is an important part of creating a strong relationship with Contacts by providing relevant information in the correct format.
 
 Managing Emails
-###############
+***************
 
 Email overview
-**************
+==============
 
 The Email overview allows at-a-glance information regarding the success or failure of a particular Email. You can quickly see relevant information in regards to opens, bounces, successful click-throughs and other important statistics.
 
 Translations
-************
+============
 
 When creating the Email, an option is given to assign a language and a translation parent. By selecting a translation parent, the current item is then considered to be a translation in the selected language of that parent item. If a Contact has a preferred language set, they will receive the translated version in their preferred language if it exists. Otherwise, they will receive the parent in the default language.
 
 It is also possible to have translations of A/B test variants.
 
 Base64 encoded images
-*********************
+=====================
 
 It is possible to encode all images in the email text as base64. It will attach the image inside the email body. It has several implications:
 
@@ -67,14 +67,14 @@ It is possible to encode all images in the email text as base64. It will attach 
 - The Email body will increase significantly if the Email contains many and/or large sized images. Some email clients like Gmail will "clip" such email and won't display it directly.
 
 Tokens
-******
+======
 
 Tokens can be used in emails which enables the integration of a number of Contact fields to use in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
 
 Check the :doc:`/set_up/variables` page for a list of all the available default fields.
 
 Default value
-=============
+~~~~~~~~~~~~~
 
 A token can have a default value for cases when the contact doesn't have the value known. The default value can be specified after a ``|`` character, for example:
 
@@ -85,7 +85,7 @@ A token can have a default value for cases when the contact doesn't have the val
 The ``|friend`` tells Mautic to use 'friend' if there is no first name present in the Contact field.
 
 Encoded value
-=============
+~~~~~~~~~~~~~
 
 It is possible to encode values used in a token using the following syntax:
 
@@ -96,7 +96,7 @@ It is possible to encode values used in a token using the following syntax:
 The ``|true`` tells Mautic to encode the value used, for example in URLs.
 
 Date formats
-============
+~~~~~~~~~~~~
 
 To use custom date fields in tokens, use the following format:
 
@@ -109,25 +109,25 @@ To use custom date fields in tokens, use the following format:
 The date will be displayed in a human-readable format taken from the settings in your Global Configuration > System Settings for 'Default format for date only' and 'Default time only format'.
 
 Contact replies
-***************
+===============
 
 To make use of monitoring replies from Contacts, you must have access to an IMAP server **other than Google or Yahoo** (as they overwrite the return path, which prevents this feature from working).
 
 .. note::
   To use the Monitored email feature you must have the PHP IMAP extension enabled (most shared hosts will already have this turned on).
 
-1. Configure all Mautic sender/reply-to email addresses to send a copy to one single inbox (most email providers support this feature in their configuration panel).
+#. Configure all Mautic sender/reply-to email addresses to send a copy to one single inbox (most email providers support this feature in their configuration panel).
 
 .. note::
   It is best to create an email address specifically for this purpose, as Mautic will read each message it finds in the given folder.
 
-2. Go to the Mautic configuration and set up the inbox to monitor replies.
+#. Go to the Mautic configuration and set up the inbox to monitor replies.
 
 .. image:: images/contact-replies-imap-folder.png
   :width: 400
   :alt: Screenshot showing IMAP mailbox setting for reply monitoring
 
-3. To fetch and process the replies, run the following cron command:
+#. To fetch and process the replies, run the following cron command:
 
 ``php path/to/mautic/bin/console mautic:email:fetch``
 
@@ -149,11 +149,11 @@ This functionality allows Mautic to automatically personalize emails sent to a C
 Sending from the Contact owner
 ==============================
 
-1. Open the admin menu by clicking the cog icon in the top right corner.
-2. Select the Configuration menu item.
-3. Select the Email Settings tab.
-4. Switch the Mailer is owner to Yes.
-5. Save the configuration.
+#. Open the admin menu by clicking the cog icon in the top right corner.
+#. Select the Configuration menu item.
+#. Select the Email Settings tab.
+#. Switch the Mailer is owner to Yes.
+#. Save the configuration.
 
 Overriding the mailer as owner setting
 ======================================
@@ -174,7 +174,7 @@ Signatures
 
 Setting a signature can be done in two places:
 
-1. The default signature is in the Configuration > Email Settings tab. The default text is 
+#. The default signature is in the Configuration > Email Settings tab. The default text is 
 
 
 .. code-block:: html
@@ -185,7 +185,7 @@ The ``|FROM_NAME|`` token will be replaced by the name which is also defined in 
 
 This signature will be used by default if the Contact does not have an owner assigned.
 
-2. Every Mautic User can configure their own signature in the profile edit page. This signature will be used by default if the Contact has an owner assigned to them.
+#. Every Mautic User can configure their own signature in the profile edit page. This signature will be used by default if the Contact has an owner assigned to them.
 
 .. note::
   There are some exceptions where the Contact owner's signature won't be used, which is when a User sends an email directly from a Contact's profile.  In this case, the currently logged in User's signature will be used with the from name and email being those specified in the email send form, and not the Contact owner.  The values used are pre-filled with those of the currently logged in Mautic User.
@@ -195,7 +195,7 @@ This signature will be used by default if the Contact does not have an owner ass
   Also, when sending a test Email this is also the case.
 
 Using the email signature
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=========================
 
 The signature can be placed into an email text using the ``{signature}`` token.
 
@@ -351,14 +351,14 @@ Mautic supports the bounce and complaint management from Amazon Simple Email Ser
   When using the **API method** (available since Mautic 3.2), the callback URL will be your Mautic URL followed by ``/mailer/amazon_api/callback``.
 
   .. image:: images/bounce-management/amazon_webhook_5.png
-  :width: 400
-  :alt: Enter URL in Mautic
+    :width: 400
+    :alt: Enter URL in Mautic
 
 4. The subscriber will be in the pending state until it is confirmed. SES will call your Amazon Webhook with a ``SubscriptionConfirmation`` request including a callback url. To confirm, Mautic will send a request back to this callback url to validate the subscription. Therefore make sure your Mautic installation is allowed to connect to the internet, otherwise the subscription will remain in the pending state and won't work. If your Webhook is HTTPS, you also need to make sure that your site is using a valid SSL certificate which can be verified by Amazon.
 
 Check the logfile for more information. If you are having problems getting the subscription out of the pending state, it may also help to configure the topic's 'Delivery status logging' settings, so that delivery status (at least for HTTP/S) gets logged to CloudWatch. Then you can visit the Logs section of the CloudWatch Management Console and see the exact details of delivery failures. For example, an invalid SSL certificate might result in an event like the following appearing in the CloudWatch logs:
 
-.. code-block:: json
+.. code-block:: javascript
 
   {
       "notification": {
@@ -398,8 +398,8 @@ Mautic supports a few of Mandrill's webhooks for bounces.
 1. Login to your Mandrill account and go to Settings -> Webhooks
 
   .. image:: images/bounce-management/mandrill_webhook_1.png
-  :width: 400
-  :alt: Screenshot showing Mandrill Webhooks
+    :width: 400
+    :alt: Screenshot showing Mandrill Webhooks
 
 2. Click Add a Webhook
 
