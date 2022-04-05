@@ -146,7 +146,7 @@ Email delivery
 
 Mautic delivers emails using the method defined by the system administrator. If you are the system administrator for your company, then you need to add the email protocol for your Mautic instance to use. Mautic integrates with any email service provider which offers SMTP mail servers as well as several distinct services such as :xref:`Mandrill`, :xref:`Gmail`, :xref:`Sendgrid`, :xref:`Mailjet`, :xref:`Postmark`, :xref:`Sendmail` and :xref:`Amazon SES`.
 
-The system can either send Emails immediately or queue them for processing in batches by a :doc:`<cron job>/set_up/cron_jobs`.
+The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </set_up/cron_jobs>`.
 
 Immediate delivery
 ******************
@@ -156,13 +156,13 @@ This is the default means of delivery. As soon as an action in Mautic triggers a
 Queued delivery
 ***************
 
-Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`<cron job>/set_up/cron_jobs` at the desired interval to run the command:
+Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </set_up/cron_jobs>` at the desired interval to run the command:
 
 .. code-block:: shell
     
     php /path/to/mautic/bin/console mautic:email:process
 
-Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration.  See the :doc:`<cron job documentation>/setup/cron_jobs` for more specifics.
+Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration.  See the :doc:`cron job documentation </set_up/cron_jobs>` for more specifics.
 
 Tracking Opened Emails
 **********************
@@ -203,3 +203,111 @@ For example:
 .. code-block:: html
 
     <a href="{webview_url}" target="_blank">View in your browser</a>
+
+Bounce management
+#################
+
+Mautic provides a feature which allows monitoring of IMAP accounts to detect bounced emails and unsubscribe requests.
+
+Note that Mautic makes use of "append" email addresses. The return-path or the list-unsubscribe header will use something like ``youremail+bounce_abc123@your-domain.com``. The bounce or unsubscribe allows Mautic to determine what type of email it is when it examines the inbox through IMAP. The ``abc123`` gives Mautic information about the email itself, i.e. which contact it was it sent to, what Mautic email was used, etc.
+
+Some email services overwrite the return-path header with that of the account's email (Gmail, Amazon SES). In these cases, IMAP bounce monitoring will not work.
+
+Elastic Email, SparkPost, Mandrill, Mailjet, SendGrid and Amazon SES support webhook callbacks for bounce management. See below for more details.
+
+Monitored Inbox Settings
+************************
+
+To use the Monitored Email feature you must have the PHP IMAP extension enabled (most shared hosts will already have this turned on).  Go to the Mautic configuration and fill in the account details for the inbox(es) you wish to monitor.
+
+.. image:: images/bounce-management/asset-monitored-inbox-settings.png
+  :width: 400
+  :alt: Screenshot showing IMAP mailbox setting for reply monitoring
+
+It is possible to use a single inbox, or to configure a unique inbox per monitor.
+
+To fetch and process the messages, run the following command:
+
+.. code-block:: shell
+  
+  php /path/to/mautic/bin/console mautic:email:fetch
+
+Note that it is best to create an Email address specifically for this purpose, as Mautic will read each message it finds in the given folder.
+
+If sending mail through Gmail, the Return Path of the Email will automatically be rewritten as the Gmail address. It is best to use a sending method other than Gmail, although Mautic can monitor a Gmail account for bounces.
+
+If you select an Unsubscribe folder, Mautic will also append the email as part of the "List-Unsubscribe" header. It will then parse messages it finds in that folder and automatically unsubscribe the Contact.
+
+Webhook bounce management
+*************************
+
+Elastic Email Webhook
+=====================
+
+1. Login to your Elastic Email account and go to Settings -> Notification.
+
+2. Fill in the Notification URL as ``https://mautic.example.com/mailer/elasticemail/callback``
+
+3. Check these actions: Unsubscribed, Complaints, Bounce/Error
+
+.. image:: images/bounce-management/elasticemail_webhook_1.png
+  :width: 400
+  :alt: Screenshot showing Elastic Email webhook settings
+
+Useful resources
+~~~~~~~~~~~~~~~~
+
+- :xref:`Elastic Support` - Elastic Email's Helpdesk
+- :xref:`Getting Started with Elastic` - Getting Started resources from Elastic Email
+
+Amazon SES Webhook
+==================
+
+Mautic supports the bounce and complaint management from Amazon Simple Email Service (Amazon SES).
+
+1. Go to the Amazon Simple Notification Service (SNS) and create a new topic:
+
+.. image:: images/bounce-management/amazon_webhook_1.png
+  :width: 400
+  :alt: Screenshot showing Amazon SNS create new topic
+
+.. image:: images/bounce-management/amazon_webhook_2.png
+  :width: 400
+  :alt: Screenshot showing naming your SNS topic
+
+2. Click on the newly created topic to create a subscriber
+
+.. image:: images/bounce-management/amazon_webhook_3.png
+  :width: 400
+  :alt: Screenshot showing go to the topic
+
+.. image:: images/bounce-management/amazon_webhook_4.png
+  :width: 400
+  :alt: Screenshot showing new subscriber
+
+3. Enter the URL to the Amazon Webhook on your Mautic installation.
+
+.. note::
+  When using the **SMTP method**, the callback URL will be your Mautic URL followed by ``/mailer/amazon/callback``.
+
+  When using the **API method** (available since Mautic 3.2), the callback URL will be your Mautic URL followed by ``/mailer/amazon_api/callback``.
+
+  .. image:: images/bounce-management/amazon_webhook_5.png
+  :width: 400
+  :alt: Enter URL in Mautic
+
+4. The subscriber will be in the pending state until it is confirmed. SES will call your Amazon Webhook with a ``SubscriptionConfirmation`` request including a callback url. To confirm, Mautic will send a request back to this callback url to validate the subscription. Therefore make sure your Mautic installation is allowed to connect to the internet, otherwise the subscription will remain in the pending state and won't work. If your Webhook is HTTPS, you also need to make sure that your site is using a valid SSL certificate which can be verified by Amazon.
+
+
+Create a segment with bounced emails
+************************************
+
+This is not required, but if you want to be able to select the contacts with bounced Emails easily - for example to delete all bounced contacts - create a segment with bounced Emails.
+
+1. Go to Segments > New.
+2. Type in the Segment name. For example Bounced Emails.
+3. Select the Filters tab.
+4. Create new Bounced Email equals Yes filter.
+5. Wait for the ``bin/console mautic:segments:update`` command to be automatically triggered by a cron job or execute it manually.
+6. All contacts with bounced emails should appear in this segment.
+
