@@ -141,6 +141,64 @@ Contact replies can be used within Campaigns as decision after an Email has been
   :alt: Screenshot showing contact replies campaign action
 
 
+Mailer as Owner
+***************
+
+This functionality allows Mautic to automatically personalize emails sent to a Contact who has an owner (Mautic User) assigned to them. This feature changes the from Email, from name and signature by changing the default setting to the Mautic Contact owner's user setting.
+
+Sending from the Contact owner
+==============================
+
+1. Open the admin menu by clicking the cog icon in the top right corner.
+2. Select the Configuration menu item.
+3. Select the Email Settings tab.
+4. Switch the Mailer is owner to Yes.
+5. Save the configuration.
+
+Overriding the mailer as owner setting
+======================================
+It is possible to override the global setting on a per-email basis.
+
+There is a switch under the advanced settings of the email, which allows you to decide whether to take the global mailer as owner setting, or the specified from address, into account.
+
+.. image:: images/mailer-as-owner-switch.png
+  :width: 400
+  :alt: Screenshot showing mailer as owner switch
+
+If Yes is selected, then the global setting will take precedence.
+
+If No is selected, the address and name supplied in the email 'From' fields will be used.
+
+Signatures
+**********
+
+Setting a signature can be done in two places:
+
+1. The default signature is in the Configuration > Email Settings tab. The default text is 
+
+
+.. code-block:: html
+
+  Best regards,<br/>|FROM_NAME|.
+
+The ``|FROM_NAME|`` token will be replaced by the name which is also defined in the Email Settings tab.
+
+This signature will be used by default if the Contact does not have an owner assigned.
+
+2. Every Mautic User can configure their own signature in the profile edit page. This signature will be used by default if the Contact has an owner assigned to them.
+
+.. note::
+  There are some exceptions where the Contact owner's signature won't be used, which is when a User sends an email directly from a Contact's profile.  In this case, the currently logged in User's signature will be used with the from name and email being those specified in the email send form, and not the Contact owner.  The values used are pre-filled with those of the currently logged in Mautic User.
+  
+  It doesn't matter if the Contact has another owner assigned or if it doesn't have an owner at all.
+
+  Also, when sending a test Email this is also the case.
+
+Using the email signature
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The signature can be placed into an email text using the ``{signature}`` token.
+
 Email delivery
 ##############
 
@@ -439,4 +497,41 @@ This is not required, but if you want to be able to select the contacts with bou
 4. Create new Bounced Email equals Yes filter.
 5. Wait for the ``bin/console mautic:segments:update`` command to be automatically triggered by a cron job or execute it manually.
 6. All contacts with bounced emails should appear in this segment.
+
+Troubleshooting Emails
+**********************
+
+Email open tracking
+===================
+
+Email opens are being tracked by a tracking pixel. This is a 1 pixel GIF image in the source code of Email messages sent by Mautic.
+
+When an Email is opened by an Email client like Outlook, Thunderbird or GMail, the client tries to load the images in it. The image load request is what Mautic uses to track the Email open action.
+
+Some Email clients have auto loading images disabled, and users have to click on a "Load Images" button to load images inside an email message.  Some will automatically open all images before delivering the Email to the Contact.
+
+If the images aren't loaded for this reason or another, or if they are opened automatically before the email is passed to the Contact, Mautic doesn't know about the open action. Therefore, email open tracking is not very accurate.
+
+Email link tracking
+===================
+
+Before an Email is sent, Mautic replaces all links in the Email with links back to Mautic including a unique key. If the Contact clicks on such a link, the Contact is redirected to Mautic, which then tracks the click action and redirects the Contact to the original location. It's fast, so the Contact doesn't usually notice the additional redirect.
+
+If the email click doesn't get tracked, make sure that:
+
+1. Your Mautic server is on an accessible URL. 
+2. Make sure the email was sent to an existing Contact via a Campaign or a Segment email. Emails sent by the Send Example link, direct Email (from the contact detail) or Form submission preview Emails won't replace links with trackables.
+3. Make sure the URL in the href attribute is absolute and valid. It should start with http:// or (ideally) https://.
+4. You've opened the link in a incognito browser (not in the same session where you're logged into Mautic)
+5. Check if the link in the Email has been replaced by Mautic's tracking link.
+
+Unsubscribe link doesn't work
+=============================
+The unsubscribe link **doesn't work in test emails**.
+
+This is because the test emails are sent to a Mautic User and not to a Mautic Contact.
+
+Mautic users cannot be unsubscribed and therefore the unsubscribe link looks like this: ``https://mautic.example.com/|URL|``. However, the link **will** work correctly when you send the email to a contact.
+
+Best practice is to create a segment with a small number of users to receive test emails (for example, yourself) - this will ensure that you can fully test features such as unsubscribe behaviour.
 
