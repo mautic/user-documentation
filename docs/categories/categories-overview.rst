@@ -1,7 +1,7 @@
 Categories
 ########################################
 
-Categories are a way to organize Mautic elements. They are available for assets, campaigns, emails, focus items, forms, pages, points, social monitoring and stages. There are two ways to use categories:
+Categories are a way to organize Mautic elements. They are available for Assets, Campaigns, Emails, Focus Items, Forms, Pages, Points, Social Monitoring and Stages. There are two ways to use Categories:
 
 1. Create element-specific categories (e.g. only for assets, emails or forms)
 2. Create global categories for all Mautic elements.
