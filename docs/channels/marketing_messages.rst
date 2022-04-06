@@ -29,7 +29,7 @@ Provide a name and description for the Marketing Message, then choose the Channe
     You must set up and configure the Channels before they become available - if you have not set up Mobile Notifications or Text Messages, you won't see it as an option when creating a Marketing Message.
 
   .. image:: images/marketing_messages/create-marketing-message.png
-    :width: 200
+    :width: 400
     :alt: Screenshot showing the creation of a new Marketing Message in Mautic.
 
 To enable a Channel, click Yes on the slider, and select (or create) the message to be used.
