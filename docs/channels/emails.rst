@@ -6,7 +6,7 @@ Mautic enables marketers to use Emails within Campaigns, to be sent directly to 
 Email Types
 ***********
 
-.. image:: images/types.png
+.. image:: images/emails/types.png
   :width: 400
   :alt: Screenshot showing the types of Emails that are available in Mautic
 
@@ -25,7 +25,7 @@ Segment (Broadcast) Emails
 
 Segment Emails are marketing Emails by default. On creation the marketer assigns Segments to the Email. This determines which Contacts receive the communication. Note that each Contact can only receive the Email once - it's like a mailing list.
 
-.. image:: images/email-segments.jpg
+.. image:: images/emails/email-segments.jpg
   :width: 400
   :alt: Screenshot showing selecting email segments in Mautic
 
@@ -58,7 +58,7 @@ Base64 encoded images
 
 It is possible to encode all images in the email text as base64. It will attach the image inside the email body. It has several implications:
 
-.. image:: images/base64-images.jpg
+.. image:: images/emails/base64-images.jpg
   :width: 400
   :alt: Screenshot showing Base64 settings for images in emails
 
@@ -123,7 +123,7 @@ To make use of monitoring replies from Contacts, you must have access to an IMAP
 
 #. Go to the Mautic configuration and set up the inbox to monitor replies.
 
-.. image:: images/contact-replies-imap-folder.png
+.. image:: images/emails/contact-replies-imap-folder.png
   :width: 400
   :alt: Screenshot showing IMAP mailbox setting for reply monitoring
 
@@ -136,7 +136,7 @@ Usage
 Contact replies can be used within Campaigns as decision after an Email has been sent, to take action based on whether the user has replied to the Email. Mautic tries to read the inbox, parse messages, and find replies from the specified Contact. The Contact, when a match is found, will proceed down the positive path immediately after the reply is detected.
 
 
-.. image:: images/contact-replies-campaign-decision.png
+.. image:: images/emails/contact-replies-campaign-decision.png
   :width: 400
   :alt: Screenshot showing contact replies campaign action
 
@@ -161,7 +161,7 @@ It is possible to override the global setting on a per-email basis.
 
 There is a switch under the advanced settings of the email, which allows you to decide whether to take the global mailer as owner setting, or the specified from address, into account.
 
-.. image:: images/mailer-as-owner-switch.png
+.. image:: images/emails/mailer-as-owner-switch.png
   :width: 400
   :alt: Screenshot showing mailer as owner switch
 
