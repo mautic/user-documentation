@@ -1,30 +1,38 @@
 Categories
-########################################
+##########
 
-Categories are a way to organize Mautic elements. They are available for assets, campaigns, emails, focus items, forms, pages, points, social monitoring and stages. There are two ways to use categories:
+Categories are a way to organize Mautic elements. They're available for Assets, Campaigns, Emails, focus items, forms, pages, points, social monitoring and stages. There are two ways to use Categories:
 
-1. Create element-specific categories (e.g. only for assets, emails or forms)
-2. Create global categories for all Mautic elements.
+1. Create element-specific Categories for example only for Assets, Emails or Forms.
+2. Create global Categories for all Mautic elements.
 
-Creating/Managing Categories
-******************************
+.. vale off
 
-To create new categories, go to settings menu in the top right corner of Mautic. There choose categories.
+Creating and managing Categories
+********************************
+
+.. vale on
+
+To create new Categories, go to settings menu in the top right corner of Mautic. There choose Categories.
 
 .. image:: images/create-new-category.jpeg
   :width: 600
-  :alt: Screenshot of create new category
+  :alt: Screenshot of create new Category
 
-When creating a new category you can select type, title, description, alias, color and published status. The color will be helpful to quickly find Mautic elements by their appropriate category when viewing things like the calendar or other areas within Mautic.
+.. vale off
+
+When creating a new Category you can select type, title, description, alias, color and published status. The color will be helpful to quickly find Mautic elements by their appropriate Category when viewing things like the Calendar or other areas within Mautic.
 
 Using Categories for Contacts
 ******************************
 
-In addition to organizing various Mautic elements categories can be used to organize contacts. In contact details use the Preference menu to open Contact Preference Center.
+.. vale on
+
+In addition to organizing various Mautic elements Categories can be used to organize Contacts. In Contact details use the Preference menu to open Contact Preference Center.
 
 .. image:: images/assign-category-to-contact.jpeg
   :width: 600
-  :alt: Screenshot of assigning category to contact
+  :alt: Screenshot of assigning Category to Contact
 
-Contact categories can be used in segment and dynamic content filters.
+Contact Categories can be used in Segment and dynamic content filters.
 
