@@ -49,6 +49,7 @@ how to :ref:`installation` the project.
    channels/emails
    channels/sms
    channels/focus_items
+   channels/marketing_messages
 
 .. toctree::
    :caption: Authentication
