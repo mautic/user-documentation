@@ -51,6 +51,8 @@ how to :ref:`installation` the project.
    channels/focus_items
    channels/marketing_messages
    channels/social_monitoring
+   channels/web_notifications
+   channels/push_notifications
 
 .. toctree::
    :caption: Authentication
