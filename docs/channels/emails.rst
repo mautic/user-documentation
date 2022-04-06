@@ -1,7 +1,7 @@
 Emails
 ######
 
-Mautic enables marketers to use Emails within Campaigns, to be sent directly to a group of Contacts in a Segment, or to be sent on a one-time basis. Emails provide a means for direct interaction with potential customers, clients, and contacts.
+Mautic enables marketers to automatically send Emails directly to a group of Contacts in a Segment by using a Campaign, or send emails on a one-time basis. Emails provide a means for direct interaction with potential customers, clients, and Contacts.
 
 Email Types
 ***********
