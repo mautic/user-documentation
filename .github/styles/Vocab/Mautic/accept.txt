@@ -66,7 +66,7 @@ Rackspace
 Remarketing
 Salesforce
 Schimpf
-scp
+SCP
 SendGrid
 SMS
 SparkPost
@@ -83,7 +83,7 @@ unpublish
 Unpublish
 URL
 URLs
-utm
+UTM
 Vtiger
 Webmecanik
 www
