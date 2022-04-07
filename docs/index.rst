@@ -1,14 +1,13 @@
-Welcome to the Mautic documentation!
-====================================
+Welcome to the Mautic documentation
+===================================
 
 **Mautic** is an open source marketing automation platform that provides you with the greatest level of audience intelligence, thus enabling you to make more meaningful customer connections
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Check out the :doc:`/getting_started/getting_started` section for further information, including how to :doc:`/getting_started/how_to_install_mautic`.
 
 .. note::
 
-   This project is under active development.
+   This documentation project is under active development.
 
 .. toctree::
    :maxdepth: 2
@@ -53,6 +52,7 @@ how to :ref:`installation` the project.
    channels/social_monitoring
    channels/web_notifications
    channels/push_notifications
+   channels/utm_tags
 
 .. toctree::
    :caption: Authentication
