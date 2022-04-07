@@ -32,6 +32,15 @@ how to :ref:`installation` the project.
    getting_started/how_to_update_mautic
 
 .. toctree::
+   :caption: Mautic 3 upgrade
+   :maxdepth: 2
+   :hidden:
+
+   mautic_3_upgrade/getting_started
+   mautic_3_upgrade/upgrade_steps
+   mautic_3_upgrade/upgrade_errors
+
+.. toctree::
    :caption: Set Up
    :maxdepth: 2
    :hidden:
