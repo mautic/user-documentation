@@ -1,19 +1,22 @@
-Mobile (Push) Notifications
+Mobile push notifications
 ###########################
 
-Mobile notifications integrate your iOS and Android app with :doc:`OneSignal`. Using your own OneSignal account, you can now push a notification to your Contacts's mobile device (with their permission). Enable the plugin in Mautic's plugin manager to see Mobile Notifications listed under Channels in the menu.
+Mobile notifications integrate your iOS and Android app with :xref:`OneSignal`. Using your own OneSignal account, you can now push a notification to your Contacts's mobile device - with their permission. Enable the Plugin in Mautic's Plugin manager to see Mobile Notifications listed under Channels in the menu.
 
 For more detailed information see the :xref:`OneSignal iOS` and :xref:`OneSignal Android` documentation.
 
 Setup
 *****
 
-iOS Code for OneSignal integration
+.. vale off
+
+iOS code for OneSignal integration
 ==================================
 
-To enable Push Notifications in your iOS app, add the following code (or a variant of it) inside your ``application`` func of ``AppDelegate``. The code examples below use Swift 3.1. Please modify them to your needs if you are using C#.
+To enable Push Notifications in your iOS app, add the following code - or a variant of it - inside your ``application`` func of ``AppDelegate``. The code examples below use Swift 3.1. Please modify them to your needs if you are using C#.
 
 .. code-block:: javascript
+
     // Somehow determine the user email. If you have user accounts, it may be better to move
     // this outside of the `application` func of `AppDelegate` in order to determine the user email.
     // In this example, the address is hardcoded for ease of use.
@@ -36,6 +39,7 @@ UserData struct
 ~~~~~~~~~~~~~~~
 
 .. code-block:: javascript
+
     struct UserData {
         var email   = String()
         var push_id = String()
@@ -53,9 +57,10 @@ UserData struct
 pushUserDataToMautic func
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is a basic function for pushing the UserData struct to your Mautic installation. It will push the user data, and then display the response from Mautic as an app alert. Modify to meet the needs of your app.
+This is a basic function for pushing the UserData struct to your Mautic installation. It will push the User data, and then display the response from Mautic as an app alert. Modify to meet the needs of your app.
 
 .. code-block:: javascript
+
     func pushUserDataToMautic(_ userData: UserData, _ url: String) {
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = "POST"
@@ -82,6 +87,8 @@ This is a basic function for pushing the UserData struct to your Mautic installa
         }
         task.resume()
     }
+
+.. vale on
 
 Notification statistics
 =======================

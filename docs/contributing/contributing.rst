@@ -3,11 +3,11 @@ Contributing to the Mautic documentation
 
 We welcome contributions to improve and maintain Mautic documentation.
 
-To contribute to the Mautic user guide, fork the [Mautic user documentation GitHub repository](mautic-docs-github).
+To contribute to the Mautic user documentation, fork the :xref:`Mautic GitHub User Documentation` repository.
 
-To contribute to the Mautic developer documentation, fork the [Mautic developer documentation GitHub repository](developer-docs-github).
+To contribute to the Mautic developer documentation, fork the :xref:`Mautic GitHub Developer Documentation`.
 
-These guidelines outline how to contribute to the Mautic documentation hosted on GitHub. Changes to this document can be proposed in a pull request (PR).
+These guidelines outline how to contribute to the Mautic documentation hosted on GitHub. Make proposed changes by submitting a pull request (PR).
 
 - :ref:`Understanding the Repository Structure`
 - :ref:`Reading the Style Guide`
@@ -25,7 +25,7 @@ These guidelines outline how to contribute to the Mautic documentation hosted on
 - :ref:`Looking for help`
 
 Understanding the Repository Structure
-****************************************************************
+**************************************
 
 Mautic documentation is written using ReStructuredText (:xref:`RST`). The files are appended with the *.rst* extension.
 
