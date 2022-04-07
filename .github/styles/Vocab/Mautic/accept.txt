@@ -24,6 +24,8 @@ CORS
 cron
 Cron
 CTRL
+Do Not Contact
+DNC
 Dripflow
 FALSE
 Focus Item
@@ -50,6 +52,7 @@ Libre
 Licensor
 LinkedIn
 Mailjet
+Marketing Messages
 Mautic
 Middlewares
 middlewares
