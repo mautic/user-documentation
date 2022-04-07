@@ -1,5 +1,6 @@
 AJAX
 allowlist
+Amazon SES
 Autowired
 autowired
 bcc
@@ -19,14 +20,18 @@ Composer
 configurator
 ConnectWise
 Contribution(s)
+CORS
 cron
 Cron
 CTRL
 Dripflow
 FALSE
+Focus Item
+Focus Items
 Froala
 Froogaloop
 gcm
+GIF
 GitBook
 GitHub
 GMail
@@ -37,6 +42,7 @@ HTML
 http
 https
 HubSpot
+IMAP
 infographics
 JavaScript
 Joomla
@@ -68,7 +74,10 @@ Salesforce
 Schimpf
 SCP
 SendGrid
+SES
 SMS
+SMTP
+SNS
 SparkPost
 sublicense
 SugarCRM
