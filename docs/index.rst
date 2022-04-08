@@ -57,3 +57,10 @@ how to :ref:`installation` the project.
    campaigns/creating-campaigns
    campaigns/campaign-builder
    campaigns/managing-campaigns
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Components
+   :hidden:
+
+   components/dwc
