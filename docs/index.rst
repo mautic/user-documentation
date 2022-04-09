@@ -22,6 +22,13 @@ how to :ref:`installation` the project.
 
    overview/overview
 
+   .. toctree::
+   :maxdepth: 2
+   :caption: Categories
+   :hidden:
+
+   categories/categories-overview
+
 .. toctree::
    :caption: Getting Started
    :maxdepth: 2
