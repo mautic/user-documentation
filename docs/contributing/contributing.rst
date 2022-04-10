@@ -3,7 +3,7 @@ Contributing to the Mautic documentation
 
 We welcome contributions to improve and maintain Mautic documentation.
 
-To contribute to the Mautic user guide, fork the [Mautic user documentation GitHub repository](mautic-docs-github).
+To contribute to the Mautic User guide, fork the [Mautic User documentation GitHub repository](mautic-docs-github).
 
 To contribute to the Mautic developer documentation, fork the [Mautic developer documentation GitHub repository](developer-docs-github).
 
@@ -43,7 +43,7 @@ We encourage you to read the [Mautic Style Guide][style guide] for submitting co
 Finding an Issue
 ****************
 
-You can familiarize yourself with the Mautic contribution process by reviewing the list of **`good first issues`**, earmarked for new contributors on the [Issues][doc-issues] section. These issues have a relatively limited scope. 
+You can familiarize yourself with the Mautic contribution process by reviewing the list of **`good first issues`**, earmarked for new contributors on the :xref:`Mautic Docs issues` section. These issues have a relatively limited scope. 
 
 After you have selected an issue on the [Mautic Documentation Issues][doc-issues] page, follow the below steps:
  1. Add a comment indicating that you would like to own the ticket. This is to avoid conflicts with others also working on the issue.
@@ -108,7 +108,7 @@ To edit documents using Git:
 
 8. Submit a pull request for a review of the commited changes. For more information, visit the :ref:`Creating a Pull Request` section.
    
-For more Git command line instructions, view the :xref:`Git cheatsheet`. 
+For more Git command line instructions, view the :xref:`Git Cheatsheet`. 
 
 Using GitHub Desktop
 ********************
@@ -171,10 +171,10 @@ To contribute content using the GitHub web browser:
 1. Click **Create pull request**.
 1. On the Open a pull request page:
     - Enter details about the changes you have made to the document.
-    - Reference any :xref:`Mautic GitHub Docs issues` that the current pull request (PR) resolves so that they are automatically linked. For example, if the PR closes an existing issue #0001, reference it in the description as 'closes #0001'.
+    - Reference any :xref:`Mautic Docs issues` that the current pull request (PR) resolves so that they are automatically linked. For example, if the PR closes an existing issue #0001, reference it in the description as 'closes #0001'.
     - @mentions of the Mautic administrator for reviewing the proposed changes.
 2. Click **Create pull request**.
-3. Share the pull request (PR) link in the #t-education channel on :xref:`Mautic Slack`.
+3. Share the pull request (PR) link in the #t-education channel on :xref:`Mautic Community Slack`.
 
 Using Gitpod
 ************
@@ -215,12 +215,12 @@ A notification detailing your push to your branch with a button labeled **Compar
 1. Click **Compare & pull request**.
 1. On the Open a pull request page:
     - Enter details about the changes you have made to the document.
-    - Reference any :xref:`Mautic GitHub Docs issues` that the current pull request (PR) resolves so that they are automatically linked. For example, if the PR closes an existing issue #0001, reference it in the description as 'closes #0001'.
+    - Reference any :xref:`Mautic Docs issues` that the current pull request (PR) resolves so that they are automatically linked. For example, if the PR closes an existing issue #0001, reference it in the description as 'closes #0001'.
     - @mentions of the Mautic administrator for reviewing the proposed changes.
-1. Click **Create pull request** to generate the PR link.
-1. Share the pull request (PR) link in the #t-education channel on :xref:`Mautic Slack`.
+2. Click **Create pull request** to generate the PR link.
+3. Share the pull request (PR) link in the #t-education channel on :xref:`Mautic Community Slack`.
 
 Looking for Help
 ****************
 
- You can join the :xref:`Mautic Slack` to connect with other documention writers and the wider community, if you aren’t already a member. Mautic documentation conversations are organized in the #t-education and #doc channels.
+ You can join the :xref:`Mautic Community Slack` to connect with other documention writers and the wider community, if you aren’t already a member. Mautic documentation conversations are organized in the #t-education and #doc channels.
