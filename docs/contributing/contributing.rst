@@ -3,7 +3,7 @@ Contributing to the Mautic documentation
 
 We welcome contributions to improve and maintain Mautic documentation.
 
-To contribute to the Mautic user guide, fork the [Mautic user documentation GitHub repository](mautic-docs-github).
+To contribute to the Mautic User guide, fork the [Mautic User documentation GitHub repository](mautic-docs-github).
 
 To contribute to the Mautic developer documentation, fork the [Mautic developer documentation GitHub repository](developer-docs-github).
 
