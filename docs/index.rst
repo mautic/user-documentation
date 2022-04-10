@@ -22,6 +22,13 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
 
    overview/overview
 
+   .. toctree::
+   :maxdepth: 2
+   :caption: Categories
+   :hidden:
+
+   categories/categories-overview
+
 .. toctree::
    :caption: Getting Started
    :maxdepth: 2
