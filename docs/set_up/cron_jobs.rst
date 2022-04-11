@@ -133,6 +133,8 @@ If the Mautic configuration settings include Webhook batch processing, use the f
 
     php /path/to/mautic/bin/console mautic:webhooks:process
 
+.. _cron jobs:
+
 Update MaxMind GeoLite2 IP database
 ===================================
 
