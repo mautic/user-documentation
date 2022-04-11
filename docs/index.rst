@@ -42,10 +42,11 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :hidden:
 
-   set_up/cron_jobs
-   set_up/api
-   set_up/tracking_script
    set_up/maxmind_license
+   set_up/switching_composer
+   set_up/cron_jobs
+   set_up/tracking_script
+
 
 
    .. toctree::
