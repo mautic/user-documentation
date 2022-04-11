@@ -34,7 +34,6 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :hidden:
 
-   getting_started/getting_started
    getting_started/how_to_install_mautic
    getting_started/how_to_update_mautic
 
@@ -43,9 +42,10 @@ how to :ref:`installation` the project.
    :maxdepth: 2
    :hidden:
 
-   set_up/cron-jobs
-   set_up/tracking-script
-   set_up/maxmind-license
+   set_up/cron_jobs
+   set_up/api
+   set_up/tracking_script
+   set_up/maxmind_license
 
 
    .. toctree::
