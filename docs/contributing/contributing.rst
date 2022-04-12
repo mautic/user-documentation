@@ -121,47 +121,47 @@ You're making changes in a project you don't have write access to. Submitting a 
 
 To contribute content using the GitHub web browser:
 
-1.  Navigate to the :xref:`Mautic GitHub User Documentation` repository, and **Fork** it to add it to your profile repositories.
-2. Select a file, and click the **Edit** icon in the upper-right corner of the page to edit the document.
-3. After scrolling down the Propose Change section of the page, add descriptive text explaining what you have changed and why.
-4. Click **Propose Changes**.
-5. On the Comparing Changes page, review and edit the branch for commiting the changes. If desired, create a new branch to manage your contributions.
+#.  Navigate to the :xref:`Mautic GitHub User Documentation` repository, and **Fork** it to add it to your profile repositories.
+#. Select a file, and click the **Edit** icon in the upper-right corner of the page to edit the document.
+#. After scrolling down the Propose Change section of the page, add descriptive text explaining what you have changed and why.
+#. Click **Propose Changes**.
+#. On the Comparing Changes page, review and edit the branch for commiting the changes. If desired, create a new branch to manage your contributions.
 
 .. note::
    If you are updating more than one file, then you can select the newly created branch to switch to the branch, and then repeat this process until you have made all the required edits, before creating a pull request.
 
-6. Click **Create pull request**.
-7. On the Open a pull request page:
+#. Click **Create pull request**.
+#. On the Open a pull request page:
     - Enter details about the changes you have made to the document.
     - Reference any :xref:`Mautic Docs issues` that the current pull request (PR) resolves so that they are automatically linked. For example, if the PR closes an existing issue #0001, reference it in the description as 'closes #0001'.
     - @mentions of the Mautic administrator for reviewing the proposed changes.
-8. Click **Create pull request**.
-9. Share the pull request (PR) link in the #t-education channel on :xref:`Mautic Community Slack`.
+#. Click **Create pull request**.
+#. Share the pull request (PR) link in the #t-education channel on :xref:`Mautic Community Slack`.
 
 Using Gitpod
 ************
 
 To launch your local Mautic workspace in your browser using Gitpod:
 
-1. Navigate to Mautic's documentation repository on GitHub in your browser. Ensure you have already made a personal fork as described above. 
-2. In the browser's address bar, prefix the entire URL to the repository, branch or pull request you want to open in Gitpod with ``gitpod.io/#`` - for example ``https://gitpod.io./#https://github.com/{username}/user-documentation``, and press **Enter**.
-3. Within the Mautic ephemeral developer environment, **'welcome.md'** displays suggesting the next steps.
+#. Navigate to Mautic's documentation repository on GitHub in your browser. Ensure you have already made a personal fork as described above. 
+#. In the browser's address bar, prefix the entire URL to the repository, branch or pull request you want to open in Gitpod with ``gitpod.io/#`` - for example ``https://gitpod.io./#https://github.com/{username}/user-documentation``, and press **Enter**.
+#. Within the Mautic ephemeral developer environment, **'welcome.md'** displays suggesting the next steps.
 
 .. image:: images/GitpodWelcome.png
   :width: 400
   :alt: Screenshot of Gitpod Welcome
 
-4. Edit your documents.
-5. To commit your changes, click on the **source control** icon in the navigation side bar.
-6. On the Source Control page, click on the **checkmark icon** next to the files you have edited to stage the changes (preparing to commit the changes).
-7. Enter a brief description to explain your commits, and then click on the **checkmark icon** next to the Source Control header to commit those changes.
+#. Edit your documents.
+#. To commit your changes, click on the **source control** icon in the navigation side bar.
+#. On the Source Control page, click on the **checkmark icon** next to the files you have edited to stage the changes (preparing to commit the changes).
+#. Enter a brief description to explain your commits, and then click on the **checkmark icon** next to the Source Control header to commit those changes.
 
 
 .. image:: images/Gitpodsync.png
   :width: 400
   :alt: Screenshot of Gitpod commit screen
 
-8. Click **Sync Changes** to push and pull commits from the main origin which can also be accessed by clicking the three dot menu, and selecting 'Pull, Push' followed by 'sync'.
+#. Click **Sync Changes** to push and pull commits from the main origin which can also be accessed by clicking the three dot menu, and selecting 'Pull, Push' followed by 'sync'.
 
 Git Guidelines
 ***************
