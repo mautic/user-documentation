@@ -57,7 +57,7 @@ You can create an issue or propose changes by following these steps:
 
 #. Create a new GitHub issue associated with the relevant repository and propose your change there. Be sure to include implementation details and the rationale for the proposed change.
 #. A Mautic team member reviews all submitted issues.
-#. Once the issue is approved, you may start working on it.
+#. Once approved, you may start working on the issue.
 
 
 Different Methods of Contributing Changes
