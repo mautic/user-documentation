@@ -48,7 +48,7 @@ After you have selected an issue on the :xref:`Mautic Docs issues` page, follow 
 
 1. Add a comment indicating that you would like to own the ticket. This is to avoid conflicts with others also working on the issue.
 2. After a Mautic administrator assigns you the issue, you can modify files and track changes on GitHub using command line utility, your web browser, GitHub Desktop, or Gitpod.
-3. Submit a pull request, and the Mautic administrator will review your changes.
+3. Once you submit a pull request, an admin reviews your changes.
 
 Creating an Issue or Proposing Changes
 *************************************
