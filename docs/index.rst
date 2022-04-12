@@ -83,3 +83,6 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :maxdepth: 2
    :caption: Components
    :hidden:
+
+   components/dwc
+
