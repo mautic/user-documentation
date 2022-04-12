@@ -79,13 +79,13 @@ To edit documents using Git:
 
    .. code-block:: shell
 
-   gh repo clone mautic/mautic-documentation
+      gh repo clone mautic/mautic-documentation
 
 #. Create a new branch to manage your edits, and name it descriptively. For example, ``{yourusername}-revision-readme-file``. You can do this either at the command line using the syntax below:
 
-    .. code-block:: shell
-
-    git checkout -b {yourusername}-revision-readme-file upstream/main
+  .. code-block:: shell
+  
+     git checkout -b {yourusername}-revision-readme-file upstream/main
     
 #. After editing the documents, commit your edits to your local repository, and add a commit message. The Git commit command requires a commit message that describes what has changed and why so that collaborators to track, review, and merge the edits.
 
@@ -144,7 +144,7 @@ Using Gitpod
 To launch your local Mautic workspace in your browser using Gitpod:
 
 1. Navigate to Mautic's documentation repository on GitHub in your browser. Ensure you have already made a personal fork as described above. 
-2. In the browser's address bar, prefix the entire URL to the repository, branch or pull request you want to open in Gitpod with gitpod.io/# - for example https://gitpod.io./#https://github.com/{username}/user-documentation, and press **Enter**.
+2. In the browser's address bar, prefix the entire URL to the repository, branch or pull request you want to open in Gitpod with ``gitpod.io/#`` - for example ``https://gitpod.io./#https://github.com/{username}/user-documentation``, and press **Enter**.
 3. Within the Mautic ephemeral developer environment, **'welcome.md'** displays suggesting the next steps.
 
 .. image:: images/GitpodWelcome.png
@@ -215,7 +215,7 @@ The commited changes can be submitted for review by creating a pull request.
 
 To create a pull request:
 
-#. Navigate to your GitHub account (for example, https://github.com/{username}) on the portal.
+#. Navigate to your GitHub account (for example, ``https://github.com/{username}``) on the portal.
 #. Click on your profile in the upper-right corner to select **Your repositories > user-documentation**.
 
 A notification detailing your push to your branch with a button labeled **Compare & pull request** is displayed at the top of the Comparing changes page.
