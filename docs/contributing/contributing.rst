@@ -17,8 +17,6 @@ These guidelines outline how to contribute to the Mautic documentation hosted on
    - :ref:`Using GitHub Desktop`
    - :ref:`Using Web Browser`
    - :ref:`Using Gitpod`
-   - :ref:`Cloning Repository`
-   - :ref:`Creating a Branch`
 - :ref:`Git Guidelines`
    - :ref:`Cloning Repository`
    - :ref:`Creating a Branch`
