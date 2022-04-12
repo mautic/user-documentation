@@ -34,7 +34,6 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :maxdepth: 2
    :hidden:
 
-   getting_started/getting_started
    getting_started/how_to_install_mautic
    getting_started/how_to_update_mautic
 
@@ -43,9 +42,12 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :maxdepth: 2
    :hidden:
 
+
+   set_up/maxmind_license
+   set_up/switching_composer
    set_up/cron_jobs
    set_up/tracking_script
-   set_up/maxmind_license
+
 
 .. toctree::
    :caption: Channels
