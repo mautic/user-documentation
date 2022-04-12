@@ -10,7 +10,6 @@ To contribute to the Mautic developer documentation, fork the :xref:`Mautic GitH
 These guidelines outline how to contribute to the Mautic documentation hosted on GitHub. Make proposed changes by submitting a pull request (PR).
 
 - :ref:`Understanding the Repository Structure`
-- :ref:`Reading the Style Guide`
 - :ref:`Finding an Issue`
 - :ref:`Creating an Issue or Proposing Changes`
 - :ref:`Contributing Changes`
@@ -20,7 +19,7 @@ These guidelines outline how to contribute to the Mautic documentation hosted on
    - :ref:`Using Gitpod`
    - :ref:`Cloning Repository`
    - :ref:`Creating a Branch`
-- :ref: Git Guidelines
+- :ref:`Git Guidelines`
    - :ref:`Cloning Repository`
    - :ref:`Creating a Branch`
    - :ref:`Commiting Edits`
