@@ -12,7 +12,7 @@ These guidelines outline how to contribute to the Mautic documentation hosted on
 - :ref:`Understanding the Repository Structure`
 - :ref:`Reading the Style Guide`
 - :ref:`Finding an Issue`
-- :ref:`Reporting an Issue`
+- :ref:`Creating an Issue or Proposing Changes`
 - :ref:`Contributing Changes`
    - :ref:`Using Git on the Command Line`
    - :ref:`Using GitHub Desktop`
@@ -24,18 +24,6 @@ These guidelines outline how to contribute to the Mautic documentation hosted on
    - :ref:`Using Gitpod`
 - :ref:`Looking for help`
 
-Understanding the Repository Structure
-**************************************
-=======
-  * :ref:`Using Git on the Command Line`
-  * :ref:`Using GitHub Desktop`
-  * :ref:`Cloning Repository`
-  * :ref:`Creating a Branch`
-  * :ref:`Commiting Edits`
-  * :ref:`Creating a Pull Request`
-  * :ref:`Using Web Browser`
-  * :ref:`Using Gitpod`
-- :ref:`Looking for help`
 
 Understanding the Repository Structure
 **************************************
@@ -44,14 +32,12 @@ Mautic documentation is written using ReStructuredText (:xref:`RST`). The files 
 
 When you fork the Mautic user documentation repository, the repository includes the following files and folders:
 
-- **README.md** file introduces and describes the repository, but does not contain any product documentation.
-- **docs** folder contains folders for each section in the Mautic user guide. 
-- **docs/links** folder contains a file for each external link used in this repository
-
-Reading the Style Guide
-***********************
-
-We encourage you to read the :doc:`/contributing/mautic_style_guide` for submitting content with a consistent tone, voice, and messaging across the Mautic user documentation. 
+- **README.md**: this file introduces and describes the repository, but does not contain any product documentation.
+- **docs**: this folder contains folders for each section in the Mautic user guide. 
+- **docs/links**: this folder contains a file for each external link used in this repository
+- **styleguide**: the style guide contains rules and guidelines for for submitting content with a consistent tone, voice, and messaging across the Mautic user documentation. We encourage you to read the :doc:`/contributing/mautic_style_guide` 
+- **index.rst**: this file serves as a home page for the documentation, including references to all other pages in the documentation
+- **requirement.txt**: this file contains all the packages and dependencies requirements you need to have installed
 
 Finding an Issue
 ****************
@@ -64,8 +50,8 @@ After you have selected an issue on the [Mautic Documentation Issues][doc-issues
 <br>For more information on how to contribute using GitHub, refer to the [Contributing Changes](#contributing-changes) section. 
  1. Submit a pull request, and share it with a Mautic administrator to review your changes.
 
-Reporting an Issue
-******************
+Creating an Issue or Proposing Changes
+*************************************
 
 For reporting an issue or proposing a change, follow these steps:
 1. Create a new GitHub issue associated with the relevant repository and propose your change there. Be sure to include implementation details and the rationale for the proposed change.
@@ -241,3 +227,7 @@ Looking for Help
 ****************
 
  You can join the :xref:`Mautic Community Slack` to connect with other documention writers and the wider community, if you aren’t already a member. Mautic documentation conversations are organized in the #t-education and #doc channels.
+ 
+ 
+ 
+ 
