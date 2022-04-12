@@ -7,6 +7,6 @@ Check out the following resources:
 
 Contents
 --------
-- :doc:`how-to-install-mautic`
+- :doc:`how_to_install_mautic`
 
-- :doc:`how-to-update-mautic`
+- :doc:`how_to_update_mautic`
