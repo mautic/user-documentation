@@ -16,12 +16,15 @@ These guidelines outline how to contribute to the Mautic documentation hosted on
 - :ref:`Contributing Changes`
    - :ref:`Using Git on the Command Line`
    - :ref:`Using GitHub Desktop`
+   - :ref:`Using Web Browser`
+   - :ref:`Using Gitpod`
+   - :ref:`Cloning Repository`
+   - :ref:`Creating a Branch`
+- :ref: Git Guidelines
    - :ref:`Cloning Repository`
    - :ref:`Creating a Branch`
    - :ref:`Commiting Edits`
    - :ref:`Creating a Pull Request`
-   - :ref:`Using Web Browser`
-   - :ref:`Using Gitpod`
 - :ref:`Looking for help`
 
 
@@ -35,38 +38,38 @@ When you fork the Mautic user documentation repository, the repository includes 
 - **README.md**: this file introduces and describes the repository, but does not contain any product documentation.
 - **docs**: this folder contains folders for each section in the Mautic user guide. 
 - **docs/links**: this folder contains a file for each external link used in this repository
-- **styleguide**: the style guide contains rules and guidelines for for submitting content with a consistent tone, voice, and messaging across the Mautic user documentation. We encourage you to read the :doc:`/contributing/mautic_style_guide` 
-- **index.rst**: this file serves as a home page for the documentation, including references to all other pages in the documentation
-- **requirement.txt**: this file contains all the packages and dependencies requirements you need to have installed
+- **styleguide**: the style guide contains rules and guidelines for for submitting content with a consistent tone, voice, and messaging across the Mautic user documentation. We encourage you to read the :doc:`/contributing/mautic_style_guide` .
+- **index.rst**: this file serves as a home page for the documentation, including references to all other pages in the documentation.
+- **requirement.txt**: this file contains all the packages and dependencies requirements you need to have installed.
 
 Finding an Issue
 ****************
 
-You can familiarize yourself with the Mautic contribution process by reviewing the list of **good first issues**, earmarked for new contributors on the :xref:`Mautic Docs issues` section. These issues have a relatively limited scope. 
+You can familiarize yourself with the Mautic contribution process by reviewing the list of **issues** on the :xref:`Mautic Docs issues` section. These issues have a relatively limited scope. 
 
-After you have selected an issue on the [Mautic Documentation Issues][doc-issues] page, follow the below steps:
+After you have selected an issue on the :xref:`Mautic Docs issues` page, follow the below steps:
  1. Add a comment indicating that you would like to own the ticket. This is to avoid conflicts with others also working on the issue.
  2. After a Mautic administrator assigns you the issue, you can modify files and track changes on GitHub using command line utility, your web browser, GitHub Desktop, or Gitpod.
-<br>For more information on how to contribute using GitHub, refer to the [Contributing Changes](#contributing-changes) section. 
- 1. Submit a pull request, and share it with a Mautic administrator to review your changes.
+ 3. Submit a pull request, and the Mautic administrator will review your changes.
 
 Creating an Issue or Proposing Changes
 *************************************
 
-For reporting an issue or proposing a change, follow these steps:
+You can create an issue or propose changes by following these steps:
 1. Create a new GitHub issue associated with the relevant repository and propose your change there. Be sure to include implementation details and the rationale for the proposed change.
-2. The submitted issue will automatically have the 🚦 status: awaiting triage label applied. Wait for a Mautic administrator to evaluate your issue.
-1. If the Mautic administator approves the issue and removes the 🚦 status: awaiting triage label, you may start working on the task as described above in the "Contributing to an Issue" section.
+2. The submitted issue will be reviewed by the Mautic administrator.
+3. If the Mautic administator approves the issue you may start working on the task
 
-Contributing Changes
-********************
 
-This section explains how you can create pull request to submit changes and collaborate using Git, web browser, GitHub Desktop, or Gitpod.
+Different Methods of Contributing Changes
+****************************************
+
+This section explains the different methods you can use to create pull request to submit changes and collaborate.
 
 Using Git on the Command Line
 *****************************
 
-Using Git, you can clone the Mautic user documentation repository on your machine, and edit the documents locally. Changes are proposed in a branch, which ensures that the default branch only contains finished and approved work. The changes can then be commited for tracking, and submitted as a PR link with Mautic reviewers. 
+Using Git, you'll need to fork  this :xref:`Mautic GitHub User Documentation` repository and clone the Mautic user documentation repository on your machine to edit the documents locally. Changes are proposed in a branch, which ensures that the default branch only contains finished and approved work. The changes can then be commited for tracking, and submitted as a PR link with Mautic reviewers. 
 
 Git requires a GitHub user account, a terminal running bash, and a computer with Git installed and configured. If you want to work with Git locally, without using the command line, you can work with the :ref:`GitHub Desktop<Using GitHub Desktop>` client.
 Alternatively, you can also install GitHub CLI to use GitHub from the command line. For more information, visit the :xref:`GitHub CLI` page.
@@ -113,45 +116,6 @@ Using GitHub Desktop
 ********************
 
 Using :xref:`GitHub Desktop`, you can clone the Mautic user documentation repository on your machine, and edit the documents locally. Changes are proposed in a branch, which ensures that the default branch only contains finished and approved work. The changes can then be reviewed in GitHub Desktop and commited for tracking.
-
-Cloning Repository
-==================
-
-The Mautic repository can be cloned directly from the GitHub Desktop application or from the browser. 
-
-To clone a reporitory from the browser:
-#. Navigate to the :xref:`Mautic GitHub User Documentation` repository, and **Fork** it to add it to your profile repositories.
-#. Clone the project from your online GitHub account to have a local copy of the project. Ensure that the development environment setup is exactly as stated in the project's readme file.
-
-Creating a Branch
-=================
-
-To create a branch for managing your documentation updates:
-
-#. Launch the GitHub desktop client on your machine.
-#. On the GitHub graphical user interface (GUI), select **user-documentation** as your **Current Repository** displayed in the upper-left corner of the GitHub desktop client.
-#. To create a new branch, select **Current Branch** displayed in the upper-middle section of the GitHub GUI. The Branches window expands to display the different branches and pull requests available in the Mautic user documentation.
-#. On the **Branches** window, click **New Branch** in the **Branches** section.
-#. On the **Create a Branch** window, enter a descriptive **Name** (for example, {your-username}-{issue-that-is-going-to-be-fixed}), and click **Create Branch**.
-
-You can now edit your document locally. 
-
-Commiting Edits
-===============
-
-After editing your document, you must commit your edits locally to the branch before publishing it for review.
-
-To push your edits to your local branch:
-
-#. In the upper section of the GitHub GUI, select the **Current Repository** tab.
-
-The **Current Repository** section lists the changes you have made to your file.
-
-#. In the bottom section of the **Current Repository** tab, enter a brief summary and a message describing the key edits you have made to your document. 
-
-Refer to repository guidelines.
-
-#. Click **Commit to {branch name}**. The changes are committed to the local branch on your machine.
 
 Using Web Browser
 *****************
@@ -202,6 +166,51 @@ To launch your local Mautic workspace in your browser using Gitpod:
 
 8. Click **Sync Changes** to push and pull commits from the main origin which can also be accessed by clicking the three dot menu, and selecting 'Pull, Push' followed by 'sync'.
 
+Git Guidelines
+***************
+
+This section guides you on the basic required git steps.
+
+Cloning Repository
+==================
+
+The Mautic repository can be cloned directly from the GitHub Desktop application or from the browser. 
+
+To clone a reporitory from the browser:
+#. Navigate to the :xref:`Mautic GitHub User Documentation` repository, and **Fork** it to add it to your profile repositories.
+#. Clone the project from your online GitHub account to have a local copy of the project. Ensure that the development environment setup is exactly as stated in the project's readme file.
+
+Creating a Branch
+=================
+
+To create a branch for managing your documentation updates:
+
+#. Launch the GitHub desktop client on your machine.
+#. On the GitHub graphical user interface (GUI), select **user-documentation** as your **Current Repository** displayed in the upper-left corner of the GitHub desktop client.
+#. To create a new branch, select **Current Branch** displayed in the upper-middle section of the GitHub GUI. The Branches window expands to display the different branches and pull requests available in the Mautic user documentation.
+#. On the **Branches** window, click **New Branch** in the **Branches** section.
+#. On the **Create a Branch** window, enter a descriptive **Name** (for example, {your-username}-{issue-that-is-going-to-be-fixed}), and click **Create Branch**.
+
+You can now edit your document locally. 
+
+Commiting Edits
+===============
+
+After editing your document, you must commit your edits locally to the branch before publishing it for review.
+
+To push your edits to your local branch:
+
+#. In the upper section of the GitHub GUI, select the **Current Repository** tab.
+
+The **Current Repository** section lists the changes you have made to your file.
+
+#. In the bottom section of the **Current Repository** tab, enter a brief summary and a message describing the key edits you have made to your document. 
+
+Refer to repository guidelines.
+
+#. Click **Commit to {branch name}**. The changes are committed to the local branch on your machine.
+
+
 Creating a Pull Request
 ***********************
 
@@ -227,7 +236,3 @@ Looking for Help
 ****************
 
  You can join the :xref:`Mautic Community Slack` to connect with other documention writers and the wider community, if you aren’t already a member. Mautic documentation conversations are organized in the #t-education and #doc channels.
- 
- 
- 
- 
