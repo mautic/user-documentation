@@ -12,7 +12,7 @@ These guidelines outline how to contribute to the Mautic documentation hosted on
 - :ref:`Understanding the Repository Structure`
 - :ref:`Finding an Issue`
 - :ref:`Creating an Issue or Proposing Changes`
-- :ref:`Contributing Changes`
+- :ref:`Different Methods of Contributing Changes`
    - :ref:`Using Git on the Command Line`
    - :ref:`Using GitHub Desktop`
    - :ref:`Using Web Browser`
@@ -234,4 +234,4 @@ A notification detailing your push to your branch with a button labeled **Compar
 Looking for Help
 ****************
 
- You can join the :xref:`Mautic Community Slack` to connect with other documention writers and the wider community, if you aren’t already a member. Mautic documentation conversations are organized in the #t-education and #doc channels.
+You can join the :xref:`Mautic Community Slack` to connect with other documention writers and the wider community, if you aren’t already a member. Mautic documentation conversations are organized in the #t-education and #doc channels.
