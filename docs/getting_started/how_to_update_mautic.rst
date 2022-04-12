@@ -68,7 +68,7 @@ When updating Mautic, there are several tasks which can take a long time to comp
 
 When updating within the browser, problems usually manifest as the update hanging part way through, or crashing with an error. They often arise as a result of resource limitation, particularly on shared hosting environments. 
 
-For this reason, it's always recommended that you :ref:`update at the command line<Updating at the command line>` wherever possible.  From Mautic 5.0 the ability to update in the browser will be completely removed, and you will have to update at the command line.
+For this reason, it's always recommended that you :ref:`update at the command line<installing updates at the command line>` wherever possible.  From Mautic 5.0 the ability to update in the browser will be completely removed, and you will have to update at the command line.
 
 Before you commence updating, **please ensure that you have a tested backup of your Mautic instance**.
 

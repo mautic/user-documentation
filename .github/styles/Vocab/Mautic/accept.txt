@@ -1,5 +1,6 @@
 AJAX
 allowlist
+Amazon SES
 Autowired
 autowired
 bcc
@@ -19,14 +20,20 @@ Composer
 configurator
 ConnectWise
 Contribution(s)
+CORS
 cron
 Cron
 CTRL
+Do Not Contact
+DNC
 Dripflow
 FALSE
+Focus Item
+Focus Items
 Froala
 Froogaloop
 gcm
+GIF
 GitBook
 GitHub
 GMail
@@ -37,6 +44,7 @@ HTML
 http
 https
 HubSpot
+IMAP
 infographics
 JavaScript
 Joomla
@@ -44,6 +52,7 @@ Libre
 Licensor
 LinkedIn
 Mailjet
+Marketing Messages
 Mautic
 Middlewares
 middlewares
@@ -66,9 +75,12 @@ Rackspace
 Remarketing
 Salesforce
 Schimpf
-scp
+SCP
 SendGrid
+SES
 SMS
+SMTP
+SNS
 SparkPost
 sublicense
 SugarCRM
@@ -83,7 +95,7 @@ unpublish
 Unpublish
 URL
 URLs
-utm
+UTM
 Vtiger
 Webmecanik
 www
