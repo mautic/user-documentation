@@ -73,8 +73,13 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Campaigns
    :hidden:
 
-   campaigns/campaigns_overview
-   campaigns/creating_campaigns
-   campaigns/campaign_builder
-   campaigns/managing_campaigns
-   campaigns/troubleshooting_campaigns
+
+   campaigns/campaigns-overview
+   campaigns/creating-campaigns
+   campaigns/campaign-builder
+   campaigns/managing-campaigns
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Components
+   :hidden:
