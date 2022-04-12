@@ -47,7 +47,7 @@ You can familiarize yourself with the Mautic contribution process by reviewing t
 After you have selected an issue on the :xref:`Mautic Docs issues` page, follow the below steps:
 
 #. Add a comment indicating that you would like to own the ticket. This is to avoid conflicts with others also working on the issue.
-#. After an admin assigns you the issue, you can modify files and track changes on GitHub using command line utility, your web browser, GitHub Desktop, or Gitpod.
+#. After an adminstrator assigns you the issue, you can modify files and track changes on GitHub using command line utility, your web browser, GitHub Desktop, or Gitpod.
 #. Once you submit a pull request, an admin reviews your changes.
 
 Creating an Issue or Proposing Changes
@@ -57,7 +57,7 @@ You can create an issue or propose changes by following these steps:
 
 #. Create a new GitHub issue associated with the relevant repository and propose your change there. Be sure to include implementation details and the rationale for the proposed change.
 #. A Mautic team member reviews all submitted issues.
-#. If the Mautic administator approves the issue you may start working on the task
+#. If the administator approves the issue you may start working on the task
 
 
 Different Methods of Contributing Changes
