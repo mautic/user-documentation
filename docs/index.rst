@@ -108,6 +108,7 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    components/dynamic_web_content
    components/forms
    components/landing_pages
+   components/forms
 
 .. toctree::
    :maxdepth: 2
