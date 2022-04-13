@@ -86,5 +86,7 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Components
    :hidden:
 
-   components/dwc
+   components/dynamic_web_content
+   components/assets
+   components/forms
 
