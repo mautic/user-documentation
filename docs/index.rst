@@ -47,6 +47,7 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    set_up/switching_composer
    set_up/cron_jobs
    set_up/tracking_script
+   set_up/variables
 
 
 .. toctree::

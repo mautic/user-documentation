@@ -16,7 +16,7 @@ The Mautic installation is a three-step process:
 
 1. Integrate the database server with the Mautic server.
    
-2. Create an admininstrator account to access the Mautic server.
+2. Create an administrator account to access the Mautic server.
    
 3. Set up the email server for email marketing automation.
 
