@@ -85,3 +85,10 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    components/assets
    components/dynamic_web_content
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Dashboard
+   :hidden:
+
+   dashboard/dashboard
+
