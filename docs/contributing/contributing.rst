@@ -97,13 +97,13 @@ To edit documents using Git:
       git add <new and modified files>
       git commit --message "move contributing to new file"
 
-#. Push the current branch to GitHub to synchronize the changes, and set the remote as upstream.
+#. Push the current branch to GitHub to synchronize the changes, and set the remote as upstream. You will be prompted to enter your GitHub login credentials.
 
    .. code-block:: shell
 
-   git push --set-upstream origin {username}-revision-readme-file
+      git push --set-upstream origin {username}-revision-readme-file
 
-   You will be prompted to enter your GitHub login credentials.
+
 
 #. After you’ve pushed your commits, visit your repository on GitHub to view the reflected changes and the commit history. Review the changes at your fork - ``https://github.com/{yourusername}/user-documentation.``
 
