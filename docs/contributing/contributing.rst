@@ -224,10 +224,11 @@ A notification detailing your push to your branch with a button labeled **Compar
     - Reference any :xref:`Mautic Docs issues` that the current pull request (PR) resolves so that they are automatically linked. For example, if the PR closes an existing issue #0001, reference it in the description as 'closes #0001'.
     - @mentions of the Mautic administrator for reviewing the proposed changes.
 #. Click **Create pull request** to generate the PR link.
-#. Share the pull request (PR) link in the #t-education channel on :xref:`Mautic Community Slack`.
+#. Share the pull request (PR) link in the #t-education Channel on :xref:`Mautic Community Slack`.
 
 
 Looking for Help
 ****************
 
-You can join the :xref:`Mautic Community Slack` to connect with other documention writers and the wider community, if you aren’t already a member. Mautic documentation conversations are organized in the #t-education and #doc channels.
+You can join the :xref:`Mautic Community Slack` to connect with other documention writers and the wider community, if you aren’t already a member. Mautic documentation conversations are organized in the #t-education and #doc Channels.
+  

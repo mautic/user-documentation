@@ -9,25 +9,15 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
 
    This documentation project is under active development.
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
 
-   contributing/contributing
-   contributing/mautic_style_guide
- 
 .. toctree::
    :maxdepth: 2
+   :caption: Mautic Documentation
    :hidden:
 
    overview/overview
-
-   .. toctree::
-   :maxdepth: 2
-   :caption: Categories
-   :hidden:
-
-   categories/categories-overview
+   contributing/contributing
+   contributing/mautic_style_guide
 
 .. toctree::
    :caption: Getting Started
@@ -42,12 +32,18 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :maxdepth: 2
    :hidden:
 
-
    set_up/maxmind_license
    set_up/switching_composer
    set_up/cron_jobs
    set_up/tracking_script
+   set_up/variables
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Categories
+   :hidden:
+
+   categories/categories-overview
 
 .. toctree::
    :caption: Channels
@@ -76,15 +72,23 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
 
-   campaigns/campaigns-overview
-   campaigns/creating-campaigns
-   campaigns/campaign-builder
-   campaigns/managing-campaigns
+   campaigns/campaigns_overview
+   campaigns/creating_campaigns
+   campaigns/campaign_builder
+   campaigns/managing_campaigns
 
 .. toctree::
    :maxdepth: 2
    :caption: Components
    :hidden:
 
-   components/dwc
+   components/assets
+   components/dynamic_web_content
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Dashboard
+   :hidden:
+
+   dashboard/dashboard
 
