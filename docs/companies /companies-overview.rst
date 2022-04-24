@@ -3,7 +3,7 @@ Company
 #########
 
 
-Companies are a way to group contacts based on the company(ies) the contact is assigned to.
+Companies are a way to group contacts based on the companyies the contact is assigned to.
 
 .. note:: 
 
