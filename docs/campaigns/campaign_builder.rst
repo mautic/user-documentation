@@ -1,11 +1,11 @@
 Using the Campaign Builder
-==========================
+##########################
 
 The Campaign Builder provides a blank canvas on which you can build your Campaign workflow. A Campaign Builder is made up of conditions, decisions, and actions. It enables you to create a simple workflow by dragging and dropping various decisions, actions, and conditions onto a canvas.
 
 To build your Campaign, perform the following steps:
 
-1. Click **Launch the Campaign Builder** on the New Campaigns wizard. The Contact Sources menu appears as shown in the following image.
+#. Click **Launch the Campaign Builder** on the New Campaigns wizard. The Contact Sources menu appears as shown in the following image.
    
    .. image:: images/campaign-sources.png
     :width: 400
@@ -13,27 +13,27 @@ To build your Campaign, perform the following steps:
 
    In this step, you specify the Contacts to include in your Campaign. It's possible to trigger a Campaign when Contacts join a Segment, submit a Form, or a combination of the two.
 
-2. Select where your Campaign pulls the Contacts from:
+#. Select where your Campaign pulls the Contacts from:
 
--  **Contact Segments**: choose this option if you want to send your Campaign to a specific group of your Contacts that share certain attributes, for example, 'Located in the USA' or 'Visited Product A' and are in an existing Segment based on this criteria.
+   -  **Contact Segments**: choose this option if you want to send your Campaign to a specific group of your Contacts that share certain attributes, for example, 'Located in the USA' or 'Visited Product A' and are in an existing Segment based on this criteria.
 
    Note that the Segment selection shows public Segments only. If you create a Segment marked as private, that Segment won't be available for use in Campaigns.
 
--  **Contact Forms**: choose this option if you want to start the Campaign when the Contact completes a specified Form. Forms are the primary point of gathering information about a Contact. It's possible to take action in a Campaign based on the Form field values submitted.
+   -  **Contact Forms**: choose this option if you want to start the Campaign when the Contact completes a specified Form. Forms are the primary point of gathering information about a Contact. It's possible to take action in a Campaign based on the Form field values submitted.
 
    You can select a mix of both types of Contact sources for your Campaign. To use both, click the grey selector button on either the left or right side of the **Contact source** box to add whichever source type you didn't originally select.
 
-.. image:: images/multi-source-campaign.png
-    :width: 600
-    :alt: Screenshot of Campaign builder showing multiple sources selected.
+  .. image:: images/multi-source-campaign.png
+      :width: 600
+      :alt: Screenshot of Campaign builder showing multiple sources selected.
 
-3. After selecting one or more Contact sources, click the grey selector button to add at least one event to your Campaign. A Campaign event comprises of a combination of actions, decisions, and/or conditions as shown in the following image:
+#. After selecting one or more Contact sources, click the grey selector button to add at least one event to your Campaign. A Campaign event comprises of a combination of actions, decisions, and/or conditions as shown in the following image:
 
-.. image:: images/campaign-events.png
-    :width: 600
-    :alt: Screenshot of Campaign builder showing the available Campaign events.
+  .. image:: images/campaign-events.png
+      :width: 600
+      :alt: Screenshot of Campaign builder showing the available Campaign events.
 
-For more information about Campaign Actions, Decisions, and Conditions, see the following topics.
+  For more information about Campaign Actions, Decisions, and Conditions, see the following topics.
 
 Actions
 -------
@@ -60,7 +60,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Change Contact's Stage**  
      - Moves a Contact to the specified Stage.
    * - **Delete Contact**  
-     - Permanently deletes the Contact record along with all the information about that Contact, including the Campaign event log record about that Contact. See the `Segment docs</contacts/manage-segments>`__ about how to use this action to delete all Contacts in a Segment.
+     - Permanently deletes the Contact record along with all the information about that Contact, including the Campaign event log record about that Contact. See the :doc:`Segment docs</contacts/manage_segments>` about how to use this action to delete all Contacts in a Segment.
    * - **Jump to Event**  
      - Moves Contacts from one point in a Campaign to another without rebuilding events. Use this action to send the Contact to a different path in the Campaign.
    * - **Modify Contact's Segments**
@@ -82,7 +82,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Update Contact**
      - Updates the existing Contact's fields with the specified values.
    * - **Update Contact's primary Company**
-     - Updates the existing Contact's primary Company fields with the specified value. See `documentation on Companies <contacts/companies>`__.
+     - Updates the existing Contact's primary Company fields with the specified value. See :doc:`documentation on Companies <contacts/companies>`.
    * - **Update Contact owner**
      - Updates the Contact's owner.
 
@@ -90,7 +90,7 @@ Notes on Campaign Actions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. As the first step of your Campaign, you typically send out an Email to your Segments. When you add an Email to a Campaign, you can select a potential **delay** for Email delivery as shown in the following image.
+#. As the first step of your Campaign, you typically send out an Email to your Segments. When you add an Email to a Campaign, you can select a potential **delay** for Email delivery as shown in the following image.
 
 .. image:: images/send-email-delay-options.png
     :width: 600
@@ -98,7 +98,7 @@ Notes on Campaign Actions
 
 When attaching an Action to a decision's **non-action** initiated decision path, the delay becomes how long the Contact has to take action before the Campaign progresses down the non-action path. Image showing delayed actions on a non-action decision path in a Campaign.
 
-1. The Delete Contact action also deletes the Campaign event log record about that contact. Therefore, though this action might always display 0% progress on the Campaign detail page, it could have deleted some Contacts.
+#. The Delete Contact action also deletes the Campaign event log record about that contact. Therefore, though this action might always display 0% progress on the Campaign detail page, it could have deleted some Contacts.
 
 .. note::
     The Delete Contact action doesn’t allow other Campaign events to be connected to it. Since the Contact will not exist after this action is triggered, Campaign events cannot be triggered after this point.
@@ -205,7 +205,7 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
      - Checks if the Contact's email address has a valid syntax, for example name@example.com without spaces, other invalid characters or formats.	
 	
 Notes on delayed conditions and dates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Mautic respects delays set on the condition itself before passing down to a delay on any connected action. For example, if you are coming from a negative path on 'Opens Email', you can set a condition of 'has active notification' with a relative date of 1 day, followed by 'Send Email' on the negative path with a relative date of 2 days. Mautic checks after 1 day if there is an active notification and if there isn't, schedules the Email for two days later.
 
 Using a custom date field to trigger a Campaign
@@ -228,9 +228,9 @@ This **doesn't work** for the Anniversary option.
 If a Contact appears again at a later date in that Segment because the value of the date has changed, then the Contact passes through the Campaign only once, and hence will NOT be included in the Campaign again.
 
 Triggering Campaign events
------------------------
+--------------------------
 
-Actions and Decisions in Mautic require a `cron job </setup/cron-jobs>`__ which executes the following command at the desired interval:
+Actions and Decisions in Mautic require a :doc:`cron job</set_up/cron_jobs>` which executes the following command at the desired interval:
 
 .. code-block:: shell
 

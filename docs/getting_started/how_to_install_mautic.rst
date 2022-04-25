@@ -16,7 +16,7 @@ The Mautic installation is a three-step process:
 
 1. Integrate the database server with the Mautic server.
    
-2. Create an admininstrator account to access the Mautic server.
+2. Create an administrator account to access the Mautic server.
    
 3. Set up the email server for email marketing automation.
 
@@ -389,4 +389,4 @@ Often there is a need to have a local environment for testing Mautic - for examp
 
 We use DDEV as our tool of choice for this purpose. It is very easy to work with.
 
-To learn how to set up DDEV with Mautic, read our documentation: :xref:`Setting up Mautic with DDEV`.
+To learn how to set up DDEV with Mautic, please check the documentation in the Contributors Handbook at https://contribute.mautic.org/contributing-to-mautic/tester.
