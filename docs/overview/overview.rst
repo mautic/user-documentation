@@ -49,7 +49,7 @@ Create and manage various types of content that you will use for your marketing 
 Campaigns
 *********
 
-- :doc:`campaigns` With your Contact information and the Components in place, you can now start to create customized marketing activities for your Contacts. Such marketing activities are created primarily in Campaigns.
+- :doc:`/campaigns/campaigns_overview` With your Contact information and the Components in place, you can now start to create customized marketing activities for your Contacts. Such marketing activities are created primarily in Campaigns.
 
 Channels
 ********
@@ -60,19 +60,19 @@ Choose one or more Channels to deliver the content and messages to your Contacts
 
 - :doc:`/channels/emails` Use built-in Email templates to send messages to a group of your contacts, or send personalized messages to specific contacts.
 
-- :doc:`channels/focus_items` A type of web personalization that enables marketers to embed on a webpage pop-up messages and forms, bars and splash screens based on the contact's behavior. By using Focus Items, you can easily convert visitors into known Contacts.
+- :doc:`/channels/focus_items` A type of web personalization that enables marketers to embed on a webpage pop-up messages and forms, bars and splash screens based on the contact's behavior. By using Focus Items, you can easily convert visitors into known Contacts.
 
-- :doc:`channels/social_monitoring` Marketers can add contacts to Mautic through Twitter mentions and hashtags.
+- :doc:`/channels/social_monitoring` Marketers can add contacts to Mautic through Twitter mentions and hashtags.
 
 Assess Performance
 ******************
 
 Analyze trends and assess the performance of your marketing strategy using various tools.
 
-- :doc:`dashboard` A high-level representation of Contact data, Campaigns, and activities. You can create a highly personalized dashboard based on the information that you want to track.
+- :doc:`/dashboard/dashboard` A high-level representation of Contact data, Campaigns, and activities. You can create a highly personalized dashboard based on the information that you want to track.
 
-- :doc:`reports` A tool to measure the effectiveness of your marketing Campaigns, Emails, Forms, or page hits. Reports also let you troubleshoot or workaround areas of improvement to enhance your marketing strategy.
+- :doc:`/reports/reports` A tool to measure the effectiveness of your marketing Campaigns, Emails, Forms, or page hits. Reports also let you troubleshoot or workaround areas of improvement to enhance your marketing strategy.
 
-- :doc:`points` A score that is an indicator of progress for a Contact or customer. Points are a way for marketers to measure which of their Contacts are the most engaged based on their interactions and behavior.
+- :doc:`/points/points` A score that is an indicator of progress for a Contact or customer. Points are a way for marketers to measure which of their Contacts are the most engaged based on their interactions and behavior.
 
-- :doc:`stages` A customizable feature that enables you to keep a track of where your Contacts are in their marketing/sales journey
+- :doc:`/stages/stages` A customizable feature that enables you to keep a track of where your Contacts are in their marketing/sales journey

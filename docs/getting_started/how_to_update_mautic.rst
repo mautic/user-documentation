@@ -1,5 +1,9 @@
+.. vale off
+
 How to update Mautic
 ####################
+
+.. vale on
 
 There are two ways to update Mautic:
 
