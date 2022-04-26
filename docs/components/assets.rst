@@ -13,7 +13,7 @@ Asset Categories
 
 .. vale on
 
-Assets can be organized into Categories, which allows you to easily locate resources. To create a new Category, review the :doc:`categories/categories` documentation.
+Assets can be organized into Categories, which allows you to easily locate resources. To create a new Category, review the :doc:`/categories/categories-overview` documentation.
 
 .. vale off
 
@@ -59,7 +59,7 @@ The following fields are available:
 - **Title** - the title for the Asset
 - **Alias** - used to create the slug on the download URL. Created from the title automatically if not provided.
 - **Description** - an internally used description to inform other Mautic users what the Asset is and/or where it's used.
-- **Category** - used to organize resources - see :doc:`categories/categories` for more information
+- **Category** - used to organize resources - see :doc:`/categories/categories-overview` for more information
 - **Language** - the language of this Asset - can be helpful in multilingual marketing campaigns and for reporting purposes
 - **Published** - Whether the Asset is available for use - published - or not available - unpublished
 
