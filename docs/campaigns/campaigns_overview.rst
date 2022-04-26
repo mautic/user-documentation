@@ -1,5 +1,5 @@
-Campaigns
-=========
+Campaigns Overview
+==================
 
 A Campaign is a marketing activity that aligns Components and the Channels through which you can publish your content in a coordinated, strategically timed approach to meet specific business objectives. After you add your Contacts and set up the required Channels, you can create Campaigns to build meaningful relationships with your Contacts.
 
