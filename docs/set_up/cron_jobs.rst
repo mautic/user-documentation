@@ -104,8 +104,8 @@ If you are using Bounce Management, set up the following command to fetch and pr
 
     php /path/to/mautic/bin/console mautic:email:fetch
 
-Social Monitoring
-================
+Social Monitoring crons
+=======================
 
 If you are using Social Monitoring, add the following command to your cron configuration:
 
