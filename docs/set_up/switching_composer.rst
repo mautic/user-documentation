@@ -1,10 +1,15 @@
+
+.. vale off
+
 How to switch to Composer
 #########################
 
-Up until Mautic 4, Users could download Mautic as a ZIP file and install it on any PHP server. 
-However, many Users were running into installation and update errors, many of which caused considerable frustration and in some cases, significant business disruption. Next to that, Mautic recently introduced the :ref:`Marketplace` which isn't compatible with this installation method.
+.. vale on
 
-For the reasons mentioned previously, from the release of Mautic 5, Composer becomes the default way to install and update Mautic. Read more in :xref:`this blog post`.
+Until Mautic 4, you could download Mautic as a ZIP file and install it on any PHP server. 
+However, many Users were running into installation and update errors, many of which caused considerable frustration and in some cases, significant business disruption. Next to that, Mautic recently introduced the :ref:`Mautic Marketplace` which isn't compatible with this installation method.
+
+For the reasons mentioned previously, from the release of Mautic 5, Composer becomes the default way to install and update Mautic. Read more in :xref:`composer blog post`.
 
 How to switch to a Composer-based installation?
 ************************************************
