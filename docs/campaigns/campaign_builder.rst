@@ -5,7 +5,7 @@ Using the Campaign Builder
 
 .. vale on
 
-The Campaign Builder provides a blank canvas on which you can build your Campaign workflow. A Campaign Builder is made up of conditions, decisions, and actions. It enables you to create a simple workflow by dragging and dropping various decisions, actions, and conditions onto a canvas.
+The Campaign Builder provides a blank canvas on which you can build your Campaign workflow. The Campaign Builder allows the use of conditions, decisions, and actions. It enables you to create a simple workflow by dragging and dropping various decisions, actions, and conditions onto a canvas.
 
 To build your Campaign, perform the following steps:
 
@@ -19,7 +19,7 @@ To build your Campaign, perform the following steps:
 
 #. Select where your Campaign pulls the Contacts from:
 
-   -  **Contact Segments**: choose this option if you want to send your Campaign to a specific group of your Contacts that share certain attributes, for example, 'Located in the USA' or 'Visited Product A' and are in an existing Segment based on this criteria.
+   -  **Contact Segments**: choose this option if you want to send your Campaign to a specific group of your Contacts that share certain attributes, for example, 'Located in the United States' or 'Visited Product A' and are in an existing Segment based on this criteria.
 
    Note that the Segment selection shows public Segments only. If you create a Segment marked as private, that Segment won't be available for use in Campaigns.
 
@@ -76,7 +76,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Remove Do Not Contact**  
      - Removes the Contact from the Do Not Contact (DNC) list.
    * - **Send a Webhook** 
-     - Sends a Webhook to a defined URL, using the GET, POST, PUT, PATCH, or DELETE methods. Headers and data is customizable, and support the use of tokens, such as Contact fields and the Contact's IP address. For example, {contactfield=firstname}
+     - Sends a Webhook to a defined URL, using the GET, POST, PUT, PATCH, or DELETE methods. Headers and data is customizable, and support the use of tokens, such as Contact fields and the Contact's IP address. For example, ``{contactfield=firstname}``
    * - **Send Email**   
      - Sends a transaction or marketing Email to the selected Contact. You can send a transactional Email to the Contact multiple times. You can only send a marketing Email to the Contact  once across multiple sources. If the Contact has already received this Email from another source or the current Campaign, they aren't sent the Email again and the Contact progresses through the Campaign.
    * - **Send Email to User** 
@@ -90,8 +90,12 @@ The actions that Mautic offers in a Campaign include:
    * - **Update Contact owner**
      - Updates the Contact's owner.
 
+.. vale off
+
 Notes on Campaign Actions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. vale on
 
 
 #. As the first step of your Campaign, you typically send out an Email to your Segments. When you add an Email to a Campaign, you can select a potential **delay** for Email delivery as shown in the following image.
@@ -102,10 +106,10 @@ Notes on Campaign Actions
 
 When attaching an Action to a decision's **non-action** initiated decision path, the delay becomes how long the Contact has to take action before the Campaign progresses down the non-action path. Image showing delayed actions on a non-action decision path in a Campaign.
 
-#. The Delete Contact action also deletes the Campaign event log record about that contact. Therefore, though this action might always display 0% progress on the Campaign detail page, it could have deleted some Contacts.
+#. The Delete Contact action also deletes the Campaign event log record about that Contact. Therefore, though this action might always display 0% progress on the Campaign detail overview, it could have deleted some Contacts.
 
 .. note::
-    The Delete Contact action doesn’t allow other Campaign events to be connected to it. Since the Contact will not exist after this action is triggered, Campaign events cannot be triggered after this point.
+    The Delete Contact action doesn't allow connection with other Campaign events. Since the Contact won't exist after triggering this action, Campaign events can't exist after this point.
    
 After adding an action, you can place a decision on the Campaign.
 
@@ -114,7 +118,7 @@ Decisions
 
 Campaign Decisions are actions that your Contacts initiate. Downloading an Asset, opening an Email, or visiting a Landing Page are examples of Decisions. These Decisions can be either directly initiated or implied based on non-action. The options for Decisions change based on the Campaign Actions that you select.
 
-A decision usually has two paths denoted by the red and green points on the decision tree.
+A decision usually has two paths denoted by the red and green icons on the decision tree.
 
 Green paths
 ~~~~~~~~~~~
@@ -145,7 +149,7 @@ Here are the decisions that Mautic offers in the Campaign Builder:
    * - Decision
      - Description
    * - **Device visit**    
-     - Set the options to track whether your Contact visits your page/s from a specific device type, brand, or operating system.
+     - Set the options to track whether your Contact visits your resources from a specific device type, brand, or operating system.
    * - **Downloads Asset**    
      - Set the options to track whether your Contact downloads specified Asset/s.
    * - **Request Dynamic Content**    
@@ -177,9 +181,9 @@ Here are the decisions that are Email-related:
 Conditions
 ----------
 
-Campaign conditions execute different actions based on a Contact's data. For example, to execute an action if a Contact has a valid email address or do something else if they don't.
+Campaign conditions execute different actions based on a Contact's data. For example, to execute an action if a Contact has a valid Email address or do something else if they don't.
 
-A condition has two paths, denoted by red and green points as explained in the previous section.
+A condition has two paths, denoted by red and green icons as explained in the previous section.
 
 Here are the different conditions that Mautic offers in the Campaign Builder:
 
@@ -205,8 +209,8 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
      - Checks if values submitted for a selected field on a selected Form matches specified criteria.
    * - **Has active notification**    
      - Checks if the Contact has an active web notification.	
-   * - **Has valid email address**    
-     - Checks if the Contact's email address has a valid syntax, for example name@example.com without spaces, other invalid characters or formats.	
+   * - **Has valid Email address**    
+     - Checks if the Contact's Email address has a valid syntax, for example name@example.com without spaces, other invalid characters or formats.	
 	
 Notes on delayed conditions and dates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -218,21 +222,25 @@ In the condition based on a Contact field value, select the required date field.
 
 In the Anniversary option, you can only enter the day and month values.
 
-Mautic evaluates Campaign conditions immediately, therefore if the date in the field matches the condition, Mautic executes then the positive action. If the date doesn't match, Mautic executes the negative action. The Contact doesn't wait for the condition to be true.
+Mautic evaluates Campaign conditions immediately, therefore if the date in the field matches the condition, Mautic executes then the positive action. If the date doesn't match, Mautic executes the negative action. The Contact doesn't wait for the condition to be TRUE.
 
 In order to run Campaigns based on a particular date where a Contact may or may not be "included" today:
 
-- create a Segment with a filter where the date field = TODAY.
+- create a Segment with a filter where the date field = ``TODAY``.
 - initiate the Campaign based on that Segment.
 - as Contacts move in and out of the Segment, the Campaign runs.
 - you can eliminate the condition since the Segment is changing daily.
 
 This **doesn't work** for the Anniversary option.
 
-If a Contact appears again at a later date in that Segment because the value of the date has changed, then the Contact passes through the Campaign only once, and hence will NOT be included in the Campaign again.
+If a Contact appears again at a later date in that Segment because the value of the date has changed, then the Contact passes through the Campaign only once, and hence isn't included in the Campaign again.
+
+.. vale off
 
 Triggering Campaign events
 --------------------------
+
+.. vale on
 
 Actions and Decisions in Mautic require a :doc:`cron job</set_up/cron_jobs>` which executes the following command at the desired interval:
 
