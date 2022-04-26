@@ -51,7 +51,7 @@ After you have selected an issue on the :xref:`Mautic Docs issues` page, follow 
 #. Once you submit a pull request, an admin reviews your changes.
 
 Creating an Issue or Proposing Changes
-*************************************
+**************************************
 
 You can create an issue or propose changes by following these steps:
 
@@ -61,7 +61,7 @@ You can create an issue or propose changes by following these steps:
 
 
 Different Methods of Contributing Changes
-****************************************
+*****************************************
 
 This section explains the different methods you can use to create pull request to submit changes and collaborate.
 
