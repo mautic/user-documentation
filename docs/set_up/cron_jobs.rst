@@ -1,5 +1,9 @@
+.. vale off
+
 Cron jobs
 #########
+
+.. vale on
 
 .. attention::
 
@@ -25,12 +29,12 @@ For instance:
     - 10,25,40,55 <— mautic:campaigns:trigger
 
 Required
-*********
+********
 
 Mautic needs some mandatory cron jobs to run on a regular basis as follows:
 
-Segments
-========
+Segment cron jobs
+=================
 
 **To keep the Segments current:**
 
@@ -44,8 +48,8 @@ You can also limit the number of Contacts to process per script execution using 
 
 .. vale off
 
-Campaigns
-=========
+Campaign cron jobs
+==================
 
 .. vale on
 
@@ -86,8 +90,8 @@ Optional
 
 Depending on your server configuration, you can set up additional cron jobs that are optional for tasks such as sending Emails, importing Contacts, and more. The optional cron jobs are as follows:
 
-Process Email queue
-===================
+Process Email queue cron job
+============================
 
 If the system configuration is queueing Emails, a cron job processes them.
 
@@ -95,8 +99,8 @@ If the system configuration is queueing Emails, a cron job processes them.
 
     php /path/to/mautic/bin/console mautic:emails:send
 
-Fetch and process Monitored Email
-=================================
+Fetch and process Monitored Email cron job
+==========================================
 
 If you are using Bounce Management, set up the following command to fetch and process messages:
 
@@ -104,8 +108,8 @@ If you are using Bounce Management, set up the following command to fetch and pr
 
     php /path/to/mautic/bin/console mautic:email:fetch
 
-Social Monitoring crons
-=======================
+Social Monitoring cron job
+==========================
 
 If you are using Social Monitoring, add the following command to your cron configuration:
 
@@ -113,8 +117,8 @@ If you are using Social Monitoring, add the following command to your cron confi
 
     php /path/to/mautic/bin/console mautic:social:monitoring
 
-Import Contacts
-===============
+Import Contacts cron job
+========================
 
 To import an especially large number of Contacts or Companies in the background, use the following command:
 
@@ -124,8 +128,8 @@ To import an especially large number of Contacts or Companies in the background,
 
 The time taken for this command to execute depends on the number of Contacts in the CSV file. However, on successful completion of the import operation, a notification appears on the Mautic dashboard.
 
-Webhooks
-========
+Webhooks cron job
+=================
 
 If the Mautic configuration settings include Webhook batch processing, use the following command to send the payloads:
 
@@ -135,8 +139,8 @@ If the Mautic configuration settings include Webhook batch processing, use the f
 
 .. _cron jobs:
 
-Update MaxMind GeoLite2 IP database
-===================================
+Update MaxMind GeoLite2 IP database cron job
+============================================
 
 Mautic uses :xref:`MaxMind's` GeoLite2 IP database by default. 
 The database license is :xref:`Creative Commons Attribution-ShareAlike 3.0 Unported License` and thus Mautic can't include it within the installation package. 
@@ -147,8 +151,8 @@ It's possible to download the database manually through Mautic's Configuration o
 
     php /path/to/mautic/bin/console mautic:iplookup:download
 
-Clean up old data
-=================
+Clean up old data cron job
+==========================
 
 Clean up a Mautic installation by purging old data. Note that you can't purge some types of data within Mautic. 
 Currently supported are audit log entries, visitors - anonymous Contacts - and visitor Landing Page hits. Use ``--dry-run`` to view the number of records impacted before making any changes.
@@ -161,8 +165,8 @@ Use the ``--gdpr`` flag to delete data to fulfill GDPR European regulation. This
 
     php /path/to/mautic/bin/console mautic:maintenance:cleanup --days-old=365 --dry-run
 
-MaxMind CCPA compliance
-=======================
+MaxMind CCPA compliance cron job
+================================
 
 MaxMind requires Users to keep a "Do Not Sell" list up to date, and remove all data relating to those IP addresses in the past from MaxMind.
 
@@ -182,8 +186,8 @@ This command downloads the database of Do Not Sell IP addresses from MaxMind.
 
 This command finds data in the database loaded from MaxMind's Do Not Sell IP addresses and deletes the data.
 
-Send scheduled broadcasts (Segment Emails)
-==========================================
+Send scheduled broadcasts (Segment Emails) cron job
+===================================================
 
 Starting with Mautic 2.2.0, it's now possible to use cron to send scheduled broadcasts for Channel communications. The current only implementation of this is for Segment Emails. Instead of requiring a manual send and wait with the browser window open while AJAX batches over the send, it's possible to use a command to initiate the process.
 
@@ -206,8 +210,8 @@ Command parameters:
 
 - ``--min-contact-id`` and ``--max-contact-id`` allows the separation of Email sending by smaller chunks, by specifying contact ID ranges. If those ranges won't overlap, this allows you to run several broadcast commands in parallel.
 
-Send scheduled Reports
-======================
+Send scheduled Reports cron job
+===============================
 Starting with Mautic 2.12.0, it's now possible to use cron to send scheduled Reports.
 
 .. code-block:: php
@@ -218,8 +222,8 @@ Starting with Mautic 2.12.0, it's now possible to use cron to send scheduled Rep
 
     for releases prior to 1.1.3, it's required to append ``--env=prod`` to the cron job command to ensure commands execute correctly.
 
-Configure Mautic Integrations
-=============================
+Configure Mautic Integration cron jobs
+======================================
 
 To perform synchronization of all Integrations and to manage Plugins, use the cron job commands in this section.
 
