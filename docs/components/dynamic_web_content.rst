@@ -71,7 +71,7 @@ The following values are available:
 
 .. vale on
 
-**Category** - Assign a Category to help you organize your Dynamic Web Content items. See :doc:`categories/categories` for more information.
+**Category** - Assign a Category to help you organize your Dynamic Web Content items. See :doc:`/categories/categories-overview` for more information.
 
 - **Language** - the language of this Dynamic Web Content - can be helpful in multilingual marketing Campaigns and for reporting purposes
 
@@ -122,7 +122,7 @@ As an example, these two fields might look like: ``Req-DWC: Country-Header`` in 
 Creating the filters
 ====================
 
-Once created, you can add filters on the affirmative path to determine which Contacts see the different variations. This happens with Conditions - read more in :doc:`/campaigns/creating-campaigns`.
+Once created, you can add filters on the affirmative path to determine which Contacts see the different variations. This happens with Conditions - read more in :doc:`/campaigns/creating_campaigns`.
 
 As an example, you might use the condition of ``Country = United States of America`` to filter only people located in the country.
 
