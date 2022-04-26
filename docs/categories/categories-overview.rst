@@ -1,5 +1,9 @@
+.. vale off
+
 Categories
 ##########
+
+.. vale on
 
 Categories are a way to organize Mautic elements. They are available for Assets, Campaigns, Emails, Focus Items, Forms, Pages, Points, Social Monitoring and Stages. There are two ways to use Categories:
 
