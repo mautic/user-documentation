@@ -71,11 +71,11 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Campaigns
    :hidden:
 
-
    campaigns/campaigns_overview
    campaigns/creating_campaigns
    campaigns/campaign_builder
    campaigns/managing_campaigns
+   campaigns/troubleshooting_campaigns
 
 .. toctree::
    :maxdepth: 2
