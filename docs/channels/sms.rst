@@ -4,7 +4,7 @@ SMS Text messages
 With the SMS Channel it's possible to send text messages from Campaigns in Mautic.
 
 .. note::
-    To use this Channel you must first set up an SMS transport, such as :doc:`/plugins/Twilio`.
+    To use this Channel you must first set up an SMS transport, such as :doc:`/plugins/twilio`.
 
 .. vale off
 
