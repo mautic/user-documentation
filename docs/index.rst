@@ -23,7 +23,8 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Getting Started
    :maxdepth: 2
    :hidden:
-
+   
+   getting_started/getting_started
    getting_started/how_to_install_mautic
    getting_started/how_to_update_mautic
 
