@@ -1,5 +1,9 @@
+.. vale off
+
 Managing Campaigns
-==================
+##################
+
+.. vale on
 
 You can manage your Campaigns from the Campaigns overview page.
 
