@@ -53,9 +53,15 @@ About the builder
 Enabling the builder
 ====================
 
-Since Mautic 3.3-RC1 the builder is available to enable in the Plugins section of Mautic. Go to the Settings by clicking the cog wheel at the top right > Plugins > GrapesJS and click the GrapesJS icon. Change the slider to Yes.
+Since Mautic 3.3-RC1 the builder is available and can be enabled in the Plugins section of Mautic. 
 
-Now you need to **clear your Mautic** cache located in var/cache and refresh the Landing Page before you can work with the new GrapesJS builder. Some browsers may also require you to clear the browser cache.
+#. Go to the Settings by clicking the cog wheel at the top right > Plugins > GrapesJS and click the GrapesJS icon. 
+
+#. Change the slider to Yes.
+
+#. **Clear your Mautic** cache located in var/cache and refresh the Landing Page before you can work with the new GrapesJS builder. 
+
+Some browsers may also require you to clear the browser cache.
 
 By default, Mautic 4 activates the new builder. Follow the previous steps to revert to the legacy builder, remembering to clear the cache and reload the Landing Page.
 
@@ -74,9 +80,9 @@ The functions of the Email builder are as follows:
 
 #. Editor functions from left to right: display grids, Full screen view, export MJML / HTML code, Edit code, display customization options, display blocks, close editor.
 
-#. Layout sections. These objects function as the basic structure of your design. Create your Email structure from sections, and pull in the different blocks you want to use.
+#. Layout sections: These objects function as the basic structure of your design. Create your Email structure from sections, and pull in the different blocks you want to use.
 
-#. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
+#. Content blocks: You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
 Templates
 *********
@@ -93,7 +99,7 @@ If you wish to use the Theme in multiple builders, you can use this syntax:
 
   This syntax changed between Mautic 3.3.* and Mautic 4 to enable support for multiple builders - if you have been testing in the beta phase you need to update your configuration files to avoid a 500 error.
 
-The blank Theme contains an example of a full configuration file:
+The Blank Theme contains an example of a full configuration file:
 
 .. code-block:: 
 
