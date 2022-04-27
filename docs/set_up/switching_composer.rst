@@ -55,6 +55,8 @@ Here's the steps to follow to switch to a Composer-based installation:
 
 #. You have now switched to a Composer-based installation. Test if Mautic works as expected.
 
+.. vale off
+
 Frequently Asked Questions (FAQs)
 *********************************
 
@@ -66,5 +68,5 @@ Q: What's the minimum Mautic version required to switch to the Composer-based in
 
 A: You need at least Mautic 4.0.0 for switching to the Composer-based installation.
 
-
+.. vale on
 

@@ -4,7 +4,7 @@ Variables
 .. tip:: 
   Default Value
 
-  The default value (sometimes called Fallback Text) can be specified after the | (pipe) character. Consider this email salutation:
+  The default value - sometimes called Fallback Text - is specified after the ``|`` character. Consider this Email salutation:
 
   ``Hi {contactfield=firstname|there},``
 
@@ -17,8 +17,8 @@ See managing custom fields for more information.
    :widths: 100 100
    :header-rows: 1
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - Attribution
      - ``{contactfield=attribution}``
    * - Attribution Date
@@ -82,8 +82,8 @@ Contact Owner fields
    :header-rows: 1
   
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - First Name
      - ``{ownerfield=firstname}``
    * - Last Name
@@ -104,8 +104,8 @@ See Companies for more information.
    :widths: 100 100
    :header-rows: 1
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - Address Line 1 (Company)
      - ``{contactfield=companyaddress1}``
    * - Address Line 2 (Company)
@@ -147,8 +147,8 @@ See Components and Manage Pages for more information.
    :header-rows: 1
   
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - Asset link for asset id#
      - ``{assetlink=25}``
    * - Focus Item id#
@@ -168,8 +168,8 @@ See :ref:`Manage Emails<Managing Emails>` for more information.
    :header-rows: 1
   
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - Signature
      - ``{signature}``
    * - Subject
@@ -193,8 +193,8 @@ See :ref:`Manage Pages<Managing pages>` for more information.
    :header-rows: 1
   
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - Meta Description
      - ``{pagemetadescription}``
    * - Title
@@ -216,8 +216,8 @@ See :ref:`customizing preference center<Customize preference center>` for more i
    :header-rows: 1
   
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - Lead Identifier
      - ``{leadidentifier}``
    * - Category List
@@ -239,8 +239,8 @@ Dynamic Web Content tokens
    :header-rows: 1
   
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - [Dynamic Content 1] | for example User-defined variable name
      - ``{dynamiccontent="Dynamic Content 1"}``
 
@@ -254,8 +254,8 @@ See :ref:`Contact Monitoring<Contact tracking>` for more information.
    :header-rows: 1
   
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - Language
      - ``{language}``
    * - Title
@@ -293,8 +293,8 @@ Alphabetical list
    :widths: 40 50
    :header-rows: 1
 
-   * - VARIABLE NAME
-     - VARIABLE SYNTAX
+   * - Variable name
+     - Variable syntax
    * - Address Line 1
      - ``{contactfield=address1}``
    * - Address Line 1 (Company)
