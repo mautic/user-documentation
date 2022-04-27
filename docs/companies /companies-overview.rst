@@ -2,13 +2,11 @@
 Company
 #########
 
-
 Companies are a way to group contacts based on the companyies the contact is assigned to.
 
 .. note:: 
 
    Company features was introduced in Mautic 3.1.
-
 
 .. image:: images/Mautic-31-company-view.png
   :width: 600
@@ -121,8 +119,4 @@ You can set primary company through the Contact details page.
 .. image:: images/primary-company.png
   :width: 600
   :alt: primary company
-
-
-
-
 
