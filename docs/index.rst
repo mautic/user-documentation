@@ -91,4 +91,11 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    dashboard/dashboard
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Companies
+   :hidden:
+
+  companies/companies
 
