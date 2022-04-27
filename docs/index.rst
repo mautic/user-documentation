@@ -99,3 +99,9 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
 
   companies/companies
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Email & Landing Page Builder
+   :hidden:
+
+   email_landing_page/email_landing_page
