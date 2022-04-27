@@ -148,7 +148,7 @@ Managing unsubscribes
 .. note::
     In order for Mautic to process Text Message replies for unsubscribes and replies to messages, you must first configure the Webhook. For more information review the :doc:`plugins/twilio` documentation.
 
-Contacts can unsubscribe from your Text Messages by replying with the word STOP, or any of the accepted phrases (STOP, STOPALL, UNSUBSCRIBE, CANCEL, END, and QUIT), to your SMS.  Once Mautic receives this SMS, Mautic flags the specific Contact as 'Do Not Contact' (DNC) for the SMS Channel, and won't allow messages again via this Channel unless the Contact manually re-subscribes at a later date.
+Contacts can unsubscribe from your Text Messages by replying with the word ``STOP``, or any of the accepted phrases (``STOP``, ``STOPALL``, ``UNSUBSCRIBE``, ``CANCEL``, ``END``, and ``QUIT``), to your SMS.  Once Mautic receives this SMS, Mautic flags the specific Contact as 'Do Not Contact' (DNC) for the SMS Channel, and won't allow messages again via this Channel unless the Contact manually re-subscribes at a later date.
 
 You can also view SMS replies in the Contact timeline:
 
