@@ -90,8 +90,12 @@ Optional
 
 Depending on your server configuration, you can set up additional cron jobs that are optional for tasks such as sending Emails, importing Contacts, and more. The optional cron jobs are as follows:
 
+.. vale off
+
 Process Email queue cron job
 ============================
+
+.. vale on
 
 If the system configuration is queueing Emails, a cron job processes them.
 
@@ -99,8 +103,12 @@ If the system configuration is queueing Emails, a cron job processes them.
 
     php /path/to/mautic/bin/console mautic:emails:send
 
+.. vale off
+
 Fetch and process Monitored Email cron job
 ==========================================
+
+.. vale on
 
 If you are using Bounce Management, set up the following command to fetch and process messages:
 
@@ -108,8 +116,12 @@ If you are using Bounce Management, set up the following command to fetch and pr
 
     php /path/to/mautic/bin/console mautic:email:fetch
 
+.. vale off 
+
 Social Monitoring cron job
 ==========================
+
+.. vale on
 
 If you are using Social Monitoring, add the following command to your cron configuration:
 
@@ -117,8 +129,12 @@ If you are using Social Monitoring, add the following command to your cron confi
 
     php /path/to/mautic/bin/console mautic:social:monitoring
 
+.. vale off
+
 Import Contacts cron job
 ========================
+
+.. vale on
 
 To import an especially large number of Contacts or Companies in the background, use the following command:
 
@@ -139,8 +155,12 @@ If the Mautic configuration settings include Webhook batch processing, use the f
 
 .. _cron jobs:
 
+.. vale off
+
 Update MaxMind GeoLite2 IP database cron job
 ============================================
+
+.. vale on
 
 Mautic uses :xref:`MaxMind's` GeoLite2 IP database by default. 
 The database license is :xref:`Creative Commons Attribution-ShareAlike 3.0 Unported License` and thus Mautic can't include it within the installation package. 
@@ -186,8 +206,12 @@ This command downloads the database of Do Not Sell IP addresses from MaxMind.
 
 This command finds data in the database loaded from MaxMind's Do Not Sell IP addresses and deletes the data.
 
+.. vale off
+
 Send scheduled broadcasts (Segment Emails) cron job
 ===================================================
+
+.. vale on
 
 Starting with Mautic 2.2.0, it's now possible to use cron to send scheduled broadcasts for Channel communications. The current only implementation of this is for Segment Emails. Instead of requiring a manual send and wait with the browser window open while AJAX batches over the send, it's possible to use a command to initiate the process.
 
@@ -210,8 +234,13 @@ Command parameters:
 
 - ``--min-contact-id`` and ``--max-contact-id`` allows the separation of Email sending by smaller chunks, by specifying contact ID ranges. If those ranges won't overlap, this allows you to run several broadcast commands in parallel.
 
+.. vale off
+
 Send scheduled Reports cron job
 ===============================
+
+.. vale on
+
 Starting with Mautic 2.12.0, it's now possible to use cron to send scheduled Reports.
 
 .. code-block:: php
@@ -222,8 +251,12 @@ Starting with Mautic 2.12.0, it's now possible to use cron to send scheduled Rep
 
     for releases prior to 1.1.3, it's required to append ``--env=prod`` to the cron job command to ensure commands execute correctly.
 
+.. vale off
+
 Configure Mautic Integration cron jobs
 ======================================
+
+.. vale on 
 
 To perform synchronization of all Integrations and to manage Plugins, use the cron job commands in this section.
 
@@ -251,7 +284,7 @@ or
 
     php /path/to/mautic/bin/console mautic:integration:pushleadactivity
 
-These commands work with all available Plugins. To avoid performance issues when using multiple Integrations, you must specify the name of the Integration by adding the ``–integration`` suffix to the command. For instance, for integration of Mautic with HubSpot, use the following command:
+These commands work with all available Plugins. To avoid performance issues when using multiple Integrations, you must specify the name of the Integration by adding the ``-integration`` suffix to the command. For instance, for integration of Mautic with HubSpot, use the following command:
 
 .. code-block:: php
 

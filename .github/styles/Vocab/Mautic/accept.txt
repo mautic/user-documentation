@@ -13,6 +13,7 @@ blocklist
 boolean
 booleans
 cc
+CCPA
 Citrix
 Clearbit
 CloudAMQP
@@ -60,6 +61,7 @@ LinkedIn
 Mailjet
 Marketing Messages
 Mautic
+MaxMind
 Middlewares
 middlewares
 MJML
