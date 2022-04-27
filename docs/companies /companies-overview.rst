@@ -116,7 +116,7 @@ Setting Primary Company
 
 You can set primary company through the Contact details page.
 
-.. image:: image/primary-company.png
+.. image:: images/primary-company.png
   :width: 600
   :alt: primary company
 
