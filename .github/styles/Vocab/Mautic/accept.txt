@@ -1,6 +1,8 @@
 AJAX
 allowlist
 Amazon SES
+Autoloader
+autoloader
 Autowired
 autowired
 bcc
@@ -24,6 +26,7 @@ CORS
 cron
 Cron
 CTRL
+DDEV
 Do Not Contact
 DNC
 Dripflow
@@ -69,10 +72,12 @@ noindex
 OAuth
 Packagist
 PATCH
+patch
 PHP
 Pipedrive
 Piwik
 POST
+post
 PUT
 Rackspace
 Remarketing

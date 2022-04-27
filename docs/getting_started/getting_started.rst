@@ -1,6 +1,6 @@
 .. vale off
 
-Getting Started With Mautic
+Getting Started with Mautic
 ===========================
 
 .. vale on
