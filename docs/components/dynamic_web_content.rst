@@ -1,5 +1,9 @@
+.. vale off
+
 Dynamic Web Content
 ###################
+
+.. vale on
 
 Dynamic Web Content is one of several methods Mautic uses to personalize the web experience for Contacts. Marketers can display different content to different people in specific areas of a webpage. Mautic Users may want to personalize content based on data collected about the website visitor. Even anonymous Contacts may see Dynamic Content, if you've collected any information about them - such as location data.
 
