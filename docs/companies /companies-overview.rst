@@ -111,12 +111,12 @@ Companies score can be changed through a campaign action or a form action. When 
 1. Select contact's **Change company score** action in either a form or a campaign
 2. Once a form is submitted or a campaign is triggered it will identify companies identified in the campaign or form to change its score.
    
-setting Primary Company
+Setting Primary Company
 =======================
 
 You can set primary company through the Contact details page.
 
-.. image:: images/primary-company.png
+.. image:: image/primary-company.png
   :width: 600
   :alt: primary company
 
