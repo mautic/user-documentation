@@ -46,7 +46,7 @@ Mautic configuration
 .. vale off
 
 Creating Dynamic Web Content slots
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==================================
 
 .. vale on
 

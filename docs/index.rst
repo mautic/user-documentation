@@ -98,11 +98,12 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Companies
    :hidden:
 
-  companies/companies
+   companies/companies_overview
 
 .. toctree::
    :maxdepth: 2
    :caption: Email & Landing Page Builder
    :hidden:
 
-   email_landing_page/email_landing_page
+   builders/grapesjs_builder
+   builders/creating_themes

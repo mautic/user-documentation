@@ -1,6 +1,7 @@
 AJAX
 allowlist
 Amazon SES
+Ameling
 Autoloader
 autoloader
 Autowired
@@ -45,6 +46,7 @@ Gitpod
 GMail
 Grav
 Gravatar
+Hammerschmied
 href
 HTML
 http
@@ -67,6 +69,7 @@ middlewares
 MJML
 Multiselect
 multiselect
+MVP
 mysqldump
 namespace
 Namespace
