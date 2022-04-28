@@ -186,7 +186,7 @@ See :ref:`Manage Emails<Managing Emails>` for more information.
 Landing Page tokens
 *********************
 
-See :ref:`Manage Pages<Managing pages>` for more information.
+See :doc:`/components/landing_pages` for more information.
 
 .. list-table:: 
    :widths: 100 100
@@ -209,7 +209,7 @@ See :ref:`Manage Pages<Managing pages>` for more information.
 Preference Center Landing Page tokens
 *************************************
 
-See :ref:`customizing preference center<Customize preference center>` for more information.
+See :ref:`customizing preference center<Customizing the preference center>` for more information.
 
 .. list-table:: 
    :widths: 100 100

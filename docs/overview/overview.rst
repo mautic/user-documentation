@@ -25,11 +25,11 @@ Contact management
 
 Build a rich and functional database of Contacts for your business, group them together based on your business needs or based on shared attributes.
 
-- :doc:`/contacts/contacts` Individuals who have visited your websites or interacted with your business in some way. They may be known or unknown visitors. Contacts are the primary factor of a marketing automation platform.
+- :doc:`/contacts/manage_contacts` Individuals who have visited your websites or interacted with your business in some way. They may be known or unknown visitors. Contacts are the primary factor of a marketing automation platform.
 
-- :doc:`/contacts/segments` A group of your Contacts that share certain attributes. For example, you may segment Contacts based on a contact's location. This may help you easily send out location-based offers or promotions to this specific group of Contacts.
+- :doc:`/contacts/manage_segments` A group of your Contacts that share certain attributes. For example, you may segment Contacts based on a contact's location. This may help you easily send out location-based offers or promotions to this specific group of Contacts.
 
-- :doc:`/companies/companies` A group of Contacts based on the Company or Companies that the Contact is assigned to.
+- :doc:`/companies/companies_overview` A group of Contacts based on the Company or Companies that the Contact is assigned to.
 
 
 Components
@@ -39,9 +39,9 @@ Create and manage various types of content that you use for your marketing Campa
 
 - :doc:`/components/assets` Valuable items that you provide to your Contacts upon completion of a Form. White papers, a downloadable app/file, documents or videos are some examples of assets.
 
-- :doc:`/components/forms` Forms are the primary point of customer engagement. They're used to collect contact information, often in exchange for providing access to an Asset such as a download, an event registration, or an Email newsletter.
+- :doc:`/components/forms` Forms are the primary point of customer engagement. They're used to collect Contact information, often in exchange for providing access to an Asset such as a download, an event registration, or an Email newsletter.
 
-- :doc:`/components/landing_pages`A powerful feature that not only allows you to promote content quickly and easily, but also allows you to rapidly create Landing Pages that are tightly tailored for a specific purpose, such as an advertising campaign.
+- :doc:`/components/landing_pages` A powerful feature that not only allows you to promote content quickly and easily, but also allows you to rapidly create Landing Pages that are tightly tailored for a specific purpose, such as an advertising campaign.
 
 - :doc:`/components/dynamic_web_content` A feature that you can use to personalize the web experience for your Contacts. Marketers can display different content to different people in specific areas of a webpage.
 

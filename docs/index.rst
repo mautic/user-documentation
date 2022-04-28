@@ -41,24 +41,17 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
 
 .. toctree::
    :maxdepth: 2
-   :caption: Categories
+   :caption: Configuration
    :hidden:
 
-   categories/categories-overview
+   configuration/settings
 
 .. toctree::
-   :caption: Channels
    :maxdepth: 2
+   :caption: Troubleshooting
    :hidden:
 
-   channels/emails
-   channels/sms
-   channels/focus_items
-   channels/marketing_messages
-   channels/social_monitoring
-   channels/web_notifications
-   channels/push_notifications
-   channels/utm_tags
+   troubleshooting/file_ownership_and_permissions
 
 .. toctree::
    :caption: Authentication
@@ -80,18 +73,31 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
 
 .. toctree::
    :maxdepth: 2
+   :caption: Categories
+   :hidden:
+
+   categories/categories-overview
+
+.. toctree::
+   :caption: Channels
+   :maxdepth: 2
+   :hidden:
+
+   channels/emails
+   channels/sms
+   channels/focus_items
+   channels/marketing_messages
+   channels/social_monitoring
+   channels/web_notifications
+   channels/push_notifications
+   channels/utm_tags
+
+.. toctree::
+   :maxdepth: 2
    :caption: Companies
    :hidden:
 
    companies/companies_overview
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Builders
-   :hidden:
-
-   builders/grapesjs_builder
-   builders/creating_themes
 
 .. toctree::
    :maxdepth: 2
@@ -100,6 +106,16 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
 
    components/assets
    components/dynamic_web_content
+   components/forms
+   components/landing_pages
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contacts
+   :hidden:
+
+   contacts/manage_contacts
+   contacts/manage_segments
 
 .. toctree::
    :maxdepth: 2
@@ -107,3 +123,47 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    dashboard/dashboard
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Email & Landing Page Builders
+   :hidden:
+
+   builders/grapesjs_builder
+   builders/creating_themes
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Mautic Marketplace
+   :hidden:
+
+   marketplace/marketplace
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Plugins
+   :hidden:
+
+   plugins/twilio
+   plugins/twitter
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Points
+   :hidden:
+
+   points/points
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Reports
+   :hidden:
+
+   reports/reports
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Stages
+   :hidden:
+
+   stages/stages

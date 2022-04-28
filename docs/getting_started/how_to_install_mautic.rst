@@ -47,7 +47,7 @@ Uploading the production package
 
 After downloading a desired package, upload the package zip file to your web server, and unzip it in the directory where you plan to host the Mautic instance.
 
-Your web server must have the permissions to access the unzipped files. For more information on file and folder permissions, visit :doc:`/troubleshooting/file-ownership-and-permissions`.
+Your web server must have the permissions to access the unzipped files. For more information on file and folder permissions, visit :doc:`/troubleshooting/file_ownership_and_permissions`.
 
 Using the web-based installer
 =============================

@@ -86,7 +86,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Update Contact**
      - Updates the existing Contact's fields with the specified values.
    * - **Update Contact's primary Company**
-     - Updates the existing Contact's primary Company fields with the specified value. See :doc:`documentation on Companies <contacts/companies>`.
+     - Updates the existing Contact's primary Company fields with the specified value. See :doc:`documentation on Companies </companies/companies_overview>`.
    * - **Update Contact owner**
      - Updates the Contact's owner.
 
