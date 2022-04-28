@@ -1,5 +1,9 @@
+.. vale off
+
 Email & Landing Page Builder
 ############################
+
+.. vale on
 
 Since :xref:`Mautic 3`, Mautic has shipped with an updated, modern builder for creating Emails and landing pages. 
 In :xref:`Mautic 4` it's the default builder.
@@ -7,15 +11,19 @@ In :xref:`Mautic 4` it's the default builder.
 .. attention:: 
     To use your existing templates with the new builder, you need to add one line to your configuration file. Read on for further details.
 
+.. vale off
+
 About GrapesJS
 **************
+
+.. vale on
 
 :xref:`Webmecanik` initiated the new Email and landing page as an MVP. After developing and improving it using the open source :xref:`GrapesJS` framework, :xref:`Aivie` kindly made it available to the Mautic community.
 
 GrapesJS is an open source, multi-purpose, Web Builder Framework which combines different tools and features with the goal to help build HTML templates without any knowledge of coding.
 
 Available end-user features
-**************************
+***************************
 
 Drag & drop built-in blocks
 ===========================
@@ -53,7 +61,7 @@ About the builder
 Enabling the builder
 ====================
 
-Since Mautic 3.3-RC1 the builder is available and can be enabled in the Plugins section of Mautic. 
+Since Mautic 3.3-RC1 the builder is available to use in the Plugins section of Mautic. 
 
 #. Go to the Settings by clicking the cog wheel at the top right > Plugins > GrapesJS and click the GrapesJS icon. 
 
@@ -80,9 +88,9 @@ The functions of the Email builder are as follows:
 
 #. Editor functions from left to right: display grids, Full screen view, export MJML / HTML code, Edit code, display customization options, display blocks, close editor.
 
-#. Layout sections: These objects function as the basic structure of your design. Create your Email structure from sections, and pull in the different blocks you want to use.
+#. Layout sections: these objects function as the basic structure of your design. Create your Email structure from sections, and pull in the different blocks you want to use.
 
-#. Content blocks: You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
+#. Content blocks: you can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
 Templates
 *********
@@ -118,7 +126,7 @@ Themes
 
 If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new builder.
 
-To learn more about creating Themes please :doc:`check the documentation</email_landing_page/creating_themes>`. 
+To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`. 
 
 Reporting bugs
 **************
@@ -126,7 +134,7 @@ Reporting bugs
 Known bugs / issues
 ===================
 
-Please use the issue queue on the :xref:`GitHub repository` to find the latest updates and report bugs with the Plugin. Be sure to search first in case someone has already reported the bug.
+Please use the issue queue on the :xref:`GitHub repository` to find the latest updates and to raise bugs with the Plugin. Be sure to search first in case someone has already reported the bug.
 
 Switching back to the legacy Builder
 ************************************
@@ -144,9 +152,9 @@ In case you aren't happy with the Plugin at the moment, you can easily switch ba
 After unloading GrapesJs Plugin, the legacy builder becomes active again.
 
 Thanks and credits
-*****************
+******************
 
-Thank you to everyone who contributed to this project. Special thanks to Adrian Schimpf from :xref:`Aivie` for all their hard work in leading the project, to :xref:`Webmecanik` for initializing this amazing new builder and to Joey from :xref:`Friendly Automate` for donating three Email Themes to the Community. Additional contributions: Alex Hammerschmied from :xref:`hartmut.io`, Dennis Ameling.
+Thank you to everyone who contributed to this project. Special thanks to Adrian Schimpf from :xref:`Aivie` for all their hard work in leading the project, to :xref:`Webmecanik` for initializing this amazing new builder and to Joey from :xref:`Friendly Automate` for donating three Email Themes to the Community. Additional contributions from Alex Hammerschmied from :xref:`hartmut.io`, Dennis Ameling.
 
 And of course a really big thank you to all the contributors who have helped to bring this project to this point.
 
