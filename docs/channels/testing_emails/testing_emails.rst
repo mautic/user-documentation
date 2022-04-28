@@ -1,90 +1,122 @@
----
-title: 'Testing Email Transports'
-slug: testing-email-transports
-taxonomy:
-    category:
-        - docs
----
+.. vale off
 
----
+Testing Email transports
+########################
 
-## Document purpose  
+.. vale on
   
-This document targets software developers who write email transports based on `Symfony Mailer` which is available to Mautic starting version 5.  
+This document targets software developers who write Email transports based on ``Symfony Mailer`` which is available to Mautic from Mautic 5.0.  
   
-This document will describe Manual steps for testing and the items that you need to check before submitting your PR for approval in case you want to add a new transport.  
+This document describes Manual steps for testing and the items that you need to verify before submitting your PR for approval in case you want to add a new transport.  
   
-## Email components
+Email components
+****************
 
-Each email sent out by Mautic includes the following components:  
+Each Email sent out by Mautic includes the following components:  
   
-1. Email Address (FROM, TO, CC, BCC, REPLY-TO): `Unicode` email address in this format `email@domain.com` or `email+test@domain.com`. Make sure that you always use the Unicode email address to accommodate special characters in languages like Arabic, Hebrew, or Chinese.  
-2. Email Name (FROM, TO, CC, BCC, REPLAY-TO): `Unicode` Human-readable name, Make sure that you always use Unicode email address to accommodate special characters in languages like Arabic, Hebrew, or Chinese.  
-3. Subject: `Unicode` string that might include `emojis`  
-4. Text: `Unicode` string that might include `emojis`  
-5. HTML: `Unicode` string that might include `emojis`, it will be in HTML format.  
-6. Headers: `ANSI` string pairs, `Symfony/Mailer` will add most of the headers, but for some transports, you will need to add your own headers, so you can use the methods mentioned here <https://symfony.com/doc/current/mailer.html#message-headers> which is referenced in this file <https://github.com/symfony/symfony/blob/6.1/src/Symfony/Component/Mime/Header/Headers.php>  
-7. Priority: sets the email priority based on enum  
-8. Attachments: a file with a variety of mime types, the file size should not exceed a specific size provided by the transport provider, usually nothing more than 10MB and go up to 40MB (for the whole message, including the text, HTML, and anything embedded within the HTML)  
+#. **Email Address:** (``FROM``, ``TO``, ``CC``, ``BCC``, ``REPLY-TO``): ``Unicode`` Email address in this format ``email@example.com`` or ``email+test@example.com``. Make sure that you always use the Unicode email address to accommodate special characters in languages like Arabic, Hebrew, or Chinese.  
+#. **Email Name:** (``FROM``, ``TO``, ``CC``, ``BCC``, ``REPLY-TO``): ``Unicode`` Human-readable name, make sure that you always use Unicode Email address to accommodate special characters in languages like Arabic, Hebrew, or Chinese.  
+#. **Subject:** ``Unicode`` string that might include emojis.  
+#. **Text:** ``Unicode`` string that might include emojis.  
+#. **HTML:** ``Unicode`` string that might include emojis, in HTML format.  
+#. **Headers:** ``ANSI`` string pairs, ``Symfony/Mailer`` adds most of the headers, but for some transports, you need to add your own headers, so you can use the methods mentioned here: https://symfony.com/doc/current/mailer.html#message-headers, referenced in this file https://github.com/symfony/symfony/blob/HEAD/src/Symfony/Component/Mime/Header/Headers.php. 
+#. **Priority:** sets the Email priority based on ``enum``
+#. **Attachments:** a file with a variety of mime types, the file size shouldn't exceed a specific size provided by the transport provider, usually nothing more than 10 MB and go up to 40 MB (for the whole message, including the text, HTML, and anything embedded within the HTML)  
   
-## Preparing Mautic for testing
+Preparing Mautic for testing
+****************************
 
-1. Create 10 contacts with any email address you need  
-2. Create a segment that includes the 10 contacts  
-  
-## Testing email transport
+#. Create 10 Contacts with any Email address you need  
+#. Create a Segment that includes the 10 Contacts  
 
-In order to test the email transport you need to go through the following steps:  
+.. vale off
+
+Testing Email transport
+***********************
+
+.. vale on
+
+In order to test the Email transport you need to go through the following steps:  
   
-1. Testing the connection, by going to Mautic Configuration -> Email Settings -> Click on Test Connection. If the connection works you should see *success* otherwise you should see an *error*  
-![Testing Connection](test-connection.png "Testing Connection")  
+Testing the connection
+======================
+
+Go to Mautic Configuration -> Email Settings -> Click on Test Connection. If the connection works you should see **success** otherwise you should see an **error**  
+
+.. image:: images/test-connection.png
+  :width: 600
+  :alt: Screenshot showing testing the connection
+
+.. vale off
+
+Sending a sample Email
+======================
+
+.. vale on
+
+From the same screen where you test the connection, you can send a sample Email. Mautic sends the sample Email to the address of the currently logged in Mautic User. Check that the Email arrives.  
   
-2. Sending Sample Email: from the same screen where you test the connection, you should be able to send a sample email. The sample email will be sent to the email of the user you are logged in with. It will have a test message.  
+.. vale off
+
+Upload an Asset
+===============
+
+.. vale on
+
+Go to Components -> Assets and then upload a sample file and make sure the filename uses one of the Unicode languages - such as Arabic, Russian, German, etc.
   
-3. Upload an asset: go to Components -> Assets and then upload a pdf file and make sure the file name is written in one of the Unicode languages (Arabic, Russian, German, etc)  
-![Sample PDF](file.pdf "Sample PDF")  
-  
-4. Create a email template: Go to Channels -> Emails -> New -> Template Email -> Select Blank Theme  
+.. vale off
+
+Create a template Email
+=======================
+
+.. vale on
+
+Go to Channels -> Emails -> New -> Template Email -> Select Blank Theme  
 Use the builder to do the following:
 
 - Embed an image  
 - Add Unicode text, you can use this "نحن نحب ان نقوم ببناء Mautic"  
-- Close the builder,  
+- Close the builder
 - Go to the Advanced tab  
-- Fill From Name & From Address, Bcc, Reply-To, Add Attachment, custom headers, and Click on Auto Generate to create a text part of the email  
-- Save the email and send a sample test, you should get everything you filled  
+- Complete the ``From Name`` & ``From Address``, ``BCC``, ``Reply-To``, ``Add Attachment``, ``custom headers``, and Click on ``Auto Generate`` to create a text version of the Email  
+- Save the Email and send a sample test, you should get everything you filled  
   
-5. Create a email template: Go to Channels -> Emails -> New -> Template Email -> Select Blank Theme  
+Create a Segment Email
+======================
 
+Go to Channels -> Emails -> New -> Segment Email -> Select Blank Theme  
 Use the builder to do the following:  
 
 - Embed an image  
 - Add Unicode text, you can use this "نحن نحب ان نقوم ببناء Mautic"  
 - Close the builder,  
 - Go to the Advanced tab  
-- Fill From Name & From Address, Bcc, Reply-To, Add Attachment, custom headers, and Click on Auto Generate to create a text part of the email  
-- Save the email and send a sample test, you should get everything you filled  
+- Complete the ``From Name`` & ``From Address``, ``BCC``, ``Reply-To``, ``Add Attachment``, ``custom headers``, and Click on ``Auto Generate`` to create a text version of the Email  
+- Save the Email and send a sample test, you should get everything you filled  
   
-6. Create a email template: Go to Channels -> Emails -> New -> Segment Email -> Select Blank Theme  
-Use the builder to do the following:  
+Send an individual Email
+========================
 
-- Embed an image  
-- Add Unicode text, you can use this "نحن نحب ان نقوم ببناء Mautic"  
-- Close the builder,  
-- Go to the Advanced tab  
-- Fill From Name & From Address, Bcc, Reply-To, Add Attachment, custom headers, and Click on Auto Generate to create a text part of the email  
-- Save the email and send a sample test, you should get everything you filled  
+Go to the Contacts section and select a Contact, then click Send an Email. You should be able to send an Email directly to that specific Contact's Email address.  
   
-7. Send an individual email: Go to the contacts page and select the contacts then click on send an email, you should be able to send an email directly to that specific email.  
+Send a Report Email
+===================
+
+Create a Report with any data and set it on a schedule, it should send an Email with the Report as an attachment  
   
-8. Send a report email: create a report with any data and set it on a schedule, it should send an email with the report as an attachment  
+Other Email features
+====================
+
+There are other places like Forget Password: they need to work as well. Please make sure you verify them. 
   
-9. There are other places like Forget Password: they need to work as well.  
+Testing transport callback  
+**************************
   
-## Testing transport callback  
+Each transport should include a callback URL which Webhooks should be ``POSTed`` to, which marks Contacts who bounce as ``Do Not Contact``.
+
+To test these callbacks you need to do the following:  
   
-Each transport should include a callback URL that webhooks should be `POSTed` to mark contacts who bounce as `DNC` in order to test these callbacks you need to do the following:  
-  
-1. Configure an email transport and make it the default transport  
-2. Go to the URL on the following format `/mailer/{transport}/callback`  
-3. You should get a message that says `success` and there should be a callback logic to handle the webhook
+#. Configure an Email transport and make it the default transport  
+#. Go to the URL on the following format ``/mailer/{transport}/callback`` 
+#. You should get a message that says ``success`` and there should be a callback logic to handle the Webhook
