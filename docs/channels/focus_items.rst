@@ -144,7 +144,7 @@ This allows the User to enter HTML into a blank field for a fully customized Foc
 Creating a Focus Item
 *********************
 
-To create a new Focus Item, go to Channels > Focus Items and click on the New button.
+To create a new Focus Item, go to Channels > Focus Items and click the New button.
 
 .. warning:: 
     Some websites won't allow the preview to display. For the preview to work, the site must use an SSL certificate, and it must not block iframe previews with the ``x-frame-options: SAMEORIGIN`` header. An error will be displayed in the Focus Item builder if these conditions are not met.
@@ -153,7 +153,7 @@ When creating a new Focus Item, you can set the following fields:
 
 **Name** - A name used internally to identify the Focus Item
 
-**Website** - A website you would like to use to preview the Focus Item as you are building it - see note above, some websites won't allow this feature. If this is a problem, leave the URL field blank.
+**Website** - A website you would like to use to preview the Focus Item as you are building it - see preceding note, some websites won't allow this feature. If this is a problem, leave the URL field blank.
 
 **Category** - Assign a Category to help you organize your Focus Items.
 
