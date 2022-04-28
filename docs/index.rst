@@ -80,6 +80,21 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
 
 .. toctree::
    :maxdepth: 2
+   :caption: Companies
+   :hidden:
+
+   companies/companies_overview
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Builders
+   :hidden:
+
+   builders/grapesjs_builder
+   builders/creating_themes
+
+.. toctree::
+   :maxdepth: 2
    :caption: Components
    :hidden:
 
@@ -92,18 +107,3 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    dashboard/dashboard
-   
-.. toctree::
-   :maxdepth: 2
-   :caption: Companies
-   :hidden:
-
-   companies/companies_overview
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Email & Landing Page Builder
-   :hidden:
-
-   builders/grapesjs_builder
-   builders/creating_themes
