@@ -97,7 +97,7 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Companies
    :hidden:
 
-   companies/companies_overview
+   companies/companies
 
 .. toctree::
    :maxdepth: 2
