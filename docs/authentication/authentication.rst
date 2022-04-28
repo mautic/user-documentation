@@ -30,7 +30,7 @@ The IDP may ask for the following settings:
 
 #. Assertion Consumer Service - Use ``https://example.com/s/saml/login_check``.
 
-#. Issuer - this should come from the IDP but is often configurable. If it's a URL, be sure that the scheme - http:// and https:// - aren't part of it.
+#. Issuer - this should come from the IDP but is often configurable. If it's a URL, be sure that the scheme - ``http://`` and ``https://`` - aren't part of it.
 
 #. Verify request signatures or a SSL certificate - If the IDP supports encrypting and validating request signatures from Mautic to the IDP, generate a self signed SSL certificate. Upload the certificate and private key through Mautic's Configuration -> User/Authentication Settings under the 'Use a custom X.509 certificate and private key to secure communication between Mautic and the IDP' section. Then upload the certificate to the IDP.
 
