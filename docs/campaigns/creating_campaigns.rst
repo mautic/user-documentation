@@ -69,5 +69,5 @@ for Campaigns using the following command:
 
    php /path/to/mautic/bin/console mautic:campaigns:update
 
-See documentation on `cron jobs </set_up/cron-jobs>`__ for further
+See documentation on :doc:`/set_up/cron_jobs` for further
 details.
