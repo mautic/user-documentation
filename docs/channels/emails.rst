@@ -605,7 +605,7 @@ If the Email click doesn't get tracked, make sure that:
 
 1. Your Mautic server is on an accessible URL. 
 2. You sent it to an existing Contact via a Campaign or a Segment Email. Emails sent by the Send Example link, direct Email from the Contact profile, or Form submission preview Emails won't replace links with trackable links.
-3. Make sure the URL in the href attribute is absolute and valid. It should start with http:// or ideally https://.
+3. Make sure the URL in the href attribute is absolute and valid. It should start with ``http://`` or ideally ``https://``.
 4. You've opened the link in a incognito browser (not in the same session where you're logged into Mautic)
 5. Check if Mautic replaced the link in the Email with a tracking link.
 
