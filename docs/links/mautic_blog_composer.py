@@ -1,6 +1,6 @@
 from . import link
 
-link_name = "this blog post" 
+link_name = "composer blog post" 
 link_text = "this blog post" 
 link_url = "https://www.mautic.org/blog/community/important-changes-mautic-install-and-upgrade-process" 
 

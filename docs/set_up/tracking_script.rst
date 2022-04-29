@@ -3,7 +3,7 @@ Tracking script
 
 After installation and setup of the :doc:`/set_up/cron_jobs` you're ready to begin tracking Contacts. You need to add a piece of JavaScript to the websites for each site you wish to track through Mautic.
 
-This is straightforward process, you can add this tracking script to your website template file, or install a Mautic integration for the more common Content Management System platforms. 
+This is straightforward process, you can add this tracking script to your website template file, or install a Mautic Integration for the more common Content Management System platforms. 
 
 Here is an example of the tracking JavaScript which you can access by clicking on **Tracking Settings** in the Global Configuration.
 

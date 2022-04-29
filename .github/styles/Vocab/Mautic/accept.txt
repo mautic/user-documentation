@@ -1,6 +1,9 @@
 AJAX
 allowlist
 Amazon SES
+Ameling
+Autoloader
+autoloader
 Autowired
 autowired
 bcc
@@ -11,6 +14,7 @@ blocklist
 boolean
 booleans
 cc
+CCPA
 Citrix
 Clearbit
 CloudAMQP
@@ -24,9 +28,11 @@ CORS
 cron
 Cron
 CTRL
+DDEV
 Do Not Contact
 DNC
 Dripflow
+Dynamic Web Content
 FALSE
 Focus Item
 Focus Items
@@ -36,14 +42,17 @@ gcm
 GIF
 GitBook
 GitHub
+Gitpod
 GMail
 Grav
 Gravatar
+Hammerschmied
 href
 HTML
 http
 https
 HubSpot
+IDP
 IMAP
 infographics
 JavaScript
@@ -54,11 +63,13 @@ LinkedIn
 Mailjet
 Marketing Messages
 Mautic
+MaxMind
 Middlewares
 middlewares
 MJML
 Multiselect
 multiselect
+MVP
 mysqldump
 namespace
 Namespace
@@ -66,14 +77,17 @@ noindex
 OAuth
 Packagist
 PATCH
+patch
 PHP
 Pipedrive
 Piwik
 POST
+post
 PUT
 Rackspace
 Remarketing
 Salesforce
+SAML
 Schimpf
 SCP
 SendGrid
@@ -82,6 +96,7 @@ SMS
 SMTP
 SNS
 SparkPost
+SSO
 sublicense
 SugarCRM
 Suhosin
