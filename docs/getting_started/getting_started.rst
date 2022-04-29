@@ -1,5 +1,9 @@
-Getting Started With Mautic
+.. vale off
+
+Getting Started with Mautic
 ===========================
+
+.. vale on
 
 There are some basic tasks you need to do to get started with using Mautic.
 
