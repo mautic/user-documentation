@@ -55,10 +55,10 @@ The special character `*`` is used to defined bold and italic text.
 One * is used to define Italics while two ** are used to define bold.
 
 Here is an example below:
-```
+````
 *Italics*  and
 **Bold**
-```
+`````
 
 
 
