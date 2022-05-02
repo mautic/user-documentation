@@ -14,8 +14,8 @@ To create a new Form:
 
 #. Go to Components > Forms and click New
 #. Select the type of Form you wish to create
-   - **Campaign Form** - Mautic allows you to trigger a Campaign with the submission of this type of Form. Campaign Forms have less actions directly associated with the Form submit actions - which happen immediately after a Form is submitted - as most actions trigger as part of a Campaign workflow.
-   - **Standalone Form** - A more commonly used Form, this allows the execution of many submit actions immediately at the point of form submission. 
+   - **Campaign Form** - Mautic allows you to trigger a Campaign with the submission of this type of Form. Campaign Forms have less actions directly associated with the Form submit actions - which happen immediately after Form submission - as most actions trigger as part of a Campaign workflow.
+   - **Standalone Form** - A more commonly used Form, this allows the execution of many submit actions immediately at the point of Form submission. 
 
 .. warning:: 
     Forms with a lot of submit actions - particularly when submitting to third party systems such as a Customer Relationship Management system - can have an impact on the Form submission time. This is especially the case if there are a lot of fields. Consider using a Campaign Form if you can wait for the cron job to trigger the actions.
@@ -184,7 +184,7 @@ CAPTCHA
 
 .. image:: images/forms/captcha_form_properties.png
   :width: 600
-  :alt: Screenshot showing Captcha Form properties
+  :alt: Screenshot showing CAPTCHA Form properties
 
 With a CAPTCHA field, the answer field should be blank if you are using this as a honeypot to trap spam submissions. This hides the field, and spambots try to populate the field with data. 
 
@@ -223,12 +223,12 @@ File
   :width: 600
   :alt: Screenshot showing file upload properties
 
-When uploading a file within a form there are several options under the properties tab:
+When uploading a file within a Form there are several options under the properties tab:
 
-- Allowed file extensions: It is possible to set the file extensions to be permitted by providing a comma separated list.
-- Maximum file size: The maximum size of attachment that can be uploaded - may also be limited by server settings.
-- Public accessible link to download: Can the file be accessed by the public via a link?
-- Set as Contact profile image: Set the image uploaded to be their Contact 
+- Allowed file extensions: it's possible to set the file extensions permitted by providing a comma separated list.
+- Maximum file size: the maximum size of attachment - also limited by server settings.
+- Public accessible link to download: can you access the file via a public link?
+- Set as Contact profile image: set the image uploaded to be their Contact avatar
 
 Attributes
 ~~~~~~~~~~
