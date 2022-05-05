@@ -233,5 +233,20 @@ When uploading a file within a Form there are several options under the properti
 Attributes
 ~~~~~~~~~~
 
+   Attributes are CSS tags which change the styling of a particular Form. 
+
+.. note:: 
+   Setting the Render Style to No on the Form means that the styling in these fields is ignored.
+
+.. image:: images/forms/checkbox_group_attributes.png
+  :width: 600
+  :alt: Screenshot showing the attributes for a checkbox group
+
+- **Field HTML name**: this is the machine name of the field, populated automatically from the label. You can customise this field if the label is long. You reference this field is when connecting Mautic Forms to other Forms, or when using the Manual Copy function to manually add the Form to your website or app.
+- **Label attributes**: this field changes the way the label text appears. You should use the format ``style="attribute: descriptor"`` to change the style. For example, to change the label to red, use ``style="color: red"`` or ``style="color: #ff0000"``.
+- **Input attributes**: changes the way any text inside the Form field appears. This applies to the input placeholder text, text entered by the visitor submitting the Form, and the options for the select fields when Allow Multiple is Yes - including List - Country.
+- **Field container attributes**: this changes the Form field. Use this to change the size of the box, fill color, rounded edges, or any other properties of the actual field.
+- **Radio/Check box label attributes**: similar to input attributes, when available this field allows you to customize the way that radio buttons and checkboxes appear.
+
 Behavior
 ~~~~~~~~
