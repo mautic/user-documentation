@@ -18,7 +18,7 @@ In order to configure the text messages correctly, follow these steps:
 
 #. Open *Twilio* Plugin and activate it.
 
-#. Copy the *Account SID* from Twilio account and paste it to *Account SID* field in the Twilio plugin configuration.
+#. Copy the *Account SID* from Twilio account and paste it to *Account SID* field in the Twilio Plugin configuration.
 
 #. Unlock and copy the *Auth Token* and paste it to *Auth Token* field in the Twilio Plugin configuration.
 
@@ -33,7 +33,7 @@ Alphanumeric Sender ID
 
 .. vale on
 
-Alphanumeric Sender ID allows you to send Twilio Programmable SMS messages using a personalized sender name, in supported countries (see :xref:`International Support for Alphanumeric Sender ID`).
+Alphanumeric Sender ID allows you to send Twilio Programmable SMS messages using a personalized sender name, in supported countries see :xref:`International Support for Alphanumeric Sender ID`.
 
 Instead of using an E.164 formatted Twilio Phone number for the "From" value, you can use a custom string like your own business' branding.
 
