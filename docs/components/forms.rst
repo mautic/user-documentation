@@ -236,7 +236,7 @@ Attributes
    Attributes are CSS tags which change the styling of a particular Form. 
 
 .. note:: 
-   Setting the Render Style to No on the Form means that the styling in these fields is ignored.
+   Setting the Render Style to No on the Form means that Mautic ignores the styling in these fields.
 
 .. image:: images/forms/checkbox_group_attributes.png
   :width: 600
@@ -250,3 +250,28 @@ Attributes
 
 Behavior
 ~~~~~~~~
+
+Text
+----
+
+The Behavior tab helps marketers to improve the experience for the visitor completing the Form. It also helps marketers implement progressive profiling, to gather more data from the Contact which helps in optimized personalization.
+
+- **Show when value exists**: if Mautic knows the Contact and they're tracked, when a value exists for a field Mautic hides the field when this setting is No. This prevents the Contact answering the same question multiple times. You may want to display the field even if it's already known when you want to ensure you have the most up to date information about the Contact.
+- **Show after X submissions**: this allows the marketer to show certain fields only when the Contact has submitted the Form a specified number of times. Enter a value between ``1`` and ``200``.  When left undefined, the field shows every time the Contact views the Form. The goal is to minimize the number of fields shown to the Contact, so it's recommended to hide fields if it's not necessary to verify the values.
+- **Auto-fill data**: this allows you to pre-populate Contact data with known Contacts where the information exists in the Contact profile. Auto-fill works with Mautic Landing Pages, and data won't pre-populate when placing the Form anywhere else. Even if you're hiding this field, you may wish to turn on auto-fill to ensure saving of the information with the Form submission.
+
+Field order
+-----------
+
+To change the order of fields on your Form:
+
+#. Click the field you would like to move
+#. Drag the field to a new location
+
+Form Actions
+************
+
+You may want to trigger certain actions to happen immediately after Form submission - this is what Form actions are for. This might include communications with the Contact, tracking, internal notifications, or other Contact management tasks.
+
+.. note:: 
+   The Form actions available in Mautic are also available in Standalone Forms, which include more options as they're not associated with Campaigns. Campaigns tend to trigger most actions through Campaign actions so Forms associated with Campaigns only have a basic set of Form actions.
