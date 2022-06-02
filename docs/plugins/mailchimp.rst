@@ -1,6 +1,6 @@
 .. vale off
 
-Queue
-#####
+MailChimp
+#########
 
 .. vale on
