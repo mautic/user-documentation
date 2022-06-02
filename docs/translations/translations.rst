@@ -1,6 +1,6 @@
 .. vale off
 
-Translations
+Translation
 #############
 
 .. vale on
