@@ -51,6 +51,9 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Troubleshooting
    :hidden:
 
+   troubleshooting/command_line_interface
+   troubleshooting/failed_update
+   troubleshooting/working_with_php
    troubleshooting/file_ownership_and_permissions
 
 .. toctree::
@@ -83,10 +86,10 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :maxdepth: 2
    :hidden:
 
+   channels/marketing_messages
    channels/emails
    channels/sms
    channels/focus_items
-   channels/marketing_messages
    channels/social_monitoring
    channels/web_notifications
    channels/push_notifications
@@ -115,7 +118,12 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    contacts/manage_contacts
+   contacts/import_contacts
    contacts/manage_segments
+   contacts/custom_fields
+   contacts/frequency_rules
+   contacts/preference_center
+   contacts/message_queue
 
 .. toctree::
    :maxdepth: 2
@@ -129,7 +137,6 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Email & Landing Page Builders
    :hidden:
 
-   builders/grapesjs_builder
    builders/creating_themes
 
 .. toctree::
