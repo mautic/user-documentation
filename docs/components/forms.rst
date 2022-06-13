@@ -268,10 +268,96 @@ To change the order of fields on your Form:
 #. Click the field you would like to move
 #. Drag the field to a new location
 
-Form Actions
+Form actions
 ************
 
 You may want to trigger certain actions to happen immediately after Form submission - this is what Form actions are for. This might include communications with the Contact, tracking, internal notifications, or other Contact management tasks.
 
 .. note:: 
    The Form actions available in Mautic are also available in Standalone Forms, which include more options as they're not associated with Campaigns. Campaigns tend to trigger most actions through Campaign actions so Forms associated with Campaigns only have a basic set of Form actions.
+
+- **Add to Company's Score**: if a Contact associated with a Company record in Mautic has submitted the Form, you can add or subtract Points to the Company's overall score. Company scoring in Mautic doesn't aggregate Points for all its associated Contacts. Any actions that you want to contribute to a Company's score must be explicitly set. Negative numbers are valid if you want to subtract from a Company's score based on a Contact submitting a Form. If the Contact isn't tracked and the Form doesn't include a field mapped to Company or Company Name - on the Company object - the Company has no Points awarded.
+
+.. image:: images/forms/add_to_company_score.png
+  :width: 600
+  :alt: Screenshot showing the add to Company score Form action.
+
+- **Adjust Contact's Points**: this action allows you to add, subtract, multiply or divide a Contact's score. Select the operator and the amount to change the Points by - for example: add 10, subtract 5, multiply by 3, divide by 2. If the Form is collecting information which doesn't identify the Contact, Mautic saves the Points to the anonymous Contact record. If that anonymous Contact record converts to or merges with a know Contact record based on some identifying event such as a Form submission, the Points stay with the Contact.
+
+.. image:: images/forms/adjust_contact_points.png
+  :width: 600
+  :alt: Screenshot showing the adjust Contact score Form action.
+
+- **Modify Contact's Segments**: this action allows you to change a Contact's Segment membership when they submit a Form. Type in the name of the Segment to add the Contact to or remove the Contact from. You can use both fields at the same time, and can include multiple Segments in either or both fields.  
+
+Dynamic Segments based on filters update based on information in the Contact record automatically - you don't need add them to the Segment in a Form action.
+
+Typically you would use a Form action to populate static Segments - Segments which don't have any filters set. An example of when you might want to remove a Contact from a Segment in a Form action is for an event registration. You can build a filter-based Segment for the invitation Campaign, but once the Contact submits the registration Form you remove them from that Segment and added to a Segment for event attendees, so that they don't receive any more invitation Emails.
+
+.. image:: images/forms/modify_contact_segments.png
+  :width: 600
+  :alt: Screenshot showing the modify Contact's Segments Form action.
+
+- **Modify Contact's Tags**: if you use Tags in Mautic, you might want to add or remove Tags from a Contact following a Form submission. To add or remove a Tag you have used before, select the Tag from the list displayed when clicking into the field. To find a Tag, start to type the name in the box. To add a new Tag, type the full name and press Enter on your keyboard to save the Tag.
+
+.. image:: images/forms/modify_contact_tags.png
+  :width: 600
+  :alt: Screenshot showing the modify Contact's Tags Form action.
+
+- **Record UTM Tags**: if the Page your Form is on has UTM tags, whether it's a Mautic Landing Page or an external website, Mautic can record those UTM Tags and save them to the Contact record for reporting. This is useful if you want to run Reports on where your new Contacts and Form submissions are originating from.
+
+.. image:: images/forms/record_utm_tags.png
+  :width: 600
+  :alt: Screenshot showing the record UTM Tags Form action.
+
+.. vale off
+
+- **Remove Contact from Do Not Contact list**: this Form action allows you to remove a Contact from the Do Not Contact list when they submit a Form. Use this if a Contact has at some time unsubscribed from your Email list, and by filling out the Form, are giving you permission to Email them again.
+
+.. image:: images/forms/remove_from_dnc.png
+  :width: 600
+  :alt: Screenshot showing the remove from Do Not Contact list Form action.
+
+.. vale on
+
+- **Download an Asset**: this option triggers an immediate download of the selected file when the Contact submits the Form. If you use Categories to organize your Assets, you can elect to have them download the most recently published Asset in a selected Category. If you prefer, you can link to a specific Asset.
+
+.. image:: images/forms/download_an_asset.png
+  :width: 600
+  :alt: Screenshot showing the download an Asset Form action.
+
+- **POST results to another Form**: use this option to connect your Mautic Form with some other Form. You may have Forms in other tools which you use for tracking and reporting, or back-end Forms triggering software instance creation.
+
+Enter the URL where the Form should post to, and Email address/s for anyone who should receive error notifications. If the Form you are posting to is behind a firewall, also enter the authorization header. If the field aliases - machine names - for any fields don't match, enter the alias the other Form uses for any fields on the Mautic Form.
+
+.. image:: images/forms/post_form_to_another_form.png
+  :width: 600
+  :alt: Screenshot showing the post to another Form action.
+
+- **Push Contact to Integration**: once a Contact submits the Form, you may need to push them into another piece of software you are using for Contact management - such as a CRM. Ensure that the Plugin you want to use to push the Contacts is already configured and published, then select it in the dropdown field.
+
+.. image:: images/forms/push_to_integration.png
+  :width: 600
+  :alt: Screenshot showing the push to Integration Form action.
+
+- **Send Email to Contact**: to directly Email the Contact after they submit the Form, use this option. Select a Template Email from the list, or click New Email to build a new one. After selecting an Email, you can also make edits to the Email in a popup window and preview the Email.
+
+.. image:: images/forms/send_email_to_contact.png
+  :width: 600
+  :alt: Screenshot showing the send Email to User Form action.
+
+- **Send Email to User**: to Email an internal User of Mautic after a Contact submits a Form. Select the Mautic User from the dropdown. Similar to the Send Email to Contact option, select the Template Email or create a new one. Mautic replaces any tokens in the display with the data from the Contact, not the User.
+
+.. image:: images/forms/send_email_to_user.png
+  :width: 600
+  :alt: Screenshot showing the send Email to User Form action.
+
+- **Send Form results**: this feature is commonly used for the purposes of a notification when a Contact submits a Form. It can also send a notification to the Contact of the data provided. Be sure to customize the subject line to state which Form the submission relates to.  The Reply to Contact option sets the ``reply-to`` address to the Contact's address, so that if the notification is sent to your team, replying will go to the Contact automatically.
+
+If you have Contact Owners set in Mautic, you can also send the notification directly to the Contact's owner. It's also possible to send a copy of the Email to the Contact.
+
+You can style the message itself can as you like, and you can click to insert the submitted values from the Form using tokens. The fields must have been added to the Form before creating the action.  If new fields are added after creating the Form action, edit the Form action and add the new tokens to the Email.
+
+.. image:: images/forms/send_form_results.png
+  :width: 600
+  :alt: Screenshot showing the send Form results action.
