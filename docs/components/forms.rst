@@ -356,8 +356,140 @@ Enter the URL where the Form should post to, and Email address/s for anyone who 
 
 If you have Contact Owners set in Mautic, you can also send the notification directly to the Contact's owner. It's also possible to send a copy of the Email to the Contact.
 
-You can style the message itself can as you like, and you can click to insert the submitted values from the Form using tokens. The fields must have been added to the Form before creating the action.  If new fields are added after creating the Form action, edit the Form action and add the new tokens to the Email.
+You can style the message itself can as you like, and you can click to insert the submitted values from the Form using tokens. You must add the fields to the Form before creating the action. If adding new fields after creating the Form action, edit the Form action and add the new tokens to the Email.
 
 .. image:: images/forms/send_form_results.png
   :width: 600
-  :alt: Screenshot showing the send Form results action.
+  :alt: Screenshot showing the send Form results action. 
+
+.. vale off
+
+Adding Forms to Pages
+*********************
+
+.. vale on
+
+There are several ways to add your Mautic Forms to Landing Pages or Websites.
+
+Shortcodes
+==========
+
+When working with Mautic Landing Pages or common Content Management Systems (CMS) including Drupal, Joomla! or WordPress, you can use a shortcode. In each case, replace ``ID#`` with the Mautic Form's ID number, found in the list of Forms or when viewing or editing a Form, the ID is at the end of the URL. This option uses JavaScript, which means that your embedded Form is always up to date with any changes made on your Mautic Form.
+
+- **Mautic Landing Page**: ``{form= ID#}``
+- **Drupal 7.x**: ``{mauticform id =ID# width=300 px height=300 px}`` - be sure to change the width and height to the appropriate size for your website.
+
+.. warning:: 
+  This shortcode doesn't work for Drupal 8.x - it's recommended to use the Automatic Copy option instead.
+
+- **Joomla!**: ``{mauticform ID#}``
+- **WordPress**: ``[mautic type="form" id=ID#]``
+
+Automatic copy
+==============
+
+.. image:: images/forms/embed_form.png
+  :width: 600
+  :alt: Screenshot showing the options for embedding a Mautic Form. 
+
+The Automatic option for embedding Mautic Forms uses JavaScript and ensures that the Forms on your website are always up to date with what you have set in Mautic. If you make changes to the Form in Mautic, you don't have to worry about re-copying the Form code everywhere you use the Form. Features including auto-fill and progressive profiling **only** works with the Automatic option.
+
+.. note:: 
+  Before copying the code to embed your Mautic Forms, ensure that you are on the correct domain name - not a staging area or internal reference for example - as the Form embed code references the URL.
+
+Via JavaScript
+~~~~~~~~~~~~~~
+
+Other than using shortcodes with a CMS Plugin, this is the recommended method for embedding your Mautic Forms. Copy the line of code in the box and paste it into your website where you want the Form to display.
+
+.. vale off
+
+Via IFrame
+~~~~~~~~~~
+
+.. vale on
+
+IFrames can be more difficult to use, and blocking by browsers is more likely, however there are sometimes where using an IFrame is preferable. Be sure to adjust the width and height for the space required to fit the Form. The visitor may need to scroll within the IFrame depending on the resolution of their browser. It's possible to display an error message in the event that the visitor's browser doesn't support IFrames, by editing the text between the ``<p>`` and ``</p>`` tags before copying the code and pasting it into your website.
+
+Manual copy
+===========
+
+.. image:: images/forms/embed_form_manual.png
+  :width: 600
+  :alt: Screenshot showing the options for manually embedding a Mautic Form. 
+
+The manual copy option does provide more flexibility to extend Forms with JavaScript snippets and custom styling, however it's a manual process and any changes made within Mautic after copying the code won't be automatically reflected on your website unless you re-copy and paste the new HTML code.
+
+.. note:: 
+  Before copying the code to embed your Mautic Forms, ensure that you are on the correct domain name - not a staging area or internal reference for example - as the Form embed code references the URL.
+
+#. Copy the JavaScript code in the first box, and paste it into the head or body of your page. If you have multiple Mautic Forms on the same page, add this once only.
+#. Copy the HTML code in the second box, and paste it where you wish to display the Form.
+#. If you have Render Style set to Yes in the Form, the code includes the styling. If you have Render Style set to No, there is no styling included with the code, and the Form styling comes from the CSS from your website.
+
+Creating conditional Form fields
+********************************
+
+Mautic allows you to create conditional fields within Forms. This allows you to manage a set of dependencies between fields, so that the fields display only with certain conditions.
+
+To create conditional fields, you must first create any :doc:`configuration/custom-fields` and use these fields within a Form.
+
+Creating Custom Fields
+======================
+
+Using an example of wanting to show specific types of car based on the manufacturer, you would create the following custom fields:
+
+- **Car manufacturer**: this field should be of the Select data type. In this example, the options for this field are Ford, Nissan, Peugeot, and Fiat.
+- **Ford cars**: this field should be of the Select - Multiple data type. In this example, the available options for this field are Focus, Mustang, Fiesta, and Mondeo.
+
+Adding conditional fields to a Mautic Form
+==========================================
+
+Once you have created the required Custom Fields, add the parent field to the Form as detailed previously, and add the relevant information in the tabs.
+
+.. note:: 
+  When using conditional fields, only ``Select``, ``Select - Multiple`` and ``Boolean`` field types are valid as the parent field.
+
+.. image:: images/forms/conditional_fields_1.png
+  :width: 600
+  :alt: Screenshot showing the parent field for a conditional field on a Mautic Form
+
+If you have defined the values in the Custom Field, turn the first switch to Yes to use those values. Otherwise, create the labels and values in the Properties tab. You can also associate the Form field with a Contact field where appropriate.
+
+.. image:: images/forms/conditional_fields_2.png
+  :width: 600
+  :alt: Screenshot showing the configuration of a parent field
+
+Once saved, an option displays to add a conditional field.
+
+.. image:: images/forms/conditional_fields_3.png
+  :width: 600
+  :alt: Screenshot showing option to add a field based on the value of an existing field
+
+In this example, select the ``Checkbox Group`` option, and under the Condition tab, choose ``including`` and ``Ford``.  
+
+.. image:: images/forms/conditional_fields_4.png
+  :width: 600
+  :alt: Screenshot showing selection of parent field
+
+This means that when the visitor selects Ford, the Form displays this field. 
+
+There are two options:
+
+- **including**: if you want the child field to appear only if the selected value on the Form for the parent field **does match** the value/s specified
+- **excluding**: if you want the child field to appear only if the selected value on the Form for the parent field **doesn't match** the value/s specified
+
+It's possible to set Any value to Yes, then the child field will show for any value of the parent field. This removes the filters to select an option.
+
+Map the field to a Contact field as appropriate, and under the Properties tab, either select to use the options in the Custom Field, or specify labels and options.
+
+Once saved, the Form displays the conditional field nested underneath the parent field.
+
+.. image:: images/forms/conditional_fields_5.png
+  :width: 600
+  :alt: Screenshot showing child field nested underneath the parent field
+
+Blocking Form submissions from specified domains
+************************************************
+
+Sometimes it's necessary to block certain domains from submitting forms - for example to restrict access to proprietary content and reduce the volume of unqualified leads.
