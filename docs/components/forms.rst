@@ -14,8 +14,8 @@ To create a new Form:
 
 #. Go to Components > Forms and click New
 #. Select the type of Form you wish to create
-   - **Campaign Form** - Mautic allows you to trigger a Campaign with the submission of this type of Form. Campaign Forms have less actions directly associated with the Form submit actions - which happen immediately after Form submission - as most actions trigger as part of a Campaign workflow.
-   - **Standalone Form** - A more commonly used Form, this allows the execution of many submit actions immediately at the point of Form submission. 
+   * **Campaign Form** - Mautic allows you to trigger a Campaign with the submission of this type of Form. Campaign Forms have less actions directly associated with the Form submit actions - which happen immediately after Form submission - as most actions trigger as part of a Campaign workflow.
+   * **Standalone Form** - A more commonly used Form, this allows the execution of many submit actions immediately at the point of Form submission. 
 
 .. warning:: 
     Forms with a lot of submit actions - particularly when submitting to third party systems such as a Customer Relationship Management system - can have an impact on the Form submission time. This is especially the case if there are a lot of fields. Consider using a Campaign Form if you can wait for the cron job to trigger the actions.
@@ -371,10 +371,14 @@ Adding Forms to Pages
 
 There are several ways to add your Mautic Forms to Landing Pages or Websites.
 
+.. vale off
+
 Shortcodes
 ==========
 
-When working with Mautic Landing Pages or common Content Management Systems (CMS) including Drupal, Joomla! or WordPress, you can use a shortcode. In each case, replace ``ID#`` with the Mautic Form's ID number, found in the list of Forms or when viewing or editing a Form, the ID is at the end of the URL. This option uses JavaScript, which means that your embedded Form is always up to date with any changes made on your Mautic Form.
+.. vale on
+
+When working with Mautic Landing Pages or common Content Management Systems (CMS) including **Drupal**, **Joomla!** or **WordPress**, you can use a shortcode. In each case, replace ``ID#`` with the Mautic Form's ID number, found in the list of Forms or when viewing or editing a Form, the ID is at the end of the URL. This option uses JavaScript, which means that your embedded Form is always up to date with any changes made on your Mautic Form.
 
 - **Mautic Landing Page**: ``{form= ID#}``
 - **Drupal 7.x**: ``{mauticform id =ID# width=300 px height=300 px}`` - be sure to change the width and height to the appropriate size for your website.
@@ -427,8 +431,12 @@ The manual copy option does provide more flexibility to extend Forms with JavaSc
 #. Copy the HTML code in the second box, and paste it where you wish to display the Form.
 #. If you have Render Style set to Yes in the Form, the code includes the styling. If you have Render Style set to No, there is no styling included with the code, and the Form styling comes from the CSS from your website.
 
+.. vale off
+
 Creating conditional Form fields
 ********************************
+
+.. vale on
 
 Mautic allows you to create conditional fields within Forms. This allows you to manage a set of dependencies between fields, so that the fields display only with certain conditions.
 

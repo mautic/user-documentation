@@ -57,6 +57,7 @@ IDP
 IMAP
 infographics
 JavaScript
+Joomla
 Joomla!
 Libre
 Licensor
@@ -93,6 +94,8 @@ Schimpf
 SCP
 SendGrid
 SES
+shortcode
+shortcodes
 SMS
 SMTP
 SNS
