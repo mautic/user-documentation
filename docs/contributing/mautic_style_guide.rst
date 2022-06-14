@@ -4,7 +4,7 @@ The Mautic Style guide recommends best practices that aims to bring about a cons
 
 Vale
 ****
-:xref:`vale` is a natural language linter that supports plain text, markup (Markdown, reStructuredText, AsciiDoc, and HTML), and source code comments. Vale doesn't attempt to offer a one-size-fits-all collection of rules—instead, it strives to make customization as easy as possible.
+:xref:`Vale` is a natural language linter that supports plain text, markup (Markdown, reStructuredText, AsciiDoc, and HTML), and source code comments. Vale doesn't attempt to offer a one-size-fits-all collection of rules—instead, it strives to make customization as easy as possible.
 
 .. vale off
 
@@ -13,7 +13,7 @@ How to install Vale
 
 .. vale on
 
-Follow the steps in the :xref:`vale` documentation to install Vale. 
+Follow the steps in the :xref:`Vale` documentation to install Vale. 
 
 You may find it preferable to install and run Vale Server when working locally, as it has more features available. If you do use Vale Server, once it's started you need to edit the file in the ``.vscode/settings.json`` file, and change ``"vale.core.useCLI": true``, to ``"vale.core.useCLI": false,``.
 
@@ -21,8 +21,8 @@ If you use VS Code and clone the Documentation repository, the Vale extension is
 
 Before pushing your code, run Vale and address suggestions and errors as applicable.
 
-#. Install :xref:`vale`
-#. Run the command `vale`
+#. Install :xref:`Vale`
+#. Run the command `Vale`
 
 You can also run Vale on a file individually using the command vale `<filename>`, for example: 
 
@@ -214,8 +214,37 @@ RST provides several ways for linking to resources within and outside the Mautic
 Internal links
 ~~~~~~~~~~~~~~
 
-- To link on the same page to a heading, use ``:ref:`Heading anchor` `` and to use custom text for the phrase linked, use ``:ref:`Custom text<Heading Text>` ``
-- To link to another pages, use ``:doc:`page` `` or if the page is within a subdirectory, ``:doc:`/folder/page` `` (note the first / - this is important). To use custom text with a doc reference, use ``:doc:`Custom text </folder/page>` ``
+- To link on the same page to a heading, use
+
+.. code-block:: 
+  
+  :ref:`Heading anchor`
+  
+- To use custom text for the phrase linked, use 
+
+.. code-block:: 
+
+  :ref:`Custom text<Heading Text>`
+
+- To link to another pages, use 
+
+.. code-block:: 
+  
+  :doc:`page`
+  
+- If the page is within a subdirectory, use
+
+.. code-block:: 
+  
+  :doc:`/folder/page`
+
+Note the first / - this is important). 
+
+- To use custom text with a doc reference, use 
+
+.. code-block:: 
+  
+  :doc:`Custom text </folder/page>`
 
 External links
 ~~~~~~~~~~~~~~
@@ -229,10 +258,11 @@ If there is no link already present, create a new file and name it so that other
 Use the following as a template, or copy and adapt an existing link:
 
 .. code-block:: python
-  from . import link
+
+   from . import link
   
   link_name = "Link name" 
-  link_text = "Anchor text to be used when the link is placed in a page" 
+  link_text = "Anchor text used when link placed on a page" 
   link_url = "https://example.com" 
 
   link.xref_links.update({link_name: (link_text, link_url)})
