@@ -434,8 +434,12 @@ Mautic allows you to create conditional fields within Forms. This allows you to 
 
 To create conditional fields, you must first create any :doc:`configuration/custom-fields` and use these fields within a Form.
 
+.. vale off
+
 Creating Custom Fields
 ======================
+
+.. vale on
 
 Using an example of wanting to show specific types of car based on the manufacturer, you would create the following custom fields:
 
@@ -479,7 +483,7 @@ There are two options:
 - **including**: if you want the child field to appear only if the selected value on the Form for the parent field **does match** the value/s specified
 - **excluding**: if you want the child field to appear only if the selected value on the Form for the parent field **doesn't match** the value/s specified
 
-It's possible to set Any value to Yes, then the child field will show for any value of the parent field. This removes the filters to select an option.
+It's possible to set Any value to Yes, then the child field shows for any value of the parent field. This removes the filters to select an option.
 
 Map the field to a Contact field as appropriate, and under the Properties tab, either select to use the options in the Custom Field, or specify labels and options.
 
@@ -492,4 +496,27 @@ Once saved, the Form displays the conditional field nested underneath the parent
 Blocking Form submissions from specified domains
 ************************************************
 
-Sometimes it's necessary to block certain domains from submitting forms - for example to restrict access to proprietary content and reduce the volume of unqualified leads.
+Sometimes it's necessary to block certain domains from submitting Forms - for example to restrict access to proprietary content and reduce the volume of unqualified leads.
+
+Configuring blocked domains
+===========================
+
+To configure globally blocked domains - applying to all Forms in your Mautic instance - go to the Forms section in :doc:`/configuration/settings`.
+
+.. image:: images/forms/block_domains_global.png
+  :width: 600
+  :alt: Screenshot showing global domain blocking
+
+Specify domains, one per line, using either full Email addresses or entire domains using an asterisk before the domain name, which acts as a wildcard. Ensure you save your changes.
+
+
+Applying domain name filtering to a Form
+========================================
+
+To apply domain name filtering on a Mautic Form, add an Email field to the Form - after setting up the domain exclusions in the previous step - and under the Validation tab, set the Domain name submission filter switch to Yes.
+
+.. image:: images/forms/block_domains_form.png
+  :width: 600
+  :alt: Screenshot showing domain blocking used in a Mautic Form
+
+It's advised to provide a helpful message to display if the visitor tries to use an Email address from a blocked domain, to help them understand what the problem is.
