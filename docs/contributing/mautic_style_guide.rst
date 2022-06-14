@@ -4,14 +4,25 @@ The Mautic Style guide recommends best practices that aims to bring about a cons
 
 Vale
 ****
-Vale is a natural language linter that supports plain text, markup (Markdown, reStructuredText, AsciiDoc, and HTML), and source code comments. Vale doesn't attempt to offer a one-size-fits-all collection of rules—instead, it strives to make customization as easy as possible.
+:xref:`vale` is a natural language linter that supports plain text, markup (Markdown, reStructuredText, AsciiDoc, and HTML), and source code comments. Vale doesn't attempt to offer a one-size-fits-all collection of rules—instead, it strives to make customization as easy as possible.
 
-How to install vale
+.. vale off
+
+How to install Vale
 ===================
-Before pushing, run Vale and address suggestions and errors as applicable.
 
-#. Install vale
-#. vale
+.. vale on
+
+Follow the steps in the :xref:`vale` documentation to install Vale. 
+
+You may find it preferable to install and run Vale Server when working locally, as it has more features available. If you do use Vale Server, once it's started you need to edit the file in the ``.vscode/settings.json`` file, and change ``"vale.core.useCLI": true``, to ``"vale.core.useCLI": false,``.
+
+If you use VS Code and clone the Documentation repository, the Vale extension is already installed and configured, and you'll see prompts when you save the file.
+
+Before pushing your code, run Vale and address suggestions and errors as applicable.
+
+#. Install :xref:`vale`
+#. Run the command `vale`
 
 You can also run Vale on a file individually using the command vale `<filename>`, for example: 
 
@@ -19,20 +30,30 @@ You can also run Vale on a file individually using the command vale `<filename>`
 
      vale docs/campaigns/campaign_builder.rst.
 
-You'll see the errors highlighted as you type, and it would listed under the **Problem tab**.
+You'll see the errors highlighted as you type if using VS Code, with all problems to fix listed under the **Problem tab**.
 
 .. note:: 
 
    When you are making PRs, please ensure you are reviewing the Vale linter output, and you are checking your reStructuredText markup.
 
-Tips on using vale
+.. vale off
+
+Tips on using Vale
 ==================
+
+.. vale on
+
 * You **must** fix errors **red**
 * You should fix warnings **yellow**,
 * You could fix suggestions **blue** a sometimes they're not relevant 
 
+.. vale off
+
 RST basic markup
 ****************
+
+.. vale on
+
 The reStructuredText is an easy-to-read plain text markup syntax and parser system. Below are some of the basic markup of reStructuredText markup.
 
 Section
@@ -175,13 +196,43 @@ Add images to your documentation when possible. Images, such as screenshots, are
 
 Here is an example of image::
 
-   .. image:: images/primary-company.png
+   .. image:: images/GitpodWelcome.png
    :width: 600
-   :alt: primary-company
+   :alt: Gitpod Welcome
 
 Output:
 
-.. image:: images/primary-company.png
+.. image:: images/GitpodWelcome.png
   :width: 600
-  :alt: primary-company
+  :alt: Gitpod Welcome
 
+Links
+=====
+
+RST provides several ways for linking to resources within and outside the Mautic documentation:
+
+Internal links
+~~~~~~~~~~~~~~
+
+- To link on the same page to a heading, use ``:ref:`Heading anchor` `` and to use custom text for the phrase linked, use ``:ref:`Custom text<Heading Text>` ``
+- To link to another pages, use ``:doc:`page` `` or if the page is within a subdirectory, ``:doc:`/folder/page` `` (note the first / - this is important). To use custom text with a doc reference, use ``:doc:`Custom text </folder/page>` ``
+
+External links
+~~~~~~~~~~~~~~
+
+The external links extension allows you to set up a link in one place - the ``/links`` directory - and reference the link in multiple places across the documentation. It also allows the verification that all links are valid during the build process, highlighting any which are giving response codes suggesting a broken link.
+
+To create a new external link, first **verify that it doesn't already exist in the /links directory**.
+
+If there is no link already present, create a new file and name it so that others understand what it's linking to.
+
+Use the following as a template, or copy and adapt an existing link:
+
+.. code-block:: python
+  from . import link
+  
+  link_name = "Link name" 
+  link_text = "Anchor text to be used when the link is placed in a page" 
+  link_url = "https://example.com" 
+
+  link.xref_links.update({link_name: (link_text, link_url)})
