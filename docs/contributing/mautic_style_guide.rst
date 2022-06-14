@@ -22,7 +22,7 @@ If you use VS Code and clone the Documentation repository, the Vale extension is
 Before pushing your code, run Vale and address suggestions and errors as applicable.
 
 #. Install :xref:`Vale`
-#. Run the command `Vale`
+#. Run the command ``vale``
 
 You can also run Vale on a file individually using the command vale `<filename>`, for example: 
 
@@ -235,7 +235,7 @@ Internal links
 - If the page is within a subdirectory, use
 
 .. code-block:: 
-  
+
   :doc:`/folder/page`
 
 Note the first / - this is important). 
