@@ -352,11 +352,11 @@ Enter the URL where the Form should post to, and Email address/s for anyone who 
   :width: 600
   :alt: Screenshot showing the send Email to User Form action.
 
-- **Send Form results**: this feature is commonly used for the purposes of a notification when a Contact submits a Form. It can also send a notification to the Contact of the data provided. Be sure to customize the subject line to state which Form the submission relates to.  The Reply to Contact option sets the ``reply-to`` address to the Contact's address, so that if the notification is sent to your team, replying will go to the Contact automatically.
+- **Send Form results**: this feature is commonly used for the purposes of a notification when a Contact submits a Form. It can also send a notification to the Contact of the data provided. Be sure to customize the subject line to state which Form the submission relates to. The Reply to Contact option sets the ``reply-to`` address to the Contact's address, so that if the notification is sent to your team, replying will go to the Contact automatically.
 
 If you have Contact Owners set in Mautic, you can also send the notification directly to the Contact's owner. It's also possible to send a copy of the Email to the Contact.
 
-You can style the message itself can as you like, and you can click to insert the submitted values from the Form using tokens. You must add the fields to the Form before creating the action. If adding new fields after creating the Form action, edit the Form action and add the new tokens to the Email.
+You can style the message itself as you like, and you can click to insert the submitted values from the Form using tokens. You must add the fields to the Form before creating the action. If adding new fields after creating the Form action, edit the Form action and add the new tokens to the Email.
 
 .. image:: images/forms/send_form_results.png
   :width: 600
@@ -452,7 +452,7 @@ Creating Custom Fields
 Using an example of wanting to show specific types of car based on the manufacturer, you would create the following custom fields:
 
 - **Car manufacturer**: this field should be of the Select data type. In this example, the options for this field are Ford, Nissan, Peugeot, and Fiat.
-- **Ford cars**: this field should be of the Select - Multiple data type. In this example, the available options for this field are Focus, Mustang, Fiesta, and Mondeo.
+- **Ford cars**: this field should be of the Select - Multiple data type. In this example, the available options for this field are Focus, Mustang, Fiesta, and Galaxy.
 
 Adding conditional fields to a Mautic Form
 ==========================================
