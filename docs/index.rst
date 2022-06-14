@@ -45,6 +45,7 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    configuration/settings
+   configuration/custom_fields
 
 .. toctree::
    :maxdepth: 2
@@ -159,7 +160,11 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Reports
    :hidden:
 
+   reports/reports
+
 .. toctree::
    :maxdepth: 2
    :caption: Stages
    :hidden:
+
+   stages/stages
