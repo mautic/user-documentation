@@ -247,7 +247,7 @@ You can now login to your Mautic instance with your Mautic Admin credentials.
 
 Installing from GitHub
 **********************
-TODO
+Todo
 
 Installing with Composer
 ************************
@@ -353,7 +353,11 @@ The :xref:`Mautic Composer scaffold` Plugin can download the scaffold files - fo
 
 If you haven't customized those files you could choose to not commit them in your version control system - for example, git. If that's the case for your project it might be convenient to automatically run the Mautic Scaffold Plugin after every install or update of your project.
 
+.. vale off
+
 You can achieve that by registering ``@composer mautic:scaffold`` as post-install and post-update command in your composer.json:
+
+.. vale on
 
 .. code-block:: json
 
@@ -393,7 +397,7 @@ How can you specify a PHP version?
 
 .. vale on
 
-This project supports PHP 7.4 as the minimum version currently - check :xref:`Mautic's Requirements` however, it's possible that a Composer update may upgrade some package that could then require PHP 7+ or 8+.
+This project supports PHP 7.4 as the minimum version currently - review :xref:`Mautic's Requirements` however, it's possible that a Composer update may upgrade some package that could then require PHP 7+ or 8+.
 
 To prevent this you can add this code to specify the PHP version you want to use in the config section of ``composer.json``:
 
@@ -405,6 +409,41 @@ To prevent this you can add this code to specify the PHP version you want to use
           "php": "7.4"
       }
   },
+
+
+How can you use another folder than ``docroot`` as the root folder?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default the ``composer.json`` file places all Mautic core, Plugin and Theme files in the ``docroot`` folder.
+It's possible to change this folder to your own needs.
+
+In following examples, ``docroot`` moves into ``public``.
+
+New installations
+-----------------
+
+* Run the create-project command without installing:
+
+.. code-block:: bash
+  
+  composer create-project mautic/recommended-project:^4 some-dir --no-interaction --no-install
+
+* Do a find and replace in the ``composer.json`` file to change ``docroot/`` into ``public/``
+* Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements
+* Run ``composer install`` to install all dependencies in the correct location
+
+Existing installations
+----------------------
+
+* Move the ``docroot/`` to ``public/``
+
+.. code-block:: bash
+
+  mv docroot public
+
+* Do a find and replace in the ``composer.json`` file to change ``docroot/`` to ``public/``
+* Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements
+* Run ``composer update --lock`` to ensure the autoloader is aware of the changed folder
 
 .. vale off
 
