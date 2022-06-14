@@ -1,6 +1,4 @@
-.. vale off
-
 Custom Fields
 #############
 
-.. vale on
+Placeholder for custom fields
