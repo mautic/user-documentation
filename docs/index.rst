@@ -45,6 +45,7 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    configuration/settings
+   configuration/custom_fields
 
 .. toctree::
    :maxdepth: 2
@@ -138,6 +139,7 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    builders/creating_themes
+   builders/email_landing_page
 
 .. toctree::
    :maxdepth: 2
