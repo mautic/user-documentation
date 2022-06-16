@@ -1,7 +1,6 @@
 .. vale off
 
-Creating Themes
+Plugin resources
 ################
 
 .. vale on
-

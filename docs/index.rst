@@ -52,6 +52,9 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Troubleshooting
    :hidden:
 
+   troubleshooting/command_line_interface
+   troubleshooting/failed_update
+   troubleshooting/working_with_php
    troubleshooting/file_ownership_and_permissions
 
 .. toctree::
@@ -84,10 +87,10 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :maxdepth: 2
    :hidden:
 
+   channels/marketing_messages
    channels/emails
    channels/sms
    channels/focus_items
-   channels/marketing_messages
    channels/social_monitoring
    channels/web_notifications
    channels/push_notifications
@@ -116,7 +119,12 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    contacts/manage_contacts
+   contacts/import_contacts
    contacts/manage_segments
+   contacts/custom_fields
+   contacts/frequency_rules
+   contacts/preference_center
+   contacts/message_queue
 
 .. toctree::
    :maxdepth: 2
@@ -130,8 +138,8 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Email & Landing Page Builders
    :hidden:
 
-   builders/grapesjs_builder
    builders/creating_themes
+   builders/email_landing_page
 
 .. toctree::
    :maxdepth: 2
@@ -145,8 +153,28 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Plugins
    :hidden:
 
+   plugins/plugin_resources
+   plugins/amazon
+   plugins/citrix
+   plugins/clearbit
+   plugins/connectwise
+   plugins/fullcontact
+   plugins/gmail
+   plugins/hubspot
+   plugins/icontact
+   plugins/mailchimp
+   plugins/microsoft_dynamics_crm
+   plugins/microsoft_outlook
+   plugins/pipedrive
+   plugins/salesforce
+   plugins/social_login
+   plugins/sugar_crm
+   plugins/tag_manager
    plugins/twilio
    plugins/twitter
+   plugins/vtiger
+   plugins/zapier
+   plugins/zoho_crm
 
 .. toctree::
    :maxdepth: 2
@@ -154,6 +182,13 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    points/points
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Queue
+   :hidden:
+
+   queue/queue
 
 .. toctree::
    :maxdepth: 2
@@ -168,3 +203,70 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    stages/stages
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Themes
+   :hidden:
+
+   themes/manage_themes
+   themes/customizing_themes
+   themes/theme_structure
+   themes/code_mode
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Translation
+   :hidden:
+
+   translations/translations
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User and Roles
+   :hidden:
+
+   users_roles/managing_users
+   users_roles/managing_roles
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Use case
+   :hidden:
+
+   use_cases/community
+   use_cases/ecommerce
+   use_cases/education
+   use_cases/political
+   use_cases/sales_marketing
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Gated video
+   :hidden:
+
+   gated_video/gated_video
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tips & Tricks
+   :hidden:
+
+   tips_tricks/tips_tricks
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Features by major release
+   :hidden:
+
+   features/features
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Mautic 3 upgrade
+   :hidden:
+
+   upgrade/getting_started
+   upgrade/upgrade_steps
+   upgrade/upgrade_errors

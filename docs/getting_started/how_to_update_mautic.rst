@@ -8,12 +8,12 @@ How to update Mautic
 There are two ways to update Mautic:
 
 1. Using the Command Line - recommended
-2. Through the user interface
+2. Through the User interface
 
 If your instance is in production, has a large number of contacts and/or is  on shared hosting, it's **strongly** recommended that you update at the command line.
 
 .. warning::
-    Updating in the user interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. This can lead to failed updates and corrupted data. This feature will be completely removed in Mautic 5.0 and you will have to update at the command line.
+    Updating in the User interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. This can lead to failed updates and corrupted data. This feature will be completely removed in Mautic 5.0 and you will have to update at the command line.
 
 Updating at the command line (non-composer based installations)
 ***************************************************************
@@ -26,7 +26,7 @@ Checking for updates at the command line
 
 Mautic can only be updated using Composer via the command line from version 5.0. 
 
-The update feature within the Mautic user interface (UI) has been deprecated from Mautic 4.2, but you will be alerted within the UI (see below figure) when a new version of the Mautic is available. 
+The update feature within the Mautic User interface (UI) has been deprecated from Mautic 4.2, but you will be alerted within the UI (see below figure) when a new version of the Mautic is available. 
 
 .. image:: images/gui-update-deprecated.png
   :width: 400
@@ -100,7 +100,7 @@ If this has happened to you, head over to the Troubleshooting section for a step
 Stability levels
 ****************
 
-By default, Mautic receives notifications both in the user interface and at the command line for stable releases only.
+By default, Mautic receives notifications both in the User interface and at the command line for stable releases only.
 
 If you wish to help with testing early access releases in a development environment, do the following
 

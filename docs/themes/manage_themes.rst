@@ -1,7 +1,6 @@
 .. vale off
 
-Creating Themes
+Themes Structure
 ################
 
 .. vale on
-

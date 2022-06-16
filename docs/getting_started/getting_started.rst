@@ -11,6 +11,7 @@ Check out the following resources:
 
 Contents
 --------
-- :doc:`how_to_install_mautic`
-
+- :doc:`how_to_install_mautic` 
+ 
 - :doc:`how_to_update_mautic`
+   
