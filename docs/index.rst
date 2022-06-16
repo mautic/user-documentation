@@ -3,7 +3,7 @@ Welcome to the Mautic documentation
 
 **Mautic** is an open source marketing automation platform that provides you with the greatest level of audience intelligence, thus enabling you to make more meaningful customer connections
 
-Check out the :doc:`/getting_started/getting_started` section for further information, including how to :doc:`/getting_started/how_to_install_mautic`.
+Check out the :doc:`/getting_started/how_to_install_mautic` section for further information, including how to install Mautic.
 
 .. note::
 
@@ -12,50 +12,31 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
 
 .. toctree::
    :maxdepth: 2
-   :caption: Mautic Documentation
+   :caption: Welcome to Mautic
    :hidden:
 
    overview/overview
-   contributing/contributing
-   contributing/mautic_style_guide
-
+   
 .. toctree::
-   :caption: Getting Started
+   :caption: Getting Started with Mautic
    :maxdepth: 2
    :hidden:
    
-   getting_started/getting_started
    getting_started/how_to_install_mautic
+   getting_started/switching_composer
    getting_started/how_to_update_mautic
 
 .. toctree::
-   :caption: Set Up
-   :maxdepth: 2
-   :hidden:
-
-   set_up/maxmind_license
-   set_up/switching_composer
-   set_up/cron_jobs
-   set_up/tracking_script
-   set_up/variables
-
-.. toctree::
-   :maxdepth: 2
    :caption: Configuration
+   :maxdepth: 2
    :hidden:
 
+   configuration/maxmind_license
+   configuration/command_line_interface
+   configuration/cron_jobs
+   configuration/variables
    configuration/settings
    configuration/custom_fields
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Troubleshooting
-   :hidden:
-
-   troubleshooting/command_line_interface
-   troubleshooting/failed_update
-   troubleshooting/working_with_php
-   troubleshooting/file_ownership_and_permissions
 
 .. toctree::
    :caption: Authentication
@@ -63,6 +44,24 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    authentication/authentication
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contacts
+   :hidden:
+
+   contacts/manage_contacts
+   contacts/import_contacts
+   contacts/custom_fields
+   contacts/frequency_rules
+   contacts/preference_center
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Segments
+   :hidden:
+
+   segments/manage_segments
 
 .. toctree::
    :maxdepth: 2
@@ -113,18 +112,6 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    components/forms
    components/landing_pages
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contacts
-   :hidden:
-
-   contacts/manage_contacts
-   contacts/import_contacts
-   contacts/manage_segments
-   contacts/custom_fields
-   contacts/frequency_rules
-   contacts/preference_center
-   contacts/message_queue
 
 .. toctree::
    :maxdepth: 2
@@ -189,6 +176,7 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    queue/queue
+   queue/message_queue
 
 .. toctree::
    :maxdepth: 2
