@@ -3,11 +3,12 @@
 Email & Landing Page Builder
 ############################
 
+.. vale on
 
 Since :xref:`Mautic 3`, Mautic has shipped with an updated, modern builder for creating Emails and landing pages. 
 In :xref:`Mautic 4` it's the default builder.
 
-.. vale on
+
 
 
 .. attention:: 
@@ -16,7 +17,7 @@ In :xref:`Mautic 4` it's the default builder.
 .. vale off
 
 About GrapesJS
-***************
+**************
 
 .. vale on
 
@@ -27,7 +28,7 @@ GrapesJS is an open source, multi-purpose, Web Builder Framework which combines 
 .. vale off
 
 Available end-user features
-****************************
+***************************
 
 Drag & drop built-in blocks
 ===========================
