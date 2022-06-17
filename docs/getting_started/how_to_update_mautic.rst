@@ -15,8 +15,9 @@ If your instance is in production, has a large number of contacts and/or is  on 
 .. warning::
     Updating in the User interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. This can lead to failed updates and corrupted data. This feature will be completely removed in Mautic 5.0 and you will have to update at the command line.
 
-Updating at the command line (non-composer based installations)
+Updating at the command line (non Composer based installations)
 ***************************************************************
+
 Before you commence updating Mautic, **please ensure that you have a tested backup of your Mautic instance**. 
 
 This means that you have downloaded the files and database of your Mautic instance, and you have re-created it in a test environment somewhere and tested that everything is working as expected. This is your only recourse if there are any problems with the update. Never update without having a working, up-to-date backup.
@@ -30,7 +31,7 @@ The update feature within the Mautic User interface (UI) has been deprecated fro
 
 .. image:: images/gui-update-deprecated.png
   :width: 400
-  :alt: Screenshot showing depracted update feature warning
+  :alt: Screenshot showing deprecated update feature warning
 
 .. warning::
     Before starting to upgrade, it is highly recommended to take a backup of your instance. If updates are available, you will receive an update notification followed by step-by-step instructions in the CLI to complete the process.
@@ -72,7 +73,7 @@ When updating Mautic, there are several tasks which can take a long time to comp
 
 When updating within the browser, problems usually manifest as the update hanging part way through, or crashing with an error. They often arise as a result of resource limitation, particularly on shared hosting environments. 
 
-For this reason, it's always recommended that you :ref:`update at the command line<installing updates at the command line>` wherever possible.  From Mautic 5.0 the ability to update in the browser will be completely removed, and you will have to update at the command line.
+For this reason, it's always recommended that you :ref:`update at the command line<installing updates at the command line>` wherever possible. From Mautic 5.0 the ability to update in the browser will be completely removed, and you will have to update at the command line.
 
 Before you commence updating, **please ensure that you have a tested backup of your Mautic instance**.
 
@@ -115,7 +116,7 @@ If you need help, you can ask for it in several places. You should remember that
 
 - The :xref:`Mautic Community Forums` is the place where you can ask questions about your configuration if you think it is the cause of the problem. Please search before posting your question, since someone may have already answered it.
 
-- The live :xref:`Mautic Community Slack` is also available, but all support requests have to be posted on the forums. Post there first, then drop a link in Slack if you plan to discuss it there.
+- The live :xref:`Mautic Community Slack` is also available, but all support requests have to be posted on the forums. POST there first, then drop a link in Slack if you plan to discuss it there.
 
 In all cases, it is important to provide details about the issue, as well as the steps you have taken to resolve it. At a minimum, include the following:
 

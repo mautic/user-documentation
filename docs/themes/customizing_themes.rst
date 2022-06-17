@@ -1,6 +1,6 @@
 .. vale off
 
-Cutomizing Themes
-#################
+Customizing Themes
+###################
 
 .. vale on
