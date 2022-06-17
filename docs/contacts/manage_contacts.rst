@@ -1,9 +1,9 @@
 .. vale off
 
-Managing Contacts
+Manage Contacts
 #################
 
 .. vale on
 
 Contact tracking
-****************
+*****************
