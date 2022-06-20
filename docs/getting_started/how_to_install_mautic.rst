@@ -8,7 +8,7 @@ There are several ways to install Mautic, you should select the most appropriate
 - :ref:`Installing with Composer`
 
 Using the production package
-******************************
+****************************
 
 You can install the Mautic production package either by uploading the zipped installation package into the server location or using command line installations. The Mautic production package also requires access to a database server.
 
