@@ -17,13 +17,13 @@ Using UTM tags in Mautic
 
 To use UTM tags with Google Analytics where they appear in your Google Analytics Dashboard, you must install your Google Analytics tracking code on the resource you are linking to. This synchronizes with your Google Analytics Dashboard and records the UTM tags.
 
-If you use a Mautic landing page, you must go to Settings > Configuration > Tracking Settings, and add your Google Analytics ID.
+If you use a Mautic Landing Page, you must go to Settings > Configuration > Tracking Settings, and add your Google Analytics ID.
 
   .. image:: images/utm_tags/add_ga_code.png
     :width: 400
     :alt: Screenshot showing the option to add Google Analytics code
 
-If you use a non-Mautic Landing Page, you must manually embed the Google Analytics tracking script on the third-party Page.
+If you use a non-Mautic Landing Page, you must manually embed the Google Analytics tracking script on the third-party Landing Page.
 
 Mautic Users can automatically append UTM tags to all links in an Email or Focus Item. For other Channels, you can make the link trackable by including UTM values in the URL address. When a Contact clicks a link in an Email or Focus Item, Mautic records UTM tags and stores them in the Contact record. You can find the details on the Contact Event History overview. After recording the UTM tags, you can use them as filters in Segments.
 

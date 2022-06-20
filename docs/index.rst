@@ -169,6 +169,7 @@ Check out the :doc:`/getting_started/how_to_install_mautic` section for further 
    :hidden:
 
    points/points
+   points/points_troubleshooting
 
 .. toctree::
    :maxdepth: 2
@@ -184,6 +185,13 @@ Check out the :doc:`/getting_started/how_to_install_mautic` section for further 
    :hidden:
 
    reports/reports
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Search
+   :hidden:
+
+   search/search
 
 .. toctree::
    :maxdepth: 2
@@ -217,44 +225,3 @@ Check out the :doc:`/getting_started/how_to_install_mautic` section for further 
 
    users_roles/managing_users
    users_roles/managing_roles
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Use case
-   :hidden:
-
-   use_cases/community
-   use_cases/ecommerce
-   use_cases/education
-   use_cases/political
-   use_cases/sales_marketing
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Gated video
-   :hidden:
-
-   gated_video/gated_video
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Tips & Tricks
-   :hidden:
-
-   tips_tricks/tips_tricks
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Features by major release
-   :hidden:
-
-   features/features
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Mautic 3 upgrade
-   :hidden:
-
-   upgrade/getting_started
-   upgrade/upgrade_steps
-   upgrade/upgrade_errors

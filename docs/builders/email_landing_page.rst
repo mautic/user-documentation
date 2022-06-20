@@ -3,20 +3,21 @@
 Email & Landing Page Builder
 ############################
 
-
-Since :xref:`Mautic 3`, Mautic has shipped with an updated, modern builder for creating Emails and landing pages. 
-In :xref:`Mautic 4` it's the default builder.
-
 .. vale on
+
+Since :xref:`Mautic 3`, Mautic has shipped with an updated, modern Builder for creating Emails and Landing Pages.
+In :xref:`Mautic 4` it's the default Builder.
+
+
 
 
 .. attention:: 
-    To use your existing templates with the new builder, you need to add one line to your configuration file. Read on for further details.
+    To use your existing templates with the new Builder, you need to add one line to your configuration file. Read on for further details.
 
 .. vale off
 
 About GrapesJS
-***************
+**************
 
 .. vale on
 
@@ -27,7 +28,7 @@ GrapesJS is an open source, multi-purpose, Web Builder Framework which combines 
 .. vale off
 
 Available end-user features
-****************************
+***************************
 
 Drag & drop built-in blocks
 ===========================
@@ -37,12 +38,12 @@ Drag & drop built-in blocks
 GrapesJS comes with a set of built-in blocks, in this way you're able to build your templates faster. If the default set isn't enough you can always add your own custom blocks.
 
 Limitless styling
-==================
+=================
 
 GrapesJS implements a simple and powerful Style Manager module which enables independent styling of any Component inside the canvas. It's also possible to configure it to use any of the CSS properties.
 
 Responsive design
-==================
+=================
 
 GrapesJS gives you all the necessary tools you need to optimize your templates to look awesomely on any device. In this way you're able to provide various viewing experiences. In case you require more device options, you can easily add them to the editor.
 
@@ -62,25 +63,25 @@ Asset manager
 With the Asset Manager is easier to organize your media files and it's enough to double click the image to change it.
 
 About the builder
-******************
+*****************
 
 Enabling the builder
 ====================
 
-Since Mautic 3.3-RC1 the builder is available to enable in the Plugins section of Mautic. Go to the Settings by clicking the cog wheel at the top right > Plugins > GrapesJS and click the GrapesJS icon. Change the slider to Yes.
+Since Mautic 3.3-RC1 the Builder is available to enable in the Plugins section of Mautic. Go to the Settings by clicking the cog wheel at the top right > Plugins > GrapesJS and click the GrapesJS icon. Change the slider to Yes.
 
-Now you need to **clear your Mautic** cache located in var/cache and refresh the Landing Page before you can work with the new GrapesJS builder. Some browsers may also require you to clear the browser cache.
+Now you need to **clear your Mautic cache** located in ``var/cache`` and refresh the Landing Page before you can work with the new GrapesJS Builder. Some browsers may also require you to clear the browser cache.
 
-By default, Mautic 4 activates the new builder. Follow the previous steps to revert to the legacy builder, remembering to clear the cache and reload the Landing Page.
+By default, Mautic 4 activates the new Builder. Follow the previous steps to revert to the legacy Builder, remembering to clear the cache and reload the Landing Page.
 
 Email builder overview
-***********************
+**********************
 
 .. image:: images/editoroverview.png
   :width: 800
   :alt: Screenshot of the editor overview
 
-The functions of the Email builder are as follows:
+The functions of the Email Builder are as follows:
 
 #. You can select different screen size to preview your Emails.
 
@@ -95,7 +96,7 @@ The functions of the Email builder are as follows:
 Templates
 *********
 
-To use your existing templates with the new builder, you need to add one line to your configuration file in the template folder:
+To use your existing templates with the new Builder, you need to add one line to your configuration file in the template folder:
 
 ``"builder": ["grapesjsbuilder"],``
 
@@ -105,7 +106,7 @@ If you wish to use the Theme in multiple builders, you can use this syntax:
 
 .. warning:: 
 
-  This syntax changed between Mautic 3.3.* and Mautic 4 to enable support for multiple builders - if you have been testing in the beta phase you need to update your configuration files to avoid a 500 error.
+  This syntax changed between Mautic 3.3.* and Mautic 4 to enable support for multiple Builders - if you have been testing in the beta phase you need to update your configuration files to avoid a 500 error.
 
 The blank Theme contains an example of a full configuration file:
 
@@ -124,7 +125,7 @@ From the 3.3 General Availability release there are be three Email templates tha
 Themes
 *******
 
-If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new builder.
+If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new Builder.
 
 To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`. 
 
@@ -149,7 +150,7 @@ In case you aren't happy with the Plugin at the moment, you can easily switch ba
 
 #. Clear the cache and reload the Landing Page - you may also need to clear your browser cache.
 
-After unloading GrapesJs Plugin, the legacy builder becomes active again.
+After unloading GrapesJs Plugin, the legacy Builder becomes active again.
 
 Thanks and credits
 ******************

@@ -8,7 +8,7 @@ There are several ways to install Mautic, you should select the most appropriate
 - :ref:`Installing with Composer`
 
 Using the production package
-******************************
+****************************
 
 You can install the Mautic production package either by uploading the zipped installation package into the server location or using command line installations. The Mautic production package also requires access to a database server.
 
@@ -40,7 +40,7 @@ Downloading a production package
 
 To get started :xref:`Download Mautic` to access the zip file of the latest stable release. 
 
-For more information about the available Mautic packages, visit the Mautic Releases :xref:`Mautic Releases` page.
+For more information about the available Mautic packages, visit the Mautic Releases :xref:`Mautic Releases` Landing Page.
 
 Uploading the production package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -251,6 +251,7 @@ Todo
 
 Installing with Composer
 ************************
+
 Since :xref:`Mautic 4` it's possible to install and manage Mautic using the full power of Composer. Mautic uses the latest version of :xref:`Composer`.
 
 Mautic is in the process of decoupling Plugins and Themes from core, however at present while they have been technically mirrored out into separate repositories, the source files remain in the main :xref:`Mautic GitHub repository`.
