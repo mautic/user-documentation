@@ -5,11 +5,12 @@ Email & Landing Page Builder
 
 .. vale on
 
-Since :xref:`Mautic 3`, Mautic has shipped with an updated, modern builder for creating Emails and landing pages. 
-In :xref:`Mautic 4` it's the default builder.
+Since :xref:`Mautic 3`, Mautic has shipped with an updated, modern Builder for creating Emails and Landing Pages.
+In :xref:`Mautic 4` it's the default Builder.
+
 
 .. attention:: 
-    To use your existing templates with the new builder, you need to add one line to your configuration file. Read on for further details.
+    To use your existing templates with the new Builder, you need to add one line to your configuration file. Read on for further details.
 
 .. vale off
 
@@ -22,11 +23,15 @@ About GrapesJS
 
 GrapesJS is an open source, multi-purpose, Web Builder Framework which combines different tools and features with the goal to help build HTML templates without any knowledge of coding.
 
+.. vale off
+
 Available end-user features
 ***************************
 
 Drag & drop built-in blocks
 ===========================
+
+.. vale on
 
 GrapesJS comes with a set of built-in blocks, in this way you're able to build your templates faster. If the default set isn't enough you can always add your own custom blocks.
 
@@ -61,17 +66,11 @@ About the builder
 Enabling the builder
 ====================
 
-Since Mautic 3.3-RC1 the builder is available to use in the Plugins section of Mautic. 
+Since Mautic 3.3-RC1 the Builder is available to enable in the Plugins section of Mautic. Go to the Settings by clicking the cog wheel at the top right > Plugins > GrapesJS and click the GrapesJS icon. Change the slider to Yes.
 
-#. Go to the Settings by clicking the cog wheel at the top right > Plugins > GrapesJS and click the GrapesJS icon. 
+Now you need to **clear your Mautic cache** located in ``var/cache`` and refresh the Landing Page before you can work with the new GrapesJS Builder. Some browsers may also require you to clear the browser cache.
 
-#. Change the slider to Yes.
-
-#. **Clear your Mautic** cache located in var/cache and refresh the Landing Page before you can work with the new GrapesJS builder. 
-
-Some browsers may also require you to clear the browser cache.
-
-By default, Mautic 4 activates the new builder. Follow the previous steps to revert to the legacy builder, remembering to clear the cache and reload the Landing Page.
+By default, Mautic 4 activates the new Builder. Follow the previous steps to revert to the legacy Builder, remembering to clear the cache and reload the Landing Page.
 
 Email builder overview
 **********************
@@ -80,7 +79,7 @@ Email builder overview
   :width: 800
   :alt: Screenshot of the editor overview
 
-The functions of the Email builder are as follows:
+The functions of the Email Builder are as follows:
 
 #. You can select different screen size to preview your Emails.
 
@@ -88,14 +87,14 @@ The functions of the Email builder are as follows:
 
 #. Editor functions from left to right: display grids, Full screen view, export MJML / HTML code, Edit code, display customization options, display blocks, close editor.
 
-#. Layout sections: these objects function as the basic structure of your design. Create your Email structure from sections, and pull in the different blocks you want to use.
+#. Layout sections. These objects function as the basic structure of your design. Create your Email structure from sections, and pull in the different blocks you want to use.
 
-#. Content blocks: you can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
+#. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
 Templates
 *********
 
-To use your existing templates with the new builder, you need to add one line to your configuration file in the template folder:
+To use your existing templates with the new Builder, you need to add one line to your configuration file in the template folder:
 
 ``"builder": ["grapesjsbuilder"],``
 
@@ -105,9 +104,9 @@ If you wish to use the Theme in multiple builders, you can use this syntax:
 
 .. warning:: 
 
-  This syntax changed between Mautic 3.3.* and Mautic 4 to enable support for multiple builders - if you have been testing in the beta phase you need to update your configuration files to avoid a 500 error.
+  This syntax changed between Mautic 3.3.* and Mautic 4 to enable support for multiple Builders - if you have been testing in the beta phase you need to update your configuration files to avoid a 500 error.
 
-The Blank Theme contains an example of a full configuration file:
+The blank Theme contains an example of a full configuration file:
 
 .. code-block:: 
 
@@ -124,17 +123,17 @@ From the 3.3 General Availability release there are be three Email templates tha
 Themes
 *******
 
-If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new builder.
+If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new Builder.
 
 To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`. 
 
 Reporting bugs
-**************
+***************
 
 Known bugs / issues
 ===================
 
-Please use the issue queue on the :xref:`GitHub repository` to find the latest updates and to raise bugs with the Plugin. Be sure to search first in case someone has already reported the bug.
+Please use the issue queue on the :xref:`GitHub repository` to find the latest updates and Report bugs with the Plugin. Be sure to search first in case someone has already reported the bug.
 
 Switching back to the legacy Builder
 ************************************
@@ -149,13 +148,15 @@ In case you aren't happy with the Plugin at the moment, you can easily switch ba
 
 #. Clear the cache and reload the Landing Page - you may also need to clear your browser cache.
 
-After unloading GrapesJs Plugin, the legacy builder becomes active again.
+After unloading GrapesJs Plugin, the legacy Builder becomes active again.
 
 Thanks and credits
 ******************
 
-Thank you to everyone who contributed to this project. Special thanks to Adrian Schimpf from :xref:`Aivie` for all their hard work in leading the project, to :xref:`Webmecanik` for initializing this amazing new builder and to Joey from :xref:`Friendly Automate` for donating three Email Themes to the Community. Additional contributions from Alex Hammerschmied from :xref:`hartmut.io`, Dennis Ameling.
+.. vale off
+
+Thank you to everyone who contributed to this project. Special thanks to Adrian Schimpf from :xref:`Aivie` for all their hard work in leading the project, to :xref:`Webmecanik` for initializing this amazing new builder and to Joey from :xref:`Friendly Automate` for donating three Email Themes to the Community. Additional contributions: Alex Hammerschmied from :xref:`hartmut.io`, Dennis Ameling.
+
+.. vale on
 
 And of course a really big thank you to all the contributors who have helped to bring this project to this point.
-
-

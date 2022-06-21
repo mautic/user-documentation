@@ -1,6 +1,6 @@
 .. vale off
 
-Creating Themes
+Import Contacts
 ###############
 
 .. vale on

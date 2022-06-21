@@ -1,6 +1,6 @@
 .. vale off
 
-Creating Themes
+Frequency rules
 ###############
 
 .. vale on
