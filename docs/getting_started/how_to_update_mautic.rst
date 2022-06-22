@@ -115,7 +115,7 @@ If you need help, you can ask for it in several places. You should remember that
 
 - The :xref:`Mautic Community Forums` is the place where you can ask questions about your configuration if you think it is the cause of the problem. Please search before posting your question, since someone may have already answered it.
 
-- The live :xref:`Mautic Community Slack` is also available, but all support requests have to be posted on the forums. POST there first, then drop a link in Slack if you plan to discuss it there.
+- The live :xref:`Mautic Community Slack` is also available, but all support requests have to be posted on the forums. Create your request there first, then drop a link in Slack if you plan to discuss it there.
 
 In all cases, it is important to provide details about the issue, as well as the steps you have taken to resolve it. At a minimum, include the following:
 
