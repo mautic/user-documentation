@@ -440,7 +440,7 @@ Creating conditional Form fields
 
 Mautic allows you to create conditional fields within Forms. This allows you to manage a set of dependencies between fields, so that the fields display only with certain conditions.
 
-To create conditional fields, you must first create any :doc:`/configuration/custom_fields` and use these fields within a Form.
+To create conditional fields, you must first create any :doc:`/contacts/custom_fields` and use these fields within a Form.
 
 .. vale off
 

@@ -1,4 +1,3 @@
-
 .. vale off
 
 How to switch to Composer
