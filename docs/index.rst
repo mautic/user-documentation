@@ -14,7 +14,7 @@ There are different types of documentation available to help you navigate your w
 
 :xref:`Knowledge Base` - Provides a database of tutorials, FAQs, and how-to articles.
 
-Contributing Guide - Learn how you can get involved and contribute to the development and success of Mautic's documentation.
+:xref:`Contributing Guide` - Describes how to get involved and contribute to Mautic's documentation development.
 
 .. note::
 
