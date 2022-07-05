@@ -1,20 +1,20 @@
 Welcome to the Mautic documentation
 ===================================
 
-**Mautic** is an open source marketing automation platform that provides you with the greatest level of audience intelligence, thus enabling you to make more meaningful customer connections
+**Mautic** is an open source marketing automation platform that provides you with the greatest level of audience intelligence, thus enabling you to make more meaningful customer connections.
 
 To get started with Mautic, follow the :doc:`Getting started guide</getting_started/how_to_install_mautic>`.
 For next steps, you can learn :doc:`how to update Mautic</getting_started/how_to_update_mautic>`.
 
 There are different types of documentation available to help you navigate your way through Mautic.
 
-:xref:`User Guide` - Describes key concepts of Mautic and provides instructions for using and contributing to Mautic.
+:xref:`End User Documentation` - Describes each aspect of Mautic in detail and explains how to use it..
 
-:xref:`Developer Guide` - Describes details about the Mautic API, Webhooks, Themes and Plugin development.
+:xref:`Developer Documentation` - Describes details about the Mautic API, Webhooks, Themes and Plugin development.
 
-:xref:`Knowledge Base` - Provides a database of tutorials, FAQs, and how-to articles.
+:xref:`Knowledgebase` - Provides a database of tutorials, FAQs, and how-to articles.
 
-:xref:`Contributing Guide` - Describes how to get involved and contribute to Mautic's documentation development.
+:xref:`Community Handbook` - Describes how to get involved and contribute to Mautic's documentation development.
 
 .. note::
 
