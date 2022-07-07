@@ -1,5 +1,5 @@
 Installation
-##############
+############
 
 There are several ways to install Mautic, you should select the most appropriate method for your situation and technical knowledge.
 
@@ -93,7 +93,7 @@ For setting the database server on the **Mautic Installation-Database Setup** wi
 Click **Next Step**.
 
 Creating the administrator account
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To create an Administrator account for your Mautic instance, enter values for the different fields on the **Mautic Installation - Administrative User** window. 
 
@@ -247,7 +247,32 @@ You can now login to your Mautic instance with your Mautic Admin credentials.
 
 Installing from GitHub
 **********************
-Todo
+
+It's essential to have all the files locally - including automated tests - from the GitHub repository when testing Mautic or contributing to it. Many of these files aren't included in the production build process.
+
+In order to make the process easier, you should install the :xref:`GitHub CLI`.
+
+Create a personal fork
+======================
+
+As a first step to working with Mautic, it's necessary to create your own fork of Mautic.
+This is a duplicate of Mautic codebase where you can create working areas - known as branches - 
+and then make a Pull Request to have your changes merged into the main Mautic repository.
+
+Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork.
+
+You can also click to go directly to your fork if you already have one or create one if you don't.
+
+.. note:: 
+  Please always choose to fork into a **personal account** rather than an organization. The latter prevents Mautic's maintainers from working with your Pull Request.
+
+Clone the Mautic repository from your personal fork 
+===================================================
+After the fork is complete, click the green **Code** button to access the command for cloning the repository.
+
+.. code-block:: shell
+  
+  gh repo clone username/mautic
 
 Installing with Composer
 ************************
