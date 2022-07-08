@@ -252,29 +252,43 @@ Installing from GitHub
 
 It's essential to have all the files locally - including automated tests - from the GitHub repository when testing Mautic or contributing to it. Many of these files aren't included in the production build process.
 
-In order to make the process easier, you should install the :xref:`GitHub CLI`.
+Cloning Mautic from GitHub
+==========================
 
-Create a personal fork
-======================
+1. Install :xref:`GitHub CLI` tool.
 
-As a first step to working with Mautic, it's necessary to create your own fork of Mautic.
-This is a duplicate of Mautic codebase where you can create working areas - known as branches - 
-and then make a Pull Request to have your changes merged into the main Mautic repository.
+2. Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork. You can also click to go directly to your fork if you already have one or create one if you don't.
 
-Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork.
+3. After the fork is complete, click the green **Code** button to access the command for cloning the repository.
 
-You can also click to go directly to your fork if you already have one or create one if you don't.
-
-.. note:: 
-  Please always choose to fork into a **personal account** rather than an organization. The latter prevents Mautic's maintainers from working with your Pull Request.
-
-Clone the Mautic repository from your personal fork 
-===================================================
-After the fork is complete, click the green **Code** button to access the command for cloning the repository.
+4. Switch to your terminal, and when in the directory where you wish to install Mautic, paste the command using the :xref:`GitHub CLI` tool this is in the format:
 
 .. code-block:: shell
   
   gh repo clone username/mautic
+
+.. note:: 
+
+  Please always choose to fork into a **personal account** rather than an organization. The latter prevents Mautic's maintainers from working with your Pull Request.
+
+Install Mautic using DDEV
+==========================
+
+You can use :xref:`DDEV` recommended for testing and development with Mautic. To get started:
+
+#.  Install :xref:`DDEV`.
+
+#.  Install and ensure you have :xref:`Docker` running on your system.
+
+#.  You can now change into the Mautic directory and kick off the DDEV quickstart using the command:
+   
+.. code-block:: shell
+  
+    ddev start
+
+.. note:: 
+
+  For troubleshooting ``ddev start``, paste ``ddev config global --nfs-mount-enabled=false && ddev config --nfs-mount-enabled=false`` and try again.
 
 Installing with Composer
 ************************
