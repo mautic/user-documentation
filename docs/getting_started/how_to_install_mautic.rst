@@ -1,14 +1,14 @@
-How to install Mautic
-#####################
+Installation
+##############
 
 There are several ways to install Mautic, you should select the most appropriate method for your situation and technical knowledge.
 
-- :ref:`Installing from the production package`, either :ref:`using the web-based installer` or :ref:`installing at the command line<Installing with command line>`,
+- :ref:`Using the production package`, either :ref:`using the web-based installer` or :ref:`installing at the command line<Installing with command line>`,
 - Installing locally by :ref:`cloning from GitHub<Installing from GitHub>` - for testing and local development,
 - :ref:`Installing with Composer`
 
-Installing from the production package
-**************************************
+Using the production package
+****************************
 
 You can install the Mautic production package either by uploading the zipped installation package into the server location or using command line installations. The Mautic production package also requires access to a database server.
 
@@ -40,14 +40,14 @@ Downloading a production package
 
 To get started :xref:`Download Mautic` to access the zip file of the latest stable release. 
 
-For more information about the available Mautic packages, visit the Mautic Releases :xref:`Mautic Releases` page.
+For more information about the available Mautic packages, visit the Mautic Releases :xref:`Mautic Releases` Landing Page.
 
 Uploading the production package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After downloading a desired package, upload the package zip file to your web server, and unzip it in the directory where you plan to host the Mautic instance.
 
-Your web server must have the permissions to access the unzipped files. For more information on file and folder permissions, visit :doc:`/troubleshooting/file_ownership_and_permissions`.
+Your web server must have the permissions to access the unzipped files.
 
 Using the web-based installer
 =============================
@@ -247,10 +247,11 @@ You can now login to your Mautic instance with your Mautic Admin credentials.
 
 Installing from GitHub
 **********************
-TODO
+Todo
 
 Installing with Composer
 ************************
+
 Since :xref:`Mautic 4` it's possible to install and manage Mautic using the full power of Composer. Mautic uses the latest version of :xref:`Composer`.
 
 Mautic is in the process of decoupling Plugins and Themes from core, however at present while they have been technically mirrored out into separate repositories, the source files remain in the main :xref:`Mautic GitHub repository`.
@@ -353,7 +354,11 @@ The :xref:`Mautic Composer scaffold` Plugin can download the scaffold files - fo
 
 If you haven't customized those files you could choose to not commit them in your version control system - for example, git. If that's the case for your project it might be convenient to automatically run the Mautic Scaffold Plugin after every install or update of your project.
 
+.. vale off
+
 You can achieve that by registering ``@composer mautic:scaffold`` as post-install and post-update command in your composer.json:
+
+.. vale on
 
 .. code-block:: json
 
@@ -393,7 +398,7 @@ How can you specify a PHP version?
 
 .. vale on
 
-This project supports PHP 7.4 as the minimum version currently - check :xref:`Mautic's Requirements` however, it's possible that a Composer update may upgrade some package that could then require PHP 7+ or 8+.
+This project supports PHP 7.4 as the minimum version currently - review :xref:`Mautic's Requirements` however, it's possible that a Composer update may upgrade some package that could then require PHP 7+ or 8+.
 
 To prevent this you can add this code to specify the PHP version you want to use in the config section of ``composer.json``:
 
@@ -405,6 +410,41 @@ To prevent this you can add this code to specify the PHP version you want to use
           "php": "7.4"
       }
   },
+
+
+How can you use another folder than ``docroot`` as the root folder?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default the ``composer.json`` file places all Mautic core, Plugin and Theme files in the ``docroot`` folder.
+It's possible to change this folder to your own needs.
+
+In following examples, ``docroot`` moves into ``public``.
+
+New installations
+-----------------
+
+* Run the create-project command without installing:
+
+.. code-block:: bash
+  
+  composer create-project mautic/recommended-project:^4 some-dir --no-interaction --no-install
+
+* Do a find and replace in the ``composer.json`` file to change ``docroot/`` into ``public/``
+* Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements
+* Run ``composer install`` to install all dependencies in the correct location
+
+Existing installations
+----------------------
+
+* Move the ``docroot/`` to ``public/``
+
+.. code-block:: bash
+
+  mv docroot public
+
+* Do a find and replace in the ``composer.json`` file to change ``docroot/`` to ``public/``
+* Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements
+* Run ``composer update --lock`` to ensure the autoloader is aware of the changed folder
 
 .. vale off
 

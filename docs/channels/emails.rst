@@ -39,7 +39,7 @@ Segment Emails are marketing Emails by default. On creation the marketer assigns
 
 This entry field is a multi-select which allows you to choose several Segments if necessary.
 
-Mautic initiates the sending of these Emails with a :doc:`/set_up/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
+Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
 Email formats
 *************
@@ -83,7 +83,7 @@ Tokens
 
 Mautic allows the use of tokens in Emails which gives the marketer the possibility to integrate a number of Contact fields in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
 
-Check the :doc:`/set_up/variables` documentation for a list of all the available default fields.
+Check the :doc:`/configuration/variables` documentation for a list of all the available default fields.
 
 Default value
 ~~~~~~~~~~~~~
@@ -235,7 +235,7 @@ Mautic delivers Emails using the method defined by the system administrator. If 
 - :xref:`Sendmail`
 - :xref:`Amazon SES`.
 
-The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </set_up/cron_jobs>`.
+The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`.
 
 Immediate delivery
 ******************
@@ -245,13 +245,13 @@ This is the default means of delivery. As soon as an action in Mautic triggers a
 Queued delivery
 ***************
 
-Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </set_up/cron_jobs>` at the desired interval to run the command:
+Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:
 
 .. code-block:: shell
     
     php /path/to/mautic/bin/console mautic:email:process
 
-Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </set_up/cron_jobs>` for more specifics.
+Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
 
 .. vale off
 
