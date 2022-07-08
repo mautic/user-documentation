@@ -290,6 +290,9 @@ You can use :xref:`DDEV` recommended for testing and development with Mautic. To
 
   For troubleshooting ``ddev start``, paste ``ddev config global --nfs-mount-enabled=false && ddev config --nfs-mount-enabled=false`` and try again.
 
+This spins up a DDEV instance - by default at https://mautic.ddev.site - and also gives the option to set up Mautic ready for you to use. 
+This runs through the Composer install process, and installs Mautic at the command line with a default username of ``admin`` and password of ``mautic``.
+
 Installing with Composer
 ************************
 
