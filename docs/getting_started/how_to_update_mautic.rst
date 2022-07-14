@@ -13,10 +13,11 @@ There are two ways to update Mautic:
 If your instance is in production, has a large number of Contacts and/or is  on shared hosting, it's **strongly** recommended that you update at the command line.
 
 .. warning::
-    Updating in the User interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. This can lead to failed updates and corrupted data. This feature will be completely removed in Mautic 5.0 and you will have to update at the command line.
+    Updating in the User interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. A failed update or corrupted data can result from this. This feature would be completely removed in Mautic 5.0 and you have to update at the command line.
 
 Updating at the command line (non-Composer based installations)
 ***************************************************************
+
 Before you commence updating Mautic, **please ensure that you have a tested backup of your Mautic instance**. 
 
 This means that you have downloaded the files and database of your Mautic instance, and you have re-created it in a test environment somewhere and tested that everything is working as expected. This is your only recourse if there are any problems with the update. Never update without having a working, up-to-date backup.
@@ -29,13 +30,14 @@ Mautic can only be updated using Composer via the command line from version 5.0.
 The update feature within the Mautic User interface (UI) has been deprecated from Mautic 4.2, but you will be alerted within the UI (see below figure) when a new version of the Mautic is available. 
 
 .. image:: images/gui-update-deprecated.png
-  :width: 400
+  :width: 700
+  :height: 200
   :alt: Screenshot showing deprecated update feature warning
 
 .. warning::
-    Before starting to upgrade, it is highly recommended to take a backup of your instance. If updates are available, you will receive an update notification followed by step-by-step instructions in the CLI to complete the process.
+    Before starting to upgrade, it's highly recommended to take a backup of your instance. If updates are available, you will receive an update notification followed by step-by-step instructions in the command-line interface to complete the process.
 
-Log in via the command line, and change directory to the Mautic directory using the command
+Log in via the command line, and change directory to the Mautic directory using the command:
 
 ``cd /your/mautic/directory``
 
@@ -57,7 +59,7 @@ If there are updates available, run the following command to apply them:
 
 ``php bin/console mautic:update:apply``
 
-Once this is completed, you may be asked to run the command again with the additional argument:
+This may be followed by a prompt to run the command again with this additional argument:
 
 ``php bin/console mautic:update:apply --finish``
 
@@ -117,7 +119,7 @@ If you need help, you can ask for it in several places. You should remember that
 
 - The live :xref:`Mautic Community Slack` is also available, but all support requests have to be posted on the forums. Create your request there first, then drop a link in Slack if you plan to discuss it there.
 
-In all cases, it is important to provide details about the issue, as well as the steps you have taken to resolve it. At a minimum, include the following:
+In all cases, it's important to provide details about the issue, as well as the steps you have taken to resolve it. At a minimum, include the following:
 
 - Steps to reproduce your problem - a step-by-step walk-through of what you have done so far
 - Your server's PHP version.
