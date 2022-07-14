@@ -3,14 +3,16 @@ Installation
 
 There are several ways to install Mautic, you should select the most appropriate method for your situation and technical knowledge.
 
-- :ref:`Using the production package`, either :ref:`using the web-based installer` or :ref:`installing at the command line<Installing with command line>`,
+- Installing :ref:`using the production package<Using the production package>`, with either the :ref:`web-based installer<using the web-based installer>` or :ref:`from the command line<Installing with command line>`.
+
 - Installing locally by :ref:`cloning from GitHub<Installing from GitHub>` - for testing and local development,
+
 - :ref:`Installing with Composer`
 
 Using the production package
 ****************************
 
-You can install the Mautic production package either by uploading the zipped installation package into the server location or using command line installations. The Mautic production package also requires access to a database server.
+You can install the Mautic production package either by uploading the zipped installation package into the server location or using the command-line installation. The Mautic production package also requires access to a database server.
 
 The Mautic installation is a three-step process:
 
@@ -40,7 +42,7 @@ Downloading a production package
 
 To get started :xref:`Download Mautic` to access the zip file of the latest stable release. 
 
-For more information about the available Mautic packages, visit the Mautic Releases :xref:`Mautic Releases` Landing Page.
+For more information about the available Mautic packages, visit the :xref:`Mautic Releases` Landing Page.
 
 Uploading the production package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
