@@ -35,7 +35,7 @@ A Segment Text Message can be manually sent to Contact lists - Segments - in Mau
 
 Note that these are marketing Text Messages by default, and each Contact can only receive the Text Message once - it's the same principle as a mailing list.
 
-You must initiate the send of Segment Text Messages with the ``Send Scheduled Broadcast`` cron job. See :doc:`cron jobs documentation </set_up/cron_jobs>` for more information.
+You must initiate the send of Segment Text Messages with the ``Send Scheduled Broadcast`` cron job. See :doc:`cron jobs documentation </configuration/cron_jobs>` for more information.
 
 .. vale off
 
