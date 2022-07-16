@@ -190,7 +190,7 @@ Check out the :doc:`/getting_started/how_to_install_mautic` section for further 
    :caption: Search
    :hidden:
 
-   search/search
+   search/search_operators
 
 .. toctree::
    :maxdepth: 2
