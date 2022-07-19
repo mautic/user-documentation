@@ -314,8 +314,8 @@ Elastic Email, SparkPost, Mandrill, Mailjet, SendGrid and Amazon SES support Web
 
 .. vale off
 
-Monitored Inbox Settings
-************************
+Monitored inbox configuration
+*****************************
 
 .. vale on
 
