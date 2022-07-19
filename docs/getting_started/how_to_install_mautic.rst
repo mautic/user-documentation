@@ -255,7 +255,7 @@ It's essential to have all the files locally - including automated tests - from 
 Cloning Mautic from GitHub
 ==========================
 
-1. Install :xref:`GitHub CLI` tool.
+1. Install the :xref:`GitHub CLI` tool.
 
 2. Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork. You can also click to go directly to your fork if you already have one or create one if you don't.
 
@@ -274,7 +274,8 @@ Cloning Mautic from GitHub
 Install Mautic using DDEV
 ==========================
 
-You can use :xref:`DDEV` recommended for testing and development with Mautic. To get started:
+You can use :xref:`DDEV` which is recommended for testing and development with Mautic. To get started:
+
 
 #.  Install :xref:`DDEV`.
 
@@ -290,7 +291,10 @@ You can use :xref:`DDEV` recommended for testing and development with Mautic. To
 
   For troubleshooting ``ddev start``, paste ``ddev config global --nfs-mount-enabled=false && ddev config --nfs-mount-enabled=false`` and try again.
 
+  See Mautic's :xref:`Handbook` for more detailed instructions.
+
 This spins up a DDEV instance - by default at https://mautic.ddev.site - and also gives the option to set up Mautic ready for you to use. 
+
 This runs through the Composer install process, and installs Mautic at the command line with a default username of ``admin`` and password of ``mautic``.
 
 Installing with Composer
