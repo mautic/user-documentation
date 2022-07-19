@@ -13,7 +13,7 @@ There are two ways to update Mautic:
 If your instance is in production, has a large number of Contacts and/or is  on shared hosting, it's **strongly** recommended that you update at the command line.
 
 .. warning::
-    Updating in the User interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. A failed update or corrupted data can result from this. This feature would be completely removed in Mautic 5.0 and you have to update at the command line.
+    Updating in the User interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. A failed update or corrupted data can result from this. It's planned to remove this feature in Mautic 5.0, requiring updating at the command line.
 
 Updating at the command line (non-Composer based installations)
 ***************************************************************
@@ -39,29 +39,40 @@ The update feature within the Mautic User interface (UI) has been deprecated fro
 
 Log in via the command line, and change directory to the Mautic directory using the command:
 
-``cd /your/mautic/directory``
+.. code-block:: shell
+
+    cd /your/mautic/directory
+
+    
 
 The first step is to find out if there are any updates available using the following command:
 
-``php bin/console mautic:update:find``
+.. code-block:: shell
+
+   php bin/console mautic:update:find
 
 The output from this command tells you if there are any updates to apply. The notification links to an announcement post which explains what the release includes, and the recommended environment requirements if they are not being met (for example, a higher version of PHP must be installed or plugins that must be updated).
 
 .. note::
     It's a good idea to review the announcement link for information about the release. There may be important information or steps that you may need to take before updating.
 
-1. After a system readiness check, you can apply the updates.
+After a system readiness check, you can apply the updates.
 
 Installing updates at the command line
 ======================================
 
 If there are updates available, run the following command to apply them:
 
-``php bin/console mautic:update:apply``
+.. code-block:: shell
 
-This may be followed by a prompt to run the command again with this additional argument:
+   php bin/console mautic:update:apply
 
-``php bin/console mautic:update:apply --finish``
+
+This is followed by a prompt to run the command again with this additional argument:
+
+.. code-block:: shell
+
+   php bin/console mautic:update:apply --finish
 
 
 Updating in the browser
@@ -70,6 +81,7 @@ Updating in the browser
 When updating Mautic, there are several tasks which can take a long time to complete depending on the size of your Mautic instance.
 
 .. warning::
+    
     If you have a lot of contacts and/or use shared hosting, you might run into problems when updating with the notification 'bell' icon in Mautic. 
 
 When updating within the browser, problems usually manifest as the update hanging part way through, or crashing with an error. They often arise as a result of resource limitation, particularly on shared hosting environments. 
