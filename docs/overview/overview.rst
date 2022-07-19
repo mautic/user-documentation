@@ -37,7 +37,7 @@ Components
 
 Create and manage various types of content that you use for your marketing campaigns to engage your Contacts.
 
-- :doc:`/components/assets` - Valuable items that you provide to your Contacts upon completion of a Form. White papers, a downloadable app/file, documents or videos are some examples of assets.
+- :doc:`/components/assets` - Valuable items that you provide to your Contacts upon completion of a Form. White papers, a downloadable app/file, documents or videos are some examples of Assets.
 
 - :doc:`/components/forms` - Forms are the primary point of customer engagement. They're used to collect contact information, often in exchange for providing access to an Asset such as a download, an event registration, or an Email newsletter.
 
