@@ -8,9 +8,9 @@ How to switch to Composer
 Until Mautic 4, you could download Mautic as a ZIP file and install it on any PHP server. 
 However, many Users were running into installation and update errors, many of which caused considerable frustration and in some cases, significant business disruption. 
 
-Next to that, Mautic recently introduced the :ref:`Mautic Marketplace` which isn't compatible with this installation method.
+n addition, Mautic recently introduced the :ref:`Mautic Marketplace` which isn't compatible with this installation method.
 
-As a result of the reasons mentioned above, Composer becomes the default method for installing and updating Mautic starting with the release of Mautic 5. Read more in :xref:`composer blog post`.
+As a result of the reasons mentioned above, Composer becomes the default method for installing and updating Mautic starting with the release of Mautic 5. Read more in the :xref:`composer blog post`.
 
 Switching to a Composer-based installation
 ******************************************
@@ -68,7 +68,7 @@ A: Yes, switching to the Composer-based installation only affects app files. It 
 
 Q: What's the minimum Mautic version required to switch to the Composer-based installation?
 
-A: It is necessary to have at least Mautic 4.0.0 in order to switch to a composer-based installation.
+A: It is necessary to have at least Mautic 4.0.0 in order to switch to a Composer-based installation.
 
 .. vale on
 
