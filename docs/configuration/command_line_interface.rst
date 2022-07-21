@@ -66,7 +66,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
 
 .. code-block:: shell
 
-  bin/console mautic:social:monitoring
+  bin/console mautic:segments:update
 
 .. vale off
 
@@ -79,7 +79,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - mautic:assets:generate
      - Combines and minifies Asset files from each bundle into single production files
    * - mautic:broadcasts:send
-     - Process Contacts pending to receive a channel broadcast.
+     - Process Contacts pending to receive a Channel broadcast.
    * - mautic:campaigns:execute
      - Execute specific scheduled events.
    * - mautic:campaigns:messagequeue
@@ -96,8 +96,12 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - Validate if a Contact has been inactive for a decision and execute events if so.
    * - mautic:citrix:sync
      - Synchronizes registrant information from Citrix products
+   * - mautic:cache:clear
+     - Clears the cache 
    * - mautic:contacts:deduplicate
      - Merge contacts based on same unique identifiers
+   * - mautic:custom-field:create-column
+     - Creates the actual column in the table
    * - mautic:email:fetch	
      - Fetch and process monitored Email.
    * - mautic:emails:send
@@ -105,31 +109,33 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - mautic:import
      - Imports data to Mautic
    * - mautic:integration:fetchleads
-     - Fetch leads from Integration.
+     - Fetch Contacts from Integration.
    * - mautic:integration:pipedrive:fetch
      - Pulls the data from Pipedrive and sends it to Mautic
    * - mautic:integration:pipedrive:push
      - 	Pushes the data from Mautic to Pipedrive
    * - mautic:integration:pushactivity
-     - Push lead activity to Integration.
+     - Push Contact activity to Integration.
    * - mautic:integration:pushleadactivity
-     - Push lead activity to Integration. 
+     - Push Contact activity to Integration. 
    * - mautic:integration:synccontacts
-     - Fetch leads from Integration.
+     - Fetch Contacts from Integration.
+   * - mautic:install:data
+     - Installs data
    * - mautic:iplookup:download
      - Fetch remote datastores for IP lookup services that leverage local lookups.
    * - mautic:maintenance:cleanup
-     - Updates the Mautic app.
+     - Cleans up older data.
    * - mautic:messages:send
      - Process sending of messages queue.
    * - mautic:migrations:generate
      - Generate a blank migration class.
    * - mautic:plugins:install
-     - Installs, updates, enable and/or turn-off Plugins.
+     - Installs Plugins.
    * - mautic:plugins:reload
-     - Installs, updates, enable and/or turn-off Plugins.
+     - Reloads Plugins.
    * - mautic:plugins:update
-     - Installs, updates, enable and/or turn-off Plugins.
+     - Updates Plugins.
    * - mautic:queue:process
      - Process queues
    * - mautic:reports:scheduler
@@ -140,8 +146,6 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - Update Contacts in smart Segments based on new Contact data.
    * - mautic:segments:update
      - Update Contacts in smart Segments based on new Contact data.
-   * - mautic:social:monitoring
-     - Looks at the records of monitors and iterates through them.
    * - mautic:theme:json-config
      - Converts Theme config to JSON from PHP
    * - mautic:unusedip:delete
