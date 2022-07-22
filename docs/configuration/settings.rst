@@ -65,7 +65,7 @@ Cross-Origin Resource Sharing (CORS) enables data to pass between your website a
 
 * **Restrict Domains** - When set to No, any web page can pass information to Mautic. Select Yes to limit communication with your Mautic instance to websites listed in Valid Domains.
 
-* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to enable, one per line. For example: ``https://www.mautic.com`` tracks any activity on Mautic.com pages, but ``https://www.mautic.com`` won’t because acquia.com is a secure website.
+* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to enable, one per line. For example: ``https://www.mautic.com`` tracks any activity on Mautic.com pages, but ``https://www.mautic.com`` won’t because Mautic.com is a secure website.
 
 .. note:: 
 
@@ -74,14 +74,57 @@ Cross-Origin Resource Sharing (CORS) enables data to pass between your website a
 Miscellaneous settings
 ======================
 
+.. image:: images/miscellaneous-settings.png
+  :width: 600
+  :alt: Screenshot showing Miscellaneous Settings Configuration in Mautic
+
+* **Trusted hosts** - To explicitly whitelist the hosts allowed to send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?trusted.com$`` If left empty, Mautic will respond to all hosts.
+
+* **Trusted proxies** - To configure the IP addresses that should be trusted as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
+
+* **IP lookup service** - By default, Mautic uses MaxMind GeoLite2 City to identify the city of a website visitor, based on the location of the Internet Service Provider (ISP) for their IP address.
+
+* **IP lookup service authentication** - To use another available IP lookup service, enter your credentials.
+
+* **List of IPs not to track Contacts with** - To turn-off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn’t recommend adding your office IP address. If you list your internal IP address, Mautic won’t track clicks, page hits, etc., from that IP, including testing clicks.
+
+* **List of Bots to not track with** - Mautic has identified and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn-off tracking for other bots, add them here (one per line).
+
+* **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here. For bit.ly, use:
+
+.. note:: 
+
+    https://api-ss..bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl
+
+* **Item max lock time** - When a User edits a Campaign, Email, Landing Page, etc., Mautic locks the item to prevent simultaneous edits by other Users. When the initial User saves and closes or cancels out, the item may remain locked for this period of time. The default is ``0 seconds``.
+
+* **Translate page titles** - To translate page titles from non-Latin (non-English) characters to Latin characters (English).
+
+
 Update settings
 ===============
+
+.. image:: images/update-settings.png
+  :width: 600
+  :alt: Screenshot showing Update Settings Configuration in Mautic
+
+* **Default Theme** - Applies a Theme to any Form which doesn’t have a Theme already applied. If you don’t have a Landing Page for your preference center, but have preference settings turned on in Email settings, Mautic creates a default preference center page using the Form styling from the Theme selected here.
+
 
 Theme settings
 **************
 
+.. image:: images/update-settings.png
+  :width: 600
+  :alt: Screenshot showing Update Settings Configuration in Mautic
+
+
 API settings
 ************
+
+.. image:: images/update-settings.png
+  :width: 600
+  :alt: Screenshot showing Update Settings Configuration in Mautic
 
 Asset settings
 **************
