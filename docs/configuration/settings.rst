@@ -108,8 +108,9 @@ Update settings
   :width: 600
   :alt: Screenshot showing Update Settings Configuration in Mautic
 
-* **Default Theme** - Applies a Theme to any Form which doesn’t have a Theme already applied. If you don’t have a Landing Page for your preference center, but have preference settings turned on in Email settings, Mautic creates a default preference center page using the Form styling from the Theme selected here.
+* **Set the minimum stability level required for updates** - This allows you to receive notifications for early access releases. Always read the release notes before updating to an early access release. Set the minimum stability level required for updates. 
 
+* **Update Mautic through Composer [BETA]**  - Set to 'Yes' if you update Mautic through Composer. This is a prerequisite if you want to install and update Plugins through the Marketplace. This will be the default installation and update method in Mautic 5.
 
 Theme settings
 **************
@@ -118,6 +119,7 @@ Theme settings
   :width: 600
   :alt: Screenshot showing Update Settings Configuration in Mautic
 
+* **Default Theme** - Applies a Theme to any Form which doesn’t have a Theme already applied. If you don’t have a Landing Page for your preference center, but have preference settings turned on in Email settings, Mautic creates a default preference center page using the Form styling from the Theme selected here.
 
 API settings
 ************
