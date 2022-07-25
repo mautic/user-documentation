@@ -5,7 +5,7 @@ Mautic Configuration Settings
 
 .. vale on
 
-Proper configuration is important for branding, performance, and the user experience for your team as they do their jobs. 
+Proper configuration is important for branding, performance, and the User experience for your team as they do their jobs. 
 These settings are generally permanent after initial configuration.
 
 
@@ -21,11 +21,9 @@ General settings
 
 * **Site URL** - This is where Mautic is physically installed. Set the URL for this site here. Cronjobs needs this to correctly determine absolute URLs when generating links for Emails, etc. It 's also called Mautic base URL
 
-* **Mautic’s root URL** - When a User signs in to their Mautic instance, they go to ``customdomain.domain.com (the root URL)``. 
-However, that Landing Page is also accessible to the public. If a Contact visits that address, they see the Mautic login page for that instance. 
+* **Mautic’s root URL** - When a User signs in to their Mautic instance, they go to ``customdomain.domain.com (the root URL)``. However, that Landing Page is also accessible to the public. If a Contact visits that address, they see the Mautic login page for that instance. 
 
-To brand that page, create a Mautic landing page that you’d want to greet any Contacts who visit your root URL. 
-Once you’ve done that, Users can sign in into Mautic by visiting `customdomain.domain.com/s/login <customdomain.domain.com/s/login>`_ .
+To brand that page, create a Mautic landing page that you’d want to greet any Contacts who visit your root URL. Once you’ve done that, Users can sign in into Mautic by visiting `customdomain.domain.com/s/login <customdomain.domain.com/s/login>`_ .
 
 * **404 page** - Select the Landing Page that you want to use as the 404 page. If you don’t want to use Mautic’s default 404 error page, create a custom Landing Page and select that page here. If you don’t select any page, Mautic uses the default error page.
 
@@ -110,29 +108,61 @@ Update settings
 
 * **Set the minimum stability level required for updates** - This allows you to receive notifications for early access releases. Always read the release notes before updating to an early access release. Set the minimum stability level required for updates. 
 
-* **Update Mautic through Composer [BETA]**  - Set to 'Yes' if you update Mautic through Composer. This is a prerequisite if you want to install and update Plugins through the Marketplace. This will be the default installation and update method in Mautic 5.
+* **Update Mautic through Composer [BETA]**  - Set to 'Yes' if you update Mautic through Composer. This is a prerequisite if you want to install and update Plugins through the Marketplace. This becomes the default installation and update method in Mautic 5.
 
 Theme settings
 **************
 
-.. image:: images/update-settings.png
+.. image:: images/theme-settings.png
   :width: 600
-  :alt: Screenshot showing Update Settings Configuration in Mautic
+  :alt: Screenshot showing Theme Settings Configuration in Mautic
 
 * **Default Theme** - Applies a Theme to any Form which doesn’t have a Theme already applied. If you don’t have a Landing Page for your preference center, but have preference settings turned on in Email settings, Mautic creates a default preference center page using the Form styling from the Theme selected here.
 
 API settings
 ************
 
-.. image:: images/update-settings.png
+.. image:: images/api-settings.png
   :width: 600
-  :alt: Screenshot showing Update Settings Configuration in Mautic
+  :alt: Screenshot showing API Settings Configuration in Mautic
+
+Full API documentation is available here.
+
+* **API enabled** - Select Yes to pass data in and out of Mautic through the API.
+
+* **Enable http basic auth?** - Enables basic authentication for Mautic’s API. Mautic recommends only using with secure sites (http).
+
+* **Access token lifetime** - When authorizing a new application or Integration, limits how long the access token is valid (in minutes). The default is ``60`` minutes.
+
+For example - You add a new Integration to your SaaS platform. Enter 30 here to limit the access token validity to ``30`` minutes. If you haven’t completed the authentication in that period of time, you must revalidate.
+
+* **Refresh token lifetime** - When using OAuth 2.0, the lifetime of the refresh token used to request a new access token once expired. Once the refresh token expires, you must reauthorize. The default is ``14`` days.
 
 Asset settings
 **************
 
+.. image:: images/assets-settings.png
+  :width: 600
+  :alt: Screenshot showing Assets Settings Configuration in Mautic
+
+* **Path to the Asset directory** - Set the absolute path to where Assets is uploaded. In order to prevent the public from accessing Assets, use a directory outside of the public web root.
+
+* **Maximum size (MB)** - Set the maximum size of uploaded Assets in MB (Megabytes).
+
+* **Allowed file extensions** - Extensions of files separated by commas. You can only upload files with the specified file extensions.
+
 Campaign settings
 *****************
+
+.. image:: images/campaign-settings.png
+  :width: 600
+  :alt: Screenshot showing Campaign Settings Configuration in Mautic
+
+* **Wait time before retrying a failed action** - If for any reason a Campaign action doesn't execute, this is the length of time Mautic waits before trying again.
+
+* **Use date range for all views** - When viewing a Campaign, the actions, conditions, decisions, and Contacts tabs is based on the date range provided.
+
+* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data.
 
 Email settings
 **************
@@ -140,20 +170,100 @@ Email settings
 Mail send settings
 ==================
 
+.. image:: images/mail-send-settings.png
+  :width: 600
+  :alt: Screenshot showing Mail Send Settings Configuration in Mautic
+
+* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany}`` Marketing Team or ``{YourCompany}``.
+
+* **Email address to send mail from** - The Email address for the name you’re sending mail from. The address displays in the From: field when your Contacts receive your Emails.
+
+.. note::
+
+   Ensure that you configure your sender domain, DKIM, bounce, and click tracking domains. For more information, see Email domains document.
+
+* **Mailer is owner** - If Contacts in Mautic have owners, switching this setting to on makes it appear as though that owner is sending all Emails to the Contacts they’re listed as the owner for.
+
+* **Reply to address** -  To have Contacts reply to a different address than the address defined in Email address to send mail from, add the desired address to receive replies. This is the default address where messages are sent whenever Contacts reply to messages sent from Mautic. If this field is blank, the address specified in **Email address to send mail** from is used. This is useful if your configured sender domain, which you use in the from address, contains a subdomain that doesn't have MX records or is otherwise an address that can't receive Emails.
+
+* **Custom return path (bounce) address** - Set a custom return path/bounce Email for Emails sent from the system. Note that some mail transports, such as GMail, won'the support this.
+
+* **Mailer is owner** - If Contacts in Mautic have ``Owners``, select Yes to display the owner as sending all Emails to the Contacts they’re listed as the owner for. 
+
+.. note:: 
+
+    Mailer is owner overrides any other name or Email to send mail from, including the default and individual Emails. Every Contact owner’s domain must have SPF and DKIM records. You can see this configuration for individual Emails, rather than globally.
+
+* **Service to send mail through** - For most Mautic customers, this should remain as ``Mautic``. Your Emails route through the Mautic's Sparkpost account. If you are sending through your own Email service, select the service and enter your credentials.
+
 Default frequency rule
 ======================
+
+* **Do not contact more than <number> each <period>** - This limits the number of marketing messages a Contact receives in a certain period of time (day, week, month). Transactional messages don’t count towards this limit. You can adjust this at the individual Contact level, either manually or by preference center setting. 
 
 Monitored inbox settings
 ========================
 
+.. image:: images/monitored-settings.png
+  :width: 600
+  :alt: Screenshot showing Monitored Settings Configuration in Mautic
+
+* **Default Mailbox** - If Email addresses your messages are going to bounce, this inbox is where you receive those bounce notifications.
+
+* **Bounces** - A folder to monitor for new bounce messages or Emails.
+
+* **Unsubscribe Requests** - A folder to monitor for new unsubscribe requests. 
+
+* **Contact Replies** - Similar to the monitored inbox for bounces, this is the inbox Mautic checks for Contact replies. Using "Replies to Email" decisions in any Campaign requires configuration. With ``Use custom connection settings?`` set to ``no``, Mautic checks the default mailbox. If set to ``yes``, you may track a different mailbox for replies.
+
 Message settings
 ================
 
+.. image:: images/message-settings.png
+  :width: 600
+  :alt: Screenshot showing Message Settings Configuration in Mautic
+
+* **Text for the {webview_text} token** - The message indicating the reader can view the Email in their browser. The default is; Having trouble reading this Email? Click here.
+To change the text, change the message between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the ``|URL|`` text, because that is a token for each Contact.
+
+* **Default Email signature** - The signature for your default Emails, which pairs with the name & Email address in the **Mail Send** settings.
+
+* **Append tracking pixel into Email body?** - To track Email opens, select **Yes**. Select **No** to prevent tracking, reporting on, and using decisions based on Email opens.
+
+* **Convert embed images to Base64** - Select **Yes** to display embedded images in Emails as code rather than as images.
+
+* **Disable trackable URLs** - Removes tracking from URLs in your Emails. Select Yes to prevent tracking, reporting on, and using decisions based on link clicks. Some Email service providers don’t like redirecting URLs. Using trackable URLs in your Emails may impact deliverability.
+  
 Unsubscribe settings
 ====================
 
+.. image:: images/unsubscribe-settings.png
+  :width: 600
+  :alt: Screenshot showing Unsubscribe Settings Configuration in Mautic
+
+* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token, customize the **Unsubscribe** link. For example:
+
+Edit between the ``<a href="|URL|">`` and ``</a>`` tags. Don’t change the URL as it's tokenized. If you add ``{unsubscribe_url}`` as a token in the Email, you won’t see this text.
+
+* **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. Don’t edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
+
+* **Show Contact preference settings** - Select **Yes** to direct the unsubscribe link to your configured preference center. If you haven’t created a preference center, Mautic creates a default page based on the next 5 settings. The created page uses the default Theme for styling.
+
+* **Show Contact Segment preferences** - Select **Yes** to enable a Contact to change which Segments they’re part of on the preference center page. Segments won’t display on the preference center page if they aren’t published and public.
+
+* **Show Contact frequency preferences** - Select **Yes** to enable an individual to limit the number of marketing messages they receive on each Channel from the preference center.
+
+* **Show pause Contact preferences** - Select **Yes** to enable Contacts to turn-off messages from your Mautic account to their Email address for a specified date range. This action isn’t a full unsubscribe, and at the end of the date range, the message is sent to that address once again.
+
+* **Show Contact’s Categories** - If you have Categories set for Contacts, Campaigns, Emails, etc., select Yes to enable the Contact to opt out of the Categories they choose from the preference center page.
+
+* **Show Contact’s preferred Channel option** - If you have multiple Channels available within your Mautic account (Email, SMS, mobile push, web notifications, etc.), Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available here.
+
+
 Form settings
 *************
+
+* **Do not accept submission from these domain names** - To block Contacts with specific Email domains from submitting your Forms, enter those domains in the dialog box. Select an option on each Form you want to apply this block to. You can restrict either specific Email aliases that belong to a domain or an entire domain. To block the entire domain, you can use wildcards (*).
 
 Contact settings
 ****************
@@ -170,8 +280,12 @@ Import settings
 Segment settings
 ****************
 
+* **Show warning if Segment hasn’t been rebuilt for X hours** - For all Contacts, dynamic Segments get rebuilt nightly. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, post which the warning message appears.
+
 Company settings
 ****************
+
+* **Merge by unique fields with operator** - If you use more than one unique fields identifiers then you can define the way of the find to merge it. 
 
 Notification settings
 *********************
@@ -182,8 +296,19 @@ Campaign notification settings
 Webhook notification settings
 =============================
 
+If a Campaign or Webhook is automatically unpublished because of a high volume of errors, Mautic sends a notification alerting Users.
+
+* **Send notification to author** - Set this field to Yes to send an Email notification to the User who created the unpublished Campaign or Webhook. If the User is deleted, no notification is sent.
+
+* **Email addresses to receive notifications** - To send notifications to Users other than the author, enter a comma-separated list of Email addresses. You can include distribution lists and addresses of the Users who are not present in the Mautic instance.
+
+
 Landing page settings
 *********************
+
+* **Show Category in page URL?** - If you use Categories, the landing page’s associated Category displays in the URL if you select Yes.
+
+* **Analytics script** - To track landing page visits and activity in other platforms such as Google Analytics, add those tracking scripts here.
 
 Tracking settings
 *****************
@@ -191,17 +316,55 @@ Tracking settings
 Mautic tracking settings
 ========================
 
+* **Tracking code** - Insert this code on any page you would like to have tracked in Mautic before the ending </body> tag.
+
+.. note:: 
+
+    The default tracking code provided in a new instance updates and changes after you set up a new custom domain or when you make changes to an existing one. You must use the new tracking code that reflects the new or edited custom domain. If you are using the plugin for WordPress, Drupal, or Joomla, re-enter your account information in the plugin.
+
+* **Identify visitor by tracking URL** - Select **Yes** to have Mautic begin tracking a Contact after the Contact clicks a link in an Email on a device where no cookie exists.
+
+* **Anonymize IP** - Select **Yes** to not store full IP addresses for your visitors/Contacts. This setting aids customers in achieving GDPR compliance.
+
+* **Identify visitors by IP** - Select **Yes** to enable, unidentified visitors with the same IP address as an existing Contact will be tracked as that Contact.
+
+* **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent bots tracking.
+
+.. note:: 
+
+  * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
+  * Pages including 4-byte UTF-8 characters, such as emojis and some Chinese or other non-Latin characters, in the page title or URL aren't tracked on a Contact’s activity history in Mautic. All Latin characters used in English and other western languages are of 1-byte and are tracked. The Mautic team checks logs and alerts Users if they are attempting to track pages with unsupported characters.
+
 Facebook pixel
 ==============
+
+* **Facebook Pixel ID** - Enter your Facebook Pixel ID and select the options you’d like to use the pixel for.
+
+* **Enabled on your tracking page** - Select Yes to have Mautic append the Facebook Pixel to the Mautic tracking code to track pages where the tracking code exists.
+
+* **Enabled on Mautic landing page** - Select Yes to have Mautic add the Facebook Pixel to Mautic landing pages.
+
 
 Google Analytics
 ================
 
+* **Google Analytics ID** - Enter your Google Analytics ID and select the options you’d like to use the pixel for.
+
+* **Enabled on your tracking page** - Select Yes to have Mautic append the Google Analytics script to the Mautic tracking code to track pages where the tracking code exists.
+
+* **Enabled on Mautic landing page** - Select Yes to have Mautic add the Google Analytics script to Mautic landing pages.
+
+* **Enabled IP Anonymization** - For subscribers sensitive to GDPR or other data privacy laws and regulations, select Yes to anonymize the IP address of web visitors before sending it to Google Analytics.* 
+
 Report settings
 ***************
 
+* **Always quote data in CSV export** - Select Yes to wrap each Mautic field in double quotation marks when exported to a CSV file. For example: ``"First Name",”Last Name”,””, "some text"``.
+
 Text message settings
 *********************
+
+* **Select default transport to use** - If you have configured a delivery service for SMS messages, select the service here to send messages. You must configure a delivery service before selecting it here.
 
 User/Authentication settings
 ****************************
@@ -209,8 +372,33 @@ User/Authentication settings
 SAML/SSO settings
 =================
 
+.. image:: images/SMAL-settings.png
+  :width: 600
+  :alt: Screenshot showing SAML/SSO Settings Configuration in Mautic
+
+* **Identity provider metadata file** - Upload the metadata XML file from your IDentity Provider (IDP) here.
+
+* **Default Role for created Users** - With User Roles created in the Roles section of the settings panel, you may select one of those Roles as the default for Users created using SSO. If empty, Mautic Users won’t be created using SSO. See Users and Roles.
+
+Enter the names of the attributes the configured IDP uses for the Mautic User fields. Match the field name from your identity provider to the field name Mautic uses for User creation.
+
+* **Email**
+* **First name**
+* **Last name**
+* **Username**
+
+Use a custom X.509 certificate and private key to secure communication between Mautic and the IDP. Upload your:
+
+* **X.509 certificate**
+* **Private key file**
+* Enter your **Private key encryption password**
+
 Webhook settings
 ****************
 
+* **Order of the queued events** - If several events are queued in a Webhook, process the events in chronological or reverse chronological order.
+
 Social settings
 ***************
+
+* **Twitter Handle Field** - This field stores the Twitter username for Users added to Mautic through Social Monitoring.
