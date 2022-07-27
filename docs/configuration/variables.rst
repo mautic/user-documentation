@@ -11,7 +11,7 @@ Variables
 Contact fields
 **************
 
-See managing custom fields for more information.
+See :doc:`managing custom fields </contacts/custom_fields>` for more information.
 
 .. list-table:: 
    :widths: 100 100
@@ -98,7 +98,7 @@ Contact Owner fields
 Company Contact fields
 ***********************
 
-See Companies for more information.
+See :doc:`Companies</companies/companies_overview>` for more information.
 
 .. list-table:: 
    :widths: 100 100
@@ -140,8 +140,8 @@ See Companies for more information.
 Mautic Component tokens
 ***********************
 
-See Components and Manage Pages for more information.
-  
+See :doc:`Components</components/assets>` and :doc:`Manage Pages</components/landing_pages>` for more information.
+
 .. list-table:: 
    :widths: 100 100
    :header-rows: 1
@@ -149,7 +149,7 @@ See Components and Manage Pages for more information.
 
    * - Variable name
      - Variable syntax
-   * - Asset link for asset id#
+   * - Asset link for Asset id#
      - ``{assetlink=25}``
    * - Focus Item id#
      - ``{focus=4}``
@@ -161,7 +161,7 @@ See Components and Manage Pages for more information.
 Email specific tokens
 *********************
 
-See :ref:`Manage Emails<Managing Emails>` for more information.
+See :doc:`Manage Emails</channels/emails>` for more information.
 
 .. list-table:: 
    :widths: 100 100
@@ -209,7 +209,7 @@ See :doc:`/components/landing_pages` for more information.
 Preference Center Landing Page tokens
 *************************************
 
-See :ref:`customizing preference center<Customizing the preference center>` for more information.
+See :doc:`customizing preference center</contacts/preference_center>` for more information.
 
 .. list-table:: 
    :widths: 100 100
