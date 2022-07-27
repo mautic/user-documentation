@@ -201,7 +201,7 @@ There are different types of documentation available to help you navigate your w
    :caption: Search
    :hidden:
 
-   search/search
+   search/search_operators
 
 .. toctree::
    :maxdepth: 2
