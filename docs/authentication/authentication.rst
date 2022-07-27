@@ -1,7 +1,7 @@
 Authentication
 ##############
 
-Mautic uses basic authentication for Users, however there is the ability to integrate with a SAML SSO - Single Sign-On - provider.
+Mautic uses basic authentication for users, however there is the ability to integrate with a SAML SSO - Single Sign-On - provider.
 
 .. vale off
 
@@ -16,9 +16,11 @@ Turning on SAML
 ===============
 To turn on SAML support in Mautic, you first need the IDP's metadata XML which they provide. If it's a URL, browse to the URL then save the content into an XML file.
 
-Go to Configuration -> User/Authentication Settings. Then upload this file as the Identity Provider Metadata file.
+1. Go to **Configuration** > **User/Authentication** Settings. 
 
-It's recommended to create a non-Admin Role as the default Role for created Users. Select this Role in the 'Default Role for created Users' dropdown.
+2. Upload this file as the Identity Provider Metadata file.
+
+3. It's recommended to create a non-Admin Role as the default Role for created Users. Select this Role in the '**Default Role for created Users**' dropdown.
 
 Configuring the IDP
 ===================
@@ -32,9 +34,9 @@ The IDP may ask for the following settings:
 
 #. Issuer - this should come from the IDP but is often configurable. If it's a URL, be sure that the scheme - ``http://`` and ``https://`` - aren't part of it.
 
-#. Verify request signatures or a SSL certificate - If the IDP supports encrypting and validating request signatures from Mautic to the IDP, generate a self signed SSL certificate. Upload the certificate and private key through Mautic's Configuration -> User/Authentication Settings under the 'Use a custom X.509 certificate and private key to secure communication between Mautic and the IDP' section. Then upload the certificate to the IDP.
+#. Verify request signatures or a SSL certificate - If the IDP supports encrypting and validating request signatures from Mautic to the IDP, generate a self signed SSL certificate. Upload the certificate and private key through Mautic's Configuration > User/Authentication Settings under the 'Use a custom X.509 certificate and private key to secure communication between Mautic and the IDP' section. Then upload the certificate to the IDP.
 
-#. Custom attributes - Mautic requires three custom attributes in the IDP responses for the User Email, first name and last name. Username is also supported but is optional. Configure the attribute names used by the IDP in Mautic's Configuration -> User/Authentication Settings under the 'Enter the names of the attributes the configured IDP uses for the following Mautic User fields' section.
+#. Custom attributes - Mautic requires three custom attributes in the IDP responses for the User Email, first name and last name. Username is also supported but is optional. Configure the attribute names used by the IDP in Mautic's Configuration > User/Authentication Settings under the 'Enter the names of the attributes the configured IDP uses for the following Mautic User fields' section.
 
 Logging in
 ==========
