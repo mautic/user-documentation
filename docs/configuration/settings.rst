@@ -182,8 +182,6 @@ Mail send settings
 
    Ensure that you configure your sender domain, DKIM, bounce, and click tracking domains. For more information, see Email domains document.
 
-* **Mailer is owner** - If Contacts in Mautic have owners, switching this setting to on makes it appear as though that owner is sending all Emails to the Contacts they’re listed as the owner for.
-
 * **Reply to address** -  To have Contacts reply to a different address than the address defined in Email address to send mail from, add the desired address to receive replies. This is the default address where messages are sent whenever Contacts reply to messages sent from Mautic. If this field is blank, the address specified in **Email address to send mail** from is used. This is useful if your configured sender domain, which you use in the from address, contains a subdomain that doesn't have MX records or is otherwise an address that can't receive Emails.
 
 * **Custom return path (bounce) address** - Set a custom return path/bounce Email for Emails sent from the system. Note that some mail transports, such as GMail, won'the support this.
@@ -193,13 +191,16 @@ Mail send settings
 .. note:: 
 
     Mailer is owner overrides any other name or Email to send mail from, including the default and individual Emails. Every Contact owner’s domain must have SPF and DKIM records. You can see this configuration for individual Emails, rather than globally.
+    For more information see :doc:`Mailer is owner</channels/emails>`
 
-* **Service to send mail through** - For most Mautic customers, this should remain as ``Mautic``. Your Emails route through the Mautic's Sparkpost account. If you are sending through your own Email service, select the service and enter your credentials.
-
+* **Service to send mail through** - For most Mautic customers, this should remain as ``Mautic``. Your Emails route through the Mautic's Sparkpost account. If you are sending through your own Email service, select the service and enter your credentials. 
+  
 Default frequency rule
 ======================
 
 * **Do not contact more than <number> each <period>** - This limits the number of marketing messages a Contact receives in a certain period of time (day, week, month). Transactional messages don’t count towards this limit. You can adjust this at the individual Contact level, either manually or by preference center setting. 
+
+*More information is available in :doc:`Default Frequency Rule document</contacts/frequency_rules>`.*
 
 Monitored inbox settings
 ========================
@@ -223,7 +224,9 @@ Message settings
   :width: 600
   :alt: Screenshot showing Message Settings Configuration in Mautic
 
-* **Text for the {webview_text} token** - The message indicating the reader can view the Email in their browser. The default is; Having trouble reading this Email? Click here.
+* **Text for the {webview_text} token** - The message indicating the reader can view the Email in their browser. The default is; 
+
+Having trouble reading this Email? Click here.
 To change the text, change the message between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the ``|URL|`` text, because that is a token for each Contact.
 
 * **Default Email signature** - The signature for your default Emails, which pairs with the name & Email address in the **Mail Send** settings.
@@ -257,11 +260,15 @@ Edit between the ``<a href="|URL|">`` and ``</a>`` tags. Don’t change the URL 
 
 * **Show Contact’s Categories** - If you have Categories set for Contacts, Campaigns, Emails, etc., select Yes to enable the Contact to opt out of the Categories they choose from the preference center page.
 
-* **Show Contact’s preferred Channel option** - If you have multiple Channels available within your Mautic account (Email, SMS, mobile push, web notifications, etc.), Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available here.
+* **Show Contact’s preferred Channel option** - If you have multiple Channels available within your Mautic account (Email, SMS, mobile push, web notifications, etc.), Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
 
 Form settings
 *************
+
+.. image:: images/form-settings.png
+  :width: 600
+  :alt: Screenshot showing Form Settings Configuration in Mautic
 
 * **Do not accept submission from these domain names** - To block Contacts with specific Email domains from submitting your Forms, enter those domains in the dialog box. Select an option on each Form you want to apply this block to. You can restrict either specific Email aliases that belong to a domain or an entire domain. To block the entire domain, you can use wildcards (*).
 
@@ -271,30 +278,58 @@ Contact settings
 Contact merge settings
 ======================
 
+.. image:: images/contact-merge-settings.png
+  :width: 600
+  :alt: Screenshot showing Contact Merge Settings Configuration in Mautic
+
+* **Merge by unique fields with operator** - If you use more than one unique fields identifiers then you can define the way of the find to merge it. 
+
 Contact list settings
 =====================
+
+.. image:: images/contact-list-settings.png
+  :width: 600
+  :alt: Screenshot showing Contact List Settings Configuration in Mautic
+
+* **Columns** -
 
 Import settings
 ===============
 
+.. image:: images/import-settings.png
+  :width: 600
+  :alt: Screenshot showing Import Settings Configuration in Mautic
+
+* **Automatically import in the background if the CSV has more rows than defined** - The browser/background import determines the number of rows in the CSV if this option is greater than 0.
+
 Segment settings
 ****************
+
+.. image:: images/segment-settings.png
+  :width: 600
+  :alt: Screenshot showing Segment Settings Configuration in Mautic
 
 * **Show warning if Segment hasn’t been rebuilt for X hours** - For all Contacts, dynamic Segments get rebuilt nightly. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, post which the warning message appears.
 
 Company settings
 ****************
 
-* **Merge by unique fields with operator** - If you use more than one unique fields identifiers then you can define the way of the find to merge it. 
+.. image:: images/company-merge-settings.png
+  :width: 600
+  :alt: Screenshot showing Company Merge Settings Configuration in Mautic
+
+* **Merge by unique fields with operator** - When you use more than one unique field identifier, you can define how the search merges them.
 
 Notification settings
 *********************
 
-Campaign notification settings
-==============================
+.. image:: images/campaign-notification-settings.png
+  :width: 600
+  :alt: Screenshot showing Campaign Notification Settings Configuration in Mautic
 
-Webhook notification settings
-=============================
+.. image:: images/webhook-notification-settings.png
+  :width: 600
+  :alt: Screenshot showing Webhook Notification Settings Configuration in Mautic
 
 If a Campaign or Webhook is automatically unpublished because of a high volume of errors, Mautic sends a notification alerting Users.
 
@@ -306,6 +341,10 @@ If a Campaign or Webhook is automatically unpublished because of a high volume o
 Landing page settings
 *********************
 
+.. image:: images/landing-page-settings.png
+  :width: 600
+  :alt: Screenshot showing Landing Page Settings Configuration in Mautic
+
 * **Show Category in page URL?** - If you use Categories, the landing page’s associated Category displays in the URL if you select Yes.
 
 * **Analytics script** - To track landing page visits and activity in other platforms such as Google Analytics, add those tracking scripts here.
@@ -315,6 +354,10 @@ Tracking settings
 
 Mautic tracking settings
 ========================
+
+.. image:: images/tracking-settings.png
+  :width: 600
+  :alt: Screenshot showing Tracking Settings Configuration in Mautic
 
 * **Tracking code** - Insert this code on any page you would like to have tracked in Mautic before the ending </body> tag.
 
@@ -338,6 +381,10 @@ Mautic tracking settings
 Facebook pixel
 ==============
 
+.. image:: images/facebook-pixel-settings.png
+  :width: 600
+  :alt: Screenshot showing Facebook Pixel Settings Configuration in Mautic
+
 * **Facebook Pixel ID** - Enter your Facebook Pixel ID and select the options you’d like to use the pixel for.
 
 * **Enabled on your tracking page** - Select Yes to have Mautic append the Facebook Pixel to the Mautic tracking code to track pages where the tracking code exists.
@@ -347,6 +394,10 @@ Facebook pixel
 
 Google Analytics
 ================
+
+.. image:: images/google-analytics-settings.png
+  :width: 600
+  :alt: Screenshot showing Google Analytics Settings Configuration in Mautic
 
 * **Google Analytics ID** - Enter your Google Analytics ID and select the options you’d like to use the pixel for.
 
@@ -359,10 +410,18 @@ Google Analytics
 Report settings
 ***************
 
+.. image:: images/report-settings.png
+  :width: 600
+  :alt: Screenshot showing Report Settings Configuration in Mautic
+
 * **Always quote data in CSV export** - Select Yes to wrap each Mautic field in double quotation marks when exported to a CSV file. For example: ``"First Name",”Last Name”,””, "some text"``.
 
 Text message settings
 *********************
+
+.. image:: images/text-message-settings.png
+  :width: 600
+  :alt: Screenshot showing Text Message Settings Configuration in Mautic
 
 * **Select default transport to use** - If you have configured a delivery service for SMS messages, select the service here to send messages. You must configure a delivery service before selecting it here.
 
@@ -396,9 +455,19 @@ Use a custom X.509 certificate and private key to secure communication between M
 Webhook settings
 ****************
 
+.. image:: images/webhook-settings.png
+  :width: 600
+  :alt: Screenshot showing Webhook Settings Configuration in Mautic
+
+* **Queue Mode** - Select how to process Webhook events. Process immediately executes the Webhook event. Queue mode only adds the event the queue and it must be processed by a cron command.
+
 * **Order of the queued events** - If several events are queued in a Webhook, process the events in chronological or reverse chronological order.
 
 Social settings
 ***************
+
+.. image:: images/social-settings.png
+  :width: 600
+  :alt: Screenshot showing Social Settings Configuration in Mautic
 
 * **Twitter Handle Field** - This field stores the Twitter username for Users added to Mautic through Social Monitoring.
