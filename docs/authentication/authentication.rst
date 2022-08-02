@@ -1,7 +1,7 @@
 Authentication
 ##############
 
-Mautic uses basic authentication for users, however there is the ability to integrate with a SAML SSO - Single Sign-On - provider.
+Mautic uses basic authentication for Users, however there is the ability to integrate with a SAML SSO - Single Sign-On - provider.
 
 .. vale off
 
@@ -16,11 +16,21 @@ Turning on SAML
 ===============
 To turn on SAML support in Mautic, you first need the IDP's metadata XML which they provide. If it's a URL, browse to the URL then save the content into an XML file.
 
-1. Go to **Configuration** > **User/Authentication** Settings. 
+1. Click the settings wheel in the top right corner to open the **Settings** menu.
 
-2. Upload this file as the Identity Provider Metadata file.
+2. Navigate to **Configuration** > **User/Authentication** Settings. 
 
-3. It's recommended to create a non-Admin Role as the default Role for created Users. Select this Role in the '**Default Role for created Users**' dropdown.
+.. image:: images/turn-on-saml.png
+  :width: 800
+  :alt: Screenshot of SAML SSO Settings
+
+3. Upload this file as the Identity Provider Metadata file.
+
+4. It's recommended to create a non-Admin Role as the default Role for created Users. Select this Role in the '**Default Role for created Users**' dropdown. For more information, see :doc:`Users and Roles</users_roles/managing_users>`.
+
+.. image:: images/roles-permissions.png
+  :width: 800
+  :alt: Screenshot of the User Role Permission
 
 Configuring the IDP
 ===================
@@ -41,7 +51,7 @@ The IDP may ask for the following settings:
 Logging in
 ==========
 
-Once configured with the IDP and the IDP with Mautic, Mautic redirects all logins to the IDP's login. /s/login is still available for direct logins but you have to access it directly.
+Once configured with the IDP and the IDP with Mautic, Mautic redirects all logins to the IDP's login. ``/s/login`` is still available for direct logins but you have to access it directly.
 
 Login to the IDP, which then redirects you back to Mautic. If the exchange is successful Mautic creates a User if it doesn't already exist, and logs the User into the system.
 
