@@ -83,43 +83,43 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - mautic:campaigns:execute
      - Execute specific scheduled events.
    * - mautic:campaigns:messagequeue
-     - Process sending of messages queue.
+     - Process sending of messages queue, you can also use the alias of ``mautic:messages:send``.
    * - mautic:campaigns:messages
-     - Process sending of messages queue.
+     - Process sending of messages queue, you can also use the alias of ``mautic:messages:send``.
    * - mautic:campaigns:rebuild
-     - Rebuild Campaigns based on Contact Segments.
+     - Rebuild Campaigns based on Contact Segments, you can also use the alias of ``mautic:messages:update``.
    * - mautic:campaigns:trigger
      - Trigger timed events for published Campaigns.
    * - mautic:campaigns:update
-     - Rebuild Campaigns based on Contact Segments.
+     - Rebuild Campaigns based on Contact Segments, you can also use the alias of ``mautic:messages:rebuild``.
    * - mautic:campaigns:validate
      - Validate if a Contact has been inactive for a decision and execute events if so.
    * - mautic:citrix:sync
      - Synchronizes registrant information from Citrix products
    * - mautic:cache:clear
-     - Clears the cache 
+     - Clears Mautic cache, by using this command, you will erase the 10-minute Mautic cache, which contains things like segment counts and data for dashboard widgets.
    * - mautic:contacts:deduplicate
-     - Merge contacts based on same unique identifiers
+     - Merge Contacts based on same unique identifiers
    * - mautic:custom-field:create-column
      - Creates the actual column in the table
    * - mautic:email:fetch	
-     - Fetch and process monitored Email.
+     - Fetch and process monitored Email, you can also use the alias of ``mautic:emails:fetch``.
    * - mautic:emails:send
-     - Processes SwiftMail's mail queue
+     - Processes mail queue
    * - mautic:import
-     - Imports data to Mautic
+     - If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
    * - mautic:integration:fetchleads
-     - Fetch Contacts from Integration.
+     - Fetch Contacts from Integration, you can also use the alias of ``mautic:integration:synccontacts``.
    * - mautic:integration:pipedrive:fetch
      - Pulls the data from Pipedrive and sends it to Mautic
    * - mautic:integration:pipedrive:push
      - 	Pushes the data from Mautic to Pipedrive
    * - mautic:integration:pushactivity
-     - Push Contact activity to Integration.
+     - Push Contact activity to Integration, you can also use the alias of ``mautic:integration:pushleadactivity``.
    * - mautic:integration:pushleadactivity
-     - Push Contact activity to Integration. 
+     - Push Contact activity to Integration, you can also use the alias of ``mautic:integration:pushactivity``. 
    * - mautic:integration:synccontacts
-     - Fetch Contacts from Integration.
+     - Fetch Contacts from Integration, you can also use the alias of ``mautic:integration:fetchleads``.
    * - mautic:install:data
      - Installs data
    * - mautic:iplookup:download
@@ -127,25 +127,23 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - mautic:maintenance:cleanup
      - Cleans up older data.
    * - mautic:messages:send
-     - Process sending of messages queue.
-   * - mautic:migrations:generate
+     - Process sending of messages queue, you can also use the alias of ``mautic:campaigns:messagequeue`` and ``mautic:campaigns:messages``.
+   * - doctrine:migrations:generate
      - Generate a blank migration class.
    * - mautic:plugins:install
-     - Installs Plugins.
+     - Installs Plugins, you can also use the alias of ``mautic:plugins:reload``.
    * - mautic:plugins:reload
-     - Reloads Plugins.
+     - Reloads Plugins, you can also use the alias of ``mautic:plugins:install`` or ``mautic:plugins:update``.
    * - mautic:plugins:update
-     - Updates Plugins.
+     - Updates Plugins, you can also use the alias of ``mautic:plugins:reload``.
    * - mautic:queue:process
      - Process queues
    * - mautic:reports:scheduler
      - Processes scheduler for Report's export
-   * - mautic:segments:check-builders
-     - Compare output of query builders for given Segments
    * - mautic:segments:rebuild
-     - Update Contacts in smart Segments based on new Contact data.
+     - Update Contacts in smart Segments based on new Contact data, you can also use the alias of ``mautic:segments:update``.
    * - mautic:segments:update
-     - Update Contacts in smart Segments based on new Contact data.
+     - Update Contacts in smart Segments based on new Contact data, , you can also use the alias of ``mautic:segments:rebuild``.
    * - mautic:theme:json-config
      - Converts Theme config to JSON from PHP
    * - mautic:unusedip:delete
