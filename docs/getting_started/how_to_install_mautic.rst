@@ -257,7 +257,7 @@ Cloning Mautic from GitHub
 
 1. Install the :xref:`GitHub CLI` tool.
 
-2. Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork. You can also click to go directly to your fork if you already have one or create one if you don't.
+2. Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork. You can also click to go directly to your fork if you already have one, if you don't then GitHub will offer to create one..
 
 3. After the fork is complete, click the green **Code** button to access the command for cloning the repository.
 
@@ -289,7 +289,7 @@ You can use :xref:`DDEV` which is recommended for testing and development with M
 
 .. note:: 
 
-  For troubleshooting ``ddev start``, paste ``ddev config global --nfs-mount-enabled=false && ddev config --nfs-mount-enabled=false`` and try again. For steps on DDEV troubleshooting, See :xref:`DDEV Troubleshooting`.
+  For troubleshooting see :xref:`DDEV Troubleshooting`.
 
   See Mautic's :xref:`Handbook` for more detailed instructions.
 
