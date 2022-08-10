@@ -6,17 +6,20 @@ How to switch to Composer
 .. vale on
 
 Until Mautic 4, you could download Mautic as a ZIP file and install it on any PHP server. 
-However, many Users were running into installation and update errors, many of which caused considerable frustration and in some cases, significant business disruption. Next to that, Mautic recently introduced the :ref:`Mautic Marketplace` which isn't compatible with this installation method.
+However, many users were running into installation and update errors, many of which caused considerable frustration and in some cases, significant business disruption. 
 
-For the reasons mentioned previously, from the release of Mautic 5, Composer becomes the default way to install and update Mautic. Read more in :xref:`composer blog post`.
+In addition, Mautic recently introduced the :ref:`Mautic Marketplace` which isn't compatible with this installation method.
 
-How to switch to a Composer-based installation?
-************************************************
+As a result of the reasons mentioned above, Composer becomes the default method for installing and updating Mautic starting with the release of Mautic 5. Read more in the :xref:`composer blog post`.
+
+Switching to a Composer-based installation
+******************************************
 
 Before starting, it's good to understand that there's two aspects to Mautic:
-   * The database. This is where Mautic stores your Contact data.
 
-   * The codebase. This is where Mautic interacts with the database..
+* The database - This is where Mautic stores your Contact data.
+
+* The codebase - This is where Mautic interacts with the database.
 
 When switching to a Composer-based installation, the **database** isn't touched, only the **codebase.**
 
@@ -34,7 +37,7 @@ Here's the steps to follow to switch to a Composer-based installation:
 
    * The entire ``plugins`` directory - move to ``docroot/plugins``.
  
-   * Uploads - in most cases, located at ``app/media/files`` and ``app/media/images`` - move to ``docroot/app/media/files`` and ``docroot/app/media/images`` respectively
+   * Uploads - in most cases, located at ``app/media/files`` and ``app/media/images`` - move to ``docroot/app/media/files`` and ``docroot/app/media/images`` respectively.
 
    * Custom dashboards from ``app/media/dashboards`` - move to ``docroot/app/media/dashboards``
    
@@ -44,15 +47,15 @@ Here's the steps to follow to switch to a Composer-based installation:
 
 #. Rename ``/var/www/html`` to ``/var/www/html-old`` and ``/var/www/html-new`` to ``/var/www/html``
 
-#. When you're done, update your web server configuration to point to ``/var/www/html/docroot`` instead of ``/var/www/html``
+#. Update your web server configuration to point to ``/var/www/html/docroot`` instead of ``/var/www/html``
 
-#. Log into Mautic, and in your global settings, enable the switch to fully manage Mautic with Composer - this will also enable you to work with the Mautic Marketplace.
+#. Log in to Mautic, and in your global settings enable the switch to fully manage Mautic with Composer - this will also enable you to work with the Mautic Marketplace.
 
 .. image:: images/switch-enable-composer.png
   :width: 600
   :alt: Screenshot of switch enable Composer
 
-#. You have now switched to a Composer-based installation. Test if Mautic works as expected.
+You have successfully switched to a Composer-based installation. Test Mautic to see if it works as expected.
 
 .. vale off
 
@@ -61,11 +64,11 @@ Frequently Asked Questions (FAQs)
 
 Q: Is existing data retained?
 
-A: Yes. Switching to the Composer-based installation only affects app files. Nothing happens to your data.
+A: Yes, switching to the Composer-based installation only affects app files. It doesn't affect your data in any way.
 
 Q: What's the minimum Mautic version required to switch to the Composer-based installation?
 
-A: You need at least Mautic 4.0.0 for switching to the Composer-based installation.
+A: It is necessary to have at least Mautic 4.0.0 in order to switch to a Composer-based installation.
 
 .. vale on
 
