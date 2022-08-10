@@ -4,6 +4,5 @@
     "vale.valeCLI.path": "/sphinx-tools/vale/vale",
     "esbonio.sphinx.buildDir": "${workspaceFolder}/build",
     "esbonio.sphinx.confDir": "${workspaceFolder}/docs",
-    "restructuredtext.pythonRecommendation.disabled": true,
-    "restructuredtext.preview.name": "sphinx"
+    "restructuredtext.pythonRecommendation.disabled": true
 }
