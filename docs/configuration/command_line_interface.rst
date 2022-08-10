@@ -77,7 +77,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - Command
      - Description
    * - mautic:assets:generate
-     - Combines and minifies Asset files from each bundle into single production files
+     - Combines and minifies Asset files (CSS/JS) from each bundle into single production files
    * - mautic:broadcasts:send
      - Process Contacts pending to receive a Channel broadcast.
    * - mautic:campaigns:execute
@@ -103,7 +103,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - mautic:custom-field:create-column
      - Creates the actual column in the table
    * - mautic:email:fetch	
-     - Fetch and process monitored Email, you can also use the alias of ``mautic:emails:fetch``.
+     - Fetch and process monitored Email, you can also use the alias of ``mautic:email:fetch``.
    * - mautic:emails:send
      - Processes mail queue
    * - mautic:import
