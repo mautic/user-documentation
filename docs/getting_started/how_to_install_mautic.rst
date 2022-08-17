@@ -295,8 +295,7 @@ You can use :xref:`DDEV` which is recommended for testing and development with M
 
 .. vale off
 
-This spins up a DDEV instance(which includes Mailhog, PHPMyAdmin, and Redis Commander) - by default at ``https://mautic.ddev.site`` - and also gives the option to set up Mautic ready for you to use.
-
+This spins up a DDEV instance (which includes Mailhog, PHPMyAdmin, and Redis Commander) - by default at ``https://mautic.ddev.site`` - and also gives the option to set up Mautic ready for you to use.
 .. vale on
 
 This runs through the Composer install process, and installs Mautic at the command line with a default username of ``admin`` and password of ``mautic``.
