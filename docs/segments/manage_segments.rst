@@ -11,7 +11,7 @@ Segments provide ways to easily organize your Contacts. There are a variety of f
 
 When viewing all Segments you notice the **#contacts** column on the right which shows the number of Contacts matching that particular Segment.
 
-.. image:: images/contact-Segment.png
+.. image:: images/contact-segment.png
   :width: 700
   :alt: Screenshot showing Contacts matching that particular Segment.
 
@@ -30,7 +30,7 @@ Creating a Segment
    
 2. In the **Details** tab, add a **Name**, **Public name** and **Description** to your Segment.
 
-.. image:: images/create-Segment.png
+.. image:: images/create-segment.png
   :width: 700
   :alt: Screenshot showing creating a Segment.
 
@@ -55,11 +55,11 @@ Viewing and exporting Contacts in a Segment
 
 When viewing all Segments you notice the **#contacts** column on the right which shows the number of Contacts matching that particular Segment.
 
-.. image:: images/contact-Segment.png
+.. image:: images/contact-segment.png
   :width: 700
   :alt: Screenshot showing Contacts matching that particular Segment.
 
-To view Contacts in a specific Segment, click **View X Contacts** from your Segment list or in the Contacts section of Mautic menu, enter ``Segment:Segment-alias`` in the search bar.
+To view Contacts in a specific Segment, click **View X Contacts** from your Segment list or in the Contacts section of Mautic menu, enter ``segment:segment-alias`` in the search bar.
 
 .. vale off
 
@@ -89,7 +89,7 @@ The two manual options to move a Contact into a static Segment are:
 
   4. Select **Change Segments** from the list.
 
-  .. image:: images/batch-update-Segment.png
+  .. image:: images/batch-update-segment.png
     :width: 500
     :height: 500
     :alt: Screenshot showing batch change Segment.
@@ -98,7 +98,7 @@ The two manual options to move a Contact into a static Segment are:
 
   6. Click **Save**.
 
-  .. image:: images/change-Segment-batch-contact.png
+  .. image:: images/change-segment-batch-contact.png
     :width: 700
     :alt: Screenshot showing Change Segment.
 
@@ -121,7 +121,7 @@ The two manual options to move a Contact into a static Segment are:
 
   6. Click **Save**.
 
-  .. image:: images/individual-change-Segment.png
+  .. image:: images/individual-change-segment.png
     :width: 700
     :alt: Screenshot showing individual change Segment.
 
@@ -145,7 +145,7 @@ Inside a Campaign, you can add Contacts to or remove Contacts from Segments usin
 
 4. Choose from the list of existing Segments you want to add your Contact to or remove your Contact from.
 
-  .. image:: images/modify-Segments.png
+  .. image:: images/modify-segments.png
     :alt: Screenshot showing list of existing Segments.
 
 5. Click Save and close.
@@ -193,7 +193,9 @@ Once a Contact has accrued an assigned number of Points, the system can add them
 4. Enter the **Minimum number of Points** for adding a Contact to your Segment.
 
 5. Decide if you’d like to add all Contacts with at least that number of Points to the Segment:
+ 
   * If you only want to add new Contacts who reach the threshold to this Segment, select **No** (default).
+  
   * To add all existing Contacts with at least a certain number of Points to the Segment, toggle the switch to **Yes**.
 
 6. Click **Events**.
@@ -248,7 +250,8 @@ Mautic moves Contacts into and out of dynamic Segments based on the filters appl
 Segment filters
 ===============
 
-.. image:: images/filter list.png
+.. image:: images/filter-list.png
+    :width: 400
     :alt: Screenshot showing Segment Filters List.
 
 1. Create a new Segment by clicking the **+New** button.
@@ -283,7 +286,7 @@ Segment filters
     * Hit URL
     * Owner ID
 
-    * The nightly Segment rebuild jobs for each Segment are randomized for six hours. Jobs are executed anytime between midnight to 6 am with respect to the **Default timezone** set for the instance in **Settings > Configurations > System Settings**.
+    * The nightly Segment rebuild jobs for each Segment are randomized for six hours. Jobs are executed anytime between midnight to 6 AM with respect to the **Default timezone** set for the instance in **Settings > Configurations > System Settings**.
     * If a Segment fails to rebuild for a predetermined length of time, Mautic displays a notification alerting you of an error. For information on defining this time period, see Segment settings 
     * The include/exclude operators with pipe-separated values are supported in the Text field types in Segment filters. The values can also be pasted from the spreadsheet.
 
@@ -334,19 +337,19 @@ Once you’ve selected a date field as your filter, such as the default **Date l
 
 * **Not like** - This operator isn't supported in date or date-time fields, and shouldn’t be used.
 
-* **Regexp** - Contacts with values that match the specified regular expression pattern are included in the Segment. If you aren't proficient with regular expression, don’t use this operator.
+* **Regexp** - Segment includes Contacts with values that match the specified regular expression pattern. If you aren't proficient with regular expression, don’t use this operator.
 
-* **Not regexp** - Contacts with values that don’t match the specified regular expression pattern are included in the Segment. If you aren't proficient with regular expressions, don’t use this operator.
+* **Not regexp** - Segment includes Contacts with values that don’t match the specified regular expression pattern. If you aren't proficient with regular expressions, don’t use this operator.
 
-* **Starts with** - Contacts whose field values begin with the specified numbers are included in the Segment. These filter values should generally reference years (or years and months).
+* **Starts with** - Segment includes Contacts whose field values begin with the specified numbers. These filter values should generally reference years (or years and months).
 
 For example, A value of 19 matches any Contacts whose field value has a year in the 1900&nbsp;s. A value of 200 matches Contacts with a year value between 2000 and 2009 and a value of 2020-11 matches Contacts with a field value in November 2020.
 
-* **Ends with** - Contacts whose field values end with the specified numbers are included in the Segment. These filter values should generally reference days (or months and days).
+* **Ends with** - Segment includes Contacts whose field values end with the specified numbers. These filter values should generally reference days (or months and days).
 
-For example, a value of 1 matches anyone whose field value is on the 1&nbsp;st, 11&nbsp;th, 21&nbsp;st, or 31&nbsp;st of any month but a value of 01 matches the 1&nbsp;st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.
+For example, a value of 1 matches anyone whose field value is on the 1&nbsp;st, 21&nbsp;st, or 31&nbsp;st of any month but a value of 01 matches the 1&nbsp;st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.
 
-* **Contains** - Contacts with the specified filter value anywhere in the field value are included in the Segment. 
+* **Contains** - Segment includes Contacts with the specified filter value anywhere in the field value. 
 
 .. image:: images/operators-2.png
     :alt: Screenshot showing Operators.
@@ -407,15 +410,15 @@ However, you can specify much more here. Mautic recognizes relative formats too 
 * ``+5 months`` / ``-6 months`` / ``7months ago``
 * ``+1 year`` / ``-2 years`` / ``3 years ago``
 
-Example (Consider that today is ``2022-03-02``):
+Example (Consider that today is ``2022-03-05``):
 
-* ``Date identified equals -1 week`` returns all Contacts identified on 2022-02-23.
-* ``Date identified less than -1 week`` returns all Contacts identified before 2022-02-23.
-* ``Date identified equals -1 months`` returns all Contacts identified on 2022-02-02.
-* ``Date identified greater or equal -1`` year returns all Contacts identified 2017-03-02 and after.
-* ``Date identified greater than -1`` year returns all Contacts identified after 2017-03-02.
+* ``Date identified equals -1 week`` returns all Contacts identified on 2022-02-26.
+* ``Date identified less than -1 week`` returns all Contacts identified before 2022-02-26.
+* ``Date identified equals -1 months`` returns all Contacts identified on 2022-02-05.
+* ``Date identified greater or equal -1`` year returns all Contacts identified 2021-03-05 and after.
+* ``Date identified greater than -1`` year returns all Contacts identified after 2021-03-05.
   
-Beside this you can specify your date with text. These formulas are translatable, so make sure you use them in correct format.
+Beside this you can specify your date with text. These formulas are **translatable**, so make sure you use them in correct format.
 
 * ``birthday`` / ``anniversary``
 * ``birthday -7 days`` / ``anniversary -7 days``
@@ -424,26 +427,23 @@ Beside this you can specify your date with text. These formulas are translatable
 * ``this month`` / ``last month`` / ``next month``
 * ``this year`` / ``last year`` / ``next year``
 
-Example (Consider that today is ``2022-03-02``):
+Example (Consider that today is ``2022-03-05``):
 
-* ``Date identified equals last week`` returns all Contacts identified between 2022-02-26 and 2022-03-04 (Monday to Sunday).
-* ``Date identified less than last week`` returns all Contacts identified before 2022-02-19.
+* ``Date identified equals last week`` returns all Contacts identified between 2022-03-01 and 2022-03-07 (Monday - Sunday).
+* ``Date identified less than last week`` returns all Contacts identified before 2022-02-22.
 * ``Date identified equals last month`` returns all Contacts identified between 2022-02-01 and 2022-02-28.
-* Date identified greater or equal last year returns all Contacts identified 2017-01-01 and after.
-* Date identified greater than last year returns all Contacts identified after 2017-12-31.
-* Custom Contact date field equal birthday -1 day returns all Contacts identified every year on 03-01 (1st march).
-* Custom Contact date field equal anniversary -1 month returns all Contacts identified every year on 02-01 (1st february)
+* ``Date identified greater or equal last year`` returns all Contacts identified 2021-01-01 and after.
+* ``Date identified greater than last year`` returns all Contacts identified after 2021-12-31.
+* ``Custom Contact date field equal birthday -1 day`` returns all Contacts identified every year on 03-04 (4th march).
+* ``Custom Contact date field equal anniversary -1 month`` returns all Contacts identified every year on 02-04 (4th february)
 
-Segments
-********
-
-Once you have created your Segment, any applicable contact will be automatically added through the execution of a cron job. This is the essence of Segments.
+Once you have created your Segment, any applicable Contact automatically add through the execution of a cron job. This is the essence of Segments.
 
 To keep the Segments current, create a cron job that executes the following command at the desired interval:
 
 ``php /path/to/mautic/bin/console mautic:Segments:update``
 
-Through the execution of that command, contacts that match the filters will be added and contacts that no longer match will be removed. Any contacts that were manually added will remain part of the list regardless of filters.
+Through the execution of that command, it adds Contacts that match the filters and removes Contacts that no longer match. Any Contacts that were manually added will remain part of the list regardless of filters.
 
 .. vale off
 
@@ -465,17 +465,19 @@ This is a performance precaution since deleting more Contacts at one time could 
 
 5. Click **Delete**.
 
-.. image:: /images/select-delete.png
-    :width: 700
+.. image:: images/select-delete.png
+    :width: 200
     :alt: Screenshot showing Deleting all Contacts in a Segment.
 
 But deleting thousands of Contacts this way in one Segment becomes a tedious task. Luckily, there is a trick how to let the background workers do the job for you.
 
-1. Create a simple campaign which has the Segment as the source
+1. Create a simple Campaign which has the Segment as the source
 
-2. Use the Delete contact action.
+2. Use the :ref:`Delete contact action<using the campaign builder>`.
 
-This way the ``mautic:campaign:update`` and ``mautic:campaign:trigger`` commands will delete all the contacts in the Segment. As well as all the contacts which will be added to the Segment in the future. Everything is done automatically in the background. The cron jobs must be configured. However, be aware that when a contact is deleted, there is no way to get it back.
+This way the ``mautic:campaign:update`` and ``mautic:campaign:trigger`` commands deletes all the Contacts in the Segment. As well as all the Contacts which adds to the Segment in the future. 
+It's all done automatically in the background.
+It's necessary to configure the cron jobs. Deleted Contacts can't be recovered.
 
 .. vale off
 
@@ -486,8 +488,8 @@ Deleting or unpublishing a Segment
 
 Since :xref:`Mautic 4` there is a check when deleting or unpublishing a Segment to ensure that it's not required as a filter by an existing Segment.
 
-.. image:: images/deleting-used-Segment.png
-  :alt: Screenshot showing deleting or unpublishing a Segment which is in use by a filter in another Segment.
+.. image:: images/deleting-used-segment.png
+    :width: 300
+    :alt: Screenshot deleting or unpublishing a Segment
 
-If you attempt to delete or unpublish a Segment which is in use by a filter in another Segment, you will see an alert message informing you of the Segments that you will need to edit before you delete it.
-
+If you attempt to delete or unpublish a Segment which is in use by a filter in another Segment, before you delete the Segment, you get an alert message informing you that it needs to be edited.
