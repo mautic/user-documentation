@@ -1,5 +1,5 @@
 Installation
-##############
+############
 
 There are several ways to install Mautic, you should select the most appropriate method for your situation and technical knowledge.
 
@@ -95,7 +95,7 @@ For setting the database server on the **Mautic Installation-Database Setup** wi
 Click **Next Step**.
 
 Creating the administrator account
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To create an Administrator account for your Mautic instance, enter values for the different fields on the **Mautic Installation - Administrative User** window. 
 
@@ -249,7 +249,56 @@ You can now login to your Mautic instance with your Mautic Admin credentials.
 
 Installing from GitHub
 **********************
-Todo
+
+It's essential to have all the files locally - including automated tests - from the GitHub repository when testing Mautic or contributing to it. Many of these files aren't included in the production build process.
+
+Cloning Mautic from GitHub
+==========================
+
+1. Install the :xref:`GitHub CLI` tool.
+
+2. Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork. You can also click to go directly to your fork if you already have one, if you don't then GitHub will offer to create one..
+
+3. After the fork is complete, click the green **Code** button to access the command for cloning the repository.
+
+4. Switch to your terminal, and when in the directory where you wish to install Mautic, paste the command using the :xref:`GitHub CLI` tool this is in the format:
+
+.. code-block:: shell
+  
+  gh repo clone username/mautic
+
+.. note:: 
+
+  Please always choose to fork into a **personal account** rather than an organization. The latter prevents Mautic's maintainers from working with your Pull Request.
+
+Install Mautic using DDEV
+==========================
+
+You can use :xref:`DDEV` which is recommended for testing and development with Mautic. To get started:
+
+
+#.  Install :xref:`DDEV`.
+
+#.  Install and ensure you have :xref:`Docker` running on your system.
+
+#.  You can now change into the Mautic directory and kick off the DDEV quickstart using the command:
+   
+.. code-block:: shell
+  
+    ddev start
+
+.. note:: 
+
+  For troubleshooting see :xref:`DDEV Troubleshooting`.
+
+  See Mautic's :xref:`Handbook` for more detailed instructions.
+
+.. vale off
+
+This spins up a DDEV instance (which includes Mailhog, PHPMyAdmin, and Redis Commander) - by default at ``https://mautic.ddev.site`` - and also gives the option to set up Mautic ready for you to use.
+.. vale on
+
+This runs through the Composer install process, and installs Mautic at the command line with a default username of ``admin`` and password of ``mautic``.
 
 Installing with Composer
 ************************
