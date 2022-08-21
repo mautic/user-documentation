@@ -9,7 +9,7 @@ Segments in Mautic are lists or groups of Contacts. Use Segments to send Emails,
 
 Segments provide ways to easily organize your Contacts. There are a variety of fields available for configuring these Segments.
 
-When viewing all Segments you notice the **#contacts** column on the right which shows the number of Contacts matching that particular Segment.
+When viewing all Segments, the **#contacts** column on the right shows the number of Contacts included in that particular Segment.
 
 .. image:: images/contact-segment.png
   :width: 700
@@ -53,13 +53,13 @@ Viewing and exporting Contacts in a Segment
 
 .. vale on
 
-When viewing all Segments you notice the **#contacts** column on the right which shows the number of Contacts matching that particular Segment.
+When viewing all Segments the **#contacts** column on the right shows the number of Contacts included in that particular Segment.
 
 .. image:: images/contact-segment.png
   :width: 700
   :alt: Screenshot showing Contacts matching that particular Segment.
 
-To view Contacts in a specific Segment, click **View X Contacts** from your Segment list or in the Contacts section of Mautic menu, enter ``segment:segment-alias`` in the search bar.
+To view Contacts in a specific Segment, click **View X Contacts** from your Segment list or in the Contacts section of Mautic, enter ``segment:segment-alias`` in the search bar.
 
 .. vale off
 
@@ -68,7 +68,7 @@ Static Segments
 
 .. vale on
 
-Static Segments aren’t filter-based. Adding Contacts to a Segment in one of the following ways:
+Static Segments aren’t filter-based. Adding Contacts to a Segment in done in one of the following ways:
 
 .. vale off
 
@@ -79,51 +79,60 @@ Manually moving Contacts
 
 The two manual options to move a Contact into a static Segment are:
 
-* For batch updating Contacts:
+.. vale off
+
+Batch updating Contacts
+-----------------------
+  .. vale on
+
+1. Use search filters in the Contacts section of Mautic to find the Contacts to change.
+
+2. Select the checkboxes next to those Contacts.
+
+3. Click the green arrow which appears at the top of the column.
+
+4. Select **Change Segments** from the list.
+
+.. image:: images/batch-update-segment.png
+  :width: 500
+  :height: 500
+  :alt: Screenshot showing batch change Segment.
+
+5. Choose the **Segments** to add or remove Contacts from.
+
+6. Click **Save**.
+
+.. image:: images/change-segment-batch-contact.png
+  :width: 700
+  :alt: Screenshot showing Change Segment.
+
+.. vale off
+
+Adding individual Contacts
+--------------------------
+
+.. vale on
+
+1. Navigate to the Contact record you want to change.
   
-  1. Use search filters in the Contacts section of Mautic to find the Contacts to change.
+2. Click the arrow in the top right, next to **Edit/Send Email/Close**.
 
-  2. Select the checkboxes next to those Contacts.
+3. Select **Preference**.
 
-  3. Click the green arrow which appears at the top of the column.
+.. image:: images/individual-contact-preference.png
+ :width: 500
+ :height: 300
+ :alt: Screenshot showing individual change Segment.
 
-  4. Select **Change Segments** from the list.
+4. Click **Segments**.
 
-  .. image:: images/batch-update-segment.png
-    :width: 500
-    :height: 500
-    :alt: Screenshot showing batch change Segment.
+5. Choose the Segments you’d like to add the Contacts to or remove Contacts from.
 
-  5. Choose the **Segments** you’d like to add the Contacts to or remove Contacts from.
+6. Click **Save**.
 
-  6. Click **Save**.
-
-  .. image:: images/change-segment-batch-contact.png
-    :width: 700
-    :alt: Screenshot showing Change Segment.
-
-* For individual Contacts:
-
-  1. Navigate to the Contact record you want to change.
-     
-  2. Click the arrow in the top right, next to **Edit/Send Email/Close**.
-
-  3. Select **Preference**.
-
-  .. image:: images/individual-contact-preference.png
-    :width: 500
-    :height: 300
-    :alt: Screenshot showing individual change Segment.
-
-  4. Click **Segments**.
-
-  5. Choose the Segments you’d like to add the Contacts to or remove Contacts from.
-
-  6. Click **Save**.
-
-  .. image:: images/individual-change-segment.png
-    :width: 700
-    :alt: Screenshot showing individual change Segment.
+.. image:: images/individual-change-segment.png
+ :width: 700
+ :alt: Screenshot showing individual change Segment.
 
 .. vale off
 
@@ -132,7 +141,7 @@ Campaign action
 
 .. vale on
 
-Inside a Campaign, you can add Contacts to or remove Contacts from Segments using the **Modify Contact’s Segment** action. To add Contacts to a Segment, you must have already created the Segment and set to **Public Segment = Yes**.
+Inside a :ref:`Campaign<campaigns overview>`, you can add or remove Contacts from Segments using the **Modify Contact’s Segment** action. To add Contacts to a Segment, you must have already created the Segment and set it to **Public Segment = Yes**.
 
 1. In the Campaign builder, click the bottom connector.
 
@@ -143,7 +152,7 @@ Inside a Campaign, you can add Contacts to or remove Contacts from Segments usin
    
 3. In the list of actions, select **Modify Contact’s Segments**.
 
-4. Choose from the list of existing Segments you want to add your Contact to or remove your Contact from.
+4. Choose from the list of existing Segments you want to add or remove your Contact from.
 
   .. image:: images/modify-segments.png
     :alt: Screenshot showing list of existing Segments.
@@ -157,7 +166,7 @@ Form submit action
 
 .. vale on
 
-**Modify Contact’s Segment** is available as a submit action on Standalone Forms. With a Campaign Form, create a Campaign with a **Modify Contact’s Segment** action.
+**Modify Contact’s Segment** is available as a submit action on :ref:`Standalone Forms<creating a new form>`. With a Campaign Form, create a Campaign with a **Modify Contact’s Segment** action.
 
 1. Click **Actions**.
 
@@ -184,7 +193,7 @@ Once a Contact has accrued an assigned number of Points, the system can add them
 .. image:: images/points-trigger.png
     :alt: Screenshot showing Points trigger.
 
-1. In the **Points** section of the platform, select** Manage Triggers**.
+1. In the **Points** section of the platform, select **Manage Triggers**.
 
 2. Click **+New**.
 
@@ -193,10 +202,12 @@ Once a Contact has accrued an assigned number of Points, the system can add them
 4. Enter the **Minimum number of Points** for adding a Contact to your Segment.
 
 5. Decide if you’d like to add all Contacts with at least that number of Points to the Segment:
- 
-  * If you only want to add new Contacts who reach the threshold to this Segment, select **No** (default).
-  
-  * To add all existing Contacts with at least a certain number of Points to the Segment, toggle the switch to **Yes**.
+
+.. tip:: 
+     
+    * If you only want to add new Contacts who reach the threshold to this Segment, select **No** (default).
+    
+    * To add all existing Contacts with at least a certain number of Points to the Segment, toggle the switch to **Yes**.
 
 6. Click **Events**.
 
@@ -262,31 +273,24 @@ Segment filters
 
 4. Click the **Choose one**… menu and search for the field you’d like to Segment by. Listed below are three types of fields:
       
-  * Contact fields
-  
-    * Set Fields to **Available for Segments = Yes** in your Custom Field manager to display here.
-  * Contact behavior and actions
-  * Primary Company fields
-    * Set Fields to **Available for Segments = Yes** in your Custom Field manager to appear here.
-    * Contacts associates with multiple Companies, but Mautic adds them to Segments based on fields for the primary Company.
+        * Contact fields
+        
+          * Set Fields to **Available for Segments = Yes** in your Custom Field manager to display here.
+        * Contact behavior and actions
+        * Primary Company fields
+          
+            * Set Fields to **Available for Segments = Yes** in your Custom Field manager to appear here.
+            
+            * Contacts associates with multiple Companies, but Mautic adds them to Segments based on fields for the primary Company.
 
 5. Add more filters, using the **And** and **Or** operators. An **Or** operator creates a new group of filters which can include And operators.
 
 6. Click **Save and close**.
 
 .. note:: 
+    
+    Segments are rebuilt according to how frequently you fire your :ref:`cron jobs<segment cron jobs>`.
 
-    The following filters rebuild immediately in real time, while other filters rebuild with the nightly refresh:
-
-    * All core fields
-    * Custom fields added by the User
-    * Category
-    * Tags
-    * Contact Email received
-    * Hit URL
-    * Owner ID
-
-    * The nightly Segment rebuild jobs for each Segment are randomized for six hours. Jobs are executed anytime between midnight to 6 AM with respect to the **Default timezone** set for the instance in **Settings > Configurations > System Settings**.
     * If a Segment fails to rebuild for a predetermined length of time, Mautic displays a notification alerting you of an error. For information on defining this time period, see Segment settings 
     * The include/exclude operators with pipe-separated values are supported in the Text field types in Segment filters. The values can also be pasted from the spreadsheet.
 
@@ -321,13 +325,13 @@ Once you’ve selected a date field as your filter, such as the default **Date l
 
 * **Not Equal** - The value on the Contact record is any value that doesn’t match the filter value.
 
-* **Greater than** - The value on the Contact record is at a later date in time than X date. For example, **Greater than** today means anytime from tomorrow until the end of time.
+* **Greater than** - The value on the Contact record is at a later date in time than X date. For example, ``Greater than`` today means anytime from tomorrow until the end of time.
 
-* **Greater than or equal** - The value on the Contact record is either at a later date in time than or including X date. For example, **Greater than or equal** today means anytime from today until the end of time
+* **Greater than or equal** - The value on the Contact record is either at a later date in time than or including X date. For example, ``Greater than or equal`` today means anytime from today until the end of time
 
-* **Less than** - The value on the Contact record is at an earlier date in time than X date. For example, **Less than today** means anytime from the beginning of time until yesterday.
+* **Less than** - The value on the Contact record is at an earlier date in time than X date. For example, ``Less than today`` means anytime from the beginning of time until yesterday.
 
-* **Less than or equal** - The value on the Contact record is at an earlier date in time than X date. For example, **Less than or equal today** means anytime from the beginning of time until today.
+* **Less than or equal** - The value on the Contact record is at an earlier date in time than X date. For example, ``Less than or equal today`` means anytime from the beginning of time until today.
 
 * **Empty** - No value exists in the field on the Contact record.
 
@@ -376,11 +380,11 @@ First three filters match strings as you enter it. ``like`` filter is for advanc
 
 A few notes for text filters:
 
-* ``starts with``, ``ends with``, ``contains`` filters were added later than the ``like`` one, so you can easily specify what you need now.
+* ``starts with``, ``ends with``, ``contains`` filters should be used rather than ``like`` as they are more specific, and therefore can be more performant.
+  
+*  A ``%`` character in the middle of the string has no special meaning. A ``contains`` filter with ``my % string`` will search for a string with ``%`` in the middle. The same is TRUE for a ``like`` filter with ``%my % string%`` value. There is no need to escape this character.
 
-*  ``%`` character in the middle of the string has no special meaning. ``contains`` filter with ``my % string`` will search for a string with ``%`` in the middle. The same is TRUE for ``like`` filter with ``%my % string%`` value. There is no need for escaping this character.
-
-* Mautic searches for ``%`` character in a value for ``like`` filter and no modification is performed if at least 1 ``%`` is found.
+* Mautic searches for the ``%`` character in a value for the ``like`` filter and no modification is performed if at least one ``%`` is found.
 
 You can use regular expressions in a ``regexp`` filter. Mautic recognises all common operators like ``|`` for OR (``first string|second string``), character sets (``[0-9]``, ``[a-z0-9]`` etc.), repetitions (``+``, ``*``, ``?``) and more. 
 You have to escape special characters with ``\`` if you want to use them as matching character. 
@@ -407,7 +411,7 @@ However, you can specify much more here. Mautic recognizes relative formats too 
 * ``+1 day`` (you can also use ``1 day``)
 * ``-2 days`` (you can also use ``2 days ago``)
 * ``+1 week`` / ``-2 weeks`` / ``3 weeks ago``
-* ``+5 months`` / ``-6 months`` / ``7months ago``
+* ``+5 months`` / ``-6 months`` / ``7 months ago``
 * ``+1 year`` / ``-2 years`` / ``3 years ago``
 
 Example (Consider that today is ``2022-03-05``):
@@ -437,13 +441,11 @@ Example (Consider that today is ``2022-03-05``):
 * ``Custom Contact date field equal birthday -1 day`` returns all Contacts identified every year on 03-04 (4th march).
 * ``Custom Contact date field equal anniversary -1 month`` returns all Contacts identified every year on 02-04 (4th february)
 
-Once you have created your Segment, any applicable Contact automatically add through the execution of a cron job. This is the essence of Segments.
+Once you have created your Segment, any applicable Contact will be automatically added through the execution of a :ref:`cron job<import contacts cron job>`. This is the essence of Segments.
 
-To keep the Segments current, create a cron job that executes the following command at the desired interval:
+To keep the Segments current, create a cron job that executes the :ref:`command<segment cron jobs>` at the desired interval.
 
-``php /path/to/mautic/bin/console mautic:Segments:update``
-
-Through the execution of that command, it adds Contacts that match the filters and removes Contacts that no longer match. Any Contacts that were manually added will remain part of the list regardless of filters.
+Through the execution of that command, Mautic adds Contacts that match the filters and removes Contacts that no longer match. Any Contacts that were manually added will remain part of the list regardless of filters.
 
 .. vale off
 
@@ -453,7 +455,7 @@ Delete all Contacts in a Segment
 .. vale on
 
 Filter the Contacts in the Segment. The batch delete action in the Contact table allows deletion of up to 100 Contacts at one time. 
-This is a performance precaution since deleting more Contacts at one time could cause issues. Hundreds of Contacts can use this feature.
+This is a performance precaution since deleting more Contacts at one time could cause issues. You can, however, delete multiple batches of 100 contacts to delete larger lists.
 
 1. Select the checkboxes next to those Contacts.
 
@@ -461,23 +463,29 @@ This is a performance precaution since deleting more Contacts at one time could 
 
 3. Select **Delete Selected** from the list.
 
-4. Choose the **Contacts** you’d like to delete in a Segment.
 
-5. Click **Delete**.
+4. Click **Delete**.
 
 .. image:: images/select-delete.png
     :width: 200
     :alt: Screenshot showing Deleting all Contacts in a Segment.
 
-But deleting thousands of Contacts this way in one Segment becomes a tedious task. Luckily, there is a trick how to let the background workers do the job for you.
+Deleting thousands of Contacts this way in one Segment becomes a tedious task. Luckily, there is a trick how to let the background workers do the job for you.
 
 1. Create a simple Campaign which has the Segment as the source
 
 2. Use the :ref:`Delete contact action<using the campaign builder>`.
 
-This way the ``mautic:campaign:update`` and ``mautic:campaign:trigger`` commands deletes all the Contacts in the Segment. As well as all the Contacts which adds to the Segment in the future. 
+This way the ``mautic:campaign:update`` and ``mautic:campaign:trigger`` commands delete all the Contacts in the Segment, and all the Contacts added to the Segment in the future. 
 It's all done automatically in the background.
-It's necessary to configure the cron jobs. Deleted Contacts can't be recovered.
+It's necessary to configure the :ref:`cron jobs<segment cron jobs>`.
+
+.. danger:: 
+
+ Deleted Contacts can't be recovered.
+
+.. image:: images/mautic-delete-contacts-in-segment-88b77f09.png
+    :alt: Screenshot showing deleting used Segment.
 
 .. vale off
 
