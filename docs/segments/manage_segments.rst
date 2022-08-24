@@ -271,17 +271,22 @@ Segment filters
 
 3. Click the **Filters** tab to add filters.
 
-4. Click the **Choose one**… menu and search for the field you’d like to Segment by. Listed below are three types of fields:
-      
-        * Contact fields
-        
-          * Set Fields to **Available for Segments = Yes** in your Custom Field manager to display here.
-        * Contact behavior and actions
-        * Primary Company fields
-          
-            * Set Fields to **Available for Segments = Yes** in your Custom Field manager to appear here.
-            
-            * Contacts associates with multiple Companies, but Mautic adds them to Segments based on fields for the primary Company.
+4. Click the **Choose one**… menu and search for the field you’d like to Segment by. 
+
+.. attention:: 
+
+  Listed below are three types of fields:
+
+  * Contact fields
+  
+    * Set Fields to **Available for Segments = Yes** in your Custom Field manager to display here.
+
+  * Contact behavior and actions
+  * Primary Company fields
+    
+    * Set Fields to **Available for Segments = Yes** in your Custom Field manager to appear here.
+    
+    * Contacts associates with multiple Companies, but Mautic adds them to Segments based on fields for the primary Company.
 
 5. Add more filters, using the **And** and **Or** operators. An **Or** operator creates a new group of filters which can include And operators.
 
@@ -347,11 +352,11 @@ Once you’ve selected a date field as your filter, such as the default **Date l
 
 * **Starts with** - Segment includes Contacts whose field values begin with the specified numbers. These filter values should generally reference years (or years and months).
 
-For example, A value of 19 matches any Contacts whose field value has a year in the 1900&nbsp;s. A value of 200 matches Contacts with a year value between 2000 and 2009 and a value of 2020-11 matches Contacts with a field value in November 2020.
+  *For example, A value of 19 matches any Contacts whose field value has a year in the 1900s. A value of 200 matches Contacts with a year value between 2000 and 2009 and a value of 2020-11 matches Contacts with a field value in November 2020.*
 
 * **Ends with** - Segment includes Contacts whose field values end with the specified numbers. These filter values should generally reference days (or months and days).
 
-For example, a value of 1 matches anyone whose field value is on the 1&nbsp;st, 21&nbsp;st, or 31&nbsp;st of any month but a value of 01 matches the 1&nbsp;st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.
+  *For example, A value of 1 matches anyone whose field value is on the 1st, 21st, or 31st of any month but a value of 01 matches the 1st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.*
 
 * **Contains** - Segment includes Contacts with the specified filter value anywhere in the field value. 
 
@@ -380,7 +385,7 @@ First three filters match strings as you enter it. ``like`` filter is for advanc
 
 A few notes for text filters:
 
-* ``starts with``, ``ends with``, ``contains`` filters should be used rather than ``like`` as they are more specific, and therefore can be more performant.
+* ``starts with``, ``ends with``, ``contains`` filters should be used rather than ``like`` as they're more specific, and therefore can be more effective.
   
 *  A ``%`` character in the middle of the string has no special meaning. A ``contains`` filter with ``my % string`` will search for a string with ``%`` in the middle. The same is TRUE for a ``like`` filter with ``%my % string%`` value. There is no need to escape this character.
 
@@ -454,8 +459,9 @@ Delete all Contacts in a Segment
 
 .. vale on
 
-Filter the Contacts in the Segment. The batch delete action in the Contact table allows deletion of up to 100 Contacts at one time. 
-This is a performance precaution since deleting more Contacts at one time could cause issues. You can, however, delete multiple batches of 100 contacts to delete larger lists.
+It's possible to delete all Contacts in a Segment manually rather than with a Campaign action. To do this, first create a Segment with filters that picks up all the Contacts you want to delete.
+
+This is a performance precaution since deleting more Contacts at one time could cause issues. You can, however, delete multiple batches of 100 Contacts to delete larger lists.
 
 1. Select the checkboxes next to those Contacts.
 
