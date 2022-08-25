@@ -81,8 +81,4 @@ Changing the view
 
 If you’d like to see your Contacts in the card view, click the **C** button while you’re looking at the Contact list. To go back to the table or list view, press the **T** key.
 
-
-
-
-
 The :ref:`Manage Contacts<managing contacts>` section provides more information on how you can work with Contacts in Mautic.
