@@ -8,12 +8,8 @@ Contacts
 Contacts are the central factor of a marketing automation platform. 
 These are all the individuals who have visited your websites or interacted with you in some way.
 
-.. vale off
-
-Contact Types
+Contact types
 =============
-
-.. vale on
 
 There are two types of Contacts:
 
@@ -32,7 +28,7 @@ You can use the filter in the Contacts screen to display only visitors by using 
    :alt: Screenshot of anonymous Contact
 
 **What you see** - Switching to the anonymous Contacts view displays the IP addresses for visitors to Landing Pages tracked with your Mautic tracking code. 
-If you have an IP lookup service configured in **Settings > System Settings > Miscellaneous Settings**, you will also see an approximate location of these Contacts. Mautic uses MaxMind Geolite2 City by default. The location is based on the Contact’s Internet Service Provider, and may not be the exact location of the Contact.
+If you have an IP lookup service :ref:`configured<miscellaneous settings>` in **Settings > System Settings > Miscellaneous Settings**, you will also see an approximate location of these Contacts. Mautic uses MaxMind Geolite2 City by default. The location is based on the Contact’s Internet Service Provider, and may not be the exact location of the Contact.
 
 **Individual Contacts** - Click an IP address to display a Contact record, similar to known Contacts. If there’s any information on an anonymous Contact, you can see it here. This data can include:
 
@@ -46,7 +42,7 @@ If you have an IP lookup service configured in **Settings > System Settings > Mi
 
 .. note:: 
 
-    * In **Settings > Configuration > Tracking Settings**, you can enable the **Do Not Track 404 error for anonymous Contacts** option to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent bots tracking.
+    * In **Settings > Configuration > Tracking Settings**, you can enable the **Do Not Track 404 error for anonymous Contacts** option to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent his option helps prevent tracking pages you're not interested in, and filling the Contact logs with bot activity.. See :ref:`Tracking settings<tracking settings>`
 
     * Data for anonymous Contacts isn't available for segmentation or reporting. Once the Contact is known, the data is available. This applies to non-campaign based dynamic web content filters.
 
@@ -59,9 +55,10 @@ Standard Contacts
 .. vale on
 
 The second type of Contact is a standard - or known - Contact. These Contacts have identified themselves via a Form or other source. You may also have more information about them from previous interactions, or from a third-party system such as a Customer Relationship Management (CRM) tool. 
+
 As a result, these Contacts typically have a name, Email, and other identifying information which can be associated with the Contact.
 
-The standard Contact is the preferred Contact within Mautic. These are Contacts which may have started as a visitor, but at some point provided additional information such as a name, Email address, social network handle, or other identifying characteristics which have enabled you to connect up the activity on your website with a known person. You can nurture these Contacts through the Mautic marketing automation platform, learn more about their behaviour, and take specific actions as a result of this information.
+These are Contacts which may have started as a visitor, but at some point provided additional information such as a name, Email address, social network handle, or other identifying characteristics which have enabled you to connect up the activity on your website with a known person. You can nurture these Contacts through the Mautic marketing automation platform, learn more about their behaviour, and take specific actions as a result of this information.
 
 Contact list
 ============
