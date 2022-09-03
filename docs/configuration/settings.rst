@@ -49,8 +49,7 @@ System defaults
 
 * **Date Range Filter Default** - Sets the default for how far back from the current date Mautic looks for data in Reports (including Campaign and Email snapshots charts on the item page), this setting allows you to control the default for how far back from the current date Mautic looks for data. If you’ve changed the setting on a Report, Mautic uses what you’ve entered. Mautic’s default value is ``1 Month``.
  
-* **Default format for full dates, date only, short dates, and time only** - The defaults sets standard US time format. The letters in the boxes are PHP code. See the `PHP manual for date functions <https://www.php.net/manual/en/function.date>`_ to change formats.
-
+* **Default format for full dates, date only, short dates, and time only** - The default setting uses the standard US time format. The letters in the boxes are PHP code. See the :xref:`PHP manual for date functions to change formats`.
 
 CORS settings
 =============
@@ -80,7 +79,7 @@ Miscellaneous settings
 
 * **Trusted proxies** - To configure the IP addresses that should be trusted as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
-* **IP lookup service** - By default, Mautic uses MaxMind GeoLite2 City to identify the city of a website visitor, based on the location of the Internet Service Provider (ISP) for their IP address.
+* **IP lookup service** - By default, Mautic uses :ref:`MaxMind GeoLite2 City<maxmind license>`to identify the city of a website visitor, based on the location of the Internet Service Provider (ISP) for their IP address.
 
 * **IP lookup service authentication** - To use another available IP lookup service which requires authentication, enter your credentials.
 
@@ -92,7 +91,7 @@ Miscellaneous settings
 
 .. note:: 
 
-    https://api-ss..bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl
+    https://api-ssl.bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl
 
 * **Item max lock time** - When a User edits a Campaign, Email, Landing Page, etc., Mautic locks the item to prevent simultaneous edits by other Users. When the initial User saves and closes or cancels out, the item may remain locked for this period of time. The default is ``0 seconds``.
 
@@ -126,7 +125,7 @@ API settings
   :width: 600
   :alt: Screenshot showing API Settings Configuration in Mautic
 
-Full API documentation is available here.
+Full API documentation is available :xref:`here`.
 
 * **API enabled** - Select Yes to pass data in and out of Mautic through the API.
 
@@ -162,7 +161,7 @@ Campaign settings
 
 * **Use date range for all views** - When viewing a Campaign, the date range of actions, conditions, decisions, and Contacts displayed in the tabs is based on this setting.
 
-* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you will need to run a cron job to summarize existing data.
+* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you will need to run a :ref:`cron job<campaign cron jobs>` to summarize existing data.
 
 Email settings
 **************
