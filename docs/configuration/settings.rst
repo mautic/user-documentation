@@ -41,7 +41,7 @@ System defaults
 
 * **Default timezone** - The Users’ default time zone, typically set to the time zone of the company headquarters. Time zones can be set for individual Users. The default is ``UTC``.
 
-  For example: Headquarters is in Boston and the default is set to US Eastern Time ``America New York``. A User in San Francisco ``US Pacific Time America Los Angeles`` can display Pacific Time in the User interface.
+  For example: headquarters is in Boston and the default is set to US Eastern Time ``America New York``. A User in San Francisco ``US Pacific Time America Los Angeles`` can display Pacific Time in the User interface.
 
 * **Default language** - The initial language assigned to Users. Individual Users may select their own settings. Mautic uses ``English - United States`` by default.
 
@@ -49,7 +49,7 @@ System defaults
 
 * **Date Range Filter Default** - Sets the default for how far back from the current date Mautic looks for data in Reports (including Campaign and Email snapshots charts on the item page), this setting allows you to control the default for how far back from the current date Mautic looks for data. If you’ve changed the setting on a Report, Mautic uses what you’ve entered. Mautic’s default value is ``1 Month``.
  
-* **Default format for full dates, date only, short dates, and time only** - The default setting uses the standard US time format. The letters in the boxes are PHP code. See the :xref:`PHP manual for date functions to change formats`.
+* **Default format for full dates, date only, short dates, and time only** - The default setting uses the standard US time format. The letters in the boxes are PHP code. See the :xref:`PHP manual for date functions to change formats<PHP manual for date functions>`.
 
 CORS settings
 =============
@@ -178,10 +178,9 @@ Mail send settings
 * **Email address to send mail from** - The Email address for the name you’re sending mail from. The address displays in the From: field when your Contacts receive your Emails.
 
 .. note::
+Ensure that you configure your sender domain, DKIM, bounce, and click tracking domains. For more information, see :ref:`Email<emails>` document.
 
-   Ensure that you configure your sender domain, DKIM, bounce, and click tracking domains. For more information, see Email domains document.
-
-* **Reply to address** -  To have Contacts reply to a different address than the specified From address, add the desired address here. This is the default reply-to address where messages are sent from Mautic unless it is overridden in an individual email. If this field is blank, the address specified in **Email address to send mail** from is used. The reply-to setting is useful if your configured sender domain - which you use in the from address - contains a subdomain that doesn't have MX records or is otherwise an address that can't receive Emails.
+* **Reply to address** -  To have Contacts reply to a different address than the specified From address, add the desired address here. This is the default reply-to address where messages are sent from Mautic unless it is overridden in an individual Email. If this field is blank, the address specified in **Email address to send mail** from is used. The reply-to setting is useful if your configured sender domain - which you use in the from address - contains a subdomain that doesn't have MX records or is otherwise an address that can't receive Emails.
   
 * **Custom return path (bounce) address** - Set a custom return path/bounce Email for Emails sent from the system. Note that some mail transports, such as GMail, won't support this.
 
@@ -300,8 +299,8 @@ Import settings
   :width: 600
   :alt: Screenshot showing Import Settings Configuration in Mautic
 
-* **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV will automatically be set to import in the background (which requires a cron job to trigger). Set to 0 if you want to always import files in the background (recommended for performance optimization).
-  
+* **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV will automatically be set to import in the background (which requires a :ref:`cron job<import contacts cron job>` to trigger). Set to 0 if you want to always import files in the background (recommended for performance optimization).
+   
 Segment settings
 ****************
 
@@ -309,7 +308,7 @@ Segment settings
   :width: 600
   :alt: Screenshot showing Segment Settings Configuration in Mautic
 
-* **Show warning if Segment hasn’t been rebuilt for X hours** - Segments are rebuilt when the cron jobs are fired. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, after which the warning message appears.
+* **Show warning if Segment hasn’t been rebuilt for X hours** - Segments are rebuilt when the :ref:`cron jobs<segment cron jobs>` are fired. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, after which the warning message appears.
 
 Company settings
 ****************
@@ -334,9 +333,6 @@ Notification settings
 If a Campaign or Webhook is automatically unpublished because of a high volume of errors, Mautic sends a notification alerting Users.
 
 * **Send notification to author** - Set this field to Yes to send an Email notification to the User who created the unpublished Campaign or Webhook. If the User is deleted, no notification is sent.
-
-* **Email addresses to receive notifications** - To send notifications to Users other than the author, enter a comma-separated list of Email addresses. You can include distribution lists and addresses of the Users who are not present in the Mautic instance.
-
 
 Landing page settings
 *********************
@@ -437,7 +433,7 @@ SAML/SSO settings
 
 * **Identity provider metadata file** - Upload the metadata XML file from your Identity Provider (IDP) here.
 
-* **Default Role for created Users** - With User Roles created in the Roles section of the settings panel, you may select one of those Roles as the default for Users created using SSO. If empty, Mautic Users won’t be created using SSO. See Users and Roles.
+* **Default Role for created Users** - With :doc:`User Roles</users_roles/managing_roles>` created in the Roles section of the settings panel, you may select one of those Roles as the default for Users created using SSO. If empty, Mautic Users won’t be created using SSO. See Users and Roles.
 
 Enter the names of the attributes the configured IDP uses for the Mautic User fields. Match the field name from your identity provider to the field name Mautic uses for User creation.
 
@@ -459,7 +455,7 @@ Webhook settings
   :width: 600
   :alt: Screenshot showing Webhook Settings Configuration in Mautic
 
-* **Queue Mode** - Select how to process Webhook events. Process immediately executes the Webhook event as soon as it arrives. Queue mode only adds the event the queue and it must be processed by a cron command, which is better for performance.
+* **Queue Mode** - Select how to process Webhook events. Process immediately executes the Webhook event as soon as it arrives. Queue mode only adds the event the queue and it must be processed by a :ref:`cron command<webhooks cron job>`, which is better for performance.
 
 * **Order of the queued events** - If several events are queued in a Webhook, process the events in chronological or reverse chronological order.
 
