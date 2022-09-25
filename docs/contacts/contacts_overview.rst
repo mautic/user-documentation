@@ -60,22 +60,11 @@ As a result, these Contacts typically have a name, Email, and other identifying 
 
 These are Contacts which may have started as a visitor, but at some point provided additional information such as a name, Email address, social network handle, or other identifying characteristics which have enabled you to connect up the activity on your website with a known person. You can nurture these Contacts through the Mautic marketing automation platform, learn more about their behaviour, and take specific actions as a result of this information.
 
-Contact list
-============
-
-Batch actions
--------------
-
-To make updates to several Contacts at once, select those Contacts then click the green arrow at the top of the checkbox column.
-
-.. image:: images/batch-actions.png
-    :width: 200
-    :align: center
-    :alt: Screenshot of Contact Batch actions
 
 Changing the view
------------------
+=================
 
+The Segment is the default tabular view of all the Contacts in the system - by default the **list view** is enabled, but you can also choose to switch to the **card view** (also known as **grid view**) which uses avatars to depict the contacts visually using cards. 
 If you’d like to see your Contacts in the card view, click the **C** button while you’re looking at the Contact list. To go back to the table or list view, press the **T** key.
 
 The :ref:`Manage Contacts<managing contacts>` section provides more information on how you can work with Contacts in Mautic.
