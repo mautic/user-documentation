@@ -57,7 +57,7 @@ Add New
 
 |
 
-This opens the new Contact screen, where you can enter all the information you have about the contact it also displays all published Contact fields when creating a new Contact. Use the tabs at the top to populate existing custom fields and social network profiles. 
+This opens the new Contact screen, where you can enter all the information you have about the Contact it also displays all published Contact fields when creating a new Contact. Use the tabs at the top to populate existing custom fields and social network profiles. 
 
 .. note:: 
 
