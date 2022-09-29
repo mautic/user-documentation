@@ -3,6 +3,7 @@
 Preference center
 #################
 .. vale on
+
 Manage Contact Preferences
 **************************
 
@@ -61,6 +62,7 @@ The Contact's preferences can be presented to the User in the unsubscribe page b
 .. image:: images/unsubscribe.png
     :align: center
     :alt: Screenshot of Unsubscribe
+
 |
 
 Customize preference center
@@ -75,8 +77,86 @@ When creating/editing a landing page, there is a toggle switch labeled Is *Prefe
 
 When this page is configured as a preference center in a Mautic Email, recipients will be shown the page when clicking on the ``{unsubscribe_url}`` link. It also shows or hides the Preference Center slots in the builder.
 
+.. image:: images/pref1.png
+    :align: center
+    :alt: Screenshot of Preference
+
+|
+
+Builder slots
+*************
+
+These slots in the builder are used to customize the page:
+
+.. image:: images/pref2.png
+    :align: center
+    :alt: Screenshot of Preference
+
+|
+
+Tokens
+******
+
+Optionally, you can use :doc:`tokens</configuration/variables>` to insert the different slots. Keep in mind that if you use :doc:`tokens</configuration/variables>`, you lose the ability to customize the labels and styles of the slots because it uses the default ones.
 
 
+.. image:: images/pref3.png
+    :align: center
+    :alt: Screenshot of Preference
+
+|
+
+See the :doc:`VARIABLES</configuration/variables>` page for a full list of tokens.
+
+In addition, add a **Save preferences** button if you wish to save the preferences, otherwise the preferences can't be saved:
+
+Save the page and the Preference Center landing page is ready.
+
+Landing Pages
+*************
+
+Now in the landing pages list, the icon with the little cog indicates that the page is a Preference Center one.
+
+.. image:: images/pref7.png
+    :align: center
+    :alt: Screenshot of Preference
+
+|
+
+When viewing a Preference Center page, there is a header indicating its purpose and the page URL is not available, only the preview URL.
+
+.. image:: images/pref8.png
+    :align: center
+    :alt: Screenshot of Preference
+
+|
+
+Setting Preference Center Pages in Emails
+*****************************************
+
+When creating or editing an Email, you can select the Preference Center page from the list as shown:
+
+.. image:: images/pref5.png
+    :align: center
+    :alt: Screenshot of Preference
+
+|
+
+Keep in mind that your mail must use the same langugage as the Preference Center landing page - if not, default Preference Center will be shown.
+
+Now when the email is sent, all recipients will be able to click on the :doc:`Unsubscribe link</configuration/variables>` (``{unsubscribe_text}`` and ``{unsubscribe_url}``) and the new Preference Center page will be displayed.
+
+.. image:: images/pref6.png
+    :align: center
+    :alt: Screenshot of Preference
+
+|
+
+If no Preference Center page is selected in an Email, the default page is displayed.
+
+.. image:: images/unsubscribe.png
+    :align: center
+    :alt: Screenshot of Unsubscribe
 
 
 
