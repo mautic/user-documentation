@@ -41,14 +41,14 @@ System defaults
 
 * **Default timezone** - The User's default time zone, typically set to the time zone of the company headquarters. Time zones can be set for individual Users. The default is ``UTC``.
 
-  For example: headquarters is in Boston and the default is set to US Eastern Time ``America New York``. A User in San Francisco ``US Pacific Time America Los Angeles`` can display Pacific Time in the User interface.
+  For example: headquarters is in Boston and the default is set to US Eastern Time ``America/New York``. A User in San Francisco US Pacific Time may set ``America/Los Angeles`` to use Pacific Time in the User interface.
 
 * **Default language** - The initial language assigned to Users. Individual Users may select their own settings. Mautic uses ``English - United States`` by default.
 
 * **Cached data timeout (minutes)** - Mautic caches data to speed up page loads. Update this setting to change how long Mautic caches the data for. Mautic uses ``10 minutes`` as the default.
 
-* **Date Range Filter Default** - Sets the default for how far back from the current date Mautic looks for data in Reports (including Campaign and Email snapshots charts on the item page), this setting allows you to control the default for how far back from the current date Mautic looks for data. If you’ve changed the setting on a Report, Mautic uses what you’ve entered. Mautic’s default value is ``1 Month``.
- 
+* **Date Range Filter Default** - Sets the default for how far back from the current date Mautic looks for data in Reports (including Campaign and Email snapshots charts on the item page). This setting allows you to control the default for how far back from the current date Mautic looks for data. If you’ve changed the setting on a Report, Mautic uses what you’ve entered. Mautic’s default value is ``1 Month``.
+   
 * **Default format for full dates, date only, short dates, and time only** - The default setting uses the standard US time format. The letters in the boxes are PHP code. See the :xref:`PHP manual for date functions to change formats<PHP manual for date functions>`.
 
 CORS settings
@@ -62,7 +62,7 @@ Cross-Origin Resource Sharing (CORS) enables data to pass between your website a
 
 * **Restrict Domains** - When set to No, any web page can pass information to Mautic. Select Yes to limit communication with your Mautic instance to websites listed in Valid Domains (strongly recommended).
 
-* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to enable, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won’t because this is only tracking on a secure (https://) website.
+* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won’t because this is only tracking on a secure (https://) website.
 
 .. note:: 
 
@@ -75,23 +75,23 @@ Miscellaneous settings
   :width: 600
   :alt: Screenshot showing Miscellaneous Settings Configuration in Mautic
 
-* **Trusted hosts** - To explicitly allow the hosts that can send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?example.com$`` If left empty, Mautic will respond to all hosts.
-
+* **Trusted hosts** - To explicitly allow the hosts that can send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?example.com$``. If left empty, Mautic will respond to all hosts.
+  
 * **Trusted proxies** - To configure the IP addresses that should be trusted as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
-* **IP lookup service** - By default, Mautic uses :ref:`MaxMind GeoLite2 City<maxmind license>` to identify the city of a website visitor, based on the location of the Internet Service Provider (ISP) for their IP address.
+* **IP lookup service** - By default, Mautic uses :xref:`MaxMind's` database to identify the city of a website visitor, based on the location of the Internet Service Provider (ISP) for their IP address.
 
-* **IP lookup service authentication** - To use another available IP lookup service which requires authentication, enter your credentials.
-
+* **IP lookup service authentication** - To use any IP lookup service which requires authentication, enter your credentials.
+  
 * **List of IPs not to track Contacts with** - To turn off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn’t recommend adding your office IP address. If you list your internal IP address, Mautic won’t track clicks, page hits, etc., from that IP, **including when you are testing functionality**.
 
 * **List of known Bots** - Mautic has the functionality to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here (one per line).
   
-* **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here. For bit.ly, use:
+* **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here.
 
 .. note:: 
 
-    https://api-ssl.bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl
+    For bit.ly, use the following URL structure: https://api-ssl.bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl
 
 * **Item max lock time** - When a User edits a Campaign, Email, Landing Page, etc., Mautic locks the item to prevent simultaneous edits by other Users. When the initial User saves and closes or cancels out, the item may remain locked for this period of time. The default is ``0 seconds``.
 
@@ -173,16 +173,17 @@ Mail send settings
   :width: 600
   :alt: Screenshot showing Mail Send Settings Configuration in Mautic
 
-* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany}`` Marketing Team or ``{YourCompany}``.
-
-* **Email address to send mail from** - The Email address for the name you’re sending mail from. The address displays in the From: field when your Contacts receive your Emails.
+* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``.
+  
+* **Email address to send mail from** - The Email address for the name you’re sending mail from. The address displays in the ``From:`` field when your Contacts receive your Emails.
 
 .. note::
-Ensure that you configure your sender domain, DKIM, bounce, and click tracking domains. For more information, see :ref:`Email<emails>` document.
+
+  Ensure that you configure your sender domain, DKIM, bounce, and click tracking domains. For more information, see :ref:`Email<emails>` document.
 
 * **Reply to address** -  To have Contacts reply to a different address than the specified From address, add the desired address here. This is the default ``reply-to`` address where messages are sent from Mautic unless it is overridden in an individual Email. If this field is blank, the address specified in **Email address to send mail** from is used. The ``reply-to`` setting is useful if your configured sender domain - which you use in the from address - contains a subdomain that doesn't have MX records or is otherwise an address that can't receive Emails.
   
-* **Custom return path (bounce) address** - Set a custom return path/bounce Email for Emails sent from the system. Note that some mail transports, such as GMail, won't support this.
+* **Custom return path (bounce) address** - Set a custom return path/bounce email address for Emails sent from the system. Note that some mail transports, such as GMail, won't support this.
 
 * **Mailer is owner** - If Contacts in Mautic have Owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they’re listed as the owner for. 
 
