@@ -21,9 +21,9 @@ General settings
 
 * **Site URL** - This is where Mautic is physically installed. Set the URL for this site here. Cronjobs needs this to correctly determine absolute URLs when generating links for Emails, etc. It 's also called Mautic's 'base URL'.
 
-* **Mautic’s root URL** - When a User signs in to their Mautic instance, they go to ``mautic.example.com (the root URL)``. However, that Landing Page is also accessible to the public. If a Contact visits that address, they see the Mautic login page for that instance. 
+* **Mautic’s root URL** - When a User signs in to their Mautic instance, they go to ``mautic.example.com``. However, that Landing Page is also accessible to the public. If a Contact visits that address, they see the Mautic login page for that instance. 
 
-  To brand that page, create a Mautic Landing page that you’d want to greet any Contacts who visit your root URL. Once you’ve done that, Users can sign in into Mautic by visiting `mautic.example.com/s/login`.
+  To brand that page, create a Mautic Landing page that you’d want to greet any Contacts who visit your root URL. Once you’ve done that, Users can sign in into Mautic by visiting ``mautic.example.com/s/login``.
 
 * **404 page** - Select the Landing Page that you want to use as the 404 page. If you don’t want to use Mautic’s default 404 error page, create a custom Landing Page and select that page here. If you don’t select any page, Mautic uses the default error page.
 
@@ -39,7 +39,7 @@ System defaults
 
 * **Default item limit per page** - The number of Contacts, Campaigns, Emails, etc. which display on each page when you go to an item section. The default is ``10``.
 
-* **Default timezone** - The Users’ default time zone, typically set to the time zone of the company headquarters. Time zones can be set for individual Users. The default is ``UTC``.
+* **Default timezone** - The User's default time zone, typically set to the time zone of the company headquarters. Time zones can be set for individual Users. The default is ``UTC``.
 
   For example: headquarters is in Boston and the default is set to US Eastern Time ``America New York``. A User in San Francisco ``US Pacific Time America Los Angeles`` can display Pacific Time in the User interface.
 
@@ -79,7 +79,7 @@ Miscellaneous settings
 
 * **Trusted proxies** - To configure the IP addresses that should be trusted as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
-* **IP lookup service** - By default, Mautic uses :ref:`MaxMind GeoLite2 City<maxmind license>`to identify the city of a website visitor, based on the location of the Internet Service Provider (ISP) for their IP address.
+* **IP lookup service** - By default, Mautic uses :ref:`MaxMind GeoLite2 City<maxmind license>` to identify the city of a website visitor, based on the location of the Internet Service Provider (ISP) for their IP address.
 
 * **IP lookup service authentication** - To use another available IP lookup service which requires authentication, enter your credentials.
 
@@ -125,7 +125,7 @@ API settings
   :width: 600
   :alt: Screenshot showing API Settings Configuration in Mautic
 
-Full API documentation is available :xref:`here`.
+Full API documentation is available :xref:`Mautic developer API`.
 
 * **API enabled** - Select Yes to pass data in and out of Mautic through the API.
 
@@ -180,11 +180,11 @@ Mail send settings
 .. note::
 Ensure that you configure your sender domain, DKIM, bounce, and click tracking domains. For more information, see :ref:`Email<emails>` document.
 
-* **Reply to address** -  To have Contacts reply to a different address than the specified From address, add the desired address here. This is the default reply-to address where messages are sent from Mautic unless it is overridden in an individual Email. If this field is blank, the address specified in **Email address to send mail** from is used. The reply-to setting is useful if your configured sender domain - which you use in the from address - contains a subdomain that doesn't have MX records or is otherwise an address that can't receive Emails.
+* **Reply to address** -  To have Contacts reply to a different address than the specified From address, add the desired address here. This is the default ``reply-to`` address where messages are sent from Mautic unless it is overridden in an individual Email. If this field is blank, the address specified in **Email address to send mail** from is used. The ``reply-to`` setting is useful if your configured sender domain - which you use in the from address - contains a subdomain that doesn't have MX records or is otherwise an address that can't receive Emails.
   
 * **Custom return path (bounce) address** - Set a custom return path/bounce Email for Emails sent from the system. Note that some mail transports, such as GMail, won't support this.
 
-* **Mailer is owner** - If Contacts in Mautic have ``Owners``, select Yes to use the Contact owner as the sender of Emails to any Contacts they’re listed as the owner for. 
+* **Mailer is owner** - If Contacts in Mautic have Owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they’re listed as the owner for. 
 
 .. note:: 
 
@@ -249,7 +249,7 @@ Unsubscribe settings
 
 * **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. Don’t edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
 
-* **Show Contact preference settings** - Select **Yes** to direct the unsubscribe link to your configured preference center. If you haven’t created a Preference Center, Mautic creates a default page based on the next 5 settings. The created page uses the default Theme for styling.
+* **Show Contact preference settings** - Select **Yes** to direct the unsubscribe link to your configured Preference enter. If you haven’t created a Preference Center, Mautic creates a default page based on the next 5 settings. The created page uses the default Theme for styling.
 
 * **Show Contact Segment preferences** - Select **Yes** to allow a Contact to change which Segments they’re part of on the Preference Center page. Segments won’t display on the Preference Center page if they aren’t published and public.
 
@@ -290,7 +290,10 @@ Contact list settings
   :width: 600
   :alt: Screenshot showing Contact List Settings Configuration in Mautic
 
-* **Columns** -
+* **Columns** - Select from the left which fields appear on the Contact lists(when you go to Contacts in the Mautic and view the list).
+
+The fields must be selected from the left, moved to the right, or removed from the right if you don't want them to appear in the list.
+
 
 Import settings
 ===============
@@ -442,11 +445,14 @@ Enter the names of the attributes the configured IDP uses for the Mautic User fi
 * **Last name**
 * **Username**
 
-Use a custom X.509 certificate and private key to secure communication between Mautic and the IDP. Upload your:
+Use a custom X.509 certificate and private key to secure communication between Mautic and the IDP. 
+
+Upload your:
 
 * **X.509 certificate**
 * **Private key file**
-* Enter your **Private key encryption password**
+
+Enter your **Private key encryption password**
 
 Webhook settings
 ****************
