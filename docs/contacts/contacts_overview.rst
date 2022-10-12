@@ -42,9 +42,9 @@ If you have an IP lookup service :ref:`configured<miscellaneous settings>` in **
 
 .. note:: 
 
-    * In **Settings > Configuration > Tracking Settings**, you can enable the **Do Not Track 404 error for anonymous Contacts** option to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent his option helps prevent tracking pages you're not interested in, and filling the Contact logs with bot activity.. See :ref:`Tracking settings<tracking settings>`
+    * In **Settings > Configuration > Tracking Settings**, you can enable the **Do Not Track 404 error for anonymous Contacts** option to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent tracking pages you're not interested in and filling the Contact logs with bot activity. See :ref:`Tracking settings<tracking settings>`
 
-    * Data for anonymous Contacts isn't available for segmentation or reporting. Once the Contact is known, the data is available. This applies to non-campaign based dynamic web content filters.
+    * Data for anonymous Contacts isn't available for segmentation or reporting. Once the Contact is known, the data is available, which applies to non-campaign based dynamic web content filters.
 
 
 .. vale off
@@ -64,7 +64,7 @@ These are Contacts which may have started as a visitor, but at some point provid
 Changing the view
 =================
 
-The Segment is the default tabular view of all the Contacts in the system - by default the **list view** is enabled, but you can also choose to switch to the **card view** (also known as **grid view**) which uses avatars to depict the contacts visually using cards. 
+The Segment is the default tabular view of all the Contacts in the system - by default the **list view** is enabled, but you can also choose to switch to the **card view** also known as **grid view** which uses avatars to depict the Contacts visually using cards. 
 If you’d like to see your Contacts in the card view, click the **C** button while you’re looking at the Contact list. To go back to the table or list view, press the **T** key.
 
 The :ref:`Manage Contacts<managing contacts>` section provides more information on how you can work with Contacts in Mautic.
