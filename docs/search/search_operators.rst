@@ -1,6 +1,6 @@
 .. vale off
 
-Search
-######
+Search operators
+################
 
 .. vale on

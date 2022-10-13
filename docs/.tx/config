@@ -1,272 +1,146 @@
 [main]
 host = https://www.transifex.com
 
-[mautic-end-user-documentation._build_gettext_index]
+[mautic-end-user-documentation.docs_translations_users_roles]
+file_filter = locale/<lang>/LC_MESSAGES/users_roles.po
+source_file = docs_translations/users_roles.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_stages]
+file_filter = locale/<lang>/LC_MESSAGES/stages.po
+source_file = docs_translations/stages.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_builders]
+file_filter = locale/<lang>/LC_MESSAGES/builders.po
+source_file = docs_translations/builders.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_contacts]
+file_filter = locale/<lang>/LC_MESSAGES/contacts.po
+source_file = docs_translations/contacts.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_segments]
+file_filter = locale/<lang>/LC_MESSAGES/segments.po
+source_file = docs_translations/segments.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_categories]
+file_filter = locale/<lang>/LC_MESSAGES/categories.po
+source_file = docs_translations/categories.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_points]
+file_filter = locale/<lang>/LC_MESSAGES/points.po
+source_file = docs_translations/points.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_marketplace]
+file_filter = locale/<lang>/LC_MESSAGES/marketplace.po
+source_file = docs_translations/marketplace.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_companies]
+file_filter = locale/<lang>/LC_MESSAGES/companies.po
+source_file = docs_translations/companies.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_translations]
+file_filter = locale/<lang>/LC_MESSAGES/translations.po
+source_file = docs_translations/translations.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_components]
+file_filter = locale/<lang>/LC_MESSAGES/components.po
+source_file = docs_translations/components.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_channels]
+file_filter = locale/<lang>/LC_MESSAGES/channels.po
+source_file = docs_translations/channels.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_plugins]
+file_filter = locale/<lang>/LC_MESSAGES/plugins.po
+source_file = docs_translations/plugins.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_queue]
+file_filter = locale/<lang>/LC_MESSAGES/queue.po
+source_file = docs_translations/queue.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_search]
+file_filter = locale/<lang>/LC_MESSAGES/search.po
+source_file = docs_translations/search.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_configuration]
+file_filter = locale/<lang>/LC_MESSAGES/configuration.po
+source_file = docs_translations/configuration.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_overview]
+file_filter = locale/<lang>/LC_MESSAGES/overview.po
+source_file = docs_translations/overview.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_authentication]
+file_filter = locale/<lang>/LC_MESSAGES/authentication.po
+source_file = docs_translations/authentication.pot
+source_lang = en
+type = PO
+
+[mautic-end-user-documentation.docs_translations_index]
 file_filter = locale/<lang>/LC_MESSAGES/index.po
-source_file = _build/gettext/index.pot
+source_file = docs_translations/index.pot
 source_lang = en
 type = PO
 
-[mautic-end-user-documentation._build_gettext_configuration_settings]
-file_filter = locale/<lang>/LC_MESSAGES/configuration/settings.po
-source_file = _build/gettext/configuration/settings.pot
+[mautic-end-user-documentation.docs_translations_reports]
+file_filter = locale/<lang>/LC_MESSAGES/reports.po
+source_file = docs_translations/reports.pot
 source_lang = en
 type = PO
 
-[mautic-end-user-documentation._build_gettext_builders_creating_themes]
-file_filter = locale/<lang>/LC_MESSAGES/builders/creating_themes.po
-source_file = _build/gettext/builders/creating_themes.pot
+[mautic-end-user-documentation.docs_translations_getting_started]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started.po
+source_file = docs_translations/getting_started.pot
 source_lang = en
 type = PO
 
-[mautic-end-user-documentation._build_gettext_builders_grapesjs_builder]
-file_filter = locale/<lang>/LC_MESSAGES/builders/grapesjs_builder.po
-source_file = _build/gettext/builders/grapesjs_builder.pot
+[mautic-end-user-documentation.docs_translations_themes]
+file_filter = locale/<lang>/LC_MESSAGES/themes.po
+source_file = docs_translations/themes.pot
 source_lang = en
 type = PO
 
-[mautic-end-user-documentation._build_gettext_stages_stages]
-file_filter = locale/<lang>/LC_MESSAGES/stages/stages.po
-source_file = _build/gettext/stages/stages.pot
+[mautic-end-user-documentation.docs_translations_dashboard]
+file_filter = locale/<lang>/LC_MESSAGES/dashboard.po
+source_file = docs_translations/dashboard.pot
 source_lang = en
 type = PO
 
-[mautic-end-user-documentation._build_gettext_plugins_twilio]
-file_filter = locale/<lang>/LC_MESSAGES/plugins/twilio.po
-source_file = _build/gettext/plugins/twilio.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_plugins_twitter]
-file_filter = locale/<lang>/LC_MESSAGES/plugins/twitter.po
-source_file = _build/gettext/plugins/twitter.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_contributing_mautic_style_guide]
-file_filter = locale/<lang>/LC_MESSAGES/contributing/mautic_style_guide.po
-source_file = _build/gettext/contributing/mautic_style_guide.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_contributing_contributing]
-file_filter = locale/<lang>/LC_MESSAGES/contributing/contributing.po
-source_file = _build/gettext/contributing/contributing.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_contacts_manage_segments]
-file_filter = locale/<lang>/LC_MESSAGES/contacts/manage_segments.po
-source_file = _build/gettext/contacts/manage_segments.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_contacts_manage_contacts]
-file_filter = locale/<lang>/LC_MESSAGES/contacts/manage_contacts.po
-source_file = _build/gettext/contacts/manage_contacts.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_marketplace_marketplace]
-file_filter = locale/<lang>/LC_MESSAGES/marketplace/marketplace.po
-source_file = _build/gettext/marketplace/marketplace.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_troubleshooting_file_ownership_and_permissions]
-file_filter = locale/<lang>/LC_MESSAGES/troubleshooting/file_ownership_and_permissions.po
-source_file = _build/gettext/troubleshooting/file_ownership_and_permissions.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_dashboard_dashboard]
-file_filter = locale/<lang>/LC_MESSAGES/dashboard/dashboard.po
-source_file = _build/gettext/dashboard/dashboard.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_components_assets]
-file_filter = locale/<lang>/LC_MESSAGES/components/assets.po
-source_file = _build/gettext/components/assets.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_components_forms]
-file_filter = locale/<lang>/LC_MESSAGES/components/forms.po
-source_file = _build/gettext/components/forms.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_components_landing_pages]
-file_filter = locale/<lang>/LC_MESSAGES/components/landing_pages.po
-source_file = _build/gettext/components/landing_pages.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_components_dynamic_web_content]
-file_filter = locale/<lang>/LC_MESSAGES/components/dynamic_web_content.po
-source_file = _build/gettext/components/dynamic_web_content.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_points_points]
-file_filter = locale/<lang>/LC_MESSAGES/points/points.po
-source_file = _build/gettext/points/points.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_campaigns_managing_campaigns]
-file_filter = locale/<lang>/LC_MESSAGES/campaigns/managing_campaigns.po
-source_file = _build/gettext/campaigns/managing_campaigns.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_campaigns_campaign_builder]
-file_filter = locale/<lang>/LC_MESSAGES/campaigns/campaign_builder.po
-source_file = _build/gettext/campaigns/campaign_builder.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_campaigns_troubleshooting_campaigns]
-file_filter = locale/<lang>/LC_MESSAGES/campaigns/troubleshooting_campaigns.po
-source_file = _build/gettext/campaigns/troubleshooting_campaigns.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_campaigns_campaigns_overview]
-file_filter = locale/<lang>/LC_MESSAGES/campaigns/campaigns_overview.po
-source_file = _build/gettext/campaigns/campaigns_overview.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_campaigns_creating_campaigns]
-file_filter = locale/<lang>/LC_MESSAGES/campaigns/creating_campaigns.po
-source_file = _build/gettext/campaigns/creating_campaigns.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_overview_overview]
-file_filter = locale/<lang>/LC_MESSAGES/overview/overview.po
-source_file = _build/gettext/overview/overview.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_categories_categories-overview]
-file_filter = locale/<lang>/LC_MESSAGES/categories/categories-overview.po
-source_file = _build/gettext/categories/categories-overview.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_authentication_authentication]
-file_filter = locale/<lang>/LC_MESSAGES/authentication/authentication.po
-source_file = _build/gettext/authentication/authentication.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_set_up_switching_composer]
-file_filter = locale/<lang>/LC_MESSAGES/set_up/switching_composer.po
-source_file = _build/gettext/set_up/switching_composer.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_set_up_variables]
-file_filter = locale/<lang>/LC_MESSAGES/set_up/variables.po
-source_file = _build/gettext/set_up/variables.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_set_up_cron_jobs]
-file_filter = locale/<lang>/LC_MESSAGES/set_up/cron_jobs.po
-source_file = _build/gettext/set_up/cron_jobs.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_set_up_maxmind_license]
-file_filter = locale/<lang>/LC_MESSAGES/set_up/maxmind_license.po
-source_file = _build/gettext/set_up/maxmind_license.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_set_up_tracking_script]
-file_filter = locale/<lang>/LC_MESSAGES/set_up/tracking_script.po
-source_file = _build/gettext/set_up/tracking_script.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_companies_companies_overview]
-file_filter = locale/<lang>/LC_MESSAGES/companies/companies_overview.po
-source_file = _build/gettext/companies/companies_overview.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_reports_reports]
-file_filter = locale/<lang>/LC_MESSAGES/reports/reports.po
-source_file = _build/gettext/reports/reports.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_getting_started_how_to_install_mautic]
-file_filter = locale/<lang>/LC_MESSAGES/getting_started/how_to_install_mautic.po
-source_file = _build/gettext/getting_started/how_to_install_mautic.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_getting_started_how_to_update_mautic]
-file_filter = locale/<lang>/LC_MESSAGES/getting_started/how_to_update_mautic.po
-source_file = _build/gettext/getting_started/how_to_update_mautic.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_getting_started_getting_started]
-file_filter = locale/<lang>/LC_MESSAGES/getting_started/getting_started.po
-source_file = _build/gettext/getting_started/getting_started.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_channels_focus_items]
-file_filter = locale/<lang>/LC_MESSAGES/channels/focus_items.po
-source_file = _build/gettext/channels/focus_items.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_channels_marketing_messages]
-file_filter = locale/<lang>/LC_MESSAGES/channels/marketing_messages.po
-source_file = _build/gettext/channels/marketing_messages.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_channels_utm_tags]
-file_filter = locale/<lang>/LC_MESSAGES/channels/utm_tags.po
-source_file = _build/gettext/channels/utm_tags.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_channels_emails]
-file_filter = locale/<lang>/LC_MESSAGES/channels/emails.po
-source_file = _build/gettext/channels/emails.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_channels_push_notifications]
-file_filter = locale/<lang>/LC_MESSAGES/channels/push_notifications.po
-source_file = _build/gettext/channels/push_notifications.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_channels_sms]
-file_filter = locale/<lang>/LC_MESSAGES/channels/sms.po
-source_file = _build/gettext/channels/sms.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_channels_social_monitoring]
-file_filter = locale/<lang>/LC_MESSAGES/channels/social_monitoring.po
-source_file = _build/gettext/channels/social_monitoring.pot
-source_lang = en
-type = PO
-
-[mautic-end-user-documentation._build_gettext_channels_web_notifications]
-file_filter = locale/<lang>/LC_MESSAGES/channels/web_notifications.po
-source_file = _build/gettext/channels/web_notifications.pot
+[mautic-end-user-documentation.docs_translations_campaigns]
+file_filter = locale/<lang>/LC_MESSAGES/campaigns.po
+source_file = docs_translations/campaigns.pot
 source_lang = en
 type = PO
