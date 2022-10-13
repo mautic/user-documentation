@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:19+0000\n"
+"Language-Team: Czech (https://www.transifex.com/mautic/teams/33223/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: ../../set_up/maxmind_license.rst:2 1e41127c990342ad9fbb755f0cd6c53d
+msgid "MaxMind license"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:4 7ea4e07e145c4dbaba9b52d91b5d2408
+msgid ""
+"From the :xref:`2.16 release`, Mautic has supported using a license key to "
+"access the MaxMind IP lookup service."
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:8 d62755fdcc5c4e248e3ccca7ba4c5a5e
+msgid ""
+"From the 3.2 release the format for the license key needs to be "
+"``AccountID:Licensekey``. You can locate the Account ID directly preceding "
+"the license keys table."
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:10 b64714b6fc694f6a8fe6de97709c686a
+msgid ""
+"Follow these steps to configure your Mautic instance to use the license key."
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:12 ed23615a26ce4cb4a71e08f431d79661
+msgid "Create a MaxMind account by going to :xref:`MaxMind Signup`"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:14 0c8b6bd2d12a40858fb841143910ad48
+msgid ""
+"After signing up, verify your Email and follow the steps to access your "
+":xref:`MaxMind Account`."
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:16 0e226c34a1a34c7b86bedcce59d19baa
+msgid "Click the Contact icon at the top right of the menu to login"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rstNone 0cc90dfdfa574775a53f6dcf821af5ee
+msgid "Screenshot of MaxMind Account"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:22 46636eccc80845d4852168d69f67270d
+msgid ""
+"After logging in, under services click ``My License Key`` on the left hand "
+"side in the menu"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rstNone ../../set_up/maxmind_license.rstNone
+#: ../../set_up/maxmind_license.rstNone 5ce994a2a710468eb71009334cd5b69c
+#: d2f19310e36c4e76ba09ca1a46b99f9a e6cbe305b501419794c81e9981420032
+msgid "Screenshot of MaxMind license key"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:28 64a670b59bd44f379bcf6a5b8f3195fe
+msgid "Then, Click ``Generate new License Key``"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rstNone c4b1c8cd886c4fee88b98355ad7f8aee
+msgid "Screenshot of MaxMind Generate key"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:34 8002165a19734d7a9730433a3a75bec7
+msgid "Answer ``Will this key be used for GeoIP Update?`` with No and confirm"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rstNone ad142eb344774f68979d5be3c8dce641
+msgid "Screenshot of MaxMind confirm key"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:40 f27e91f7dbb94470ba3cd7796f940d77
+msgid ""
+"Copy the license key that you see on the screen and note down the Account ID"
+" preceding the license key table"
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:46 7265f1cae6744134801f8573c5cd1a7a
+msgid ""
+"Go to Mautic > Settings > Configuration > System Settings > Miscellaneous "
+"Settings and enter the license key into the \"IP lookup service "
+"authentication\" **field in the format** ``AccountID:Licensekey``."
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:52 b3fd79b5763349b18f849167d8e7f7e4
+msgid ""
+"Click ``Fetch IP Lookup Data Store``. This downloads the IP lookup database "
+"to your Mautic instance."
+msgstr ""
+
+#: ../../set_up/maxmind_license.rst:54 329717f65998468785c23773679c23f2
+msgid "Set up the :ref:`cron jobs` to periodically download a fresh copy."
+msgstr ""

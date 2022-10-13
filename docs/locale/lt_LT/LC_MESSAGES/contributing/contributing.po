@@ -1,0 +1,535 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:18+0000\n"
+"Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/mautic/teams/33223/lt_LT/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lt_LT\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+
+#: ../../contributing/contributing.rst:2 657e0199c63a47f2a8d8e988aae7e621
+msgid "Contributing to the Mautic documentation"
+msgstr ""
+
+#: ../../contributing/contributing.rst:4 40d461a93d6444c1b03024c7ad959e15
+msgid ""
+"Mautic welcomes contributions to improve and maintain Mautic documentation."
+msgstr ""
+
+#: ../../contributing/contributing.rst:6 28899444345b44a98e1c53ffe2163ba2
+msgid ""
+"To contribute to the Mautic documentation, fork the :xref:`Mautic GitHub "
+"User Documentation` repository."
+msgstr ""
+
+#: ../../contributing/contributing.rst:8 a0b97ca2b0bc467bb9c3c9b616037441
+msgid ""
+"To contribute to the Mautic developer documentation, fork the :xref:`Mautic "
+"GitHub Developer Documentation`."
+msgstr ""
+
+#: ../../contributing/contributing.rst:10 952dd2fb1e784ad7ad0b30cbe248aaaf
+msgid ""
+"These guidelines outline how to contribute to the Mautic documentation "
+"hosted on GitHub. Make proposed changes by submitting a pull request (PR)."
+msgstr ""
+
+#: ../../contributing/contributing.rst:12 3b90c18549594533883987321cf2bcfa
+msgid ":ref:`Understanding the Repository Structure`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:13 7a5e49ac28fe4f838bb3db4be6aec575
+msgid ":ref:`Finding an Issue`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:14 fb50921fa526473da0c2f83713356923
+msgid ":ref:`Creating an Issue or Proposing Changes`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:19 017147a72f4a44cf8d8e5b02287598e9
+msgid ":ref:`Different Methods of Contributing Changes`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:16 09da4287f4ec4a4eb9e6dfc138bc15e0
+msgid ":ref:`Using Git on the Command Line`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:17 b8138fcf9eac4ff6b2a62d9ad052e788
+msgid ":ref:`Creating a Pull Request`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:18 c45e8f10d1264a608dd8e267c0c0a5a0
+msgid ":ref:`Using GitHub Desktop`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:19 e2625050c6f6488e982c367b1176afb4
+msgid ":ref:`Using the web interface`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:20 537e28dcf63449fb93cef4abeb10722f
+msgid ":ref:`Using Gitpod`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:21 2d5a65ab0eff40899cbdd3f85a662344
+msgid ":ref:`Looking for help`"
+msgstr ""
+
+#: ../../contributing/contributing.rst:24 86b1425b4fa149639bcbc6161d996f64
+msgid "Understanding the repository structure"
+msgstr ""
+
+#: ../../contributing/contributing.rst:26 f53b20cf25454e419618d892652b32dd
+msgid ""
+"In Mautic, documentation uses ReStructuredText - :xref:`RST`. The files use "
+"the ``*.rst*`` extension."
+msgstr ""
+
+#: ../../contributing/contributing.rst:28 f3a1573b3d9647fa9d3f519f1926d17f
+msgid ""
+"When you fork the Mautic documentation repository, the repository includes "
+"the following files and folders:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:30 a053dd11914d40908f8c737bf623adc2
+msgid ""
+"**README.md**: this file introduces and describes the repository, but "
+"doesn't contain any product documentation."
+msgstr ""
+
+#: ../../contributing/contributing.rst:31 0b64c8f453d2441aa4acbaf8b1ab9393
+msgid ""
+"**docs**: this folder contains folders for each section in the Mautic "
+"documentation."
+msgstr ""
+
+#: ../../contributing/contributing.rst:32 2c61b8ef01a4483fb7467358c81c06ff
+msgid ""
+"**docs/links**: this folder contains a file for each external link used in "
+"this repository"
+msgstr ""
+
+#: ../../contributing/contributing.rst:33 ff242bb10e0d4c6c8f66dcc832dd3729
+msgid ""
+"**style-guide.md**: the style guide contains rules and guidelines for "
+"submitting content with a consistent tone, voice, and messaging across the "
+"Mautic documentation. It's encouraged to read the "
+":doc:`/contributing/mautic_style_guide` ."
+msgstr ""
+
+#: ../../contributing/contributing.rst:34 b75a4cb56c43466da4a4fbf677063a7f
+msgid ""
+"**index.rst**: this file serves as a homepage for the documentation, "
+"including references to all other sections in the documentation."
+msgstr ""
+
+#: ../../contributing/contributing.rst:35 731f6077eadc472288ec0fe895038b09
+msgid ""
+"**requirement.txt**: this file contains all the packages and dependencies "
+"requirements you need to have installed."
+msgstr ""
+
+#: ../../contributing/contributing.rst:38 aed65e007d054782902d7ec7f768f55a
+msgid "Finding an issue"
+msgstr ""
+
+#: ../../contributing/contributing.rst:40 a1b5e88e3f104d2e98aca2d5077ee4a2
+msgid ""
+"You can familiarize yourself with the Mautic contribution process by "
+"reviewing the list of **issues** on the :xref:`Mautic Docs issues` section. "
+"These issues have a relatively limited scope."
+msgstr ""
+
+#: ../../contributing/contributing.rst:42 24589232391c41938d5db0244e9154f7
+msgid ""
+"After you have selected an issue on the :xref:`Mautic Docs issues` issue "
+"queue, follow the below steps:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:44 4856c52d06364fadaa178bb5e0c9c552
+msgid ""
+"Add a comment indicating that you would like to own the ticket. This is to "
+"avoid conflicts with others also working on the issue."
+msgstr ""
+
+#: ../../contributing/contributing.rst:45 0f2383e1e7d04f5b8ad9fee27b579976
+msgid ""
+"After a member of the Education Team assigns you the issue, you can modify "
+"files and track changes on GitHub using command line utility, your web "
+"browser, GitHub Desktop, or Gitpod."
+msgstr ""
+
+#: ../../contributing/contributing.rst:46 248b7699c9554ae0bb118427ed245bf9
+msgid ""
+"Once you submit a pull request, a member of the Education Team reviews your "
+"changes."
+msgstr ""
+
+#: ../../contributing/contributing.rst:49 fd4dc108a51243eaa91c29da787c82ee
+msgid "Creating an issue or proposing changes"
+msgstr ""
+
+#: ../../contributing/contributing.rst:51 090452e33c254efbae991802162050df
+msgid "You can create an issue or propose changes by following these steps:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:53 7b72758f82c147fd8103104b2e5261c7
+msgid ""
+"Create a new GitHub issue associated with the relevant repository and "
+"propose your change there. Be sure to include implementation details and the"
+" rationale for the proposed change."
+msgstr ""
+
+#: ../../contributing/contributing.rst:54 822f69aecf1942ae82d010b33e325f18
+msgid "A Mautic team member reviews all submitted issues."
+msgstr ""
+
+#: ../../contributing/contributing.rst:55 4acef7e4cd86440092a913e277205e2a
+msgid "Once approved, you may start working on the issue."
+msgstr ""
+
+#: ../../contributing/contributing.rst:59 ae72e19da9c94f84964fa37acd802e06
+msgid "Different methods of contributing changes"
+msgstr ""
+
+#: ../../contributing/contributing.rst:61 b9eafac680fb433e9648a22eda9d412b
+msgid ""
+"This section explains the different methods you can use to create pull "
+"request to submit changes and collaborate."
+msgstr ""
+
+#: ../../contributing/contributing.rst:66 3f21d5a2f05947319c906746b43aad33
+msgid "Using Git on the Command Line"
+msgstr ""
+
+#: ../../contributing/contributing.rst:70 0890fffeda2f4f08aca455b38e4745e1
+msgid ""
+"Using Git, you'll need to fork  this :xref:`Mautic GitHub User "
+"Documentation` repository and clone the Mautic  documentation repository on "
+"your machine to edit the documents locally. You must propose changes in a "
+"branch, which ensures that the default branch only contains finished and "
+"approved work. You can then commit changes for tracking, and submit them as "
+"a PR for the Education Team reviewers."
+msgstr ""
+
+#: ../../contributing/contributing.rst:72 2a062d34d49c4d8b9c5968fb9aa59cb7
+msgid ""
+"To work with Git locally requires you to have Git installed and configured, "
+"and to have a GitHub account. If you want to work with Git locally without "
+"using the command line, you can work with the :ref:`GitHub Desktop<Using "
+"GitHub Desktop>` client."
+msgstr ""
+
+#: ../../contributing/contributing.rst:74 65d87dcd239243efb4b8be4829e6ebf5
+msgid ""
+"Alternatively, you can also install GitHub command-line tool to use GitHub "
+"from the command line. For more information, visit the :xref:`GitHub CLI` "
+"resource."
+msgstr ""
+
+#: ../../contributing/contributing.rst:76 d7d111bb615a40dfbc4d11060211c032
+msgid "To edit documents using Git:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:78 4405342e8d2546dabbe2f07225167008
+msgid "Launch the command-line tool on your machine."
+msgstr ""
+
+#: ../../contributing/contributing.rst:79 26e4acf7e626482ea166be949b1644f2
+msgid ""
+"Change the working directory in the terminal to the location where you plan "
+"to save the documentation repository using the ``cd`` command."
+msgstr ""
+
+#: ../../contributing/contributing.rst:80 22153bbb6e96489790e33aa2ff35350f
+msgid "Clone the Mautic documentation repository."
+msgstr ""
+
+#: ../../contributing/contributing.rst:86 d5d14a2c2f4a4b21abe92b12d58e970c
+msgid ""
+"Create a new branch to manage your edits, and name it descriptively. For "
+"example, ``revision-readme-file``. You can do this either at the command "
+"line using the syntax below:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:92 6cb5fa0358e14849af547ac8b96ff78f
+msgid ""
+"After editing the documents, commit your edits to your local repository, and"
+" add a commit message. The Git commit command requires a commit message that"
+" describes what has changed and why so that collaborators to track, review, "
+"and merge the edits."
+msgstr ""
+
+#: ../../contributing/contributing.rst:100 267e940646ea4da187fbd008c86c5cad
+msgid ""
+"Push the current branch to GitHub to synchronize the changes, and set the "
+"remote as upstream. You may need to enter your GitHub login credentials."
+msgstr ""
+
+#: ../../contributing/contributing.rst:106 0ce1cbc1456841289efb194b9a7f7863
+msgid ""
+"After you've pushed your commits, visit your repository on GitHub to view "
+"the reflected changes and the commit history. Review the changes at your "
+"fork - ``https://github.com/{yourusername}/user-documentation.``"
+msgstr ""
+
+#: ../../contributing/contributing.rst:108 812e52dc7a4144e69499d9b770ef0959
+msgid "Submit a pull request for a review of the committed changes."
+msgstr ""
+
+#: ../../contributing/contributing.rst:113 4dbd22e9a1d742b9aa7d379a895bc50a
+msgid "Creating a Pull Request"
+msgstr ""
+
+#: ../../contributing/contributing.rst:117 00ede78e8b1b42d895cdcd40f76dbd7c
+msgid ""
+"Once you have made all changes, the Education Team needs to review them. The"
+" first step is to create a pull request."
+msgstr ""
+
+#: ../../contributing/contributing.rst:119 54527916de58456d903d04b972192277
+msgid "To create a pull request:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:121 9b78ce2badd149779d275a33a31b487a
+msgid ""
+"Navigate to your GitHub account (for example, "
+"``https://github.com/{username}``) on the portal."
+msgstr ""
+
+#: ../../contributing/contributing.rst:122 1cbabf61fd06437a86118d7e09323b4c
+msgid ""
+"Go to the Documentation repository, and GitHub shows notification detailing "
+"the recent push to your branch with a button labeled **Start a pull "
+"request**."
+msgstr ""
+
+#: ../../contributing/contributing.rst:124 7abde44f9a7040a78041f341c427e6f9
+msgid "Click **Compare & pull request**."
+msgstr ""
+
+#: ../../contributing/contributing.rst:127 876bded356e040f8b813f0a98d2efaa8
+msgid "When you Open a pull request:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:126
+#: ../../contributing/contributing.rst:162 36533e27096f432d95e62f418c8d933b
+#: c52f83c246e34b7b84ec2ec7130dca0d
+msgid "Enter details about the changes you have made to the document."
+msgstr ""
+
+#: ../../contributing/contributing.rst:127
+#: ../../contributing/contributing.rst:163 a1376530a7d74f17b5ff23302e3a524e
+#: 1e8f413708ba4c25a87f1bae2c5f336c
+msgid ""
+"Reference any :xref:`Mautic Docs issues` that the current pull request (PR) "
+"resolves so that they're automatically linked. For example, if the PR closes"
+" an existing issue #0001, reference it in the description as 'closes #0001'."
+msgstr ""
+
+#: ../../contributing/contributing.rst:128 412565a7e7954e27bcf47090ae5d1336
+msgid ""
+"@mentions of the Mautic administrator for reviewing the proposed changes."
+msgstr ""
+
+#: ../../contributing/contributing.rst:129 fadde3faef784e99ba459ccf901e13db
+msgid "Click **Create pull request** to generate the PR link."
+msgstr ""
+
+#: ../../contributing/contributing.rst:130 dad07ed3f5ea4fd1bcdfd045c82bd396
+msgid ""
+"Share the pull request (PR) link in the #t-education Channel on "
+":xref:`Mautic Community Slack`."
+msgstr ""
+
+#: ../../contributing/contributing.rst:133 41f824d65a524ff1b5eef024a0a278c1
+msgid ""
+"For more Git command line instructions, view the :xref:`Git Cheatsheet`."
+msgstr ""
+
+#: ../../contributing/contributing.rst:138 8e2f6976164945f5baf3bbdb7d0d5587
+msgid "Using GitHub Desktop"
+msgstr ""
+
+#: ../../contributing/contributing.rst:142 e33e7c95ee154fa7be706a698eb78e04
+msgid ""
+"Using :xref:`GitHub Desktop`, you can clone the Mautic documentation "
+"repository on your machine, and edit the documents locally. You propose "
+"changes in a branch, which ensures that the default branch only contains "
+"finished and approved work. The changes are then reviewed in GitHub Desktop "
+"and committed for tracking."
+msgstr ""
+
+#: ../../contributing/contributing.rst:145 d961a62408b5447d8d2134ab73e7d7ea
+msgid "Using the web interface"
+msgstr ""
+
+#: ../../contributing/contributing.rst:147 36e2a8a00d4b441da1ff7e22192497e4
+msgid ""
+"You're making changes in a project you don't have write access to. "
+"Submitting a change writes it to a new branch in your fork {username}/user-"
+"documentation, so you can send a pull request."
+msgstr ""
+
+#: ../../contributing/contributing.rst:149 a7c52b76b3b646c6966a53e140c224e4
+msgid "To contribute content using the GitHub web interface:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:151 da758a2790e74671b27551c719e56705
+msgid ""
+"Navigate to the :xref:`Mautic GitHub User Documentation` repository, and "
+"click the button at the top right to **Fork** it to add it to your profile "
+"repositories."
+msgstr ""
+
+#: ../../contributing/contributing.rst:152 6b75a6465af94a89af938e089725cf34
+msgid ""
+"Select a file, and click the **Edit** icon in the upper-right corner to edit"
+" the document."
+msgstr ""
+
+#: ../../contributing/contributing.rst:153 c1dac85a06324871994c7e6c414e2db3
+msgid ""
+"After making your changes, scroll down and add descriptive text explaining "
+"what you have changed and why."
+msgstr ""
+
+#: ../../contributing/contributing.rst:154 bd754dacb10b45a0829e9f0680f0c4a5
+msgid "Click **Propose Changes**."
+msgstr ""
+
+#: ../../contributing/contributing.rst:155 7418fdd115ac44febd09cbb6fa953134
+msgid ""
+"Next, review and edit the changes from your branch for committing the "
+"changes. If you haven't already created a new branch do this now, to manage "
+"your contributions separately for each task you work on."
+msgstr ""
+
+#: ../../contributing/contributing.rst:158 a3a2614da1474626b4a083d7377d8b04
+msgid ""
+"If you are updating more than one file, then you can select the newly "
+"created branch in the dropdown on the left hand side when you're viewing a "
+"file to switch to the branch, and then repeat this process until you have "
+"made all the required edits, before creating a pull request."
+msgstr ""
+
+#: ../../contributing/contributing.rst:160
+#: ../../contributing/contributing.rst:165 18f0654448fb4dd3a482cc752bdc6d9d
+#: 062bccbb78364323a100cc5a08ea490b
+msgid "Click **Create pull request**."
+msgstr ""
+
+#: ../../contributing/contributing.rst:163 5623e2a99ee546c79741569c77ea0b1b
+msgid "Next in the open pull request interface:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:164 61ed25bb59214c009da1910554ae7508
+msgid ""
+"@mention the Mautic Education Team if appropriate for reviewing the proposed"
+" changes."
+msgstr ""
+
+#: ../../contributing/contributing.rst:166 e0cf6f402bf345aa97ef0486603d60ce
+msgid ""
+"Share the pull request (PR) link in #t-education on :xref:`Mautic Community "
+"Slack`."
+msgstr ""
+
+#: ../../contributing/contributing.rst:169 e73b059cd146491fb12ec3937c8b2ff8
+msgid "Using Gitpod"
+msgstr ""
+
+#: ../../contributing/contributing.rst:171 763f392b76b24638b9453ce342cd5e6e
+msgid "To launch your local Mautic workspace in your browser using Gitpod:"
+msgstr ""
+
+#: ../../contributing/contributing.rst:173 4fd3b9cf2cb64ba68d483d3006939dd0
+msgid ""
+"Navigate to Mautic's documentation repository on GitHub in your browser. "
+"Ensure you have already made a personal fork as described in the preceding "
+"section."
+msgstr ""
+
+#: ../../contributing/contributing.rst:174 1187c1d5b2d440aea9aca1f1568d469b
+msgid ""
+"In the browser's address bar, prefix the entire URL of the repository, "
+"branch or pull request you want to open in Gitpod with "
+"``https://gitpod.io/#`` - for example "
+"``https://gitpod.io./#https://github.com/{username}/user-documentation``, "
+"and press **Enter**."
+msgstr ""
+
+#: ../../contributing/contributing.rst:175 b9cd81b0a3e84c81a85a04be49a46bce
+msgid ""
+"Within the Mautic ephemeral developer environment, **'welcome.md'** displays"
+" suggesting the next steps."
+msgstr ""
+
+#: ../../contributing/contributing.rstNone 6c92a25d8b2041ac8d6fdc2b0550b775
+msgid "Screenshot of Gitpod Welcome"
+msgstr ""
+
+#: ../../contributing/contributing.rst:181 b37deec0cbfc4ae796a70363386bcc33
+msgid ""
+"Create a new branch by clicking on the taskbar at the bottom left of the "
+"screen where it shows ``main`` as the default branch. At the top of the "
+"window you'll be able to enter a name for the new branch and press enter. At"
+" the bottom left, the branch name changes - this always shows which branch "
+"you are currently working on."
+msgstr ""
+
+#: ../../contributing/contributing.rst:182 5643c89010bf430b8ef1da66126f0b75
+msgid "Edit your documents."
+msgstr ""
+
+#: ../../contributing/contributing.rst:183 d0012e7e24d24151beb50c1a1ff820db
+msgid ""
+"To commit your changes, click the **source control** icon in the navigation "
+"side bar."
+msgstr ""
+
+#: ../../contributing/contributing.rst:184 b37e3f0ecf764f9eaf4cde6fe6eb1804
+msgid ""
+"On the Source Control section, click the **checkmark icon** next to the "
+"files you have edited to 'stage' the changes - preparing to commit the "
+"changes."
+msgstr ""
+
+#: ../../contributing/contributing.rst:185 e63689afb3c5436081f36459f445be9d
+msgid ""
+"Enter a brief description to explain your commits, and then click the "
+"**checkmark icon** next to the Source Control header to commit those "
+"changes."
+msgstr ""
+
+#: ../../contributing/contributing.rstNone 58ac8139db8848908c5a1306bda703c7
+msgid "Screenshot of Gitpod commit screen"
+msgstr ""
+
+#: ../../contributing/contributing.rst:192 8721309d312944c1b6b11c12bba359cf
+msgid ""
+"Click **Sync Changes** to push and pull commits from the main origin which "
+"you can also access by clicking the three dot menu, and selecting 'Pull, "
+"Push' followed by 'sync'."
+msgstr ""
+
+#: ../../contributing/contributing.rst:195 09ac30df6cba4266969b22ff7401bcc3
+msgid "Looking for help"
+msgstr ""
+
+#: ../../contributing/contributing.rst:197 0471d8d1aa1642e7a36fb121d6ba631f
+msgid ""
+"You can join the :xref:`Mautic Community Slack` to connect with other "
+"documentation writers and the wider community, if you aren't already a "
+"member. Mautic documentation conversations happen in the #t-education and "
+"#doc Channels."
+msgstr ""
