@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../plugins/amazon.rst:4
+msgid "Amazon S3"
+msgstr ""
+
+#: ../plugins/citrix.rst:4
+msgid "Citrix"
+msgstr ""
+
+#: ../plugins/clearbit.rst:4
+msgid "Clearbit"
+msgstr ""
+
+#: ../plugins/connectwise.rst:4
+msgid "ConnectWise"
+msgstr ""
+
+#: ../plugins/fullcontact.rst:4
+msgid "FullContact"
+msgstr ""
+
+#: ../plugins/gmail.rst:4
+msgid "GMail"
+msgstr ""
+
+#: ../plugins/hubspot.rst:4
+msgid "HubSpot"
+msgstr ""
+
+#: ../plugins/icontact.rst:4
+msgid "iContact"
+msgstr ""
+
+#: ../plugins/mailchimp.rst:4
+msgid "MailChimp"
+msgstr ""
+
+#: ../plugins/microsoft_dynamics_crm.rst:4
+msgid "Microsoft Dynamics CRM"
+msgstr ""
+
+#: ../plugins/microsoft_outlook.rst:4
+msgid "Microsoft Outlook"
+msgstr ""
+
+#: ../plugins/pipedrive.rst:4
+msgid "Pipedrive"
+msgstr ""
+
+#: ../plugins/plugin_resources.rst:4
+msgid "Plugin resources"
+msgstr ""
+
+#: ../plugins/salesforce.rst:4
+msgid "Salesforce"
+msgstr ""
+
+#: ../plugins/social_login.rst:4
+msgid "Social Login"
+msgstr ""
+
+#: ../plugins/sugar_crm.rst:4
+msgid "Sugar CRM"
+msgstr ""
+
+#: ../plugins/tag_manager.rst:4
+msgid "Tag Manager"
+msgstr ""
+
+#: ../plugins/twilio.rst:4
+msgid "Twilio"
+msgstr ""
+
+#: ../plugins/twilio.rst:7
+msgid "Mautic - Twilio Plugin"
+msgstr ""
+
+#: ../plugins/twilio.rst:11
+msgid "Before you start to send text messages from your Mautic instance, it needs to connect to the service which can send them."
+msgstr ""
+
+#: ../plugins/twilio.rst:13
+msgid "The first and default implemented service is :xref:`Twilio`."
+msgstr ""
+
+#: ../plugins/twilio.rst:15
+msgid "In order to configure the text messages correctly, follow these steps:"
+msgstr ""
+
+#: ../plugins/twilio.rst:17
+msgid "Create an account at :xref:`Twilio`."
+msgstr ""
+
+#: ../plugins/twilio.rst:19
+msgid "In Mautic, go to *Settings* (cog icon) > *Plugins*."
+msgstr ""
+
+#: ../plugins/twilio.rst:21
+msgid "Open *Twilio* Plugin and activate it."
+msgstr ""
+
+#: ../plugins/twilio.rst:23
+msgid "Copy the *Account Sender ID* from Twilio account and paste it to *Account Sender ID* field in the Twilio Plugin configuration."
+msgstr ""
+
+#: ../plugins/twilio.rst:25
+msgid "Unlock and copy the *Auth Token* and paste it to *Auth Token* field in the Twilio Plugin configuration."
+msgstr ""
+
+#: ../plugins/twilio.rst:27
+msgid "Go to *Products* > *Phone Numbers* in Twilio, copy the number and paste it to the *Sending Phone Number* field in Mautic."
+msgstr ""
+
+#: ../plugins/twilio.rst:29
+msgid "Select the *Text Message Enabled*? switch to *Yes* and save the Mautic configuration."
+msgstr ""
+
+#: ../plugins/twilio.rst:34
+msgid "Alphanumeric Sender ID"
+msgstr ""
+
+#: ../plugins/twilio.rst:38
+msgid "Alphanumeric Sender ID allows you to send Twilio Programmable SMS messages using a personalized sender name, in supported countries see :xref:`International Support for Alphanumeric Sender ID`."
+msgstr ""
+
+#: ../plugins/twilio.rst:40
+msgid "Instead of using an E.164 formatted Twilio Phone number for the \"From\" value, you can use a custom string like your own business' branding."
+msgstr ""
+
+#: ../plugins/twilio.rst:44
+msgid "You can't reply directly to messages sent out with an Alphanumeric Sender ID."
+msgstr ""
+
+#: ../plugins/twilio.rst:49
+msgid "Alphanumeric Sender ID requirements"
+msgstr ""
+
+#: ../plugins/twilio.rst:53
+msgid "Alphanumeric Sender ID is automatically supported on all new :xref:`upgraded (paid) Twilio accounts`. It's not supported for Free Trial accounts."
+msgstr ""
+
+#: ../plugins/twilio.rst:55
+msgid "You can verify if your account has Alphanumeric Sender enabled by following these steps:"
+msgstr ""
+
+#: ../plugins/twilio.rst:57
+msgid "Login to your account at :xref:`Twilio`."
+msgstr ""
+
+#: ../plugins/twilio.rst:59
+msgid "From the left side navigation bar, click Programmable SMS."
+msgstr ""
+
+#: ../plugins/twilio.rst:61
+msgid "Click Settings."
+msgstr ""
+
+#: ../plugins/twilio.rst:63
+msgid "Verify that \"Alphanumeric Sender ID\" is set to Enabled."
+msgstr ""
+
+#: ../plugins/twilio.rst:65
+msgid "Follow these steps to see if your account has Alphanumeric Sender enabled."
+msgstr ""
+
+#: ../plugins/twilio.rst:70
+msgid "Send SMS Messages using an Alphanumeric Sender ID with Mautic"
+msgstr ""
+
+#: ../plugins/twilio.rst:74
+msgid "Just setup your alias in plugin settings:"
+msgstr ""
+
+#: ../plugins/twilio.rst:0
+msgid "Screenshot of alphanumeric-id"
+msgstr ""
+
+#: ../plugins/twilio.rst:80
+msgid "Read more info about :xref:`Alphanumeric Sender ID` on Twillio site."
+msgstr ""
+
+#: ../plugins/twitter.rst:4
+msgid "Twitter"
+msgstr ""
+
+#: ../plugins/vtiger.rst:4
+msgid "Vtiger"
+msgstr ""
+
+#: ../plugins/zapier.rst:4
+msgid "Zapier"
+msgstr ""
+
+#: ../plugins/zoho_crm.rst:4
+msgid "Zoho CRM"
+msgstr ""
