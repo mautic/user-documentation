@@ -216,7 +216,7 @@ Monitored inbox settings
 
 * **Unsubscribe Requests** - A folder to monitor for new unsubscribe requests. 
 
-* **Contact Replies** - Similar to the monitored inbox for bounces, this is the inbox Mautic checks for Contact replies. Using "Replies to Email" decisions in any Campaign requires configuration. With ``Use custom connection settings?`` set to ``no``, Mautic checks the default mailbox. If set to ``yes``, you may track a different mailbox for replies.
+* **Contact Replies** - Similar to the monitored inbox for bounces, this is the inbox Mautic checks for Contact replies. Using :ref:`Replies to Email<email settings>` decisions in any Campaign requires configuration. With ``Use custom connection settings?`` set to ``no``, Mautic checks the default mailbox. If set to ``yes``, you may track a different mailbox for replies.
 
 Message settings
 ================
