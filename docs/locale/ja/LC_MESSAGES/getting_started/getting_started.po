@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:19+0000\n"
+"Language-Team: Japanese (https://www.transifex.com/mautic/teams/33223/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../getting_started/getting_started.rst:4
+#: e9665eb9ce8b448691239555802ae526
+msgid "Getting Started with Mautic"
+msgstr ""
+
+#: ../../getting_started/getting_started.rst:8
+#: b31696601dc441afbae0cf346f4a7c91
+msgid ""
+"There are some basic tasks you need to do to get started with using Mautic."
+msgstr ""
+
+#: ../../getting_started/getting_started.rst:10
+#: fcc184c682094bba938182f5c02cd41f
+msgid "Check out the following resources:"
+msgstr ""
+
+#: ../../getting_started/getting_started.rst:13
+#: 3df2d5ed391f42deb1daf2502d43ede1
+msgid "Contents"
+msgstr ""
+
+#: ../../getting_started/getting_started.rst:14
+#: 04a09c765dd14e489a625af769767b7b
+msgid ":doc:`how_to_install_mautic`"
+msgstr ""
+
+#: ../../getting_started/getting_started.rst:16
+#: 0419811db2a3469cb4bd87e2588b76c7
+msgid ":doc:`how_to_update_mautic`"
+msgstr ""

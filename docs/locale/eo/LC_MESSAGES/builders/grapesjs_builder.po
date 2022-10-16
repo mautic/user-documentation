@@ -1,0 +1,335 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:18+0000\n"
+"Language-Team: Esperanto (https://www.transifex.com/mautic/teams/33223/eo/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: eo\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../builders/grapesjs_builder.rst:4 f1692a0c91f64e42bf35d71dbe854140
+msgid "Email & Landing Page Builder"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:8 48100a31a346476d8158385ec4485b74
+msgid ""
+"Since :xref:`Mautic 3`, Mautic has shipped with an updated, modern builder "
+"for creating Emails and landing pages. In :xref:`Mautic 4` it's the default "
+"builder."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:12 60a1957a09bc4ae8bed0951195cdf4d2
+msgid ""
+"To use your existing templates with the new builder, you need to add one "
+"line to your configuration file. Read on for further details."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:17 91a1857050e047e2ba1deb96b19b9e19
+msgid "About GrapesJS"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:21 66d97f41264b4197aa90d5e98c3c00a0
+msgid ""
+":xref:`Webmecanik` initiated the new Email and landing page as an MVP. After"
+" developing and improving it using the open source :xref:`GrapesJS` "
+"framework, :xref:`Aivie` kindly made it available to the Mautic community."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:23 048d672ea34240ad90d774821bde2c8f
+msgid ""
+"GrapesJS is an open source, multi-purpose, Web Builder Framework which "
+"combines different tools and features with the goal to help build HTML "
+"templates without any knowledge of coding."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:26 e36f19e27d57492ca04f616797313cc7
+msgid "Available end-user features"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:29 38991e7148704567bda523129ac4cb75
+msgid "Drag & drop built-in blocks"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:31 64cec4bd56eb4e428f4034338aab92b9
+msgid ""
+"GrapesJS comes with a set of built-in blocks, in this way you're able to "
+"build your templates faster. If the default set isn't enough you can always "
+"add your own custom blocks."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:34 5faf753fb61e4e1fb4f98f300c889779
+msgid "Limitless styling"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:36 786202a0b83a46718e67eb905c6b2531
+msgid ""
+"GrapesJS implements a simple and powerful Style Manager module which enables"
+" independent styling of any Component inside the canvas. It's also possible "
+"to configure it to use any of the CSS properties."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:39 48b2249b3b9d4133b74156834d3bbf45
+msgid "Responsive design"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:41 b68021dfcd704fb98256310d1b8cb4e3
+msgid ""
+"GrapesJS gives you all the necessary tools you need to optimize your "
+"templates to look awesomely on any device. In this way you're able to "
+"provide various viewing experiences. In case you require more device "
+"options, you can easily add them to the editor."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:44 d9f614e2b0654da9a5ee789735a84f17
+msgid "The structure always under control"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:46 ddefbcfb5c004fc39b64df00c2936f3c
+msgid ""
+"You can nest Components as much as you can but when the structure begins to "
+"grow the Layer Manager comes very handy. It allows you to manage and "
+"rearrange your elements extremely fast, focusing always on the architecture "
+"of your structure."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:49 eb5593e7ded74739a5ff1ebb38e731ed
+msgid "The code is there when you need it"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:51 4314c03bb7ab4470bdb53f7f3ec2b333
+msgid ""
+"You don't have to care about the code, but it's always there, available for "
+"you. When it's done, you can grab it and use it wherever you want. "
+"Developers could also implement their own storage interfaces to use inside "
+"the editor."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:54 831f9f3b8f1c4685b42812e0d7eae39b
+msgid "Asset manager"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:56 1854706c1e5f4ee78571628bde36078d
+msgid ""
+"With the Asset Manager is easier to organize your media files and it's "
+"enough to double click the image to change it."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:59 8264268df8d84803af9be831bb8cf88b
+msgid "About the builder"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:62 b2c1270cc76448b78672741fe85570b0
+msgid "Enabling the builder"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:64 0b414e7aa4524abb8c6aabcc7793bd1f
+msgid ""
+"Since Mautic 3.3-RC1 the builder is available to use in the Plugins section "
+"of Mautic."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:66 041154e363d94dd1a27fd31181bf9f22
+msgid ""
+"Go to the Settings by clicking the cog wheel at the top right > Plugins > "
+"GrapesJS and click the GrapesJS icon."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:68 c1390e20c45b445aac98566733e722c7
+msgid "Change the slider to Yes."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:70 de0672b49d6f42a9bba2c5de72f5f8f9
+msgid ""
+"**Clear your Mautic** cache located in var/cache and refresh the Landing "
+"Page before you can work with the new GrapesJS builder."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:72 397888407d504d738489c387de35fc9d
+msgid "Some browsers may also require you to clear the browser cache."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:74 bdc1397bcd4f43afa7482b52de0a2bbb
+msgid ""
+"By default, Mautic 4 activates the new builder. Follow the previous steps to"
+" revert to the legacy builder, remembering to clear the cache and reload the"
+" Landing Page."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:77 f1f776f9b0de402d834761bfd001b4e1
+msgid "Email builder overview"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rstNone c0c3999a79c34949bbf15dea0b909f14
+msgid "Screenshot of the editor overview"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:83 7f154bca6f8448efac2cf8ecede65056
+msgid "The functions of the Email builder are as follows:"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:85 be58883b099748ef9e38465060004ccd
+msgid "You can select different screen size to preview your Emails."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:87 cae73d6cb2dd49f2a5a44b3b7e61d6ed
+msgid "You have the ability to undo and redo your changes."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:89 bf68da647da94ff4ac19e227bc7f81cd
+msgid ""
+"Editor functions from left to right: display grids, Full screen view, export"
+" MJML / HTML code, Edit code, display customization options, display blocks,"
+" close editor."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:91 2042fe91a0f641889c1ff80f1d47709e
+msgid ""
+"Layout sections: these objects function as the basic structure of your "
+"design. Create your Email structure from sections, and pull in the different"
+" blocks you want to use."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:93 ac69b59310f045ba934d07a36ccf6507
+msgid ""
+"Content blocks: you can populate your newsletter with these content blocks. "
+"Each block has specific layout, settings and design."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:96 eab30a00baec456dbd19bbfec26bfa6c
+msgid "Templates"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:98 c08ab882d0e54966beb47c8be7721337
+msgid ""
+"To use your existing templates with the new builder, you need to add one "
+"line to your configuration file in the template folder:"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:100 0dea42ad91a94015970c77aead9bd26e
+msgid "``\"builder\": [\"grapesjsbuilder\"],``"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:102 b91dfa447fb14532be9b9a7c3bd327f2
+msgid ""
+"If you wish to use the Theme in multiple builders, you can use this syntax:"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:104 7ea8c8f582824783aec21dc804d8f5da
+msgid "``\"builder\": [\"legacy\", \"grapesjsbuilder\"],``"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:108 63ddb9477e7045c48114e36e069002c7
+msgid ""
+"This syntax changed between Mautic 3.3.* and Mautic 4 to enable support for "
+"multiple builders - if you have been testing in the beta phase you need to "
+"update your configuration files to avoid a 500 error."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:110 2798a9ee8d514a2eaf8a46e0c9256372
+msgid "The Blank Theme contains an example of a full configuration file:"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:122 5c0307460c07426291cedc06a25b2a51
+msgid ""
+"From the 3.3 General Availability release there are be three Email templates"
+" that support MJML."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:125 8a3539048ce14197b79a428dba7bc361
+msgid "Themes"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:127 10b06892130f43739d1db89262afe7ff
+msgid ""
+"If you search through the list of available Themes, the new MJML Themes "
+"``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new "
+"builder."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:129 ca5a0939439a41ee9a3a83fcf4edd2f7
+msgid ""
+"To learn more about creating Themes please :doc:`check the "
+"documentation</builders/creating_themes>`."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:132 661dff41686f4279b2738e166cff0a59
+msgid "Reporting bugs"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:135 052534741f2c4b6383a108ecc76dedb8
+msgid "Known bugs / issues"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:137 57ca6808767c49979a5fc5bfd6dd05db
+msgid ""
+"Please use the issue queue on the :xref:`GitHub repository` to find the "
+"latest updates and to raise bugs with the Plugin. Be sure to search first in"
+" case someone has already reported the bug."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:140 7034079747f944659ca956592236f1df
+msgid "Switching back to the legacy Builder"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:142 def1f13f161940ea84c5100bc81c2858
+msgid ""
+"In case you aren't happy with the Plugin at the moment, you can easily "
+"switch back to the legacy Builder (original Mautic Builder). You can do so "
+"very quickly:"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:144 77265e3f7b8b4bc6a27c4ad248832eaa
+msgid ""
+"Go to Mautic Settings > Click the cogwheel on the right-hand top corner"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:146 41c51389dc2f43b185d6632402531dbb
+msgid "Open the Plugins Directory > click \"Plugins\" inside the menu"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:148 d75c5c4f88f44a4fa2aa00354b952e10
+msgid ""
+"Find the GrapesJs Plugin and click it > Click \"No\" and then \"Save and "
+"Close\""
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:150 36dedc71500b439298da09431dd4e578
+msgid ""
+"Clear the cache and reload the Landing Page - you may also need to clear "
+"your browser cache."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:152 a59aa4c315364418b448ea51fe0828f2
+msgid ""
+"After unloading GrapesJs Plugin, the legacy builder becomes active again."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:155 9486031c955f43eaa2a6c6938fa49750
+msgid "Thanks and credits"
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:157 3bdf114ecd354cd58ff967f1721f8cd4
+msgid ""
+"Thank you to everyone who contributed to this project. Special thanks to "
+"Adrian Schimpf from :xref:`Aivie` for all their hard work in leading the "
+"project, to :xref:`Webmecanik` for initializing this amazing new builder and"
+" to Joey from :xref:`Friendly Automate` for donating three Email Themes to "
+"the Community. Additional contributions from Alex Hammerschmied from "
+":xref:`hartmut.io`, Dennis Ameling."
+msgstr ""
+
+#: ../../builders/grapesjs_builder.rst:159 e3d03e9ebbbb4b7290e21f6bf32b2930
+msgid ""
+"And of course a really big thank you to all the contributors who have helped"
+" to bring this project to this point."
+msgstr ""

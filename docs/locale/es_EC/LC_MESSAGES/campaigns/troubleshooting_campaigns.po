@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:18+0000\n"
+"Language-Team: Spanish (Ecuador) (https://www.transifex.com/mautic/teams/33223/es_EC/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_EC\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../campaigns/troubleshooting_campaigns.rst:4
+#: b3f5e65167774ab3ab5db2d4d6cacdd0
+msgid "Troubleshooting Campaigns"
+msgstr ""
+
+#: ../../campaigns/troubleshooting_campaigns.rst:9
+#: d4eb613f8db74151bdd30d4408ebfdad
+msgid "Page visits aren't recognized"
+msgstr ""
+
+#: ../../campaigns/troubleshooting_campaigns.rst:11
+#: 62c3495c020c48b995ec436d2584143e
+msgid "To workaround this issue, try one of the following options:"
+msgstr ""
+
+#: ../../campaigns/troubleshooting_campaigns.rst:13
+#: ea1f368f35b04dabb6f044704e3120e6
+msgid ""
+"Make sure that you aren't testing the Page visit while logged into Mautic. "
+"Mautic ignores activity from Mautic Administrators. So, it's suggested that "
+"you use an anonymous session, an incognito window, another browser, or log "
+"out of Mautic."
+msgstr ""
+
+#: ../../campaigns/troubleshooting_campaigns.rst:15
+#: c63c17667a3144608b97a05e9e6bca78
+msgid ""
+"Ensure that the Contact getting tracked is in the Campaign. The easy way to "
+"test this is to review the timeline of the Contact for the page hit / "
+"inclusion into the Campaign."
+msgstr ""
+
+#: ../../campaigns/troubleshooting_campaigns.rst:17
+#: 56122a5b4a8146cb9d12b1510f05a224
+msgid ""
+"Mautic executes Campaigns sequentially and won't repeat per Contact. If the "
+"Contact has already visited the Page while part of the Campaign and "
+"triggered the Visits a Page decision, then the Contact's subsequent visits "
+"won't re-trigger the actions associated with the decision."
+msgstr ""
+
+#: ../../campaigns/troubleshooting_campaigns.rst:19
+#: bbcbb535a7fd448ca373c87ebb445782
+msgid ""
+"Ensure that the URL in the Campaign action either matches exactly the URL "
+"visited, or use a wildcard. A URL can include the schema, host/domain, path,"
+" query parameters, and/or fragment. For example, if you have a URL of "
+"``https://example.com`` and the page hit registers as "
+"``https://example.com/index.php?foo=bar``, the Campaign decision won't "
+"trigger. However, if you use ``https://example.com*`` as the URL, it matches"
+" the rule and thus gets triggered."
+msgstr ""
+
+#: ../../campaigns/troubleshooting_campaigns.rst:21
+#: f462e5f552d947acb7a36c79a580a2e0
+msgid ""
+"Another example is if you want to associate different page hits with "
+"specific Campaigns. For example, if you have Campaign A and Campaign B and "
+"you want to use the same base URL and path for both Campaigns but "
+"differentiate with a query parameter. For Campaign A, you can define a "
+"Visits a Page decision with ``https://example.com/my-page?utm_campaign=A*`` "
+"and for Campaign B, ``https://example.com/my-page?utm_campaign=B*``. A "
+"Contact only triggers the specific Campaign desired. If the goal is to "
+"trigger both Campaigns regardless of the query parameters, use "
+"``https://example.com/my-page*``."
+msgstr ""
