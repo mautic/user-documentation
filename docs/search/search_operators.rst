@@ -1,7 +1,7 @@
 .. vale off
 
-Search
-######
+Searching Mautic
+################
 
 .. vale on
 
@@ -17,7 +17,7 @@ The search filters for that entity aren't available if such a button is missing.
    
 |
 
-Mautic also has a "global search" feature. In the top left-hand corner, click on the magnifying glass icon next to the Mautic logo/notifications icon. This will open a search input where you can search across multiple different entities.
+Mautic also has a 'global search' feature. In the top left-hand corner, click the magnifying glass icon next to the Mautic logo/notifications icon. This will open a search input where you can search across multiple different entities.
 
 .. image:: images/global-search.png
    :align: center
@@ -28,31 +28,31 @@ Mautic also has a "global search" feature. In the top left-hand corner, click on
 Search operators
 ----------------
 
-The following search operators can be used:
+Here are some search operators you can use:
 
-* ``+`` (plus sign) - Search for the exact string (i.e. if admin, then administrator will not match).
+* ``+`` plus sign - Search for the exact string, for example, if administrator, then administrator won't match.
 
-* ``!`` (exclamation mark) - Not equals string
+* ``!`` exclamation mark - Not equals string
   
-* ``" "`` (double quotes) - Search by phrase
+* ``" "`` double quotes - Search by phrase
   
-* ``( )`` (parentheses) - Group expressions together.
+* ``( )`` parentheses - Group expressions together.
   
-* ``OR`` - By default the expressions will be joined as AND statements. Use the OR operator to change that.
+* ``OR`` - By default the expressions joins as ``AND`` statements. Use the OR operator to change that.
 
-* ``%`` - Use the % as a wildcard to search for specific names or values in a phrase (i.e. to find all companies with the word ‘Technologies’ then type %technologies%)
+* ``%`` - Use the % as a wildcard to search for specific names or values in a phrase for example, to find all Companies with the word ‘Technologies’ then type %technologies%
   
 Search filters
 --------------
 
-The following search filters can be used:
+Here are some search filters you can use:
 
 Contacts
 ~~~~~~~~
 
 .. code-block::
     
-        is:anonymous
+    is:anonymous
     is:unowned
     is:mine
     email:*
@@ -75,7 +75,7 @@ Companies
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
@@ -87,7 +87,7 @@ Segments
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:global
     name:*
     category:category-alias
@@ -97,7 +97,7 @@ Assets
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:mine
     is:published
     is:unpublished
@@ -110,7 +110,7 @@ Forms
 
 .. code-block:: 
    
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:mine
     is:published
     is:unpublished
@@ -119,12 +119,16 @@ Forms
     is:uncategorized
     category:{category alias}
 
+.. vale off
+
 Landing Pages
 ~~~~~~~~~~~~~
 
+.. vale on
+
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
@@ -133,12 +137,12 @@ Landing Pages
     category:{category alias}
     lang:{lang code}
 
-Dynamic Content
+Dynamic content
 ~~~~~~~~~~~~~~~
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
@@ -152,7 +156,7 @@ Emails
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
@@ -165,7 +169,7 @@ Focus items
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
@@ -177,7 +181,7 @@ Manage actions
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
@@ -189,7 +193,7 @@ Manage triggers
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
@@ -201,7 +205,7 @@ Stages
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
@@ -213,7 +217,7 @@ Reports
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
@@ -225,7 +229,7 @@ Users
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:admin
     is:active
     is:inactive
@@ -244,7 +248,7 @@ Webhooks
 
 .. code-block:: 
 
-        ids:ID1,ID2 (comma separated IDs, no spaces)
+    ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
     is:unpublished
     is:mine
