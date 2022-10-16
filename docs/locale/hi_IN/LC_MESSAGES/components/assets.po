@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:18+0000\n"
+"Language-Team: Hindi (India) (https://www.transifex.com/mautic/teams/33223/hi_IN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi_IN\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../components/assets.rst:2 25a2e73b85b14c4cafb3173b8b869cd1
+msgid "Assets"
+msgstr ""
+
+#: ../../components/assets.rst:4 2c111c9d1fda4d6198f8e89c542411d8
+msgid ""
+"Assets are pieces of content you want to make available for your Contacts to"
+" access. You want to track and analyse  who is viewing or downloading your "
+"Assets. You also may want to personalize the Contact's journey based on what"
+" Assets they interacted with. You may also do scoring based on interaction "
+"with Assets."
+msgstr ""
+
+#: ../../components/assets.rst:9 4049d15f37ac4bd0a25f5c4fc0835d96
+msgid "Managing Assets"
+msgstr ""
+
+#: ../../components/assets.rst:12 8208e45088c94c1dba822a19f81329d2
+msgid "Asset Categories"
+msgstr ""
+
+#: ../../components/assets.rst:16 ef2771716bdb4737bf2ea7bb746fd23e
+msgid ""
+"Mautic allows you to organize Assets into Categories, which helps you easily"
+" locate resources. To create a new Category, review the "
+":doc:`/categories/categories-overview` documentation."
+msgstr ""
+
+#: ../../components/assets.rst:21 87510413f17f4ed2974fed215f6815aa
+msgid "Working with Assets"
+msgstr ""
+
+#: ../../components/assets.rst:25 83ea75311a6d41e4a6af9e4c1316fb1c
+msgid ""
+"Before creating an Asset, first establish and publish any Categories "
+"required. It's not possible to assign Assets to unpublished Categories. If "
+"you wish to use an Integration such as the Amazon S3 Plugin to host your "
+"files, set this up before creating an Asset."
+msgstr ""
+
+#: ../../components/assets.rst:30 6c7057bb66a04510817f45d6d65bef0e
+msgid "Creating a new Asset"
+msgstr ""
+
+#: ../../components/assets.rst:34 4f82056558ef499ba2508c52a3d15f26
+msgid ""
+"Navigate to Components > Assets. Mautic lists any Assets you have previously"
+" created. Click New to begin creating an Asset."
+msgstr ""
+
+#: ../../components/assets.rst:36 af74a9e62ac84ed3985b735930c4f611
+msgid ""
+"You create Assets by uploading local resources on your computer, or by "
+"locating the Asset from a remote storage host such as Amazon S3. There are "
+"limitations by size due to the settings of your server - any such "
+"restriction may display as a warning message in the file upload section."
+msgstr ""
+
+#: ../../components/assets.rst:41 0d7a9c7c7b5f4b4bade2db2645456dd4
+msgid "Uploading an Asset"
+msgstr ""
+
+#: ../../components/assets.rst:45 60a0fd1505444c1d842988bfc2c96c79
+msgid ""
+"To upload an Asset, either drag the file into the box, or click in the box "
+"to open a file upload window. On selection of the file, it's automatically "
+"uploaded and appears in the boxed area."
+msgstr ""
+
+#: ../../components/assets.rst:47 5f737b3e16d84e14a90d3bc81a059630
+msgid "By default Mautic allows the following file types:"
+msgstr ""
+
+#: ../../components/assets.rst:53 88b2553065ae4dbeabbe59f12f1888b6
+msgid ""
+"If you need to add extra file types, configure the maximum size of upload or"
+" the Assets directory, navigate to Configuration > Asset Settings."
+msgstr ""
+
+#: ../../components/assets.rstNone 2a566fc778a24cde931a160ce5242696
+msgid "Screenshot of Asset settings"
+msgstr ""
+
+#: ../../components/assets.rst:59 fe30df2570e24972b48b04e958271321
+msgid "The following fields are available:"
+msgstr ""
+
+#: ../../components/assets.rst:61 43bfec3db4f24cc4a306a8d426a6acfc
+msgid "**Title** - the title for the Asset"
+msgstr ""
+
+#: ../../components/assets.rst:62 149233e84e6c4c16b82b2f7d421e4753
+msgid ""
+"**Alias** - used to create the slug on the download URL. Created from the "
+"title automatically if not provided."
+msgstr ""
+
+#: ../../components/assets.rst:63 6da4b7cbd3cd47bf99db87bc50500cc7
+msgid ""
+"**Description** - an internally used description to inform other Mautic "
+"Users what the Asset is and/or where it's used."
+msgstr ""
+
+#: ../../components/assets.rst:64 d78f478859f341809c964085e57390c0
+msgid ""
+"**Category** - used to organize resources - see "
+":doc:`/categories/categories-overview` for more information"
+msgstr ""
+
+#: ../../components/assets.rst:65 2c70f1d3555a4780b86ed4d9a33e8204
+msgid ""
+"**Language** - the language of this Asset - can be helpful in multilingual "
+"marketing Campaigns and for reporting purposes"
+msgstr ""
+
+#: ../../components/assets.rst:66 c2173a8338ab4dc096e77cbcc4e25d21
+msgid ""
+"**Published** - Whether the Asset is available for use - published - or not "
+"available - unpublished"
+msgstr ""
+
+#: ../../components/assets.rst:70 524f997f0f3e4ba7ae8fd0894b26113c
+msgid ""
+"**Publish at (date/time)** - This allows you to define the date and time at "
+"which this Asset is available"
+msgstr ""
+
+#: ../../components/assets.rst:72 1eb1f3ed2ab94a76b75aaa193fc25e45
+msgid ""
+"**Unpublish at (date/time)** - This allows you to define the date and time "
+"at which this Asset ceases to be available"
+msgstr ""
+
+#: ../../components/assets.rst:76 a9cf6b0906d24f66b70b03cbb150b009
+msgid ""
+"**Block search engines from indexing this file** - If you don't want to "
+"index files like PDF, DOCx and so forth, setting this switch to Yes sends "
+"the X-Robots-Tag no-index http header. If set to No, the header isn't sent "
+"and your files could become indexed by search engines."
+msgstr ""
+
+#: ../../components/assets.rst:78 7b499240cf2d4fcb82b3d6c369fb6121
+msgid ""
+"Depending on the type of file uploaded, a preview may display after the "
+"upload completes."
+msgstr ""
+
+#: ../../components/assets.rstNone 4a165c382b8c45b68e2a64cff645990e
+msgid "Screenshot of create new Asset interface"
+msgstr ""
+
+#: ../../components/assets.rst:87 840d3e0880bc486ca890a9c8f2520345
+msgid "Using remote Assets"
+msgstr ""
+
+#: ../../components/assets.rst:91 48fac9a26b7b4f2ba30962c611d63e99
+msgid ""
+"Instead of uploading a file from your computer, you can either provide a "
+"link to a file on a cloud storage provider or browse your integrated cloud "
+"storage provider - for example an Amazon S3 bucket - by selecting the Remote"
+" tab, rather than Local."
+msgstr ""
+
+#: ../../components/assets.rst:96 308479b972124c858f7bc7b2a28ae694
+msgid "Viewing an Asset"
+msgstr ""
+
+#: ../../components/assets.rst:100 072a5d87fc874ce98dcd7e1cc64b6c7e
+msgid ""
+"Once you've uploaded an Asset, you'll want to make it available for your "
+"Contacts to access it. Using the Download URL from the Asset section in "
+"Mautic, you can track which Contacts are downloading or viewing the Assets."
+msgstr ""
+
+#: ../../components/assets.rst:102 a4122476267e44da883d06af83531e36
+msgid ""
+"Copy and paste the link into your website, on a landing page, or as a link "
+"in an Email."
+msgstr ""
+
+#: ../../components/assets.rst:105 17d8f6e877fa4d8f8c0d0e79c72b8f72
+msgid ""
+"In a Mautic Email or Landing Page, append ``?stream=1`` to the end of the "
+"URL to open the Asset in a new tab."
+msgstr ""
+
+#: ../../components/assets.rst:107 b91fe6d974844c5490a6b57ba0aeab29
+msgid ""
+"Whether the Asset downloads or opens in a new tab depends on the Contact's "
+"browser settings. To gate an Asset by requiring them to submit some "
+"information before downloading, you may have a Form submit action to "
+"download an Asset."
+msgstr ""
+
+#: ../../components/assets.rst:109 207c38d5b9184d4cb6d67cc4b486ecf4
+msgid ""
+"To ensure that Contacts are providing you with valid Email addresses for "
+"high-value Assets, attach the Asset to an Email and use the send Email Form "
+"submit action rather than instantly downloading the Asset."
+msgstr ""
+
+#: ../../components/assets.rst:114 9d457c4170ce42d2890a87c10c80888c
+msgid "Editing an Asset"
+msgstr ""
+
+#: ../../components/assets.rst:118 3350a801b8ed443e9fb54056b091bbbf
+msgid ""
+"You can edit an Asset by clicking on the 'edit' button while viewing the "
+"Asset, or by selecting the arrow next to the checkbox for the Asset, and "
+"selecting 'edit'. The edit screens are the same as the view screens,with the"
+" saved content already populated in the fields."
+msgstr ""
+
+#: ../../components/assets.rst:123 5b48c14edda141fcbe460d09fac1f951
+msgid "Deleting an Asset"
+msgstr ""
+
+#: ../../components/assets.rst:127 422d1d4337d7484f99508a52adc06e8b
+msgid ""
+"It's possible to delete an Asset by clicking on the 'delete' button while "
+"viewing the Asset, or by selecting the arrow next to the checkbox for the "
+"Asset, and selecting 'delete'. Mautic displays a confirmation screen, "
+"prompting confirmation that you wish to delete the Asset."
+msgstr ""
+
+#: ../../components/assets.rst:130 82e8340b78ae47c4805ebb03b5df0602
+msgid ""
+"Once deleted, you can't retrieve an Asset, and statistics relating to the "
+"number of downloads for that Asset are no longer be available. Contact "
+"Points accumulated as a result of accessing the resource remain. It's "
+"recommended where possible to unpublish Assets which are no longer in use - "
+"in future there may be an archive feature."
+msgstr ""
