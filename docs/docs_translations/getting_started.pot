@@ -1,0 +1,924 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../getting_started/how_to_install_mautic.rst:2
+msgid "Installation"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:4
+msgid "There are several ways to install Mautic, you should select the most appropriate method for your situation and technical knowledge."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:6
+msgid "Installing :ref:`using the production package<Using the production package>`, with either the :ref:`web-based installer<using the web-based installer>` or :ref:`from the command line<Installing with command line>`."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:8
+msgid "Installing locally by :ref:`cloning from GitHub<Installing from GitHub>` - for testing and local development,"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:10
+msgid ":ref:`Installing with Composer`"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:13
+msgid "Using the production package"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:15
+msgid "You can install the Mautic production package either by uploading the zipped installation package into the server location or using the command-line installation. The Mautic production package also requires access to a database server."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:17
+msgid "The Mautic installation is a three-step process:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:19
+msgid "Integrate the database server with the Mautic server."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:21
+msgid "Create an administrator account to access the Mautic server."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:23
+msgid "Set up the Email server for Email marketing automation."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:26
+msgid "Preparing for installation"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:28
+msgid "Before installing a package, ensure that:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:30
+msgid "Your server environment meets the minimum requirements for the version you are installing. Read more in :xref:`Mautic's Requirements`."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:32
+msgid "Your server directory is writable by the Mautic web server."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:34
+msgid "Your database meets the minimum requirements for the supported databases and valid User permissions to access to the database. Read more in :xref:`Mautic's Requirements`."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:36
+msgid "Your server has enough free disk space to run the installation. Consider the database size as well."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:38
+msgid "PHP's `max_execution_time` is at least 240 seconds."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:41
+msgid "Downloading a production package"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:43
+msgid "To get started :xref:`Download Mautic` to access the zip file of the latest stable release."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:45
+msgid "For more information about the available Mautic packages, visit the :xref:`Mautic Releases` Landing Page."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:48
+msgid "Uploading the production package"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:50
+msgid "After downloading a desired package, upload the package zip file to your web server, and unzip it in the directory where you plan to host the Mautic instance."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:52
+msgid "Your web server must have the permissions to access the unzipped files."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:55
+msgid "Using the web-based installer"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:57
+msgid "To access the Mautic server from your browser, enter the URL that corresponds to the Mautic instance (for example, `https://m.example.com`) in your web browser. It's recommended to secure your installation with an SSL certificate (https)."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:60
+msgid "Conducting environment checks"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:62
+msgid "After loading the package in the server, the Mautic installer validates if it can run successfully in your server environment."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:64
+msgid "You must resolve installation errors, displayed in red, before completing the Mautic package installation successfully. Warnings, displayed in orange, are often recommendations for a better Mautic experience."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:None
+msgid "Screenshot showing Mautic pre-flight checks with warning about installing on a non-SSL connection"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:70
+msgid "If the environment checks are successful - displayed in green - click **Next Step** to begin the installation process."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:73
+msgid "Integrating the database"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:75
+msgid "Mautic assumes that the database is on the same server as Mautic."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:77
+msgid "For setting the database server on the **Mautic Installation-Database Setup** window:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:79
+msgid "Select **Database Driver**."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:81
+msgid "Enter **Database Host**."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:83
+msgid "Enter **Database Name**."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:85
+msgid "Enter **Database Username**."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:87
+msgid "If desired, you can also enter values for **Database Port**, **Database Table Prefix**, **Database Password**, and **Prefix for backup tables**."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:89
+msgid "**Backup existing tables?** is on by default, but you should turn it off for a new installation."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:None
+msgid "Screenshot of database configuration screen"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:95
+#: ../getting_started/how_to_install_mautic.rst:106
+msgid "Click **Next Step**."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:98
+msgid "Creating the administrator account"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:100
+msgid "To create an Administrator account for your Mautic instance, enter values for the different fields on the **Mautic Installation - Administrative User** window."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:None
+msgid "Screenshot showing the create User screen"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:111
+msgid "Configuring Email settings"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:115
+msgid "To configure your Email settings for your Mautic instance, enter details of your Email provider on the **Mautic Installation - Email Configuration** window. You can use a tool such as :xref:`Mailhog` to configure a local instance for testing."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:None
+msgid "Screenshot showing the Email configuration screen"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:121
+msgid "For configuring your Email sender settings:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:123
+msgid "Enter the name and Email address to use with all outgoing Email communications by default. Verify that the provided Email address has been successfully authorized by your Email provider."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:125
+msgid "**Queue** Emails and send them through a cron job - to trigger the queue processing - instead of sending them immediately for larger instances of Email handling."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:127
+msgid "Select **Mailer transport**. If your provider isn't listed, select **Other SMTP Server** and provide the SMTP credentials. API-based sending is significantly faster than SMTP. Depending on the provider you select, additional fields appear to allow you to enter API keys and select regions."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:129
+msgid "Enter **Server** and **Port** for your Email provider."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:131
+msgid "Select **Encryption** and **Authentication mode** for your Email provider."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:133
+msgid "Click **Next Step** to log into the Mautic server."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:136
+msgid "Logging into Mautic"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:138
+msgid "On the Mautic login window, enter your Mautic administrator credentials to log into your Mautic instance."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:None
+msgid "Screenshot of Mautic login screen"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:144
+msgid "Click **login** to continue working on your Mautic instance."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:147
+msgid "Installing with command line"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:149
+msgid "You can also install Mautic using the command line. You can either pass the settings parameters in the command, or create a local PHP file with your database settings. You can also define properties in this file using the syntax expected by the command-line options."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:151
+msgid "Use the command ``path/to/php bin/console mautic:install --help`` for the list of options and flags available."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:181
+msgid "Use the syntax below within a ``local.php`` file:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:210
+msgid "Installing with a local PHP file"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:212
+msgid "Run the following command after replacing the path to PHP bin and Mautic instance URL."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:214
+msgid "``path/to/php bin/console mautic:install https://m.example.com``"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:216
+msgid "If desired, you can also add parameters in the install command:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:226
+msgid "As the installation process begins, it flags up warnings and aborts if there are any critical errors."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:248
+msgid "You can now login to your Mautic instance with your Mautic Admin credentials."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:251
+msgid "Installing from GitHub"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:253
+msgid "It's essential to have all the files locally - including automated tests - from the GitHub repository when testing Mautic or contributing to it. Many of these files aren't included in the production build process."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:256
+msgid "Cloning Mautic from GitHub"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:258
+msgid "Install the :xref:`GitHub CLI` tool."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:260
+msgid "Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork. You can also click to go directly to your fork if you already have one, if you don't then GitHub will offer to create one.."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:262
+msgid "After the fork is complete, click the green **Code** button to access the command for cloning the repository."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:264
+msgid "Switch to your terminal, and when in the directory where you wish to install Mautic, paste the command using the :xref:`GitHub CLI` tool this is in the format:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:272
+msgid "Please always choose to fork into a **personal account** rather than an organization. The latter prevents Mautic's maintainers from working with your Pull Request."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:275
+msgid "Install Mautic using DDEV"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:277
+msgid "You can use :xref:`DDEV` which is recommended for testing and development with Mautic. To get started:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:280
+msgid "Install :xref:`DDEV`."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:282
+msgid "Install and ensure you have :xref:`Docker` running on your system."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:284
+msgid "You can now change into the Mautic directory and kick off the DDEV quickstart using the command:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:292
+msgid "For troubleshooting see :xref:`DDEV Troubleshooting`."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:294
+msgid "See Mautic's :xref:`Handbook` for more detailed instructions."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:298
+msgid "This spins up a DDEV instance (which includes Mailhog, PHPMyAdmin, and Redis Commander) - by default at ``https://mautic.ddev.site`` - and also gives the option to set up Mautic ready for you to use. .. vale on"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:301
+msgid "This runs through the Composer install process, and installs Mautic at the command line with a default username of ``admin`` and password of ``mautic``."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:304
+msgid "Installing with Composer"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:306
+msgid "Since :xref:`Mautic 4` it's possible to install and manage Mautic using the full power of Composer. Mautic uses the latest version of :xref:`Composer`."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:308
+msgid "Mautic is in the process of decoupling Plugins and Themes from core, however at present while they have been technically mirrored out into separate repositories, the source files remain in the main :xref:`Mautic GitHub repository`."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:310
+msgid "When you clone from GitHub, running ``composer install`` installs all the dependencies, there are some other handy features which you can take advantage of when installing and managing Mautic."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:315
+msgid "Using the Recommended Project"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:319
+msgid "The Mautic :xref:`Recommended Project` is a template which provides a starter kit for managing your Mautic dependencies with Composer."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:322
+msgid "The instructions below refer to the global Composer installation. You might need to replace Composer with ``php composer.phar`` or something similar for your setup."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:324
+msgid "The basic command to use the Recommended Project is:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:330
+msgid "With Composer you can add new dependencies to install along with Mautic:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:337
+msgid "The Composer ``create-project`` command passes ownership of all files to the created project. You should create a new git repository, and commit all files not excluded by the .gitignore file."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:342
+msgid "What does the Recommended Project template actually do?"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:346
+msgid "When installing the given ``composer.json`` the following occurs:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:348
+msgid "Install Mautic in the ``docroot`` directory."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:349
+msgid "Autoloader uses the generated Composer autoloader in ``vendor/autoload.php``, instead of the one provided by Mautic in ``docroot/vendor/autoload.php``."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:350
+msgid "Plugins - packages of type ``mautic-plugin`` - are in ``docroot/plugins/``."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:351
+msgid "Themes - packages of type ``mautic-theme`` - are in ``docroot/themes/``."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:352
+msgid "Creates ``docroot/media`` directory."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:353
+msgid "Creates environment variables based on your ``.env`` file. See ``.env.example``."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:358
+msgid "Updating Mautic Core"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:362
+msgid "The Recommended Project attempts to keep all of your Mautic core files up-to-date."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:364
+msgid "The project ``mautic/core-composer-scaffold`` updates your scaffold files whenever there is an update to ``mautic/core-lib``."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:366
+msgid "If you customize any of the \"scaffolding\" files - commonly .htaccess - you may need to merge conflicts if new release of Mautic Core result in changes to your modified files."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:368
+msgid "Follow the steps below to update your core files."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:370
+msgid "1 Run ``composer update mautic/core-lib --with-dependencies`` to update Mautic core and its dependencies."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:372
+msgid "2 Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to .htaccess or others."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:374
+msgid "3 Commit everything all together in a single commit, so the ``docroot`` remains in sync with the core when checking out branches or running git bisect."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:376
+msgid "4 In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:378
+msgid "5 Run the following commands to update your database with any changes from the release:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:391
+msgid "Composer FAQs"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:396
+msgid "Should you commit downloaded third party Plugins?"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:398
+msgid "Composer says that the :xref:`Composer commit dependencies`. They provide arguments against but also workarounds if a project decides to do it anyway."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:401
+msgid "Should you commit the scaffolding files?"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:403
+msgid "The :xref:`Mautic Composer scaffold` Plugin can download the scaffold files - for example ``index.php``, ``.htaccess`` - to the ``docroot/`` directory of your project."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:406
+msgid "If you haven't customized those files you could choose to not commit them in your version control system - for example, git. If that's the case for your project it might be convenient to automatically run the Mautic Scaffold Plugin after every install or update of your project."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:410
+msgid "You can achieve that by registering ``@composer mautic:scaffold`` as post-install and post-update command in your composer.json:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:428
+msgid "How can you apply patches to downloaded Plugins?"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:430
+msgid "If you need to apply patches - depending on the Plugin, a pull request is often a better solution - you can do so with the ``composer-patches`` Plugin."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:432
+msgid "To add a patch to Mautic Plugin foobar insert the patches section in the extra section of ``composer.json``:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:448
+msgid "How can you specify a PHP version?"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:452
+msgid "This project supports PHP 7.4 as the minimum version currently - review :xref:`Mautic's Requirements` however, it's possible that a Composer update may upgrade some package that could then require PHP 7+ or 8+."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:454
+msgid "To prevent this you can add this code to specify the PHP version you want to use in the config section of ``composer.json``:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:467
+msgid "How can you use another folder than ``docroot`` as the root folder?"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:469
+msgid "By default the ``composer.json`` file places all Mautic core, Plugin and Theme files in the ``docroot`` folder. It's possible to change this folder to your own needs."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:472
+msgid "In following examples, ``docroot`` moves into ``public``."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:475
+msgid "New installations"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:477
+msgid "Run the create-project command without installing:"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:483
+msgid "Do a find and replace in the ``composer.json`` file to change ``docroot/`` into ``public/``"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:484
+#: ../getting_started/how_to_install_mautic.rst:497
+msgid "Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:485
+msgid "Run ``composer install`` to install all dependencies in the correct location"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:488
+msgid "Existing installations"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:490
+msgid "Move the ``docroot/`` to ``public/``"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:496
+msgid "Do a find and replace in the ``composer.json`` file to change ``docroot/`` to ``public/``"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:498
+msgid "Run ``composer update --lock`` to ensure the autoloader is aware of the changed folder"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:503
+msgid "Setting up a local testing environment with DDEV"
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:507
+msgid "Often there is a need to have a local environment for testing Mautic - for example making a backup, testing new features or bug fixes."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:509
+msgid "In Mautic, DDEV is the tool of choice for this purpose. It's very easy to work with."
+msgstr ""
+
+#: ../getting_started/how_to_install_mautic.rst:511
+msgid "To learn how to set up DDEV with Mautic, please review the documentation in the Contributors Handbook at https://contribute.mautic.org/contributing-to-mautic/tester."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:4
+msgid "How to update Mautic"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:8
+msgid "There are two ways to update Mautic:"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:10
+msgid "Using the Command Line - recommended"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:11
+msgid "Through the User interface"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:13
+msgid "If your instance is in production, has a large number of Contacts and/or is  on shared hosting, it's **strongly** recommended that you update at the command line."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:16
+msgid "Updating in the User interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. A failed update or corrupted data can result from this. It's planned to remove this feature in Mautic 5.0, requiring updating at the command line."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:19
+msgid "Updating at the command line (non-Composer based installations)"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:21
+msgid "Before you commence updating Mautic, **please ensure that you have a tested backup of your Mautic instance**."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:23
+#: ../getting_started/how_to_update_mautic.rst:93
+msgid "This means that you have downloaded the files and database of your Mautic instance, and you have re-created it in a test environment somewhere and tested that everything is working as expected. This is your only recourse if there are any problems with the update. Never update without having a working, up-to-date backup."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:26
+msgid "Checking for updates at the command line"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:28
+msgid "Mautic can only be updated using Composer via the command line from version 5.0."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:30
+msgid "The update feature within the Mautic User interface (UI) has been deprecated from Mautic 4.2, but you will be alerted within the UI (see below figure) when a new version of the Mautic is available."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:None
+msgid "Screenshot showing deprecated update feature warning"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:38
+msgid "Before starting to upgrade, it's highly recommended to take a backup of your instance. If updates are available, you will receive an update notification followed by step-by-step instructions in the command-line interface to complete the process."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:40
+msgid "Log in via the command line, and change directory to the Mautic directory using the command:"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:48
+msgid "The first step is to find out if there are any updates available using the following command:"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:54
+msgid "The output from this command tells you if there are any updates to apply. The notification links to an announcement post which explains what the release includes, and the recommended environment requirements if they are not being met (for example, a higher version of PHP must be installed or plugins that must be updated)."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:57
+msgid "It's a good idea to review the announcement link for information about the release. There may be important information or steps that you may need to take before updating."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:59
+msgid "After a system readiness check, you can apply the updates."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:62
+msgid "Installing updates at the command line"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:64
+msgid "If there are updates available, run the following command to apply them:"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:71
+msgid "This is followed by a prompt to run the command again with this additional argument:"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:79
+msgid "Updating in the browser"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:81
+msgid "When updating Mautic, there are several tasks which can take a long time to complete depending on the size of your Mautic instance."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:85
+msgid "If you have a lot of contacts and/or use shared hosting, you might run into problems when updating with the notification 'bell' icon in Mautic."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:87
+msgid "When updating within the browser, problems usually manifest as the update hanging part way through, or crashing with an error. They often arise as a result of resource limitation, particularly on shared hosting environments."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:89
+msgid "For this reason, it's always recommended that you :ref:`update at the command line<installing updates at the command line>` wherever possible. From Mautic 5.0 the ability to update in the browser will be completely removed, and you will have to update at the command line."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:91
+msgid "Before you commence updating, **please ensure that you have a tested backup of your Mautic instance**."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:96
+msgid "Checking for updates in the browser"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:98
+msgid "When Mautic makes a new release, a notification appears in your Mautic instance."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:100
+msgid "The notification links to an announcement post which explains what the release includes."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:103
+msgid "It's a good idea to read the announcement link for information about the release. There may be important information or steps that you may need to take before updating."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:105
+msgid "Once you have thoroughly read the release notes, and have tested your backup Mautic instance, you can click the notification to complete the update."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:107
+msgid "The update takes time to complete, and each step updates in the browser as it proceeds. Be patient and allow it to finish. On completion, a message confirms that the update has completed successfully."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:110
+msgid "The update wasn't successful"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:112
+msgid "If this has happened to you, head over to the Troubleshooting section for a step-by-step walk-through of how to complete the update. Maybe consider using the command line next time."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:115
+msgid "Stability levels"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:117
+msgid "By default, Mautic receives notifications both in the user interface and at the command line for stable releases only."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:119
+msgid "If you wish to help with testing early access releases in a development environment, do the following"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:121
+msgid "Edit your configuration and set the stability level to Alpha, Beta, or Release Candidate. This allows you to receive notifications for early access releases."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:122
+msgid "Always read the release notes before updating to an early access release."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:123
+msgid "Never enable early access releases for production instances."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:126
+msgid "What to do if you need help updating Mautic"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:128
+msgid "If you need help, you can ask for it in several places. You should remember that most members of the Community Forums, Slack, and GitHub are volunteers."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:130
+msgid "The :xref:`Mautic Community Forums` is the place where you can ask questions about your configuration if you think it is the cause of the problem. Please search before posting your question, since someone may have already answered it."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:132
+msgid "The live :xref:`Mautic Community Slack` is also available, but all support requests have to be posted on the forums. Create your request there first, then drop a link in Slack if you plan to discuss it there."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:134
+msgid "In all cases, it's important to provide details about the issue, as well as the steps you have taken to resolve it. At a minimum, include the following:"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:136
+msgid "Steps to reproduce your problem - a step-by-step walk-through of what you have done so far"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:137
+msgid "Your server's PHP version."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:138
+msgid "The version of Mautic you are on, and the version you are aiming to update to"
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:139
+msgid "The error messages you are seeing - if you don't see the error message directly, search for it in the var/logs folder within your Mautic directory and in the server logs. Server logs are in different places depending on your setup. Ubuntu servers generally have logs in ``/var/log/apache2/error.log``. Sometimes your hosting provider might offer a graphical interface to view logs in your Control Panel."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:141
+msgid "If you don't provide the information requested as a minimum, the person who might try to help you has to ask you for it, so please save them the trouble and provide the information upfront. Also, importantly, please be polite. Mautic is an open source project, and people are giving their free time to help you."
+msgstr ""
+
+#: ../getting_started/how_to_update_mautic.rst:143
+msgid "If you are sure that you have discovered a bug and you want to report it to developers, you can :xref:`Mautic Github New Issue` on GitHub. GitHub is not the right place to request support or ask for help with configuration errors. Always post on the forums first if you aren't sure, if a bug report is appropriate this can link to the forum thread."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:4
+msgid "How to switch to Composer"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:8
+msgid "Until Mautic 4, you could download Mautic as a ZIP file and install it on any PHP server. However, many users were running into installation and update errors, many of which caused considerable frustration and in some cases, significant business disruption."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:11
+msgid "In addition, Mautic recently introduced the :ref:`Mautic Marketplace` which isn't compatible with this installation method."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:13
+msgid "As a result of the reasons mentioned above, Composer becomes the default method for installing and updating Mautic starting with the release of Mautic 5. Read more in the :xref:`composer blog post`."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:16
+msgid "Switching to a Composer-based installation"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:18
+msgid "Before starting, it's good to understand that there's two aspects to Mautic:"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:20
+msgid "The database - This is where Mautic stores your Contact data."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:22
+msgid "The codebase - This is where Mautic interacts with the database."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:24
+msgid "When switching to a Composer-based installation, the **database** isn't touched, only the **codebase.**"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:26
+msgid "In this tutorial, it's assumed that Mautic is currently installed in ``/var/www/html``."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:28
+msgid "Here's the steps to follow to switch to a Composer-based installation:"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:30
+msgid "Go to ``/var/www``"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:32
+msgid "Run ``composer create-project mautic/recommended-project:^4 html-new --no-interaction``"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:34
+msgid "Copy the following files and folders from ``/var/www/html`` to ``/var/www/html-new``:"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:36
+msgid "Configuration files - in most cases, located at ``app/config/local.php`` - move to ``docroot/app/config/local.php``"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:38
+msgid "The entire ``plugins`` directory - move to ``docroot/plugins``."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:40
+msgid "Uploads - in most cases, located at ``app/media/files`` and ``app/media/images`` - move to ``docroot/app/media/files`` and ``docroot/app/media/images`` respectively."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:42
+msgid "Custom dashboards from ``app/media/dashboards`` - move to ``docroot/app/media/dashboards``"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:44
+msgid "Any custom Themes from ``themes`` - move to ``/docroot/themes``"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:46
+msgid "Any translations from ``translations`` - move to ``/docroot/translations``"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:48
+msgid "Rename ``/var/www/html`` to ``/var/www/html-old`` and ``/var/www/html-new`` to ``/var/www/html``"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:50
+msgid "Update your web server configuration to point to ``/var/www/html/docroot`` instead of ``/var/www/html``"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:52
+msgid "Log in to Mautic, and in your global settings enable the switch to fully manage Mautic with Composer - this will also enable you to work with the Mautic Marketplace."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:None
+msgid "Screenshot of switch enable Composer"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:58
+msgid "You have successfully switched to a Composer-based installation. Test Mautic to see if it works as expected."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:63
+msgid "Frequently Asked Questions (FAQs)"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:65
+msgid "Q: Is existing data retained?"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:67
+msgid "A: Yes, switching to the Composer-based installation only affects app files. It doesn't affect your data in any way."
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:69
+msgid "Q: What's the minimum Mautic version required to switch to the Composer-based installation?"
+msgstr ""
+
+#: ../getting_started/switching_composer.rst:71
+msgid "A: It is necessary to have at least Mautic 4.0.0 in order to switch to a Composer-based installation."
+msgstr ""
