@@ -8,7 +8,7 @@ Managing Roles
 
 Access to Mautic instances is controlled by creating accounts for Users and associating them with a Role.
 
-:doc:`Users</Users_roles/managing_Users>` are the accounts an individual uses to access Mautic, whereas :ref:`Roles<managing roles>` allow or deny access to various features within Mautic.
+:doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas :ref:`Roles<managing roles>` allow or deny access to various features within Mautic.
 
 Mautic uses Roles to control which resources and actions Users can access. When team members have different responsibilities, you may not want some team members working in certain parts of Mautic. 
 
