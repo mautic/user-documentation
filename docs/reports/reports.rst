@@ -13,7 +13,6 @@ To get to Reports, click the Reports link from the menu on the left side of your
 
 |
 
-
 Data sources
 ============
 
@@ -80,7 +79,7 @@ The **Details** tab on a Report contains the same options across all Reports and
 
     * Video hits
 
-As demonstrated, Mautic displays the data sources in the format: <Parent data source> <Child data source>
+As demonstrated, Mautic displays the data sources in the format: ``<Parent data source> <Child data source>``
 
 The parent data source provides a high-level summary of the data while the child data source provides a more granular view of Contact behavior that includes your custom fields and values.
 
@@ -101,7 +100,7 @@ The parent data source provides a high-level summary of the data while the child
 Data
 ====
 
-You can customize each Report to include the columns of choice. Filter data based on set criteria and/or set a specific order for the data. In addition you can also group by and select different function operators to calculate fields. Note that when you select functions operators a totals row is added to the Report. Choosing to export a Report **won't** include this totals row.
+You can customize each Report to include the columns of choice, filter data based on set criteria, and/or set a specific order for the data. In addition you can also group by specific fields, and select different function operators to calculate fields. Note that when you select functions operators, a totals row is added to the Report. Choosing to export a Report **won't** include this totals row.
 
 .. image:: images/mautic-report-data.png
    :align: center
@@ -153,7 +152,7 @@ Use the toggle switch to turn on or off sending Reports via email.
 
 * Email Report - Select **Yes** to see additional options.
 
-* To - Specify the email addresses that should receive the Report. To send to multiple recipients, separate their email addresses with a comma. For example, ``example1@yourcompany.com``, ``example2@yourcompany.com``. 
+* To - Specify the email addresses that should receive the Report. To send to multiple recipients, separate their email addresses with a comma. For example, ``example1@example.com``, ``example2@example.com``. 
 
 * **Every** - Select the frequency with which you’d like to automatically send the Report:
 
