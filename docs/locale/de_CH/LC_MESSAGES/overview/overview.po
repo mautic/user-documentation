@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:18+0000\n"
+"Language-Team: German (Switzerland) (https://www.transifex.com/mautic/teams/33223/de_CH/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_CH\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../overview/overview.rst:2 697a3187edf34aa0ad2cdf570514b99b
+msgid "Mautic overview"
+msgstr ""
+
+#: ../../overview/overview.rst:4 eb4f1099626045018b7db1ef26d53af3
+msgid ""
+"The Mautic platform helps you create a strong marketing strategy for your "
+"business. With Mautic, you can:"
+msgstr ""
+
+#: ../../overview/overview.rst:7 0c6584386c924c43afab77c78fd105c8
+msgid ""
+"Connect with your Contacts over Channels like Emails, Text Messages, Social "
+"media, and Focus Items."
+msgstr ""
+
+#: ../../overview/overview.rst:9 cecfa2d970b74160b265ec8ceccd257c
+msgid ""
+"Segment your Contacts based on business requirements and personalize your "
+"marketing strategy for each Segment."
+msgstr ""
+
+#: ../../overview/overview.rst:10 a0d30c1d715d49d08f48197d999493ef
+msgid "Create personalized Campaigns to engage with your Contacts."
+msgstr ""
+
+#: ../../overview/overview.rst:11 a481225a549a48a9b0a2da0fb84b06d3
+msgid ""
+"Use performance metrics in Dashboards, Reports, Points, and Stages to "
+"measure the efficiency of your marketing strategy."
+msgstr ""
+
+#: ../../overview/overview.rst:14 0392c787d0d942d0ab2f8bacbd401e82
+msgid "How it works"
+msgstr ""
+
+#: ../../overview/overview.rst:16 ed59a5c434814bd5ba8c86dd2d12e0f4
+msgid ""
+"To start, it helps to understand how the different pieces of Mautic fit "
+"together to give you a holistic marketing platform experience."
+msgstr ""
+
+#: ../../overview/overview.rstNone 3b6257a6d57a4b47a75b50970ea2b412
+msgid "Mautic Overview"
+msgstr ""
+
+#: ../../overview/overview.rst:24 48329c19d0644e778831b90b987099fd
+msgid "Contact management"
+msgstr ""
+
+#: ../../overview/overview.rst:26 e02f2304bf8a43e2bf49f66560acd8f3
+msgid ""
+"Build a rich and functional database of Contacts for your business, group "
+"them together based on your business needs or based on shared attributes."
+msgstr ""
+
+#: ../../overview/overview.rst:28 62fb6a286d474f0e8bcfa00e77b9c9b5
+msgid ""
+":doc:`/contacts/manage_contacts` Individuals who have visited your websites "
+"or interacted with your business in some way. They may be known or unknown "
+"visitors. Contacts are the primary factor of a marketing automation "
+"platform."
+msgstr ""
+
+#: ../../overview/overview.rst:30 01ba406bd5314eedbd0c34125206e887
+msgid ""
+":doc:`/contacts/manage_segments` A group of your Contacts that share certain"
+" attributes. For example, you may segment Contacts based on a contact's "
+"location. This may help you easily send out location-based offers or "
+"promotions to this specific group of Contacts."
+msgstr ""
+
+#: ../../overview/overview.rst:32 424f9ccd3ea64980a500090e2ffaa572
+msgid ""
+":doc:`/companies/companies_overview` A group of Contacts based on the "
+"Company or Companies that the Contact is assigned to."
+msgstr ""
+
+#: ../../overview/overview.rst:36 fdac2aed65db42198911066e17975ff8
+msgid "Components"
+msgstr ""
+
+#: ../../overview/overview.rst:38 ff862162c658406ca5034a6744b741c5
+msgid ""
+"Create and manage various types of content that you use for your marketing "
+"Campaigns to engage your Contacts."
+msgstr ""
+
+#: ../../overview/overview.rst:40 c2692d178add42abac778ccdc1516203
+msgid ""
+":doc:`/components/assets` Valuable items that you provide to your Contacts "
+"upon completion of a Form. White papers, a downloadable app/file, documents "
+"or videos are some examples of assets."
+msgstr ""
+
+#: ../../overview/overview.rst:42 d83396302e7047e8abb7272dda0268de
+msgid ""
+":doc:`/components/forms` Forms are the primary point of customer engagement."
+" They're used to collect Contact information, often in exchange for "
+"providing access to an Asset such as a download, an event registration, or "
+"an Email newsletter."
+msgstr ""
+
+#: ../../overview/overview.rst:44 d5c2321fe767487682c512dc64069bd1
+msgid ""
+":doc:`/components/landing_pages` A powerful feature that not only allows you"
+" to promote content quickly and easily, but also allows you to rapidly "
+"create Landing Pages that are tightly tailored for a specific purpose, such "
+"as an advertising campaign."
+msgstr ""
+
+#: ../../overview/overview.rst:46 41835d0ebcd54e0291c12e565f7e4f1e
+msgid ""
+":doc:`/components/dynamic_web_content` A feature that you can use to "
+"personalize the web experience for your Contacts. Marketers can display "
+"different content to different people in specific areas of a webpage."
+msgstr ""
+
+#: ../../overview/overview.rst:49 f6ba156141684c0a850c49f6b08b330a
+msgid "Campaigns"
+msgstr ""
+
+#: ../../overview/overview.rst:51 661eef260e4143f3bd2cea011dc0efd3
+msgid ""
+":doc:`/campaigns/campaigns_overview` With your Contact information and the "
+"Components in place, you can start to create customized marketing activities"
+" for your Contacts. You create these marketing activities primarily in "
+"Campaigns."
+msgstr ""
+
+#: ../../overview/overview.rst:54 16d3c4e7e1ae41bd81cc011b5d699c2b
+msgid "Channels"
+msgstr ""
+
+#: ../../overview/overview.rst:56 b36fbfa9afcd4e0fae37c67c90ee7877
+msgid ""
+"Choose one or more Channels to deliver the content and messages to your "
+"Contacts."
+msgstr ""
+
+#: ../../overview/overview.rst:58 97b3580fcbc449d8aca841050a4a4766
+msgid ""
+":doc:`/channels/marketing_messages` A way to personalize communication with "
+"your Contacts. With marketing messages, Contacts receive your content on a "
+"Channel they've set as their preference."
+msgstr ""
+
+#: ../../overview/overview.rst:60 7192cf6f8d304960b3d0006e1e2128a0
+msgid ""
+":doc:`/channels/emails` Use built-in Email templates to send messages to a "
+"group of your Contacts, or send personalized messages to specific Contacts."
+msgstr ""
+
+#: ../../overview/overview.rst:62 3ff6b3b8a9ef4cb59d87db49a61f521a
+msgid ""
+":doc:`/channels/focus_items` A type of web personalization that enables "
+"marketers to embed on a webpage pop-up messages and Forms, bars and splash "
+"screens based on the Contact's behavior. By using Focus Items, you can "
+"easily convert visitors into known Contacts."
+msgstr ""
+
+#: ../../overview/overview.rst:64 5b17c0c1dba9491984898aeca3a85eae
+msgid ""
+":doc:`/channels/social_monitoring` Marketers can add Contacts to Mautic "
+"through Twitter mentions and hashtags."
+msgstr ""
+
+#: ../../overview/overview.rst:67 55f0269439a84ef48bed283e5dfa7081
+msgid "Assess performance"
+msgstr ""
+
+#: ../../overview/overview.rst:69 cc7f0fcb049f4f468edfcd46bc8de26d
+msgid ""
+"Analyze trends and assess the performance of your marketing strategy using "
+"various tools."
+msgstr ""
+
+#: ../../overview/overview.rst:71 bb9a6d9aa0a542d7abd62b79f803c3f4
+msgid ""
+":doc:`/dashboard/dashboard` A high-level representation of Contact data, "
+"Campaigns, and activities. You can create a highly personalized dashboard "
+"based on the information that you want to track."
+msgstr ""
+
+#: ../../overview/overview.rst:73 3cb6834d738c47ef8ae525527d29988b
+msgid ""
+":doc:`/reports/reports` A tool to measure the effectiveness of your "
+"marketing Campaigns, Emails, Forms, or page hits. Reports also let you "
+"troubleshoot or workaround areas of improvement to enhance your marketing "
+"strategy."
+msgstr ""
+
+#: ../../overview/overview.rst:75 dbe8789b74774e92bc042ac3819adae6
+msgid ""
+":doc:`/points/points` A score that is an indicator of progress for a Contact"
+" or customer. Points are a way for marketers to measure which of their "
+"Contacts are the most engaged based on their interactions and behavior."
+msgstr ""
+
+#: ../../overview/overview.rst:77 f9f35187445249839e49c1c13df3cb02
+msgid ""
+":doc:`/stages/stages` A customizable feature that enables you to keep a "
+"track of where your Contacts are in their marketing/sales journey"
+msgstr ""

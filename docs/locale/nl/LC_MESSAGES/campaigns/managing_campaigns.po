@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:18+0000\n"
+"Language-Team: Dutch (https://www.transifex.com/mautic/teams/33223/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../campaigns/managing_campaigns.rst:4 52736d9e08e04df4b7b5dd2932348efd
+msgid "Managing Campaigns"
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:8 b96b45dcb5ce4f499d34f171008d58a0
+msgid "You can manage your Campaigns from the Campaigns overview."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:10 159f28cf511e4002acc9dc3c2ee6f5e3
+msgid ""
+"Click any Campaign name on the Campaigns list to take you to the Campaign "
+"overview. Each tab displays details of your Campaign, including the number "
+"of Contacts added to the Campaign, the number of Emails sent, the number of "
+"page views resulting from the Campaign, and more."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:12 871a3865890844c0b1caf9ba1d08a545
+msgid ""
+"Additional information includes a quick overview of what decisions and "
+"actions are available in the Campaign, as well as a grid layout overview of "
+"all the Contacts in the Campaign."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:14 2880882d3f7344148ec13954841564b1
+msgid ""
+"The following image shows a sample Campaign overview with its highlighted "
+"panels:"
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rstNone 65a692aeb8b34fc3bb8c9b9af4f5ecd9
+msgid "Screenshot showing the Campaign overview"
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:20 72d76cac7e9b420abdcd166e3944dc8a
+msgid ""
+"The **Details** drop-down menu gives a quick overview of the most important "
+"information about your Campaign. This information includes the name of the "
+"User who created the Campaign, Category of the Campaign, creation date and "
+"time, publishing date and time, Contact Segments in your Campaign and more."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:22 21999347697d4c8db097235c1c084721
+msgid ""
+"The **Campaign Statistics** panel shows the number of Contacts added to the "
+"Campaign over the specified period of time in graphical format. To specify "
+"the time period, use the From and To date selectors, and click Apply."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:24 d9391fbb139e4644940b490676642b21
+msgid "The **Preview** tab displays a diagrammatic preview of your Campaign."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:26 0739d0d8f8a4401ca396f7bf7c25a09f
+msgid ""
+"The **Decisions** tab displays a tabular list of all the decisions that you "
+"have added to your Campaign."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:28 288d53884b1645ac8762651655b466bb
+msgid ""
+"The **Actions** tab displays a tabular list of all the actions that you have"
+" added to your Campaign."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:30 907e69003fb24c2a9854ce67b50cef2f
+msgid ""
+"The **Conditions** tab displays a tabular list of all he conditions that you"
+" have added to your Campaign."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:32 27ed68b0bbe7491a98b2bc9e9441ba3d
+msgid ""
+"The **Contacts** tab displays a grid view of all the Contacts that you have "
+"added to your Campaign."
+msgstr ""
+
+#: ../../campaigns/managing_campaigns.rst:34 bd6a144b48784d67954785db4358d392
+msgid ""
+"The **Recent Activity** panel on the right displays the recent activities "
+"that have taken place in the Campaign."
+msgstr ""
