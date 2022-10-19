@@ -226,4 +226,3 @@ To download the Report immediately:
 4. Reset the schedule as needed.
 
 Reporting data is also available to export by API. For more information, see the :xref:`API documentation`.
-
