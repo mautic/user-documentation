@@ -30,7 +30,7 @@ Search operators
 
 Here are some search operators you can use:
 
-* ``+`` plus sign - Search for the exact string, for example, if administrator, then administrator won't match.
+* ``+`` plus sign - Search for the exact string, for example, if you search for +admin, then administrator won't match.
 
 * ``!`` exclamation mark - Not equals string
   
@@ -137,8 +137,12 @@ Landing Pages
     category:{category alias}
     lang:{lang code}
 
-Dynamic content
+.. vale off
+
+Dynamic Content
 ~~~~~~~~~~~~~~~
+
+..vale on
 
 .. code-block:: 
 
