@@ -83,9 +83,9 @@ There are several options for selecting permissions:
 
 There are permission levels relating to resources the User has created themselves, and those created by others:
 
-* **Own** - this allows the Users with this Role to view/edit/delete/publish their own resources in this part of Mautic, but not those created by others
+* **Own** - this allows the Users with this Role to ``view/edit/delete/publish`` their own resources in this part of Mautic, but not those created by others
 
-* **Others** - this allows the Users with this Role to view/edit/delete/publish their own resources in this part of Mautic, and those created by others
+* **Others** - this allows the Users with this Role to ``view/edit/delete/publish`` their own resources in this part of Mautic, and those created by others
 
 There are permission levels relating to being able to manage resources:
 
@@ -97,7 +97,13 @@ There are permission levels relating to what fields in the Users section can be 
 
 * **All** - this allows the Users with this Role to edit all fields relating to the Users section
 
+.. note:: 
 
+  User permissions restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see. 
+  
+  For example, if a User’s Role doesn’t have Asset permissions, they can’t create widgets on the dashboard for Asset data.
+
+You can also :xref:`create Roles using the API`.
 
 
 
