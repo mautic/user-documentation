@@ -24,3 +24,5 @@ configuration:
 -  Switch the *Queue Protocol* to either *RabbitMQ* or *Beanstalkd*.
 -  Save the configuration.
 
+RabbitMQ
+********
