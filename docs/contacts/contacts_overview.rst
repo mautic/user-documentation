@@ -38,7 +38,7 @@ If you have an IP lookup service :ref:`configured<miscellaneous settings>` in **
 
 * Scoring
 
-* Data from Forms (which don’t include the unique identifier, since that would make the contact known), etc.
+* Data from Forms (which don’t include the unique identifier, since that would make the contact known) etc.
 
 .. note:: 
 
