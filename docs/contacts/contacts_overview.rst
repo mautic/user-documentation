@@ -54,9 +54,9 @@ Standard Contacts
 
 .. vale on
 
-The second type of Contact is a standard - or known - Contact. These Contacts have identified themselves via a Form or other source. You may also have more information about them from previous interactions, or from a third-party system such as a Customer Relationship Management (CRM) tool. 
+The second type of Contact is a known Contact. These Contacts have identified themselves via a Form or other source. You may also have more information about them from previous interactions, or from a third-party system such as a Customer Relationship Management (CRM) tool.
 
-As a result, these Contacts typically have a name, Email, and other identifying information which can be associated with the Contact.
+As a result, these Contacts typically have a name, Email, and other identifying information associated with the Contact.
 
 These are Contacts which may have started as a visitor, but at some point provided additional information such as a name, Email address, social network handle, or other identifying characteristics which have enabled you to connect up the activity on your website with a known person. You can nurture these Contacts through the Mautic marketing automation platform, learn more about their behaviour, and take specific actions as a result of this information.
 
