@@ -508,4 +508,4 @@ Often there is a need to have a local environment for testing Mautic - for examp
 
 In Mautic, DDEV is the tool of choice for this purpose. It's very easy to work with.
 
-To learn how to set up DDEV with Mautic, please review the documentation in the Contributors Handbook at https://contribute.mautic.org/contributing-to-mautic/tester.
+To learn how to set up DDEV with Mautic, please review the documentation in the Contributors :xref:`Handbook`.
