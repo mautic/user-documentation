@@ -29,10 +29,10 @@ The search box allows many different search types and follows the same search pr
 Adding Contacts
 ===============
 
-Quick Add
-*********
-
 .. vale on
+
+Quick add
+*********
 
 .. image:: images/contact-quick-add.png
     :align: center
@@ -44,12 +44,8 @@ Quick Add is a short Form with the fields you deem most important. To display fi
 
 You can of course also add them through the New Contact Form and add much more detail, but for quick entry this is the easiest and fastest way to get the Contact into the system.
 
-.. vale off
-
-Add New
+Add new
 *******
-
-.. vale on
 
 .. image:: images/contact-manual-add.png
     :align: center
@@ -88,8 +84,12 @@ When you click **Upload** you will have the opportunity to match the fields foun
 
 Following values results in **TRUE** when importing a ``Boolean`` value: ``1``, ``true``, ``on`` and ``yes``. Those values can be also capitalized and still taken as TRUE. **Any other value will be saved as FALSE**.
 
+.. vale off
+
 Exporting Contact lists
 ***********************
+
+.. vale on
 
 Mautic supports exporting Contact lists in CSV and Excel formats.
 
@@ -179,8 +179,8 @@ Contact details
 
 Each Contact has a detail page where you can see what Mautic knows about them.
 
-Engagements/Points chart
-************************
+Engagements chart
+*****************
 
 The Engagements line chart display how active the Contact was in the past 6 months. Engagement is any action the Contact made. For example: page hit, Form submission, Email open and so on. The chart displays also the Points which the Contact received.
 
@@ -324,8 +324,12 @@ If you have 2 Contacts in the Mautic database who are physically one person, you
 
 4. Select the right Contact and hit the **Merge** button.
 
+.. vale off 
+
 Send Email to Contact
 *********************
+
+.. vale on
 
 This option enables Users to send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the individual message.
 
@@ -334,15 +338,19 @@ Contact tracking
 
 The act of monitoring the traffic and activity of Contacts can sometimes be somewhat technical and frustrating to understand. Mautic makes this monitoring simple and easy to configure.
 
-Website Monitoring
+Website monitoring
 ******************
 
-Monitoring all traffic on a website can be done by loading a JavaScript file (since Mautic 1.4) or adding a tracking pixel to the website. It's important to note that traffic will not be monitored from logged-in Mautic Users. To check that the JS/pixel is working, use an incognito or private browsing window or simply log-out of Mautic prior to testing.
+Monitoring all traffic on a website can be done by loading a JavaScript file (since Mautic 1.4) or adding a tracking pixel to the website. It's important to note that traffic won't be monitored from logged-in Mautic Users. To check that the JS/pixel is working, use an incognito or private browsing window or simply log-out of Mautic prior to testing.
 
-Note that by default, Mautic will not track traffic originating from the same :xref:`private network` as itself, but this internal traffic can be configured to be tracked by setting the ``track_private_ip_ranges`` configuration option to ``true`` in ``app/config/local.php`` then and then :xref:`clearing the symfony cache`.
+Note that by default, Mautic won't track traffic originating from the same :xref:`private network` as itself, but this internal traffic can be configured to be tracked by setting the ``track_private_ip_ranges`` configuration option to ``true`` in ``app/config/local.php`` then and then :xref:`clearing the symfony cache`.
+
+.. vale off
 
 Tracking Script (``Javascript``)
 ********************************
+
+.. vale on
 
 JS tracking method was implemented in Mautic 1.4 and recommended as the primary way of website tracking. To implement it,
 
@@ -357,7 +365,7 @@ Make sure your website URL is entered in the CORS settings.
 
 Note that if a browser is set to not accept cookies, this may result in each hit creating a new visitor.
 
-.. code-block:: javascript
+.. code-block::
 
     <script>
         (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
@@ -380,7 +388,7 @@ The advantage of JS tracking is that the tracking request which can take quite l
 
 * **Page URL** the URL of the current website.
 
-mt() Events
+mt() events
 ***********
 
 mt() supports two callbacks, ``onload`` and ``onerror`` accepted as the fourth argument. The ``onload`` method will be executed once the tracking pixel has been loaded. If the pixel fails for whatever reason, ``onerror`` will be executed.
@@ -399,9 +407,9 @@ mt() supports two callbacks, ``onload`` and ``onerror`` accepted as the fourth a
 Local Contact cookie (first party cookie)
 *****************************************
 
-If CORS is configured to allow access from the domain where the mtc.js is embedded, a cookie will be placed on the same domain with the name of ``mtc_id``. This cookie will have the value of the ID for the currently tracked contact but is not used to track the contact. This enables the server side software to access the contact ID, and thus providing the ability to integrate with Mautic's REST API as well.
+If CORS is configured to allow access from the domain where the mtc.js is embedded, a cookie will be placed on the same domain with the name of ``mtc_id``. This cookie will have the value of the ID for the currently tracked Contact but isn't used to track the Contact. This enables the server side software to access the Contact ID, and thus providing the ability to integrate with Mautic's REST API as well.
 
-Valid Domains for CORS are expected to include the full domain name as well as the protocol. (e.g. http://example.com). If you serve up secure and non-secure pages you should include both https://example.com as well http://example.com. All subdomains will need to be listed as well (e.g. http://example.com and http://www.example.com ), if your server allows this. If you would like to allow all subdomains, an asterisk can be used as a wildcard (e.g. http://*.example.com).
+Valid Domains for CORS are expected to include the full domain name as well as the protocol. For example, ``http://example.com``, if you serve up secure and non-secure pages you should include both ``https://example.com`` as well ``http://example.com``. All subdomains will need to be listed as well for example, ``http://example.com`` and ``http://www.example.com`` , if your server allows this. If you would like to allow all subdomains, an asterisk can be used as a wildcard for example, ``http://*.example.com``.
 
 Tracking of custom parameters
 *****************************
@@ -410,7 +418,7 @@ You can attach custom parameters or overwrite the automatically generated parame
 
 ``mt('send', 'pageview', {email: 'my@email.com', firstname: 'John'});``
 
-This code will send all the automatic data to Mautic and adds also ``email`` and ``firstname``. The values of those fields must be generated by your system.
+This code sends all the automatic data to Mautic and adds also ``email`` and ``firstname``. The values of those fields must be generated by your system.
 
 The tracking code also supports Company fields. Mautic can assign a Company to your tracked Contact based on Company name. Then you have to add the **company** or ``**companyname**`` parameter to the tracking code, along with other Companies fields (``companyemail``, ``companyaddress1``, ``companyaddress2``, ``companyphone``, ``companycity``, ``companystate``, ``companyzipcode``, ``companycountry``, ``companywebsite``, ``companynumber_of_employees``, ``companyfax``, ``companyannual_revenue``, ``companyindustry``, ``companyindustry``, ``companydescription``):
 
@@ -428,14 +436,14 @@ As the JS tracking request is loaded asynchronously, you can ask JS to call a fu
 Tracking pixel
 **************
 
-It is recommended to use the tracking script with CORS properly configured instead of the tracking pixel. If that is not possible for whatever reason, the tracking pixel can be used. The tracking pixel uses third party cookies for tracking.
+It's recommended to use the tracking script with CORS properly configured instead of the tracking pixel. If that's not possible for whatever reason, the tracking pixel can be used. The tracking pixel uses third party cookies for tracking.
 
 ``http://example.com/mtracking.gif``
 
-Tracking Pixel Query
+Tracking pixel query
 ********************
 
-To get the most out of the tracking pixel, it is recommended that you pass information of the web request through the image URL.
+To get the most out of the tracking pixel, it's recommended that you pass information of the web request through the image URL.
 
 Page information
 ----------------
@@ -453,7 +461,7 @@ Currently, ``utm_medium``, ``utm_source``, ``utm_campaign``, ``utm_content``, an
 
 All the UTM tags are available in the time entry, just by toggling the entry details button.
 
-Please note that UTM tags are recorded only on a form submission that contains the action "Record UTM Tags".
+Please note that UTM tags are recorded only on a Form submission that contains the action "Record UTM Tags".
 
 .. list-table:: 
    :widths: 100 100
@@ -462,7 +470,7 @@ Please note that UTM tags are recorded only on a form submission that contains t
    * - Values
      - Class
    * - social, ``socialmedia``
-     - fa-share-alt if utm_source is not available otherwise utm_source will be used as the class. For example, if utm_source is Twitter, fa-twitter will be used.
+     - fa-share-alt if utm_source isn't available otherwise utm_source will be used as the class. For example, if utm_source is Twitter, fa-twitter will be used.
    * - email, newsletter
      - fa-envelope-o
    * - banner, ad
@@ -471,17 +479,17 @@ Please note that UTM tags are recorded only on a form submission that contains t
      - fa-money
    * - location
      - fa-map-marker
-   * - device
-     - fa-tablet if utm_source is not available otherwise utm_source will be used as the class. For example, if utm_source is Mobile, fa-mobile will be used.
+   * - ``device``
+     - fa-tablet if utm_source isn't available otherwise utm_source will be used as the class. For example, if utm_source is Mobile, fa-mobile will be used.
   
 All the UTM tags are available in the time entry, just by toggling the entry details button.
 
 Please note that UTM tags are recorded only on a Form submission that contains the action "Record UTM Tags".
 
-Contact Fields
+Contact fields
 ***************
 
-You can also pass information specific to your Contact by setting Mautic Contact ``field(s)`` to be publicly updatable. Note that values appended to the tracking pixel should be ``url`` encoded (%20 for spaces, %40 for @, etc).
+You can also pass information specific to your Contact by setting Mautic Contact ``field(s)`` to be publicly editable. Note that values appended to the tracking pixel should be ``url`` encoded (%20 for spaces, %40 for @, etc).
 
 Tags
 ****
@@ -490,7 +498,7 @@ The Contact's Tags can be changed by using the ``tags`` query parameter. Multipl
 
 For example, ``mtracking.gif?tags=ProductA``,-ProductB would add the ProductA Tag to the Contact and remove ProductB.
 
-Embedding the Pixel
+Embedding the pixel
 *******************
 
 If you are using a CMS, the easiest way is to let one of our plugins do this for you (see below). Note that the plugins may not support all contact fields, UTM codes or contact tags.
@@ -520,7 +528,7 @@ PHP
 JavaScript
 **********
 
-.. code-block:: javascript
+.. code-block::
 
     <script>
         var mauticUrl = 'https://example.com';
@@ -534,8 +542,12 @@ JavaScript
         body.appendChild(img);
     </script>
 
+.. vale off
+
 Available Plugins
 *****************
+
+.. vale on
 
 Mautic makes this even easier by providing key integrations to many existing content management systems. You can download and use any of the following plugins to automatically add that tracking pixel to your website.
 
@@ -555,26 +567,26 @@ These are just a few of the integrations already created by the Mautic community
 Identify visitors by tracking URL
 *********************************
 
-There is a configuration section for identifying visitors by tracking URL although this is not recommended for use because it could be used to spoof tracking. If enabled, returning visitors will be identified by tracking URLs from channels (especially from emails) when no cookie exists yet.
+There is a configuration section for identifying visitors by tracking URL although this isn't recommended for use because it could be used to spoof tracking. If enabled, returning visitors will be identified by tracking URLs from channels (especially from emails) when no cookie exists yet.
 
 .. note:: 
 
-    The Email Contact field has to be marked as a unique identifier and publicly updatable in your Mautic configuration.
+    The Email Contact field has to be marked as a unique identifier and publicly editable in your Mautic configuration.
 
 How are Contacts tracked with the tracking script?
 --------------------------------------------------
 
 When using the tracking script, Contacts are tracked with third party cookies on the Mautic instance's domain and/or the browser's local storage.
 
-Although the script will write first party cookies to the tracked domain (expires with the session), they are NOT used for tracking. See "Local contact cookie (first party cookie)."
+Although the script writes first party cookies to the tracked domain expires with the session, they're NOT used for tracking. See "Local Contact cookie (first party cookie)."
 
-When a Contact visits the website for the first time, the tracking script will make a call to Mautic. Mautic will check if the ``mautic_device_id`` cookie is set on it's domain. If it exists and if the device_id is found in Mautic's database, Mautic will recognize the request as the Contact associated with the given device.
+When a Contact visits the website for the first time, the tracking script  makes a call to Mautic. Mauticchecks if the ``mautic_device_id`` cookie is set on it's domain. If it exists and if the device_id is found in Mautic's database, Mautic recognizes the request as the Contact associated with the given device.
 
-Mautic will return the Contact ID, the device ID, and a legacy session ID (this is the same as the device ID). These value are stored in the browser's local storage (if applicable) and written to the site's domain as a first party cookie (not used for tracking).
+Mautic returns the Contact ID, the device ID, and a legacy session ID this is the same as the device ID. These value are stored in the browser's local storage (if applicable) and written to the site's domain as a first party cookie (not used for tracking).
 
-The next time the tracking script sends a request to Mautic, it will use the device ID from the browser's local storage to identify the tracked Contact. If that cannot be found, Mautic will default to the cookies stored on it's own domain (so third party cookies) to identify the Contact.
+The next time the tracking script sends a request to Mautic, it uses the device ID from the browser's local storage to identify the tracked Contact. If that can't be found, Mautic defaults to the cookies stored on it's own domain so third party cookies to identify the Contact.
 
-Mobile Monitoring
+Mobile monitoring
 *****************
 
 The essence of monitoring what happens in an App is similar to monitoring what happens on a website. Mautic contains the building blocks needed for native (or pseudo-native) and HTML5-wrapper based Apps, regardless of platform.
@@ -584,13 +596,13 @@ In short, use named screen views (for example; main_screen) in your App as your 
 Steps in Mautic
 ---------------
 
-1. Make the email field publicly updatable, this means that a call to the tracking GIF with the variable email will get properly recognized by Mautic.
+1. Make the email field publicly editable, this means that a call to the tracking GIF with the variable email gets properly recognized by Mautic.
 
-2. Set up a Form, which will be the access point of your Campaign (for example; a new Contact email). Make this form as simple as you can, as you will be POST-ing to it from your App. The typical Form URL you will POST to is ``https://example.com/form/submit?formId=<form_id>``
+2. Set up a Form, which will be the access point of your Campaign (for example; a new Contact email). Make this Form as simple as you can, as you will be POST-ing to it from your App. The typical Form URL you will POST to is ``https://example.com/form/submit?formId=<form_id>``
 
-You can get the ID from the Mautic URL as you view / edit the form in the Mautic interface (or in the forms tables, last column), and you can get the form fields by looking at the HTML of the 'Manual Copy' of the HTML in the forms editing page.
+You can get the ID from the Mautic URL as you view / edit the Form in the Mautic interface (or in the forms tables, last column), and you can get the Form fields by looking at the HTML of the 'Manual Copy' of the HTML in the forms editing page.
 
-3. Define in your campaigns the screens you want to use as triggers (for example; 'cart_screen' etc.). Mautic is not looking for a real URL in the form 'http://' for page_url, any typical string would do. Like this: ``https://example.com/mtracking.gif?page_url=cart_screen&email=myemail@example.com``
+3. Define in your Campaigns the screens you want to use as triggers (for example; 'cart_screen' etc.). Mautic isn't looking for a real URL in the Form 'http://' for page_url, any typical string would do. Like this: ``https://example.com/mtracking.gif?page_url=cart_screen&email=myemail@example.com``
 
 In your App
 ***********
@@ -599,11 +611,11 @@ A best-in-class approach is to have a class (say 'Mautic') that handles all your
 
 ``mautic.addContact("myemail@example.com",3)``
 
-And then, to track individual user activity in the App, this sample call would make an HTTP request to the tracker:
+And then, to track individual user activity in the App, this sample call would make an ``HTTP`` request to the tracker:
 
 ``mautic.track("cart_screen", "myemail@example.com")``
 
-Which is nothing more than an ``HTTP`` request to this GET-formatted URL (as also shown in previous section):
+Which isn'thing more than an ``HTTP`` request to this GET-formatted URL (as also shown in previous section):
 
 ``https://example.com/mtracking.gif?page_url=cart_screen&email=myemail@example.com``
 
@@ -612,8 +624,12 @@ Which is nothing more than an ``HTTP`` request to this GET-formatted URL (as als
 
     Make sure in your App, that the above ``HTTP`` request is using a cookie (if possible, re-use the cookie from the ``mautic.addcontact`` POST request prior) AND that you reuse this cookie from one request to the next. This is how Mautic (and other tracking software) knows that it's really the same user. If you can't do this, you may run into the (unlikely but possible) case where you have multiple contacts from the same IP address and Mautic will merge them all into a single contact as it can't tell who is who without a cookie.
 
-Google Analytics and Facebook Pixel tracking support
+.. vale off
+
+Google Analytics and acebook Pixel tracking support
 ****************************************************
+
+.. vale on
 
 Mautic supports contact tracking using Google Analytics and the Facebook pixel. Go to Mautic **Configuration** > **Tracking Settings** and set up:
 
