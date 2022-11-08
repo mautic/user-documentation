@@ -5,8 +5,7 @@ Queue
 
 .. vale on
 
-You can improved scalability by activating the queuing mechanism for Email and Page opens. Use this if you are getting too much traffic
-at once from people opening Pages or opening Emails.
+You can improved scalability by activating the queuing mechanism for Email and Page opens. Use this if you are getting too much traffic at once from people opening Pages or opening Emails.
 
 .. note:: 
     
@@ -15,8 +14,7 @@ at once from people opening Pages or opening Emails.
 Activating
 **********
 
-You can activate and configure the queuing mechanism by going to
-configuration:
+You can activate and configure the queuing mechanism by going to configuration:
 
 * Open the administrator menu by clicking the cog icon in the top right corner.
 * Select the *Configuration* menu item.
@@ -31,8 +29,7 @@ RabbitMQ
 
 .. vale on
 
-:xref:`RabbitMQ` is one of the available queue protocols that Mautic supports. To use it, you must have a RabbitMQ server running. On their :xref:`website`, you can obtain instructions on how to install RabbitMQ.  
-For testing purposes, you can use :xref:`cloudamqp` which offers a RabbitMQ as a service.
+:xref:`RabbitMQ` is one of the available queue protocols that Mautic supports. To use it, you must have a RabbitMQ server running. On their :xref:`website`, you can obtain instructions on how to install RabbitMQ. For testing purposes, you can use :xref:`cloudamqp` which offers a RabbitMQ as a service.
 
 Having set up a RabbitMQ server, you can configure Mautic to use it by setting the appropriate parameters ``mautic.rabbitmq_*`` in your installation's configuration file.
 
