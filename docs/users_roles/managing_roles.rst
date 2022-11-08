@@ -103,9 +103,3 @@ There are permission levels relating to what fields in the Users section can be 
   For example, if a User’s Role doesn’t have Asset permissions, they can’t create widgets on the dashboard for Asset data.
 
 You can also :xref:`create Roles using the API`.
-
-
-
-
-
-
