@@ -1,14 +1,13 @@
 .. vale off
 
-Managing Roles
-##############
+Roles
+#####
 
 .. vale on
 
-
 Access to Mautic instances is controlled by creating accounts for Users and associating them with a Role.
 
-:doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas :ref:`Roles<managing roles>` allow or deny access to various features within Mautic.
+:doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas :ref:`Roles<roles>` allow or deny access to various features within Mautic.
 
 Mautic uses Roles to control which resources and actions Users can access. When team members have different responsibilities, you may not want some team members working in certain parts of Mautic. 
 
@@ -62,7 +61,7 @@ To configure a Role, leave the **Full System Access** switch at **No** and click
   :width: 800
   :alt: Screenshot showing Mautic Roles
 
-5. Most permission categories have options for **View**, **Edit**, **Create**, **Delete**, and **Publish**. Select checkboxes for the appropriate permissions for this Role. To select every checkbox and grant the User all permissions, select the **Full** option.
+5. Most permission Categories have options for **View**, **Edit**, **Create**, **Delete**, and **Publish**. Select checkboxes for the appropriate permissions for this Role. To select every checkbox and grant the User all permissions, select the **Full** option.
 
 Explaining the permission options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

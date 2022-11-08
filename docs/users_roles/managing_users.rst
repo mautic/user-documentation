@@ -5,7 +5,7 @@ Managing Users
 
 .. vale on
 
-An Administrator can manage users with appropriate permissions in Mautic by accessing the settings cog wheel at the top right of the screen.
+An Administrator can manage Users with appropriate permissions in Mautic by accessing the settings cog wheel at the top right of the screen.
 
 Create the User by completing all the mandatory fields, adding a signature if required, and assigning them a username and password. Always use a secure password for Users with access to your Mautic instance.
 
@@ -36,8 +36,8 @@ To set up a User manually:
 
     Passwords must be at least six (6) characters in length. Ensure that you use a combination of upper and lower case alphabets, special characters, and numbers.
 
-* **Time zone** - Set the User’s time zone, or use the default. Adding the User’s time zone enables them to account for time zone differences for email scheduling and other features.
+* **Time zone** - Set the User’s time zone, or use the default. Adding the User’s time zone enables them to account for time zone differences for Email scheduling and other features.
 
 * **Language** - Select a language for each User, to improve their experience in Mautic.
 
-Notify your Users that their accounts have been created. Mautic doesn’t send an email notifying Users of their login information. Manually informing them is necessary.
+Notify your Users that their accounts have been created. Mautic doesn’t send an Email notifying Users of their login information. Manually informing them is necessary.
