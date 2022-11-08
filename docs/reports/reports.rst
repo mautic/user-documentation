@@ -108,14 +108,14 @@ You can customize each Report to include the columns of choice, filter data base
 
 |
 
-* **Columns** - Select the columns of data that you want to appear in the table of data in the Report. Click the column name in the left column to have it show in the Report. To remove a column, click it in the right column and it will be removed from the Report and appears back in the left column. For example, if you select ID, it refers to the **ID** for the parent data source Category that you selected earlier Contact ID, email ID, Asset ID, etc. It's recommended that you include **ID** in all Reports.
-* **Order** - Select data points to be used for sorting the data in the Report. The available sort options are **Ascending** and **Descending**. To add multiple columns, click **Add Order**. For fields that use text, an **Ascending** order lists values starting with B after values starting with A and so on. For number or date fields, the higher the number or later the date, the lower on the list the row is. Descending order is the opposite.
+* **Columns** - Select the columns of data that you want to appear in the table of data in the Report. Click the column name in the left column to have it show in the Report. You can remove a column from the Report by clicking on its right column. The column returns to its original position on the left side. For example, if you select ID, it refers to the **ID** for the parent data source Category that you selected earlier Contact ID, Email ID, Asset ID, etc. It's recommended that you include **ID** in all Reports.
+* **Order** - For sorting the data in the Report, select data Points. The available sort options are **Ascending** and **Descending**. To add multiple columns, click **Add Order**. For fields that use text, an **Ascending** order lists values starting with B after values starting with A and so on. For number or date fields, the higher the number or later the date, the lower on the list the row is. Descending order is the opposite.
 
 .. note:: 
 
-   If you add multiple fields to order by, the last one in the Order list is used first. For example, if you order by **First Name Ascending** and then add **Email Ascending**, the Email column is sorted first and any duplicate rows are then sorted by first name ascending.
+   Adding multiple fields to order by uses the last one in the Order list first. Ordering by **First Name Ascending** and adding **Email Ascending**, for instance, sorts the Email column first and duplicate rows are then sorted by first name ascending.
 
-* **Filters** -  Filter the data using conditions and values. This allows the generation of very granular Reports. This option helps you to narrow down the data included in the Report. The data points used for filters don’t have to be columns that appear in the Report table. A commonly used filter for any Reports that include Contact record data is Email Not Empty, which displays only identified Contacts in the Report. Additional use cases can be including Contacts or items that match a certain value, events happening within a certain date range, etc.
+* **Filters** -  Filter the data using conditions and values. This allows the generation of very granular Reports. This option helps you to narrow down the data included in the Report. The data Points used for filters don’t have to be columns that appear in the Report table. A commonly used filter for any Reports that include Contact record data is Email Not Empty, which displays only identified Contacts in the Report. Additional use cases can include Contacts or items that match a certain value, events happening within a certain date range, etc.
 
 .. note:: 
 
@@ -225,4 +225,4 @@ To download the Report immediately:
 
 4. Reset the schedule as needed.
 
-Reporting data is also available to export by API. For more information, see the :xref:`API documentation`.
+Reporting data is also available to export by API. For more information, see the :xref:`Reports API documentation`.
