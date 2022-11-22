@@ -37,13 +37,14 @@ How to test an Integration
 If you want to test an Integration Plugin to ensure that it's configured properly, you have three options for how to do that. An Integration can push a Contact via these actions:
 
 * The **Campaign Builder** has the *Push Contact to Integration* action which can be used in the Campaign configuration.
+
 * The **Standalone Form** has the *Push Contact to Integration* action which can be used after a standalone Form is submitted.
+
 * The **Points Trigger** has the *Push Contact to Integration* action which can be triggered when a Contact achieves a configured point limit.
   
 Use any of those actions to test the Plugin and see if the Contact appears in the Integration. Here is an example of how you can configure the Standalone Form action:
 
 .. image:: images/push-integration.png
-  :width: 800
   :alt: Screenshot of push Integration
 
 1. Create a Form with some fields. For example, an ``email`` and a ``firstname`` field.
@@ -54,7 +55,7 @@ Use any of those actions to test the Plugin and see if the Contact appears in th
 
 4. Fill in the fields with sample Contact information and submit
 
-5. Ensure that the new Contact was created in the Integration.
+5. Ensure that the Integration created the new Contact.
 
 Troubleshooting
 ~~~~~~~~~~~~~~~
@@ -69,8 +70,8 @@ If the ``firstname`` value wasn't saved to the Integration:
 
 .. vale off
 
-Field Mapping in a Plugin Integration
-*************************************
+Field mapping 
+*************
 
 .. vale on
 
@@ -81,4 +82,3 @@ You have to select the Mautic Contact Field equivalent so each field gets the ri
 .. note:: 
 
     You don't have to map every field. Map only those you want to push into the Integration.
-
