@@ -1,2 +1,0 @@
-Mautic Style Guide
-##################

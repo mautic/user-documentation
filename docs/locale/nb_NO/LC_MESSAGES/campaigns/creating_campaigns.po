@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:18+0000\n"
+"Language-Team: Norwegian Bokmål (Norway) (https://www.transifex.com/mautic/teams/33223/nb_NO/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nb_NO\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../campaigns/creating_campaigns.rst:4 f6e5dca57fa84d8b992bda2c526cde98
+msgid "Creating Campaigns"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:8 912093f665bc4fa1b8ad9463fbba0f21
+msgid ""
+"Creating Campaigns is a central part of the marketing automation process. "
+"When you create a new Campaign, you perform the basic administrative tasks "
+"such as choosing a name for the Campaign, creating a description, assigning "
+"a Category and defining publishing information for the Campaign."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:10 ad2fd216bfff4ec9ac54b03a2a634002
+msgid ""
+"At the heart of any marketing automation Campaign is the Campaign Builder. "
+"This allows you to specify how Contacts enter the Campaign, and what happens"
+" at every point after they enter the workflow."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:12 df5c30053f87461a9c0257cacd88bf9d
+msgid ""
+"After establishing the basics, the Campaign Builder handles the finer "
+"details of building a Campaign workflow using Conditions, Decisions, and "
+"Actions."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:15 738af8a861ee4e7eac9e8937409121c3
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:17 d309979ee4374974b526357a44f7b231
+msgid ""
+"Before you start creating Campaigns, you must ensure that you have the "
+"following set up:"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:20 69b3a2ebe26c4337bb3adfc5df256480
+msgid ""
+"Create a Contact Segment or a Form to initialize your Campaign. If you "
+"already have an existing Segment or Form to use, ensure that they're up-to-"
+"date."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:22 b9160b91bc0f4c6cbadb47b066c81924
+msgid "Create any custom field that you need for your Contact profile."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:23 97dff0e8eff44b2cb20dcb7f12066aa3
+msgid ""
+"Set up and configure any Integration that you intend to use in your "
+"Campaign."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:24 81d8d56245db460baa20bab36dc61cac
+msgid ""
+"Set up appropriate Channels such as Text Messages, Email, Focus items to "
+"communicate with your Contacts."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:25 a20fbf3987bb456bacf640c9e232ddaf
+msgid ""
+"Create Assets, Landing pages, or other Components that you want to use for "
+"your Campaign. If using Assets, ensure that you upload them before creating "
+"your Campaign."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:27 2ce3f6839269450895ae0d6d5682e2cb
+msgid ""
+"Although you can set up Channels and create Components during the process of"
+" creating the Campaign, it's ideal to have them ready beforehand as it makes"
+" the Campaign building process faster and more efficient."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:32 e5cbf9476a9449d1a6d3abc1083e4c10
+msgid "Create your first Campaign"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:36 b9484d66da4a4d588348878d382bffb2
+msgid ""
+"After you have the prerequisites in place, you are ready to create your "
+"first Campaign."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:39 0edb86c2360742f789553f2a023b7889
+msgid "To begin creating Campaigns, perform the following steps:"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:41 da614fb814194e76af690cf266ad7f6c
+msgid "Launch your Mautic instance."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:42 fd4d00056ff74fe380c23fb2c4028054
+msgid ""
+"Click **Campaigns** in the left navigation menu. The Campaigns page appears."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:43 f7ef0b7fe7c84a51ae803957ede2312d
+msgid ""
+"Click **New** on the Campaigns page. The New Campaign wizard appears as "
+"shown in the following image. Screenshot of the New Campaign screen"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rstNone f3d2a291bb8a45f2bcae61b6a00b9fc5
+msgid "Screenshot of the create a new Campaign interface"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:49 ef5652d8e0f64d8b97403b654835ed84
+msgid "Enter a name and a brief description for your Campaign."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:50 172f666c5c094817bc357d7225aa6ea1
+msgid "Optionally, you can set the following properties:"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:52 5fc27c6fb59a406a92223bee9a6e22b3
+msgid ""
+"**Category** - Choose a Category to assign your Campaign to. Categories help"
+" you organize your Campaigns. To learn more about creating and managing "
+"Categories, see :doc:`/categories/categories-overview`."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:53 613929d730524d1592f14f95ff4d3a8c
+msgid ""
+"**Allow Contacts to restart the Campaign** - Click the toggle switch to "
+"allow Contacts to restart the Campaign if you're building a Campaign for a "
+"recurring message - for example birthdays, subscriptions - or transactional "
+"operations - for example activity notifications, updating data. Enabling "
+"this option allows Contacts to go through the same Campaign multiple times."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:54 8b734fc2f32348cfb3435d13a4394997
+msgid ""
+"**Published** - Click the toggle switch to publish or un-publish the "
+"Campaign. Ensure that you don't publish a Campaign until you're actually "
+"ready for it to go live. You can also schedule to publish or un-publish a "
+"Campaign at a future date by selecting a time and date."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:56 ef322ee4a61e45a481d11e3fc20c2901
+msgid ""
+"Click **Launch Campaign Builder** to start building your Campaign, and add "
+"at least one event. For information about how to use the Campaign Builder, "
+"see :doc:`/campaigns/creating_campaigns`."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:59 d5823799340646e19c5ad434490a5808
+msgid ""
+"After adding events to your Campaign, close the Campaign Builder and click "
+"**Save & Close** to save your changes."
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:63 f61607f969df497fa5dc6749c1b05dcc
+msgid "Add or remove Contacts in batch"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:65 d3509837130f4931a719e72a50873b5d
+msgid ""
+"After creating your Campaign, you can add or remove Contacts in batch for "
+"Campaigns using the following command:"
+msgstr ""
+
+#: ../../campaigns/creating_campaigns.rst:72 16965c0d78c942feb7100b9313347ff0
+msgid "See documentation on :doc:`/set_up/cron_jobs` for further details."
+msgstr ""

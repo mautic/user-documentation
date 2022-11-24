@@ -1,9 +1,20 @@
 Welcome to the Mautic documentation
 ===================================
 
-**Mautic** is an open source marketing automation platform that provides you with the greatest level of audience intelligence, thus enabling you to make more meaningful customer connections
+**Mautic** is an open source marketing automation platform that provides you with the greatest level of audience intelligence, thus enabling you to make more meaningful customer connections.
 
-Check out the :doc:`/getting_started/getting_started` section for further information, including how to :doc:`/getting_started/how_to_install_mautic`.
+To get started with Mautic, follow the :doc:`Getting started guide</getting_started/how_to_install_mautic>`.
+For next steps, you can learn :doc:`how to update Mautic</getting_started/how_to_update_mautic>`.
+
+There are different types of documentation available to help you navigate your way through Mautic.
+
+:xref:`End User Documentation` - Describes each aspect of Mautic in detail and explains how to use it..
+
+:xref:`Developer Documentation` - Describes details about the Mautic API, Webhooks, Themes and Plugin development.
+
+:xref:`Knowledgebase` - Provides a database of tutorials, FAQs, and how-to articles.
+
+:xref:`Community Handbook` - Describes how to get involved and contribute to Mautic's documentation development.
 
 .. note::
 
@@ -12,46 +23,30 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
 
 .. toctree::
    :maxdepth: 2
-   :caption: Mautic Documentation
+   :caption: Welcome to Mautic
    :hidden:
 
    overview/overview
-   contributing/contributing
-   contributing/mautic_style_guide
-
+   
 .. toctree::
-   :caption: Getting Started
+   :caption: Getting Started with Mautic
    :maxdepth: 2
    :hidden:
    
-   getting_started/getting_started
    getting_started/how_to_install_mautic
+   getting_started/switching_composer
    getting_started/how_to_update_mautic
 
 .. toctree::
-   :caption: Set Up
-   :maxdepth: 2
-   :hidden:
-
-   set_up/maxmind_license
-   set_up/switching_composer
-   set_up/cron_jobs
-   set_up/tracking_script
-   set_up/variables
-
-.. toctree::
-   :maxdepth: 2
    :caption: Configuration
-   :hidden:
-
-   configuration/settings
-
-.. toctree::
    :maxdepth: 2
-   :caption: Troubleshooting
    :hidden:
 
-   troubleshooting/file_ownership_and_permissions
+   configuration/maxmind_license
+   configuration/command_line_interface
+   configuration/cron_jobs
+   configuration/variables
+   configuration/settings
 
 .. toctree::
    :caption: Authentication
@@ -59,6 +54,24 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    authentication/authentication
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contacts
+   :hidden:
+
+   contacts/manage_contacts
+   contacts/import_contacts
+   contacts/custom_fields
+   contacts/frequency_rules
+   contacts/preference_center
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Segments
+   :hidden:
+
+   segments/manage_segments
 
 .. toctree::
    :maxdepth: 2
@@ -83,10 +96,10 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :maxdepth: 2
    :hidden:
 
+   channels/marketing_messages
    channels/emails
    channels/sms
    channels/focus_items
-   channels/marketing_messages
    channels/social_monitoring
    channels/web_notifications
    channels/push_notifications
@@ -109,13 +122,6 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    components/forms
    components/landing_pages
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contacts
-   :hidden:
-
-   contacts/manage_contacts
-   contacts/manage_segments
 
 .. toctree::
    :maxdepth: 2
@@ -129,8 +135,8 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Email & Landing Page Builders
    :hidden:
 
-   builders/grapesjs_builder
    builders/creating_themes
+   builders/email_landing_page
 
 .. toctree::
    :maxdepth: 2
@@ -144,8 +150,28 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :caption: Plugins
    :hidden:
 
+   plugins/plugin_resources
+   plugins/amazon
+   plugins/citrix
+   plugins/clearbit
+   plugins/connectwise
+   plugins/fullcontact
+   plugins/gmail
+   plugins/hubspot
+   plugins/icontact
+   plugins/mailchimp
+   plugins/microsoft_dynamics_crm
+   plugins/microsoft_outlook
+   plugins/pipedrive
+   plugins/salesforce
+   plugins/social_login
+   plugins/sugar_crm
+   plugins/tag_manager
    plugins/twilio
    plugins/twitter
+   plugins/vtiger
+   plugins/zapier
+   plugins/zoho_crm
 
 .. toctree::
    :maxdepth: 2
@@ -153,13 +179,59 @@ Check out the :doc:`/getting_started/getting_started` section for further inform
    :hidden:
 
    points/points
+   points/points_troubleshooting
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Queue
+   :hidden:
+
+   queue/queue
+   queue/message_queue
 
 .. toctree::
    :maxdepth: 2
    :caption: Reports
    :hidden:
 
+   reports/reports
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Search
+   :hidden:
+
+   search/search_operators
+
 .. toctree::
    :maxdepth: 2
    :caption: Stages
    :hidden:
+
+   stages/stages
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Themes
+   :hidden:
+
+   themes/manage_themes
+   themes/customizing_themes
+   themes/theme_structure
+   themes/code_mode
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Translation
+   :hidden:
+
+   translations/translations
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User and Roles
+   :hidden:
+
+   users_roles/managing_users
+   users_roles/managing_roles

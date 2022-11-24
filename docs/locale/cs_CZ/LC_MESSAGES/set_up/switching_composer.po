@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:19+0000\n"
+"Language-Team: Czech (Czech Republic) (https://www.transifex.com/mautic/teams/33223/cs_CZ/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: ../../set_up/switching_composer.rst:5 5c05c4562de04a82b0485354ea28c010
+msgid "How to switch to Composer"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:9 1025de03053d42cea4623643a2cbb7a1
+msgid ""
+"Until Mautic 4, you could download Mautic as a ZIP file and install it on "
+"any PHP server. However, many Users were running into installation and "
+"update errors, many of which caused considerable frustration and in some "
+"cases, significant business disruption. Next to that, Mautic recently "
+"introduced the :ref:`Mautic Marketplace` which isn't compatible with this "
+"installation method."
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:12 d541ccbc01de422a9c04df21c81d221c
+msgid ""
+"For the reasons mentioned previously, from the release of Mautic 5, Composer"
+" becomes the default way to install and update Mautic. Read more in "
+":xref:`composer blog post`."
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:15 0c86e4e768ce4f589fa718c1ae7160f3
+msgid "How to switch to a Composer-based installation?"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:20 9c0ef16d73c442a39a0c26cd4e768308
+msgid ""
+"Before starting, it's good to understand that there's two aspects to Mautic:"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:18 180e5230747b44e4a41243f97972da0d
+msgid "The database. This is where Mautic stores your Contact data."
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:20 ff4b50666519400d8c28023e7f22aa63
+msgid "The codebase. This is where Mautic interacts with the database.."
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:22 381a843a84914e6784825bf0dce8073a
+msgid ""
+"When switching to a Composer-based installation, the **database** isn't "
+"touched, only the **codebase.**"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:24 7ae4a498fc074656bf009321f939e483
+msgid ""
+"In this tutorial, it's assumed that Mautic is currently installed in "
+"``/var/www/html``."
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:26 4aa2aa89106046fb98a76e25ec179b08
+msgid "Here's the steps to follow to switch to a Composer-based installation:"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:28 c49e4bba47b14954beb421b7b2a1e8bd
+msgid "Go to ``/var/www``"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:30 576005cbac5848648f904535e064001e
+msgid ""
+"Run ``composer create-project mautic/recommended-project:^4 html-new --no-"
+"interaction``"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:32 3b4fb820279342c7a5646481216fd87a
+msgid ""
+"Copy the following files and folders from ``/var/www/html`` to "
+"``/var/www/html-new``:"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:34 e485a2b53ea54b5bb94227fb5a5657e7
+msgid ""
+"Configuration files - in most cases, located at ``app/config/local.php`` - "
+"move to ``docroot/app/config/local.php``"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:36 098ded71aa95482585cf50fb1f59c6e0
+msgid "The entire ``plugins`` directory - move to ``docroot/plugins``."
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:38 4dfff916d19a4ecb82c12795da981e1a
+msgid ""
+"Uploads - in most cases, located at ``app/media/files`` and "
+"``app/media/images`` - move to ``docroot/app/media/files`` and "
+"``docroot/app/media/images`` respectively"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:40 36fe31a60cc04794a1b65b87a927d369
+msgid ""
+"Custom dashboards from ``app/media/dashboards`` - move to "
+"``docroot/app/media/dashboards``"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:42 ed49c86aeb50431eab3790f6164bb656
+msgid "Any custom Themes from ``themes`` - move to ``/docroot/themes``"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:44 f87391eadc0b4b85bcee2a5f07235403
+msgid ""
+"Any translations from ``translations`` - move to ``/docroot/translations``"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:46 5deca6144cf544d695d79734d416bf26
+msgid ""
+"Rename ``/var/www/html`` to ``/var/www/html-old`` and ``/var/www/html-new`` "
+"to ``/var/www/html``"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:48 ff2822a95636424e82b8e0ccb8597dbf
+msgid ""
+"When you're done, update your web server configuration to point to "
+"``/var/www/html/docroot`` instead of ``/var/www/html``"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:50 df94dcc2151f4ca289a17f4bb6772d05
+msgid ""
+"Log into Mautic, and in your global settings, enable the switch to fully "
+"manage Mautic with Composer - this will also enable you to work with the "
+"Mautic Marketplace."
+msgstr ""
+
+#: ../../set_up/switching_composer.rstNone cc4b76e5731341f7963b16a02ebbca0f
+msgid "Screenshot of switch enable Composer"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:56 558548159d1f4edbbc09d465fb24d9d9
+msgid ""
+"You have now switched to a Composer-based installation. Test if Mautic works"
+" as expected."
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:61 79cdae8974d04c919c5c8ae42b560590
+msgid "Frequently Asked Questions (FAQs)"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:63 8199e8da7987492e9808caba34764b22
+msgid "Q: Is existing data retained?"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:65 de8563fd9daa46bf9a1332cdf2c0d36b
+msgid ""
+"A: Yes. Switching to the Composer-based installation only affects app files."
+" Nothing happens to your data."
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:67 14eb3780b85f423c95a9035b27e153db
+msgid ""
+"Q: What's the minimum Mautic version required to switch to the Composer-"
+"based installation?"
+msgstr ""
+
+#: ../../set_up/switching_composer.rst:69 0889f273ded04c779aa8ddaa02ac2410
+msgid ""
+"A: You need at least Mautic 4.0.0 for switching to the Composer-based "
+"installation."
+msgstr ""

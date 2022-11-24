@@ -11,7 +11,7 @@ Requirements
 ************
 
 - The :doc:`/plugins/twitter` plugin must be configured
-- You must trigger the Social Monitoring :doc:`cron job </set_up/cron_jobs>` periodically.
+- You must trigger the Social Monitoring :doc:`cron job </configuration/cron_jobs>` periodically.
 
 .. vale off
 

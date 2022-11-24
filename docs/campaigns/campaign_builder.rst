@@ -64,7 +64,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Change Contact's Stage**  
      - Moves a Contact to the specified Stage.
    * - **Delete Contact**  
-     - Permanently deletes the Contact record along with all the information about that Contact, including the Campaign event log record about that Contact. See the :doc:`Segment docs</contacts/manage_segments>` about how to use this action to delete all Contacts in a Segment.
+     - Permanently deletes the Contact record along with all the information about that Contact, including the Campaign event log record about that Contact. See the :doc:`Segment docs</segments/manage_segments>` about how to use this action to delete all Contacts in a Segment.
    * - **Jump to Event**  
      - Moves Contacts from one point in a Campaign to another without rebuilding events. Use this action to send the Contact to a different path in the Campaign.
    * - **Modify Contact's Segments**
@@ -242,7 +242,7 @@ Triggering Campaign events
 
 .. vale on
 
-Actions and Decisions in Mautic require a :doc:`cron job</set_up/cron_jobs>` which executes the following command at the desired interval:
+Actions and Decisions in Mautic require a :doc:`cron job</configuration/cron_jobs>` which executes the following command at the desired interval:
 
 .. code-block:: shell
 

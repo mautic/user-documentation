@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Ruth Cheesley <ruth@ruthcheesley.co.uk>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"PO-Revision-Date: 2022-11-14 11:42+0000\n"
+"Last-Translator: Ruth Cheesley <ruth@ruthcheesley.co.uk>, 2022\n"
+"Language-Team: English (United Kingdom) (https://www.transifex.com/mautic/teams/33223/en_GB/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../index.rst:24
+msgid "Welcome to Mautic"
+msgstr "Welcome to Mautic"
+
+#: ../index.rst:31
+msgid "Getting Started with Mautic"
+msgstr "Getting Started with Mautic"
+
+#: ../index.rst:40
+msgid "Configuration"
+msgstr "Configuration"
+
+#: ../index.rst:51
+msgid "Authentication"
+msgstr "Authentication"
+
+#: ../index.rst:58
+msgid "Contacts"
+msgstr "Contacts"
+
+#: ../index.rst:69
+msgid "Segments"
+msgstr "Segments"
+
+#: ../index.rst:76
+msgid "Campaigns"
+msgstr "Campaigns"
+
+#: ../index.rst:87
+msgid "Categories"
+msgstr "Categories"
+
+#: ../index.rst:94
+msgid "Channels"
+msgstr "Channels"
+
+#: ../index.rst:108
+msgid "Companies"
+msgstr "Companies"
+
+#: ../index.rst:115
+msgid "Components"
+msgstr "Components"
+
+#: ../index.rst:126
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: ../index.rst:133
+msgid "Email & Landing Page Builders"
+msgstr "Email & Landing Page Builders"
+
+#: ../index.rst:141
+msgid "Mautic Marketplace"
+msgstr "Mautic Marketplace"
+
+#: ../index.rst:148
+msgid "Plugins"
+msgstr "Plugins"
+
+#: ../index.rst:176
+msgid "Points"
+msgstr "Points"
+
+#: ../index.rst:184
+msgid "Queue"
+msgstr "Queue"
+
+#: ../index.rst:192
+msgid "Reports"
+msgstr "Reports"
+
+#: ../index.rst:199
+msgid "Search"
+msgstr "Search"
+
+#: ../index.rst:206
+msgid "Stages"
+msgstr "Stages"
+
+#: ../index.rst:213
+msgid "Themes"
+msgstr "Themes"
+
+#: ../index.rst:224
+msgid "Translation"
+msgstr "Translation"
+
+#: ../index.rst:231
+msgid "User and Roles"
+msgstr "User and Roles"
+
+#: ../index.rst:2
+msgid "Welcome to the Mautic documentation"
+msgstr "Welcome to the Mautic documentation"
+
+#: ../index.rst:4
+msgid ""
+"**Mautic** is an open source marketing automation platform that provides you"
+" with the greatest level of audience intelligence, thus enabling you to make"
+" more meaningful customer connections."
+msgstr ""
+"**Mautic** is an open source marketing automation platform that provides you"
+" with the greatest level of audience intelligence, thus enabling you to make"
+" more meaningful customer connections."
+
+#: ../index.rst:6
+msgid ""
+"To get started with Mautic, follow the :doc:`Getting started "
+"guide</getting_started/how_to_install_mautic>`. For next steps, you can "
+"learn :doc:`how to update Mautic</getting_started/how_to_update_mautic>`."
+msgstr ""
+"To get started with Mautic, follow the :doc:`Getting started "
+"guide</getting_started/how_to_install_mautic>`. For next steps, you can "
+"learn :doc:`how to update Mautic</getting_started/how_to_update_mautic>`."
+
+#: ../index.rst:9
+msgid ""
+"There are different types of documentation available to help you navigate "
+"your way through Mautic."
+msgstr ""
+"There are different types of documentation available to help you navigate "
+"your way through Mautic."
+
+#: ../index.rst:11
+msgid ""
+":xref:`End User Documentation` - Describes each aspect of Mautic in detail "
+"and explains how to use it.."
+msgstr ""
+":xref:`End User Documentation` - Describes each aspect of Mautic in detail "
+"and explains how to use it.."
+
+#: ../index.rst:13
+msgid ""
+":xref:`Developer Documentation` - Describes details about the Mautic API, "
+"Webhooks, Themes and Plugin development."
+msgstr ""
+":xref:`Developer Documentation` - Describes details about the Mautic API, "
+"Webhooks, Themes and Plugin development."
+
+#: ../index.rst:15
+msgid ""
+":xref:`Knowledgebase` - Provides a database of tutorials, FAQs, and how-to "
+"articles."
+msgstr ""
+":xref:`Knowledgebase` - Provides a database of tutorials, FAQs, and how-to "
+"articles."
+
+#: ../index.rst:17
+msgid ""
+":xref:`Community Handbook` - Describes how to get involved and contribute to"
+" Mautic's documentation development."
+msgstr ""
+":xref:`Community Handbook` - Describes how to get involved and contribute to"
+" Mautic's documentation development."
+
+#: ../index.rst:21
+msgid "This documentation project is under active development."
+msgstr "This documentation project is under active development."

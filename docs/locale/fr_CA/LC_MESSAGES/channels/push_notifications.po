@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 17:47+0100\n"
+"PO-Revision-Date: 2022-09-29 17:19+0000\n"
+"Language-Team: French (Canada) (https://www.transifex.com/mautic/teams/33223/fr_CA/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_CA\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../channels/push_notifications.rst:2 4ead9de4d33f4c42b62a0b6c7bf69a5e
+msgid "Mobile push notifications"
+msgstr ""
+
+#: ../../channels/push_notifications.rst:4 3542dcd274c54ee493ecfea81512bd60
+msgid ""
+"Mobile notifications integrate your iOS and Android app with "
+":xref:`OneSignal`. Using your own OneSignal account, you can now push a "
+"notification to your Contacts's mobile device - with their permission. "
+"Enable the Plugin in Mautic's Plugin manager to see Mobile Notifications "
+"listed under Channels in the menu."
+msgstr ""
+
+#: ../../channels/push_notifications.rst:6 a0229415a77a4880a6e789aed3ea0419
+msgid ""
+"For more detailed information see the :xref:`OneSignal iOS` and "
+":xref:`OneSignal Android` documentation."
+msgstr ""
+
+#: ../../channels/push_notifications.rst:9 196fa5de01c848f7bfe2acf6dbcf4e7c
+msgid "Setup"
+msgstr ""
+
+#: ../../channels/push_notifications.rst:14 488aea8419d34da8ab59fd3a72911d03
+msgid "iOS code for OneSignal integration"
+msgstr ""
+
+#: ../../channels/push_notifications.rst:16 7aa433a61fad491fa283ade34b1102cd
+msgid ""
+"To enable Push Notifications in your iOS app, add the following code - or a "
+"variant of it - inside your ``application`` func of ``AppDelegate``. The "
+"code examples below use Swift 3.1. Please modify them to your needs if you "
+"are using C#."
+msgstr ""
+
+#: ../../channels/push_notifications.rst:36 779d2ddcc59747cd80a929ccdbbee9c9
+msgid ""
+"For ease of use, we've created the following struct and func for sending "
+"user data to Mautic. Create this struct in your app, and import it where "
+"appropriate."
+msgstr ""
+
+#: ../../channels/push_notifications.rst:39 5eb209f51ed24efbb79f1656fbf85050
+msgid "UserData struct"
+msgstr ""
+
+#: ../../channels/push_notifications.rst:58 c0a6ff21c7ae4c40bbac50fea7559710
+msgid "pushUserDataToMautic func"
+msgstr ""
+
+#: ../../channels/push_notifications.rst:60 cbd3c0b2e2144ee9968cd58553c15d51
+msgid ""
+"This is a basic function for pushing the UserData struct to your Mautic "
+"installation. It will push the User data, and then display the response from"
+" Mautic as an app alert. Modify to meet the needs of your app."
+msgstr ""
+
+#: ../../channels/push_notifications.rst:94 68ec437b25cf47a190796e7ab016c161
+msgid "Notification statistics"
+msgstr ""
+
+#: ../../channels/push_notifications.rst:96 ed5e5cdf77c24289bd535553d4dbf4ee
+msgid ""
+"In addition to the UserData that gets pushed to Mautic, you can push open / "
+"interaction stats to Mautic by sending the UserData struct, with an appended"
+" stat JSON key."
+msgstr ""
