@@ -92,8 +92,8 @@ You can also configure other options:
 
 .. vale on
 
-Test the Plugin
-***************
+Test the Plugin Zoho CRM
+************************
 
 .. vale off
 
