@@ -189,28 +189,3 @@ How to get your Plugin listed on the Mautic Marketplace
 .. vale on
 
 Please review the resources on the :xref:`Developer Documentation Marketplace` for more information.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
