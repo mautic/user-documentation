@@ -62,6 +62,20 @@ Having set up a RabbitMQ server, you can configure Mautic to use it by setting t
      - ``0``	
      - 	The exit code to be returned when the consumer exits due to idle timeout
 
+Example: 
+
+.. code-block::
+
+    'queue_protocol' => 'rabbitmq',
+    'rabbitmq_host' => 'b-180b97c2-6b05-4b10-80ed-09182eac3a02.mq.us-west-1.amazonaws.com',
+    'rabbitmq_port' => '5671',
+    'rabbitmq_vhost' => '/',
+    'rabbitmq_user' => 'some_user',
+    'rabbitmq_password' => 'some_password',
+    'rabbitmq_idle_timeout' => 0,
+    'rabbitmq_idle_timeout_exit_code' => 0,
+      
+
 Beanstalkd
 **********
 
