@@ -100,6 +100,6 @@ There are permission levels relating to what fields in the Users section can be 
 
   User permissions restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see. 
   
-  For example, if a User’s Role doesn’t have Asset permissions, they can’t create widgets on the dashboard for Asset data.
+  For example, if a User’s Role doesn’t have Asset permissions, they can’t create or view widgets on the dashboard for Asset data.
 
 You can also :xref:`create Roles using the API`.
