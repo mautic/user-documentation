@@ -1,0 +1,3412 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Ruth Cheesley <ruth@ruthcheesley.co.uk>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"PO-Revision-Date: 2022-11-14 11:42+0000\n"
+"Last-Translator: Ruth Cheesley <ruth@ruthcheesley.co.uk>, 2022\n"
+"Language-Team: English (United Kingdom) (https://www.transifex.com/mautic/teams/33223/en_GB/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../channels/emails.rst:2
+msgid "Emails"
+msgstr "Emails"
+
+#: ../channels/emails.rst:4
+msgid ""
+"Mautic enables marketers to automatically send Emails directly to a group of"
+" Contacts in a Segment by using a Campaign, or send Emails on a one-time "
+"basis. Emails provide a means for direct interaction with potential "
+"customers, clients, and Contacts."
+msgstr ""
+"Mautic enables marketers to automatically send Emails directly to a group of"
+" Contacts in a Segment by using a Campaign, or send Emails on a one-time "
+"basis. Emails provide a means for direct interaction with potential "
+"customers, clients, and Contacts."
+
+#: ../channels/emails.rst:7
+msgid "Email types"
+msgstr "Email types"
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing the types of Emails that are available in Mautic"
+msgstr "Screenshot showing the types of Emails that are available in Mautic"
+
+#: ../channels/emails.rst:13
+msgid ""
+"There are two types of Emails: template and Segment - broadcast - Emails."
+msgstr ""
+"There are two types of Emails: template and Segment - broadcast - Emails."
+
+#: ../channels/emails.rst:18
+msgid "Template Emails"
+msgstr "Template Emails"
+
+#: ../channels/emails.rst:22
+msgid ""
+"Template Emails are transactional by default. They're used in Campaigns, "
+"Form submit actions, Point triggers, etc. It's possible to send template "
+"Emails to the same Contact multiple times. You can't send template Emails to"
+" a Contact outside of another Mautic Component except when sending an Email "
+"directly to a Contact - in this case Mautic clones the content."
+msgstr ""
+"Template Emails are transactional by default. They're used in Campaigns, "
+"Form submit actions, Point triggers, etc. It's possible to send template "
+"Emails to the same Contact multiple times. You can't send template Emails to"
+" a Contact outside of another Mautic Component except when sending an Email "
+"directly to a Contact - in this case Mautic clones the content."
+
+#: ../channels/emails.rst:25
+msgid ""
+"For this reason, template Emails sent directly to a Contact aren't "
+"associated with the template Email itself and thus stats aren't tracked "
+"against it."
+msgstr ""
+"For this reason, template Emails sent directly to a Contact aren't "
+"associated with the template Email itself and thus stats aren't tracked "
+"against it."
+
+#: ../channels/emails.rst:30
+msgid "Segment (Broadcast) Emails"
+msgstr "Segment (Broadcast) Emails"
+
+#: ../channels/emails.rst:34
+msgid ""
+"Segment Emails are marketing Emails by default. On creation the marketer "
+"assigns Segments to the Email. This determines which Contacts receive the "
+"communication. Note that each Contact can only receive the Email once - it's"
+" like a mailing list."
+msgstr ""
+"Segment Emails are marketing Emails by default. On creation the marketer "
+"assigns Segments to the Email. This determines which Contacts receive the "
+"communication. Note that each Contact can only receive the Email once - it's"
+" like a mailing list."
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing selecting Email Segments in Mautic"
+msgstr "Screenshot showing selecting Email Segments in Mautic"
+
+#: ../channels/emails.rst:40
+msgid ""
+"This entry field is a multi-select which allows you to choose several "
+"Segments if necessary."
+msgstr ""
+"This entry field is a multi-select which allows you to choose several "
+"Segments if necessary."
+
+#: ../channels/emails.rst:42
+msgid ""
+"Mautic initiates the sending of these Emails with a "
+":doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts -"
+" for example, Segment Emails - for more details on this."
+msgstr ""
+"Mautic initiates the sending of these Emails with a "
+":doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts -"
+" for example, Segment Emails - for more details on this."
+
+#: ../channels/emails.rst:45
+msgid "Email formats"
+msgstr "Email formats"
+
+#: ../channels/emails.rst:47
+msgid ""
+"In Mautic, it's possible to create Emails in both full HTML as well as basic"
+" text format - delivered as necessary to Contacts based on what their client"
+" supports. This is an important part of creating a strong relationship with "
+"Contacts by providing relevant information in the correct format."
+msgstr ""
+"In Mautic, it's possible to create Emails in both full HTML as well as basic"
+" text format - delivered as necessary to Contacts based on what their client"
+" supports. This is an important part of creating a strong relationship with "
+"Contacts by providing relevant information in the correct format."
+
+#: ../channels/emails.rst:52
+msgid "Managing Emails"
+msgstr "Managing Emails"
+
+#: ../channels/emails.rst:57
+msgid "Email overview"
+msgstr "Email overview"
+
+#: ../channels/emails.rst:59
+msgid ""
+"The Email overview allows at-a-glance information regarding the success or "
+"failure of a particular Email. You can quickly see relevant information in "
+"regards to opens, bounces, successful click-throughs and other important "
+"statistics."
+msgstr ""
+"The Email overview allows at-a-glance information regarding the success or "
+"failure of a particular Email. You can quickly see relevant information in "
+"regards to opens, bounces, successful click-throughs and other important "
+"statistics."
+
+#: ../channels/emails.rst:62
+msgid "Translations"
+msgstr "Translations"
+
+#: ../channels/emails.rst:64
+msgid ""
+"When creating the Email, there is an option to assign a language and a "
+"translation parent. By selecting a translation parent, the current item is "
+"then considered to be a translation in the selected language of that parent "
+"item. If a Contact has a preferred language set, they receive the translated"
+" version in their preferred language if it exists. Otherwise, they receive "
+"the parent in the default language."
+msgstr ""
+"When creating the Email, there is an option to assign a language and a "
+"translation parent. By selecting a translation parent, the current item is "
+"then considered to be a translation in the selected language of that parent "
+"item. If a Contact has a preferred language set, they receive the translated"
+" version in their preferred language if it exists. Otherwise, they receive "
+"the parent in the default language."
+
+#: ../channels/emails.rst:66
+msgid "It's also possible to have translations of A/B test variants."
+msgstr "It's also possible to have translations of A/B test variants."
+
+#: ../channels/emails.rst:69
+msgid "Base64 encoded images"
+msgstr "Base64 encoded images"
+
+#: ../channels/emails.rst:71
+msgid ""
+"It's possible to encode all images in the Email text as base64. It attaches "
+"the image inside the Email body. It has several implications:"
+msgstr ""
+"It's possible to encode all images in the Email text as base64. It attaches "
+"the image inside the Email body. It has several implications:"
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing Base64 settings for images in Emails"
+msgstr "Screenshot showing Base64 settings for images in Emails"
+
+#: ../channels/emails.rst:77
+msgid ""
+"The main idea with this option is that most of the Email clients display the"
+" images directly, without the need to allow images."
+msgstr ""
+"The main idea with this option is that most of the Email clients display the"
+" images directly, without the need to allow images."
+
+#: ../channels/emails.rst:78
+msgid ""
+"Some Email clients like GMail require the approval to display Base64 encoded"
+" images due to the tracking pixel being an image, and won't display the "
+"Base64 encoded images as a result. See the next paragraph for possible "
+"solution."
+msgstr ""
+"Some Email clients like GMail require the approval to display Base64 encoded"
+" images due to the tracking pixel being an image, and won't display the "
+"Base64 encoded images as a result. See the next paragraph for possible "
+"solution."
+
+#: ../channels/emails.rst:79
+msgid ""
+"The Email body increases significantly if the Email contains many and/or "
+"large sized images. Some Email clients like GMail \"clip\" such messages and"
+" won't display it directly."
+msgstr ""
+"The Email body increases significantly if the Email contains many and/or "
+"large sized images. Some Email clients like GMail \"clip\" such messages and"
+" won't display it directly."
+
+#: ../channels/emails.rst:82
+msgid "Tokens"
+msgstr "Tokens"
+
+#: ../channels/emails.rst:84
+msgid ""
+"Mautic allows the use of tokens in Emails which gives the marketer the "
+"possibility to integrate a number of Contact fields in your Emails. These "
+"can be easily placed within your Emails and are automatically replaced with "
+"the appropriate text once sent."
+msgstr ""
+"Mautic allows the use of tokens in Emails which gives the marketer the "
+"possibility to integrate a number of Contact fields in your Emails. These "
+"can be easily placed within your Emails and are automatically replaced with "
+"the appropriate text once sent."
+
+#: ../channels/emails.rst:86
+msgid ""
+"Check the :doc:`/configuration/variables` documentation for a list of all "
+"the available default fields."
+msgstr ""
+"Check the :doc:`/configuration/variables` documentation for a list of all "
+"the available default fields."
+
+#: ../channels/emails.rst:89
+msgid "Default value"
+msgstr "Default value"
+
+#: ../channels/emails.rst:91
+msgid ""
+"A token can have a default value for cases when the Contact doesn't have the"
+" value known. You must specify the default value after a ``|`` character, "
+"for example:"
+msgstr ""
+"A token can have a default value for cases when the Contact doesn't have the"
+" value known. You must specify the default value after a ``|`` character, "
+"for example:"
+
+#: ../channels/emails.rst:97
+msgid ""
+"The ``|friend`` tells Mautic to use 'friend' if there is no first name "
+"present in the Contact field."
+msgstr ""
+"The ``|friend`` tells Mautic to use 'friend' if there is no first name "
+"present in the Contact field."
+
+#: ../channels/emails.rst:100
+msgid "Encoded value"
+msgstr "Encoded value"
+
+#: ../channels/emails.rst:102
+msgid ""
+"It's possible to encode values used in a token using the following syntax:"
+msgstr ""
+"It's possible to encode values used in a token using the following syntax:"
+
+#: ../channels/emails.rst:108
+msgid ""
+"The ``|true`` tells Mautic to encode the value used, for example in URLs."
+msgstr ""
+"The ``|true`` tells Mautic to encode the value used, for example in URLs."
+
+#: ../channels/emails.rst:111
+msgid "Date formats"
+msgstr "Date formats"
+
+#: ../channels/emails.rst:113
+msgid "To use custom date fields in tokens, use the following format:"
+msgstr "To use custom date fields in tokens, use the following format:"
+
+#: ../channels/emails.rst:121
+msgid ""
+"The date outputs in a human-readable format, configured in the settings in "
+"your Global Configuration > System Settings under 'Default format for date "
+"only' and 'Default time only format'."
+msgstr ""
+"The date outputs in a human-readable format, configured in the settings in "
+"your Global Configuration > System Settings under 'Default format for date "
+"only' and 'Default time only format'."
+
+#: ../channels/emails.rst:124
+msgid "Contact replies"
+msgstr "Contact replies"
+
+#: ../channels/emails.rst:126
+msgid ""
+"To make use of monitoring replies from Contacts, you must have access to an "
+"IMAP server **other than Google or Yahoo** as they overwrite the return "
+"path, which prevents this feature from working."
+msgstr ""
+"To make use of monitoring replies from Contacts, you must have access to an "
+"IMAP server **other than Google or Yahoo** as they overwrite the return "
+"path, which prevents this feature from working."
+
+#: ../channels/emails.rst:129
+msgid ""
+"To use the Monitored Email feature you must have the PHP IMAP extension "
+"enabled - most hosts already have this turned on."
+msgstr ""
+"To use the Monitored Email feature you must have the PHP IMAP extension "
+"enabled - most hosts already have this turned on."
+
+#: ../channels/emails.rst:131
+msgid ""
+"Configure all Mautic sender/reply Email addresses to send a copy to one "
+"single inbox - most Email providers support this feature in their "
+"configuration panel."
+msgstr ""
+"Configure all Mautic sender/reply Email addresses to send a copy to one "
+"single inbox - most Email providers support this feature in their "
+"configuration panel."
+
+#: ../channels/emails.rst:134
+msgid ""
+"It's best to create an Email address specifically for this purpose, as "
+"Mautic reads each message it finds in the given folder."
+msgstr ""
+"It's best to create an Email address specifically for this purpose, as "
+"Mautic reads each message it finds in the given folder."
+
+#: ../channels/emails.rst:136
+msgid ""
+"Go to the Mautic configuration and set up the inbox to monitor replies."
+msgstr ""
+"Go to the Mautic configuration and set up the inbox to monitor replies."
+
+#: ../channels/emails.rstNone ../channels/emails.rstNone
+msgid "Screenshot showing IMAP mailbox setting for reply monitoring"
+msgstr "Screenshot showing IMAP mailbox setting for reply monitoring"
+
+#: ../channels/emails.rst:142
+msgid "To fetch and process the replies, run the following cron command:"
+msgstr "To fetch and process the replies, run the following cron command:"
+
+#: ../channels/emails.rst:144
+msgid "``php path/to/mautic/bin/console mautic:email:fetch``"
+msgstr "``php path/to/mautic/bin/console mautic:email:fetch``"
+
+#: ../channels/emails.rst:147
+msgid "Usage"
+msgstr "Usage"
+
+#: ../channels/emails.rst:148
+msgid ""
+"Contact replies within Campaigns function as decision after an Email Send "
+"action, to take further action based on whether the Contact has replied to "
+"the Email. Mautic tries to read the inbox, parse messages, and find replies "
+"from the specified Contact. The Contact, when matched with an incoming "
+"reply, proceeds down the positive path immediately after the reply "
+"detection."
+msgstr ""
+"Contact replies within Campaigns function as decision after an Email Send "
+"action, to take further action based on whether the Contact has replied to "
+"the Email. Mautic tries to read the inbox, parse messages, and find replies "
+"from the specified Contact. The Contact, when matched with an incoming "
+"reply, proceeds down the positive path immediately after the reply "
+"detection."
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing Contact replies Campaign action"
+msgstr "Screenshot showing Contact replies Campaign action"
+
+#: ../channels/emails.rst:158
+msgid "Mailer as Owner"
+msgstr "Mailer as Owner"
+
+#: ../channels/emails.rst:162
+msgid ""
+"This feature allows Mautic to automatically personalize Emails sent to a "
+"Contact who has an owner (Mautic User) assigned to them. This feature "
+"changes the from Email, from name and signature by changing the default "
+"setting to the Mautic Contact owner's User setting."
+msgstr ""
+"This feature allows Mautic to automatically personalize Emails sent to a "
+"Contact who has an owner (Mautic User) assigned to them. This feature "
+"changes the from Email, from name and signature by changing the default "
+"setting to the Mautic Contact owner's User setting."
+
+#: ../channels/emails.rst:167
+msgid "Sending from the Contact owner"
+msgstr "Sending from the Contact owner"
+
+#: ../channels/emails.rst:171
+msgid "Open the Admin menu by clicking the cog icon in the top right corner."
+msgstr "Open the Admin menu by clicking the cog icon in the top right corner."
+
+#: ../channels/emails.rst:172
+msgid "Select the Configuration menu item."
+msgstr "Select the Configuration menu item."
+
+#: ../channels/emails.rst:173
+msgid "Select the Email Settings tab."
+msgstr "Select the Email Settings tab."
+
+#: ../channels/emails.rst:174
+msgid "Switch the Mailer is owner to Yes."
+msgstr "Switch the Mailer is owner to Yes."
+
+#: ../channels/emails.rst:175
+msgid "Save the configuration."
+msgstr "Save the configuration."
+
+#: ../channels/emails.rst:178
+msgid "Overriding the mailer as owner setting"
+msgstr "Overriding the mailer as owner setting"
+
+#: ../channels/emails.rst:179
+msgid "It's possible to override the global setting on a per-Email basis."
+msgstr "It's possible to override the global setting on a per-Email basis."
+
+#: ../channels/emails.rst:181
+msgid ""
+"There is a switch under the advanced settings of the Email, which allows you"
+" to decide whether to take the global mailer as owner setting, or the "
+"specified from address, into account."
+msgstr ""
+"There is a switch under the advanced settings of the Email, which allows you"
+" to decide whether to take the global mailer as owner setting, or the "
+"specified from address, into account."
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing mailer as owner switch"
+msgstr "Screenshot showing mailer as owner switch"
+
+#: ../channels/emails.rst:187
+msgid "If set to Yes, the global setting takes precedence."
+msgstr "If set to Yes, the global setting takes precedence."
+
+#: ../channels/emails.rst:189
+msgid ""
+"If set to No, Mautic uses the address and name supplied in the Email 'From' "
+"fields."
+msgstr ""
+"If set to No, Mautic uses the address and name supplied in the Email 'From' "
+"fields."
+
+#: ../channels/emails.rst:192
+msgid "Signatures"
+msgstr "Signatures"
+
+#: ../channels/emails.rst:194
+msgid "Setting a signature happens in two places:"
+msgstr "Setting a signature happens in two places:"
+
+#: ../channels/emails.rst:196
+msgid ""
+"The default signature is in the Configuration > Email Settings tab. The "
+"default text is"
+msgstr ""
+"The default signature is in the Configuration > Email Settings tab. The "
+"default text is"
+
+#: ../channels/emails.rst:202
+msgid ""
+"Mautic replaces the ``|FROM_NAME|`` token with the name which is also "
+"defined in the Email Settings tab."
+msgstr ""
+"Mautic replaces the ``|FROM_NAME|`` token with the name which is also "
+"defined in the Email Settings tab."
+
+#: ../channels/emails.rst:204
+msgid ""
+"Mautic uses this signature by default if the Contact doesn't have an owner "
+"assigned."
+msgstr ""
+"Mautic uses this signature by default if the Contact doesn't have an owner "
+"assigned."
+
+#: ../channels/emails.rst:206
+msgid ""
+"Every Mautic User can configure their own signature in their account "
+"settings. Mautic uses this signature by default if the Contact has an owner "
+"assigned to them."
+msgstr ""
+"Every Mautic User can configure their own signature in their account "
+"settings. Mautic uses this signature by default if the Contact has an owner "
+"assigned to them."
+
+#: ../channels/emails.rst:209
+msgid ""
+"There are some exceptions where the Contact owner's signature isn't used, "
+"which is when a User sends an Email directly from a Contact's profile. In "
+"this case, Mautic uses the currently logged in User's signature, with the "
+"from name and Email specified in the Email send Form, and not the Contact "
+"owner. The values used are pre-filled with those of the currently logged in "
+"Mautic User."
+msgstr ""
+"There are some exceptions where the Contact owner's signature isn't used, "
+"which is when a User sends an Email directly from a Contact's profile. In "
+"this case, Mautic uses the currently logged in User's signature, with the "
+"from name and Email specified in the Email send Form, and not the Contact "
+"owner. The values used are pre-filled with those of the currently logged in "
+"Mautic User."
+
+#: ../channels/emails.rst:211
+msgid ""
+"It doesn't matter if the Contact has another owner assigned or if it doesn't"
+" have an owner at all."
+msgstr ""
+"It doesn't matter if the Contact has another owner assigned or if it doesn't"
+" have an owner at all."
+
+#: ../channels/emails.rst:213
+msgid "Also, when sending a test Email this is also the case."
+msgstr "Also, when sending a test Email this is also the case."
+
+#: ../channels/emails.rst:219
+msgid "Using the Email signature"
+msgstr "Using the Email signature"
+
+#: ../channels/emails.rst:223
+msgid ""
+"Marketers can place the signature into an Email using the ``{signature}`` "
+"token."
+msgstr ""
+"Marketers can place the signature into an Email using the ``{signature}`` "
+"token."
+
+#: ../channels/emails.rst:226
+msgid "Email delivery"
+msgstr "Email delivery"
+
+#: ../channels/emails.rst:228
+msgid ""
+"Mautic delivers Emails using the method defined by the system administrator."
+" If you are the system administrator for your Company, then you need to add "
+"the Email protocol for your Mautic instance to use. Mautic integrates with "
+"any Email service provider which offers SMTP mail servers as well as several"
+" distinct services such as:"
+msgstr ""
+"Mautic delivers Emails using the method defined by the system administrator."
+" If you are the system administrator for your Company, then you need to add "
+"the Email protocol for your Mautic instance to use. Mautic integrates with "
+"any Email service provider which offers SMTP mail servers as well as several"
+" distinct services such as:"
+
+#: ../channels/emails.rst:230
+msgid ":xref:`Mandrill`"
+msgstr ":xref:`Mandrill`"
+
+#: ../channels/emails.rst:231
+msgid ":xref:`GMail`"
+msgstr ":xref:`GMail`"
+
+#: ../channels/emails.rst:232
+msgid ":xref:`Sendgrid`"
+msgstr ":xref:`Sendgrid`"
+
+#: ../channels/emails.rst:233
+msgid ":xref:`Mailjet`"
+msgstr ":xref:`Mailjet`"
+
+#: ../channels/emails.rst:234
+msgid ":xref:`Postmark`"
+msgstr ":xref:`Postmark`"
+
+#: ../channels/emails.rst:235
+msgid ":xref:`Sendmail`"
+msgstr ":xref:`Sendmail`"
+
+#: ../channels/emails.rst:236
+msgid ":xref:`Amazon SES`."
+msgstr ":xref:`Amazon SES`."
+
+#: ../channels/emails.rst:238
+msgid ""
+"The system can either send Emails immediately or queue them for processing "
+"in batches by a :doc:`cron job </configuration/cron_jobs>`."
+msgstr ""
+"The system can either send Emails immediately or queue them for processing "
+"in batches by a :doc:`cron job </configuration/cron_jobs>`."
+
+#: ../channels/emails.rst:241
+msgid "Immediate delivery"
+msgstr "Immediate delivery"
+
+#: ../channels/emails.rst:243
+msgid ""
+"This is the default means of delivery. As soon as an action in Mautic "
+"triggers an Email to send, it's sent immediately. If you expect to send a "
+"large number of Emails, you should use the queue. Sending Email immediately "
+"may slow the response time of Mautic if using a remote mail service, since "
+"Mautic has to establish a connection with that service before sending the "
+"mail. Also attempting to send large batches of Emails at once may hit your "
+"server's resource limits or Email sending limits if on a shared host."
+msgstr ""
+"This is the default means of delivery. As soon as an action in Mautic "
+"triggers an Email to send, it's sent immediately. If you expect to send a "
+"large number of Emails, you should use the queue. Sending Email immediately "
+"may slow the response time of Mautic if using a remote mail service, since "
+"Mautic has to establish a connection with that service before sending the "
+"mail. Also attempting to send large batches of Emails at once may hit your "
+"server's resource limits or Email sending limits if on a shared host."
+
+#: ../channels/emails.rst:246
+msgid "Queued delivery"
+msgstr "Queued delivery"
+
+#: ../channels/emails.rst:248
+msgid ""
+"Mautic works most effectively with high send volumes if you use the queued "
+"delivery method. Mautic stores the Email in the configured spool directory "
+"until the execution of the command to process the queue. Set up a :doc:`cron"
+" job </configuration/cron_jobs>` at the desired interval to run the command:"
+msgstr ""
+"Mautic works most effectively with high send volumes if you use the queued "
+"delivery method. Mautic stores the Email in the configured spool directory "
+"until the execution of the command to process the queue. Set up a :doc:`cron"
+" job </configuration/cron_jobs>` at the desired interval to run the command:"
+
+#: ../channels/emails.rst:254
+msgid ""
+"Some hosts may have limits on the number of Emails sent during a specified "
+"time frame and/or limit the execution time of a script. If that's the case "
+"for you, or if you just want to moderate batch processing, you can configure"
+" batch numbers and time limits in Mautic's Configuration. See the :doc:`cron"
+" job documentation </configuration/cron_jobs>` for more specifics."
+msgstr ""
+"Some hosts may have limits on the number of Emails sent during a specified "
+"time frame and/or limit the execution time of a script. If that's the case "
+"for you, or if you just want to moderate batch processing, you can configure"
+" batch numbers and time limits in Mautic's Configuration. See the :doc:`cron"
+" job documentation </configuration/cron_jobs>` for more specifics."
+
+#: ../channels/emails.rst:259
+msgid "Tracking Opened Emails"
+msgstr "Tracking Opened Emails"
+
+#: ../channels/emails.rst:263
+msgid ""
+"Mautic automatically tags each Email with a tracking pixel image. This "
+"allows Mautic to track when a Contact opens the Email and execute actions "
+"accordingly. Note that there are limitations to this technology - the "
+"Contact's Email client supporting HTML and auto-loading of images, and not "
+"blocking the loading of pixels. If the Email client doesn't load the image, "
+"there's no way for Mautic to know the opened status of the Email."
+msgstr ""
+"Mautic automatically tags each Email with a tracking pixel image. This "
+"allows Mautic to track when a Contact opens the Email and execute actions "
+"accordingly. Note that there are limitations to this technology - the "
+"Contact's Email client supporting HTML and auto-loading of images, and not "
+"blocking the loading of pixels. If the Email client doesn't load the image, "
+"there's no way for Mautic to know the opened status of the Email."
+
+#: ../channels/emails.rst:265
+msgid ""
+"By default, Mautic adds the tracking pixel image at the end of the message, "
+"just before the ``</body>`` tag. If needed, one could use the "
+"``{tracking_pixel}`` variable within the body content token to have it "
+"placed elsewhere. Beware that you shouldn't insert this directly after the "
+"opening ``<body>`` because this prevents correct display of pre-header text "
+"on some Email clients."
+msgstr ""
+"By default, Mautic adds the tracking pixel image at the end of the message, "
+"just before the ``</body>`` tag. If needed, one could use the "
+"``{tracking_pixel}`` variable within the body content token to have it "
+"placed elsewhere. Beware that you shouldn't insert this directly after the "
+"opening ``<body>`` because this prevents correct display of pre-header text "
+"on some Email clients."
+
+#: ../channels/emails.rst:267
+msgid ""
+"It's possible to turn off the tracking pixel entirely if you don't need to "
+"use it, in the Global Settings."
+msgstr ""
+"It's possible to turn off the tracking pixel entirely if you don't need to "
+"use it, in the Global Settings."
+
+#: ../channels/emails.rst:272
+msgid "Tracking links in Emails"
+msgstr "Tracking links in Emails"
+
+#: ../channels/emails.rst:276
+msgid ""
+"Mautic tracks clicks of each link in an Email, with the stats displayed at "
+"the bottom of each Email detail view under the Click Counts tab."
+msgstr ""
+"Mautic tracks clicks of each link in an Email, with the stats displayed at "
+"the bottom of each Email detail view under the Click Counts tab."
+
+#: ../channels/emails.rst:279
+msgid "Unsubscribing"
+msgstr "Unsubscribing"
+
+#: ../channels/emails.rst:281
+msgid ""
+"Mautic has a built in means of allowing a Contact to unsubscribe from Email "
+"communication. You can insert the tokens ``{unsubscribe_text}`` or "
+"``{unsubscribe_url}`` into your Email to have the text or the URL show at "
+"your desired location. The unsubscribe text token inserts a sentence with a "
+"link instructing the Contact to click to unsubscribe."
+msgstr ""
+"Mautic has a built in means of allowing a Contact to unsubscribe from Email "
+"communication. You can insert the tokens ``{unsubscribe_text}`` or "
+"``{unsubscribe_url}`` into your Email to have the text or the URL show at "
+"your desired location. The unsubscribe text token inserts a sentence with a "
+"link instructing the Contact to click to unsubscribe."
+
+#: ../channels/emails.rst:283
+msgid ""
+"The unsubscribe URL token inserts the URL into your custom written "
+"instructions."
+msgstr ""
+"The unsubscribe URL token inserts the URL into your custom written "
+"instructions."
+
+#: ../channels/emails.rst:285 ../channels/emails.rst:298
+msgid "For example:"
+msgstr "For example:"
+
+#: ../channels/emails.rst:291
+msgid ""
+"You can find the configuration of the unsubscribe text in the global "
+"settings."
+msgstr ""
+"You can find the configuration of the unsubscribe text in the global "
+"settings."
+
+#: ../channels/emails.rst:294
+msgid "Online version"
+msgstr "Online version"
+
+#: ../channels/emails.rst:296
+msgid ""
+"Mautic also enables the hosting of an online version of the Email sent. To "
+"use that feature, simply add the following as URL on text to generate the "
+"online version link ``{webview_url}``."
+msgstr ""
+"Mautic also enables the hosting of an online version of the Email sent. To "
+"use that feature, simply add the following as URL on text to generate the "
+"online version link ``{webview_url}``."
+
+#: ../channels/emails.rst:305
+msgid "Bounce management"
+msgstr "Bounce management"
+
+#: ../channels/emails.rst:307
+msgid ""
+"Mautic provides a feature which allows monitoring of IMAP accounts to detect"
+" bounced Emails and unsubscribe requests."
+msgstr ""
+"Mautic provides a feature which allows monitoring of IMAP accounts to detect"
+" bounced Emails and unsubscribe requests."
+
+#: ../channels/emails.rst:309
+msgid ""
+"Note that Mautic makes use of \"append\" Email addresses. The return-path or"
+" the list-unsubscribe header uses something like "
+"``youraddress+bounce_abc123@example.com``. The bounce or unsubscribe allows "
+"Mautic to determine what type of Email it's when it examines the inbox "
+"through IMAP. The ``abc123`` gives Mautic information about the Email "
+"itself, for example which Contact it was it sent to, what Mautic Email "
+"address it originated from, etc."
+msgstr ""
+"Note that Mautic makes use of \"append\" Email addresses. The return-path or"
+" the list-unsubscribe header uses something like "
+"``youraddress+bounce_abc123@example.com``. The bounce or unsubscribe allows "
+"Mautic to determine what type of Email it's when it examines the inbox "
+"through IMAP. The ``abc123`` gives Mautic information about the Email "
+"itself, for example which Contact it was it sent to, what Mautic Email "
+"address it originated from, etc."
+
+#: ../channels/emails.rst:311
+msgid ""
+"Some Email services overwrite the return-path header with that of the "
+"account's Email (GMail, Amazon SES). In these cases, IMAP bounce monitoring "
+"won't work."
+msgstr ""
+"Some Email services overwrite the return-path header with that of the "
+"account's Email (GMail, Amazon SES). In these cases, IMAP bounce monitoring "
+"won't work."
+
+#: ../channels/emails.rst:313
+msgid ""
+"Elastic Email, SparkPost, Mandrill, Mailjet, SendGrid and Amazon SES support"
+" Webhook callbacks for bounce management. See below for more details."
+msgstr ""
+"Elastic Email, SparkPost, Mandrill, Mailjet, SendGrid and Amazon SES support"
+" Webhook callbacks for bounce management. See below for more details."
+
+#: ../channels/emails.rst:318
+msgid "Monitored inbox configuration"
+msgstr "Monitored inbox configuration"
+
+#: ../channels/emails.rst:322
+msgid ""
+"To use the Monitored Email feature you must have the PHP IMAP extension "
+"enabled (most shared hosts already have this turned on).  Go to the Mautic "
+"configuration and fill in the account details for the inbox(es) you wish to "
+"monitor."
+msgstr ""
+"To use the Monitored Email feature you must have the PHP IMAP extension "
+"enabled (most shared hosts already have this turned on).  Go to the Mautic "
+"configuration and fill in the account details for the inbox(es) you wish to "
+"monitor."
+
+#: ../channels/emails.rst:328
+msgid ""
+"It's possible to use a single inbox, or to configure a unique inbox per "
+"monitor."
+msgstr ""
+"It's possible to use a single inbox, or to configure a unique inbox per "
+"monitor."
+
+#: ../channels/emails.rst:330
+msgid "To fetch and process the messages, run the following command:"
+msgstr "To fetch and process the messages, run the following command:"
+
+#: ../channels/emails.rst:336
+msgid ""
+"Note that it's best to create an Email address specifically for this "
+"purpose, as Mautic reads each message it finds in the given folder."
+msgstr ""
+"Note that it's best to create an Email address specifically for this "
+"purpose, as Mautic reads each message it finds in the given folder."
+
+#: ../channels/emails.rst:338
+msgid ""
+"If sending mail through GMail, the Return Path of the Email is automatically"
+" rewritten as the GMail address. It's best to use a sending method other "
+"than GMail, although Mautic can monitor a GMail account for bounces."
+msgstr ""
+"If sending mail through GMail, the Return Path of the Email is automatically"
+" rewritten as the GMail address. It's best to use a sending method other "
+"than GMail, although Mautic can monitor a GMail account for bounces."
+
+#: ../channels/emails.rst:340
+msgid ""
+"If you select an Unsubscribe folder, Mautic also appends the Email as part "
+"of the \"List-Unsubscribe\" header. It then parses messages it finds in that"
+" folder and automatically unsubscribe the Contact."
+msgstr ""
+"If you select an Unsubscribe folder, Mautic also appends the Email as part "
+"of the \"List-Unsubscribe\" header. It then parses messages it finds in that"
+" folder and automatically unsubscribe the Contact."
+
+#: ../channels/emails.rst:343
+msgid "Webhook bounce management"
+msgstr "Webhook bounce management"
+
+#: ../channels/emails.rst:348
+msgid "Elastic Email Webhook"
+msgstr "Elastic Email Webhook"
+
+#: ../channels/emails.rst:352
+msgid ""
+"Login to your Elastic Email account and go to Settings -> Notification."
+msgstr ""
+"Login to your Elastic Email account and go to Settings -> Notification."
+
+#: ../channels/emails.rst:354
+msgid ""
+"Fill in the Notification URL as "
+"``https://mautic.example.com/mailer/elasticemail/callback``"
+msgstr ""
+"Fill in the Notification URL as "
+"``https://mautic.example.com/mailer/elasticemail/callback``"
+
+#: ../channels/emails.rst:356
+msgid "Check these actions: unsubscribed, complaints, bounce/error"
+msgstr "Check these actions: unsubscribed, complaints, bounce/error"
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing Elastic Email Webhook settings"
+msgstr "Screenshot showing Elastic Email Webhook settings"
+
+#: ../channels/emails.rst:363
+msgid "Useful resources"
+msgstr "Useful resources"
+
+#: ../channels/emails.rst:365
+msgid ":xref:`Elastic Support` - Elastic Email's Help desk"
+msgstr ":xref:`Elastic Support` - Elastic Email's Help desk"
+
+#: ../channels/emails.rst:366
+msgid ""
+":xref:`Getting Started with Elastic` - Getting Started resources from "
+"Elastic Email"
+msgstr ""
+":xref:`Getting Started with Elastic` - Getting Started resources from "
+"Elastic Email"
+
+#: ../channels/emails.rst:371
+msgid "Amazon SES Webhook"
+msgstr "Amazon SES Webhook"
+
+#: ../channels/emails.rst:375
+msgid ""
+"Mautic supports the bounce and complaint management from Amazon Simple Email"
+" Service (Amazon SES)."
+msgstr ""
+"Mautic supports the bounce and complaint management from Amazon Simple Email"
+" Service (Amazon SES)."
+
+#: ../channels/emails.rst:377
+msgid ""
+"Go to the Amazon Simple Notification Service - SNS - and create a new topic:"
+msgstr ""
+"Go to the Amazon Simple Notification Service - SNS - and create a new topic:"
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing Amazon SNS create new topic"
+msgstr "Screenshot showing Amazon SNS create new topic"
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing naming your SNS topic"
+msgstr "Screenshot showing naming your SNS topic"
+
+#: ../channels/emails.rst:387
+msgid "Click on the newly created topic to create a subscriber"
+msgstr "Click on the newly created topic to create a subscriber"
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing go to the topic"
+msgstr "Screenshot showing go to the topic"
+
+#: ../channels/emails.rstNone
+msgid "Screenshot showing new subscriber"
+msgstr "Screenshot showing new subscriber"
+
+#: ../channels/emails.rst:397
+msgid "Enter the URL to the Amazon Webhook on your Mautic installation."
+msgstr "Enter the URL to the Amazon Webhook on your Mautic installation."
+
+#: ../channels/emails.rst:400
+msgid ""
+"When using the **SMTP method**, the callback URL is your Mautic URL followed"
+" by ``/mailer/amazon/callback``."
+msgstr ""
+"When using the **SMTP method**, the callback URL is your Mautic URL followed"
+" by ``/mailer/amazon/callback``."
+
+#: ../channels/emails.rst:402
+msgid ""
+"When using the **API method** (available since Mautic 3.2), the callback URL"
+" is your Mautic URL followed by ``/mailer/amazon_api/callback``."
+msgstr ""
+"When using the **API method** (available since Mautic 3.2), the callback URL"
+" is your Mautic URL followed by ``/mailer/amazon_api/callback``."
+
+#: ../channels/emails.rst:0
+msgid "Enter URL in Mautic"
+msgstr "Enter URL in Mautic"
+
+#: ../channels/emails.rst:408
+msgid ""
+"The subscriber is in the pending state until it's confirmed. SES calls your "
+"Amazon Webhook with a ``SubscriptionConfirmation`` request including a "
+"callback URL. To confirm, Mautic sends a request back to this callback URL "
+"to validate the subscription. Therefore make sure your Mautic installation "
+"can connect to the internet, otherwise the subscription remains in the "
+"pending state and won't work. If your Webhook is https, you also need to "
+"make sure that your site is using a valid SSL certificate which is "
+"verifiable by Amazon."
+msgstr ""
+"The subscriber is in the pending state until it's confirmed. SES calls your "
+"Amazon Webhook with a ``SubscriptionConfirmation`` request including a "
+"callback URL. To confirm, Mautic sends a request back to this callback URL "
+"to validate the subscription. Therefore make sure your Mautic installation "
+"can connect to the internet, otherwise the subscription remains in the "
+"pending state and won't work. If your Webhook is https, you also need to "
+"make sure that your site is using a valid SSL certificate which is "
+"verifiable by Amazon."
+
+#: ../channels/emails.rst:410
+msgid ""
+"Check the log file for more information. If you are having problems getting "
+"the subscription out of the pending state, it may also help to configure the"
+" topic's 'Delivery status logging' settings, so that delivery status (at "
+"least for http/s) gets logged to CloudWatch. Then you can visit the Logs "
+"section of the CloudWatch Management Console and see the exact details of "
+"delivery failures. For example, an invalid SSL certificate might result in "
+"an event like the following appearing in the CloudWatch logs:"
+msgstr ""
+"Check the log file for more information. If you are having problems getting "
+"the subscription out of the pending state, it may also help to configure the"
+" topic's 'Delivery status logging' settings, so that delivery status (at "
+"least for http/s) gets logged to CloudWatch. Then you can visit the Logs "
+"section of the CloudWatch Management Console and see the exact details of "
+"delivery failures. For example, an invalid SSL certificate might result in "
+"an event like the following appearing in the CloudWatch logs:"
+
+#: ../channels/emails.rst:447
+msgid "Mandrill Webhook"
+msgstr "Mandrill Webhook"
+
+#: ../channels/emails.rst:451
+msgid "Mautic supports a few of Mandrill's Webhooks for bounces."
+msgstr "Mautic supports a few of Mandrill's Webhooks for bounces."
+
+#: ../channels/emails.rst:453
+msgid "Login to your Mandrill account and go to Settings -> Webhooks"
+msgstr "Login to your Mandrill account and go to Settings -> Webhooks"
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing Mandrill Webhooks"
+msgstr "Screenshot showing Mandrill Webhooks"
+
+#: ../channels/emails.rst:459
+msgid "Click Add a Webhook"
+msgstr "Click Add a Webhook"
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing addition of Mandrill Webhooks"
+msgstr "Screenshot showing addition of Mandrill Webhooks"
+
+#: ../channels/emails.rst:467
+msgid ""
+"Mautic supports the following Webhooks: message is bounced, message is soft-"
+"bounced, message is rejected, message is marked as spam and message "
+"recipient unsubscribes."
+msgstr ""
+"Mautic supports the following Webhooks: message is bounced, message is soft-"
+"bounced, message is rejected, message is marked as spam and message "
+"recipient unsubscribes."
+
+#: ../channels/emails.rst:471
+msgid ""
+"Fill in the ``Post To URL`` as "
+"``https://mautic.example.com/mailer/mandrill/callback`` then click Create "
+"Webhook."
+msgstr ""
+"Fill in the ``Post To URL`` as "
+"``https://mautic.example.com/mailer/mandrill/callback`` then click Create "
+"Webhook."
+
+#: ../channels/emails.rst:473
+msgid ""
+"Click Custom Metadata and create two new metadata fields: ``hashId`` and "
+"``contactId``"
+msgstr ""
+"Click Custom Metadata and create two new metadata fields: ``hashId`` and "
+"``contactId``"
+
+#: ../channels/emails.rst:0 ../channels/emails.rst:0
+msgid "Screenshot showing addition of metadata"
+msgstr "Screenshot showing addition of metadata"
+
+#: ../channels/emails.rst:486
+msgid "Mailjet Webhook"
+msgstr "Mailjet Webhook"
+
+#: ../channels/emails.rst:490
+msgid ""
+"Mautic supports Mailjet's Webhooks for bounces, spam and blocked. Before any"
+" configuration, you'll need to create an account on :xref:`Mailjet`."
+msgstr ""
+"Mautic supports Mailjet's Webhooks for bounces, spam and blocked. Before any"
+" configuration, you'll need to create an account on :xref:`Mailjet`."
+
+#: ../channels/emails.rst:492
+msgid ""
+"Login to your Mailjet account and go to Account > Event tracking/triggers"
+msgstr ""
+"Login to your Mailjet account and go to Account > Event tracking/triggers"
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing Mailjet Webhooks"
+msgstr "Screenshot showing Mailjet Webhooks"
+
+#: ../channels/emails.rst:498
+msgid ""
+"On the event type list, select the one you want to link to your Mautic "
+"account"
+msgstr ""
+"On the event type list, select the one you want to link to your Mautic "
+"account"
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing adding Webhooks"
+msgstr "Screenshot showing adding Webhooks"
+
+#: ../channels/emails.rst:506
+msgid ""
+"Mautic supports the following webhooks: message is bounced, message is "
+"blocked, message is spam."
+msgstr ""
+"Mautic supports the following webhooks: message is bounced, message is "
+"blocked, message is spam."
+
+#: ../channels/emails.rst:510
+msgid ""
+"Fill in the URL boxes as "
+"``https://mautic.example.com/mailer/mailjet/callback``."
+msgstr ""
+"Fill in the URL boxes as "
+"``https://mautic.example.com/mailer/mailjet/callback``."
+
+#: ../channels/emails.rst:515
+msgid "SparkPost Webhook"
+msgstr "SparkPost Webhook"
+
+#: ../channels/emails.rst:516
+msgid "Login to your SparkPost account and go to Account -> Webhooks."
+msgstr "Login to your SparkPost account and go to Account -> Webhooks."
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing SparkPost webhooks"
+msgstr "Screenshot showing SparkPost webhooks"
+
+#: ../channels/emails.rst:522
+msgid "Click the New Webhook button top right"
+msgstr "Click the New Webhook button top right"
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing new Webhooks"
+msgstr "Screenshot showing new Webhooks"
+
+#: ../channels/emails.rst:528
+msgid ""
+"Fill in the Target URL as "
+"``https://mautic.example.com/mailer/sparkpost/callback``"
+msgstr ""
+"Fill in the Target URL as "
+"``https://mautic.example.com/mailer/sparkpost/callback``"
+
+#: ../channels/emails.rst:530 ../channels/emails.rst:553
+msgid "Select the following Events"
+msgstr "Select the following Events"
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing events"
+msgstr "Screenshot showing events"
+
+#: ../channels/emails.rst:537
+msgid "SendGrid Webhook"
+msgstr "SendGrid Webhook"
+
+#: ../channels/emails.rst:541
+msgid ""
+"Login to your SendGrid account and go to Settings > Mail Setting > Mail "
+"Settings"
+msgstr ""
+"Login to your SendGrid account and go to Settings > Mail Setting > Mail "
+"Settings"
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing SendGrid Webhooks"
+msgstr "Screenshot showing SendGrid Webhooks"
+
+#: ../channels/emails.rst:549
+msgid ""
+"Fill in the Target URL as "
+"`https://mautic.example.com/mailer/sendgrid_api/callback`"
+msgstr ""
+"Fill in the Target URL as "
+"`https://mautic.example.com/mailer/sendgrid_api/callback`"
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing Events"
+msgstr "Screenshot showing Events"
+
+#: ../channels/emails.rst:559
+msgid "Save setting - on the right side of \"Event Notification\" row:"
+msgstr "Save setting - on the right side of \"Event Notification\" row:"
+
+#: ../channels/emails.rst:0
+msgid "Screenshot showing save settings"
+msgstr "Screenshot showing save settings"
+
+#: ../channels/emails.rst:568
+msgid "Create a Segment with bounced Emails"
+msgstr "Create a Segment with bounced Emails"
+
+#: ../channels/emails.rst:572
+msgid ""
+"This isn't required, but if you want to be able to select the Contacts with "
+"bounced Emails easily - for example to delete all bounced Contacts - create "
+"a Segment with bounced Emails."
+msgstr ""
+"This isn't required, but if you want to be able to select the Contacts with "
+"bounced Emails easily - for example to delete all bounced Contacts - create "
+"a Segment with bounced Emails."
+
+#: ../channels/emails.rst:574
+msgid "Go to Segments > New."
+msgstr "Go to Segments > New."
+
+#: ../channels/emails.rst:575
+msgid "Type in the Segment name. For example Bounced Emails."
+msgstr "Type in the Segment name. For example Bounced Emails."
+
+#: ../channels/emails.rst:576
+msgid "Select the Filters tab."
+msgstr "Select the Filters tab."
+
+#: ../channels/emails.rst:577
+msgid "Create new Bounced Email equals Yes filter."
+msgstr "Create new Bounced Email equals Yes filter."
+
+#: ../channels/emails.rst:578
+msgid ""
+"Wait for the ``bin/console mautic:segments:update`` command to be "
+"automatically triggered by a cron job or execute it manually."
+msgstr ""
+"Wait for the ``bin/console mautic:segments:update`` command to be "
+"automatically triggered by a cron job or execute it manually."
+
+#: ../channels/emails.rst:579
+msgid "All Contacts with bounced Emails should appear in this Segment."
+msgstr "All Contacts with bounced Emails should appear in this Segment."
+
+#: ../channels/emails.rst:584
+msgid "Troubleshooting Emails"
+msgstr "Troubleshooting Emails"
+
+#: ../channels/emails.rst:589
+msgid "Email open tracking"
+msgstr "Email open tracking"
+
+#: ../channels/emails.rst:591
+msgid ""
+"Mautic tracks Email opens using a tracking pixel. This is a 1 pixel GIF "
+"image in the source code of Email messages sent by Mautic."
+msgstr ""
+"Mautic tracks Email opens using a tracking pixel. This is a 1 pixel GIF "
+"image in the source code of Email messages sent by Mautic."
+
+#: ../channels/emails.rst:593
+msgid ""
+"When a Contact opens an Email using an Email client like Outlook, "
+"Thunderbird, or GMail, the client tries to load the images in it. The image "
+"load request is what Mautic uses to track the Email open action."
+msgstr ""
+"When a Contact opens an Email using an Email client like Outlook, "
+"Thunderbird, or GMail, the client tries to load the images in it. The image "
+"load request is what Mautic uses to track the Email open action."
+
+#: ../channels/emails.rst:595
+msgid ""
+"Some Email clients have auto loading images turned off, and Contacts have to"
+" selectively \"Load Images\" inside an Email message. Some automatically "
+"open all images before delivering the Email to the Contact."
+msgstr ""
+"Some Email clients have auto loading images turned off, and Contacts have to"
+" selectively \"Load Images\" inside an Email message. Some automatically "
+"open all images before delivering the Email to the Contact."
+
+#: ../channels/emails.rst:597
+msgid ""
+"If the images aren't loaded for this reason or another, or if they're opened"
+" automatically before sending the Email on to the Contact, Mautic doesn't "
+"know about the open action. Therefore, Email open tracking isn't very "
+"accurate."
+msgstr ""
+"If the images aren't loaded for this reason or another, or if they're opened"
+" automatically before sending the Email on to the Contact, Mautic doesn't "
+"know about the open action. Therefore, Email open tracking isn't very "
+"accurate."
+
+#: ../channels/emails.rst:600
+msgid "Email link tracking"
+msgstr "Email link tracking"
+
+#: ../channels/emails.rst:602
+msgid ""
+"Before sending an Email, Mautic replaces all links in the Email with links "
+"back to Mautic including a unique key. If the Contact clicks on such a link,"
+" the link redirects the Contact to Mautic, which then tracks the click "
+"action and redirects the Contact to the original location. It's fast, so the"
+" Contact doesn't usually notice the additional redirect."
+msgstr ""
+"Before sending an Email, Mautic replaces all links in the Email with links "
+"back to Mautic including a unique key. If the Contact clicks on such a link,"
+" the link redirects the Contact to Mautic, which then tracks the click "
+"action and redirects the Contact to the original location. It's fast, so the"
+" Contact doesn't usually notice the additional redirect."
+
+#: ../channels/emails.rst:604
+msgid "If the Email click doesn't get tracked, make sure that:"
+msgstr "If the Email click doesn't get tracked, make sure that:"
+
+#: ../channels/emails.rst:606
+msgid "Your Mautic server is on an accessible URL."
+msgstr "Your Mautic server is on an accessible URL."
+
+#: ../channels/emails.rst:607
+msgid ""
+"You sent it to an existing Contact via a Campaign or a Segment Email. Emails"
+" sent by the Send Example link, direct Email from the Contact profile, or "
+"Form submission preview Emails won't replace links with trackable links."
+msgstr ""
+"You sent it to an existing Contact via a Campaign or a Segment Email. Emails"
+" sent by the Send Example link, direct Email from the Contact profile, or "
+"Form submission preview Emails won't replace links with trackable links."
+
+#: ../channels/emails.rst:608
+msgid ""
+"Make sure the URL in the href attribute is absolute and valid. It should "
+"start with ``http://`` or ideally ``https://``."
+msgstr ""
+"Make sure the URL in the href attribute is absolute and valid. It should "
+"start with ``http://`` or ideally ``https://``."
+
+#: ../channels/emails.rst:609
+msgid ""
+"You've opened the link in a incognito browser (not in the same session where"
+" you're logged into Mautic)"
+msgstr ""
+"You've opened the link in a incognito browser (not in the same session where"
+" you're logged into Mautic)"
+
+#: ../channels/emails.rst:610
+msgid "Check if Mautic replaced the link in the Email with a tracking link."
+msgstr "Check if Mautic replaced the link in the Email with a tracking link."
+
+#: ../channels/emails.rst:613
+msgid "Unsubscribe link doesn't work"
+msgstr "Unsubscribe link doesn't work"
+
+#: ../channels/emails.rst:614
+msgid "The unsubscribe link **doesn't work in test Emails**."
+msgstr "The unsubscribe link **doesn't work in test Emails**."
+
+#: ../channels/emails.rst:616
+msgid ""
+"This is because Mautic sends test Emails to a Mautic User and not to a "
+"Mautic Contact."
+msgstr ""
+"This is because Mautic sends test Emails to a Mautic User and not to a "
+"Mautic Contact."
+
+#: ../channels/emails.rst:618
+msgid ""
+"Mautic Users can't unsubscribe and therefore the unsubscribe link looks like"
+" this: ``https://mautic.example.com/|URL|``. However, the link **does** work"
+" correctly when you send the Email to a Contact."
+msgstr ""
+"Mautic Users can't unsubscribe and therefore the unsubscribe link looks like"
+" this: ``https://mautic.example.com/|URL|``. However, the link **does** work"
+" correctly when you send the Email to a Contact."
+
+#: ../channels/emails.rst:620
+msgid ""
+"Best practice is to create a Segment with a small number of Contacts to "
+"receive test Emails - for example, yourself - which ensures that you can "
+"fully test features such as unsubscribe behaviour."
+msgstr ""
+"Best practice is to create a Segment with a small number of Contacts to "
+"receive test Emails - for example, yourself - which ensures that you can "
+"fully test features such as unsubscribe behaviour."
+
+#: ../channels/focus_items.rst:2
+msgid "Focus Items"
+msgstr "Focus Items"
+
+#: ../channels/focus_items.rst:4
+msgid ""
+"Focus items allow you to engage Users on your site through bars, modals, "
+"notifications, popups, and light boxes. It's possible to initiate Focus "
+"Items at different times and with different actions such as exit intent."
+msgstr ""
+"Focus items allow you to engage Users on your site through bars, modals, "
+"notifications, popups, and light boxes. It's possible to initiate Focus "
+"Items at different times and with different actions such as exit intent."
+
+#: ../channels/focus_items.rst:6
+msgid "You can find Focus Items listed under the Channels menu."
+msgstr "You can find Focus Items listed under the Channels menu."
+
+#: ../channels/focus_items.rst:9
+msgid "Focus Item settings"
+msgstr "Focus Item settings"
+
+#: ../channels/focus_items.rst:10
+msgid ""
+"There are several different types of Focus Items, and many ways to configure"
+" them to deliver your strategic marketing goals."
+msgstr ""
+"There are several different types of Focus Items, and many ways to configure"
+" them to deliver your strategic marketing goals."
+
+#: ../channels/focus_items.rst:13
+msgid "Types of Focus Item"
+msgstr "Types of Focus Item"
+
+#: ../channels/focus_items.rst:15
+msgid ""
+"There are three different types of Focus Item that you can create within "
+"Mautic. These allow you to achieve different marketing goals with your Focus"
+" Items. Select the appropriate option for your needs."
+msgstr ""
+"There are three different types of Focus Item that you can create within "
+"Mautic. These allow you to achieve different marketing goals with your Focus"
+" Items. Select the appropriate option for your needs."
+
+#: ../channels/focus_items.rst:0
+msgid "Screenshot showing the types of Focus Items."
+msgstr "Screenshot showing the types of Focus Items."
+
+#: ../channels/focus_items.rst:21
+msgid ""
+"**Collect Data** - This option presents a Form - which must already exist - "
+"within the Focus Item. This allows you to gather more information about your"
+" website visitors. Mautic considers a successful conversion on this type of "
+"Focus Item when there is a submission of this Form. This option is great for"
+" capturing simple information - for example a newsletter registration Form."
+msgstr ""
+"**Collect Data** - This option presents a Form - which must already exist - "
+"within the Focus Item. This allows you to gather more information about your"
+" website visitors. Mautic considers a successful conversion on this type of "
+"Focus Item when there is a submission of this Form. This option is great for"
+" capturing simple information - for example a newsletter registration Form."
+
+#: ../channels/focus_items.rst:22
+msgid ""
+"**Display a Notice** - This option presents a message to your visitors. "
+"There is no option for detecting a conversion with this type of Focus Item. "
+"This option is great for announcements and important messages."
+msgstr ""
+"**Display a Notice** - This option presents a message to your visitors. "
+"There is no option for detecting a conversion with this type of Focus Item. "
+"This option is great for announcements and important messages."
+
+#: ../channels/focus_items.rst:23
+msgid ""
+"**Emphasize a link** - This option allows you to drive visitors to a "
+"specific link which might be a resource on your website, a Mautic Landing "
+"Page, or any other web-based resource. Mautic considers a link click to be a"
+" successful conversion with this Focus Item. This option is great for "
+"Landing Pages to highlight a promotion or a sale - it displays a button to "
+"click which directs the visitor to a given link."
+msgstr ""
+"**Emphasise a link** - This option allows you to drive visitors to a "
+"specific link which might be a resource on your website, a Mautic Landing "
+"Page, or any other web-based resource. Mautic considers a link click to be a"
+" successful conversion with this Focus Item. This option is great for "
+"Landing Pages to highlight a promotion or a sale - it displays a button to "
+"click which directs the visitor to a given link."
+
+#: ../channels/focus_items.rst:26
+msgid "Engagement options"
+msgstr "Engagement options"
+
+#: ../channels/focus_items.rst:28
+msgid ""
+"For each type of Focus Item, there are settings to configure which control "
+"the triggering of the Focus Item, and how they interact with the visitor."
+msgstr ""
+"For each type of Focus Item, there are settings to configure which control "
+"the triggering of the Focus Item, and how they interact with the visitor."
+
+#: ../channels/focus_items.rst:0
+msgid "Screenshot showing the engagement settings for Focus Items."
+msgstr "Screenshot showing the engagement settings for Focus Items."
+
+#: ../channels/focus_items.rst:36
+msgid ""
+"**Animate** - When set to Yes, this applies a slide-in animation to the "
+"Focus Item. When set to No, the item appears without any kind of sliding "
+"motion."
+msgstr ""
+"**Animate** - When set to Yes, this applies a slide-in animation to the "
+"Focus Item. When set to No, the item appears without any kind of sliding "
+"motion."
+
+#: ../channels/focus_items.rst:41
+msgid ""
+"**When to engage** - This setting controls the Focus Item shows. There are "
+"several options:"
+msgstr ""
+"**When to engage** - This setting controls the Focus Item shows. There are "
+"several options:"
+
+#: ../channels/focus_items.rst:38
+msgid "**Upon arrival** - As soon as a visitor lands on the page"
+msgstr "**Upon arrival** - As soon as a visitor lands on the page"
+
+#: ../channels/focus_items.rst:39
+msgid ""
+"**After slightly scrolling down** - Wait a little while until the visitor "
+"starts to scroll down the page"
+msgstr ""
+"**After slightly scrolling down** - Wait a little while until the visitor "
+"starts to scroll down the page"
+
+#: ../channels/focus_items.rst:40
+msgid ""
+"**After scrolling to the middle** - Wait until the visitor scrolls to the "
+"middle of the page"
+msgstr ""
+"**After scrolling to the middle** - Wait until the visitor scrolls to the "
+"middle of the page"
+
+#: ../channels/focus_items.rst:41
+msgid ""
+"**After scrolling to the bottom** - Wait until the visitor scrolls right to "
+"the bottom of the page"
+msgstr ""
+"**After scrolling to the bottom** - Wait until the visitor scrolls right to "
+"the bottom of the page"
+
+#: ../channels/focus_items.rst:42
+msgid ""
+"**Visitor intends to leave** - If the visitor's cursor moves over the "
+"address bar, or from the page to the tabs - for example to close the tab or "
+"open a new tab"
+msgstr ""
+"**Visitor intends to leave** - If the visitor's cursor moves over the "
+"address bar, or from the page to the tabs - for example to close the tab or "
+"open a new tab"
+
+#: ../channels/focus_items.rst:43
+msgid ""
+"**Timeout before engage** - This option allows you to set the delay in "
+"seconds after reaching the option selected in **When to engage**. For "
+"example, if the setting is **Upon arrival** and **Timeout before engage** is"
+" 2 seconds, the Focus Item appears two seconds *after* the visitor lands on "
+"the page."
+msgstr ""
+"**Timeout before engage** - This option allows you to set the delay in "
+"seconds after reaching the option selected in **When to engage**. For "
+"example, if the setting is **Upon arrival** and **Timeout before engage** is"
+" 2 seconds, the Focus Item appears two seconds *after* the visitor lands on "
+"the page."
+
+#: ../channels/focus_items.rst:49
+msgid ""
+"**How often to engage** - This option allows you to control how frequently "
+"the Focus Item displays to visitors. The options available include:"
+msgstr ""
+"**How often to engage** - This option allows you to control how frequently "
+"the Focus Item displays to visitors. The options available include:"
+
+#: ../channels/focus_items.rst:45
+msgid ""
+"**Every page** - Show on every page the visitors engages with on your "
+"website"
+msgstr ""
+"**Every page** - Show on every page the visitors engages with on your "
+"website"
+
+#: ../channels/focus_items.rst:46
+msgid ""
+"**Once per session** - Show once for each time that the visitor accesses "
+"your website"
+msgstr ""
+"**Once per session** - Show once for each time that the visitor accesses "
+"your website"
+
+#: ../channels/focus_items.rst:47
+msgid ""
+"**Every 2 minutes** - Show the Focus Item every two minutes that the visitor"
+" is on your website"
+msgstr ""
+"**Every 2 minutes** - Show the Focus Item every two minutes that the visitor"
+" is on your website"
+
+#: ../channels/focus_items.rst:48
+msgid ""
+"**Every 15 minutes** - Show the Focus Item every 15 minutes that the visitor"
+" is on your website"
+msgstr ""
+"**Every 15 minutes** - Show the Focus Item every 15 minutes that the visitor"
+" is on your website"
+
+#: ../channels/focus_items.rst:49
+msgid ""
+"**Once per hour** -  Show the Focus Item once every hour that the visitor is"
+" on your website"
+msgstr ""
+"**Once per hour** -  Show the Focus Item once every hour that the visitor is"
+" on your website"
+
+#: ../channels/focus_items.rst:50
+msgid ""
+"**Once per day** - Show the Focus Item once per day that the visitor is on "
+"your website"
+msgstr ""
+"**Once per day** - Show the Focus Item once per day that the visitor is on "
+"your website"
+
+#: ../channels/focus_items.rst:51
+msgid ""
+"**Stop engaging after a conversion** - This option is only available for the"
+" types which track a conversion (Collect Data and Emphasize a Link).  If set"
+" to Yes, the Focus Item no longer displays if the visitor has either "
+"submitted the Form (Collect Data type) or clicked on the link (Emphasize a "
+"Link type)."
+msgstr ""
+"**Stop engaging after a conversion** - This option is only available for the"
+" types which track a conversion (Collect Data and Emphasise a Link).  If set"
+" to Yes, the Focus Item no longer displays if the visitor has either "
+"submitted the Form (Collect Data type) or clicked on the link (Emphasise a "
+"Link type)."
+
+#: ../channels/focus_items.rst:56
+msgid "Styles"
+msgstr "Styles"
+
+#: ../channels/focus_items.rst:58
+msgid ""
+"There are four styles to choose from when creating a Focus Item. Each style "
+"has different configuration options relevant to the layout they provide."
+msgstr ""
+"There are four styles to choose from when creating a Focus Item. Each style "
+"has different configuration options relevant to the layout they provide."
+
+#: ../channels/focus_items.rst:0
+msgid "Screenshot showing the styles for Focus Items."
+msgstr "Screenshot showing the styles for Focus Items."
+
+#: ../channels/focus_items.rst:65
+msgid "Bar"
+msgstr "Bar"
+
+#: ../channels/focus_items.rst:66
+msgid ""
+"The Bar style creates a line across the top or bottom of the page, which "
+"includes the content of your Focus Item."
+msgstr ""
+"The Bar style creates a line across the top or bottom of the page, which "
+"includes the content of your Focus Item."
+
+#: ../channels/focus_items.rst:68
+msgid ""
+"**Allow hide** - when set to Yes, website visitors have a small arrow to "
+"hide the bar. The arrow shows on the right hand side of the bar. Once "
+"clicked, the bar shrinks to hide the content but the arrow is still be "
+"visible in case they want to maximise it again with a single click. If set "
+"to No, the visitor can't hide the bar."
+msgstr ""
+"**Allow hide** - when set to Yes, website visitors have a small arrow to "
+"hide the bar. The arrow shows on the right hand side of the bar. Once "
+"clicked, the bar shrinks to hide the content but the arrow is still be "
+"visible in case they want to maximise it again with a single click. If set "
+"to No, the visitor can't hide the bar."
+
+#: ../channels/focus_items.rst:69
+msgid ""
+"**Push page down** - This option allows the bar to push the page content up "
+"or down under the bar if set to Yes. If set to No, the bar covers the "
+"content at the top or bottom of the page depending on placement setting."
+msgstr ""
+"**Push page down** - This option allows the bar to push the page content up "
+"or down under the bar if set to Yes. If set to No, the bar covers the "
+"content at the top or bottom of the page depending on placement setting."
+
+#: ../channels/focus_items.rst:70
+msgid ""
+"**Make sticky** - If set to Yes, the bar stays anchored in position even "
+"when the visitor scrolls the page. If set to No, the bar won't anchored and "
+"disappears as the visitor scrolls the page, and re-appears as they reverse "
+"the scroll."
+msgstr ""
+"**Make sticky** - If set to Yes, the bar stays anchored in position even "
+"when the visitor scrolls the page. If set to No, the bar won't anchored and "
+"disappears as the visitor scrolls the page, and re-appears as they reverse "
+"the scroll."
+
+#: ../channels/focus_items.rst:71
+msgid ""
+"**Placement** - This option allows you to display the bar at the top or the "
+"bottom of the page."
+msgstr ""
+"**Placement** - This option allows you to display the bar at the top or the "
+"bottom of the page."
+
+#: ../channels/focus_items.rst:74
+msgid ""
+"**Size** - This option allows you to specify the thickness of the bar, and "
+"the font size. The options include:"
+msgstr ""
+"**Size** - This option allows you to specify the thickness of the bar, and "
+"the font size. The options include:"
+
+#: ../channels/focus_items.rst:73
+msgid "**Large** - 50px height and 17pt font"
+msgstr "**Large** - 50px height and 17pt font"
+
+#: ../channels/focus_items.rst:74
+msgid "**Regular** - 30px height and 14pt font"
+msgstr "**Regular** - 30px height and 14pt font"
+
+#: ../channels/focus_items.rst:77
+msgid "Modal"
+msgstr "Modal"
+
+#: ../channels/focus_items.rst:78
+msgid ""
+"The Modal style is probably the most popular style, and is often referred to"
+" as a pop-up or a light box."
+msgstr ""
+"The Modal style is probably the most popular style, and is often referred to"
+" as a pop-up or a light box."
+
+#: ../channels/focus_items.rst:80
+msgid ""
+"Modals are small boxes which appear aligned horizontally centred on the "
+"page. The content behind the pop-up darkens when the Focus Item is active, "
+"which helps to draw attention - focus - to the pop-up."
+msgstr ""
+"Modals are small boxes which appear aligned horizontally centred on the "
+"page. The content behind the pop-up darkens when the Focus Item is active, "
+"which helps to draw attention - focus - to the pop-up."
+
+#: ../channels/focus_items.rst:82
+msgid ""
+"**Placement** - This option allows you to select whether you would like the "
+"Modal to appear at the top, middle or bottom of the page."
+msgstr ""
+"**Placement** - This option allows you to select whether you would like the "
+"Modal to appear at the top, middle or bottom of the page."
+
+#: ../channels/focus_items.rst:85
+msgid "Notification"
+msgstr "Notification"
+
+#: ../channels/focus_items.rst:87
+msgid ""
+"The Notification style is a small box which appears, sometimes referred to "
+"as a pop-up. Unlike with the Modal style, the pop-up shows in one of the "
+"four corners of the page, and the main content underneath the notification "
+"isn't darkened out behind the pop-up."
+msgstr ""
+"The Notification style is a small box which appears, sometimes referred to "
+"as a pop-up. Unlike with the Modal style, the pop-up shows in one of the "
+"four corners of the page, and the main content underneath the notification "
+"isn't darkened out behind the pop-up."
+
+#: ../channels/focus_items.rst:89
+msgid ""
+"Visitors can choose to close this type of Focus Item with the *X* button in "
+"the top right corner of the notification."
+msgstr ""
+"Visitors can choose to close this type of Focus Item with the *X* button in "
+"the top right corner of the notification."
+
+#: ../channels/focus_items.rst:91
+msgid ""
+"**Placement** - This option allows you to select the corner to display the "
+"notification."
+msgstr ""
+"**Placement** - This option allows you to select the corner to display the "
+"notification."
+
+#: ../channels/focus_items.rst:94
+msgid "Full page"
+msgstr "Full page"
+
+#: ../channels/focus_items.rst:96
+msgid ""
+"The full page Focus Item completely takes over the whole page, hiding the "
+"rest of the page content until the visitor clicks the *X* button in the top "
+"right hand corner of the Focus Item."
+msgstr ""
+"The full page Focus Item completely takes over the whole page, hiding the "
+"rest of the page content until the visitor clicks the *X* button in the top "
+"right hand corner of the Focus Item."
+
+#: ../channels/focus_items.rst:98
+msgid ""
+"There are no additional configuration options for this style of Focus Item."
+msgstr ""
+"There are no additional configuration options for this style of Focus Item."
+
+#: ../channels/focus_items.rst:101
+msgid "Colors"
+msgstr "Colours"
+
+#: ../channels/focus_items.rst:103
+msgid ""
+"By default, Mautic determines the top colors extracted from the snapshot. "
+"Four colors are currently supported. You can customize colors by using the "
+"color picker or entering a hex code."
+msgstr ""
+"By default, Mautic determines the top colours extracted from the snapshot. "
+"Four colours are currently supported. You can customise colours by using the"
+" colour picker or entering a hex code."
+
+#: ../channels/focus_items.rst:105
+msgid ""
+"**Primary color** - For the Bar style, the primary color is the background "
+"color of the bar - For the Modal, Notification and full page styles, the "
+"primary color is the outline around the Focus Item with a thicker line on "
+"top than on the other three sides."
+msgstr ""
+"**Primary colour** - For the Bar style, the primary colour is the background"
+" colour of the bar - For the Modal, Notification and full page styles, the "
+"primary colour is the outline around the Focus Item with a thicker line on "
+"top than on the other three sides."
+
+#: ../channels/focus_items.rst:108
+msgid ""
+"**Text color** - The color of the headline text entered in the Content "
+"section of the Focus Item editor"
+msgstr ""
+"**Text colour** - The colour of the headline text entered in the Content "
+"section of the Focus Item editor"
+
+#: ../channels/focus_items.rst:109
+msgid ""
+"**Button color** - The background color for the button on the Collect Data "
+"and Emphasize Link Focus Item types. This option isn't available for the "
+"Display a notice Focus Item type."
+msgstr ""
+"**Button colour** - The background colour for the button on the Collect Data"
+" and Emphasise Link Focus Item types. This option isn't available for the "
+"Display a notice Focus Item type."
+
+#: ../channels/focus_items.rst:110
+msgid ""
+"**Button text color** - The color for the button text on the Collect Data "
+"and Emphasize Link Focus Item types. This option isn't available for the "
+"Display Notice Focus Item type."
+msgstr ""
+"**Button text colour** - The colour for the button text on the Collect Data "
+"and Emphasise Link Focus Item types. This option isn't available for the "
+"Display Notice Focus Item type."
+
+#: ../channels/focus_items.rst:113
+msgid "Content"
+msgstr "Content"
+
+#: ../channels/focus_items.rst:114
+msgid ""
+"There are three editing modes to choose from when customizing Focus Items."
+msgstr ""
+"There are three editing modes to choose from when customising Focus Items."
+
+#: ../channels/focus_items.rst:0
+msgid "Screenshot showing the content options for creating Focus Items."
+msgstr "Screenshot showing the content options for creating Focus Items."
+
+#: ../channels/focus_items.rst:121
+msgid "Basic"
+msgstr "Basic"
+
+#: ../channels/focus_items.rst:122
+msgid ""
+"This editor mode allows a simplified experience with a few fields - "
+"depending on the Focus Item type - with the content being automatically "
+"rendered on the Focus Item as it's created."
+msgstr ""
+"This editor mode allows a simplified experience with a few fields - "
+"depending on the Focus Item type - with the content being automatically "
+"rendered on the Focus Item as it's created."
+
+#: ../channels/focus_items.rst:124
+msgid ""
+"**Headline** - This is the main text used on the Focus Item. The aim is to "
+"capture the visitor's interest and attention."
+msgstr ""
+"**Headline** - This is the main text used on the Focus Item. The aim is to "
+"capture the visitor's interest and attention."
+
+#: ../channels/focus_items.rst:125
+msgid ""
+"**Tagline** - This option is only available for Emphasize a Link Focus Item "
+"types. It allows you to provide a second line of text to add more incentive "
+"for the visitor to click the link. This field is optional."
+msgstr ""
+"**Tagline** - This option is only available for Emphasise a Link Focus Item "
+"types. It allows you to provide a second line of text to add more incentive "
+"for the visitor to click the link. This field is optional."
+
+#: ../channels/focus_items.rst:126
+msgid ""
+"**Font** - This option allows you to select from available fonts used in the"
+" Focus Item. The font list isn't customizable."
+msgstr ""
+"**Font** - This option allows you to select from available fonts used in the"
+" Focus Item. The font list isn't customisable."
+
+#: ../channels/focus_items.rst:127
+msgid ""
+"**Select the Form to insert** - This option is only available for Collect "
+"Data Focus Item types. It allows you to select an existing Mautic Form to "
+"use with the Focus Item. For styling and formatting reasons, you may want to"
+" create a Form specifically for the Focus Item, adding styling attributes to"
+" the Attributes tab on the Form fields."
+msgstr ""
+"**Select the Form to insert** - This option is only available for Collect "
+"Data Focus Item types. It allows you to select an existing Mautic Form to "
+"use with the Focus Item. For styling and formatting reasons, you may want to"
+" create a Form specifically for the Focus Item, adding styling attributes to"
+" the Attributes tab on the Form fields."
+
+#: ../channels/focus_items.rst:128
+msgid ""
+"**Link text** - This option is only available for Emphasize a Link Focus "
+"Item types. It allows you to specify the text used on the Focus Item's "
+"button."
+msgstr ""
+"**Link text** - This option is only available for Emphasise a Link Focus "
+"Item types. It allows you to specify the text used on the Focus Item's "
+"button."
+
+#: ../channels/focus_items.rst:129
+msgid ""
+"**Link URL** - This option is only available for Emphasize a Link Focus Item"
+" types. It allows you to specify the URL where you'd like to drive visitors "
+"with the Focus Item."
+msgstr ""
+"**Link URL** - This option is only available for Emphasise a Link Focus Item"
+" types. It allows you to specify the URL where you'd like to drive visitors "
+"with the Focus Item."
+
+#: ../channels/focus_items.rst:130
+msgid ""
+"**Open in a new window** - This option is only available for Emphasize a "
+"Link Focus Item types. If set to Yes, this ensures that the link is opened "
+"in a new window. If set to No, the link opens in the current tab."
+msgstr ""
+"**Open in a new window** - This option is only available for Emphasise a "
+"Link Focus Item types. If set to Yes, this ensures that the link is opened "
+"in a new window. If set to No, the link opens in the current tab."
+
+#: ../channels/focus_items.rst:133
+msgid "Editor"
+msgstr "Editor"
+
+#: ../channels/focus_items.rst:134
+msgid ""
+"This allows the User to edit the content with the global editor available in"
+" Mautic."
+msgstr ""
+"This allows the User to edit the content with the global editor available in"
+" Mautic."
+
+#: ../channels/focus_items.rst:137
+msgid "HTML"
+msgstr "HTML"
+
+#: ../channels/focus_items.rst:138
+msgid ""
+"This allows the User to enter HTML into a blank field for a fully customized"
+" Focus Item."
+msgstr ""
+"This allows the User to enter HTML into a blank field for a fully customised"
+" Focus Item."
+
+#: ../channels/focus_items.rst:141
+msgid ""
+"If you decide to switch editing styles, ensure that you clear the data from "
+"the previous style, otherwise Mautic may not display the final intended "
+"content."
+msgstr ""
+"If you decide to switch editing styles, ensure that you clear the data from "
+"the previous style, otherwise Mautic may not display the final intended "
+"content."
+
+#: ../channels/focus_items.rst:145
+msgid "Creating a Focus Item"
+msgstr "Creating a Focus Item"
+
+#: ../channels/focus_items.rst:147
+msgid ""
+"To create a new Focus Item, go to Channels > Focus Items and click the New "
+"button."
+msgstr ""
+"To create a new Focus Item, go to Channels > Focus Items and click the New "
+"button."
+
+#: ../channels/focus_items.rst:150
+msgid ""
+"Some websites won't allow the preview to display. For the preview to work, "
+"the site must use an SSL certificate, and it must not block iframe previews "
+"with the ``x-frame-options: SAMEORIGIN`` header. An error will be displayed "
+"in the Focus Item builder if these conditions are not met."
+msgstr ""
+"Some websites won't allow the preview to display. For the preview to work, "
+"the site must use an SSL certificate, and it must not block iframe previews "
+"with the ``x-frame-options: SAMEORIGIN`` header. An error will be displayed "
+"in the Focus Item builder if these conditions are not met."
+
+#: ../channels/focus_items.rst:152
+msgid "When creating a new Focus Item, you can set the following fields:"
+msgstr "When creating a new Focus Item, you can set the following fields:"
+
+#: ../channels/focus_items.rst:154
+msgid "**Name** - A name used internally to identify the Focus Item"
+msgstr "**Name** - A name used internally to identify the Focus Item"
+
+#: ../channels/focus_items.rst:156
+msgid ""
+"**Website** - A website you would like to use to preview the Focus Item as "
+"you are building it - see preceding note, some websites won't allow this "
+"feature. If this is a problem, leave the URL field blank."
+msgstr ""
+"**Website** - A website you would like to use to preview the Focus Item as "
+"you are building it - see preceding note, some websites won't allow this "
+"feature. If this is a problem, leave the URL field blank."
+
+#: ../channels/focus_items.rst:158
+msgid ""
+"**Category** - Assign a Category to help you organize your Focus Items."
+msgstr ""
+"**Category** - Assign a Category to help you organise your Focus Items."
+
+#: ../channels/focus_items.rst:160
+msgid ""
+"**Published** - Whether the Focus Item is available for use - published - or"
+" not available - unpublished"
+msgstr ""
+"**Published** - Whether the Focus Item is available for use - published - or"
+" not available - unpublished"
+
+#: ../channels/focus_items.rst:164 ../channels/sms.rst:113
+msgid ""
+"**Publish at (date/time)** - This allows you to define the date and time at "
+"which this Text Message is available for sending to Contacts"
+msgstr ""
+"**Publish at (date/time)** - This allows you to define the date and time at "
+"which this Text Message is available for sending to Contacts"
+
+#: ../channels/focus_items.rst:166 ../channels/sms.rst:115
+msgid ""
+"**Unpublish at (date/time)** - This allows you to define the date and time "
+"at which this Text Message ceases to be available for sending to Contacts."
+msgstr ""
+"**Unpublish at (date/time)** - This allows you to define the date and time "
+"at which this Text Message ceases to be available for sending to Contacts."
+
+#: ../channels/focus_items.rst:170
+msgid ""
+"**Google Analytics UTM tags** - Mautic supports UTM tagging in Emails, Focus"
+" Items, and Landing Pages. Any UTM tags with values populated are "
+"automatically appended to the end of any links used in the focus item. See "
+":doc:`/channels/utm_tags` for more information."
+msgstr ""
+"**Google Analytics UTM tags** - Mautic supports UTM tagging in Emails, Focus"
+" Items, and Landing Pages. Any UTM tags with values populated are "
+"automatically appended to the end of any links used in the focus item. See "
+":doc:`/channels/utm_tags` for more information."
+
+#: ../channels/focus_items.rst:0
+msgid "Screenshot showing the creation of a Focus Item."
+msgstr "Screenshot showing the creation of a Focus Item."
+
+#: ../channels/focus_items.rst:179
+msgid "Using the Focus Item builder"
+msgstr "Using the Focus Item builder"
+
+#: ../channels/focus_items.rst:183
+msgid ""
+"After you specify the general information for the Focus Item, click the "
+"builder option in the top right corner. If you've specified a URL in the "
+"Website field on the details page, the system displays a preview. If you "
+"don't see a preview, the website might block iframe previews. Hence, you may"
+" need to add the focus item to a development or staging environment without "
+"these security restrictions - if available - to see the preview."
+msgstr ""
+"After you specify the general information for the Focus Item, click the "
+"builder option in the top right corner. If you've specified a URL in the "
+"Website field on the details page, the system displays a preview. If you "
+"don't see a preview, the website might block iframe previews. Hence, you may"
+" need to add the focus item to a development or staging environment without "
+"these security restrictions - if available - to see the preview."
+
+#: ../channels/focus_items.rst:186
+msgid ""
+"The preview of the website doesn't appear until you select a style from the "
+"options on the Focus Item Builder."
+msgstr ""
+"The preview of the website doesn't appear until you select a style from the "
+"options on the Focus Item Builder."
+
+#: ../channels/focus_items.rst:0
+msgid "Screenshot showing the Focus Item Builder"
+msgstr "Screenshot showing the Focus Item Builder"
+
+#: ../channels/focus_items.rst:192
+msgid ""
+"You can use the menu on the sidebar to configure the Focus Item to your "
+"liking. The preview area on the left allows you to see how it appears on "
+"your website. You can also use the mobile phone icon at the top right to "
+"switch to a responsive view. This is important to ensure that you aren't "
+"blocking key elements of the User Experience on mobile devices."
+msgstr ""
+"You can use the menu on the sidebar to configure the Focus Item to your "
+"liking. The preview area on the left allows you to see how it appears on "
+"your website. You can also use the mobile phone icon at the top right to "
+"switch to a responsive view. This is important to ensure that you aren't "
+"blocking key elements of the User Experience on mobile devices."
+
+#: ../channels/focus_items.rst:0
+msgid "Screenshot showing the Focus Item Builder in responsive mode."
+msgstr "Screenshot showing the Focus Item Builder in responsive mode."
+
+#: ../channels/focus_items.rst:199
+msgid "Using Focus Items"
+msgstr "Using Focus Items"
+
+#: ../channels/focus_items.rst:201
+msgid ""
+"Once you have created your Focus Item, you're ready to publish it to your "
+"website. If you're not quite ready for the Focus Item to go live but you "
+"need to get it set up on your website, you can set the Focus Item to "
+"Unpublished."
+msgstr ""
+"Once you have created your Focus Item, you're ready to publish it to your "
+"website. If you're not quite ready for the Focus Item to go live but you "
+"need to get it set up on your website, you can set the Focus Item to "
+"Unpublished."
+
+#: ../channels/focus_items.rst:204
+msgid "Deploying to a website"
+msgstr "Deploying to a website"
+
+#: ../channels/focus_items.rst:206
+msgid ""
+"When you save the Focus Item, the code snippet required to display it on "
+"your website is shown in a green box on the Focus Item overview."
+msgstr ""
+"When you save the Focus Item, the code snippet required to display it on "
+"your website is shown in a green box on the Focus Item overview."
+
+#: ../channels/focus_items.rst:0
+msgid ""
+"Screenshot showing the Focus Item code to be embedded within a website."
+msgstr ""
+"Screenshot showing the Focus Item code to be embedded within a website."
+
+#: ../channels/focus_items.rst:213
+msgid ""
+"You may need assistance from your web development team to implement the "
+"Focus Item tracking code on your website."
+msgstr ""
+"You may need assistance from your web development team to implement the "
+"Focus Item tracking code on your website."
+
+#: ../channels/focus_items.rst:215
+msgid ""
+"You must also ensure that you have specified your website's domain where you"
+" expect to use the Focus Item in the CORS settings for your Mautic instance,"
+" otherwise it won't appear. To verify this, go to Settings > Configuration >"
+" System Settings > CORS Settings and set Restricted Domains to Yes. Ensure "
+"that you specify your domain in the relevant field. Alternatively (but not "
+"recommended, as this would allow other websites to display your Focus "
+"Items), set Restrict Domains to No and don't specify your domains."
+msgstr ""
+"You must also ensure that you have specified your website's domain where you"
+" expect to use the Focus Item in the CORS settings for your Mautic instance,"
+" otherwise it won't appear. To verify this, go to Settings > Configuration >"
+" System Settings > CORS Settings and set Restricted Domains to Yes. Ensure "
+"that you specify your domain in the relevant field. Alternatively (but not "
+"recommended, as this would allow other websites to display your Focus "
+"Items), set Restrict Domains to No and don't specify your domains."
+
+#: ../channels/focus_items.rst:220
+msgid "Deploying through a Campaign"
+msgstr "Deploying through a Campaign"
+
+#: ../channels/focus_items.rst:224
+msgid ""
+"It's possible to trigger a Focus Item to appear as part of a Campaign "
+"workflow. This doesn't require you to paste the Focus Item code onto your "
+"website as it's delivered through the existing Mautic Tracking Code."
+msgstr ""
+"It's possible to trigger a Focus Item to appear as part of a Campaign "
+"workflow. This doesn't require you to paste the Focus Item code onto your "
+"website as it's delivered through the existing Mautic Tracking Code."
+
+#: ../channels/focus_items.rst:226
+msgid ""
+"Within the Campaign, add a decision for ``Visits a Page``, and then select "
+"the Action of ``Show Focus Item``. Note that you must precede it by ``Visits"
+" a Page`` to trigger the Focus Item."
+msgstr ""
+"Within the Campaign, add a decision for ``Visits a Page``, and then select "
+"the Action of ``Show Focus Item``. Note that you must precede it by ``Visits"
+" a Page`` to trigger the Focus Item."
+
+#: ../channels/focus_items.rst:229
+msgid ""
+"Sometimes the Campaign Action can be unreliable and it's dependent on your "
+"Campaign steps, so it's recommended to use the direct embedding method in "
+"most cases."
+msgstr ""
+"Sometimes the Campaign Action can be unreliable and it's dependent on your "
+"Campaign steps, so it's recommended to use the direct embedding method in "
+"most cases."
+
+#: ../channels/focus_items.rst:232
+msgid "Measuring success"
+msgstr "Measuring success"
+
+#: ../channels/focus_items.rst:234
+msgid ""
+"When using the Emphasize a Link type, Mautic displays the link on the Focus "
+"Item overview where you can view the number of unique clicks."
+msgstr ""
+"When using the Emphasise a Link type, Mautic displays the link on the Focus "
+"Item overview where you can view the number of unique clicks."
+
+#: ../channels/focus_items.rst:236
+msgid ""
+"If you change the link in a Focus Item after deployment, all links are "
+"listed in the overview."
+msgstr ""
+"If you change the link in a Focus Item after deployment, all links are "
+"listed in the overview."
+
+#: ../channels/focus_items.rst:238
+msgid ""
+"Additionally, Mautic applies UTM tags on Focus Items to both Form "
+"submissions and link clicks. If you are using a Focus Item to submit a Form,"
+" it's recommended that you have a Submit Action on the Form to record the "
+"UTM tags."
+msgstr ""
+"Additionally, Mautic applies UTM tags on Focus Items to both Form "
+"submissions and link clicks. If you are using a Focus Item to submit a Form,"
+" it's recommended that you have a Submit Action on the Form to record the "
+"UTM tags."
+
+#: ../channels/marketing_messages.rst:2
+msgid "Marketing Messages"
+msgstr "Marketing Messages"
+
+#: ../channels/marketing_messages.rst:5
+msgid "What are Marketing Messages?"
+msgstr "What are Marketing Messages?"
+
+#: ../channels/marketing_messages.rst:7
+msgid ""
+"Located under the Channels section in Mautic, Marketing Messages is one of "
+"the Channels available to you through which you can optimize and personalize"
+" communication with your customers."
+msgstr ""
+"Located under the Channels section in Mautic, Marketing Messages is one of "
+"the Channels available to you through which you can optimise and personalise"
+" communication with your customers."
+
+#: ../channels/marketing_messages.rst:9
+msgid ""
+"Marketing messages allow you to empower the customer to decide how they "
+"prefer to receive the content you send, by setting the Channel they prefer."
+msgstr ""
+"Marketing messages allow you to empower the customer to decide how they "
+"prefer to receive the content you send, by setting the Channel they prefer."
+
+#: ../channels/marketing_messages.rst:0
+msgid ""
+"Screenshot showing the Marketing Messages option in the main navigation menu"
+" of Mautic."
+msgstr ""
+"Screenshot showing the Marketing Messages option in the main navigation menu"
+" of Mautic."
+
+#: ../channels/marketing_messages.rst:15
+msgid ""
+"With Marketing Messages, you can create content and make it available "
+"through multiple Channels - Email, SMS, Browser Notification, Mobile "
+"Notification, Tweets, and any other Channel you decide to create using "
+"Mautic's extendable open architecture."
+msgstr ""
+"With Marketing Messages, you can create content and make it available "
+"through multiple Channels - Email, SMS, Browser Notification, Mobile "
+"Notification, Tweets, and any other Channel you decide to create using "
+"Mautic's extendable open architecture."
+
+#: ../channels/marketing_messages.rst:17
+msgid ""
+"When using the 'Send Marketing Message' action in a Campaign, you can create"
+" the message in any or all of these Channels. If the Contact has a Channel "
+"preference set on their profile, Mautic sends the content on the preferred "
+"Channel. If they haven't specified a Channel, Mautic uses the default "
+"Channel - Email."
+msgstr ""
+"When using the 'Send Marketing Message' action in a Campaign, you can create"
+" the message in any or all of these Channels. If the Contact has a Channel "
+"preference set on their profile, Mautic sends the content on the preferred "
+"Channel. If they haven't specified a Channel, Mautic uses the default "
+"Channel - Email."
+
+#: ../channels/marketing_messages.rst:19
+msgid ""
+"It's also possible for a Contact to specify their own frequency rules and "
+"pause communication all together on a Channel. When exceeding the defined "
+"limit and scheduling a Marketing Message, Mautic uses another Channel which "
+"has available frequency."
+msgstr ""
+"It's also possible for a Contact to specify their own frequency rules and "
+"pause communication all together on a Channel. When exceeding the defined "
+"limit and scheduling a Marketing Message, Mautic uses another Channel which "
+"has available frequency."
+
+#: ../channels/marketing_messages.rst:24
+msgid "Creating a Marketing Message"
+msgstr "Creating a Marketing Message"
+
+#: ../channels/marketing_messages.rst:28
+msgid ""
+"To create a new Marketing Message, navigate to the Channels section and "
+"click Marketing Messages. Click on New."
+msgstr ""
+"To create a new Marketing Message, navigate to the Channels section and "
+"click Marketing Messages. Click on New."
+
+#: ../channels/marketing_messages.rst:30
+msgid ""
+"Provide a name and description for the Marketing Message, then choose the "
+"Channels you wish to use."
+msgstr ""
+"Provide a name and description for the Marketing Message, then choose the "
+"Channels you wish to use."
+
+#: ../channels/marketing_messages.rst:33
+msgid ""
+"You must set up and configure the Channels before they become available - if"
+" you haven't set up Mobile Notifications or Text Messages, you won't see it "
+"as an option when creating a Marketing Message."
+msgstr ""
+"You must set up and configure the Channels before they become available - if"
+" you haven't set up Mobile Notifications or Text Messages, you won't see it "
+"as an option when creating a Marketing Message."
+
+#: ../channels/marketing_messages.rst:0
+msgid "Screenshot showing the creation of a new Marketing Message in Mautic."
+msgstr "Screenshot showing the creation of a new Marketing Message in Mautic."
+
+#: ../channels/marketing_messages.rst:39
+msgid ""
+"To enable a Channel, click Yes on the slider, and select - or create - the "
+"message."
+msgstr ""
+"To enable a Channel, click Yes on the slider, and select - or create - the "
+"message."
+
+#: ../channels/push_notifications.rst:2
+msgid "Mobile push notifications"
+msgstr "Mobile push notifications"
+
+#: ../channels/push_notifications.rst:4
+msgid ""
+"Mobile notifications integrate your iOS and Android app with "
+":xref:`OneSignal`. Using your own OneSignal account, you can now push a "
+"notification to your Contacts's mobile device - with their permission. "
+"Enable the Plugin in Mautic's Plugin manager to see Mobile Notifications "
+"listed under Channels in the menu."
+msgstr ""
+"Mobile notifications integrate your iOS and Android app with "
+":xref:`OneSignal`. Using your own OneSignal account, you can now push a "
+"notification to your Contacts's mobile device - with their permission. "
+"Enable the Plugin in Mautic's Plugin manager to see Mobile Notifications "
+"listed under Channels in the menu."
+
+#: ../channels/push_notifications.rst:6
+msgid ""
+"For more detailed information see the :xref:`OneSignal iOS` and "
+":xref:`OneSignal Android` documentation."
+msgstr ""
+"For more detailed information see the :xref:`OneSignal iOS` and "
+":xref:`OneSignal Android` documentation."
+
+#: ../channels/push_notifications.rst:9
+msgid "Setup"
+msgstr "Setup"
+
+#: ../channels/push_notifications.rst:14
+msgid "iOS code for OneSignal integration"
+msgstr "iOS code for OneSignal integration"
+
+#: ../channels/push_notifications.rst:16
+msgid ""
+"To enable Push Notifications in your iOS app, add the following code - or a "
+"variant of it - inside your ``application`` func of ``AppDelegate``. The "
+"code examples below use Swift 3.1. Please modify them to your needs if you "
+"are using C#."
+msgstr ""
+"To enable Push Notifications in your iOS app, add the following code - or a "
+"variant of it - inside your ``application`` func of ``AppDelegate``. The "
+"code examples below use Swift 3.1. Please modify them to your needs if you "
+"are using C#."
+
+#: ../channels/push_notifications.rst:36
+msgid ""
+"For ease of use, we've created the following struct and func for sending "
+"user data to Mautic. Create this struct in your app, and import it where "
+"appropriate."
+msgstr ""
+"For ease of use, we've created the following struct and func for sending "
+"user data to Mautic. Create this struct in your app, and import it where "
+"appropriate."
+
+#: ../channels/push_notifications.rst:39
+msgid "UserData struct"
+msgstr "UserData struct"
+
+#: ../channels/push_notifications.rst:58
+msgid "pushUserDataToMautic func"
+msgstr "pushUserDataToMautic func"
+
+#: ../channels/push_notifications.rst:60
+msgid ""
+"This is a basic function for pushing the UserData struct to your Mautic "
+"installation. It will push the User data, and then display the response from"
+" Mautic as an app alert. Modify to meet the needs of your app."
+msgstr ""
+"This is a basic function for pushing the UserData struct to your Mautic "
+"installation. It will push the User data, and then display the response from"
+" Mautic as an app alert. Modify to meet the needs of your app."
+
+#: ../channels/push_notifications.rst:94
+msgid "Notification statistics"
+msgstr "Notification statistics"
+
+#: ../channels/push_notifications.rst:96
+msgid ""
+"In addition to the UserData that gets pushed to Mautic, you can push open / "
+"interaction stats to Mautic by sending the UserData struct, with an appended"
+" stat JSON key."
+msgstr ""
+"In addition to the UserData that gets pushed to Mautic, you can push open / "
+"interaction stats to Mautic by sending the UserData struct, with an appended"
+" stat JSON key."
+
+#: ../channels/sms.rst:2
+msgid "SMS Text messages"
+msgstr "SMS Text messages"
+
+#: ../channels/sms.rst:4
+msgid ""
+"With the SMS Channel it's possible to send text messages from Campaigns in "
+"Mautic."
+msgstr ""
+"With the SMS Channel it's possible to send text messages from Campaigns in "
+"Mautic."
+
+#: ../channels/sms.rst:7
+msgid ""
+"To use this Channel you must first set up an SMS transport, such as "
+":doc:`/plugins/twilio`."
+msgstr ""
+"To use this Channel you must first set up an SMS transport, such as "
+":doc:`/plugins/twilio`."
+
+#: ../channels/sms.rst:12
+msgid "Type of Text Messages"
+msgstr "Type of Text Messages"
+
+#: ../channels/sms.rst:16
+msgid ""
+"Mautic allows you to create two types of Text Messages, in the same way as "
+"you can create different types of Emails."
+msgstr ""
+"Mautic allows you to create two types of Text Messages, in the same way as "
+"you can create different types of Emails."
+
+#: ../channels/sms.rst:21
+msgid "Template Text Messages"
+msgstr "Template Text Messages"
+
+#: ../channels/sms.rst:25
+msgid ""
+"A template Text Message is automatically sent by Campaigns, Forms, Point "
+"triggers etc. You can edit Template Text Messages after creation, but they "
+"can't manually send them to a Contact list."
+msgstr ""
+"A template Text Message is automatically sent by Campaigns, Forms, Point "
+"triggers etc. You can edit Template Text Messages after creation, but they "
+"can't manually send them to a Contact list."
+
+#: ../channels/sms.rst:30
+msgid "Segment Text Messages"
+msgstr "Segment Text Messages"
+
+#: ../channels/sms.rst:34
+msgid ""
+"A Segment Text Message can be manually sent to Contact lists - Segments - in"
+" Mautic. Once sent, you can't edit the Text Message, however you can send it"
+" to new Contacts as they join the associated Segment."
+msgstr ""
+"A Segment Text Message can be manually sent to Contact lists - Segments - in"
+" Mautic. Once sent, you can't edit the Text Message, however you can send it"
+" to new Contacts as they join the associated Segment."
+
+#: ../channels/sms.rst:36
+msgid ""
+"Note that these are marketing Text Messages by default, and each Contact can"
+" only receive the Text Message once - it's the same principle as a mailing "
+"list."
+msgstr ""
+"Note that these are marketing Text Messages by default, and each Contact can"
+" only receive the Text Message once - it's the same principle as a mailing "
+"list."
+
+#: ../channels/sms.rst:38
+msgid ""
+"You must initiate the send of Segment Text Messages with the ``Send "
+"Scheduled Broadcast`` cron job. See :doc:`cron jobs documentation "
+"</configuration/cron_jobs>` for more information."
+msgstr ""
+"You must initiate the send of Segment Text Messages with the ``Send "
+"Scheduled Broadcast`` cron job. See :doc:`cron jobs documentation "
+"</configuration/cron_jobs>` for more information."
+
+#: ../channels/sms.rst:43
+msgid "Creating a Text Message"
+msgstr "Creating a Text Message"
+
+#: ../channels/sms.rst:47
+msgid ""
+"To create a Text Message, navigate to Channels > Text Messages and click the"
+" 'New' button."
+msgstr ""
+"To create a Text Message, navigate to Channels > Text Messages and click the"
+" 'New' button."
+
+#: ../channels/sms.rst:0
+msgid "Screenshot showing create new SMS button"
+msgstr "Screenshot showing create new SMS button"
+
+#: ../channels/sms.rst:53
+msgid ""
+"Select whether you wish to create a Template or Segment Text Message, which "
+"presents the required fields."
+msgstr ""
+"Select whether you wish to create a Template or Segment Text Message, which "
+"presents the required fields."
+
+#: ../channels/sms.rst:58
+msgid "Template Text Message fields"
+msgstr "Template Text Message fields"
+
+#: ../channels/sms.rst:62 ../channels/sms.rst:89
+msgid "The following fields are available:"
+msgstr "The following fields are available:"
+
+#: ../channels/sms.rst:0
+msgid "Screenshot showing the fields required for a new Template Text Message"
+msgstr ""
+"Screenshot showing the fields required for a new Template Text Message"
+
+#: ../channels/sms.rst:68
+msgid ""
+"**Internal name** - This is the internal name used within Mautic when "
+"referring to this Text Message. For example Mautic uses this in dropdown "
+"selection lists in the Campaign Builder."
+msgstr ""
+"**Internal name** - This is the internal name used within Mautic when "
+"referring to this Text Message. For example Mautic uses this in dropdown "
+"selection lists in the Campaign Builder."
+
+#: ../channels/sms.rst:72
+msgid ""
+"**Text Message** - This is the actual content of the Text Message which is "
+"sent to the Contact. There is a character count below the field which helps "
+"you to identify the required number of messages to send the full text. You "
+"may use tokens, such as ``{contactfield=firstname}``. To find the "
+"appropriate token, go to Settings > Custom Fields and use the field alias "
+"with the token format: {contactfield=fieldalias}."
+msgstr ""
+"**Text Message** - This is the actual content of the Text Message which is "
+"sent to the Contact. There is a character count below the field which helps "
+"you to identify the required number of messages to send the full text. You "
+"may use tokens, such as ``{contactfield=firstname}``. To find the "
+"appropriate token, go to Settings > Custom Fields and use the field alias "
+"with the token format: {contactfield=fieldalias}."
+
+#: ../channels/sms.rst:76 ../channels/sms.rst:103
+msgid ""
+"**Category** - This allows you to select a Category to help you with "
+"organizing your Text Messages."
+msgstr ""
+"**Category** - This allows you to select a Category to help you with "
+"organizing your Text Messages."
+
+#: ../channels/sms.rst:78 ../channels/sms.rst:105
+msgid ""
+"**Language** - This allows you to set the language of this Text Message."
+msgstr ""
+"**Language** - This allows you to set the language of this Text Message."
+
+#: ../channels/sms.rst:80 ../channels/sms.rst:107
+msgid ""
+"**Published** - This allows you to set the published status of the Text "
+"Message. Unpublished Text Messages aren't sent."
+msgstr ""
+"**Published** - This allows you to set the published status of the Text "
+"Message. Unpublished Text Messages aren't sent."
+
+#: ../channels/sms.rst:85
+msgid "Segment Text Message fields"
+msgstr "Segment Text Message fields"
+
+#: ../channels/sms.rst:0
+msgid "Screenshot showing the fields required for a new Segment Text Message"
+msgstr "Screenshot showing the fields required for a new Segment Text Message"
+
+#: ../channels/sms.rst:95
+msgid ""
+"**Internal name** - This is the internal name used within Mautic when "
+"referring to this Text Message. For example, Mautic uses this in dropdown "
+"selection lists in the Campaign Builder."
+msgstr ""
+"**Internal name** - This is the internal name used within Mautic when "
+"referring to this Text Message. For example, Mautic uses this in dropdown "
+"selection lists in the Campaign Builder."
+
+#: ../channels/sms.rst:99
+msgid ""
+"**Text Message** - This is the actual content of the Text Message sent to "
+"the Contact. There is a character count below the field which helps you to "
+"identify the required number of messages to send the full text. You may use "
+"tokens, such as ``{contactfield=firstname}``. To find the appropriate token,"
+" go to Settings > Custom Fields and use the field alias with the token "
+"format: {contactfield=fieldalias}."
+msgstr ""
+"**Text Message** - This is the actual content of the Text Message sent to "
+"the Contact. There is a character count below the field which helps you to "
+"identify the required number of messages to send the full text. You may use "
+"tokens, such as ``{contactfield=firstname}``. To find the appropriate token,"
+" go to Settings > Custom Fields and use the field alias with the token "
+"format: {contactfield=fieldalias}."
+
+#: ../channels/sms.rst:109
+msgid ""
+"**Contact Segment** - This allows you to define the Segment/s who should "
+"receive the Text Message."
+msgstr ""
+"**Contact Segment** - This allows you to define the Segment/s who should "
+"receive the Text Message."
+
+#: ../channels/sms.rst:118
+msgid "Creating Text Messages from Campaign Builder"
+msgstr "Creating Text Messages from Campaign Builder"
+
+#: ../channels/sms.rst:122
+msgid ""
+"It's also possible to create a Text Message from within the Campaign "
+"Builder. To do this, select the Campaign Action of Send Text Message and "
+"press the New Text Message button rather than selecting an existing Text "
+"Message in the dropdown."
+msgstr ""
+"It's also possible to create a Text Message from within the Campaign "
+"Builder. To do this, select the Campaign Action of Send Text Message and "
+"press the New Text Message button rather than selecting an existing Text "
+"Message in the dropdown."
+
+#: ../channels/sms.rst:0
+msgid "Screenshot showing the option to create an SMS from a Campaign"
+msgstr "Screenshot showing the option to create an SMS from a Campaign"
+
+#: ../channels/sms.rst:128
+msgid ""
+"As you plan to use this Text Message within a Campaign, it's by default "
+"created as a Template Text Message and show the relevant fields accordingly."
+msgstr ""
+"As you plan to use this Text Message within a Campaign, it's by default "
+"created as a Template Text Message and show the relevant fields accordingly."
+
+#: ../channels/sms.rst:133
+msgid "Sending Text Messages as a Marketing Messages"
+msgstr "Sending Text Messages as a Marketing Messages"
+
+#: ../channels/sms.rst:137
+msgid ""
+"Mautic allows you to create a single message - for example 'Red shoes on "
+"offer today!' - in multiple Channels, and have it delivered through the "
+"Channel which the Contact prefers. This means that they only receive the "
+"message once, and through their preferred Channel. You can create the "
+"messages under the :doc:`/channels/marketing_messages` section."
+msgstr ""
+"Mautic allows you to create a single message - for example 'Red shoes on "
+"offer today!' - in multiple Channels, and have it delivered through the "
+"Channel which the Contact prefers. This means that they only receive the "
+"message once, and through their preferred Channel. You can create the "
+"messages under the :doc:`/channels/marketing_messages` section."
+
+#: ../channels/sms.rst:139
+msgid ""
+"If a Contact's preferred Channel is Text Messages, Mautic delivers the "
+"message through the Text Message Channel when a Marketing Message includes a"
+" Text Message."
+msgstr ""
+"If a Contact's preferred Channel is Text Messages, Mautic delivers the "
+"message through the Text Message Channel when a Marketing Message includes a"
+" Text Message."
+
+#: ../channels/sms.rst:0
+msgid ""
+"Screenshot showing the option to send a Text Message as a Marketing Message"
+msgstr ""
+"Screenshot showing the option to send a Text Message as a Marketing Message"
+
+#: ../channels/sms.rst:146
+msgid "Managing unsubscribes"
+msgstr "Managing unsubscribes"
+
+#: ../channels/sms.rst:149
+msgid ""
+"In order for Mautic to process Text Message replies for unsubscribes and "
+"replies to messages, you must first configure the Webhook. For more "
+"information review the :doc:`/plugins/twilio` documentation."
+msgstr ""
+"In order for Mautic to process Text Message replies for unsubscribes and "
+"replies to messages, you must first configure the Webhook. For more "
+"information review the :doc:`/plugins/twilio` documentation."
+
+#: ../channels/sms.rst:151
+msgid ""
+"Contacts can unsubscribe from your Text Messages by replying with the word "
+"``STOP``, or any of the accepted phrases (``STOP``, ``STOPALL``, "
+"``UNSUBSCRIBE``, ``CANCEL``, ``END``, and ``QUIT``), to your SMS.  Once "
+"Mautic receives this SMS, Mautic flags the specific Contact as 'Do Not "
+"Contact' (DNC) for the SMS Channel, and won't allow messages again via this "
+"Channel unless the Contact manually re-subscribes at a later date."
+msgstr ""
+"Contacts can unsubscribe from your Text Messages by replying with the word "
+"``STOP``, or any of the accepted phrases (``STOP``, ``STOPALL``, "
+"``UNSUBSCRIBE``, ``CANCEL``, ``END``, and ``QUIT``), to your SMS.  Once "
+"Mautic receives this SMS, Mautic flags the specific Contact as 'Do Not "
+"Contact' (DNC) for the SMS Channel, and won't allow messages again via this "
+"Channel unless the Contact manually re-subscribes at a later date."
+
+#: ../channels/sms.rst:153
+msgid "You can also view SMS replies in the Contact timeline:"
+msgstr "You can also view SMS replies in the Contact timeline:"
+
+#: ../channels/sms.rst:0
+msgid "Screenshot showing the reply from SMS"
+msgstr "Screenshot showing the reply from SMS"
+
+#: ../channels/sms.rst:162
+msgid "Working with replies to Text Messages"
+msgstr "Working with replies to Text Messages"
+
+#: ../channels/sms.rst:166
+msgid ""
+"In a Mautic Campaign, where Mautic has an active Text Message provider, "
+"there is a Campaign Action called 'Sends a Text Message' which allows you to"
+" monitor incoming replies for specific patterns and take action accordingly."
+msgstr ""
+"In a Mautic Campaign, where Mautic has an active Text Message provider, "
+"there is a Campaign Action called 'Sends a Text Message' which allows you to"
+" monitor incoming replies for specific patterns and take action accordingly."
+
+#: ../channels/sms.rst:0
+msgid "Screenshot showing the Campaign action 'Sends a Text Message'"
+msgstr "Screenshot showing the Campaign action 'Sends a Text Message'"
+
+#: ../channels/sms.rst:172
+msgid ""
+"This decision tracks replies to your messages and looks for specified "
+"patterns within a message. This isn't dependent on you first sending the "
+"Contact a message."
+msgstr ""
+"This decision tracks replies to your messages and looks for specified "
+"patterns within a message. This isn't dependent on you first sending the "
+"Contact a message."
+
+#: ../channels/sms.rst:174
+msgid ""
+"For example, you can specify 'red' in 'Pattern the reply should match'. If "
+"your message contains language, such as reply from the Contact using the "
+"word 'Red' to a question of their favourite shoe colour, Mautic looks for "
+"incoming Text Messages with that pattern. In this example, you may add an "
+"action on the decision's Yes path for adding a colour preference to the "
+"Contact's profile."
+msgstr ""
+"For example, you can specify 'red' in 'Pattern the reply should match'. If "
+"your message contains language, such as reply from the Contact using the "
+"word 'Red' to a question of their favourite shoe colour, Mautic looks for "
+"incoming Text Messages with that pattern. In this example, you may add an "
+"action on the decision's Yes path for adding a colour preference to the "
+"Contact's profile."
+
+#: ../channels/sms.rst:177
+msgid "Important notes"
+msgstr "Important notes"
+
+#: ../channels/sms.rst:179
+msgid ""
+"Contact phone numbers should be in the format +XXXXXXX including the + and "
+"with no spaces"
+msgstr ""
+"Contact phone numbers should be in the format +XXXXXXX including the + and "
+"with no spaces"
+
+#: ../channels/sms.rst:180
+msgid "There must be a phone number in the Mobile Phone Contact field"
+msgstr "There must be a phone number in the Mobile Phone Contact field"
+
+#: ../channels/sms.rst:181
+msgid ""
+"When configuring the Twilio Plugin, the sender number must be in the format "
+"+XXXXXXX and this number associated with the Twilio account"
+msgstr ""
+"When configuring the Twilio Plugin, the sender number must be in the format "
+"+XXXXXXX and this number associated with the Twilio account"
+
+#: ../channels/social_monitoring.rst:4
+msgid "Social Monitoring"
+msgstr "Social Monitoring"
+
+#: ../channels/social_monitoring.rst:8
+msgid ""
+"It's possible to add Contacts to Mautic through monitoring Twitter for "
+"mentions and hashtags."
+msgstr ""
+"It's possible to add Contacts to Mautic through monitoring Twitter for "
+"mentions and hashtags."
+
+#: ../channels/social_monitoring.rst:11
+msgid "Requirements"
+msgstr "Requirements"
+
+#: ../channels/social_monitoring.rst:13
+msgid "The :doc:`/plugins/twitter` plugin must be configured"
+msgstr "The :doc:`/plugins/twitter` plugin must be configured"
+
+#: ../channels/social_monitoring.rst:14
+msgid ""
+"You must trigger the Social Monitoring :doc:`cron job "
+"</configuration/cron_jobs>` periodically."
+msgstr ""
+"You must trigger the Social Monitoring :doc:`cron job "
+"</configuration/cron_jobs>` periodically."
+
+#: ../channels/social_monitoring.rst:19
+msgid "Creating a Social Monitor"
+msgstr "Creating a Social Monitor"
+
+#: ../channels/social_monitoring.rst:23
+msgid ""
+"To create a new Social Monitor, go to Channels > Social Monitoring and click"
+" New."
+msgstr ""
+"To create a new Social Monitor, go to Channels > Social Monitoring and click"
+" New."
+
+#: ../channels/social_monitoring.rst:25
+msgid "Mautic offers two options when creating a Social Monitor:"
+msgstr "Mautic offers two options when creating a Social Monitor:"
+
+#: ../channels/social_monitoring.rst:27
+msgid ""
+"**Twitter mention** - Any time someone mentions a specified username, Mautic"
+" creates them as a Contact"
+msgstr ""
+"**Twitter mention** - Any time someone mentions a specified username, Mautic"
+" creates them as a Contact"
+
+#: ../channels/social_monitoring.rst:28
+msgid ""
+"**Twitter hashtag** - Any time someone uses a specified hashtag in a tweet, "
+"Mautic creates them as a Contact."
+msgstr ""
+"**Twitter hashtag** - Any time someone uses a specified hashtag in a tweet, "
+"Mautic creates them as a Contact."
+
+#: ../channels/social_monitoring.rst:0
+msgid "Screenshot showing the creation of a new Social Monitor."
+msgstr "Screenshot showing the creation of a new Social Monitor."
+
+#: ../channels/social_monitoring.rst:35
+msgid "Social mentions"
+msgstr "Social mentions"
+
+#: ../channels/social_monitoring.rst:37
+msgid ""
+"When selecting the Twitter Mention monitoring method, the following fields "
+"are available:"
+msgstr ""
+"When selecting the Twitter Mention monitoring method, the following fields "
+"are available:"
+
+#: ../channels/social_monitoring.rst:39
+msgid ""
+"**Twitter mention** - The Twitter handle you want to track mentions of. "
+"Don't include the @ symbol - for example ``mauticcommunity``."
+msgstr ""
+"**Twitter mention** - The Twitter handle you want to track mentions of. "
+"Don't include the @ symbol - for example ``mauticcommunity``."
+
+#: ../channels/social_monitoring.rst:40 ../channels/social_monitoring.rst:67
+msgid ""
+"**Description** - A description to use internally within Mautic to tell the "
+"marketer what the monitor is tracking."
+msgstr ""
+"**Description** - A description to use internally within Mautic to tell the "
+"marketer what the monitor is tracking."
+
+#: ../channels/social_monitoring.rst:41 ../channels/social_monitoring.rst:68
+msgid ""
+"**Match Contact names** - If set to Yes, Mautic tries to match the names of "
+"Contacts created from Twitter and associate the Twitter account with their "
+"existing Contact record. If set to No, this won't happen and you are likely "
+"to experience duplicated Contacts."
+msgstr ""
+"**Match Contact names** - If set to Yes, Mautic tries to match the names of "
+"Contacts created from Twitter and associate the Twitter account with their "
+"existing Contact record. If set to No, this won't happen and you are likely "
+"to experience duplicated Contacts."
+
+#: ../channels/social_monitoring.rst:43 ../channels/social_monitoring.rst:70
+msgid "There are also the standard Mautic fields available:"
+msgstr "g"
+
+#: ../channels/social_monitoring.rst:45
+msgid ""
+"**Published** - This allows you to set the published status of the Social "
+"Monitor. Unpublished Social Monitors will not collect new Contacts."
+msgstr ""
+"**Published** - This allows you to set the published status of the Social "
+"Monitor. Unpublished Social Monitors will not collect new Contacts."
+
+#: ../channels/social_monitoring.rst:49
+msgid ""
+"**Publish at (date/time)** - This allows you to define the date and time at "
+"which this Social Monitor is monitoring for new Contacts. You might use this"
+" to coincide with an event, for example."
+msgstr ""
+"**Publish at (date/time)** - This allows you to define the date and time at "
+"which this Social Monitor is monitoring for new Contacts. You might use this"
+" to coincide with an event, for example."
+
+#: ../channels/social_monitoring.rst:51
+msgid ""
+"**Unpublish at (date/time)** - This allows you to define the date and time "
+"at which this Social Monitor is monitoring for new Contacts."
+msgstr ""
+"**Unpublish at (date/time)** - This allows you to define the date and time "
+"at which this Social Monitor is monitoring for new Contacts."
+
+#: ../channels/social_monitoring.rst:55 ../channels/social_monitoring.rst:82
+msgid ""
+"**Contact Segment** - This allows you to define the Segment/s in Mautic that"
+" the Contacts join if detected with this Social Monitor. This can be useful "
+"for identifying people who are talking about your brand, and directly add "
+"them to a Segment to take further action."
+msgstr ""
+"**Contact Segment** - This allows you to define the Segment/s in Mautic that"
+" the Contacts join if detected with this Social Monitor. This can be useful "
+"for identifying people who are talking about your brand, and directly add "
+"them to a Segment to take further action."
+
+#: ../channels/social_monitoring.rst:0
+msgid ""
+"Screenshot showing the creation of a new Twitter Mentions Social Monitor."
+msgstr ""
+"Screenshot showing the creation of a new Twitter Mentions Social Monitor."
+
+#: ../channels/social_monitoring.rst:62
+msgid "Hashtags"
+msgstr "Hashtags"
+
+#: ../channels/social_monitoring.rst:64
+msgid ""
+"When selecting the Twitter Hashtags monitoring method, the following fields "
+"are available:"
+msgstr ""
+"When selecting the Twitter Hashtags monitoring method, the following fields "
+"are available:"
+
+#: ../channels/social_monitoring.rst:66
+msgid ""
+"**Twitter hashtag** - The Twitter hashtag mentions you want to track. Don't "
+"include the # symbol - for example ``mautic``."
+msgstr ""
+"**Twitter hashtag** - The Twitter hashtag mentions you want to track. Don't "
+"include the # symbol - for example ``mautic``."
+
+#: ../channels/social_monitoring.rst:72
+msgid ""
+"**Published** - This allows you to set the published status of the Social "
+"Monitor. Unpublished Social Monitors won't collect new Contacts."
+msgstr ""
+"**Published** - This allows you to set the published status of the Social "
+"Monitor. Unpublished Social Monitors won't collect new Contacts."
+
+#: ../channels/social_monitoring.rst:76
+msgid ""
+"**Publish at (date/time)** - This allows you to define the date and time at "
+"which this Social Monitor is monitoring for new Contacts. This might be used"
+" to coincide with an event, for example."
+msgstr ""
+"**Publish at (date/time)** - This allows you to define the date and time at "
+"which this Social Monitor is monitoring for new Contacts. This might be used"
+" to coincide with an event, for example."
+
+#: ../channels/social_monitoring.rst:78
+msgid ""
+"**Unpublish at (date/time)** - This allows you to define the date and time "
+"at which this Social Monitor ceases to monitor for new Contacts."
+msgstr ""
+"**Unpublish at (date/time)** - This allows you to define the date and time "
+"at which this Social Monitor ceases to monitor for new Contacts."
+
+#: ../channels/social_monitoring.rst:0
+msgid ""
+"Screenshot showing the creation of a new Twitter Hashtags Social Monitor."
+msgstr ""
+"Screenshot showing the creation of a new Twitter Hashtags Social Monitor."
+
+#: ../channels/utm_tags.rst:2 ../channels/utm_tags.rst:38
+msgid "UTM tags"
+msgstr "UTM tags"
+
+#: ../channels/utm_tags.rst:4
+msgid ""
+"UTM tags are also known as parameters or short text codes. When adding these"
+" tags to URLs or links, marketers can track performance, create customised "
+"audiences, and analyze on website traffic from various sources. Marketers "
+"can also use UTM tags with Google Analytics to clearly understand the "
+"effectiveness of their marketing content and return on investment for "
+"marketing projects."
+msgstr ""
+"UTM tags are also known as parameters or short text codes. When adding these"
+" tags to URLs or links, marketers can track performance, create customised "
+"audiences, and analyze on website traffic from various sources. Marketers "
+"can also use UTM tags with Google Analytics to clearly understand the "
+"effectiveness of their marketing content and return on investment for "
+"marketing projects."
+
+#: ../channels/utm_tags.rst:7
+msgid "Key benefits of using UTM tags"
+msgstr "Key benefits of using UTM tags"
+
+#: ../channels/utm_tags.rst:9
+msgid "With UTM tags, you can:"
+msgstr "With UTM tags, you can:"
+
+#: ../channels/utm_tags.rst:11
+msgid "Track the value of marketing projects and measure return on investment"
+msgstr ""
+"Track the value of marketing projects and measure return on investment"
+
+#: ../channels/utm_tags.rst:12
+msgid "Get precise data about conversion and traffic sources"
+msgstr "Get precise data about conversion and traffic sources"
+
+#: ../channels/utm_tags.rst:13
+msgid "Test the effectiveness of marketing content through A/B testing"
+msgstr "Test the effectiveness of marketing content through A/B testing"
+
+#: ../channels/utm_tags.rst:16
+msgid "Using UTM tags in Mautic"
+msgstr "Using UTM tags in Mautic"
+
+#: ../channels/utm_tags.rst:18
+msgid ""
+"To use UTM tags with Google Analytics where they appear in your Google "
+"Analytics Dashboard, you must install your Google Analytics tracking code on"
+" the resource you are linking to. This synchronizes with your Google "
+"Analytics Dashboard and records the UTM tags."
+msgstr ""
+"To use UTM tags with Google Analytics where they appear in your Google "
+"Analytics Dashboard, you must install your Google Analytics tracking code on"
+" the resource you are linking to. This synchronizes with your Google "
+"Analytics Dashboard and records the UTM tags."
+
+#: ../channels/utm_tags.rst:20
+msgid ""
+"If you use a Mautic landing page, you must go to Settings > Configuration > "
+"Tracking Settings, and add your Google Analytics ID."
+msgstr ""
+"If you use a Mautic landing page, you must go to Settings > Configuration > "
+"Tracking Settings, and add your Google Analytics ID."
+
+#: ../channels/utm_tags.rst:0
+msgid "Screenshot showing the option to add Google Analytics code"
+msgstr "Screenshot showing the option to add Google Analytics code"
+
+#: ../channels/utm_tags.rst:26
+msgid ""
+"If you use a non-Mautic Landing Page, you must manually embed the Google "
+"Analytics tracking script on the third-party Page."
+msgstr ""
+"If you use a non-Mautic Landing Page, you must manually embed the Google "
+"Analytics tracking script on the third-party Page."
+
+#: ../channels/utm_tags.rst:28
+msgid ""
+"Mautic Users can automatically append UTM tags to all links in an Email or "
+"Focus Item. For other Channels, you can make the link trackable by including"
+" UTM values in the URL address. When a Contact clicks a link in an Email or "
+"Focus Item, Mautic records UTM tags and stores them in the Contact record. "
+"You can find the details on the Contact Event History overview. After "
+"recording the UTM tags, you can use them as filters in Segments."
+msgstr ""
+"Mautic Users can automatically append UTM tags to all links in an Email or "
+"Focus Item. For other Channels, you can make the link trackable by including"
+" UTM values in the URL address. When a Contact clicks a link in an Email or "
+"Focus Item, Mautic records UTM tags and stores them in the Contact record. "
+"You can find the details on the Contact Event History overview. After "
+"recording the UTM tags, you can use them as filters in Segments."
+
+#: ../channels/utm_tags.rst:30
+msgid ""
+"You can use UTM tags to track Contacts who convert from Dynamic Web Content "
+"slots in Emails, and determine the source in Google Analytics or Mautic "
+"Reports. You can also use them as columns in a Report by selecting UTM codes"
+" as the data source."
+msgstr ""
+"You can use UTM tags to track Contacts who convert from Dynamic Web Content "
+"slots in Emails, and determine the source in Google Analytics or Mautic "
+"Reports. You can also use them as columns in a Report by selecting UTM codes"
+" as the data source."
+
+#: ../channels/utm_tags.rst:32
+msgid "The following table lists the Google Analytics UTM tags:"
+msgstr "The following table lists the Google Analytics UTM tags:"
+
+#: ../channels/utm_tags.rst:34
+msgid "Title"
+msgstr "Title"
+
+#: ../channels/utm_tags.rst:39
+msgid "Description"
+msgstr "Description"
+
+#: ../channels/utm_tags.rst:40
+msgid "Campaign Source"
+msgstr "Campaign Source"
+
+#: ../channels/utm_tags.rst:43
+msgid ""
+"The referring source of the web activity. It indicates the social network, "
+"search engine, newsletter name, or any other specific source driving the "
+"traffic."
+msgstr ""
+"The referring source of the web activity. It indicates the social network, "
+"search engine, newsletter name, or any other specific source driving the "
+"traffic."
+
+#: ../channels/utm_tags.rst:42
+msgid "Examples: facebook, twitter, blog, newsletters"
+msgstr "Examples: facebook, twitter, blog, newsletters"
+
+#: ../channels/utm_tags.rst:43
+msgid "UTM code: utm_source"
+msgstr "UTM code: utm_source"
+
+#: ../channels/utm_tags.rst:44
+msgid "Sample code: utm_source=facebook"
+msgstr "Sample code: utm_source=facebook"
+
+#: ../channels/utm_tags.rst:45
+msgid "Campaign Medium"
+msgstr "Campaign Medium"
+
+#: ../channels/utm_tags.rst:48
+msgid "UTM tags - Mautic Documentation"
+msgstr "UTM tags - Mautic Documentation"
+
+#: ../channels/utm_tags.rst:47
+msgid "Examples: cpc, organic_social"
+msgstr "Examples: cpc, organic_social"
+
+#: ../channels/utm_tags.rst:48
+msgid "UTM code: utm_medium"
+msgstr "UTM code: utm_medium"
+
+#: ../channels/utm_tags.rst:49
+msgid "Sample code: utm_medium=paid_social"
+msgstr "Sample code: utm_medium=paid_social"
+
+#: ../channels/utm_tags.rst:50
+msgid "Campaign Name"
+msgstr "Campaign Name"
+
+#: ../channels/utm_tags.rst:53
+msgid "The specific promotion or Campaign title that you want to track."
+msgstr "The specific promotion or Campaign title that you want to track."
+
+#: ../channels/utm_tags.rst:52
+msgid "Examples: summer_sale, free_trial"
+msgstr "Examples: summer_sale, free_trial"
+
+#: ../channels/utm_tags.rst:53
+msgid "UTM code: utm_campaign"
+msgstr "UTM code: utm_campaign"
+
+#: ../channels/utm_tags.rst:54
+msgid "Sample code: utm_campaign=summer_sale"
+msgstr "Sample code: utm_campaign=summer_sale"
+
+#: ../channels/utm_tags.rst:55
+msgid "Campaign Content"
+msgstr "Campaign Content"
+
+#: ../channels/utm_tags.rst:56
+msgid ""
+"The Assets within the messages. This non-configurable value auto-populates "
+"with the content Asset identifier associated with the specific Asset."
+msgstr ""
+"The Assets within the messages. This non-configurable value auto-populates "
+"with the content Asset identifier associated with the specific Asset."
+
+#: ../channels/utm_tags.rst:57
+msgid "Campaign Term"
+msgstr "Campaign Term"
+
+#: ../channels/utm_tags.rst:58
+msgid ""
+"The keyword to search a Campaign. This non-configurable value auto-populates"
+" within the link text and tracks links within the messages."
+msgstr ""
+"The keyword to search a Campaign. This non-configurable value auto-populates"
+" within the link text and tracks links within the messages."
+
+#: ../channels/utm_tags.rst:61
+msgid ""
+"You don't need to fill all the options. You can use one, or a few, or all of"
+" them, as required."
+msgstr ""
+"You don't need to fill all the options. You can use one, or a few, or all of"
+" them, as required."
+
+#: ../channels/utm_tags.rst:66
+msgid "Using UTM tags in Emails"
+msgstr "Using UTM tags in Emails"
+
+#: ../channels/utm_tags.rst:70
+msgid ""
+"Mautic supports UTM tagging in Emails. Mautic can automatically append UTM "
+"tags to all links in an Email by entering the appropriate Campaign values in"
+" the fields provided."
+msgstr ""
+"Mautic supports UTM tagging in Emails. Mautic can automatically append UTM "
+"tags to all links in an Email by entering the appropriate Campaign values in"
+" the fields provided."
+
+#: ../channels/utm_tags.rst:72
+msgid "In Mautic, click Channels > Emails."
+msgstr "In Mautic, click Channels > Emails."
+
+#: ../channels/utm_tags.rst:73
+msgid ""
+"Create a new Email or edit an existing Email. If you choose to edit an "
+"existing Email, click the Email and then click Edit."
+msgstr ""
+"Create a new Email or edit an existing Email. If you choose to edit an "
+"existing Email, click the Email and then click Edit."
+
+#: ../channels/utm_tags.rst:74 ../channels/utm_tags.rst:90
+msgid "Locate the Google Analytics UTM tags section on the bottom right."
+msgstr "Locate the Google Analytics UTM tags section on the bottom right."
+
+#: ../channels/utm_tags.rst:75 ../channels/utm_tags.rst:91
+msgid "Enter the appropriate information in the fields."
+msgstr "Enter the appropriate information in the fields."
+
+#: ../channels/utm_tags.rst:76 ../channels/utm_tags.rst:92
+msgid "Click Apply."
+msgstr "Click Apply."
+
+#: ../channels/utm_tags.rst:79
+msgid "When adding links in Emails, use the edit link icon in the builder."
+msgstr "When adding links in Emails, use the edit link icon in the builder."
+
+#: ../channels/utm_tags.rst:80
+msgid "When adding links in Code Mode, use the <a href> tag."
+msgstr "When adding links in Code Mode, use the <a href> tag."
+
+#: ../channels/utm_tags.rst:81
+msgid ""
+"All links must include a trailing slash. Otherwise, UTM codes aren't "
+"appended."
+msgstr ""
+"All links must include a trailing slash. Otherwise, UTM codes aren't "
+"appended."
+
+#: ../channels/utm_tags.rst:84
+msgid "Using UTM tags in Focus Items"
+msgstr "Using UTM tags in Focus Items"
+
+#: ../channels/utm_tags.rst:86
+msgid ""
+"Mautic supports UTM tagging in :doc:`/channels/focus_items`.  Mautic can "
+"automatically append UTM tags to all links in a Focus Item by entering the "
+"appropriate values in the field provided."
+msgstr ""
+"Mautic supports UTM tagging in :doc:`/channels/focus_items`.  Mautic can "
+"automatically append UTM tags to all links in a Focus Item by entering the "
+"appropriate values in the field provided."
+
+#: ../channels/utm_tags.rst:88
+msgid "Click Channels > Focus Items"
+msgstr "Click Channels > Focus Items"
+
+#: ../channels/utm_tags.rst:89
+msgid "Create a new focus item or open an existing one."
+msgstr "Create a new focus item or open an existing one."
+
+#: ../channels/web_notifications.rst:2
+msgid "Web notifications"
+msgstr "Web notifications"
+
+#: ../channels/web_notifications.rst:4
+msgid ""
+"Web Notifications can be an extremely powerful tool for the marketer. Mautic"
+" integrated with :xref:`OneSignal` which allows you to push information to a"
+" Contact as they browse through web resources (Mautic Landing Pages, or with"
+" some configuration (see :xref:`OneSignal web push`), on your own website), "
+"giving you one more Channel that you can use to build a relationship with "
+"them."
+msgstr ""
+"Web Notifications can be an extremely powerful tool for the marketer. Mautic"
+" integrated with :xref:`OneSignal` which allows you to push information to a"
+" Contact as they browse through web resources (Mautic Landing Pages, or with"
+" some configuration (see :xref:`OneSignal web push`), on your own website), "
+"giving you one more Channel that you can use to build a relationship with "
+"them."
+
+#: ../channels/web_notifications.rst:6
+msgid ""
+"Web notifications in Mautic use OneSignal by default. Using your own "
+"OneSignal account, you can now push a notification to your Contacts's "
+"browser - with their permission. Enable the OneSignal Plugin in Mautic's "
+"Configuration to see Web Notifications listed under Channels in the menu."
+msgstr ""
+"Web notifications in Mautic use OneSignal by default. Using your own "
+"OneSignal account, you can now push a notification to your Contacts's "
+"browser - with their permission. Enable the OneSignal Plugin in Mautic's "
+"Configuration to see Web Notifications listed under Channels in the menu."
+
+#: ../channels/web_notifications.rst:8
+msgid ""
+"For more information see the OneSignal :xref:`OneSignal web push quickstart`"
+" documentation."
+msgstr ""
+"For more information see the OneSignal :xref:`OneSignal web push quickstart`"
+" documentation."
+
+#: ../channels/web_notifications.rst:11
+msgid "Setup web notifications"
+msgstr "Setup web notifications"
+
+#: ../channels/web_notifications.rst:14
+msgid "Configuration"
+msgstr "Configuration"
+
+#: ../channels/web_notifications.rst:16
+msgid "Create a OneSignal account and once logged in, create an App"
+msgstr "Create a OneSignal account and once logged in, create an App"
+
+#: ../channels/web_notifications.rst:18
+msgid "Setup App Website Push Platforms in your OneSignal App"
+msgstr "Setup App Website Push Platforms in your OneSignal App"
+
+#: ../channels/web_notifications.rst:0
+msgid "Screenshot showing creating push platforms on OneSignal."
+msgstr "Screenshot showing creating push platforms on OneSignal."
+
+#: ../channels/web_notifications.rst:24
+msgid "Select Typical Site and fill out the required fields."
+msgstr "Select Typical Site and fill out the required fields."
+
+#: ../channels/web_notifications.rst:28
+msgid ""
+"Download the SDK files from the next screen, and upload them to the root of "
+"your Mautic installation - this must be accessible at "
+"`https://mautic.example.com/OneSignalSDKWorker.js`."
+msgstr ""
+"Download the SDK files from the next screen, and upload them to the root of "
+"your Mautic installation - this must be accessible at "
+"`https://mautic.example.com/OneSignalSDKWorker.js`."
+
+#: ../channels/web_notifications.rst:32
+msgid "Get the keys from OneSignal under the Settings > Keys & IDs tab."
+msgstr "Get the keys from OneSignal under the Settings > Keys & IDs tab."
+
+#: ../channels/web_notifications.rst:33
+msgid ""
+"Enable the features you wish to use - for example, whether to enable "
+"notifications on mobile apps, Landing Pages, tracked resources on your "
+"website, and whether to show a welcome notification after they subscribe. "
+"You can also specify a subdomain name, and if you're using iOS and Android "
+"notifications you can also enable these options - see "
+":doc:`/channels/push_notifications`."
+msgstr ""
+"Enable the features you wish to use - for example, whether to enable "
+"notifications on mobile apps, Landing Pages, tracked resources on your "
+"website, and whether to show a welcome notification after they subscribe. "
+"You can also specify a subdomain name, and if you're using iOS and Android "
+"notifications you can also enable these options - see "
+":doc:`/channels/push_notifications`."
+
+#: ../channels/web_notifications.rst:36
+msgid "Sending notifications"
+msgstr "Sending notifications"
+
+#: ../channels/web_notifications.rst:37
+msgid "There are two ways to send website notifications to the Contact:"
+msgstr "There are two ways to send website notifications to the Contact:"
+
+#: ../channels/web_notifications.rst:39
+msgid "Send with a Campaign Action"
+msgstr "Send with a Campaign Action"
+
+#: ../channels/web_notifications.rst:40
+msgid "Send via a :doc:`/channels/marketing_messages`"
+msgstr "Send via a :doc:`/channels/marketing_messages`"
