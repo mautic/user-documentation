@@ -127,7 +127,7 @@ File structure
 Steps to save the Theme package
 ===============================
 
-Once your design in MJML is final, go through the following steps to create the Theme package:
+Once your design in MJML is finalized, go through the following steps to create the Theme package:
 
 * Save your images in the Assets folder.
 
