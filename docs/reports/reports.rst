@@ -11,6 +11,8 @@ To get to Reports, click the Reports link from the menu on the left side of your
    :align: center
    :alt: Screenshots of Mautic Report
 
+|
+
 Data sources
 ============
 
@@ -81,13 +83,13 @@ As demonstrated, Mautic displays the data sources in the format: ``<Parent data 
 
 The parent data source provides a high-level summary of the data while the child data source provides a more granular view of Contact behavior that includes your Custom Fields and values.
 
-* **Description (optional)** - Add detailed information about the Report, helping you and other Users better understand what the Report is for. You may want to include more information about filters, people, or departments.
-
-* **Published** - Select **Yes** to ensure that the Report is active and can be sent at whatever schedule is set in the Report options.
+* **Description - optional** - Add detailed information about the Report, helping you and other Users better understand what the Report is for. You may want to include more information about filters, people, or departments.
+  
+* **Published** - Select **Yes** to ensure that the Report is active, ready to send when scheduled in the Report options.
 
 * **System Report** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report.
 
-* **Owner** - Select the owner of the Report to determine who can see the Report if System Report is set to No.
+* **Owner** - Select the owner of the Report to determine who can see the Report if the System Report setting is No.
 
 * **Dynamic filters settings**
 
@@ -98,11 +100,12 @@ The parent data source provides a high-level summary of the data while the child
 Data
 ====
 
-You can customize each Report to include the columns of choice, filter data based on set criteria, and/or set a specific order for the data. In addition you can also group by specific fields, and select different function operators to calculate fields. Note that when you select functions operators, a totals row is added to the Report. Choosing to export a Report **won't** include this totals row.
+You can customize each Report to include the columns of choice, filter data based on set criteria, and/or set a specific order for the data. In addition you can also group by specific fields, and select different function operators to calculate fields. Note that when you select functions operators, Mautic adds a totals row to the Report. Choosing to export a Report **won't** include this totals row.
 
 .. image:: images/mautic-report-data.png
    :align: center
    :alt: Screenshots of Mautic Report Data
+|
 
 * **Columns** - Select the columns of data that you want to appear in the table of data in the Report. Click the column name in the left column to have it show in the Report. You can remove a column from the Report by clicking on its right column. The column returns to its original position on the left side. For example, if you select ID, it refers to the **ID** for the parent data source Category that you selected earlier Contact ID, Email ID, Asset ID, etc. It's recommended that you include **ID** in all Reports.
 * **Order** - For sorting the data in the Report, select data Points. The available sort options are **Ascending** and **Descending**. To add multiple columns, click **Add Order**. For fields that use text, an **Ascending** order lists values starting with B after values starting with A and so on. For number or date fields, the higher the number or later the date, the lower on the list the row is. Descending order is the opposite.
@@ -121,8 +124,8 @@ You can customize each Report to include the columns of choice, filter data base
 
 You can use Email or Contact ID to display a single row per Contact record. For example, you can group by **Contact ID** to view the unique number of Asset Downloads or Form Submissions for a single Form, instead of total Asset Downloads or Form Submissions, which could include duplicates.
 
-* **Calculated columns** - Select the function that you want to apply to individual columns. Calculated columns display count, average, sum, or the minimum or maximum values from a selected field. They're only available when a grouping is used to show a calculation for that grouping. Continuing with the previous example of grouping by a Contact ID number or email address, a COUNT calculation displays how many times that contact record appears on the Report if not for the grouping.
-
+* **Calculated columns** - Select the function that you want to apply to individual columns. Calculated columns display count, average, sum, or the minimum or maximum values from a selected field. They're only available when using a grouping to show a calculation for that grouping. Continuing with the previous example of grouping by a Contact ID number or Email address, a COUNT calculation displays how many times that Contact record appears on the Report if not for the grouping.
+  
 Graphs
 ======
 
@@ -148,16 +151,16 @@ Use the toggle switch to turn on or off sending Reports via email.
 
 * To - Specify the email addresses that should receive the Report. To send to multiple recipients, separate their email addresses with a comma. For example, ``example1@example.com``, ``example2@example.com``. 
 
-* **Every** - Select the frequency with which you’d like to automatically send the Report:
+* **Every** - Select the frequency with which you'd like to automatically send the Report:
 
   - **now** - Sends the Report once, when it's saved.
   - **day** - Sends the Report every day at midnight in your time zone.
-  - **week** - After selecting week, select the day of the week you’d like to send the Report. The Report is sent at midnight in your time zone every week on the selected day.
+  - **week** - After selecting week, select the day of the week you'd like to send the Report. Mautic sends the Report at midnight in your time zone every week on the selected day.
   - **month** - After selecting month, select either the first or last and a day of the week. For example, set your Report to be automatically sent on the first Monday or last Friday of each month. 
 
 Alternatively, you can select Weekdays to send the Report on the first or last weekday of each month.
 
-Once you’ve set all of the options you’d like in the **Details**, **Data**, **Graphs**, and **Schedule** tabs, click **Save & Close** to save the Report. Clicking **Apply** saves the progress you’ve made on building the Report and keeps you in the edit mode.
+Once you've set all of the options you'd like in the **Details**, **Data**, **Graphs**, and **Schedule** tabs, click **Save & Close** to save the Report. Clicking **Apply** saves the progress you've made on building the Report and keeps you in the edit mode.
 
 .. vale off
 
@@ -166,7 +169,7 @@ Cron job to schedule Reports
 
 .. vale on
 
-To be able to send scheduled Reports, the following cron command is required:
+Mautic requires the following cron command to be able to send scheduled Reports:
 
 ``php /path/to/mautic/bin/console mautic:reports:scheduler [--report=ID]``
 
@@ -175,7 +178,7 @@ The ``--report=ID`` argument allows you to specify a Report by ID if required. F
 Report options
 ==============
 
-Once you’ve saved the Report, it's listed under the Reports section in Mautic.
+Once you've saved the Report, it's listed under the Reports section in Mautic.
 
 .. image:: images/mautic-report-options.png
    :align: center
