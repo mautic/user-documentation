@@ -89,7 +89,7 @@ In this section is a list of maintainers of the Plugin on Packagist. There may b
 GitHub information
 ==================
 
-:xref:`Github` is where many developers host their code. The majority of Mautic Plugins are available on GitHub. There are some stats available directly in this section, but you can find much more if you follow the link to the repository.
+:xref:`github` is where many developers host their code. The majority of Mautic Plugins are available on GitHub. There are some stats available directly in this section, but you can find much more if you follow the link to the repository.
 
 Packagist information
 =====================
