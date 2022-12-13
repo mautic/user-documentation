@@ -29,7 +29,7 @@ RabbitMQ
 
 .. vale on
 
-:xref:`RabbitMQ` is one of the available queue protocols that Mautic supports. To use it, you must have a RabbitMQ server running. On their :xref:`website`, you can obtain instructions on how to install RabbitMQ. For testing purposes, you can use :xref:`cloudamqp` which offers a RabbitMQ as a service.
+:xref:`RabbitMQ` is one of the available queue protocols that Mautic supports. To use it, you must have a RabbitMQ server running. On :xref:`RabbitMQ`, you can obtain instructions on how to install RabbitMQ. For testing purposes, you can use :xref:`cloudamqp` which offers a RabbitMQ as a service.
 
 Having set up a RabbitMQ server, you can configure Mautic to use it by setting the appropriate parameters ``mautic.rabbitmq_*`` in your installation's configuration file.
 
@@ -60,7 +60,7 @@ Having set up a RabbitMQ server, you can configure Mautic to use it by setting t
      - 	The number of seconds after which the queue consumer should timeout when idle
    * - ``rabbitmq_idle_timeout_exit_code``	
      - ``0``	
-     - 	The exit code to be returned when the consumer exits due to idle timeout
+     - 	The exit code returned when the consumer exits due to idle timeout
 
 Example: 
 
@@ -98,22 +98,22 @@ Once you have setup a Beanstalkd server, you can configure Mautic to use it by s
      - The port that the Beanstalkd server is listening on
    * - ``beanstalkd_timeout``	
      - ``'60'``
-     - The default TTR for Beanstalkd jobs
+     - The default Time To Run - TTR - for Beanstalkd jobs
 
 Processing
 **********
 
-Activating the queuing mechanism queues up all page hits and email opens for later processing. You need to run some console commands on a regular basis to be able to process them.
+Activating the queuing mechanism queues up all Page hits and Email opens for later processing. You need to run some console commands on a regular basis to be able to process them.
 
-To process the hits from a page, use the following command to do so:
+To process the hits from a Page, use the following command:
 
 ``php /path/to/mautic/bin/console mautic:queue:process --env=prod -i page_hit``
 
-To process the hits from an email, use the following command to do so:
+To process the hits from an Email, use the following command:
 
 ``php /path/to/mautic/bin/console mautic:queue:process --env=prod -i email_hit``
 
-When these commands run, they continue to run until you stop the program by using the keyboard combination ``Control + C``. If you want to run them to process only, say, 50 page hits or email hits, you can run the command like this instead:
+When these commands run, they continue to run until you stop the program by using the keyboard combination ``Control + C``. If you want to run them to process only, say, 50 Page hits or Email hits, you can run the command like this instead:
 
 ``php /path/to/mautic/bin/console mautic:queue:process --env=prod -i page_hit -m 50``
 
@@ -124,7 +124,7 @@ or
 Cron to push the jobs
 *********************
 
-You need to run the following cron to keep pushing the jobs.
+You need to run the following cron to keep pushing the jobs:
 
 ``php /path/to/mautic/bin/console mautic:email:send``
 

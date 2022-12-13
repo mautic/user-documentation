@@ -5,7 +5,7 @@ Message queue
 
 .. vale on
 
-A Campaign **marketing** Email can be triggered or sent as part of an Email broadcast (Segment Email), and when a Contact has a frequency rule defined or a default set in Configuration, the email is sent to a queue, where it will be handled later.
+You can trigger a Campaign **marketing** Email, or send it as part of an Email broadcast - a Segment Email. When exceeding a frequency rule - whether defined at the Contact level or as a default set in Configuration, all Emails go to the Queue for processing later.
 
 Priority and number of attempts
 *******************************
@@ -13,11 +13,11 @@ Priority and number of attempts
 .. image:: images/marketing-email.png
   :width: 600
   :align: center
-  :alt: Screenshot showing marketing-email
+  :alt: Screenshot showing marketing-Email
 
-* You can select priority as **High** or **Normal**. When processing messages for a given date, high priority messages are placed at the top of the queue. Broadcasts are always treated as a normal priority.
+* You can select priority as **High** or **Normal**. When processing messages for a given date, Mautic places high priority messages at the top of the queue. Broadcasts are always treated as a normal priority.
 
-* Once the number of attempts has been reached, an attempt is made to send the email again if it has been rescheduled. Even if the message is pending, the message won't be sent if the number of attempts has been reached.
+* On reaching the number of attempts specified, Mautic makes an attempt to send the Email again in the event of rescheduling. Even if the message is pending, exceeding the number of attempts means that Mautic won't send the message.
 
 Processing a message queue
 **************************
