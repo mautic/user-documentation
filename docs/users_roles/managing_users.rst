@@ -22,22 +22,22 @@ To set up a User manually:
 
 3. Fill in the appropriate fields for your User:
    
-   * **First name** and **Last name** - Your User’s first and last name.
+   * **First name** and **Last name** - Your User's first and last name.
 
-   * **Roles** are assigned based on permissions you grant.
+   * **Roles** assigned based on permissions you grant.
   
-   * **Signature** is only necessary if you’re using the Mailer is owner feature in Mautic. 
+   * **Signature** is only necessary if you're using the Mailer is owner feature in Mautic. 
 
-   * **Position (optional)** - Your User’s job title.
+   * **Position - optional** - Your User's job title.
   
    * **Username, Email, Password** are the login credentials. If a User forgets their password, they can use the Forgot password link, but you can manually change their password here.
   
 .. note:: 
 
-    Passwords must be at least six (6) characters in length. Ensure that you use a combination of upper and lower case alphabets, special characters, and numbers.
+    Passwords must be at least six characters in length. Ensure that you use a combination of upper and lower case alphabets, special characters, and numbers.
 
-* **Time zone** - Set the User’s time zone, or use the default. Adding the User’s time zone enables them to account for time zone differences for Email scheduling and other features.
+* **Time zone** - Set the User's time zone, or use the default. Adding the User's time zone enables them to account for time zone differences for Email scheduling and other features.
 
-* **Language** - Select a language for each User, to improve their experience in Mautic.
+* **Language** - Select a language for each User, to improve their experience in Mautic. 
 
-Notify your Users that their accounts have been created. Mautic doesn’t send an Email notifying Users of their login information. Manually informing them is necessary.
+Notify your Users that their accounts have been created. Mautic doesn't send an Email notifying Users of their login information. Manually informing them is necessary.

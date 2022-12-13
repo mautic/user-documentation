@@ -5,7 +5,7 @@ Roles
 
 .. vale on
 
-Access to Mautic instances is controlled by creating accounts for Users and associating them with a Role.
+You can control access to Mautic instances by creating accounts for Users and associating them with a Role.
 
 :doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas :ref:`Roles<roles>` allow or deny access to various features within Mautic.
 
@@ -90,7 +90,7 @@ There are permission levels relating to being able to manage resources:
 
 * **Manage** - this allows the Users with this Role to manage resources in this area of Mautic for example, managing custom fields or Plugins.
 
-There are permission levels relating to what fields in the Users section can be edited:
+There are permission levels relating to the editable fields in the Users section:
 
 * **Specified fields** - allow or deny the Users with this Role to edit specified fields in the Users section for example, Name, Username, Email, Position.
 
@@ -100,6 +100,6 @@ There are permission levels relating to what fields in the Users section can be 
 
   User permissions restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see. 
   
-  For example, if a User’s Role doesn’t have Asset permissions, they can’t create or view widgets on the dashboard for Asset data.
+  For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
 
 You can also :xref:`create Roles using the API`.
