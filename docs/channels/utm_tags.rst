@@ -39,12 +39,12 @@ The following table lists the Google Analytics UTM tags:
      - Description
    * - Campaign Source
      - The referring source of the web activity. It indicates the social network, search engine, newsletter name, or any other specific source driving the traffic.  
-        * Examples: facebook, twitter, blog, newsletters
+        * Examples: ``facebook``, ``twitter``, ``blog``, ``newsletters``
         * UTM code: utm_source
-        * Sample code: utm_source=facebook
+        * Sample code: ``utm_source=facebook``
    * - Campaign Medium
      - UTM tags - Mautic Documentation
-         * Examples: cpc, organic_social
+         * Examples: ``cpc``, ``organic_social``
          * UTM code: utm_medium
          * Sample code: utm_medium=paid_social
    * - Campaign Name
