@@ -40,4 +40,4 @@ To set up a User manually:
 
 * **Language** - Select a language for each User, to improve their experience in Mautic. 
 
-Notify your Users that their accounts have been created. Mautic doesn't send an Email notifying Users of their login information. Manually informing them is necessary.
+When creating your Users, inform them of the credentials. Mautic doesn't send an Email notifying Users of their login information. Manually informing them is necessary.
