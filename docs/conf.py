@@ -62,9 +62,10 @@ epub_show_urls = 'footnote'
 # Please add links here that do not pass the "make checklinks" check.
 # A little context on the reason for ignoring is greatly appreciated!
 
-# Anchors are picked up as broken, Twilio blocks the checker domain-wide.
 linkcheck_ignore = [
-   'https://docs.mautic.org/en/setup/cron-jobs#webhooks'
-   'https://support.twilio.com/*'
-   'https://contribute.mautic.org/contributing-to-mautic/tester#setting-up-a-local-testing-environment'
+    # Anchors are picked up as broken
+    r"https://docs.mautic.org/en/setup/cron-jobs#webhooks",
+    r"https://contribute.mautic.org/contributing-to-mautic/tester#setting-up-a-local-testing-environment",
+    # Twilio blocks the checker domain-wide.
+    r"https://support.twilio.com/*",
 ]
