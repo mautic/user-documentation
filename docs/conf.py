@@ -65,9 +65,7 @@ linkcheck_ignore = [
    # Incorrectly reported as 'Anchor "webhooks" not found' so ignoring this
    'https://docs.mautic.org/en/setup/cron-jobs#webhooks'
     # Twilio blocks the checker's access to these links
-    'https://support.twilio.com/hc/en-us/articles/223181348-Alphanumeric-Sender-ID-for-Twilio-Programmable-SMS'
-    'https://support.twilio.com/hc/en-us/articles/223183208-Upgrading-to-a-paid-Twilio-Account'
-    'https://support.twilio.com/hc/en-us/articles/223133767-International-support-for-Alphanumeric-Sender-ID'
+    'https://support.twilio.com/*'
     # Broken anchor link that isn't actually broken
     'https://contribute.mautic.org/contributing-to-mautic/tester#setting-up-a-local-testing-environment'
 ]
