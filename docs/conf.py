@@ -68,4 +68,6 @@ linkcheck_ignore = [
     r"https://contribute.mautic.org/contributing-to-mautic/tester#setting-up-a-local-testing-environment",
     # Twilio blocks the checker domain-wide.
     r"https://support.twilio.com/*",
+    # This is a demo URL and should not be checked
+    r"https://api-ssl.bitly.com/*",
 ]
