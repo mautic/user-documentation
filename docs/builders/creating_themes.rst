@@ -5,7 +5,7 @@ Creating Themes
 
 .. vale on
 
-:xref:`MJML` enables marketers to create and maintain beautiful and responsive Themes for Mautic easily.
+:xref:`MJML` allows marketers to create and maintain beautiful and responsive Themes for Mautic easily.
 
 .. vale off
 
@@ -17,7 +17,7 @@ Purpose of a Theme
 
 .. vale on
 
-The GrapesJs builder makes it possible to insert HTML code and edit it in a 'What You See Is What You Get' (WYSIWYG) environment.
+The GrapesJS builder makes it possible to insert HTML code and edit it in a 'What You See Is What You Get' (WYSIWYG) environment.
 
 A Theme can feature a wide variety of predefined blocks and sections reflecting the desired Email design - a template from which to start.
 
@@ -30,13 +30,13 @@ Modifying legacy Themes
 
 .. vale on
 
-The GrapesJs Builder checks the Theme configuration file before listing the available Themes, to determine which are compatible with the Builder.
+The GrapesJS Builder checks the Theme configuration file before listing the available Themes, to determine which are compatible with the Builder.
 
 Since :xref:`Mautic 3` a new line defines the compatible Builders:
 
 File name: config.json
 
-.. code-block:: 
+.. code-block:: json
 
     {
         "name": "Great Theme",
@@ -62,7 +62,7 @@ Creating a Theme from scratch
 HTML markup
 ===========
 
-It's possible to use HTML for Themes, and the GrapesJs builder offers basic WYSIWYG editing capabilities.
+It's possible to use HTML for Themes, and the GrapesJS builder offers basic WYSIWYG editing capabilities.
 
 Once converted into HTML, however, the structure is table based, and the blocks are hard to move around. For this reason, MJML Themes are preferable.
 
@@ -137,6 +137,6 @@ Once your design in MJML is finalized, go through the following steps to create 
 
 * Save your ``config.json`` as described previously
 
-* Create a thumbnail - around 400px wide, 600px high.
+* Create a thumbnail -  use the dimensions of 400px wide, 600px high.
 
-* Compress the contents of the folder as a Zip file
+* Compress the contents of the folder as a Zip file - ensure that the files and folders aren't within a sub-folder in the Zip file.
