@@ -220,7 +220,7 @@ Message settings
   :width: 600
   :alt: Screenshot showing Message Settings Configuration in Mautic
 
-* **Text for the {webview_text} token** - The message indicating the reader can view the Email in their browser. The default is; ``Having trouble reading this Email? Click here``.
+* **Text for the** ``{webview_text``} **token** - The message indicating the reader can view the Email in their browser. The default is; ``Having trouble reading this Email? Click here``.
   
   To change the text, change the message between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the ``|URL|`` text, because that's a token, which creates a unique URL for each Contact.
 
@@ -399,7 +399,7 @@ Google analytics
 
 * **Enabled on Mautic landing page** - Select Yes to have Mautic add the Google Analytics script to Mautic landing pages.
 
-* **Enabled IP Anonymization** - For subscribers sensitive to General Data Protection Regulation or other data privacy laws and regulations, select Yes to anonymize the IP address of web visitors before sending it to Google Analytics.* 
+* **Enabled IP** ``Anonymization`` - For subscribers sensitive to General Data Protection Regulation or other data privacy laws and regulations, select Yes to anonymize the IP address of web visitors before sending it to Google Analytics.* 
 
 Report settings
 ***************
