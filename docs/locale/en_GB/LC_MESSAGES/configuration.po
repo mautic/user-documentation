@@ -1,0 +1,2273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Ruth Cheesley <ruth@ruthcheesley.co.uk>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"PO-Revision-Date: 2022-11-14 11:43+0000\n"
+"Last-Translator: Ruth Cheesley <ruth@ruthcheesley.co.uk>, 2022\n"
+"Language-Team: English (United Kingdom) (https://www.transifex.com/mautic/teams/33223/en_GB/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../configuration/command_line_interface.rst:4
+msgid "Command Line Interface (CLI) commands"
+msgstr "Command Line Interface (CLI) commands"
+
+#: ../configuration/command_line_interface.rst:8
+msgid ""
+"Mautic may require you to use the command line (CLI). Listed below are the "
+"available CLI commands."
+msgstr ""
+"Mautic may require you to use the command line (CLI). Listed below are the "
+"available CLI commands."
+
+#: ../configuration/command_line_interface.rst:12
+msgid ""
+"You can find this list (and others - for example commands relating to "
+"Doctrine and other vendors) by running this command: ``bin/console``"
+msgstr ""
+"You can find this list (and others - for example commands relating to "
+"Doctrine and other vendors) by running this command: ``bin/console``"
+
+#: ../configuration/command_line_interface.rst:14
+msgid "You must be in the Mautic root directory to run the CLI commands."
+msgstr "You must be in the Mautic root directory to run the CLI commands."
+
+#: ../configuration/command_line_interface.rst:16
+msgid "**Format**: command [options] [arguments]"
+msgstr "**Format**: command [options] [arguments]"
+
+#: ../configuration/command_line_interface.rst:19
+#: ../configuration/command_line_interface.rst:27
+msgid "Options"
+msgstr "Options"
+
+#: ../configuration/command_line_interface.rst:28
+#: ../configuration/command_line_interface.rst:78
+#: ../configuration/command_line_interface.rst:172
+msgid "Description"
+msgstr "Description"
+
+#: ../configuration/command_line_interface.rst:29
+msgid "-h, \\--help"
+msgstr "-h, \\--help"
+
+#: ../configuration/command_line_interface.rst:30
+msgid "Display this help message"
+msgstr "Display this help message"
+
+#: ../configuration/command_line_interface.rst:31
+msgid "-q, \\--quiet"
+msgstr "-q, \\--quiet"
+
+#: ../configuration/command_line_interface.rst:32
+msgid "Do not output any message"
+msgstr "Do not output any message"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "V, \\--version"
+msgstr "V, \\--version"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "\\--ansi"
+msgstr "\\--ansi"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "\\--no-ansi"
+msgstr "\\--no-ansi"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "Display this app version"
+msgstr "Display this app version"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "Force ANSI output"
+msgstr "Force ANSI output"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "Disable ANSI output"
+msgstr "Disable ANSI output"
+
+#: ../configuration/command_line_interface.rst:39
+msgid "-n, \\--no-interaction"
+msgstr "-n, \\--no-interaction"
+
+#: ../configuration/command_line_interface.rst:40
+msgid "Do not ask any interactive question"
+msgstr "Do not ask any interactive question"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "-s, \\--shell"
+msgstr "-s, \\--shell"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "\\--process-isolation"
+msgstr "\\--process-isolation"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "Launch the shell."
+msgstr "Launch the shell."
+
+#: ../configuration/command_line_interface.rst:0
+msgid "Launch commands from shell as a separate process."
+msgstr "Launch commands from shell as a separate process."
+
+#: ../configuration/command_line_interface.rst:0
+msgid "-e, \\--env=ENV"
+msgstr "-e, \\--env=ENV"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "\\--no-debug"
+msgstr "\\--no-debug"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "The Environment name. [default: \"prod\"]"
+msgstr "The Environment name. [default: \"prod\"]"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "Switches off debug mode."
+msgstr "Switches off debug mode."
+
+#: ../configuration/command_line_interface.rst:0
+msgid "-v"
+msgstr "-v"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "-vv"
+msgstr "-vv"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "-vvv"
+msgstr "-vvv"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "\\--verbose"
+msgstr "\\--verbose"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "Increase the verbosity of messages:"
+msgstr "Increase the verbosity of messages:"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "1. for normal output,"
+msgstr "1. for normal output,"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "2. for more verbose output and"
+msgstr "2. for more verbose output and"
+
+#: ../configuration/command_line_interface.rst:0
+msgid "3. for debug"
+msgstr "3. for debug"
+
+#: ../configuration/command_line_interface.rst:62
+msgid "Mautic commands"
+msgstr "Mautic commands"
+
+#: ../configuration/command_line_interface.rst:63
+msgid ""
+"These are the commands you may need to use in relation to your Mautic "
+"instance. Add a ``bin/console`` before Mautic command."
+msgstr ""
+"These are the commands you may need to use in relation to your Mautic "
+"instance. Add a ``bin/console`` before Mautic command."
+
+#: ../configuration/command_line_interface.rst:65
+msgid "**Example**"
+msgstr "**Example**"
+
+#: ../configuration/command_line_interface.rst:77
+#: ../configuration/command_line_interface.rst:171
+msgid "Command"
+msgstr "Command"
+
+#: ../configuration/command_line_interface.rst:79
+msgid "mautic:assets:generate"
+msgstr "mautic:assets:generate"
+
+#: ../configuration/command_line_interface.rst:80
+msgid ""
+"Combines and minifies Asset files (CSS/JS) from each bundle into single "
+"production files"
+msgstr ""
+"Combines and minifies Asset files (CSS/JS) from each bundle into single "
+"production files"
+
+#: ../configuration/command_line_interface.rst:81
+msgid "mautic:broadcasts:send"
+msgstr "mautic:broadcasts:send"
+
+#: ../configuration/command_line_interface.rst:82
+msgid "Process Contacts pending to receive a Channel broadcast."
+msgstr "Process Contacts pending to receive a Channel broadcast."
+
+#: ../configuration/command_line_interface.rst:83
+msgid "mautic:campaigns:execute"
+msgstr "mautic:campaigns:execute"
+
+#: ../configuration/command_line_interface.rst:84
+msgid "Execute specific scheduled events."
+msgstr "Execute specific scheduled events."
+
+#: ../configuration/command_line_interface.rst:85
+msgid "mautic:campaigns:messagequeue"
+msgstr "mautic:campaigns:messagequeue"
+
+#: ../configuration/command_line_interface.rst:86
+#: ../configuration/command_line_interface.rst:88
+msgid ""
+"Process sending of messages queue, you can also use the alias of "
+"``mautic:messages:send``."
+msgstr ""
+"Process sending of messages queue, you can also use the alias of "
+"``mautic:messages:send``."
+
+#: ../configuration/command_line_interface.rst:87
+msgid "mautic:campaigns:messages"
+msgstr "mautic:campaigns:messages"
+
+#: ../configuration/command_line_interface.rst:89
+msgid "mautic:campaigns:rebuild"
+msgstr "mautic:campaigns:rebuild"
+
+#: ../configuration/command_line_interface.rst:90
+msgid ""
+"Rebuild Campaigns based on Contact Segments, you can also use the alias of "
+"``mautic:messages:update``."
+msgstr ""
+"Rebuild Campaigns based on Contact Segments, you can also use the alias of "
+"``mautic:messages:update``."
+
+#: ../configuration/command_line_interface.rst:91
+msgid "mautic:campaigns:trigger"
+msgstr "mautic:campaigns:trigger"
+
+#: ../configuration/command_line_interface.rst:92
+msgid "Trigger timed events for published Campaigns."
+msgstr "Trigger timed events for published Campaigns."
+
+#: ../configuration/command_line_interface.rst:93
+msgid "mautic:campaigns:update"
+msgstr "mautic:campaigns:update"
+
+#: ../configuration/command_line_interface.rst:94
+msgid ""
+"Rebuild Campaigns based on Contact Segments, you can also use the alias of "
+"``mautic:messages:rebuild``."
+msgstr ""
+"Rebuild Campaigns based on Contact Segments, you can also use the alias of "
+"``mautic:messages:rebuild``."
+
+#: ../configuration/command_line_interface.rst:95
+msgid "mautic:campaigns:validate"
+msgstr "mautic:campaigns:validate"
+
+#: ../configuration/command_line_interface.rst:96
+msgid ""
+"Validate if a Contact has been inactive for a decision and execute events if"
+" so."
+msgstr ""
+"Validate if a Contact has been inactive for a decision and execute events if"
+" so."
+
+#: ../configuration/command_line_interface.rst:97
+msgid "mautic:citrix:sync"
+msgstr "mautic:citrix:sync"
+
+#: ../configuration/command_line_interface.rst:98
+msgid "Synchronizes registrant information from Citrix products"
+msgstr "Synchronises registrant information from Citrix products"
+
+#: ../configuration/command_line_interface.rst:99
+msgid "mautic:cache:clear"
+msgstr "mautic:cache:clear"
+
+#: ../configuration/command_line_interface.rst:100
+msgid ""
+"Clears Mautic cache, by using this command, you will erase the 10-minute "
+"Mautic cache, which contains things like segment counts and data for "
+"dashboard widgets."
+msgstr ""
+"Clears Mautic cache, by using this command, you will erase the 10-minute "
+"Mautic cache, which contains things like segment counts and data for "
+"dashboard widgets."
+
+#: ../configuration/command_line_interface.rst:101
+msgid "mautic:contacts:deduplicate"
+msgstr "mautic:contacts:deduplicate"
+
+#: ../configuration/command_line_interface.rst:102
+msgid "Merge Contacts based on same unique identifiers"
+msgstr "Merge Contacts based on same unique identifiers"
+
+#: ../configuration/command_line_interface.rst:103
+msgid "mautic:custom-field:create-column"
+msgstr "mautic:custom-field:create-column"
+
+#: ../configuration/command_line_interface.rst:104
+msgid "Creates the actual column in the table"
+msgstr "Creates the actual column in the table"
+
+#: ../configuration/command_line_interface.rst:105
+msgid "mautic:email:fetch"
+msgstr "mautic:email:fetch"
+
+#: ../configuration/command_line_interface.rst:106
+msgid ""
+"Fetch and process monitored Email, you can also use the alias of "
+"``mautic:email:fetch``."
+msgstr ""
+"Fetch and process monitored Email, you can also use the alias of "
+"``mautic:email:fetch``."
+
+#: ../configuration/command_line_interface.rst:107
+msgid "mautic:emails:send"
+msgstr "mautic:emails:send"
+
+#: ../configuration/command_line_interface.rst:108
+msgid "Processes mail queue"
+msgstr "Processes mail queue"
+
+#: ../configuration/command_line_interface.rst:109
+msgid "mautic:import"
+msgstr "mautic:import"
+
+#: ../configuration/command_line_interface.rst:110
+msgid ""
+"If the CSV import is configured to run in background then this command will "
+"pick up the pending import jobs and imports the data from CSV files to "
+"Mautic."
+msgstr ""
+"If the CSV import is configured to run in background then this command will "
+"pick up the pending import jobs and imports the data from CSV files to "
+"Mautic."
+
+#: ../configuration/command_line_interface.rst:111
+msgid "mautic:integration:fetchleads"
+msgstr "mautic:integration:fetchleads"
+
+#: ../configuration/command_line_interface.rst:112
+msgid ""
+"Fetch Contacts from Integration, you can also use the alias of "
+"``mautic:integration:synccontacts``."
+msgstr ""
+"Fetch Contacts from Integration, you can also use the alias of "
+"``mautic:integration:synccontacts``."
+
+#: ../configuration/command_line_interface.rst:113
+msgid "mautic:integration:pipedrive:fetch"
+msgstr "mautic:integration:pipedrive:fetch"
+
+#: ../configuration/command_line_interface.rst:114
+msgid "Pulls the data from Pipedrive and sends it to Mautic"
+msgstr "Pulls the data from Pipedrive and sends it to Mautic"
+
+#: ../configuration/command_line_interface.rst:115
+msgid "mautic:integration:pipedrive:push"
+msgstr "mautic:integration:pipedrive:push"
+
+#: ../configuration/command_line_interface.rst:116
+msgid "Pushes the data from Mautic to Pipedrive"
+msgstr "Pushes the data from Mautic to Pipedrive"
+
+#: ../configuration/command_line_interface.rst:117
+msgid "mautic:integration:pushactivity"
+msgstr "mautic:integration:pushactivity"
+
+#: ../configuration/command_line_interface.rst:118
+msgid ""
+"Push Contact activity to Integration, you can also use the alias of "
+"``mautic:integration:pushleadactivity``."
+msgstr ""
+"Push Contact activity to Integration, you can also use the alias of "
+"``mautic:integration:pushleadactivity``."
+
+#: ../configuration/command_line_interface.rst:119
+msgid "mautic:integration:pushleadactivity"
+msgstr "mautic:integration:pushleadactivity"
+
+#: ../configuration/command_line_interface.rst:120
+msgid ""
+"Push Contact activity to Integration, you can also use the alias of "
+"``mautic:integration:pushactivity``."
+msgstr ""
+"Push Contact activity to Integration, you can also use the alias of "
+"``mautic:integration:pushactivity``."
+
+#: ../configuration/command_line_interface.rst:121
+msgid "mautic:integration:synccontacts"
+msgstr "mautic:integration:synccontacts"
+
+#: ../configuration/command_line_interface.rst:122
+msgid ""
+"Fetch Contacts from Integration, you can also use the alias of "
+"``mautic:integration:fetchleads``."
+msgstr ""
+"Fetch Contacts from Integration, you can also use the alias of "
+"``mautic:integration:fetchleads``."
+
+#: ../configuration/command_line_interface.rst:123
+msgid "mautic:install:data"
+msgstr "mautic:install:data"
+
+#: ../configuration/command_line_interface.rst:124
+msgid "Installs data"
+msgstr "Installs data"
+
+#: ../configuration/command_line_interface.rst:125
+msgid "mautic:iplookup:download"
+msgstr "mautic:iplookup:download"
+
+#: ../configuration/command_line_interface.rst:126
+msgid ""
+"Fetch remote datastores for IP lookup services that leverage local lookups."
+msgstr ""
+"Fetch remote datastores for IP lookup services that leverage local lookups."
+
+#: ../configuration/command_line_interface.rst:127
+msgid "mautic:maintenance:cleanup"
+msgstr "mautic:maintenance:cleanup"
+
+#: ../configuration/command_line_interface.rst:128
+msgid "Cleans up older data."
+msgstr "Cleans up older data."
+
+#: ../configuration/command_line_interface.rst:129
+msgid "mautic:messages:send"
+msgstr "mautic:messages:send"
+
+#: ../configuration/command_line_interface.rst:130
+msgid ""
+"Process sending of messages queue, you can also use the alias of "
+"``mautic:campaigns:messagequeue`` and ``mautic:campaigns:messages``."
+msgstr ""
+"Process sending of messages queue, you can also use the alias of "
+"``mautic:campaigns:messagequeue`` and ``mautic:campaigns:messages``."
+
+#: ../configuration/command_line_interface.rst:131
+msgid "doctrine:migrations:generate"
+msgstr "doctrine:migrations:generate"
+
+#: ../configuration/command_line_interface.rst:132
+msgid "Generate a blank migration class."
+msgstr "Generate a blank migration class."
+
+#: ../configuration/command_line_interface.rst:133
+msgid "mautic:plugins:install"
+msgstr "mautic:plugins:install"
+
+#: ../configuration/command_line_interface.rst:134
+msgid ""
+"Installs Plugins, you can also use the alias of ``mautic:plugins:reload``."
+msgstr ""
+"Installs Plugins, you can also use the alias of ``mautic:plugins:reload``."
+
+#: ../configuration/command_line_interface.rst:135
+msgid "mautic:plugins:reload"
+msgstr "mautic:plugins:reload"
+
+#: ../configuration/command_line_interface.rst:136
+msgid ""
+"Reloads Plugins, you can also use the alias of ``mautic:plugins:install`` or"
+" ``mautic:plugins:update``."
+msgstr ""
+"Reloads Plugins, you can also use the alias of ``mautic:plugins:install`` or"
+" ``mautic:plugins:update``."
+
+#: ../configuration/command_line_interface.rst:137
+msgid "mautic:plugins:update"
+msgstr "mautic:plugins:update"
+
+#: ../configuration/command_line_interface.rst:138
+msgid ""
+"Updates Plugins, you can also use the alias of ``mautic:plugins:reload``."
+msgstr ""
+"Updates Plugins, you can also use the alias of ``mautic:plugins:reload``."
+
+#: ../configuration/command_line_interface.rst:139
+msgid "mautic:queue:process"
+msgstr "mautic:queue:process"
+
+#: ../configuration/command_line_interface.rst:140
+msgid "Process queues"
+msgstr "Process queues"
+
+#: ../configuration/command_line_interface.rst:141
+msgid "mautic:reports:scheduler"
+msgstr "mautic:reports:scheduler"
+
+#: ../configuration/command_line_interface.rst:142
+msgid "Processes scheduler for Report's export"
+msgstr "Processes scheduler for Report's export"
+
+#: ../configuration/command_line_interface.rst:143
+msgid "mautic:segments:rebuild"
+msgstr "mautic:segments:rebuild"
+
+#: ../configuration/command_line_interface.rst:144
+msgid ""
+"Update Contacts in smart Segments based on new Contact data, you can also "
+"use the alias of ``mautic:segments:update``."
+msgstr ""
+"Update Contacts in smart Segments based on new Contact data, you can also "
+"use the alias of ``mautic:segments:update``."
+
+#: ../configuration/command_line_interface.rst:145
+msgid "mautic:segments:update"
+msgstr "mautic:segments:update"
+
+#: ../configuration/command_line_interface.rst:146
+msgid ""
+"Update Contacts in smart Segments based on new Contact data, , you can also "
+"use the alias of ``mautic:segments:rebuild``."
+msgstr ""
+"Update Contacts in smart Segments based on new Contact data, , you can also "
+"use the alias of ``mautic:segments:rebuild``."
+
+#: ../configuration/command_line_interface.rst:147
+msgid "mautic:theme:json-config"
+msgstr "mautic:theme:json-config"
+
+#: ../configuration/command_line_interface.rst:148
+msgid "Converts Theme config to JSON from PHP"
+msgstr "Converts Theme config to JSON from PHP"
+
+#: ../configuration/command_line_interface.rst:149
+msgid "mautic:unusedip:delete"
+msgstr "mautic:unusedip:delete"
+
+#: ../configuration/command_line_interface.rst:150
+msgid "Deletes IP addresses that aren't used in any other database table"
+msgstr "Deletes IP addresses that aren't used in any other database table"
+
+#: ../configuration/command_line_interface.rst:151
+msgid "mautic:update:apply"
+msgstr "mautic:update:apply"
+
+#: ../configuration/command_line_interface.rst:152
+msgid "Updates the Mautic app."
+msgstr "Updates the Mautic app."
+
+#: ../configuration/command_line_interface.rst:153
+msgid "mautic:update:find"
+msgstr "mautic:update:find"
+
+#: ../configuration/command_line_interface.rst:154
+msgid "Fetches updates for Mautic"
+msgstr "Fetches updates for Mautic"
+
+#: ../configuration/command_line_interface.rst:155
+msgid "mautic:webhooks:process"
+msgstr "mautic:webhooks:process"
+
+#: ../configuration/command_line_interface.rst:156
+msgid "Process queued Webhook payloads"
+msgstr "Process queued Webhook payloads"
+
+#: ../configuration/command_line_interface.rst:157
+msgid "social:monitor:twitter:hashtags"
+msgstr "social:monitor:twitter:hashtags"
+
+#: ../configuration/command_line_interface.rst:158
+msgid "Looks at the monitoring records and finds hashtags."
+msgstr "Looks at the monitoring records and finds hashtags."
+
+#: ../configuration/command_line_interface.rst:159
+msgid "social:monitor:twitter:mentions"
+msgstr "social:monitor:twitter:mentions"
+
+#: ../configuration/command_line_interface.rst:160
+msgid "Searches for mentioned tweets"
+msgstr "Searches for mentioned tweets"
+
+#: ../configuration/command_line_interface.rst:165
+msgid "Doctrine commands"
+msgstr "Doctrine commands"
+
+#: ../configuration/command_line_interface.rst:173
+msgid "doctrine:fixtures:load"
+msgstr "doctrine:fixtures:load"
+
+#: ../configuration/command_line_interface.rst:174
+msgid "Installs Mautic sample data, overwriting existing data."
+msgstr "Installs Mautic sample data, overwriting existing data."
+
+#: ../configuration/cron_jobs.rst:4
+msgid "Cron jobs"
+msgstr "Cron jobs"
+
+#: ../configuration/cron_jobs.rst:10
+msgid ""
+"Mautic 3 introduced a new path for cron jobs ``bin/console`` - if you are "
+"using the legacy Mautic 2.x series you should replace this with the older "
+"version, ``app/console``"
+msgstr ""
+"Mautic 3 introduced a new path for cron jobs ``bin/console`` - if you are "
+"using the legacy Mautic 2.x series you should replace this with the older "
+"version, ``app/console``"
+
+#: ../configuration/cron_jobs.rst:12
+msgid ""
+"Mautic requires a few :xref:`cron jobs` to handle some maintenance tasks "
+"such as updating Contacts or Campaigns, executing Campaign Actions, sending "
+"Emails, and more. You must manually add the required cron jobs to your "
+"server. Most web hosts provide a means to add cron jobs either through SSH, "
+"cPanel, or another custom panel. Please consult your host's "
+"documentation/support if you are unsure on how to set up cron jobs."
+msgstr ""
+"Mautic requires a few :xref:`cron jobs` to handle some maintenance tasks "
+"such as updating Contacts or Campaigns, executing Campaign Actions, sending "
+"Emails, and more. You must manually add the required cron jobs to your "
+"server. Most web hosts provide a means to add cron jobs either through SSH, "
+"cPanel, or another custom panel. Please consult your host's "
+"documentation/support if you are unsure on how to set up cron jobs."
+
+#: ../configuration/cron_jobs.rst:17
+msgid ""
+"If you're new to Linux or Cron Jobs, then the Apache Foundation has "
+":xref:`an excellent guide` which you should read before asking questions via"
+" the various support Channels."
+msgstr ""
+"If you're new to Linux or Cron Jobs, then the Apache Foundation has "
+":xref:`an excellent guide` which you should read before asking questions via"
+" the various support Channels."
+
+#: ../configuration/cron_jobs.rst:19
+msgid ""
+"When setting up cron jobs, you must choose how often you want the cron jobs "
+"to run. Many shared hosts prefer that you run scripts every 15 or 30 minutes"
+" and may even override the scheduled times to meet these restrictions. "
+"Consult your host's documentation if they have such a restriction."
+msgstr ""
+"When setting up cron jobs, you must choose how often you want the cron jobs "
+"to run. Many shared hosts prefer that you run scripts every 15 or 30 minutes"
+" and may even override the scheduled times to meet these restrictions. "
+"Consult your host's documentation if they have such a restriction."
+
+#: ../configuration/cron_jobs.rst:21
+msgid ""
+"**It's HIGHLY recommended that you stagger the following required jobs so as"
+" to not run the exact same minute.**"
+msgstr ""
+"**It's HIGHLY recommended that you stagger the following required jobs so as"
+" to not run the exact same minute.**"
+
+#: ../configuration/cron_jobs.rst:23
+msgid "For instance:"
+msgstr "For instance:"
+
+#: ../configuration/cron_jobs.rst:32
+msgid "Required"
+msgstr "Required"
+
+#: ../configuration/cron_jobs.rst:34
+msgid ""
+"Mautic needs some mandatory cron jobs to run on a regular basis as follows:"
+msgstr ""
+"Mautic needs some mandatory cron jobs to run on a regular basis as follows:"
+
+#: ../configuration/cron_jobs.rst:37
+msgid "Segment cron jobs"
+msgstr "Segment cron jobs"
+
+#: ../configuration/cron_jobs.rst:39
+msgid "**To keep the Segments current:**"
+msgstr "**To keep the Segments current:**"
+
+#: ../configuration/cron_jobs.rst:45 ../configuration/cron_jobs.rst:62
+msgid ""
+"By default, the script processes Contacts in batches of 300. If this is too "
+"many for your server's resources, use the option ``--batch-limit=X`` "
+"replacing X with the number of Contacts to process each batch."
+msgstr ""
+"By default, the script processes Contacts in batches of 300. If this is too "
+"many for your server's resources, use the option ``--batch-limit=X`` "
+"replacing X with the number of Contacts to process each batch."
+
+#: ../configuration/cron_jobs.rst:47 ../configuration/cron_jobs.rst:64
+msgid ""
+"You can also limit the number of Contacts to process per script execution "
+"using ``--max-contacts`` to further limit resources used."
+msgstr ""
+"You can also limit the number of Contacts to process per script execution "
+"using ``--max-contacts`` to further limit resources used."
+
+#: ../configuration/cron_jobs.rst:52
+msgid "Campaign cron jobs"
+msgstr "Campaign cron jobs"
+
+#: ../configuration/cron_jobs.rst:56
+msgid "**To keep Campaigns updated with applicable Contacts:**"
+msgstr "**To keep Campaigns updated with applicable Contacts:**"
+
+#: ../configuration/cron_jobs.rst:66
+msgid "**To execute Campaigns events:**"
+msgstr "**To execute Campaigns events:**"
+
+#: ../configuration/cron_jobs.rst:72
+msgid ""
+"By default, the script processes Contacts in batches of 100. If this is too "
+"many for your server's resources, use the option ``--batch-limit=X`` "
+"replacing X with the number of events to process each batch."
+msgstr ""
+"By default, the script processes Contacts in batches of 100. If this is too "
+"many for your server's resources, use the option ``--batch-limit=X`` "
+"replacing X with the number of events to process each batch."
+
+#: ../configuration/cron_jobs.rst:74
+msgid ""
+"You can also limit the number of Contacts to process per script execution "
+"using ``--max-events`` to further limit resources used."
+msgstr ""
+"You can also limit the number of Contacts to process per script execution "
+"using ``--max-events`` to further limit resources used."
+
+#: ../configuration/cron_jobs.rst:78
+msgid ""
+"**To send frequency rules rescheduled marketing Campaign messages:** "
+"Messages marked as *Marketing Messages* - such as Emails as part of a "
+"marketing Campaign - get held in a message queue IF frequency rules are "
+"setup as either system wide or per Contact. To process this queue and "
+"reschedule sending these messages, add this cron job:"
+msgstr ""
+"**To send frequency rules rescheduled marketing Campaign messages:** "
+"Messages marked as *Marketing Messages* - such as Emails as part of a "
+"marketing Campaign - get held in a message queue IF frequency rules are "
+"setup as either system wide or per Contact. To process this queue and "
+"reschedule sending these messages, add this cron job:"
+
+#: ../configuration/cron_jobs.rst:82
+msgid "``mautic:messages:send``"
+msgstr "``mautic:messages:send``"
+
+#: ../configuration/cron_jobs.rst:86
+msgid ""
+"that these messages are only added to the queue when frequency rules apply "
+"either system wide or per Contact."
+msgstr ""
+"that these messages are only added to the queue when frequency rules apply "
+"either system wide or per Contact."
+
+#: ../configuration/cron_jobs.rst:89
+msgid "Optional"
+msgstr "Optional"
+
+#: ../configuration/cron_jobs.rst:91
+msgid ""
+"Depending on your server configuration, you can set up additional cron jobs "
+"that are optional for tasks such as sending Emails, importing Contacts, and "
+"more. The optional cron jobs are as follows:"
+msgstr ""
+"Depending on your server configuration, you can set up additional cron jobs "
+"that are optional for tasks such as sending Emails, importing Contacts, and "
+"more. The optional cron jobs are as follows:"
+
+#: ../configuration/cron_jobs.rst:96
+msgid "Process Email queue cron job"
+msgstr "Process Email queue cron job"
+
+#: ../configuration/cron_jobs.rst:100
+msgid ""
+"If the system configuration is queueing Emails, a cron job processes them."
+msgstr ""
+"If the system configuration is queueing Emails, a cron job processes them."
+
+#: ../configuration/cron_jobs.rst:109
+msgid "Fetch and process Monitored Email cron job"
+msgstr "Fetch and process Monitored Email cron job"
+
+#: ../configuration/cron_jobs.rst:113
+msgid ""
+"If you are using Bounce Management, set up the following command to fetch "
+"and process messages:"
+msgstr ""
+"If you are using Bounce Management, set up the following command to fetch "
+"and process messages:"
+
+#: ../configuration/cron_jobs.rst:122
+msgid "Social Monitoring cron job"
+msgstr "Social Monitoring cron job"
+
+#: ../configuration/cron_jobs.rst:126
+msgid ""
+"If you are using Social Monitoring, add the following command to your cron "
+"configuration:"
+msgstr ""
+"If you are using Social Monitoring, add the following command to your cron "
+"configuration:"
+
+#: ../configuration/cron_jobs.rst:135
+msgid "Import Contacts cron job"
+msgstr "Import Contacts cron job"
+
+#: ../configuration/cron_jobs.rst:139
+msgid ""
+"To import an especially large number of Contacts or Companies in the "
+"background, use the following command:"
+msgstr ""
+"To import an especially large number of Contacts or Companies in the "
+"background, use the following command:"
+
+#: ../configuration/cron_jobs.rst:145
+msgid ""
+"The time taken for this command to execute depends on the number of Contacts"
+" in the CSV file. However, on successful completion of the import operation,"
+" a notification appears on the Mautic dashboard."
+msgstr ""
+"The time taken for this command to execute depends on the number of Contacts"
+" in the CSV file. However, on successful completion of the import operation,"
+" a notification appears on the Mautic dashboard."
+
+#: ../configuration/cron_jobs.rst:148
+msgid "Webhooks cron job"
+msgstr "Webhooks cron job"
+
+#: ../configuration/cron_jobs.rst:150
+msgid ""
+"If the Mautic configuration settings include Webhook batch processing, use "
+"the following command to send the payloads:"
+msgstr ""
+"If the Mautic configuration settings include Webhook batch processing, use "
+"the following command to send the payloads:"
+
+#: ../configuration/cron_jobs.rst:161
+msgid "Update MaxMind GeoLite2 IP database cron job"
+msgstr "Update MaxMind GeoLite2 IP database cron job"
+
+#: ../configuration/cron_jobs.rst:165
+msgid ""
+"Mautic uses :xref:`MaxMind's` GeoLite2 IP database by default. The database "
+"license is :xref:`Creative Commons Attribution-ShareAlike 3.0 Unported "
+"License` and thus Mautic can't include it within the installation package. "
+"It's possible to download the database manually through Mautic's "
+"Configuration or automatically using the following script. MaxMind updates "
+"their database the first Tuesday of the month."
+msgstr ""
+"Mautic uses :xref:`MaxMind's` GeoLite2 IP database by default. The database "
+"license is :xref:`Creative Commons Attribution-ShareAlike 3.0 Unported "
+"License` and thus Mautic can't include it within the installation package. "
+"It's possible to download the database manually through Mautic's "
+"Configuration or automatically using the following script. MaxMind updates "
+"their database the first Tuesday of the month."
+
+#: ../configuration/cron_jobs.rst:175
+msgid "Clean up old data cron job"
+msgstr "Clean up old data cron job"
+
+#: ../configuration/cron_jobs.rst:177
+msgid ""
+"Clean up a Mautic installation by purging old data. Note that you can't "
+"purge some types of data within Mautic. Currently supported are audit log "
+"entries, visitors - anonymous Contacts - and visitor Landing Page hits. Use "
+"``--dry-run`` to view the number of records impacted before making any "
+"changes."
+msgstr ""
+"Clean up a Mautic installation by purging old data. Note that you can't "
+"purge some types of data within Mautic. Currently supported are audit log "
+"entries, visitors - anonymous Contacts - and visitor Landing Page hits. Use "
+"``--dry-run`` to view the number of records impacted before making any "
+"changes."
+
+#: ../configuration/cron_jobs.rst:180
+msgid ""
+"Use the ``--gdpr`` flag to delete data to fulfill GDPR European regulation. "
+"This deletes Contacts that have been inactive for 3 years."
+msgstr ""
+"Use the ``--gdpr`` flag to delete data to fulfill GDPR European regulation. "
+"This deletes Contacts that have been inactive for 3 years."
+
+#: ../configuration/cron_jobs.rst:182
+msgid ""
+"**This permanently deletes data. Be sure to verify database backups before "
+"using as appropriate.**"
+msgstr ""
+"**This permanently deletes data. Be sure to verify database backups before "
+"using as appropriate.**"
+
+#: ../configuration/cron_jobs.rst:189
+msgid "MaxMind CCPA compliance cron job"
+msgstr "MaxMind CCPA compliance cron job"
+
+#: ../configuration/cron_jobs.rst:191
+msgid ""
+"MaxMind requires Users to keep a \"Do Not Sell\" list up to date, and remove"
+" all data relating to those IP addresses in the past from MaxMind."
+msgstr ""
+"MaxMind requires Users to keep a \"Do Not Sell\" list up to date, and remove"
+" all data relating to those IP addresses in the past from MaxMind."
+
+#: ../configuration/cron_jobs.rst:193
+msgid "See more details in the official :xref:`MaxMind website`."
+msgstr "See more details in the official :xref:`MaxMind website`."
+
+#: ../configuration/cron_jobs.rst:195
+msgid ""
+"It's recommended to run these two commands once per week, one after another."
+msgstr ""
+"It's recommended to run these two commands once per week, one after another."
+
+#: ../configuration/cron_jobs.rst:201
+msgid ""
+"This command downloads the database of Do Not Sell IP addresses from "
+"MaxMind."
+msgstr ""
+"This command downloads the database of Do Not Sell IP addresses from "
+"MaxMind."
+
+#: ../configuration/cron_jobs.rst:207
+msgid ""
+"This command finds data in the database loaded from MaxMind's Do Not Sell IP"
+" addresses and deletes the data."
+msgstr ""
+"This command finds data in the database loaded from MaxMind's Do Not Sell IP"
+" addresses and deletes the data."
+
+#: ../configuration/cron_jobs.rst:212
+msgid "Send scheduled broadcasts (Segment Emails) cron job"
+msgstr "Send scheduled broadcasts (Segment Emails) cron job"
+
+#: ../configuration/cron_jobs.rst:216
+msgid ""
+"Starting with Mautic 2.2.0, it's now possible to use cron to send scheduled "
+"broadcasts for Channel communications. The current only implementation of "
+"this is for Segment Emails. Instead of requiring a manual send and wait with"
+" the browser window open while AJAX batches over the send, it's possible to "
+"use a command to initiate the process."
+msgstr ""
+"Starting with Mautic 2.2.0, it's now possible to use cron to send scheduled "
+"broadcasts for Channel communications. The current only implementation of "
+"this is for Segment Emails. Instead of requiring a manual send and wait with"
+" the browser window open while AJAX batches over the send, it's possible to "
+"use a command to initiate the process."
+
+#: ../configuration/cron_jobs.rst:218
+msgid ""
+"The caveat for this is that the Email must have a published up date and be "
+"currently published - this is to help prevent any unintentional Email "
+"broadcasts. Just as it was with the manual/AJAX process the message is only "
+"sent to Contacts who haven't already received the specific communication. "
+"This command sends messages to Contacts added to the source Segments later, "
+"so if you don't want this to happen, set an unpublish date."
+msgstr ""
+"The caveat for this is that the Email must have a published up date and be "
+"currently published - this is to help prevent any unintentional Email "
+"broadcasts. Just as it was with the manual/AJAX process the message is only "
+"sent to Contacts who haven't already received the specific communication. "
+"This command sends messages to Contacts added to the source Segments later, "
+"so if you don't want this to happen, set an unpublish date."
+
+#: ../configuration/cron_jobs.rst:225
+msgid "Command parameters:"
+msgstr "Command parameters:"
+
+#: ../configuration/cron_jobs.rst:227
+msgid ""
+"``--channel=email`` what Channel to execute. Defaults to all Channels if "
+"none provided."
+msgstr ""
+"``--channel=email`` what Channel to execute. Defaults to all Channels if "
+"none provided."
+
+#: ../configuration/cron_jobs.rst:229
+msgid "``--id=X`` is what ID of Email, SMS or other entity to send."
+msgstr "``--id=X`` is what ID of Email, SMS or other entity to send."
+
+#: ../configuration/cron_jobs.rst:231
+msgid ""
+"``--limit=X`` is how many Contacts to pull from the database for processing,"
+" set to 100 by default. Using this flag each time the cron fires, it "
+"processes X Contacts. The next time the cron job runs, it processes the "
+"following X Contacts, and so on."
+msgstr ""
+"``--limit=X`` is how many Contacts to pull from the database for processing,"
+" set to 100 by default. Using this flag each time the cron fires, it "
+"processes X Contacts. The next time the cron job runs, it processes the "
+"following X Contacts, and so on."
+
+#: ../configuration/cron_jobs.rst:233
+msgid ""
+"``--batch=X`` controls how many Emails processed in each batch. This can be "
+"different for every provider. For example, Mautic has API connection to "
+"SparkPost. Their API can send - at present - 1000 Emails per call. Therefore"
+" the batch should be 1000 for the fastest sending speed with this provider. "
+"Many SMTP providers can't handle 1000 emails in one batch, so this would "
+"need to be lower."
+msgstr ""
+"``--batch=X`` controls how many Emails processed in each batch. This can be "
+"different for every provider. For example, Mautic has API connection to "
+"SparkPost. Their API can send - at present - 1000 Emails per call. Therefore"
+" the batch should be 1000 for the fastest sending speed with this provider. "
+"Many SMTP providers can't handle 1000 emails in one batch, so this would "
+"need to be lower."
+
+#: ../configuration/cron_jobs.rst:235
+msgid ""
+"``--min-contact-id`` and ``--max-contact-id`` allows the separation of Email"
+" sending by smaller chunks, by specifying contact ID ranges. If those ranges"
+" won't overlap, this allows you to run several broadcast commands in "
+"parallel."
+msgstr ""
+"``--min-contact-id`` and ``--max-contact-id`` allows the separation of Email"
+" sending by smaller chunks, by specifying contact ID ranges. If those ranges"
+" won't overlap, this allows you to run several broadcast commands in "
+"parallel."
+
+#: ../configuration/cron_jobs.rst:240
+msgid "Send scheduled Reports cron job"
+msgstr "Send scheduled Reports cron job"
+
+#: ../configuration/cron_jobs.rst:244
+msgid ""
+"Starting with Mautic 2.12.0, it's now possible to use cron to send scheduled"
+" Reports."
+msgstr ""
+"Starting with Mautic 2.12.0, it's now possible to use cron to send scheduled"
+" Reports."
+
+#: ../configuration/cron_jobs.rst:252
+msgid ""
+"for releases prior to 1.1.3, it's required to append ``--env=prod`` to the "
+"cron job command to ensure commands execute correctly."
+msgstr ""
+"for releases prior to 1.1.3, it's required to append ``--env=prod`` to the "
+"cron job command to ensure commands execute correctly."
+
+#: ../configuration/cron_jobs.rst:257
+msgid "Configure Mautic Integration cron jobs"
+msgstr "Configure Mautic Integration cron jobs"
+
+#: ../configuration/cron_jobs.rst:261
+msgid ""
+"To perform synchronization of all Integrations and to manage Plugins, use "
+"the cron job commands in this section."
+msgstr ""
+"To perform synchronization of all Integrations and to manage Plugins, use "
+"the cron job commands in this section."
+
+#: ../configuration/cron_jobs.rst:263
+msgid "**To fetch Contacts from the Integration:**"
+msgstr "**To fetch Contacts from the Integration:**"
+
+#: ../configuration/cron_jobs.rst:269 ../configuration/cron_jobs.rst:281
+msgid "or"
+msgstr "or"
+
+#: ../configuration/cron_jobs.rst:275
+msgid "**To push Contact activity to an Integration:**"
+msgstr "**To push Contact activity to an Integration:**"
+
+#: ../configuration/cron_jobs.rst:287
+msgid ""
+"These commands work with all available Plugins. To avoid performance issues "
+"when using multiple Integrations, you must specify the name of the "
+"Integration by adding the ``-integration`` suffix to the command. For "
+"instance, for integration of Mautic with HubSpot, use the following command:"
+msgstr ""
+"These commands work with all available Plugins. To avoid performance issues "
+"when using multiple Integrations, you must specify the name of the "
+"Integration by adding the ``-integration`` suffix to the command. For "
+"instance, for integration of Mautic with HubSpot, use the following command:"
+
+#: ../configuration/cron_jobs.rst:294
+msgid "**To install, update, turn on or turn off Plugins:**"
+msgstr "**To install, update, turn on or turn off Plugins:**"
+
+#: ../configuration/cron_jobs.rst:302
+msgid ""
+"you can replace ``mautic:plugins:reload`` with ``mautic:plugins:install`` or"
+" ``mautic:plugins:update``. They're the same commands with different alias."
+msgstr ""
+"you can replace ``mautic:plugins:reload`` with ``mautic:plugins:install`` or"
+" ``mautic:plugins:update``. They're the same commands with different alias."
+
+#: ../configuration/cron_jobs.rst:306
+msgid "Tips & troubleshooting"
+msgstr "Tips & troubleshooting"
+
+#: ../configuration/cron_jobs.rst:308
+msgid ""
+"If your environment provides a command-line specific build of PHP, often "
+"called ``php-cli``, you may want to use that instead of ``php`` as it has a "
+"cleaner output. On BlueHost and probably some other PHP hosts, the ``php`` "
+"command might be setup to discard the command-line parameters to "
+"``console``, in which case you must use ``php-cli`` to make the cron jobs "
+"work."
+msgstr ""
+"If your environment provides a command-line specific build of PHP, often "
+"called ``php-cli``, you may want to use that instead of ``php`` as it has a "
+"cleaner output. On BlueHost and probably some other PHP hosts, the ``php`` "
+"command might be setup to discard the command-line parameters to "
+"``console``, in which case you must use ``php-cli`` to make the cron jobs "
+"work."
+
+#: ../configuration/cron_jobs.rst:310
+msgid ""
+"To assist in troubleshooting cron issues, you can pipe the output of each "
+"cron job to a specific file by adding something like "
+"``>>/path/to/somefile.log 2>&1`` at the end of the cron job, then you can "
+"look at the contents of the file to see the output."
+msgstr ""
+"To assist in troubleshooting cron issues, you can pipe the output of each "
+"cron job to a specific file by adding something like "
+"``>>/path/to/somefile.log 2>&1`` at the end of the cron job, then you can "
+"look at the contents of the file to see the output."
+
+#: ../configuration/cron_jobs.rst:312
+msgid ""
+"If an error is occurring when running run the cron job this file provides "
+"some insight, otherwise the file is empty or has some basic stats. The "
+"modification time of the file informs you of the last time the cron job ran."
+" You can thus use this to determine whether the cron job is running "
+"successfully and on schedule."
+msgstr ""
+"If an error is occurring when running run the cron job this file provides "
+"some insight, otherwise the file is empty or has some basic stats. The "
+"modification time of the file informs you of the last time the cron job ran."
+" You can thus use this to determine whether the cron job is running "
+"successfully and on schedule."
+
+#: ../configuration/cron_jobs.rst:314
+msgid ""
+"In addition it's recommended to enable the non-interactive mode together "
+"with the no-ansi mode when you run your commands using cron. This way you "
+"ensure, that you have proper timestamps in your log and the output is more "
+"readable."
+msgstr ""
+"In addition it's recommended to enable the non-interactive mode together "
+"with the no-ansi mode when you run your commands using cron. This way you "
+"ensure, that you have proper timestamps in your log and the output is more "
+"readable."
+
+#: ../configuration/cron_jobs.rst:316
+msgid "Example output"
+msgstr "Example output"
+
+#: ../configuration/cron_jobs.rst:326
+msgid ""
+"If you have SSH access, try to run the command directly to Select for "
+"errors. If there is nothing printed from either in a SSH session or in the "
+"cron output, verify in the server's logs. If you see similar errors to "
+"``'Warning: Invalid argument supplied for foreach()' in "
+"/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php:287``,"
+" you either need to use ``php-cli`` instead of ``php`` or try using ``php -d"
+" register_argc_argv=On``. `"
+msgstr ""
+"If you have SSH access, try to run the command directly to Select for "
+"errors. If there is nothing printed from either in a SSH session or in the "
+"cron output, verify in the server's logs. If you see similar errors to "
+"``'Warning: Invalid argument supplied for foreach()' in "
+"/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php:287``,"
+" you either need to use ``php-cli`` instead of ``php`` or try using ``php -d"
+" register_argc_argv=On``. `"
+
+#: ../configuration/cron_jobs.rst:329
+msgid "Tracking script"
+msgstr "Tracking script"
+
+#: ../configuration/cron_jobs.rst:331
+msgid ""
+"After installation and setup of the :doc:`/configuration/cron_jobs` you're "
+"ready to begin tracking Contacts. You need to add a piece of JavaScript to "
+"the websites for each site you wish to track through Mautic."
+msgstr ""
+"After installation and setup of the :doc:`/configuration/cron_jobs` you're "
+"ready to begin tracking Contacts. You need to add a piece of JavaScript to "
+"the websites for each site you wish to track through Mautic."
+
+#: ../configuration/cron_jobs.rst:333
+msgid ""
+"This is straightforward process, you can add this tracking script to your "
+"website template file, or install a Mautic Integration for the more common "
+"Content Management System platforms."
+msgstr ""
+"This is straightforward process, you can add this tracking script to your "
+"website template file, or install a Mautic Integration for the more common "
+"Content Management System platforms."
+
+#: ../configuration/cron_jobs.rst:335
+msgid ""
+"Here is an example of the tracking JavaScript which you can access by "
+"clicking on **Tracking Settings** in the Global Configuration."
+msgstr ""
+"Here is an example of the tracking JavaScript which you can access by "
+"clicking on **Tracking Settings** in the Global Configuration."
+
+#: ../configuration/cron_jobs.rst:346
+msgid ""
+"You should replace the site URL, ``example.com/mautic`` with the URL to your"
+" Mautic instance in the example provided, but it's recommended to copy the "
+"whole code block from the tracking settings in your Mautic instance."
+msgstr ""
+"You should replace the site URL, ``example.com/mautic`` with the URL to your"
+" Mautic instance in the example provided, but it's recommended to copy the "
+"whole code block from the tracking settings in your Mautic instance."
+
+#: ../configuration/maxmind_license.rst:2
+msgid "MaxMind license"
+msgstr "MaxMind license"
+
+#: ../configuration/maxmind_license.rst:4
+msgid ""
+"From the :xref:`2.16 release`, Mautic has supported using a license key to "
+"access the MaxMind IP lookup service."
+msgstr ""
+"From the :xref:`2.16 release`, Mautic has supported using a license key to "
+"access the MaxMind IP lookup service."
+
+#: ../configuration/maxmind_license.rst:8
+msgid ""
+"From the 3.2 release the format for the license key needs to be "
+"``AccountID:Licensekey``. You can locate the Account ID directly preceding "
+"the license keys table."
+msgstr ""
+"From the 3.2 release the format for the license key needs to be "
+"``AccountID:Licensekey``. You can locate the Account ID directly preceding "
+"the license keys table."
+
+#: ../configuration/maxmind_license.rst:10
+msgid ""
+"Follow these steps to configure your Mautic instance to use the license key."
+msgstr ""
+"Follow these steps to configure your Mautic instance to use the license key."
+
+#: ../configuration/maxmind_license.rst:12
+msgid "Create a MaxMind account by going to :xref:`MaxMind Signup`"
+msgstr "Create a MaxMind account by going to :xref:`MaxMind Signup`"
+
+#: ../configuration/maxmind_license.rst:14
+msgid ""
+"After signing up, verify your Email and follow the steps to access your "
+":xref:`MaxMind Account`."
+msgstr ""
+"After signing up, verify your Email and follow the steps to access your "
+":xref:`MaxMind Account`."
+
+#: ../configuration/maxmind_license.rst:16
+msgid "Click the Contact icon at the top right of the menu to login"
+msgstr "Click the Contact icon at the top right of the menu to login"
+
+#: ../configuration/maxmind_license.rstNone
+msgid "Screenshot of MaxMind Account"
+msgstr "Screenshot of MaxMind Account"
+
+#: ../configuration/maxmind_license.rst:22
+msgid ""
+"After logging in, under services click ``My License Key`` on the left hand "
+"side in the menu"
+msgstr ""
+"After logging in, under services click ``My License Key`` on the left hand "
+"side in the menu"
+
+#: ../configuration/maxmind_license.rstNone
+#: ../configuration/maxmind_license.rstNone
+#: ../configuration/maxmind_license.rstNone
+msgid "Screenshot of MaxMind license key"
+msgstr "Screenshot of MaxMind license key"
+
+#: ../configuration/maxmind_license.rst:28
+msgid "Then, Click ``Generate new License Key``"
+msgstr "Then, Click ``Generate new License Key``"
+
+#: ../configuration/maxmind_license.rstNone
+msgid "Screenshot of MaxMind Generate key"
+msgstr "Screenshot of MaxMind Generate key"
+
+#: ../configuration/maxmind_license.rst:34
+msgid "Answer ``Will this key be used for GeoIP Update?`` with No and confirm"
+msgstr ""
+"Answer ``Will this key be used for GeoIP Update?`` with No and confirm"
+
+#: ../configuration/maxmind_license.rstNone
+msgid "Screenshot of MaxMind confirm key"
+msgstr "Screenshot of MaxMind confirm key"
+
+#: ../configuration/maxmind_license.rst:40
+msgid ""
+"Copy the license key that you see on the screen and note down the Account ID"
+" preceding the license key table"
+msgstr ""
+"Copy the license key that you see on the screen and note down the Account ID"
+" preceding the license key table"
+
+#: ../configuration/maxmind_license.rst:46
+msgid ""
+"Go to Mautic > Settings > Configuration > System Settings > Miscellaneous "
+"Settings and enter the license key into the \"IP lookup service "
+"authentication\" **field in the format** ``AccountID:Licensekey``."
+msgstr ""
+"Go to Mautic > Settings > Configuration > System Settings > Miscellaneous "
+"Settings and enter the license key into the \"IP lookup service "
+"authentication\" **field in the format** ``AccountID:Licensekey``."
+
+#: ../configuration/maxmind_license.rst:52
+msgid ""
+"Click ``Fetch IP Lookup Data Store``. This downloads the IP lookup database "
+"to your Mautic instance."
+msgstr ""
+"Click ``Fetch IP Lookup Data Store``. This downloads the IP lookup database "
+"to your Mautic instance."
+
+#: ../configuration/maxmind_license.rst:54
+msgid "Set up the :ref:`cron jobs` to periodically download a fresh copy."
+msgstr "Set up the :ref:`cron jobs` to periodically download a fresh copy."
+
+#: ../configuration/settings.rst:4
+msgid "Mautic Configuration Settings"
+msgstr "Mautic Configuration Settings"
+
+#: ../configuration/settings.rst:9
+msgid "System settings"
+msgstr "System settings"
+
+#: ../configuration/settings.rst:12
+msgid "General settings"
+msgstr "General settings"
+
+#: ../configuration/settings.rst:15
+msgid "System defaults"
+msgstr "System defaults"
+
+#: ../configuration/settings.rst:18
+msgid "CORS settings"
+msgstr "CORS settings"
+
+#: ../configuration/settings.rst:21
+msgid "Miscellaneous settings"
+msgstr "Miscellaneous settings"
+
+#: ../configuration/settings.rst:24
+msgid "Update settings"
+msgstr "Update settings"
+
+#: ../configuration/settings.rst:27
+msgid "Theme settings"
+msgstr "Theme settings"
+
+#: ../configuration/settings.rst:30
+msgid "API settings"
+msgstr "API settings"
+
+#: ../configuration/settings.rst:33
+msgid "Asset settings"
+msgstr "Asset settings"
+
+#: ../configuration/settings.rst:36
+msgid "Campaign settings"
+msgstr "Campaign settings"
+
+#: ../configuration/settings.rst:39
+msgid "Email settings"
+msgstr "Email settings"
+
+#: ../configuration/settings.rst:42
+msgid "Mail send settings"
+msgstr "Mail send settings"
+
+#: ../configuration/settings.rst:45
+msgid "Default frequency rule"
+msgstr "Default frequency rule"
+
+#: ../configuration/settings.rst:48
+msgid "Monitored inbox settings"
+msgstr "Monitored inbox settings"
+
+#: ../configuration/settings.rst:51
+msgid "Message settings"
+msgstr "Message settings"
+
+#: ../configuration/settings.rst:54
+msgid "Unsubscribe settings"
+msgstr "Unsubscribe settings"
+
+#: ../configuration/settings.rst:57
+msgid "Form settings"
+msgstr "Form settings"
+
+#: ../configuration/settings.rst:60
+msgid "Contact settings"
+msgstr "Contact settings"
+
+#: ../configuration/settings.rst:63
+msgid "Contact merge settings"
+msgstr "Contact merge settings"
+
+#: ../configuration/settings.rst:66
+msgid "Contact list settings"
+msgstr "Contact list settings"
+
+#: ../configuration/settings.rst:69
+msgid "Import settings"
+msgstr "Import settings"
+
+#: ../configuration/settings.rst:72
+msgid "Segment settings"
+msgstr "Segment settings"
+
+#: ../configuration/settings.rst:75
+msgid "Company settings"
+msgstr "Company settings"
+
+#: ../configuration/settings.rst:78
+msgid "Notification settings"
+msgstr "Notification settings"
+
+#: ../configuration/settings.rst:81
+msgid "Campaign notification settings"
+msgstr "Campaign notification settings"
+
+#: ../configuration/settings.rst:84
+msgid "Webhook notification settings"
+msgstr "Webhook notification settings"
+
+#: ../configuration/settings.rst:87
+msgid "Landing page settings"
+msgstr "Landing page settings"
+
+#: ../configuration/settings.rst:90
+msgid "Tracking settings"
+msgstr "Tracking settings"
+
+#: ../configuration/settings.rst:93
+msgid "Mautic tracking settings"
+msgstr "Mautic tracking settings"
+
+#: ../configuration/settings.rst:96
+msgid "Facebook pixel"
+msgstr "Facebook pixel"
+
+#: ../configuration/settings.rst:99
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: ../configuration/settings.rst:102
+msgid "Report settings"
+msgstr "Report settings"
+
+#: ../configuration/settings.rst:105
+msgid "Text message settings"
+msgstr "Text message settings"
+
+#: ../configuration/settings.rst:108
+msgid "User/Authentication settings"
+msgstr "User/Authentication settings"
+
+#: ../configuration/settings.rst:111
+msgid "SAML/SSO settings"
+msgstr "SAML/SSO settings"
+
+#: ../configuration/settings.rst:114
+msgid "Webhook settings"
+msgstr "Webhook settings"
+
+#: ../configuration/settings.rst:117
+msgid "Social settings"
+msgstr "Social settings"
+
+#: ../configuration/variables.rst:2
+msgid "Variables"
+msgstr "Variables"
+
+#: ../configuration/variables.rst:5
+msgid "Default Value"
+msgstr "Default Value"
+
+#: ../configuration/variables.rst:7
+msgid ""
+"The default value - sometimes called Fallback Text - is specified after the "
+"``|`` character. Consider this Email salutation:"
+msgstr ""
+"The default value - sometimes called Fallback Text - is specified after the "
+"``|`` character. Consider this Email salutation:"
+
+#: ../configuration/variables.rst:9
+msgid "``Hi {contactfield=firstname|there},``"
+msgstr "``Hi {contactfield=firstname|there},``"
+
+#: ../configuration/variables.rst:12
+msgid "Contact fields"
+msgstr "Contact fields"
+
+#: ../configuration/variables.rst:14
+msgid ""
+"See :doc:`managing custom fields </contacts/custom_fields>` for more "
+"information."
+msgstr ""
+"See :doc:`managing custom fields </contacts/custom_fields>` for more "
+"information."
+
+#: ../configuration/variables.rst:20 ../configuration/variables.rst:85
+#: ../configuration/variables.rst:107 ../configuration/variables.rst:150
+#: ../configuration/variables.rst:171 ../configuration/variables.rst:196
+#: ../configuration/variables.rst:219 ../configuration/variables.rst:242
+#: ../configuration/variables.rst:257 ../configuration/variables.rst:296
+msgid "Variable name"
+msgstr "Variable name"
+
+#: ../configuration/variables.rst:21 ../configuration/variables.rst:86
+#: ../configuration/variables.rst:108 ../configuration/variables.rst:151
+#: ../configuration/variables.rst:172 ../configuration/variables.rst:197
+#: ../configuration/variables.rst:220 ../configuration/variables.rst:243
+#: ../configuration/variables.rst:258 ../configuration/variables.rst:297
+msgid "Variable syntax"
+msgstr "Variable syntax"
+
+#: ../configuration/variables.rst:22 ../configuration/variables.rst:310
+msgid "Attribution"
+msgstr "Attribution"
+
+#: ../configuration/variables.rst:23 ../configuration/variables.rst:311
+msgid "``{contactfield=attribution}``"
+msgstr "``{contactfield=attribution}``"
+
+#: ../configuration/variables.rst:24 ../configuration/variables.rst:312
+msgid "Attribution Date"
+msgstr "Attribution Date"
+
+#: ../configuration/variables.rst:25 ../configuration/variables.rst:313
+msgid "``{contactfield=attribution_date}``"
+msgstr "``{contactfield=attribution_date}``"
+
+#: ../configuration/variables.rst:26 ../configuration/variables.rst:298
+msgid "Address Line 1"
+msgstr "Address Line 1"
+
+#: ../configuration/variables.rst:27 ../configuration/variables.rst:299
+#: ../configuration/variables.rst:301
+msgid "``{contactfield=address1}``"
+msgstr "``{contactfield=address1}``"
+
+#: ../configuration/variables.rst:28 ../configuration/variables.rst:302
+msgid "Address Line 2"
+msgstr "Address Line 2"
+
+#: ../configuration/variables.rst:29 ../configuration/variables.rst:303
+msgid "``{contactfield=address2}``"
+msgstr "``{contactfield=address2}``"
+
+#: ../configuration/variables.rst:30 ../configuration/variables.rst:322
+msgid "Country"
+msgstr "Country"
+
+#: ../configuration/variables.rst:31 ../configuration/variables.rst:323
+msgid "``{contactfield=country}``"
+msgstr "``{contactfield=country}``"
+
+#: ../configuration/variables.rst:32 ../configuration/variables.rst:318
+msgid "City"
+msgstr "City"
+
+#: ../configuration/variables.rst:33 ../configuration/variables.rst:319
+msgid "``{contactfield=city}``"
+msgstr "``{contactfield=city}``"
+
+#: ../configuration/variables.rst:34 ../configuration/variables.rst:326
+msgid "Company"
+msgstr "Company"
+
+#: ../configuration/variables.rst:35 ../configuration/variables.rst:327
+msgid "``{contactfield=company}``"
+msgstr "``{contactfield=company}``"
+
+#: ../configuration/variables.rst:36 ../configuration/variables.rst:328
+msgid "Contact ID"
+msgstr "Contact ID"
+
+#: ../configuration/variables.rst:37 ../configuration/variables.rst:329
+msgid "``{contactfield=id}``"
+msgstr "``{contactfield=id}``"
+
+#: ../configuration/variables.rst:38 ../configuration/variables.rst:91
+#: ../configuration/variables.rst:334
+msgid "Email"
+msgstr "Email"
+
+#: ../configuration/variables.rst:39 ../configuration/variables.rst:335
+msgid "``{contactfield=email}``"
+msgstr "``{contactfield=email}``"
+
+#: ../configuration/variables.rst:40 ../configuration/variables.rst:338
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../configuration/variables.rst:41 ../configuration/variables.rst:339
+msgid "``{contactfield=facebook}``"
+msgstr "``{contactfield=facebook}``"
+
+#: ../configuration/variables.rst:42 ../configuration/variables.rst:340
+msgid "Fax"
+msgstr "Fax"
+
+#: ../configuration/variables.rst:43 ../configuration/variables.rst:341
+msgid "``{contactfield=fax}``"
+msgstr "``{contactfield=fax}``"
+
+#: ../configuration/variables.rst:44 ../configuration/variables.rst:87
+#: ../configuration/variables.rst:348
+msgid "First Name"
+msgstr "First Name"
+
+#: ../configuration/variables.rst:45 ../configuration/variables.rst:349
+msgid "``{contactfield=firstname}``"
+msgstr "``{contactfield=firstname}``"
+
+#: ../configuration/variables.rst:46 ../configuration/variables.rst:350
+msgid "Foursquare"
+msgstr "Foursquare"
+
+#: ../configuration/variables.rst:47 ../configuration/variables.rst:351
+msgid "``{contactfield=foursquare}``"
+msgstr "``{contactfield=foursquare}``"
+
+#: ../configuration/variables.rst:48 ../configuration/variables.rst:352
+msgid "Google+"
+msgstr "Google+"
+
+#: ../configuration/variables.rst:49 ../configuration/variables.rst:353
+msgid "``{contactfield=googleplus}``"
+msgstr "``{contactfield=googleplus}``"
+
+#: ../configuration/variables.rst:50 ../configuration/variables.rst:354
+msgid "Instagram"
+msgstr "Instagram"
+
+#: ../configuration/variables.rst:51 ../configuration/variables.rst:355
+msgid "``{contactfield=instagram}``"
+msgstr "``{contactfield=instagram}``"
+
+#: ../configuration/variables.rst:52 ../configuration/variables.rst:356
+msgid "IP Address"
+msgstr "IP Address"
+
+#: ../configuration/variables.rst:53 ../configuration/variables.rst:357
+msgid "``{contactfield=ipAddress}``"
+msgstr "``{contactfield=ipAddress}``"
+
+#: ../configuration/variables.rst:54 ../configuration/variables.rst:89
+#: ../configuration/variables.rst:362
+msgid "Last Name"
+msgstr "Last Name"
+
+#: ../configuration/variables.rst:55 ../configuration/variables.rst:363
+msgid "``{contactfield=lastname}``"
+msgstr "``{contactfield=lastname}``"
+
+#: ../configuration/variables.rst:56 ../configuration/variables.rst:366
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: ../configuration/variables.rst:57 ../configuration/variables.rst:367
+msgid "``{contactfield=linkedin}``"
+msgstr "``{contactfield=linkedin}``"
+
+#: ../configuration/variables.rst:58 ../configuration/variables.rst:370
+msgid "Mobile Number"
+msgstr "Mobile Number"
+
+#: ../configuration/variables.rst:59 ../configuration/variables.rst:371
+msgid "``{contactfield=mobile}``"
+msgstr "``{contactfield=mobile}``"
+
+#: ../configuration/variables.rst:60 ../configuration/variables.rst:376
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: ../configuration/variables.rst:61 ../configuration/variables.rst:377
+msgid "``{contactfield=phone}``"
+msgstr "``{contactfield=phone}``"
+
+#: ../configuration/variables.rst:62 ../configuration/variables.rst:93
+#: ../configuration/variables.rst:380
+msgid "Position"
+msgstr "Position"
+
+#: ../configuration/variables.rst:63 ../configuration/variables.rst:381
+msgid "``{contactfield=position}``"
+msgstr "``{contactfield=position}``"
+
+#: ../configuration/variables.rst:64 ../configuration/variables.rst:388
+msgid "Skype"
+msgstr "Skype"
+
+#: ../configuration/variables.rst:65 ../configuration/variables.rst:389
+msgid "``{contactfield=skype}``"
+msgstr "``{contactfield=skype}``"
+
+#: ../configuration/variables.rst:66 ../configuration/variables.rst:390
+msgid "State"
+msgstr "State"
+
+#: ../configuration/variables.rst:67 ../configuration/variables.rst:391
+msgid "``{contactfield=state}``"
+msgstr "``{contactfield=state}``"
+
+#: ../configuration/variables.rst:68 ../configuration/variables.rst:396
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../configuration/variables.rst:69 ../configuration/variables.rst:397
+msgid "``{contactfield=twitter}``"
+msgstr "``{contactfield=twitter}``"
+
+#: ../configuration/variables.rst:70 ../configuration/variables.rst:200
+#: ../configuration/variables.rst:261 ../configuration/variables.rst:404
+msgid "Title"
+msgstr "Title"
+
+#: ../configuration/variables.rst:71 ../configuration/variables.rst:405
+msgid "``{contactfield=title}``"
+msgstr "``{contactfield=title}``"
+
+#: ../configuration/variables.rst:72 ../configuration/variables.rst:412
+msgid "Website"
+msgstr "Website"
+
+#: ../configuration/variables.rst:73 ../configuration/variables.rst:413
+msgid "``{contactfield=website}``"
+msgstr "``{contactfield=website}``"
+
+#: ../configuration/variables.rst:74 ../configuration/variables.rst:420
+msgid "Zip Code"
+msgstr "Postcode"
+
+#: ../configuration/variables.rst:75 ../configuration/variables.rst:421
+msgid "``{contactfield=zipcode}``"
+msgstr "``{contactfield=zipcode}``"
+
+#: ../configuration/variables.rst:78
+msgid "Contact Owner fields"
+msgstr "Contact Owner fields"
+
+#: ../configuration/variables.rst:88
+msgid "``{ownerfield=firstname}``"
+msgstr "``{ownerfield=firstname}``"
+
+#: ../configuration/variables.rst:90
+msgid "``{ownerfield=lastname}``"
+msgstr "``{ownerfield=lastname}``"
+
+#: ../configuration/variables.rst:92
+msgid "``{ownerfield=email}``"
+msgstr "``{ownerfield=email}``"
+
+#: ../configuration/variables.rst:94
+msgid "``{ownerfield=position}``"
+msgstr "``{ownerfield=position}``"
+
+#: ../configuration/variables.rst:95 ../configuration/variables.rst:173
+#: ../configuration/variables.rst:386
+msgid "Signature"
+msgstr "Signature"
+
+#: ../configuration/variables.rst:96
+msgid "``{ownerfield=signature}``"
+msgstr "``{ownerfield=signature}``"
+
+#: ../configuration/variables.rst:99
+msgid "Company Contact fields"
+msgstr "Company Contact fields"
+
+#: ../configuration/variables.rst:101
+msgid ""
+"See :doc:`Companies</companies/companies_overview>` for more information."
+msgstr ""
+"See :doc:`Companies</companies/companies_overview>` for more information."
+
+#: ../configuration/variables.rst:109 ../configuration/variables.rst:300
+msgid "Address Line 1 (Company)"
+msgstr "Address Line 1 (Company)"
+
+#: ../configuration/variables.rst:110
+msgid "``{contactfield=companyaddress1}``"
+msgstr "``{contactfield=companyaddress1}``"
+
+#: ../configuration/variables.rst:111 ../configuration/variables.rst:304
+msgid "Address Line 2 (Company)"
+msgstr "Address Line 2 (Company)"
+
+#: ../configuration/variables.rst:112 ../configuration/variables.rst:305
+msgid "``{contactfield=companyaddress2}``"
+msgstr "``{contactfield=companyaddress2}``"
+
+#: ../configuration/variables.rst:113 ../configuration/variables.rst:306
+msgid "Annual Revenue (Company)"
+msgstr "Annual Revenue (Company)"
+
+#: ../configuration/variables.rst:114 ../configuration/variables.rst:307
+msgid "``{contactfield=companyannual_revenue}``"
+msgstr "``{contactfield=companyannual_revenue}``"
+
+#: ../configuration/variables.rst:115 ../configuration/variables.rst:320
+msgid "City (Company)"
+msgstr "City (Company)"
+
+#: ../configuration/variables.rst:116 ../configuration/variables.rst:321
+msgid "``{contactfield=companycity}``"
+msgstr "``{contactfield=companycity}``"
+
+#: ../configuration/variables.rst:117 ../configuration/variables.rst:324
+msgid "Country (Company)"
+msgstr "Country (Company)"
+
+#: ../configuration/variables.rst:118 ../configuration/variables.rst:325
+msgid "``{contactfield=companycountry}``"
+msgstr "``{contactfield=companycountry}``"
+
+#: ../configuration/variables.rst:119 ../configuration/variables.rst:330
+msgid "Description (Company)"
+msgstr "Description (Company)"
+
+#: ../configuration/variables.rst:120 ../configuration/variables.rst:331
+msgid "``{contactfield=companydescription}``"
+msgstr "``{contactfield=companydescription}``"
+
+#: ../configuration/variables.rst:121 ../configuration/variables.rst:336
+msgid "Email (Company)"
+msgstr "Email (Company)"
+
+#: ../configuration/variables.rst:122 ../configuration/variables.rst:337
+msgid "``{contactfield=companyemail}``"
+msgstr "``{contactfield=companyemail}``"
+
+#: ../configuration/variables.rst:123 ../configuration/variables.rst:346
+msgid "Fax (Company)"
+msgstr "Fax (Company)"
+
+#: ../configuration/variables.rst:124 ../configuration/variables.rst:347
+msgid "``{contactfield=companyfax}``"
+msgstr "``{contactfield=companyfax}``"
+
+#: ../configuration/variables.rst:125
+msgid "Industry (Company)"
+msgstr "Industry (Company)"
+
+#: ../configuration/variables.rst:126
+msgid "``{contactfield=companyindustry}``"
+msgstr "``{contactfield=companyindustry}``"
+
+#: ../configuration/variables.rst:127
+msgid "Name"
+msgstr "Name"
+
+#: ../configuration/variables.rst:128 ../configuration/variables.rst:373
+msgid "``{contactfield=companyname}``"
+msgstr "``{contactfield=companyname}``"
+
+#: ../configuration/variables.rst:129 ../configuration/variables.rst:374
+msgid "Number of Employees (Company)"
+msgstr "Number of Employees (Company)"
+
+#: ../configuration/variables.rst:130 ../configuration/variables.rst:375
+msgid "``{contactfield=companynumber_of_employees}``"
+msgstr "``{contactfield=companynumber_of_employees}``"
+
+#: ../configuration/variables.rst:131 ../configuration/variables.rst:378
+msgid "Phone Number (Company)"
+msgstr "Phone Number (Company)"
+
+#: ../configuration/variables.rst:132 ../configuration/variables.rst:379
+msgid "``{contactfield=companyphone}``"
+msgstr "``{contactfield=companyphone}``"
+
+#: ../configuration/variables.rst:133 ../configuration/variables.rst:392
+msgid "State (Company)"
+msgstr "State (Company)"
+
+#: ../configuration/variables.rst:134 ../configuration/variables.rst:393
+msgid "``{contactfield=companystate}``"
+msgstr "``{contactfield=companystate}``"
+
+#: ../configuration/variables.rst:135 ../configuration/variables.rst:414
+msgid "Website (Company)"
+msgstr "Website (Company)"
+
+#: ../configuration/variables.rst:136 ../configuration/variables.rst:415
+msgid "``{contactfield=companywebsite}``"
+msgstr "``{contactfield=companywebsite}``"
+
+#: ../configuration/variables.rst:137 ../configuration/variables.rst:422
+msgid "Zip Code (Company)"
+msgstr "Postcode (Company)"
+
+#: ../configuration/variables.rst:138 ../configuration/variables.rst:423
+msgid "``{contactfield=companyzipcode}``"
+msgstr "``{contactfield=companyzipcode}``"
+
+#: ../configuration/variables.rst:141
+msgid "Mautic Component tokens"
+msgstr "Mautic Component tokens"
+
+#: ../configuration/variables.rst:143
+msgid ""
+"See :doc:`Components</components/assets>` and :doc:`Manage "
+"Pages</components/landing_pages>` for more information."
+msgstr ""
+"See :doc:`Components</components/assets>` and :doc:`Manage "
+"Pages</components/landing_pages>` for more information."
+
+#: ../configuration/variables.rst:152 ../configuration/variables.rst:308
+msgid "Asset link for Asset id#"
+msgstr "Asset link for Asset id#"
+
+#: ../configuration/variables.rst:153 ../configuration/variables.rst:309
+msgid "``{assetlink=25}``"
+msgstr "``{assetlink=25}``"
+
+#: ../configuration/variables.rst:154 ../configuration/variables.rst:342
+msgid "Focus Item id#"
+msgstr "Focus Item id#"
+
+#: ../configuration/variables.rst:155 ../configuration/variables.rst:343
+msgid "``{focus=4}``"
+msgstr "``{focus=4}``"
+
+#: ../configuration/variables.rst:156 ../configuration/variables.rst:344
+msgid "Form id#"
+msgstr "Form id#"
+
+#: ../configuration/variables.rst:157 ../configuration/variables.rst:345
+msgid "``{form=83}``"
+msgstr "``{form=83}``"
+
+#: ../configuration/variables.rst:158 ../configuration/variables.rst:358
+msgid "Landing Page link for page id#"
+msgstr "Landing Page link for page id#"
+
+#: ../configuration/variables.rst:159 ../configuration/variables.rst:359
+msgid "``{pagelink=17}``"
+msgstr "``{pagelink=17}``"
+
+#: ../configuration/variables.rst:162
+msgid "Email specific tokens"
+msgstr "Email specific tokens"
+
+#: ../configuration/variables.rst:164
+msgid "See :doc:`Manage Emails</channels/emails>` for more information."
+msgstr "See :doc:`Manage Emails</channels/emails>` for more information."
+
+#: ../configuration/variables.rst:174 ../configuration/variables.rst:387
+msgid "``{signature}``"
+msgstr "``{signature}``"
+
+#: ../configuration/variables.rst:175 ../configuration/variables.rst:394
+msgid "Subject"
+msgstr "Subject"
+
+#: ../configuration/variables.rst:176 ../configuration/variables.rst:395
+msgid "``{subject}``"
+msgstr "``{subject}``"
+
+#: ../configuration/variables.rst:177 ../configuration/variables.rst:271
+msgid "Tracking pixel"
+msgstr "Tracking pixel"
+
+#: ../configuration/variables.rst:178 ../configuration/variables.rst:272
+msgid "``{tracking_pixel}``"
+msgstr "``{tracking_pixel}``"
+
+#: ../configuration/variables.rst:179 ../configuration/variables.rst:408
+msgid "Unsubscribe Text"
+msgstr "Unsubscribe Text"
+
+#: ../configuration/variables.rst:180 ../configuration/variables.rst:409
+msgid "``{unsubscribe_text}``"
+msgstr "``{unsubscribe_text}``"
+
+#: ../configuration/variables.rst:181 ../configuration/variables.rst:416
+msgid "Web View Text"
+msgstr "Web View Text"
+
+#: ../configuration/variables.rst:182 ../configuration/variables.rst:417
+msgid "``{webview_text}``"
+msgstr "``{webview_text}``"
+
+#: ../configuration/variables.rst:183 ../configuration/variables.rst:418
+msgid "Web View URL"
+msgstr "Web View URL"
+
+#: ../configuration/variables.rst:184
+msgid "``{webview_url}``"
+msgstr "``{webview_url}``"
+
+#: ../configuration/variables.rst:187
+msgid "Landing Page tokens"
+msgstr "Landing Page tokens"
+
+#: ../configuration/variables.rst:189
+msgid "See :doc:`/components/landing_pages` for more information."
+msgstr "See :doc:`/components/landing_pages` for more information."
+
+#: ../configuration/variables.rst:198
+msgid "Meta Description"
+msgstr "Meta Description"
+
+#: ../configuration/variables.rst:199 ../configuration/variables.rst:369
+msgid "``{pagemetadescription}``"
+msgstr "``{pagemetadescription}``"
+
+#: ../configuration/variables.rst:201 ../configuration/variables.rst:407
+msgid "``{pagetitle}``"
+msgstr "``{pagetitle}``"
+
+#: ../configuration/variables.rst:202 ../configuration/variables.rst:360
+msgid "Language bar"
+msgstr "Language bar"
+
+#: ../configuration/variables.rst:203 ../configuration/variables.rst:361
+msgid "``{langbar}``"
+msgstr "``{langbar}``"
+
+#: ../configuration/variables.rst:204 ../configuration/variables.rst:400
+msgid "Share Buttons"
+msgstr "Share Buttons"
+
+#: ../configuration/variables.rst:205 ../configuration/variables.rst:401
+msgid "``{sharebuttons}``"
+msgstr "``{sharebuttons}``"
+
+#: ../configuration/variables.rst:206 ../configuration/variables.rst:402
+msgid "Success Message"
+msgstr "Success Message"
+
+#: ../configuration/variables.rst:207 ../configuration/variables.rst:403
+msgid "``{successmessage}``"
+msgstr "``{successmessage}``"
+
+#: ../configuration/variables.rst:210
+msgid "Preference Center Landing Page tokens"
+msgstr "Preference Center Landing Page tokens"
+
+#: ../configuration/variables.rst:212
+msgid ""
+"See :doc:`customizing preference center</contacts/preference_center>` for "
+"more information."
+msgstr ""
+"See :doc:`customizing preference center</contacts/preference_center>` for "
+"more information."
+
+#: ../configuration/variables.rst:221
+msgid "Lead Identifier"
+msgstr "Lead Identifier"
+
+#: ../configuration/variables.rst:222 ../configuration/variables.rst:365
+msgid "``{leadidentifier}``"
+msgstr "``{leadidentifier}``"
+
+#: ../configuration/variables.rst:223
+msgid "Category List"
+msgstr "Category List"
+
+#: ../configuration/variables.rst:224 ../configuration/variables.rst:315
+msgid "``{categorylist}``"
+msgstr "``{categorylist}``"
+
+#: ../configuration/variables.rst:225
+msgid "Segment List"
+msgstr "Segment List"
+
+#: ../configuration/variables.rst:226 ../configuration/variables.rst:385
+msgid "``{segmentlist}``"
+msgstr "``{segmentlist}``"
+
+#: ../configuration/variables.rst:227
+msgid "Preferred Channel"
+msgstr "Preferred Channel"
+
+#: ../configuration/variables.rst:228 ../configuration/variables.rst:399
+msgid "``{preferredchannel}``"
+msgstr "``{preferredchannel}``"
+
+#: ../configuration/variables.rst:229
+msgid "Channel Frequency"
+msgstr "Channel Frequency"
+
+#: ../configuration/variables.rst:230 ../configuration/variables.rst:317
+msgid "``{channelfrequency}``"
+msgstr "``{channelfrequency}``"
+
+#: ../configuration/variables.rst:231
+msgid "Save Preferences"
+msgstr "Save Preferences"
+
+#: ../configuration/variables.rst:232 ../configuration/variables.rst:383
+msgid "``{saveprefsbutton}``"
+msgstr "``{saveprefsbutton}``"
+
+#: ../configuration/variables.rst:235
+msgid "Dynamic Web Content tokens"
+msgstr "Dynamic Web Content tokens"
+
+#: ../configuration/variables.rst:244
+msgid "[Dynamic Content 1] | for example User-defined variable name"
+msgstr "[Dynamic Content 1] | for example User-defined variable name"
+
+#: ../configuration/variables.rst:245 ../configuration/variables.rst:333
+msgid "``{dynamiccontent=\"Dynamic Content 1\"}``"
+msgstr "``{dynamiccontent=\"Dynamic Content 1\"}``"
+
+#: ../configuration/variables.rst:248
+msgid "Contact Monitoring"
+msgstr "Contact Monitoring"
+
+#: ../configuration/variables.rst:250
+msgid "See :ref:`Contact Monitoring<Contact tracking>` for more information."
+msgstr "See :ref:`Contact Monitoring<Contact tracking>` for more information."
+
+#: ../configuration/variables.rst:259
+msgid "Language"
+msgstr "Language"
+
+#: ../configuration/variables.rst:260
+msgid "``{language}``"
+msgstr "``{language}``"
+
+#: ../configuration/variables.rst:262
+msgid "``{title}``"
+msgstr "``{title}``"
+
+#: ../configuration/variables.rst:263
+msgid "Landing Page Title"
+msgstr "Landing Page Title"
+
+#: ../configuration/variables.rst:264
+msgid "``{page_title}``"
+msgstr "``{page_title}``"
+
+#: ../configuration/variables.rst:265
+msgid "URL"
+msgstr "URL"
+
+#: ../configuration/variables.rst:266
+msgid "``{url}``"
+msgstr "``{url}``"
+
+#: ../configuration/variables.rst:267
+msgid "Landing Page URL"
+msgstr "Landing Page URL"
+
+#: ../configuration/variables.rst:268
+msgid "``{page_url}``"
+msgstr "``{page_url}``"
+
+#: ../configuration/variables.rst:269
+msgid "Referrer"
+msgstr "Referrer"
+
+#: ../configuration/variables.rst:270
+msgid "``{referrer}``"
+msgstr "``{referrer}``"
+
+#: ../configuration/variables.rst:273
+msgid "UTM Campaign"
+msgstr "UTM Campaign"
+
+#: ../configuration/variables.rst:274
+msgid "``{utm_campaign}``"
+msgstr "``{utm_campaign}``"
+
+#: ../configuration/variables.rst:275
+msgid "UTM Content"
+msgstr "UTM Content"
+
+#: ../configuration/variables.rst:276
+msgid "``{utm_content}``"
+msgstr "``{utm_content}``"
+
+#: ../configuration/variables.rst:277
+msgid "UTM Medium"
+msgstr "UTM Medium"
+
+#: ../configuration/variables.rst:278
+msgid "``{utm_medium}``"
+msgstr "``{utm_medium}``"
+
+#: ../configuration/variables.rst:279
+msgid "UTM Source"
+msgstr "UTM Source"
+
+#: ../configuration/variables.rst:280
+msgid "``{utm_source}``"
+msgstr "``{utm_source}``"
+
+#: ../configuration/variables.rst:281
+msgid "UTM Term"
+msgstr "UTM Term"
+
+#: ../configuration/variables.rst:282
+msgid "``{utm_term}``"
+msgstr "``{utm_term}``"
+
+#: ../configuration/variables.rst:285
+msgid "Search filters"
+msgstr "Search filters"
+
+#: ../configuration/variables.rst:287
+msgid "See the :ref:`Search<search>` page for more information."
+msgstr "See the :ref:`Search<search>` page for more information."
+
+#: ../configuration/variables.rst:290
+msgid "Alphabetical list"
+msgstr "Alphabetical list"
+
+#: ../configuration/variables.rst:314
+msgid "Category List (Preference Center)"
+msgstr "Category List (Preference Center)"
+
+#: ../configuration/variables.rst:316
+msgid "Channel Frequency (Preference Center)"
+msgstr "Channel Frequency (Preference Center)"
+
+#: ../configuration/variables.rst:332
+msgid "[Dynamic Content 1]for example: user-defined variable name"
+msgstr "[Dynamic Content 1]for example: user-defined variable name"
+
+#: ../configuration/variables.rst:364
+msgid "Contact Identifier (Preference Center)"
+msgstr "Contact Identifier (Preference Center)"
+
+#: ../configuration/variables.rst:368
+msgid "Meta Description (Landing Page)"
+msgstr "Meta Description (Landing Page)"
+
+#: ../configuration/variables.rst:372
+msgid "Name (Company)"
+msgstr "Name (Company)"
+
+#: ../configuration/variables.rst:382
+msgid "Save Preferences (Preference Center)"
+msgstr "Save Preferences (Preference Center)"
+
+#: ../configuration/variables.rst:384
+msgid "Segment List (Preference Center)"
+msgstr "Segment List (Preference Center)"
+
+#: ../configuration/variables.rst:398
+msgid "Preferred Channel (Preference Center)"
+msgstr "Preferred Channel (Preference Center)"
+
+#: ../configuration/variables.rst:406
+msgid "Title (Landing Page)"
+msgstr "Title (Landing Page)"
+
+#: ../configuration/variables.rst:410
+msgid "Unsubscribe URL"
+msgstr "Unsubscribe URL"
+
+#: ../configuration/variables.rst:411
+msgid "``{unsubscribe_url}``"
+msgstr "``{unsubscribe_url}``"
+
+#: ../configuration/variables.rst:419
+msgid "``{{webview_url}``"
+msgstr "``{{webview_url}``"
