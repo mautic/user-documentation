@@ -6,9 +6,10 @@ Searching Mautic
 .. vale on
 
 Search operators and filters
-============================
+****************************
 
 Mautic offers a variety of search operators and filters for drilling down into relevant resources. You can find the available search filters and operators by clicking on the button with a question mark next to the search input.
+
 The search filters for that entity aren't available if such a button is missing.
 
 .. image:: images/contacts-search.png
@@ -26,7 +27,7 @@ Mautic also has a 'global search' feature. In the top left-hand corner, click th
 |
 
 Search operators
-----------------
+================
 
 Here are some search operators you can use:
 
@@ -43,12 +44,12 @@ Here are some search operators you can use:
 * ``%`` - Use the % as a wildcard to search for specific names or values in a phrase for example, to find all Companies with the word ‘Technologies’ then type %technologies%
   
 Search filters
---------------
+==============
 
 Here are some search filters you can use:
 
 Contacts
-~~~~~~~~
+--------
 
 .. code-block::
     
@@ -71,7 +72,7 @@ Contacts
     email_pending:EMAIL_ID
 
 Companies
-~~~~~~~~~
+---------
 
 .. code-block:: 
 
@@ -83,7 +84,7 @@ Companies
     category:{category alias}
 
 Segments
-~~~~~~~~
+--------
 
 .. code-block:: 
 
@@ -93,7 +94,7 @@ Segments
     category:category-alias
 
 Assets
-~~~~~~
+--------
 
 .. code-block:: 
 
@@ -106,7 +107,7 @@ Assets
     category:{category alias}
 
 Forms
-~~~~~
+-----
 
 .. code-block:: 
    
@@ -122,7 +123,7 @@ Forms
 .. vale off
 
 Landing Pages
-~~~~~~~~~~~~~
+-------------
 
 .. vale on
 
@@ -140,9 +141,9 @@ Landing Pages
 .. vale off
 
 Dynamic Content
-~~~~~~~~~~~~~~~
+---------------
 
-..vale on
+.. vale on
 
 .. code-block:: 
 
@@ -156,7 +157,7 @@ Dynamic Content
     lang:{lang code}
 
 Emails
-~~~~~~
+--------
 
 .. code-block:: 
 
@@ -169,7 +170,7 @@ Emails
     lang:{lang code}
 
 Focus items
-~~~~~~~~~~~
+-----------
 
 .. code-block:: 
 
@@ -181,7 +182,7 @@ Focus items
     category:{category alias}
 
 Manage actions
-~~~~~~~~~~~~~~
+--------------
 
 .. code-block:: 
 
@@ -193,7 +194,7 @@ Manage actions
     category:{category alias}
 
 Manage triggers
-~~~~~~~~~~~~~~~
+---------------
 
 .. code-block:: 
 
@@ -205,7 +206,7 @@ Manage triggers
     category:{category alias}
 
 Stages
-~~~~~~
+------
 
 .. code-block:: 
 
@@ -217,7 +218,7 @@ Stages
     category:{category alias}
 
 Reports
-~~~~~~~
+-------
 
 .. code-block:: 
 
@@ -229,7 +230,7 @@ Reports
     ids:ID1,ID2 (comma separated IDs, no spaces) is:published is:unpublished
 
 Users
-~~~~~
+-----
 
 .. code-block:: 
 
@@ -248,7 +249,8 @@ Users
     name:*
 
 Webhooks
-~~~~~~~~
+--------
+
 
 .. code-block:: 
 
