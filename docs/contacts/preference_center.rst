@@ -1,24 +1,21 @@
-.. vale off
-
 Preference center
 #################
-.. vale on
 
 .. vale off
 
-Manage Contact Preferences
+Manage Contact preferences
 **************************
 
 .. vale on
 
-When managing a Contact you can set the Contacts preference of communication. You can access the Contact's preference center when viewing a Contact's profile. From the dropdown menu click the preference menu. A new modal window should appear with a tab to set the preferred Channels and frequency of Contact, as well as the option to pause communication within a given period of time. 
+When managing a Contact you can set the Contact's preference of communication. You can access the Contact's Preference Center when viewing a Contact's profile. From the dropdown menu click the preference menu. A new modal window should appear with a tab to set the preferred Channels and frequency of Contact, as well as the option to pause communication within a given period of time. 
 The second tab gives the option to add or remove the Contact from global Categories used in Emails or Categories. 
-The third tab allowS to add or remove the Contact from Segments it belongs to.
+The third tab allows you to add or remove the Contact from Segments they belong to.
 
 .. vale off
 
 Preferred Channels and frequency
-********************************
+===============================
 
 .. vale on
 
@@ -30,14 +27,14 @@ Preferred Channels and frequency
 
 In this window you can switch Channels of communication, set the frequency of the communication via each Channel enabled, and set one of the Channels as a preferred Channel.
 
-To set a Channel as a don't contact me through this Channel, un-tick the tick-box next to the Channel name in the first column.
+To prevent communications through a Channel, remove the check mark next to the Channel name in the first column. This sets a Do Not Contact (DNC entry) for only that channel.
 
-When a Channel is selected, these will be used to send marketing messages if there is a message set for any of the Channels selected. You can also set the frequency of the communication, as in this example the frequency is set to "Send me emails twice a day" but pause them during the "``1st`` of November 2022 to the ``30th`` of November 2022" . Email is also set as the preferred Channel, so if the same message is set for both email and ``sms``, it will only send the Email version of the message to the selected Contact.
+When a Channel is selected, these will be used to send Marketing Messages if there is a message set for any of the Channels selected. You can also set the frequency of the communication, as in this example the frequency is set to "Send me emails twice a day" but pause them during the "``1st`` of November 2022 to the ``30th`` of November 2022" . Email is also set as the preferred Channel, so if the same message is set for both Email and ``sms``, it only sends the Email version of the message to the selected Contact
 
 .. vale off
 
 Contact Categories
-******************
+==================
 
 .. vale on
 
@@ -47,12 +44,12 @@ Contact Categories
 
 |
 
-Use the Categories tab to add or remove a Contact from a global Category. Global Categories can be used in areas like Emails, text messages, Campaigns. In combination with the new Subscribed Categories Segment filter, Contacts can be given the choice to opt out of categorized communications.
+Use the Categories tab to add or remove a Contact from a global Category. Global Categories can be used in areas like Emails, Text Messages and, Campaigns. In combination with the new Subscribed Categories Segment filter, Contacts can be given the choice to opt out of categorized communications.
 
 .. vale off
 
 Contact Segments
-****************
+================
 
 .. vale on
 
@@ -62,12 +59,12 @@ Contact Segments
 
 |
 
-Use the Segments tab to add or remove a Contact from a Segment. Segments are used as a source for Campaigns and Emails. Any Contact in a particular Segment will be part of a Campaign that has that Segment as the source. You can also use a standalone Email manually to a Segment. If a User has opted out of a Segment it will no longer receive Campaign actions or messages sent to that Segment.
+Use the Segments tab to add or remove a Contact from a Segment. Segments are used as a source for Campaigns and Emails. Any Contact in a particular Segment will be part of a Campaign that has that Segment as the source. You can also use a standalone Email to manually send an Email to a Segment. If a User has opted out of a Segment they will no longer receive Campaign actions or messages sent to that Segment.
 
 .. vale off
 
-Contact's Unsubscribe Email Preferences
-***************************************
+Contact's unsubscribe Email preferences
+=======================================
 
 .. vale on
 
@@ -86,14 +83,14 @@ The Contact's preferences can be presented to the User in the unsubscribe page b
 |
 
 Customize preference center
-===========================
+***************************
 
 It's possible to customize the personal Preference Center/unsubscribe page, edit text labels, format, and apply Themes using the landing page builder.
 
 .. vale off 
 
 Creating a Preference Center Landing Page
-*****************************************
+=========================================
 
 .. vale on
 
@@ -143,7 +140,7 @@ Landing Pages
 
 .. vale on
 
-Now in the landing pages list, the icon with the little cog indicates that the page is a Preference Center one.
+Now in the landing pages list, the icon with the cog icon indicates that the page is a Preference Center.
 
 .. image:: images/pref7.png
     :align: center
