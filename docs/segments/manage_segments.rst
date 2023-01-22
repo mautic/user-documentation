@@ -352,11 +352,11 @@ Once you’ve selected a date field as your filter, such as the default **Date l
 
 * **Starts with** - Segment includes Contacts whose field values begin with the specified numbers. These filter values should generally reference years (or years and months).
 
-  *For example, A value of 19 matches any Contacts whose field value has a year in the 1900s. A value of 200 matches Contacts with a year value between 2000 and 2009 and a value of 2020-11 matches Contacts with a field value in November 2020.*
+  *For example, A value of 19 matches any Contacts whose field value has a year in the 1900^s. A value of 200 matches Contacts with a year value between 2000 and 2009 and a value of 2020-11 matches Contacts with a field value in November 2020.*
 
 * **Ends with** - Segment includes Contacts whose field values end with the specified numbers. These filter values should generally reference days (or months and days).
 
-  *For example, A value of 1 matches anyone whose field value is on the 1st, 21st, or 31st of any month but a value of 01 matches the 1st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.*
+  *For example, A value of 1 matches anyone whose field value is on the 1^st, 21^st, or 31^st of any month but a value of 01 matches the 1 st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.*
 
 * **Contains** - Segment includes Contacts with the specified filter value anywhere in the field value. 
 
