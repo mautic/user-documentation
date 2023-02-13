@@ -5,11 +5,11 @@ Managing Segments
 
 .. vale on
 
-Segments in Mautic are lists or groups of Contacts. Use Segments to send Emails, trigger Campaigns, or for analysis. You can add and remove Contacts from a Segment into *static* and *dynamic* Segment types.
+Segments in Mautic are lists or groups of Contacts. Use Segments to send Emails, trigger Campaigns, or for analysis. You can add and remove Contacts into *static* and *dynamic* Segment types.
 
 Segments provide ways to easily organize your Contacts. There are a variety of fields available for configuring these Segments.
 
-When viewing all Segments, the **#contacts** column on the right shows the number of Contacts included in that particular Segment.
+When viewing all Segments, the **# contacts** column on the right shows the number of Contacts included in that particular Segment.
 
 .. image:: images/contact-segment.png
   :width: 700
@@ -17,7 +17,7 @@ When viewing all Segments, the **#contacts** column on the right shows the numbe
 
 .. note:: 
 
-  Lead lists were renamed to Segments in Mautic :xref:`1.4.0 release`
+Mautic renamed lead lists to Segments in Mautic :xref:`1.4.0 release`.
 
 .. vale off
 
@@ -26,7 +26,7 @@ Creating a Segment
 
 .. vale on
 
-1. To create a new Segment navigate to Segments in the menu, and click the **+New** button.
+1. To create a new Segment, navigate to Segments in the menu, and click the **+New** button.
    
 2. In the **Details** tab, add a **Name**, **Public name** and **Description** to your Segment.
 
@@ -38,7 +38,7 @@ Creating a Segment
 
 * **Available in Preference Center** - If set to **Yes**, Contacts can see and opt into or out of the Segment on a **Preference Center** page. The Segments display if the Preference Center has the **Segment List** slot type.
 
-* **Published** - If set to **No**, the Segment won’t be available for use in filters for other Segments, as a Contact source in Campaigns, modify Segment actions, etc. You’ll still see the Segment in your **Segment list**, but it essentially won’t exist anywhere else in Mautic.
+* **Published** - If set to **No**, the Segment won't be available for use in filters for other Segments, as a Contact source in Campaigns, modify Segment actions, etc. You'll still see the Segment in your **Segment list**, but it essentially won't exist anywhere else in Mautic.
 
 On the Details tab, static, and dynamic Segments also have the option to display a different public name for a Segment.
 
@@ -53,7 +53,7 @@ Viewing and exporting Contacts in a Segment
 
 .. vale on
 
-When viewing all Segments the **#contacts** column on the right shows the number of Contacts included in that particular Segment.
+When viewing all Segments the **# contacts** column on the right shows the number of Contacts included in that particular Segment.
 
 .. image:: images/contact-segment.png
   :width: 700
@@ -478,7 +478,7 @@ This is a performance precaution since deleting more Contacts at one time could 
 
 Deleting thousands of Contacts this way in one Segment becomes a tedious task. Luckily, there is a trick how to let the background workers do the job for you.
 
-1. Create a simple Campaign which has the Segment as the source
+1. Create a Campaign which has the Segment as the source
 
 2. Use the :ref:`Delete contact action<using the campaign builder>`.
 
@@ -488,7 +488,7 @@ It's necessary to configure the :ref:`cron jobs<segment cron jobs>`.
 
 .. danger:: 
 
- Deleted Contacts can't be recovered.
+  You can't recover deleted Contacts unless you restore your entire Mautic database backup. **Use with extreme caution**.
 
 .. image:: images/mautic-delete-contacts-in-segment-88b77f09.png
     :alt: Screenshot showing deleting used Segment.
@@ -500,10 +500,12 @@ Deleting or unpublishing a Segment
 
 .. vale on
 
-Since :xref:`Mautic 4` there is a check when deleting or unpublishing a Segment to ensure that it's not required as a filter by an existing Segment.
+Since :xref:`Mautic 4` there is a step when deleting or unpublishing a Segment to ensure that it's not required as a filter by an existing Segment.
 
 .. image:: images/deleting-used-segment.png
     :width: 300
     :alt: Screenshot deleting or unpublishing a Segment
 
-If you attempt to delete or unpublish a Segment which is in use by a filter in another Segment, before you delete the Segment, you get an alert message informing you that it needs to be edited.
+If you attempt to delete or unpublish a Segment which is in use by a filter in another Segment, an alert prompts you to edit the other Segment, removing the dependency before you delete the Segment. ```
+
+Vale fix!
