@@ -296,8 +296,8 @@ Segment filters
     
     Segments are rebuilt according to how frequently you fire your :ref:`cron jobs<segment cron jobs>`.
 
-    * If a Segment fails to rebuild for a predetermined length of time, Mautic displays a notification alerting you of an error. For information on defining this time period, see Segment settings 
-    * The include/exclude operators with pipe-separated values are supported in the Text field types in Segment filters. The values can also be pasted from the spreadsheet.
+    * If a Segment fails to rebuild for a predetermined length of time, Mautic displays a notification alerting you of an error. For information on defining this time period, see :ref:`Segment settings<segment settings>`
+    * The include/exclude operators with pipe-separated (``|``) values are supported in the Text field types in Segment filters. The values can also be pasted from a spreadsheet.
 
 .. vale off
 
@@ -506,6 +506,4 @@ Since :xref:`Mautic 4` there is a step when deleting or unpublishing a Segment t
     :width: 300
     :alt: Screenshot deleting or unpublishing a Segment
 
-If you attempt to delete or unpublish a Segment which is in use by a filter in another Segment, an alert prompts you to edit the other Segment, removing the dependency before you delete the Segment. ```
-
-Vale fix!
+If you attempt to delete or unpublish a Segment which is in use by a filter in another Segment, an alert prompts you to edit the other Segment, removing the dependency before you delete the Segment.
