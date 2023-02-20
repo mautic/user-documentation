@@ -12,16 +12,21 @@ With Mautic 2.3.0, Code Mode replaced the full-page Froala (WYSIWYG) editor that
 Select the Code mode
 ********************
 
-After creating or editing the page/email, you can select the Code Mode from the Theme selector. To open the Code Mode Builder, click the Builder button after selecting the Code Mode Theme option.
+After creating or editing the Landing Page/Email, you can select code mode from the Theme selector. To open the code mode Builder, click the advanced tab which appears.
+
+.. image:: images/code-builder.png
+    :width: 600
+    :alt: Screenshot of code mode builder 
 
 Limitations
 ===========
 
-If you use a Mautic Theme to create the page/email and you want to edit the HTML code of it in the Code Mode Builder, you can do so, but you can't switch back to the Theme again. Code Mode Builder requires editing of all content. Selecting a Theme refreshes the content to the default Theme HTML, so you'll lose your modifications.
+If you use a Mautic Theme to create the Landing Page/Email and you want to edit the HTML code of it in the code mode Builder, you can do so, but you can't switch back to the Theme again. The code mode Builder requires editing of all content. Selecting a Theme replaces the content to the default Theme HTML, so you'll lose your modifications.  Instead, to make small code changes to the page once a theme is selected, it is recommended to use the code mode built into the GrapesJS builder.
 
 .. image:: images/theme-list.png
     :width: 600
     :alt: Screenshot of code mode
+
 .. vale off
 
 Edit the HTML content in the code mode Builder
@@ -29,24 +34,13 @@ Edit the HTML content in the code mode Builder
 
 .. vale on
 
-In the Code Mode Builder, you can see the preview on the left and the HTML code editor on the right. As soon as a change is made to the code, the preview automatically updates every 10 seconds.
+In code mode, you can see the HTML content in the text area. There is no preview at this time.
 
 Mautic tokens
 =============
 
-You can use the tokens in the Code Mode Builder when you type them directly. For example when you type ``{contactfield=firstname}`` or you can select them from the dropdown. The dropdown opens when you press ``CTRL`` + ``SPACE BAR``. You can type to search for the token you wish to insert.
+You can use the tokens in the code mode Builder by typing them directly into your code. For example when you type ``{contactfield=firstname}``.
 
-.. image:: images/code-mode-builder.png
-    :width: 600
-    :alt: Screenshot of Code mode builder
+.. tip:: 
 
-Media manager
-=============
-
-There is a button at the top of code area where you can open the Media Manager to upload and/or select an image or other file. When you select a file, the URL of that file appears at the cursor position. Use this to create links and ``IMG`` tags.
-
-Code formatter
-==============
-
-It might happen that your older Emails or Landing Pages appear as HTML code on one line or if you insert an HTML code with odd formatting, use the Format Code button. It automatically goes through the code and Format it so it's easier to navigate in it.
-
+    Don't zip these files within a folder 
