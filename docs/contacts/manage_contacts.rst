@@ -571,12 +571,16 @@ Available Plugins
 
 Mautic makes this even easier by providing key Integrations to many existing Content Management Systems. You can download and use any of the following Plugins to automatically add that tracking pixel to your website.
 
-* ``Joomla``!
+.. vale off
+
+* Joomla! 
 * Drupal
 * WordPress
 * TYPO3
 * Concrete5
 * Grav
+
+.. vale on
 
 These are just a few of the Integrations already created by the Mautic community. More will be added in the future and developers are encouraged to submit their own Integrations.
 

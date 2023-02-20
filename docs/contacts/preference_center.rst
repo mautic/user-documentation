@@ -15,7 +15,7 @@ The third tab allows you to add or remove the Contact from Segments they belong 
 .. vale off
 
 Preferred Channels and frequency
-===============================
+================================
 
 .. vale on
 
