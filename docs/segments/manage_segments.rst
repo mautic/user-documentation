@@ -15,9 +15,8 @@ When viewing all Segments, the **# contacts** column on the right shows the numb
   :width: 700
   :alt: Screenshot showing Contacts matching that particular Segment.
 
-.. note:: 
-
-Mautic renamed lead lists to Segments in Mautic :xref:`1.4.0 release`.
+.. note::
+  Mautic renamed lead lists to Segments in Mautic :xref:`1.4.0 release`.
 
 .. vale off
 
@@ -68,7 +67,7 @@ Static Segments
 
 .. vale on
 
-Static Segments aren’t filter-based. Adding Contacts to a Segment in done in one of the following ways:
+Static Segments aren't filter-based. Adding Contacts to a Segment in done in one of the following ways:
 
 .. vale off
 
@@ -126,7 +125,7 @@ Adding individual Contacts
 
 4. Click **Segments**.
 
-5. Choose the Segments you’d like to add the Contacts to or remove Contacts from.
+5. Choose the Segments you'd like to add the Contacts to or remove Contacts from.
 
 6. Click **Save**.
 
@@ -141,7 +140,7 @@ Campaign action
 
 .. vale on
 
-Inside a :ref:`Campaign<campaigns overview>`, you can add or remove Contacts from Segments using the **Modify Contact’s Segment** action. To add Contacts to a Segment, you must have already created the Segment and set it to **Public Segment = Yes**.
+Inside a :ref:`Campaign<campaigns overview>`, you can add or remove Contacts from Segments using the **Modify Contact's Segment** action. To add Contacts to a Segment, you must have already created the Segment and set it to **Public Segment = Yes**.
 
 1. In the Campaign builder, click the bottom connector.
 
@@ -150,7 +149,7 @@ Inside a :ref:`Campaign<campaigns overview>`, you can add or remove Contacts fro
 
 2. Select **Action**.
    
-3. In the list of actions, select **Modify Contact’s Segments**.
+3. In the list of actions, select **Modify Contact's Segments**.
 
 4. Choose from the list of existing Segments you want to add or remove your Contact from.
 
@@ -166,18 +165,18 @@ Form submit action
 
 .. vale on
 
-**Modify Contact’s Segment** is available as a submit action on :ref:`Standalone Forms<creating a new form>`. With a Campaign Form, create a Campaign with a **Modify Contact’s Segment** action.
+**Modify Contact's Segment** is available as a submit action on :ref:`Standalone Forms<creating a new form>`. With a Campaign Form, create a Campaign with a **Modify Contact's Segment** action.
 
 1. Click **Actions**.
 
-2. From the **Add new submit action** menu, select **Modify Contact’s Segments.**
+2. From the **Add new submit action** menu, select **Modify Contact's Segments.**
 
 .. image:: images/form-submit-action.png
     :alt: Screenshot showing Form submit action.
 
-3. Add a Title for the submit action and add a **Description** (optional).
+3. Add a Title for the submit action and add a **Description** - optional.
 
-4. Select the Segments you’d like to add the Contact to or remove the Contact from.
+4. Select the Segments you'd like to add the Contact to or remove the Contact from.
 
 5. Click **Add**.
 
@@ -201,25 +200,25 @@ Once a Contact has accrued an assigned number of Points, the system can add them
 
 4. Enter the **Minimum number of Points** for adding a Contact to your Segment.
 
-5. Decide if you’d like to add all Contacts with at least that number of Points to the Segment:
+5. Decide if you'd like to add all Contacts with at least that number of Points to the Segment:
 
 .. tip:: 
      
-    * If you only want to add new Contacts who reach the threshold to this Segment, select **No** (default).
+    * If you only want to add new Contacts who reach the threshold to this Segment, select **No** - default.
     
     * To add all existing Contacts with at least a certain number of Points to the Segment, toggle the switch to **Yes**.
 
-6. Click **Events**.
+1. Click **Events**.
 
-7. Click the menu for **Add an event** and select **Modify Contact’s Segments**.
+2. Click the menu for **Add an event** and select **Modify Contact's Segments**.
 
-8.  Add a **Title** for the event and a **Description** (optional).
+3.  Add a **Title** for the event and a **Description** - optional.
 
-9.  Select the Segments you’d like to add to or remove the Contact from.
+4.  Select the Segments you'd like to add to or remove the Contact from.
 
-10. Click **Add**.
+5.  Click **Add**.
 
-11. Click **Save & Close**.
+6.  Click **Save & Close**.
 
 This accomplishes the same thing as creating a Dynamic Segment with a filter for Points, the operator ``greater than (or equal to)``, and the minimum number of Points. The difference is if you only want to add Contacts to a Segment who reach the point value after creating this trigger to a Segment, you can.
 
@@ -240,7 +239,7 @@ If you have a list outside of Mautic, saved as a UTF-8 encoded CSV file, you can
 
 4. At the top of the next screen, select the Segment you want to add the Contacts to.
 
-5. Map the appropriate fields from the file. Remember to always map the unique identifier, so you don’t create duplicates.
+5. Map the appropriate fields from the file. Remember to always map the unique identifier, so you don't create duplicates.
 
 6. Click **Import**.
 
@@ -271,7 +270,7 @@ Segment filters
 
 3. Click the **Filters** tab to add filters.
 
-4. Click the **Choose one**… menu and search for the field you’d like to Segment by. 
+4. Click the **Choose one**… menu and search for the field you'd like to Segment by. 
 
 .. attention:: 
 
@@ -297,7 +296,7 @@ Segment filters
     Segments are rebuilt according to how frequently you fire your :ref:`cron jobs<segment cron jobs>`.
 
     * If a Segment fails to rebuild for a predetermined length of time, Mautic displays a notification alerting you of an error. For information on defining this time period, see :ref:`Segment settings<segment settings>`
-    * The include/exclude operators with pipe-separated (``|``) values are supported in the Text field types in Segment filters. The values can also be pasted from a spreadsheet.
+    * Mautic supports include/exclude operators with pipe-separated ``|`` values in the Text field types in Segment filters. You can paste the values from a spreadsheet.
 
 .. vale off
 
@@ -310,7 +309,7 @@ You can create dynamic Segments by using date filters.
 
 .. note:: 
   
-  The date format for values stored in the database is ``YYYY-MM-DD``. For example, December 11, 2020 is stored as 2020-12-11 and November 12, 2020 is stored as 2020-11-12. To update the display format for dates, go to **Settings > Configuration > System Settings > System Defaults**. However, this doesn’t alter the format in which dates are stored in the database.
+  The date format for values stored in the database is ``YYYY-MM-DD``. For example, December 11, 2020 is stored as 2020-12-11 and November 12, 2020 is stored as 2020-11-12. To update the display format for dates, go to **Settings > Configuration > System Settings > System Defaults**. However, this doesn't alter the storage format in the database.
 
 .. vale off
 
@@ -324,11 +323,11 @@ Operators
 
 You must ensure that you use the correct operator and time frame to build an effective Segment.
 
-Once you’ve selected a date field as your filter, such as the default **Date last active** field or a custom **Birthday** field, you’ll have a list of operators to choose from:
+Once you've selected a date field as your filter, such as the default **Date last active** field or a custom **Birthday** field, you'll have a list of operators to choose from:
 
 * **Equals** - The value on the Contact record exactly matches the filter value.
 
-* **Not Equal** - The value on the Contact record is any value that doesn’t match the filter value.
+* **Not Equal** - The value on the Contact record is any value that doesn't match the filter value.
 
 * **Greater than** - The value on the Contact record is at a later date in time than X date. For example, ``Greater than`` today means anytime from tomorrow until the end of time.
 
@@ -342,19 +341,19 @@ Once you’ve selected a date field as your filter, such as the default **Date l
 
 * **Not empty** - A value exists in the field on the Contact record.
 
-* **Like** - This operator isn't supported in date or date-time fields, and shouldn’t be used.
+* **Like** - This operator isn't supported in date or date-time fields, don't use it.
 
-* **Not like** - This operator isn't supported in date or date-time fields, and shouldn’t be used.
+* **Not like** - This operator isn't supported in date or date-time fields, don't use it.
 
-* **Regexp** - Segment includes Contacts with values that match the specified regular expression pattern. If you aren't proficient with regular expression, don’t use this operator.
+* **Regexp** - Segment includes Contacts with values that match the specified regular expression pattern. If you aren't proficient with regular expression, don't use this operator.
 
-* **Not regexp** - Segment includes Contacts with values that don’t match the specified regular expression pattern. If you aren't proficient with regular expressions, don’t use this operator.
+* **Not regexp** - Segment includes Contacts with values that don't match the specified regular expression pattern. If you aren't proficient with regular expressions, don't use this operator.
 
-* **Starts with** - Segment includes Contacts whose field values begin with the specified numbers. These filter values should generally reference years (or years and months).
+* **Starts with** - Segment includes Contacts whose field values begin with the specified numbers. These filter values should generally reference years, or years and months.
 
   *For example, A value of 19 matches any Contacts whose field value has a year in the 1900^s. A value of 200 matches Contacts with a year value between 2000 and 2009 and a value of 2020-11 matches Contacts with a field value in November 2020.*
 
-* **Ends with** - Segment includes Contacts whose field values end with the specified numbers. These filter values should generally reference days (or months and days).
+* **Ends with** - Segment includes Contacts whose field values end with the specified numbers. These filter values should generally reference days, or months and days.
 
   *For example, A value of 1 matches anyone whose field value is on the 1^st, 21^st, or 31^st of any month but a value of 01 matches the 1 st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.*
 
@@ -385,19 +384,21 @@ First three filters match strings as you enter it. ``like`` filter is for advanc
 
 A few notes for text filters:
 
-* ``starts with``, ``ends with``, ``contains`` filters should be used rather than ``like`` as they're more specific, and therefore can be more effective.
+* You should use ``starts with``, ``ends with``, ``contains`` rather than ``like`` as they're more specific, and therefore can be more effective.
   
-*  A ``%`` character in the middle of the string has no special meaning. A ``contains`` filter with ``my % string`` will search for a string with ``%`` in the middle. The same is TRUE for a ``like`` filter with ``%my % string%`` value. There is no need to escape this character.
+*  A ``%`` character in the middle of the string has no special meaning. A ``contains`` filter with ``my % string`` searches for a string with ``%`` in the middle. The same is TRUE for a ``like`` filter with ``%my % string%`` value. There is no need to escape this character.
 
-* Mautic searches for the ``%`` character in a value for the ``like`` filter and no modification is performed if at least one ``%`` is found.
+* Mautic searches for the ``%`` character in a value for the ``like`` filter, if finding at least one ``%`` Mautic doesn't perform any modification.
 
-You can use regular expressions in a ``regexp`` filter. Mautic recognises all common operators like ``|`` for OR (``first string|second string``), character sets (``[0-9]``, ``[a-z0-9]`` etc.), repetitions (``+``, ``*``, ``?``) and more. 
+You can use regular expressions in a ``regexp`` filter. Mautic recognises all common operators like ``|`` for OR  - for example ``first string|second string``, character sets including ``[0-9]``, ``[a-z0-9]`` and so forth, repetitions (``+``, ``*``, ``?``) and more. 
+
 You have to escape special characters with ``\`` if you want to use them as matching character. 
+
 Learn more about :xref:`Regex`. 
 
 .. note:: 
 
-  MySQL (and Mautic) uses POSIX regex, which could behave differently from other types of Regex.
+  MySQL (and Mautic) uses POSIX regular expressions, which could behave differently from other types of regular expressions.
 
 .. vale off
 
@@ -411,15 +412,15 @@ Date filters allow you to choose a date via DatePicker:
 .. image:: images/date-filters.png
     :alt: Screenshot showing DatePicker.
 
-However, you can specify much more here. Mautic recognizes relative formats too (these string aren't translatable):
+However, you can specify much more here. Mautic recognizes relative formats too - these string aren't translatable:
 
-* ``+1 day`` (you can also use ``1 day``)
-* ``-2 days`` (you can also use ``2 days ago``)
+* ``+1 day`` - you can also use ``1 day``
+* ``-2 days`` - you can also use ``2 days ago``
 * ``+1 week`` / ``-2 weeks`` / ``3 weeks ago``
 * ``+5 months`` / ``-6 months`` / ``7 months ago``
 * ``+1 year`` / ``-2 years`` / ``3 years ago``
 
-Example (Consider that today is ``2022-03-05``):
+Example - Consider that today is ``2022-03-05``:
 
 * ``Date identified equals -1 week`` returns all Contacts identified on 2022-02-26.
 * ``Date identified less than -1 week`` returns all Contacts identified before 2022-02-26.
@@ -438,19 +439,19 @@ Beside this you can specify your date with text. These formulas are **translatab
 
 Example (Consider that today is ``2022-03-05``):
 
-* ``Date identified equals last week`` returns all Contacts identified between 2022-03-01 and 2022-03-07 (Monday - Sunday).
+* ``Date identified equals last week`` returns all Contacts identified in the specified date range, for example 2022-03-01 - 2022-03-07.
 * ``Date identified less than last week`` returns all Contacts identified before 2022-02-22.
-* ``Date identified equals last month`` returns all Contacts identified between 2022-02-01 and 2022-02-28.
+* ``Date identified equals last month`` returns all Contacts identified in the specified date range, for example 2022-02-01 - 2022-02-28.
 * ``Date identified greater or equal last year`` returns all Contacts identified 2021-01-01 and after.
 * ``Date identified greater than last year`` returns all Contacts identified after 2021-12-31.
 * ``Custom Contact date field equal birthday -1 day`` returns all Contacts identified every year on 03-04 (4th march).
 * ``Custom Contact date field equal anniversary -1 month`` returns all Contacts identified every year on 02-04 (4th february)
 
-Once you have created your Segment, any applicable Contact will be automatically added through the execution of a :ref:`cron job<import contacts cron job>`. This is the essence of Segments.
+Once you have created your Segment, any applicable Contact is automatically added through the execution of a :ref:`cron job<import contacts cron job>`. This is the essence of Segments.
 
 To keep the Segments current, create a cron job that executes the :ref:`command<segment cron jobs>` at the desired interval.
 
-Through the execution of that command, Mautic adds Contacts that match the filters and removes Contacts that no longer match. Any Contacts that were manually added will remain part of the list regardless of filters.
+Through the execution of that command, Mautic adds Contacts that match the filters and removes Contacts that no longer match. Any Contacts that were manually added remain part of the list regardless of filters.
 
 .. vale off
 
