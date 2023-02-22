@@ -27,9 +27,9 @@ Preferred Channels and frequency
 
 In this window you can switch Channels of communication, set the frequency of the communication via each Channel enabled, and set one of the Channels as a preferred Channel.
 
-To prevent communications through a Channel, remove the check mark next to the Channel name in the first column. This sets a Do Not Contact (DNC entry) for only that channel.
+To prevent communications through a Channel, remove the select next to the Channel name in the first column. This sets a Do Not Contact (DNC entry) for only that Channel.
 
-When a Channel is selected, these will be used to send Marketing Messages if there is a message set for any of the Channels selected. You can also set the frequency of the communication, as in this example the frequency is set to "Send me emails twice a day" but pause them during the "``1st`` of November 2022 to the ``30th`` of November 2022" . Email is also set as the preferred Channel, so if the same message is set for both Email and ``sms``, it only sends the Email version of the message to the selected Contact
+When selecting a Channel, Mautic uses this to send Marketing Messages if there is a message set for any of the Channels selected. You can also set the frequency of the communication, as in this example the set frequency is "Send Emails twice a day" but to pause them between November 1 2022 and November 30 2022. Email is also set as the preferred Channel, so if the Marketing Message has the same message for both Email and SMS, it only sends the Email version of the message to the selected Contact
 
 .. vale off
 
@@ -44,7 +44,7 @@ Contact Categories
 
 |
 
-Use the Categories tab to add or remove a Contact from a global Category. Global Categories can be used in areas like Emails, Text Messages and, Campaigns. In combination with the new Subscribed Categories Segment filter, Contacts can be given the choice to opt out of categorized communications.
+Use the Categories tab to add or remove a Contact from a global Category. Mautic uses Global Categories in areas like Emails, Text Messages and, Campaigns. In combination with the Subscribed Categories Segment filter, Contacts can opt out of categorized communications.
 
 .. vale off
 
@@ -59,7 +59,7 @@ Contact Segments
 
 |
 
-Use the Segments tab to add or remove a Contact from a Segment. Segments are used as a source for Campaigns and Emails. Any Contact in a particular Segment will be part of a Campaign that has that Segment as the source. You can also use a standalone Email to manually send an Email to a Segment. If a User has opted out of a Segment they will no longer receive Campaign actions or messages sent to that Segment.
+Use the Segments tab to add or remove a Contact from a Segment. Segments are a source for both starting Campaigns and sending Emails. Any Contact in a particular Segment is automatically part of a Campaign that has that Segment as the source. You can also use a standalone Email to manually send an Email to a Segment. If a User has opted out of a Segment they no longer receive Campaign actions or messages sent to that Segment.
 
 .. vale off
 
@@ -74,7 +74,7 @@ Contact's unsubscribe Email preferences
 
 |
 
-The Contact's preferences can be presented to the User in the unsubscribe page by selecting "Show Contact preference settings" in the Email configuration. You may also choose to hide or show different Segments of the User preferences. If any of these areas is set to no, it hides it from the contact's personal preferences page. The default unsubscribe message is shown if the preference setting option is set to no.
+You can display the Contact's preferences in the unsubscribe page by selecting "Show Contact preference settings" in the Email configuration. You may also choose to hide or show different Segments of the User preferences. If you have turned off any of these options in the global settings, they don't show on the Contact's personal preferences page. Mautic displays the default unsubscribe message when you have turned off the preference setting option, resulting in the Contact being directly unsubscribed rather than being able to choose their preferences.
 
 .. image:: images/unsubscribe.png
     :align: center
@@ -85,7 +85,7 @@ The Contact's preferences can be presented to the User in the unsubscribe page b
 Customize preference center
 ***************************
 
-It's possible to customize the personal Preference Center/unsubscribe page, edit text labels, format, and apply Themes using the landing page builder.
+It's possible to customize the personal Preference Center/unsubscribe page, edit text labels, format, and apply Themes using the Landing Page builder.
 
 .. vale off 
 
@@ -94,44 +94,32 @@ Creating a Preference Center Landing Page
 
 .. vale on
 
-When creating/editing a landing page, there is a toggle switch labeled Is *Preference Center*. If selected, the page will be marked as a preference center landing page.
+When creating/editing a Landing Page, there is a toggle switch labeled *Is Preference Center*. If selected, Mautic marks the Page as a preference center Landing Page, making available the appropriate tokens.
 
-When this page is configured as a preference center in a Mautic Email, recipients will be shown the page when clicking on the ``{unsubscribe_url}`` link. It also shows or hides the Preference Center slots in the builder.
+When configured as a preference center in a Mautic Email, Mautic automatically directs recipients to this Preference Center when clicking on the ``{unsubscribe_url}`` link. It also shows or hides the Preference Center slots in the Builder.
 
 .. image:: images/pref1.png
     :align: center
-    :alt: Screenshot of Preference
-
-|
-
-Builder slots
-*************
-
-These slots in the builder are used to customize the page:
-
-.. image:: images/pref2.png
-    :align: center
-    :alt: Screenshot of Preference
+    :alt: Screenshot of Preference Center switch on a Landing Page
 
 |
 
 Preference tokens
 ******************
 
-Optionally, you can use :doc:`tokens</configuration/variables>` to insert the different slots. Keep in mind that if you use :doc:`tokens</configuration/variables>`, you lose the ability to customize the labels and styles of the slots because it uses the default ones.
-
+You can use :ref:`Preference Center Landing Page tokens` to insert the different slots. These are available as tokens in the editor in the GrapesJS Builder.
 
 .. image:: images/pref3.png
     :align: center
-    :alt: Screenshot of Preference
+    :alt: Screenshot of Preference Center tokens in editor
 
 |
 
-See the :doc:`VARIABLES</configuration/variables>` page for a full list of tokens.
+See the :doc:`Variables</configuration/variables>` documentation for a full list of tokens available for use with a Preference Center.
 
-In addition, add a **Save preferences** button if you wish to save the preferences, otherwise the preferences can't be saved:
+In addition, add a **Save preferences** button if you wish to save the preferences, otherwise the Contact can't save their preferences:
 
-Save the page and the Preference Center landing page is ready.
+Save your changes, and the Preference Center Landing Page is ready.
 
 .. vale off 
 
@@ -140,19 +128,19 @@ Landing Pages
 
 .. vale on
 
-Now in the landing pages list, the icon with the cog icon indicates that the page is a Preference Center.
+Now in the Landing Pages list, the icon with the cog icon indicates that the Page is a Preference Center.
 
 .. image:: images/pref7.png
     :align: center
-    :alt: Screenshot of Preference
+    :alt: Screenshot of Preference Center showing icon to denote a Preference Center
 
 |
 
-When viewing a Preference Center page, there is a header indicating its purpose and the page URL isn't available, only the preview URL.
+When viewing a Preference Center Page, there is a header indicating its purpose and the Page URL isn't available, only the preview URL.
 
 .. image:: images/pref8.png
     :align: center
-    :alt: Screenshot of Preference
+    :alt: Screenshot of Preference Center with the preview URL only
 
 |
 
@@ -163,25 +151,25 @@ Setting Preference Center Pages in Emails
 
 .. vale on
 
-When creating or editing an Email, you can select the Preference Center page from the list as shown:
+When creating or editing an Email, you can select the Preference Center Page from the list as shown:
 
 .. image:: images/pref5.png
     :align: center
-    :alt: Screenshot of Preference
+    :alt: Screenshot of Preference Center select box when creating an Email
 
 |
 
-Keep in mind that your mail must use the same language as the Preference Center landing page - if not, default Preference Center will be shown.
+Keep in mind that your mail must use the same language as the Preference Center landing page - if not, Mautic shows the default Preference Center.
 
-Now when the email is sent, all recipients will be able to click the :doc:`Unsubscribe link</configuration/variables>` ``{unsubscribe_text}`` and ``{unsubscribe_url}`` and the new Preference Center page will be displayed.
+Now when sending the Email, all recipients can click the Unsubscribe link provided in the ``{unsubscribe_text}`` and ``{unsubscribe_url}`` variables, taking them to the new Preference Center.
 
 .. image:: images/pref6.png
     :align: center
-    :alt: Screenshot of Preference
+    :alt: Screenshot of Preference Center as a Contact
 
 |
 
-If no Preference Center page is selected in an Email, the default page is displayed.
+If you don't select a Preference Center in an Email, Mautic uses the default Preference Center styled with the default Theme.
 
 .. image:: images/unsubscribe.png
     :align: center
