@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the Mautic Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Gustavo Kennedy Renkel <gustavo@overall.cloud>, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Mautic Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-29 17:47+0100\n"
-"PO-Revision-Date: 2022-09-29 17:18+0000\n"
+"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"PO-Revision-Date: 2022-11-14 11:42+0000\n"
+"Last-Translator: Gustavo Kennedy Renkel <gustavo@overall.cloud>, 2023\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/mautic/teams/33223/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,99 +21,163 @@ msgstr ""
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../index.rst:13
-msgid "Mautic Documentation"
-msgstr ""
+#: ../index.rst:24
+msgid "Welcome to Mautic"
+msgstr "Bem-vindo(a) ao Mautic"
 
-#: ../../index.rst:22
-msgid "Getting Started"
-msgstr ""
+#: ../index.rst:31
+msgid "Getting Started with Mautic"
+msgstr "Introdução ao Mautic"
 
-#: ../../index.rst:31
-msgid "Set Up"
-msgstr ""
-
-#: ../../index.rst:42
+#: ../index.rst:40
 msgid "Configuration"
-msgstr ""
+msgstr "Configuração"
 
-#: ../../index.rst:49
-msgid "Troubleshooting"
-msgstr ""
-
-#: ../../index.rst:56
+#: ../index.rst:51
 msgid "Authentication"
-msgstr ""
+msgstr "Autenticação"
 
-#: ../../index.rst:63
-msgid "Campaigns"
-msgstr ""
-
-#: ../../index.rst:74
-msgid "Categories"
-msgstr ""
-
-#: ../../index.rst:81
-msgid "Channels"
-msgstr ""
-
-#: ../../index.rst:95
-msgid "Companies"
-msgstr ""
-
-#: ../../index.rst:102
-msgid "Components"
-msgstr ""
-
-#: ../../index.rst:112
+#: ../index.rst:58
 msgid "Contacts"
-msgstr ""
+msgstr "Contatos"
 
-#: ../../index.rst:120
+#: ../index.rst:69
+msgid "Segments"
+msgstr "Segmentos"
+
+#: ../index.rst:76
+msgid "Campaigns"
+msgstr "Campanhas"
+
+#: ../index.rst:87
+msgid "Categories"
+msgstr "Categorias"
+
+#: ../index.rst:94
+msgid "Channels"
+msgstr "Canais"
+
+#: ../index.rst:108
+msgid "Companies"
+msgstr "Empresas"
+
+#: ../index.rst:115
+msgid "Components"
+msgstr "Componentes"
+
+#: ../index.rst:126
 msgid "Dashboard"
-msgstr ""
+msgstr "Painel"
 
-#: ../../index.rst:127
+#: ../index.rst:133
 msgid "Email & Landing Page Builders"
-msgstr ""
+msgstr "Criadores de E-mail e Landing Page"
 
-#: ../../index.rst:135
+#: ../index.rst:141
 msgid "Mautic Marketplace"
-msgstr ""
+msgstr "Marketplace Mautic "
 
-#: ../../index.rst:142
+#: ../index.rst:148
 msgid "Plugins"
-msgstr ""
+msgstr "Plugins"
 
-#: ../../index.rst:150
+#: ../index.rst:176
 msgid "Points"
-msgstr ""
+msgstr "Pontos"
 
-#: ../../index.rst:157
+#: ../index.rst:184
+msgid "Queue"
+msgstr "Fila"
+
+#: ../index.rst:192
 msgid "Reports"
-msgstr ""
+msgstr "Relatórios"
 
-#: ../../index.rst:164
+#: ../index.rst:199
+msgid "Search"
+msgstr "Pesquisa"
+
+#: ../index.rst:206
 msgid "Stages"
-msgstr ""
+msgstr "Estágios"
 
-#: ../../index.rst:2 bd063c21218c4cf9b64974d8aff63d17
+#: ../index.rst:213
+msgid "Themes"
+msgstr "Temas"
+
+#: ../index.rst:224
+msgid "Translation"
+msgstr "Tradução"
+
+#: ../index.rst:231
+msgid "User and Roles"
+msgstr "Usuário e Funções"
+
+#: ../index.rst:2
 msgid "Welcome to the Mautic documentation"
-msgstr ""
+msgstr "Bem-vindo(a) à documentação do Mautic"
 
-#: ../../index.rst:4 ec88f919cd554855962d28d3baff658c
+#: ../index.rst:4
 msgid ""
 "**Mautic** is an open source marketing automation platform that provides you"
 " with the greatest level of audience intelligence, thus enabling you to make"
-" more meaningful customer connections"
+" more meaningful customer connections."
 msgstr ""
+"**Mautic** é uma plataforma de automação de marketing de código aberto que "
+"fornece o maior nível de inteligência de público, permitindo que você faça "
+"conexões com clientes mais significativas."
 
-#: ../../index.rst:6 41d7010bf60f49688e8e4f53c6e02695
+#: ../index.rst:6
 msgid ""
-"Check out the :doc:`/getting_started/getting_started` section for further "
-"information, including how to :doc:`/getting_started/how_to_install_mautic`."
+"To get started with Mautic, follow the :doc:`Getting started "
+"guide</getting_started/how_to_install_mautic>`. For next steps, you can "
+"learn :doc:`how to update Mautic</getting_started/how_to_update_mautic>`."
 msgstr ""
+"Para começar a usar o Mautic, siga o :doc:`Guia de "
+"introdução</getting_started/how_to_install_mautic>`. Para as próximas "
+"etapas, você pode aprender :doc:`como atualizar o "
+"Mautic</getting_started/how_to_update_mautic>`."
 
-#: ../../index.rst:10 c551275accd14646b7314c7ece52ff16
-msgid "This documentation project is under active development."
+#: ../index.rst:9
+msgid ""
+"There are different types of documentation available to help you navigate "
+"your way through Mautic."
 msgstr ""
+"Existem diferentes tipos de documentação disponíveis para ajudá-lo a navegar"
+" pelo Mautic."
+
+#: ../index.rst:11
+msgid ""
+":xref:`End User Documentation` - Describes each aspect of Mautic in detail "
+"and explains how to use it.."
+msgstr ""
+":xref:`Documentação do usuário final` - Descreve cada aspecto do Mautic em "
+"detalhes e explica como usá-lo."
+
+#: ../index.rst:13
+msgid ""
+":xref:`Developer Documentation` - Describes details about the Mautic API, "
+"Webhooks, Themes and Plugin development."
+msgstr ""
+":xref:`Documentação do desenvolvedor` - Descreve detalhes sobre a API do "
+"Mautic, webhooks, temas e desenvolvimento de plugins."
+
+#: ../index.rst:15
+msgid ""
+":xref:`Knowledgebase` - Provides a database of tutorials, FAQs, and how-to "
+"articles."
+msgstr ""
+":xref:`Base de conhecimento` - Fornece um banco de dados de tutoriais, FAQs "
+"e artigos de instruções."
+
+#: ../index.rst:17
+msgid ""
+":xref:`Community Handbook` - Describes how to get involved and contribute to"
+" Mautic's documentation development."
+msgstr ""
+":xref:`Manual da Comunidade` - Descreve como se envolver e contribuir com o "
+"desenvolvimento da documentação do Mautic."
+
+#: ../index.rst:21
+msgid "This documentation project is under active development."
+msgstr "Este projeto de documentação está atualmente em desenvolvimento."
