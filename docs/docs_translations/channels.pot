@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mautic Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"POT-Creation-Date: 2023-03-17 15:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1760,7 +1760,7 @@ msgid "The referring source of the web activity. It indicates the social network
 msgstr ""
 
 #: ../channels/utm_tags.rst:42
-msgid "Examples: facebook, twitter, blog, newsletters"
+msgid "Examples: ``facebook``, ``twitter``, ``blog``, ``newsletters``"
 msgstr ""
 
 #: ../channels/utm_tags.rst:43
@@ -1768,7 +1768,7 @@ msgid "UTM code: utm_source"
 msgstr ""
 
 #: ../channels/utm_tags.rst:44
-msgid "Sample code: utm_source=facebook"
+msgid "Sample code: ``utm_source=facebook``"
 msgstr ""
 
 #: ../channels/utm_tags.rst:45
@@ -1780,7 +1780,7 @@ msgid "UTM tags - Mautic Documentation"
 msgstr ""
 
 #: ../channels/utm_tags.rst:47
-msgid "Examples: cpc, organic_social"
+msgid "Examples: ``cpc``, ``organic_social``"
 msgstr ""
 
 #: ../channels/utm_tags.rst:48
