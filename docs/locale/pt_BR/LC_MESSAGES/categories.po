@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Gustavo Kennedy Renkel <gustavo@overall.cloud>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"PO-Revision-Date: 2022-12-12 18:38+0000\n"
+"Last-Translator: Gustavo Kennedy Renkel <gustavo@overall.cloud>, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/mautic/teams/33223/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../categories/categories-overview.rst:4
+msgid "Categories"
+msgstr "Categorias"
+
+#: ../categories/categories-overview.rst:8
+msgid ""
+"Categories are a way to organize Mautic elements. They're available for "
+"Assets, Campaigns, Emails, Focus Items, Forms, Pages, Points, Social "
+"Monitoring and Stages. There are two ways to use Categories:"
+msgstr ""
+"As categorias são uma forma de organizar os elementos do Mautic. Estão "
+"disponíveis para Ativos, Campanhas, Emails, Itens de Focus, Formulários, "
+"Landing Pages, Pontos, Monitoramento Social e Estágios. Há duas maneiras de "
+"usar Categorias:"
+
+#: ../categories/categories-overview.rst:10
+msgid ""
+"Create element-specific Categories for example only for Assets, Emails or "
+"Forms."
+msgstr ""
+"Crie categorias específicas de elementos, por exemplo, apenas para Ativos, "
+"E-mails ou Formulários."
+
+#: ../categories/categories-overview.rst:11
+msgid "Create global Categories for all Mautic elements."
+msgstr "Crie categorias globais para todos os elementos do Mautic."
+
+#: ../categories/categories-overview.rst:16
+msgid "Creating and managing Categories"
+msgstr "Criando e gerenciando Categorias"
+
+#: ../categories/categories-overview.rst:20
+msgid ""
+"To create new Categories, go to settings menu in the top right corner of "
+"Mautic. There choose Categories."
+msgstr ""
+"Para criar novas Categorias, vá para o menu de configurações no canto "
+"superior direito do Mautic. Lá, selecione Categorias."
+
+#: ../categories/categories-overview.rstNone
+msgid "Screenshot of create new Category"
+msgstr "Captura de tela da criação de uma nova Categoria"
+
+#: ../categories/categories-overview.rst:28
+msgid ""
+"When creating a new Category you can select type, title, description, alias,"
+" color and published status. The color will be helpful to quickly find "
+"Mautic elements by their appropriate Category when viewing things like the "
+"Calendar or other areas within Mautic."
+msgstr ""
+"Ao criar uma nova Categoria, você pode selecionar tipo, título, descrição, "
+"pseudônimo, cor e status publicado (sim ou não). A cor será útil para "
+"encontrar rapidamente os elementos do Mautic por sua Categoria apropriada ao"
+" visualizar coisas como o Calendário ou outras áreas dentro do Mautic."
+
+#: ../categories/categories-overview.rst:31
+msgid "Using Categories for Contacts"
+msgstr "Usando Categorias para Contatos"
+
+#: ../categories/categories-overview.rst:35
+msgid ""
+"In addition to organizing various Mautic elements Categories can be used to "
+"organize Contacts. In Contact details use the Preference menu to open "
+"Contact Preference Center."
+msgstr ""
+"Além de organizar vários elementos do Mautic, as Categorias podem ser usadas"
+" para organizar os Contatos. Em Detalhes do contato, use o menu Preferências"
+" para abrir o Centro de Preferências do Contato."
+
+#: ../categories/categories-overview.rstNone
+msgid "Screenshot of assigning Category to Contact"
+msgstr "Captura de tela da atribuição de Categoria ao Contato"
+
+#: ../categories/categories-overview.rst:41
+msgid "Contact Categories can be used in Segment and dynamic content filters."
+msgstr ""
+"As Categorias de Contato podem ser usadas em filtros de conteúdo dinâmico e "
+"de Segmento."
