@@ -58,7 +58,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Add Company action**  
      - Associates a Contact with a Company and sets the Company as the primary Company for the Contact.
    * - **Adjust Contact Points**  
-     - Adds or subtracts Points from the Contact’s Point total.
+     - Adds or subtracts Points from the Contact’s Point total or League.
    * - **Change Campaigns**  
      - Removes a Contact from the existing Campaign, moves them into another Campaign, restarts the current Campaign or a combination of these. You must remove a Contact from a Campaign before restarting the Campaign.
    * - **Change Contact's Stage**  
@@ -205,6 +205,8 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
      - Checks if the Contact is a member of selected Segments.
    * - **Contact Tags**    
      - Checks if specified Tags are on the Contact record.
+   * - **Contact points**
+     - Checks if the Contact has a certain number of Points or a League score.
    * - **Form field value**    
      - Checks if values submitted for a selected field on a selected Form matches specified criteria.
    * - **Has active notification**    

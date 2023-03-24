@@ -60,6 +60,7 @@ The **Details** tab on a Report contains the same options across all Reports and
    * Segment Membership
    * Do Not Contact
    * UTM Codes
+   * League score
 
 7. :doc:`Companies</companies/companies_overview>`
    
