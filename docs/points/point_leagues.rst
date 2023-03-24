@@ -15,14 +15,14 @@ To access the currently defined Point Leagues in Mautic, navigate to the Points 
   :width: 600
   :alt: Screenshot of the create a new League interface
 
-Provide a name and description for the League and click the "Save & Close" button to create the League.
+Enter a name and a description for the League and click the "Save & Close" button to create the League.
 
 Point Leagues usage
 ===================
 
 Point actions
 -------------
-You can change a Contact's Points within a Points League by using Points Actions.
+You can change Contact's Points within a Points League by using Points Actions.
 
 .. image:: images/point-action-with-league.png
   :width: 600
@@ -30,7 +30,7 @@ You can change a Contact's Points within a Points League by using Points Actions
 
 Point triggers
 --------------
-You can utilize Point triggers based on Point Leagues to automatically trigger specific events within the system.
+You can use Point triggers based on Point Leagues to automatically trigger specific events within the system.
 
 .. image:: images/point-trigger-with-league.png
   :width: 600
@@ -54,7 +54,7 @@ You can use a Campaign action to increase or decrease the League Contact score.
 
 Segment filters
 ---------------
-Each Point League adds a new filter that you can use in the Segment configuration.
+Each Point League adds a new filter that can be used to configurate the Segment.
 
 .. image:: images/segment-league-filter.png
   :width: 600
@@ -66,7 +66,7 @@ Each Point League adds a new filter that you can use in the Segment configuratio
 
 Contact details
 ---------------
-You can view Point Leagues in the Contact details.
+You can display Point Leagues in the Contact details.
 
 .. image:: images/contact-league-points.png
   :width: 600
@@ -74,7 +74,7 @@ You can view Point Leagues in the Contact details.
 
 League Report
 -------------
-You can generate a Report containing information about Contact Point Leagues.
+You can generate a Report that contains information about Contact Point Leagues.
 
 .. image:: images/league-report.png
   :width: 600
