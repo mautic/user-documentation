@@ -45,6 +45,8 @@ swap:
   point actions: Point Actions
   point triggers: Point Triggers
   points: Points
+  league: League
+  leagues: Leagues
   plugin: Plugin
   plugins: Plugins
   report: Report
