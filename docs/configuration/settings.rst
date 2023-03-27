@@ -82,11 +82,11 @@ Miscellaneous settings
 
 * **List of known Bots** - Mautic has the feature to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here (one per line).
   
-* **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here.
+* **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS or E_mail messages, enter the full URL (including access key) to your URL shortener that, when queried, returns a plain text shortened URL. For bit.ly users, use ``https://api-ssl.bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl=``, replacing [ACCESS_TOKEN] with your bit.ly access token. For `YOURLS <https://yourls.org>`__ users, your link shortener URL looks like this: ``https://my.shortu.rl/yourls-api.php?signature=XXXXXXXXXX&action=shorturl&format=txt&url=``.
 
 .. note:: 
 
-    For bit.ly, use the following URL structure: https://api-ssl.bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl
+    For bit.ly, use the following URL structure: https://api-ssl.bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl=
 
 * **Item max lock time** - When a User edits a Campaign, Email, Landing Page, etc., Mautic locks the item to prevent simultaneous edits by other Users. When the initial User saves and closes or cancels out, the item may remain locked for this period of time. The default is ``0 seconds``.
 
