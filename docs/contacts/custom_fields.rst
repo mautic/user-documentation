@@ -11,7 +11,6 @@ You can manage Custom Fields through the Admin menu (click the cogwheel upper ri
     :align: center
     :alt: Screenshot of Admin menu
     :width: 200
-|
 
 Custom Fields
 *************
@@ -73,7 +72,7 @@ There is a toggle switch which shows before each label title. You can find this 
 
 .. only:: html
 
-   .. figure:: unpublish-fields.gif
+   .. figure:: images/unpublish-fields.gif
 
 |
 
