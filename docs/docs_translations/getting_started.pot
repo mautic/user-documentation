@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mautic Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"POT-Creation-Date: 2023-03-17 15:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -587,7 +587,7 @@ msgid "In Mautic, DDEV is the tool of choice for this purpose. It's very easy to
 msgstr ""
 
 #: ../getting_started/how_to_install_mautic.rst:511
-msgid "To learn how to set up DDEV with Mautic, please review the documentation in the Contributors Handbook at https://contribute.mautic.org/contributing-to-mautic/tester."
+msgid "To learn how to set up DDEV with Mautic, please review the documentation in the Contributors :xref:`Handbook`."
 msgstr ""
 
 #: ../getting_started/how_to_update_mautic.rst:4
