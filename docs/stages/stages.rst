@@ -12,6 +12,12 @@ Creating Stages
 
 Navigate to the **Stages** section in the left side menu, and then click **+New**.
 
+.. image:: images/Stages.png
+   :align: center
+   :alt: Mautic Stages
+   
+|
+
 **Name** - While most Companies have similar Stage structures, each Company uses them differently. Come up with the Stages you want to track different parts of your marketing funnel with.
 
 **Description** - To help you and other Users easily identify what qualifies a Contact for that Stage, it's recommended to add a description.
@@ -29,7 +35,13 @@ Moving Contacts between Stages
 
 .. vale on
 
-Moving Contacts between Stages requires a Campaign action. Depending on how you define your Contact lifecycle and Stages, there may be different triggers for a Contact to move between Stages. Examples include behaviors within a Campaign, or moving between Segments which have criteria set up for each Stage. In any Campaign where you want to have Contacts move between new Stages -
+Moving Contacts between Stages requires a Campaign action. Depending on how you define your Contact lifecycle and Stages, there may be different triggers for a Contact to move between Stages. Examples include behaviors within a Campaign, or moving between Segments which have criteria set up for each Stage. In any Campaign where you want to have Contacts move between new Stages:
+
+.. image:: images/switch-stage.png
+   :align: center
+   :alt: Moving Contacts between Stages
+   
+|
 
 1. Add a new **Action**.
 
@@ -51,6 +63,12 @@ Visualizing Stage movement
 .. vale on
 
 The Mautic dashboard features two widgets to help Users see how Contacts are moving between Stages.
+
+.. image:: images/stage-dashboard.png
+   :align: center
+   :alt: Visualizing Stage movement
+   
+|
 
 The Stages in time widget shows how often Contacts change Stages. More change indicates more velocity through your funnel.
 
