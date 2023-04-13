@@ -24,7 +24,7 @@ The **Custom Fields** page lets you view all existing Contact fields as well as 
 
 |
 
-You will notice the group column shows the specific field on the Contact profile. In the last column, you may see several icons which signify various properties of the field:
+You'll notice the group column shows the specific field on the Contact profile. In the last column, you may see several icons which signify various properties of the field:
 
 .. image:: images/custom-field-icons.png
     :align: center
@@ -32,9 +32,9 @@ You will notice the group column shows the specific field on the Contact profile
 
 |
 
-1. **Lock icon** - These fields are unable to be removed as the core installation uses them.
+1. **Lock icon** -  The core installation uses these fields, and they can't be removed.
 
-2. **List icon** - These fields can be used as filters of Segments.
+2. **List icon** - You can use these fields as filters for Segments.
 
 3. **Asterisks icon** - These fields are required when filling in the Contact Form
 
@@ -69,20 +69,18 @@ It's important to note that from Mautic 5, you won't be able to edit the default
 Published fields
 *****************
 
-There is a toggle switch which shows before each label title. This type of switch is used throughout the Mautic UI to publish and unpublish items.
+There is a toggle switch which shows before each label title. You can find this type of switch throughout the Mautic UI for publishing and unpublishing items.
 
 .. only:: html
 
    .. figure:: unpublish-fields.gif
 
-    
 |
-
 
 Adding a new field
 ******************
 
-You can create additional custom fields and define the data type you want that field to hold. In addition to the data type you will also select the group for that particular field. This defines where the field displays on the Contact edit and detail view.
+You can create additional custom fields and define the data type you want that field to hold. In addition to the data type you select the group for that particular field. This defines where the field displays on the Contact edit and detail view.
 
 .. image:: images/new-custom-field.jpeg
     :align: center
@@ -93,16 +91,14 @@ You can create additional custom fields and define the data type you want that f
 Creating Custom Fields via a command
 ************************************
 
-Each new Custom Field for Contacts or Companies adds a new column to the database. This operation gets slower with larger instances of Mautic, and it locks the table while it's running, meaning that no changes can be made until the field is created. It will also time out the ``HTTP`` request, so that the User Interface will report the column exists, but Contact/Company updates will actually fail, because the column is still missing.
+When you create a new Custom Field for Contacts or Companies in Mautic, the system adds a new column to the database. For larger instances of Mautic, this operation can slow down, and the table remains locked while running. As a result, you can't make any changes until the system creates the field. The ``HTTP`` request may time out, causing the User Interface to report that the column exists even though Contact/Company updates may fail because the column is still missing.
 
 There is a way around this when you configure the processing of field creation in the background.
 
 Since :xref:`Mautic 3` there is an option you can set in your ``app/config/local.php`` file: ``'create_custom_field_in_background' => true``,.
 
-The new Custom Field will be visible in the list of Custom Fields if this option is configured. It will be unpublished until a command ``bin/console mautic:custom-field:create-column`` runs. This command will create the actual column in the table and publish the field metadata.
+If you configure this option, the new Custom Field becomes visible in the list of Custom Fields. The custom field remains unpublished until you run the command ``bin/console mautic:custom-field:create-column``. This command creates the actual column in the table and publishes the field metadata.
 
-This configuration enabled prevents the **http** request timeout because the long-running SQL query creating the new table column is handled in a background task.
+This configuration helps prevent **http** request timeouts because it handles the long-running SQL query to create the new table column as a background task.
 
-If you run the command only once daily when you know that most of your audience is offline, you can mitigate the table lock issue. Therefore, less traffic will go into Mautic, and there is less chance of this being a problem.
-
-
+To mitigate the table lock issue, run the command only once daily when you know that most of your audience is offline. With less traffic going into Mautic, the chances of encountering a problem are lower.

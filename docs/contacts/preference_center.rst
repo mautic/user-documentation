@@ -8,9 +8,19 @@ Manage Contact preferences
 
 .. vale on
 
-When managing a Contact you can set the Contact's preference of communication. You can access the Contact's Preference Center when viewing a Contact's profile. From the dropdown menu click the preference menu. A new modal window should appear with a tab to set the preferred Channels and frequency of Contact, as well as the option to pause communication within a given period of time. 
-The second tab gives the option to add or remove the Contact from global Categories used in Emails or Categories. 
-The third tab allows you to add or remove the Contact from Segments they belong to.
+When managing a Contact in Mautic, you have the ability to customize their communication preferences. To access the Contact's Preference Center, follow these steps:
+
+1. Open the Contact's profile - To access a Contact's profile, navigate to the Contacts section in Mautic and click the desired Contact's name.
+
+2. Access the Preference Center - Once you are viewing the Contact's profile, locate the dropdown menu and click the **Preferences** option. A new modal window appears with various customization options.
+
+In the Preference Center, you find three main tabs:
+
+* Channels and Frequency - This tab allows you to set the preferred Channels for communicating with the Contact and how often they should receive messages. You can also pause communication for a specified period if needed.
+
+* Categories - In this tab, you have the option to add or remove the Contact from global Categories used in Emails or other marketing materials. This helps to ensure that the Contact only receives content relevant to their interests.
+
+* Segments - The third tab enables you to add or remove the Contact from specific Segments they belong to. This is useful for refining your audience and targeting Contacts based on their behavior, preferences, or other attributes.
 
 .. vale off
 
