@@ -31,8 +31,12 @@ Tips
 
 * If your CSV contains thousands of Contacts or more, divide such CSV into several smaller CSV files to avoid memory issues and slow import speed.
 
+.. vale off
+
 ProTips
-~~~~~~~
+=======
+
+.. vale on
 
 If using a Linux system, see the ``GNU`` parallel command ``sudo apt install parallel``.
 
@@ -44,14 +48,14 @@ Types of import
 ===============
 
 Browser import
-~~~~~~~~~~~~~~
+--------------
 
 Larger CSV files have to be imported in batches to avoid hitting server (PHP) memory and execution time limits. When importing in the browser, your browser is controlling the batches. When one finishes, the JavaScript starts a new one. This means the browser window has to stay opened and connected to the internet the whole time.
 
 Use the browser import method only if you don't have any other choice. Background import is recommended.
 
 Background import
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Background import jobs (CLI command triggered manually or via a cron job) have the advantage of benevolent time limits. A CSV background import isn't restarted every batch (1 batch = 100 rows by default) - the last row imported is saved, and the next batch continues from that point. Background imports will always be faster and more reliable than browser imports.
 
@@ -72,12 +76,12 @@ Successful result of the :doc:`background job</configuration/cron_jobs>` can loo
 If there is no import waiting in the queue, there won't be any messages or use ``--quiet``.
 
 Automatic import type configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 There is an option in the Global Mautic Configuration / Contact settings to define the optimal limit of browser import vs background import. If you enter 500, that means that if the CSV file being imported has less than ``500`` rows, the browser imports it. If it has more than 500 rows, it will be queued to be imported by the background job. The default value is 0 (zero), which means it shows two import buttons instead of one, and you have to decide what import option to use during every import.
 
 Parallel imports
-~~~~~~~~~~~~~~~~
+----------------
 
 The import can take several minutes. One import may still run when the other is started. There is the ``parallel_import_limit`` configurable option to prevent running out of server resources. By default, only 1 import will run at the same time. This option can be changed when you add it to your ``app/config/local.php`` file.
 
@@ -125,7 +129,7 @@ There are several potential statuses for import jobs:
 
 * **Manual** - The user selected to import in the browser ``manually``. It's similar to In Progress.
 
-* **Delayed** - The background job wanted to start the import, but the import process could not. So it's delayed for later. The reason when this could happen is when it hits the parallel import limit. The import starts ASAP.
+* **Delayed** - The background job wanted to start the import, but the import process couldn't. So it's delayed for later. The reason when this could happen is when it hits the parallel import limit. The import starts ASAP.
 
 Import job detail
 =================
@@ -147,7 +151,7 @@ Starting and stopping imports
 =============================
 
 How to start an import
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 1. Go to **Contacts**.
 
@@ -168,7 +172,7 @@ How to start an import
 7. When your field mapping is ready, click one of the Import buttons described above.
 
 How to stop a background import
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
 1. Go to *Contacts*.
 
@@ -204,10 +208,3 @@ A: It is stored as a ``Manual Unsubscription``. It's the same as if the Contact 
 .. image:: images/do-not-contact.png
     :align: center
     :alt: Screenshot of Do Not Contact
-
-|
-
-
-
-
-

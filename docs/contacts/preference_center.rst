@@ -194,7 +194,3 @@ If you don't select a Preference Center in an Email, Mautic uses the default Pre
 .. image:: images/unsubscribe.png
     :align: center
     :alt: Screenshot of Unsubscribe
-
-
-
-

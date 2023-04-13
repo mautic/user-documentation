@@ -10,7 +10,7 @@ You can manage Custom Fields through the Admin menu (click the cogwheel upper ri
 .. image:: images/admin-menu.png
     :align: center
     :alt: Screenshot of Admin menu
-
+    :width: 200
 |
 
 Custom Fields

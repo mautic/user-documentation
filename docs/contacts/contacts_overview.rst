@@ -9,12 +9,12 @@ Contacts are the central factor of a marketing automation platform.
 These are all the individuals who have visited your websites or interacted with you in some way.
 
 Contact types
-=============
+**************
 
 There are two types of Contacts:
 
 Visitors (formerly anonymous leads)
------------------------------------
+===================================
 
 Unidentified visitors to your site who haven't yet completed a Form or otherwise interacted with your site.
 
@@ -50,7 +50,7 @@ If you have an IP lookup service :ref:`configured<miscellaneous settings>` in **
 .. vale off
 
 Standard Contacts
------------------
+=================
 
 .. vale on
 
@@ -62,7 +62,7 @@ These are Contacts which may have started as a visitor, but at some point provid
 
 
 Changing the view
-=================
+-----------------
 
 The Segment is the default tabular view of all the Contacts in the system - by default the **list view** is enabled, but you can also choose to switch to the **card view** also known as **grid view** which uses avatars to depict the Contacts visually using cards. 
 If you’d like to see your Contacts in the card view, click the **C** button while you’re looking at the Contact list. To go back to the table or list view, press the **T** key.
