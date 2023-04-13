@@ -84,7 +84,17 @@ Contact's unsubscribe Email preferences
 
 |
 
-You can display the Contact's preferences in the unsubscribe page by selecting "Show Contact preference settings" in the Email configuration. You may also choose to hide or show different Segments of the User preferences. If you have turned off any of these options in the global settings, they don't show on the Contact's personal preferences page. Mautic displays the default unsubscribe message when you have turned off the preference setting option, resulting in the Contact being directly unsubscribed rather than being able to choose their preferences.
+You can customize the unsubscribe page to display a Contact's preferences by adjusting the Email configuration settings in Mautic. This allows Contacts to manage their preferences when they unsubscribe, instead of being directly unsubscribed. Follow these steps:
+
+1. In the left sidebar, click the gear icon to access the **Configuration** menu.
+
+2. Navigate to the **Email Settings** tab.
+
+3. Look for the "Show Contact Preference Settings" option and select the box to enable it. This displays Contact preferences on the unsubscribe page, allowing Contacts to manage their subscription settings.
+
+4. Additionally, you can choose to hide or show different Segments in the User preferences by adjusting the corresponding settings.
+
+Please note that if you turn off any of these options in the global settings, they won't appear on the Contact's personal preferences page. When the preference setting option is turn off, Mautic shows the default unsubscribe message, and the Contact gets directly unsubscribed without the ability to manage their preferences.
 
 .. image:: images/unsubscribe.png
     :align: center
