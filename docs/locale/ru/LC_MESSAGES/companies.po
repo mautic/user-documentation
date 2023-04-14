@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Роман Захаров <zaharovrd@gmail.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"PO-Revision-Date: 2022-11-14 11:41+0000\n"
+"Last-Translator: Роман Захаров <zaharovrd@gmail.com>, 2023\n"
+"Language-Team: Russian (https://www.transifex.com/mautic/teams/33223/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../companies/companies_overview.rst:3
+msgid "Companies"
+msgstr "Компании"
+
+#: ../companies/companies_overview.rst:5
+msgid ""
+"Companies are a way to group Contacts based on association with "
+"organizations."
+msgstr ""
+"Компании — это способ группировки контактов на основе ассоциации с "
+"организациями."
+
+#: ../companies/companies_overview.rstNone
+msgid "Mautic Company Overview"
+msgstr "Обзор компании Mautic"
+
+#: ../companies/companies_overview.rst:12
+msgid "Engagements/Points chart"
+msgstr "График вовлечённости/баллов"
+
+#: ../companies/companies_overview.rst:14
+msgid ""
+"Engagements shown on the chart include any tracked action the Contacts made."
+" Some examples might include page hits, Form submissions, Email opens and so"
+" on. The engagements line chart displays how active the Contacts of the "
+"Company were in the past 6 months. The chart displays also the sum of Points"
+" the Contacts received."
+msgstr ""
+"Взаимодействия, показанные на диаграмме, включают любое отслеживаемое "
+"действие, совершенное Контактом. В качестве примера можно привести посещение"
+" страниц, заполнение форм, открытие электронных писем и т.д. Линейный график"
+" вовлечённости показывает, насколько активными были контакты компании за "
+"последние 6 месяцев. На графике также отображается сумма баллов, полученных "
+"контактами."
+
+#: ../companies/companies_overview.rst:19
+msgid "List of Contacts assigned"
+msgstr "Список назначенных контактов"
+
+#: ../companies/companies_overview.rst:23
+msgid ""
+"You can find a table with the list of the assigned Contacts displaying the "
+"date of their last activity, preceding the information of the Company which "
+"includes the Company name, address, and all the custom Company fields, and "
+"the engagement chart. This is good way to have a view of the recent activity"
+" of the Contacts you know in this Company."
+msgstr ""
+"Вы можете найти таблицу со списком назначенных контактов, в которой "
+"отображается дата их последней активности, предшествующая информация о "
+"компании, включающая название компании, адрес и все пользовательские поля "
+"компании, а также график вовлечённости. Это хороший способ просмотреть "
+"недавнюю активность контактов, которых вы используете в данной компании."
+
+#: ../companies/companies_overview.rst:26
+msgid "Company duplicates"
+msgstr "Дубликаты компаний"
+
+#: ../companies/companies_overview.rst:27
+msgid ""
+"The Company name field is a unique identifier by default. You can choose any"
+" other Company field as unique identifier in the **custom fields** section."
+msgstr ""
+"По умолчанию поле \"Название компании\" является уникальным идентификатором."
+" Вы можете выбрать любое другое поле Компании в качестве уникального "
+"идентификатора в разделе **настраиваемые поля**."
+
+#: ../companies/companies_overview.rst:29
+msgid ""
+"In *Configuration > Company Settings* you can choose the operator used when "
+"merging Companies with multiple identifiers - either **AND** or **OR**."
+msgstr ""
+"В *Конфигурация > Настройки компании* вы можете выбрать оператор, "
+"используемый при объединении компаний с несколькими идентификаторами - "
+"**AND** или **OR**."
+
+#: ../companies/companies_overview.rstNone
+msgid "Setup operator for find duplications algorithm"
+msgstr "Оператор настройки алгоритма поиска дубликатов"
+
+#: ../companies/companies_overview.rst:35
+msgid ""
+"These settings allow  Mautic to find and merge duplicate Companies during "
+"the import, using the Integrations Framework and in other parts of Mautic."
+msgstr ""
+"Эти настройки позволяют Mautic находить и объединять повторяющиеся Компании "
+"во время импорта, используя Integrations Framework и другие части Mautic."
+
+#: ../companies/companies_overview.rst:38
+msgid "Company actions"
+msgstr "Действия компании"
+
+#: ../companies/companies_overview.rst:43
+msgid "Merging Companies"
+msgstr "Слияние компаний"
+
+#: ../companies/companies_overview.rst:47
+msgid ""
+"When editing a Company, you can merge this Company into another existing "
+"Company by using the **Merge** button."
+msgstr ""
+"При редактировании компании вы можете объединить эту компанию с другой "
+"существующей компанией с помощью кнопки **Объединить**."
+
+#: ../companies/companies_overview.rst:49
+msgid ""
+"Search for the Company you wish to merge into, then click to start the "
+"merge. Contacts associated with the merged Companies now become associated "
+"with the remaining Company."
+msgstr ""
+"Найдите компанию, с которой вы хотите объединиться, затем нажмите, чтобы "
+"начать слияние. Контакты, связанные с объединенными компаниями, теперь "
+"становятся связанными с оставшейся компанией."
+
+#: ../companies/companies_overview.rst:51
+msgid ""
+"After completion of the merge process, Mautic redirects you to the remaining"
+" Company, as the old Company no longer exists."
+msgstr ""
+"После завершения процесса слияния Mautic перенаправляет вас к оставшейся "
+"компании, поскольку старой компании больше не существует."
+
+#: ../companies/companies_overview.rst:56
+msgid "Company Custom Fields"
+msgstr "Пользовательские поля компании"
+
+#: ../companies/companies_overview.rst:60
+msgid ""
+"By default, a set of fields exist for Companies, but you can customize these"
+" fields to meet your needs."
+msgstr ""
+"По умолчанию для компаний существует набор полей, но вы можете настроить эти"
+" поля в соответствии со своими потребностями."
+
+#: ../companies/companies_overview.rst:62
+msgid "Go to **Custom Fields** and create a new field"
+msgstr "Перейдите в **Пользовательские поля** и создайте новое поле."
+
+#: ../companies/companies_overview.rst:64
+msgid "Change the dropdown select box from Contact to Company objects"
+msgstr ""
+"Измените поле выбора раскрывающегося списка с объектов «Контакт» на "
+"«Компания»."
+
+#: ../companies/companies_overview.rst:66
+msgid "Save the custom field"
+msgstr "Сохраните пользовательское поле"
+
+#: ../companies/companies_overview.rst:71
+msgid "Company Segments"
+msgstr "Сегменты компании"
+
+#: ../companies/companies_overview.rst:75
+msgid ""
+"You can create a Segment based on a Company record. Select any Company field"
+" to filter with and the matching criteria for it, and Mautic lists any "
+"Contacts that match the selected fields in the Segment."
+msgstr ""
+"Вы можете создать сегмент на основе записи компании. Выберите любое поле "
+"«Компания» для фильтрации и критерии соответствия для него, и Mautic "
+"перечислит все контакты, которые соответствуют выбранным полям в сегменте."
+
+#: ../companies/companies_overview.rst:80
+msgid "Identifying Companies"
+msgstr "Идентификация компаний"
+
+#: ../companies/companies_overview.rst:84
+msgid ""
+"Mautic identifies Companies strictly through a matching criteria based on "
+"**Company Name**, **City**, **Country or State**. If  a city or a country "
+"isn't delivered as an identifying fields to identify a Contact, the Company "
+"won't match."
+msgstr ""
+"Mautic идентифицирует компании строго по критериям соответствия, основанным "
+"на **названии компании**, **городе**, **стране или регионе**. Если город или"
+" страна не указаны в качестве идентифицирующих полей для идентификации "
+"контакта, компания не будет соответствовать."
+
+#: ../companies/companies_overview.rst:89
+msgid "Company actions in Campaigns"
+msgstr "Действия компании в кампаниях"
+
+#: ../companies/companies_overview.rst:93
+msgid ""
+"It's possible to add a Contact to a new Company based on a Campaign action."
+msgstr "Можно добавить контакт в новую компанию на основе действия кампании."
+
+#: ../companies/companies_overview.rst:98
+msgid "Creating and managing Companies"
+msgstr "Создание и управление компаниями"
+
+#: ../companies/companies_overview.rst:102
+msgid ""
+"To create or manage Companies, go to the Companies menu identified by the "
+"building icon in the left hand navigation. In this area you can create, "
+"edit, or delete Companies."
+msgstr ""
+"Чтобы создавать компании или управлять ими, перейдите в меню «Компании», "
+"обозначенное значком здания в левой части навигации. В этой области вы "
+"можете создавать, редактировать или удалять Компании."
+
+#: ../companies/companies_overview.rst:107
+msgid "Assigning Companies to Contacts"
+msgstr "Назначение компаний контактам"
+
+#: ../companies/companies_overview.rst:111
+msgid ""
+"There are different ways to assign a Company to a Contact as explained "
+"below:"
+msgstr ""
+"Существуют различные способы назначения компании контакту, как описано ниже:"
+
+#: ../companies/companies_overview.rst:114
+msgid "Contact profile"
+msgstr "Профиль контакта"
+
+#: ../companies/companies_overview.rst:116
+msgid ""
+"You can assign a Contact to Companies in the Contact's profile, while "
+"creating or editing an existing Contact. Mautic considers the latest Company"
+" assigned as the primary Company for the Contact."
+msgstr ""
+"Вы можете назначить контакт компаниям в профиле контакта при создании или "
+"редактировании существующего контакта. Маутик считает компанию, назначенную "
+"последней, основной компанией для контакта."
+
+#: ../companies/companies_overview.rst:119
+msgid "Contacts list view"
+msgstr "Просмотр списка контактов"
+
+#: ../companies/companies_overview.rst:121
+msgid ""
+"You can batch assign Companies to selected Contacts in the Contact's list "
+"view."
+msgstr ""
+"Вы можете пакетно назначать компании выбранным контактам в представлении "
+"списка контактов."
+
+#: ../companies/companies_overview.rst:126
+msgid "Via a Campaign"
+msgstr "Кампания"
+
+#: ../companies/companies_overview.rst:130
+msgid ""
+"You can assign a Company to identify Contacts through a Campaign by "
+"selecting the **Assign Contact to Company** action."
+msgstr ""
+"Вы можете назначить Компанию для идентификации Контактов через Кампанию, "
+"выбрав действие **Назначить контакт компании**."
+
+#: ../companies/companies_overview.rst:135
+msgid "Through a Form"
+msgstr "Через форму"
+
+#: ../companies/companies_overview.rst:139
+msgid ""
+"When identifying a Contact through a Form, you can also associate an "
+"existing Company or create a new one if:"
+msgstr ""
+"При идентификации Контакта через Форму вы также можете связать существующую "
+"Компанию или создать новую, если:"
+
+#: ../companies/companies_overview.rst:141
+msgid ""
+"The Form includes Company name as a Form field - mandatory for Company "
+"matching/creation,"
+msgstr ""
+"Форма включает название компании в качестве поля формы — обязательное для "
+"сопоставления/создания компании,"
+
+#: ../companies/companies_overview.rst:142
+msgid ""
+"The Form includes City as a Form field - mandatory for Company "
+"matching/creation),"
+msgstr ""
+"Форма включает город как поле формы — обязательное для "
+"сопоставления/создания компании),"
+
+#: ../companies/companies_overview.rst:143
+msgid ""
+"The Form includes Country as a form field - mandatory for Company "
+"matching/creation,"
+msgstr ""
+"Форма включает страну в качестве поля формы - обязательное для "
+"сопоставления/создания компании,"
+
+#: ../companies/companies_overview.rst:144
+msgid ""
+"The Form includes State as a form field - optional for Company "
+"matching/creation."
+msgstr ""
+"Форма включает состояние в качестве поля формы — необязательно для "
+"сопоставления/создания компании."
+
+#: ../companies/companies_overview.rst:147
+msgid "Company scoring"
+msgstr "Оценка компании"
+
+#: ../companies/companies_overview.rst:149
+msgid ""
+"It's possible to change the Company score through a Campaign action or a "
+"Form action. When using these actions, it's necessary to identify the "
+"Contact first, and then alter the score of the Companies assigned to that "
+"Contact."
+msgstr ""
+"Оценку компании можно изменить с помощью действия «Кампания» или действия "
+"«Форма». При использовании этих действий необходимо сначала определить "
+"контакт, а затем изменить оценку компаний, назначенных этому контакту."
+
+#: ../companies/companies_overview.rst:151
+msgid ""
+"Select the **Change Company score** action in either a Form or a Campaign"
+msgstr "Выберите действие **Изменить оценку компании** в форме или кампании."
+
+#: ../companies/companies_overview.rst:152
+msgid ""
+"Once submitted or triggered, Mautic identifies Companies in the Campaign or "
+"Form to change their score."
+msgstr ""
+"После отправки или запуска Mautic идентифицирует Компании в Кампании или "
+"Форме, чтобы изменить их оценку."
+
+#: ../companies/companies_overview.rst:157
+msgid "Setting the primary Company"
+msgstr "Установка основной компании"
+
+#: ../companies/companies_overview.rst:161
+msgid "You can set the primary Company through the Contact details interface."
+msgstr ""
+"Вы можете указать основную компанию через интерфейс сведений о контакте."
+
+#: ../companies/companies_overview.rstNone
+msgid "Screenshot showing setting the primary Company"
+msgstr "Снимок экрана, показывающий настройку основной компании"

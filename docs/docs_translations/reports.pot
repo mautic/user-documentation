@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mautic Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"POT-Creation-Date: 2023-03-17 15:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,415 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../reports/reports.rst:4
+#: ../reports/reports.rst:2
 msgid "Reports"
+msgstr ""
+
+#: ../reports/reports.rst:4
+msgid "Mautic's Reports menu allows you to generate highly customizable Reports."
+msgstr ""
+
+#: ../reports/reports.rst:6
+msgid "You can use the reporting tools to track marketing metrics, identify marketing activities that are effective or need improvement, and troubleshoot or investigate if you are curious about why something is happening."
+msgstr ""
+
+#: ../reports/reports.rst:8
+msgid "To get to Reports, click the Reports link from the menu on the left side of your instance. To create a new Report, click the **+New** button in the top right corner."
+msgstr ""
+
+#: ../reports/reports.rst:None
+msgid "Screenshots of Mautic Report"
+msgstr ""
+
+#: ../reports/reports.rst:17
+msgid "Data sources"
+msgstr ""
+
+#: ../reports/reports.rst:19
+msgid "The **Details** tab on a Report contains the same options across all Reports and provides some general options for your Report."
+msgstr ""
+
+#: ../reports/reports.rst:None
+msgid "Screenshots of Mautic Report Details"
+msgstr ""
+
+#: ../reports/reports.rst:25
+msgid "**Name** - Specify a Report name that makes it easy for you and other Users to identify the purpose of the Report."
+msgstr ""
+
+#: ../reports/reports.rst:27
+msgid "**Data source** - Select the data source appropriate to the Report that you are building. Note that each data source has a different set of available columns, filters, and graphs. The available data sources are:"
+msgstr ""
+
+#: ../reports/reports.rst:29
+msgid ":doc:`Assets</components/assets>`"
+msgstr ""
+
+#: ../reports/reports.rst:31
+msgid "Assets"
+msgstr ""
+
+#: ../reports/reports.rst:32
+msgid "Asset Downloads"
+msgstr ""
+
+#: ../reports/reports.rst:34
+msgid ":doc:`Campaigns</campaigns/campaigns_overview>`"
+msgstr ""
+
+#: ../reports/reports.rst:36
+msgid "Campaign Events"
+msgstr ""
+
+#: ../reports/reports.rst:38
+msgid ":doc:`Channels Messages</queue/message_queue>`"
+msgstr ""
+
+#: ../reports/reports.rst:40
+msgid "Message Queue"
+msgstr ""
+
+#: ../reports/reports.rst:42
+msgid ":doc:`Emails</channels/emails>`"
+msgstr ""
+
+#: ../reports/reports.rst:44
+msgid "Emails"
+msgstr ""
+
+#: ../reports/reports.rst:45
+msgid "Emails Sent"
+msgstr ""
+
+#: ../reports/reports.rst:47
+msgid ":doc:`Forms</components/forms>`"
+msgstr ""
+
+#: ../reports/reports.rst:49
+msgid "Forms"
+msgstr ""
+
+#: ../reports/reports.rst:50
+msgid "Form Submissions"
+msgstr ""
+
+#: ../reports/reports.rst:52
+msgid ":doc:`Contacts</contacts/manage_contacts>`"
+msgstr ""
+
+#: ../reports/reports.rst:54
+msgid "Contacts"
+msgstr ""
+
+#: ../reports/reports.rst:55
+msgid "Multi Touch Attributions"
+msgstr ""
+
+#: ../reports/reports.rst:56
+msgid "First Touch Attributions"
+msgstr ""
+
+#: ../reports/reports.rst:57
+msgid "Last Touch Attributions"
+msgstr ""
+
+#: ../reports/reports.rst:58
+msgid "Contact Point Log"
+msgstr ""
+
+#: ../reports/reports.rst:59
+msgid "Frequency Rules"
+msgstr ""
+
+#: ../reports/reports.rst:60
+msgid "Segment Membership"
+msgstr ""
+
+#: ../reports/reports.rst:61
+msgid "Do Not Contact"
+msgstr ""
+
+#: ../reports/reports.rst:62
+msgid "UTM Codes"
+msgstr ""
+
+#: ../reports/reports.rst:64
+msgid ":doc:`Companies</companies/companies_overview>`"
+msgstr ""
+
+#: ../reports/reports.rst:66
+msgid "Companies"
+msgstr ""
+
+#: ../reports/reports.rst:68
+msgid ":doc:`Mobile Notifications</channels/marketing_messages>`"
+msgstr ""
+
+#: ../reports/reports.rst:70
+msgid "Mobile Notifications"
+msgstr ""
+
+#: ../reports/reports.rst:71
+msgid "Mobile Notifications Sent"
+msgstr ""
+
+#: ../reports/reports.rst:73
+msgid ":doc:`Pages</components/landing_pages>`"
+msgstr ""
+
+#: ../reports/reports.rst:75
+msgid "Landing Pages"
+msgstr ""
+
+#: ../reports/reports.rst:76
+msgid "Page hits"
+msgstr ""
+
+#: ../reports/reports.rst:78
+msgid "Videos"
+msgstr ""
+
+#: ../reports/reports.rst:80
+msgid "Video hits"
+msgstr ""
+
+#: ../reports/reports.rst:82
+msgid "As demonstrated, Mautic displays the data sources in the format: ``<Parent data source> <Child data source>``"
+msgstr ""
+
+#: ../reports/reports.rst:84
+msgid "The parent data source provides a high-level summary of the data while the child data source provides a more granular view of Contact behavior that includes your Custom Fields and values."
+msgstr ""
+
+#: ../reports/reports.rst:86
+msgid "**Description - optional** - Add detailed information about the Report, helping you and other Users better understand what the Report is for. You may want to include more information about filters, people, or departments."
+msgstr ""
+
+#: ../reports/reports.rst:88
+msgid "**Published** - Select **Yes** to ensure that the Report is active, ready to send when scheduled in the Report options."
+msgstr ""
+
+#: ../reports/reports.rst:90
+msgid "**System Report** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report."
+msgstr ""
+
+#: ../reports/reports.rst:92
+msgid "**Owner** - Select the owner of the Report to determine who can see the Report if the System Report setting is No."
+msgstr ""
+
+#: ../reports/reports.rst:94
+msgid "**Dynamic filters settings**"
+msgstr ""
+
+#: ../reports/reports.rst:96
+msgid "Show opened by default - If you want to ensure that the date filters and filter options for any other Report filters are visible on a Report detail page without needing to open the filters drop-down, select Yes. For example, for an Emails Report, you might want to view dynamic filters for subject or sent date."
+msgstr ""
+
+#: ../reports/reports.rst:97
+msgid "Hide date range - To hide the date range filter so that Users can’t change the dates that the Report displays data for, select to **Yes**."
+msgstr ""
+
+#: ../reports/reports.rst:101
+msgid "Data"
+msgstr ""
+
+#: ../reports/reports.rst:103
+msgid "You can customize each Report to include the columns of choice, filter data based on set criteria, and/or set a specific order for the data. In addition you can also group by specific fields, and select different function operators to calculate fields. Note that when you select functions operators, Mautic adds a totals row to the Report. Choosing to export a Report **won't** include this totals row."
+msgstr ""
+
+#: ../reports/reports.rst:None
+#: ../reports/reports.rst:None
+msgid "Screenshots of Mautic Report Data"
+msgstr ""
+
+#: ../reports/reports.rst:110
+msgid "**Columns** - Select the columns of data that you want to appear in the table of data in the Report. Click the column name in the left column to have it show in the Report. You can remove a column from the Report by clicking on its right column. The column returns to its original position on the left side. For example, if you select ID, it refers to the **ID** for the parent data source Category that you selected earlier Contact ID, Email ID, Asset ID, etc. It's recommended that you include **ID** in all Reports."
+msgstr ""
+
+#: ../reports/reports.rst:111
+msgid "**Order** - For sorting the data in the Report, select data Points. The available sort options are **Ascending** and **Descending**. To add multiple columns, click **Add Order**. For fields that use text, an **Ascending** order lists values starting with B after values starting with A and so on. For number or date fields, the higher the number or later the date, the lower on the list the row is. Descending order is the opposite."
+msgstr ""
+
+#: ../reports/reports.rst:115
+msgid "Adding multiple fields to order by uses the last one in the Order list first. Ordering by **First Name Ascending** and adding **Email Ascending**, for instance, sorts the Email column first and duplicate rows are then sorted by first name ascending."
+msgstr ""
+
+#: ../reports/reports.rst:117
+msgid "**Filters** -  Filter the data using conditions and values. This allows the generation of very granular Reports. This option helps you to narrow down the data included in the Report. The data Points used for filters don’t have to be columns that appear in the Report table. A commonly used filter for any Reports that include Contact record data is Email Not Empty, which displays only identified Contacts in the Report. Additional use cases can include Contacts or items that match a certain value, events happening within a certain date range, etc."
+msgstr ""
+
+#: ../reports/reports.rst:121
+msgid "Setting the **Dynamic** option to **Yes** makes it easier for Users viewing the Report to change the data they see without actually editing the Report. Users can see the filter by opening the **Filters** drop-down from the top of the Report page."
+msgstr ""
+
+#: ../reports/reports.rst:123
+msgid "**Group by** - Select the columns for which you want to group data. By default, Reports show all items individually. In many Reports, you may see the same Contact, Company, or item appear multiple times. To only see each record listed once, you can add a grouping based on some attribute for the record."
+msgstr ""
+
+#: ../reports/reports.rst:125
+msgid "You can use Email or Contact ID to display a single row per Contact record. For example, you can group by **Contact ID** to view the unique number of Asset Downloads or Form Submissions for a single Form, instead of total Asset Downloads or Form Submissions, which could include duplicates."
+msgstr ""
+
+#: ../reports/reports.rst:127
+msgid "**Calculated columns** - Select the function that you want to apply to individual columns. Calculated columns display count, average, sum, or the minimum or maximum values from a selected field. They're only available when using a grouping to show a calculation for that grouping. Continuing with the previous example of grouping by a Contact ID number or Email address, a COUNT calculation displays how many times that Contact record appears on the Report if not for the grouping."
+msgstr ""
+
+#: ../reports/reports.rst:130
+msgid "Graphs"
+msgstr ""
+
+#: ../reports/reports.rst:136
+msgid "Some Report types display graphs for visualization purposes. You can include such graphs in Reports and use them in Dashboard widgets."
+msgstr ""
+
+#: ../reports/reports.rst:138
+msgid "To select an available graph and add it to the Report, click the name of the graph to move it from the left column to the right."
+msgstr ""
+
+#: ../reports/reports.rst:139
+msgid "To remove a graph from a Report, click the name in the right column to move it to the left."
+msgstr ""
+
+#: ../reports/reports.rst:141
+msgid "The availability and types of graphs vary by Report type."
+msgstr ""
+
+#: ../reports/reports.rst:144
+msgid "Schedule"
+msgstr ""
+
+#: ../reports/reports.rst:146
+msgid "Mautic allows scheduling Emails to send downloadable links containing the Report data in the ``.csv`` file format."
+msgstr ""
+
+#: ../reports/reports.rst:148
+msgid "Use the toggle switch to turn on or off sending Reports via email."
+msgstr ""
+
+#: ../reports/reports.rst:150
+msgid "Email Report - Select **Yes** to see additional options."
+msgstr ""
+
+#: ../reports/reports.rst:152
+msgid "To - Specify the email addresses that should receive the Report. To send to multiple recipients, separate their email addresses with a comma. For example, ``example1@example.com``, ``example2@example.com``."
+msgstr ""
+
+#: ../reports/reports.rst:154
+msgid "**Every** - Select the frequency with which you'd like to automatically send the Report:"
+msgstr ""
+
+#: ../reports/reports.rst:156
+msgid "**now** - Sends the Report once, when it's saved."
+msgstr ""
+
+#: ../reports/reports.rst:157
+msgid "**day** - Sends the Report every day at midnight in your time zone."
+msgstr ""
+
+#: ../reports/reports.rst:158
+msgid "**week** - After selecting week, select the day of the week you'd like to send the Report. Mautic sends the Report at midnight in your time zone every week on the selected day."
+msgstr ""
+
+#: ../reports/reports.rst:159
+msgid "**month** - After selecting month, select either the first or last and a day of the week. For example, set your Report to be automatically sent on the first Monday or last Friday of each month."
+msgstr ""
+
+#: ../reports/reports.rst:161
+msgid "Alternatively, you can select Weekdays to send the Report on the first or last weekday of each month."
+msgstr ""
+
+#: ../reports/reports.rst:163
+msgid "Once you've set all of the options you'd like in the **Details**, **Data**, **Graphs**, and **Schedule** tabs, click **Save & Close** to save the Report. Clicking **Apply** saves the progress you've made on building the Report and keeps you in the edit mode."
+msgstr ""
+
+#: ../reports/reports.rst:168
+msgid "Cron job to schedule Reports"
+msgstr ""
+
+#: ../reports/reports.rst:172
+msgid "Mautic requires the following cron command to be able to send scheduled Reports:"
+msgstr ""
+
+#: ../reports/reports.rst:174
+msgid "``php /path/to/mautic/bin/console mautic:reports:scheduler [--report=ID]``"
+msgstr ""
+
+#: ../reports/reports.rst:176
+msgid "The ``--report=ID`` argument allows you to specify a Report by ID if required. For more information, see :ref:`Cron jobs<send scheduled reports cron job>`."
+msgstr ""
+
+#: ../reports/reports.rst:179
+msgid "Report options"
+msgstr ""
+
+#: ../reports/reports.rst:181
+msgid "Once you've saved the Report, it's listed under the Reports section in Mautic."
+msgstr ""
+
+#: ../reports/reports.rst:None
+msgid "Screenshots of Mautic Report Options"
+msgstr ""
+
+#: ../reports/reports.rst:187
+msgid "To view additional options for Report, click the drop-down menu next to the checkbox."
+msgstr ""
+
+#: ../reports/reports.rst:189
+msgid "**Edit** takes you directly to the edit mode, rather than clicking on the view page and editing from there."
+msgstr ""
+
+#: ../reports/reports.rst:191
+msgid "**Clone** copies the Report so that you can make small adjustments in a similar but new Report, while maintaining the original Report."
+msgstr ""
+
+#: ../reports/reports.rst:193
+msgid "**Export & Send** sends a link containing the ``.csv`` file with the Report data to the email address on your User profile."
+msgstr ""
+
+#: ../reports/reports.rst:195
+msgid "**Delete** deletes the Report immediately."
+msgstr ""
+
+#: ../reports/reports.rst:200
+msgid "Exporting Reports"
+msgstr ""
+
+#: ../reports/reports.rst:None
+msgid "Screenshots of Mautic Exporting Report"
+msgstr ""
+
+#: ../reports/reports.rst:208
+msgid "In addition to the **Schedule** and **Export & Send** features, Mautic supports exporting Reports in ``.csv,`` Excel, or HTML format. From the Reports list, click any Report. Open the drop-down menu in the top right corner and select the preferred export format."
+msgstr ""
+
+#: ../reports/reports.rst:210
+msgid "To download the Report immediately:"
+msgstr ""
+
+#: ../reports/reports.rst:212
+msgid "On the Schedule tab, do one of the following:"
+msgstr ""
+
+#: ../reports/reports.rst:214
+msgid "Select **No**."
+msgstr ""
+
+#: ../reports/reports.rst:215
+msgid "In the **Every** field, set the value to now."
+msgstr ""
+
+#: ../reports/reports.rst:217
+msgid "Click **Save & Close**."
+msgstr ""
+
+#: ../reports/reports.rst:219
+msgid "On the Report details page, click the dropdown on the top right and click **Export to CSV**."
+msgstr ""
+
+#: ../reports/reports.rst:221
+msgid "Reset the schedule as needed."
+msgstr ""
+
+#: ../reports/reports.rst:223
+msgid "Reporting data is also available to export by API. For more information, see the :xref:`Reports API documentation`."
 msgstr ""
