@@ -445,7 +445,7 @@ Contact tags and UTM codes can also be used.
 .. vale off
 
 Load Event
-~~~~~~~~~~
+==========
 
 .. vale on
 
@@ -454,24 +454,24 @@ As the JS tracking request is loaded asynchronously, you can ask JS to call a fu
 ``mt('send', 'pageview', {email: 'my@example.com', firstname: 'John'}, {onload: function() { alert("Tracking request is loaded"); }});``
 
 Tracking pixel
-^^^^^^^^^^^^^^
+***************
 
 It's recommended to use the tracking script with CORS properly configured instead of the tracking pixel. If that's not possible for whatever reason, the tracking pixel can be used. The tracking pixel uses third party cookies for tracking.
 
 ``https://example.com/mtracking.gif``
 
 Tracking pixel query
-********************
+====================
 
 To get the most out of the tracking pixel, it's recommended that you pass information of the web request through the image URL.
 
 Page information
-""""""""""""""""
+================
 
 Mautic currently supports ``page_url``, ``referrer``, ``language``, and ``page_title`` (note that the use of ``url`` and ``title`` are deprecated due to conflicts with contact fields).
 
 UTM code
-""""""""
+--------
 
 Currently, ``utm_medium``, ``utm_source``, ``utm_campaign``, ``utm_content``, and ``utm_term`` are used to generate the content in a new timeline entry.
 
@@ -507,33 +507,33 @@ All the UTM tags are available in the time entry, just by toggling the entry det
 Please note that UTM tags are recorded only on a Form submission that contains the action "Record UTM Tags".
 
 Contact fields
-""""""""""""""
+--------------
 
 You can also pass information specific to your Contact by setting Mautic Contact ``field(s)`` to be publicly editable. Note that values appended to the tracking pixel should be ``url`` encoded (%20 for spaces, %40 for @, etc).
 
 Tags
-""""
+----
 
 The Contact's Tags can be changed by using the ``tags`` query parameter. Multiple Tags can be separated by comma. To remove a Tag, prefix it with a dash (minus sign).
 
 For example, ``mtracking.gif?tags=ProductA``,-ProductB would add the ProductA Tag to the Contact and remove ProductB.
 
 Embedding the pixel
-~~~~~~~~~~~~~~~~~~~
+===================
 
-If you are using a CMS, the easiest way is to let one of our plugins do this for you (see below). Note that the plugins may not support all contact fields, UTM codes or contact tags.
+If you are using a CMS, the easiest way is to let one of our Plugins do this for you (see below). Note that the Plugins may not support all Contact fields, UTM codes or Contact tags.
 
 Here are a couple code snippets that may help as well:
 
 HTML
-""""
+----
 
 .. code-block:: shell
 
     <img src="https://example.com/mtracking.gif?page_url=http%3a%2f%2fexample.com%2fyour-product-page&page_title=Some%20Cool%20Product&email=user%40theirdomain.com&tags=ProductA,-ProductB" style="display: none;"  alt="mautic is open source marketing automation" />
 
 PHP
-"""
+---
 
 .. code-block:: php
 
@@ -546,7 +546,7 @@ PHP
     echo '<img src="https://example.com/mtracking.gif?d=' . $d . '" style="display: none;" />';
 
 JavaScript
-""""""""""
+----------
 
 .. code-block::
 
@@ -565,7 +565,7 @@ JavaScript
 .. vale off
 
 Available Plugins
-"""""""""""""""""
+-----------------
 
 .. vale on
 
@@ -589,7 +589,7 @@ These are just a few of the Integrations already created by the Mautic community
     It's important to note that you aren't limited by these Plugins and you can place the tracking pixel directly on any HTML page for website tracking.
 
 Identify visitors by tracking URL
-"""""""""""""""""""""""""""""""""
+---------------------------------
 
 There is a configuration section for identifying visitors by tracking URL although this isn't recommended for use because it could be used to spoof tracking. If enabled, returning visitors will be identified by tracking URLs from channels (especially from emails) when no cookie exists yet.
 
@@ -675,8 +675,12 @@ Campaign action Send tracking event
 
 There is a Campaign action which allows you to send a custom event to Google Analytics or Facebook Pixel - it depends on there being a 'Visits a page' decision immediately before it in the campaign workflow.
 
+.. vale off
+
 How to test Google Analytics tracking code and campaign action
 ==============================================================
+
+.. vale on
 
 * Install **Tag Assistant** and enable recording on your website
 * Create campaign with the 'Visits a page' decision and 'Send tracking event' action

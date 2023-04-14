@@ -135,7 +135,7 @@ You can use :ref:`Preference Center Landing Page tokens` to insert the different
 
 |
 
-See the :doc:`Variables</configuration/variables>` documentation for a full list of tokens available for use with a Preference Center.
+See the :ref:`Variables<preference center landing page tokens>` documentation for a full list of tokens available for use with a Preference Center.
 
 In addition, add a **Save preferences** button if you wish to save the preferences, otherwise the Contact can't save their preferences:
 
