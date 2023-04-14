@@ -58,7 +58,7 @@ Use any of those actions to test the Plugin and see if the Contact appears in th
 5. Ensure that the Integration created the new Contact.
 
 Troubleshooting
-~~~~~~~~~~~~~~~
+---------------
 
 If the ``firstname`` value wasn't saved to the Integration:
 
