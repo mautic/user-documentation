@@ -1,7 +1,11 @@
 Stages
 ######
 
-Mautic Stages provide a means for Users to track and manage the progress of their Contacts through the various Stages of the marketing lifecycle or funnel. By categorizing Contacts into different Stages, Users can better understand their engagement with the brand and tailor their marketing strategies accordingly. Once you have created your Stages, you can easily move Contacts from one Stage to another based on their behavior or other criteria. 
+Mautic Stages provide a means for Users to track and manage the progress of their Contacts through the various phases of the marketing lifecycle or funnel. 
+
+By categorizing Contacts into different Stages, you can better understand their engagement with the brand and tailor your marketing strategies accordingly. 
+
+Once you have created your Stages, you can easily move Contacts from one Stage to another based on their behavior or other criteria. 
 
 .. vale off
 
@@ -35,7 +39,11 @@ Moving Contacts between Stages
 
 .. vale on
 
-Moving Contacts between Stages requires a Campaign action. Depending on how you define your Contact lifecycle and Stages, there may be different triggers for a Contact to move between Stages. Examples include behaviors within a Campaign, or moving between Segments which have criteria set up for each Stage. In any Campaign where you want to have Contacts move between new Stages:
+Moving Contacts between Stages requires a Campaign action. 
+
+Depending on how you define your Contact lifecycle and Stages, there may be different triggers for a Contact to move between Stages. Examples include behaviors within a Campaign, or moving between Segments which have criteria set up for each Stage. 
+
+In any Campaign where you want to have Contacts move between new Stages:
 
 .. image:: images/switch-stage.png
    :align: center
@@ -53,7 +61,7 @@ For more information on setting up Campaigns, see :ref:`triggering campaign even
 
 .. note:: 
 
-    It's not possible to move a Contact to a Stage which has a lesser weight than their current Stage. For example if they're currently in Stage B which has a weight of 50, you cann't move them to Stage A which has a weight of 25.
+    It's not possible to move a Contact to a Stage which has a lesser weight than their current Stage. For example if they're currently in Stage B which has a weight of 50, you can't move them to Stage A which has a weight of 25.
 
 .. vale off
 
