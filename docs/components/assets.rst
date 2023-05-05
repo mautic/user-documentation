@@ -92,8 +92,20 @@ Instead of uploading a file from your computer, you can either provide a link to
 
 .. vale off
 
+Add UTM tracking codes to an Asset
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. vale on
+
+UTM parameters appended to the download link means that UTM data is available in the resource download Report.
+
+.. code-block:: php
+``/asset/{id}:{name}?utm_source=test&utm_medium=test&utm_campaign=test&utm_id=test&utm_term=test&utm_content=test``
+
+.. vale off
+
 Viewing an Asset
-~~~~~~~~~~~~~~~~
+================
 
 .. vale on
 
@@ -111,7 +123,7 @@ To ensure that Contacts are providing you with valid Email addresses for high-va
 .. vale off
 
 Editing an Asset
-~~~~~~~~~~~~~~~~
+================
 
 .. vale on
 
@@ -120,7 +132,7 @@ You can edit an Asset by clicking on the 'edit' button while viewing the Asset, 
 .. vale off
 
 Deleting an Asset
-~~~~~~~~~~~~~~~~~
+=================
 
 .. vale on
 
