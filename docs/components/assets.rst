@@ -35,6 +35,15 @@ Navigate to Components > Assets. Mautic lists any Assets you have previously cre
 
 You create Assets by uploading local resources on your computer, or by locating the Asset from a remote storage host such as Amazon S3. There are limitations by size due to the settings of your server - any such restriction may display as a warning message in the file upload section.
 
+Add UTM to Asset
+~~~~~~~~~~~~~~~~~~
+UTM parameters appended to the download link means that UTM data is available in the resource download Report.
+
+.. code-block:: php
+
+``/asset/{id}:{name}?utm_source=test&utm_medium=test&utm_campaign=test&utm_id=test&utm_term=test&utm_content=test``
+
+
 .. vale off
 
 Uploading an Asset
@@ -128,14 +137,5 @@ It's possible to delete an Asset by clicking on the 'delete' button while viewin
 
 .. warning:: 
     Once deleted, you can't retrieve an Asset, and statistics relating to the number of downloads for that Asset are no longer be available. Contact Points accumulated as a result of accessing the resource remain. It's recommended where possible to unpublish Assets which are no longer in use - in future there may be an archive feature.
-    
-
-Add UTM to Asset
-================
-UTM parameters appended to the download link means that UTM data is available in the resource download Report.
-
-.. code-block:: php
-
-``/asset/{id}:{name}?utm_source=test&utm_medium=test&utm_campaign=test&utm_id=test&utm_term=test&utm_content=test``
     
 
