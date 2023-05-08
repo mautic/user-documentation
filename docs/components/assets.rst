@@ -132,7 +132,7 @@ It's possible to delete an Asset by clicking on the 'delete' button while viewin
 
 Add UTM to Asset
 ================
-You can add a resource of UTM parameters to the download link. We can use UTM data in the resource download report.
+UTM parameters appended to the download link means that UTM data is available in the resource download Report.
 
 .. code-block:: php
 
