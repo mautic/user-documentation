@@ -28,7 +28,7 @@ Navigate to the **Stages** section in the left side menu, and then click **+New*
 
 **Weight** - Used to decide the progression of your Stages. The greater the Stage weight number, the further along in the funnel a Contact is. Contacts can't move backwards to Stages with lower weights.
 
-**Category** - You can have multiple funnels with different Stages, and multiple Stages across those funnels or Categories with the same weight. A Contact can only ever be in one Stage at a time, and can't move backwards in Stages. For more information, see :ref:`categories`.
+**Category** - Assign a Category to help you organize your Stages. For more information, see :ref:`categories`.
 
 **Publish options** - The dashboard widget doesn't display data for an unpublished Stage. In addition, the Segment filters or Campaign conditions don't display the Stage. To avoid using the Stage while building it, set a future publish date and time. If you want the Stage to become unavailable after a certain time, set the date and time for unpublishing.
 
@@ -61,7 +61,7 @@ For more information on setting up Campaigns, see :ref:`triggering campaign even
 
 .. note:: 
 
-    It's not possible to move a Contact to a Stage which has a lesser weight than their current Stage. For example if they're currently in Stage B which has a weight of 50, you can't move them to Stage A which has a weight of 25.
+    You can have multiple funnels with different Stages, and multiple Stages across those funnels with the same weight. A Contact can only ever be in one Stage at a time. It's not possible to move a Contact to a Stage which has a lesser weight than their current Stage. For example if they're currently in Stage B which has a weight of 50, you can't move them to Stage A which has a weight of 25. 
 
 .. vale off
 
