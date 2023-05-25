@@ -127,6 +127,35 @@ If you search through the list of available Themes, the new MJML Themes ``Brienz
 
 To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`. 
 
+Custom fonts
+************
+
+The Style Manager > Typography > Fonts list can be extended to include custom fonts.
+
+.. image:: images/editorfonts.jpg
+  :width: 280
+  :alt: Screenshot of the Fonts in Style Manager > Typography
+
+New options are defined as elements of the ``'editor_fonts'`` array in the local configuration file (most cases ``app/config/local.php``). The font should have a unique name and a valid css style url. See example below:
+
+.. code-block:: php
+
+    <?php
+    // Example local.php
+    'editor_fonts' => array(
+        '0' => array(
+            'name' => 'Smokum',
+            'font' => 'Smokum, cursive',
+            'url' => 'https://fonts.googleapis.com/css2?family=Smokum&display=swap'
+        ),
+        '1' => array(
+            'name' => 'Sofia',
+            'font' => 'Sofia, sans-serif',
+            'url' => 'https://fonts.googleapis.com/css?family=Sofia'
+        )
+    ),
+
+
 Reporting bugs
 ***************
 
