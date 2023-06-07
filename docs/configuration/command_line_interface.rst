@@ -88,7 +88,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``mautic:campaigns:rebuild``
      - Rebuild Campaigns based on Contact Segments.
-     - ``mautic:messages:update``
+     - ``mautic:campaigns:update``
    * - ``mautic:campaigns:trigger``
      - Trigger timed events for published Campaigns.
      - 
@@ -109,7 +109,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``mautic:email:fetch``
      - Fetch and process monitored Email.
-     - ``mautic:email:fetch``
+     - ``mautic:emails:fetch``
    * - ``mautic:emails:send``
      - Processes mail queue
      - 
