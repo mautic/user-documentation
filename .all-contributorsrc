@@ -41,6 +41,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "putzwasser",
+      "name": "putzwasser",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26040044?v=4",
+      "profile": "https://github.com/putzwasser",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
