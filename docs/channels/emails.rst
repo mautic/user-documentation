@@ -287,7 +287,7 @@ Mautic works most effectively with high send volumes if you use the queued deliv
 
 .. code-block:: shell
     
-    php /path/to/mautic/bin/console mautic:email:process
+    php /path/to/mautic/bin/console messenger:consume email_transport
 
 Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
 
