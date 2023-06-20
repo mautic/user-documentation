@@ -225,14 +225,14 @@ Marketers can place the signature into an Email using the ``{signature}`` token.
 Email delivery
 ##############
 
-Mautic delivers Emails using the method defined by the system administrator. If you are the system administrator for your Company, then you need to add the Email protocol for your Mautic instance to use. Mautic integrates with any Email service provider which offers SMTP mail servers. As Mautic uses the :xref:`Symfony Mailer` library since v5, it supports its core plugins. Transports for other email services might be found on Github or Packagist.
+As Mautic uses the :xref:`Symfony Mailer` library since v5, it supports all Symfony Mailer core plugins out of the box. Transports for other Email services might be found on GitHub or Packagist.
 
-SMTP Transport
+SMTP transport
 **************
 
-The SMTP transport is the default transport for Mautic. It's configured in the Mautic configuration under the Email Settings tab. The configuration is the same as in the :xref:`Symfony Mailer` documentation.
+The SMTP transport is the default transport used for sending Emails with Mautic. It's configured in the Mautic configuration under the Email Settings tab. The configuration is the same as in the :xref:`Symfony Mailer` documentation.
 
-This is the example DSN mentioned in the :xref:`Symfony Mailer` documentation for SMTP:
+Mautic now uses a specific way of providing the connection details for Email transports to interpret, which is called a Data Source Name, or DSN. This is the example Data Source Name configuration mentioned in the :xref:`Symfony Mailer` documentation for SMTP:
 
 .. code-block:: shell
     
@@ -245,33 +245,39 @@ This is how this DSN converted to Mautic's email configuration:
     :alt: SMTP API DSN example
 
 .. note::
-  Use the Mautic's global configuration to paste in the DSN information. Especially the API keys and passwords. The values must be URL-encoded and the configuration form will do that for you. If you are pasting DSN directly into the config/local.php file, you must URL-encode the values yourself.
+  Use the Mautic's global configuration to paste in the DSN information, especially the API keys and passwords. The values must be URL-encoded, and the configuration form does that for you. If you are pasting DSN settings directly into the config/local.php file, you must URL-encode the values yourself.
 
-Example API Transport Installation
+
+.. vale off
+
+Example API transport installation
+
+.. vale on
+
 **********************************
 
-Let's say you want to use :xref:`Sendgrid` API instead of SMTP to send Emails. You can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation.
+If you want to use :xref:`Sendgrid` API instead of SMTP to send Emails, for example, you can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation.
 
 .. code-block:: shell
     
     composer require symfony/sendgrid-mailer
 
-After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In case of Sendgrid API, the DSN would look like this:
+After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In the example of using the Sendgrid API, the DSN looks like this:
 
 .. code-block:: shell
     
     sendgrid+api://KEY@default
 
-This is how this DSN converted to Mautic's email configuration:
+This is how it would be set up in Mautic's Email configuration:
 
   .. image:: images/emails/sendgrid-api-dsn.png
     :width: 400
     :alt: Sendgrid API DSN example
 
-Once you replace the Sendgrid API KEY, you can add it to the DSN and save the configuration. Mautic will now use the Sendgrid API to send Emails. 
+To replace the Sendgrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the Sendgrid API to send Emails. 
 
-.. note::
-  It is nice perk that Mautic can use any Symfony Mailer transport. However, be aware that such transport do not support batch sending even via API. They only send one email per request opposed to a thousand emails per request as some special Mautic tansports can. It also does not support transport callback handling. If you plan to send bigger ammounts of emails please consider using email transports built specifically for such use. These plugins are available in :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
+.. warning::
+  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
 
 The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`.
 
