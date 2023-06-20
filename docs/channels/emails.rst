@@ -386,7 +386,10 @@ If you select an Unsubscribe folder, Mautic also appends the Email as part of th
 Webhook bounce management
 *************************
 
-Since Mautic 5 all the email transport use the same webhook (sometimes called callback) URL as ``https://mautic.example.com/mailer/callback``. Please follow the documentation for the specific email transport you've installed to get more information about the webhook configuration.
+Since Mautic 5 all the Email transports use the same Webhook (sometimes called callback) URL: ``https://mautic.example.com/mailer/callback``. Please follow the documentation for the specific Email transport you've installed to get more information about the Webhook configuration.
+
+
+.. vale off
 
 Create a Segment with bounced Emails
 ************************************
