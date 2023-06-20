@@ -285,11 +285,11 @@ msgstr ""
 msgid "Fetch and process monitored Email, you can also use the alias of ``mautic:email:fetch``."
 msgstr ""
 
-#: ../configuration/command_line_interface.rst:107
-msgid "mautic:emails:send"
+#: ../configuration/command_line_interface.rst:113
+msgid "``messenger:consume email_transport``"
 msgstr ""
 
-#: ../configuration/command_line_interface.rst:108
+#: ../configuration/command_line_interface.rst:114
 msgid "Processes mail queue"
 msgstr ""
 

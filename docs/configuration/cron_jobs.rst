@@ -101,7 +101,7 @@ If the system configuration is queueing Emails, a cron job processes them.
 
 .. code-block:: php
 
-    php /path/to/mautic/bin/console mautic:emails:send
+    php /path/to/mautic/bin/console messenger:consume email_transpor
 
 .. vale off
 
