@@ -238,11 +238,41 @@ Mautic now uses a specific way of providing the connection details for Email tra
     
     smtp://user:pass@smtp.example.com:port
 
-This is how this DSN converted to Mautic's email configuration:
+Mautic creates this automatically from the values entered in the Email configuration:
 
 .. image:: images/emails/smtp-dsn.png
     :width: 400
     :alt: SMTP API DSN example
+
+.. list-table:: Example DSN ``smtp://user:pass@smtp.example.com:port/path?option1=value1&option2=value2`` explained
+    :widths: 10 20 150
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - DSN part
+      - Example
+      - Explanation
+    * - Scheme
+      - smtp
+      - Defines which email transport (plugin) will handle the email sending. It also defines which other DSN parts must be present.
+    * - User
+      - john
+      - Some transport wants username and password to authenticate the connection. Some public or private key. Some just API key.
+    * - Password
+      - pa$$word
+      - As mentioned above, read documentation for your particular transport and fill in the fields that are required. For SMPT this is for password.
+    * - Host
+      - smtp.mydomain.com
+      - For SMTP this is the domain name where your SMTP server is running. Other transports may have the domain handled inside it so many wants to put just ``default`` text here.
+    * - Path
+      - any/path
+      - This is usually empty. For SMTP this may be the path to the SMTP server. For other transports this may be the path to the API endpoint.
+    * - Port
+      - 465
+      - Important for SMTP. The port value defines which encryption is used. This is usually 465 for SSL or 587 for TLS. Avoid using port 25 for security reasons. For other transports this may be the port to the API endpoint.
+    * - Options
+      - timeout=10
+      - This is optional. This may be the timeout for the connection or similar configuration. The config form will allow you to create multiple options.
 
 .. note::
   Use the Mautic's global configuration to paste in the DSN information, especially the API keys and passwords. The values must be URL-encoded, and the configuration form does that for you. If you are pasting DSN settings directly into the config/local.php file, you must URL-encode the values yourself.
