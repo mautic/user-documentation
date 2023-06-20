@@ -333,8 +333,8 @@ msgstr ""
 "``mautic:email:fetch``."
 
 #: ../configuration/command_line_interface.rst:107
-msgid "messenger:consume email_transpor"
-msgstr "messenger:consume email_transpor"
+msgid "messenger:consume email_transport"
+msgstr "messenger:consume email_transport"
 
 #: ../configuration/command_line_interface.rst:108
 msgid "Processes mail queue"
