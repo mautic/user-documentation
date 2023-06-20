@@ -255,6 +255,8 @@ Example API transport installation
 .. vale on
 
 **********************************
+.. warning::
+  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`. 
 
 If you want to use :xref:`Sendgrid` API instead of SMTP to send Emails, for example, you can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation.
 
