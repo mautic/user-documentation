@@ -1,4 +1,4 @@
-LOCAL.PHP fields overview
+Local.php fields overview
 #########################
 
 You can manage most, but not all, Mautic configurations in the User Interface.
