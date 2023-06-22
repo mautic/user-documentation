@@ -181,7 +181,7 @@ There are different types of documentation available to help you navigate your w
 
    points/points
    points/points_troubleshooting
-   points/point_leagues
+   points/point_groups
 
 .. toctree::
    :maxdepth: 2
