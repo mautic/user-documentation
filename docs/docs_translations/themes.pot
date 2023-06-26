@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mautic Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"POT-Creation-Date: 2023-03-17 15:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,312 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../themes/code_mode.rst:4
-msgid "Code Mode"
+msgid "Code mode"
+msgstr ""
+
+#: ../themes/code_mode.rst:8
+msgid "Code Mode is an option available in the Email and Landing Page edit Form. It allows you to create/insert/edit your content in HTML code. It's helpful for situations where you don't want to use a Mautic Theme and you want to use an HTML Theme copied from a third party Theme builder, or if you prefer editing HTML code directly."
+msgstr ""
+
+#: ../themes/code_mode.rst:10
+msgid "The other option to edit Landing Page/Email content is to use the built-in drag-and-drop GrapesJS Builder. Read more in the :doc:`/builders/email_landing_page` section."
+msgstr ""
+
+#: ../themes/code_mode.rst:13
+msgid "Select the Code mode"
+msgstr ""
+
+#: ../themes/code_mode.rst:15
+msgid "If you want to work with existing HTML, select code mode from the Theme selector. To open the code mode Builder, click the advanced tab which appears."
+msgstr ""
+
+#: ../themes/code_mode.rst:None
+msgid "Screenshot of code mode builder"
+msgstr ""
+
+#: ../themes/code_mode.rst:22
+msgid "Limitations"
+msgstr ""
+
+#: ../themes/code_mode.rst:24
+msgid "If you use a Mautic Theme to create the Landing Page/Email and you subsequently want to edit the HTML code, you should think carefully about doing this."
+msgstr ""
+
+#: ../themes/code_mode.rst:26
+msgid "Once you switch from a Theme to Code Mode, content becomes HTML and you can't switch back to the Theme again."
+msgstr ""
+
+#: ../themes/code_mode.rst:28
+msgid "Selecting a Theme replaces the content with that of the default Theme, so you'll lose your modifications."
+msgstr ""
+
+#: ../themes/code_mode.rst:30
+msgid "Instead, to make small code changes to an existing Theme, it's recommended to use the code mode built into the GrapesJS Builder."
+msgstr ""
+
+#: ../themes/code_mode.rst:None
+msgid "Screenshot of code mode"
+msgstr ""
+
+#: ../themes/code_mode.rst:39
+msgid "Edit the HTML content in the code mode Builder"
+msgstr ""
+
+#: ../themes/code_mode.rst:43
+msgid "In code mode, you can see the HTML content in the text area under the Advanced tab. There is no preview at this time."
+msgstr ""
+
+#: ../themes/code_mode.rst:46
+msgid "Mautic tokens"
+msgstr ""
+
+#: ../themes/code_mode.rst:48
+msgid "You can use the tokens in the code mode Builder by typing them directly into your code. For example when you type ``{contactfield=firstname}``."
 msgstr ""
 
 #: ../themes/customizing_themes.rst:4
 msgid "Customizing Themes"
 msgstr ""
 
+#: ../themes/customizing_themes.rst:8
+msgid "It's possible to customize Themes, or even to create your own from scratch, with Mautic. To do this go to the Theme Manager, open the drop down menu next to the pre-installed Theme you want to modify and download it."
+msgstr ""
+
+#: ../themes/customizing_themes.rst:13
+msgid "Customizing an existing Theme"
+msgstr ""
+
+#: ../themes/customizing_themes.rst:17
+msgid "To customize the downloaded Theme, review the :xref:`themes developer documentation` for detailed guidance."
+msgstr ""
+
 #: ../themes/manage_themes.rst:4
 msgid "Manage Themes"
 msgstr ""
 
+#: ../themes/manage_themes.rst:8
+msgid "Themes control the look and feel of the Mautic Landing Pages, Emails, Forms and Message screens."
+msgstr ""
+
+#: ../themes/manage_themes.rst:10
+msgid "A basic Mautic installation comes pre-packaged with a number of Themes for you to use 'as-is' or adapt to suit specific projects."
+msgstr ""
+
+#: ../themes/manage_themes.rst:12
+msgid "It's also possible to :xref:`create a Theme` for Mautic from scratch."
+msgstr ""
+
+#: ../themes/manage_themes.rst:14
+msgid "Access the Theme Manager via the Admin Menu. Click the cog icon in the top right corner to open it and select the Theme menu item."
+msgstr ""
+
+#: ../themes/manage_themes.rst:16
+msgid "The Themes section displays the list of Themes with the following details:"
+msgstr ""
+
+#: ../themes/manage_themes.rst:18
+msgid "**Title** - The name or title of the Theme."
+msgstr ""
+
+#: ../themes/manage_themes.rst:20
+msgid "**Author** - The name of the author or creator of the Theme."
+msgstr ""
+
+#: ../themes/manage_themes.rst:22
+msgid "**Feature** - The list of features and Builders that the Theme supports."
+msgstr ""
+
+#: ../themes/manage_themes.rst:None
+msgid "Screenshot of Theme list"
+msgstr ""
+
+#: ../themes/manage_themes.rst:28
+msgid "This list of Themes appears as selectable options in Forms, as this allows you to provide styling for Forms."
+msgstr ""
+
+#: ../themes/manage_themes.rst:30
+msgid "Additionally, you can edit and customize Themes in the Email and Landing Page builders to meet your needs."
+msgstr ""
+
+#: ../themes/manage_themes.rst:32
+msgid "With the Email and Landing Page builders, you can start from a template and build your own variations using the drag-and-drop Builder. For more information, see :doc:`Email builder</builders/email_landing_page>` and :doc:`Landing Pages</components/landing_pages>`."
+msgstr ""
+
+#: ../themes/manage_themes.rst:37
+msgid "Installing a Theme"
+msgstr ""
+
+#: ../themes/manage_themes.rst:41
+msgid "It's necessary to install a new or edited Theme as a zip package. The zip package must have the same structure as the preinstalled Themes and the config.json file must be present in the root folder of the zip package. The :xref:`themes developer documentation` contains more on that."
+msgstr ""
+
+#: ../themes/manage_themes.rst:45
+msgid "You must select and zip all the files when creating the zip package. Ensure that you don't zip the files within a folder, otherwise the Theme won't install."
+msgstr ""
+
+#: ../themes/manage_themes.rst:47
+msgid "You can build and install your own Forms Theme using Twig, and you can also install BeeFree templates as Themes."
+msgstr ""
+
+#: ../themes/manage_themes.rst:49
+msgid "To install a Theme:"
+msgstr ""
+
+#: ../themes/manage_themes.rst:51
+#: ../themes/manage_themes.rst:72
+#: ../themes/manage_themes.rst:93
+#: ../themes/manage_themes.rst:114
+#: ../themes/manage_themes.rst:156
+msgid "Log in to Mautic."
+msgstr ""
+
+#: ../themes/manage_themes.rst:53
+#: ../themes/manage_themes.rst:74
+#: ../themes/manage_themes.rst:95
+#: ../themes/manage_themes.rst:116
+#: ../themes/manage_themes.rst:158
+msgid "Click the **Settings** icon."
+msgstr ""
+
+#: ../themes/manage_themes.rst:55
+#: ../themes/manage_themes.rst:76
+#: ../themes/manage_themes.rst:97
+#: ../themes/manage_themes.rst:118
+msgid "Click **Themes**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:57
+msgid "On the Themes section, in the top-right corner, click **Choose file**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:59
+msgid "Browse and select the Theme."
+msgstr ""
+
+#: ../themes/manage_themes.rst:61
+msgid "Click **Install**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:66
+msgid "Deleting a Theme"
+msgstr ""
+
+#: ../themes/manage_themes.rst:70
+msgid "To delete a user-created Theme:"
+msgstr ""
+
+#: ../themes/manage_themes.rst:78
+msgid "In the Themes section, locate the Theme that you want to delete."
+msgstr ""
+
+#: ../themes/manage_themes.rst:80
+msgid "Select the drop-down before the Theme, and click **Delete**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:82
+msgid "In the confirmation dialog box, click **Delete**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:87
+msgid "Previewing a Theme"
+msgstr ""
+
+#: ../themes/manage_themes.rst:91
+msgid "To preview a Theme:"
+msgstr ""
+
+#: ../themes/manage_themes.rst:99
+msgid "In the Themes section, locate the Theme that you want to preview."
+msgstr ""
+
+#: ../themes/manage_themes.rst:101
+msgid "Select the drop-down before the Theme, and click **Preview**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:103
+msgid "Mautic displays the preview of the Theme."
+msgstr ""
+
+#: ../themes/manage_themes.rst:108
+msgid "Downloading a Theme"
+msgstr ""
+
+#: ../themes/manage_themes.rst:112
+msgid "To download a Theme:"
+msgstr ""
+
+#: ../themes/manage_themes.rst:120
+msgid "In the Themes section, locate the Theme that you want to download."
+msgstr ""
+
+#: ../themes/manage_themes.rst:122
+msgid "Select the drop-down before the Theme, and click **Download**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:124
+msgid "Upon downloading a Theme on your local machine, you can modify it following the structure outlined in the :xref:`create a Theme` section of the Developer Documentation before reinstalling it for use in your instance."
+msgstr ""
+
+#: ../themes/manage_themes.rst:129
+msgid "Update an old Theme"
+msgstr ""
+
+#: ../themes/manage_themes.rst:133
+msgid "Mautic overwrites old Theme files when installing a Theme which already exists in Mautic. Therefore, the Theme updates can be also done by uploading the Theme with the new changes."
+msgstr ""
+
+#: ../themes/manage_themes.rst:135
+msgid "Pre-installed Themes can't be overwritten, because the changes would return again after a Mautic update. If you want to change these Themes, download them and modify them to create a new, custom Theme, as outlined previously."
+msgstr ""
+
+#: ../themes/manage_themes.rst:140
+msgid "Assigning a default Theme"
+msgstr ""
+
+#: ../themes/manage_themes.rst:144
+msgid "You can assign your Mautic instance a default Theme for Landing Pages. Then use the Landing Page Builder to fill in the content for each new Landing Page you create."
+msgstr ""
+
+#: ../themes/manage_themes.rst:None
+msgid "Screenshot of Theme"
+msgstr ""
+
+#: ../themes/manage_themes.rst:152
+msgid "Changing the Theme after building the Page may cause content to not display if the two Themes don't use the same placeholders."
+msgstr ""
+
+#: ../themes/manage_themes.rst:154
+msgid "To assign a default Theme:"
+msgstr ""
+
+#: ../themes/manage_themes.rst:160
+msgid "Click **Configuration**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:162
+msgid "Click Theme **Settings**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:164
+msgid "From the dropdown menu, select the Theme that you want to use as default."
+msgstr ""
+
+#: ../themes/manage_themes.rst:166
+msgid "Click **Save & Close**."
+msgstr ""
+
+#: ../themes/manage_themes.rst:168
+msgid "Themes are available to select for Emails and Landing Pages when creating them - this setting pre-selects the Theme chosen by default."
+msgstr ""
+
+#: ../themes/manage_themes.rst:None
+msgid "Screenshot of all Themes"
+msgstr ""
+
 #: ../themes/theme_structure.rst:4
 msgid "Theme Structure"
+msgstr ""
+
+#: ../themes/theme_structure.rst:8
+msgid "Visit the :xref:`themes developer documentation` about Themes for details about the Theme structure."
 msgstr ""

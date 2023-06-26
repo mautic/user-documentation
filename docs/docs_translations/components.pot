@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mautic Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"POT-Creation-Date: 2023-06-06 12:16+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,19 +56,31 @@ msgstr ""
 msgid "You create Assets by uploading local resources on your computer, or by locating the Asset from a remote storage host such as Amazon S3. There are limitations by size due to the settings of your server - any such restriction may display as a warning message in the file upload section."
 msgstr ""
 
-#: ../components/assets.rst:41
+#: ../components/assets.rst:39
+msgid "Add UTM to Asset"
+msgstr ""
+
+#: ../components/assets.rst:40
+msgid "UTM parameters appended to the download link means that UTM data is available in the resource download Report."
+msgstr ""
+
+#: ../components/assets.rst:44
+msgid "``/asset/{id}:{name}?utm_source=test&utm_medium=test&utm_campaign=test&utm_id=test&utm_term=test&utm_content=test``"
+msgstr ""
+
+#: ../components/assets.rst:50
 msgid "Uploading an Asset"
 msgstr ""
 
-#: ../components/assets.rst:45
+#: ../components/assets.rst:54
 msgid "To upload an Asset, either drag the file into the box, or click in the box to open a file upload window. On selection of the file, it's automatically uploaded and appears in the boxed area."
 msgstr ""
 
-#: ../components/assets.rst:47
+#: ../components/assets.rst:56
 msgid "By default Mautic allows the following file types:"
 msgstr ""
 
-#: ../components/assets.rst:53
+#: ../components/assets.rst:62
 msgid "If you need to add extra file types, configure the maximum size of upload or the Assets directory, navigate to Configuration > Asset Settings."
 msgstr ""
 
@@ -76,49 +88,49 @@ msgstr ""
 msgid "Screenshot of Asset settings"
 msgstr ""
 
-#: ../components/assets.rst:59
+#: ../components/assets.rst:68
 #: ../components/dynamic_web_content.rst:112
 #: ../components/forms.rst:23
 msgid "The following fields are available:"
 msgstr ""
 
-#: ../components/assets.rst:61
+#: ../components/assets.rst:70
 msgid "**Title** - the title for the Asset"
 msgstr ""
 
-#: ../components/assets.rst:62
+#: ../components/assets.rst:71
 msgid "**Alias** - used to create the slug on the download URL. Created from the title automatically if not provided."
 msgstr ""
 
-#: ../components/assets.rst:63
+#: ../components/assets.rst:72
 msgid "**Description** - an internally used description to inform other Mautic Users what the Asset is and/or where it's used."
 msgstr ""
 
-#: ../components/assets.rst:64
+#: ../components/assets.rst:73
 msgid "**Category** - used to organize resources - see :doc:`/categories/categories-overview` for more information"
 msgstr ""
 
-#: ../components/assets.rst:65
+#: ../components/assets.rst:74
 msgid "**Language** - the language of this Asset - can be helpful in multilingual marketing Campaigns and for reporting purposes"
 msgstr ""
 
-#: ../components/assets.rst:66
+#: ../components/assets.rst:75
 msgid "**Published** - Whether the Asset is available for use - published - or not available - unpublished"
 msgstr ""
 
-#: ../components/assets.rst:70
+#: ../components/assets.rst:79
 msgid "**Publish at (date/time)** - This allows you to define the date and time at which this Asset is available"
 msgstr ""
 
-#: ../components/assets.rst:72
+#: ../components/assets.rst:81
 msgid "**Unpublish at (date/time)** - This allows you to define the date and time at which this Asset ceases to be available"
 msgstr ""
 
-#: ../components/assets.rst:76
+#: ../components/assets.rst:85
 msgid "**Block search engines from indexing this file** - If you don't want to index files like PDF, DOCx and so forth, setting this switch to Yes sends the X-Robots-Tag no-index http header. If set to No, the header isn't sent and your files could become indexed by search engines."
 msgstr ""
 
-#: ../components/assets.rst:78
+#: ../components/assets.rst:87
 msgid "Depending on the type of file uploaded, a preview may display after the upload completes."
 msgstr ""
 
@@ -126,55 +138,55 @@ msgstr ""
 msgid "Screenshot of create new Asset interface"
 msgstr ""
 
-#: ../components/assets.rst:87
+#: ../components/assets.rst:96
 msgid "Using remote Assets"
 msgstr ""
 
-#: ../components/assets.rst:91
+#: ../components/assets.rst:100
 msgid "Instead of uploading a file from your computer, you can either provide a link to a file on a cloud storage provider or browse your integrated cloud storage provider - for example an Amazon S3 bucket - by selecting the Remote tab, rather than Local."
 msgstr ""
 
-#: ../components/assets.rst:96
+#: ../components/assets.rst:105
 msgid "Viewing an Asset"
 msgstr ""
 
-#: ../components/assets.rst:100
+#: ../components/assets.rst:109
 msgid "Once you've uploaded an Asset, you'll want to make it available for your Contacts to access it. Using the Download URL from the Asset section in Mautic, you can track which Contacts are downloading or viewing the Assets."
 msgstr ""
 
-#: ../components/assets.rst:102
+#: ../components/assets.rst:111
 msgid "Copy and paste the link into your website, on a landing page, or as a link in an Email."
 msgstr ""
 
-#: ../components/assets.rst:105
+#: ../components/assets.rst:114
 msgid "In a Mautic Email or Landing Page, append ``?stream=1`` to the end of the URL to open the Asset in a new tab."
 msgstr ""
 
-#: ../components/assets.rst:107
+#: ../components/assets.rst:116
 msgid "Whether the Asset downloads or opens in a new tab depends on the Contact's browser settings. To gate an Asset by requiring them to submit some information before downloading, you may have a Form submit action to download an Asset."
 msgstr ""
 
-#: ../components/assets.rst:109
+#: ../components/assets.rst:118
 msgid "To ensure that Contacts are providing you with valid Email addresses for high-value Assets, attach the Asset to an Email and use the send Email Form submit action rather than instantly downloading the Asset."
 msgstr ""
 
-#: ../components/assets.rst:114
+#: ../components/assets.rst:123
 msgid "Editing an Asset"
 msgstr ""
 
-#: ../components/assets.rst:118
+#: ../components/assets.rst:127
 msgid "You can edit an Asset by clicking on the 'edit' button while viewing the Asset, or by selecting the arrow next to the checkbox for the Asset, and selecting 'edit'. The edit screens are the same as the view screens,with the saved content already populated in the fields."
 msgstr ""
 
-#: ../components/assets.rst:123
+#: ../components/assets.rst:132
 msgid "Deleting an Asset"
 msgstr ""
 
-#: ../components/assets.rst:127
+#: ../components/assets.rst:136
 msgid "It's possible to delete an Asset by clicking on the 'delete' button while viewing the Asset, or by selecting the arrow next to the checkbox for the Asset, and selecting 'delete'. Mautic displays a confirmation screen, prompting confirmation that you wish to delete the Asset."
 msgstr ""
 
-#: ../components/assets.rst:130
+#: ../components/assets.rst:139
 msgid "Once deleted, you can't retrieve an Asset, and statistics relating to the number of downloads for that Asset are no longer be available. Contact Points accumulated as a result of accessing the resource remain. It's recommended where possible to unpublish Assets which are no longer in use - in future there may be an archive feature."
 msgstr ""
 

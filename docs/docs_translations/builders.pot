@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mautic Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-13 16:56+0100\n"
+"POT-Creation-Date: 2023-03-17 15:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,158 @@ msgstr ""
 
 #: ../builders/creating_themes.rst:4
 msgid "Creating Themes"
+msgstr ""
+
+#: ../builders/creating_themes.rst:8
+msgid ":xref:`MJML` allows marketers to create and maintain beautiful and responsive Themes for Mautic easily."
+msgstr ""
+
+#: ../builders/creating_themes.rst:13
+msgid "Why use email Themes?"
+msgstr ""
+
+#: ../builders/creating_themes.rst:16
+msgid "Purpose of a Theme"
+msgstr ""
+
+#: ../builders/creating_themes.rst:20
+msgid "The GrapesJS builder makes it possible to insert HTML code and edit it in a 'What You See Is What You Get' (WYSIWYG) environment."
+msgstr ""
+
+#: ../builders/creating_themes.rst:22
+msgid "A Theme can feature a wide variety of predefined blocks and sections reflecting the desired Email design - a template from which to start."
+msgstr ""
+
+#: ../builders/creating_themes.rst:24
+msgid "By choosing a Theme, you can create beautiful Emails very efficiently."
+msgstr ""
+
+#: ../builders/creating_themes.rst:29
+msgid "Modifying legacy Themes"
+msgstr ""
+
+#: ../builders/creating_themes.rst:33
+msgid "The GrapesJS Builder checks the Theme configuration file before listing the available Themes, to determine which are compatible with the Builder."
+msgstr ""
+
+#: ../builders/creating_themes.rst:35
+msgid "Since :xref:`Mautic 3` a new line defines the compatible Builders:"
+msgstr ""
+
+#: ../builders/creating_themes.rst:37
+msgid "File name: config.json"
+msgstr ""
+
+#: ../builders/creating_themes.rst:51
+msgid "With the builder/s defined, the Theme shows in the Theme selection page."
+msgstr ""
+
+#: ../builders/creating_themes.rst:53
+msgid "If you wish to support more than one Builder, specify them in an array: ``\"builder\": [\"legacy\", \"grapesjsbuilder\"],``"
+msgstr ""
+
+#: ../builders/creating_themes.rst:58
+msgid "Creating a Theme from scratch"
+msgstr ""
+
+#: ../builders/creating_themes.rst:63
+msgid "HTML markup"
+msgstr ""
+
+#: ../builders/creating_themes.rst:65
+msgid "It's possible to use HTML for Themes, and the GrapesJS builder offers basic WYSIWYG editing capabilities."
+msgstr ""
+
+#: ../builders/creating_themes.rst:67
+msgid "Once converted into HTML, however, the structure is table based, and the blocks are hard to move around. For this reason, MJML Themes are preferable."
+msgstr ""
+
+#: ../builders/creating_themes.rst:70
+msgid "MJML markup"
+msgstr ""
+
+#: ../builders/creating_themes.rst:72
+msgid "The MJML language allows the creation of blocks which can be freely moved around in the editor, changing the layout fundamentally without coding."
+msgstr ""
+
+#: ../builders/creating_themes.rst:74
+msgid "In order to harness the power of MJML, you must code the whole Theme in MJML."
+msgstr ""
+
+#: ../builders/creating_themes.rst:76
+msgid "The best place to do so is the online editor at :xref:`MJML`."
+msgstr ""
+
+#: ../builders/creating_themes.rst:78
+msgid "Documentation on using sections, columns, and blocks is available in the :xref:`MJML Documentation`"
+msgstr ""
+
+#: ../builders/creating_themes.rst:83
+msgid "Head Components"
+msgstr ""
+
+#: ../builders/creating_themes.rst:87
+msgid "At present, Mautic won't process the ``<mj-head>`` tags. None of the ``<mj-attribuites>`` run, so you have to do all styling inline."
+msgstr ""
+
+#: ../builders/creating_themes.rst:92
+msgid "Body Components"
+msgstr ""
+
+#: ../builders/creating_themes.rst:96
+msgid "At present, Mautic processes most ``<mj-body>`` components."
+msgstr ""
+
+#: ../builders/creating_themes.rst:98
+msgid "**Tested elements** are: mj-button, mj-column, mj-divider, mj-image, mj-navbar, mj-section, mj-spacer, mj-text"
+msgstr ""
+
+#: ../builders/creating_themes.rst:103
+msgid "Image Asset relative URLs"
+msgstr ""
+
+#: ../builders/creating_themes.rst:107
+msgid "Images have to refer to the Themes folder the following way:"
+msgstr ""
+
+#: ../builders/creating_themes.rst:109
+msgid "``<mj-image src=\"{{ getAssetUrl('Themes/'~Theme~'/assets/imagename.ext', null, null, true) }}\" alt=\"logo\" align=\"center\" width=\"105px\" padding=\"10px 0\"></mj-image>``"
+msgstr ""
+
+#: ../builders/creating_themes.rst:111
+msgid "File structure"
+msgstr ""
+
+#: ../builders/creating_themes.rst:128
+msgid "Steps to save the Theme package"
+msgstr ""
+
+#: ../builders/creating_themes.rst:130
+msgid "Once your design in MJML is finalized, go through the following steps to create the Theme package:"
+msgstr ""
+
+#: ../builders/creating_themes.rst:132
+msgid "Save your images in the Assets folder."
+msgstr ""
+
+#: ../builders/creating_themes.rst:134
+msgid "Save your MJML in the ``html`` folder as ``email.mjml.twig`` AND ``email.html.twig``."
+msgstr ""
+
+#: ../builders/creating_themes.rst:136
+msgid "Use the ``base.html.twig`` and ``message.html.twig`` files from the basic Theme or make your changes there."
+msgstr ""
+
+#: ../builders/creating_themes.rst:138
+msgid "Save your ``config.json`` as described previously"
+msgstr ""
+
+#: ../builders/creating_themes.rst:140
+msgid "Create a thumbnail -  use the dimensions of 400px wide, 600px high."
+msgstr ""
+
+#: ../builders/creating_themes.rst:142
+msgid "Compress the contents of the folder as a Zip file - ensure that the files and folders aren't within a sub-folder in the Zip file."
 msgstr ""
 
 #: ../builders/email_landing_page.rst:4
