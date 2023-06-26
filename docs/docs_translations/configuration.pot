@@ -258,7 +258,6 @@ msgstr ""
 
 #: ../configuration/command_line_interface.rst:107
 msgid "``mautic:custom-field:create-column``"
-msgstr ""
 
 #: ../configuration/command_line_interface.rst:108
 msgid "Creates the actual column in the table"
