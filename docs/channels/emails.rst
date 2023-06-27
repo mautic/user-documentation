@@ -222,6 +222,7 @@ Using the Email signature
 
 Marketers can place the signature into an Email using the ``{signature}`` token.
 
+<<<<<<< HEAD
 Email delivery
 ##############
 
@@ -351,6 +352,8 @@ Tracking links in Emails
 
 Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the Click Counts tab.
 
+=======
+>>>>>>> 6e8b0b6 (Move email settings to config section)
 Unsubscribing
 *************
 
