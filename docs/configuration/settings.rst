@@ -161,6 +161,114 @@ Campaign settings
 Email settings
 **************
 
+Email transport settings
+========================
+
+As Mautic uses the :xref:`Symfony Mailer` library since v5, it supports all Symfony Mailer core plugins out of the box. Transports for other Email services might be found on GitHub or Packagist.
+
+SMTP transport
+--------------
+
+The SMTP transport is the default transport used for sending Emails with Mautic. It's configured in the Mautic configuration under the Email Settings tab. The configuration is the same as in the :xref:`Symfony Mailer` documentation.
+
+Mautic now uses a specific way of providing the connection details for Email transports to interpret, which is called a Data Source Name, or DSN. This is the example Data Source Name configuration mentioned in the :xref:`Symfony Mailer` documentation for SMTP:
+
+.. code-block:: shell
+    
+    smtp://user:pass@smtp.example.com:port
+
+Mautic creates this automatically from the values entered in the Email configuration:
+
+.. image:: images/smtp-dsn.png
+    :width: 400
+    :alt: SMTP API DSN example
+
+.. list-table:: Example DSN ``smtp://user:pass@smtp.example.com:port/path?option1=value1&option2=value2`` explained
+    :widths: 10 20 150
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - DSN part
+      - Example
+      - Explanation
+    * - Scheme
+      - smtp
+      - Defines which email transport (plugin) will handle the email sending. It also defines which other DSN parts must be present.
+    * - User
+      - john
+      - Some transport wants username and password to authenticate the connection. Some public or private key. Some just API key.
+    * - Password
+      - pa$$word
+      - As mentioned above, read documentation for your particular transport and fill in the fields that are required. For SMPT this is for password.
+    * - Host
+      - smtp.mydomain.com
+      - For SMTP this is the domain name where your SMTP server is running. Other transports may have the domain handled inside it so many wants to put just ``default`` text here.
+    * - Path
+      - any/path
+      - This is usually empty. For SMTP this may be the path to the SMTP server. For other transports this may be the path to the API endpoint.
+    * - Port
+      - 465
+      - Important for SMTP. The port value defines which encryption is used. This is usually 465 for SSL or 587 for TLS. Avoid using port 25 for security reasons. For other transports this may be the port to the API endpoint.
+    * - Options
+      - timeout=10
+      - This is optional. This may be the timeout for the connection or similar configuration. The config form will allow you to create multiple options.
+
+.. note::
+  Use the Mautic's global configuration to paste in the DSN information, especially the API keys and passwords. The values must be URL-encoded, and the configuration form does that for you. If you are pasting DSN settings directly into the config/local.php file, you must URL-encode the values yourself.
+
+
+.. vale off
+
+Example API transport installation
+----------------------------------
+
+.. vale on
+
+.. warning::
+  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`. 
+
+If you want to use :xref:`Sendgrid` API instead of SMTP to send Emails, for example, you can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation.
+
+.. code-block:: shell
+    
+    composer require symfony/sendgrid-mailer
+
+After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In the example of using the Sendgrid API, the DSN looks like this:
+
+.. code-block:: shell
+    
+    sendgrid+api://KEY@default
+
+This is how it would be set up in Mautic's Email configuration:
+
+  .. image:: images/sendgrid-api-dsn.png
+    :width: 400
+    :alt: Sendgrid API DSN example
+
+To replace the Sendgrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the Sendgrid API to send Emails. 
+
+.. warning::
+  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
+
+The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`.
+
+Immediate delivery
+------------------
+
+This is the default means of delivery. As soon as an action in Mautic triggers an Email to send, it's sent immediately. If you expect to send a large number of Emails, you should use the queue. Sending Email immediately may slow the response time of Mautic if using a remote mail service, since Mautic has to establish a connection with that service before sending the mail. Also attempting to send large batches of Emails at once may hit your server's resource limits or Email sending limits if on a shared host.
+
+Queued delivery
+---------------
+
+Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:
+
+.. code-block:: shell
+    
+    php /path/to/mautic/bin/console messenger:consume email_transport
+
+Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
+
+
 Mail send settings
 ==================
 
@@ -257,117 +365,11 @@ Unsubscribe settings
 
 * **Show Contact's preferred Channel option** - If you have multiple Channels available within your Mautic instance. For example; Email, ``SMS``, mobile push, web notifications, etc., Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
-Email delivery settings
-=======================
-
-As Mautic uses the :xref:`Symfony Mailer` library since v5, it supports all Symfony Mailer core plugins out of the box. Transports for other Email services might be found on GitHub or Packagist.
-
-SMTP transport
---------------
-
-The SMTP transport is the default transport used for sending Emails with Mautic. It's configured in the Mautic configuration under the Email Settings tab. The configuration is the same as in the :xref:`Symfony Mailer` documentation.
-
-Mautic now uses a specific way of providing the connection details for Email transports to interpret, which is called a Data Source Name, or DSN. This is the example Data Source Name configuration mentioned in the :xref:`Symfony Mailer` documentation for SMTP:
-
-.. code-block:: shell
-    
-    smtp://user:pass@smtp.example.com:port
-
-Mautic creates this automatically from the values entered in the Email configuration:
-
-.. image:: images/emails/smtp-dsn.png
-    :width: 400
-    :alt: SMTP API DSN example
-
-.. list-table:: Example DSN ``smtp://user:pass@smtp.example.com:port/path?option1=value1&option2=value2`` explained
-    :widths: 10 20 150
-    :header-rows: 1
-    :stub-columns: 1
-
-    * - DSN part
-      - Example
-      - Explanation
-    * - Scheme
-      - smtp
-      - Defines which email transport (plugin) will handle the email sending. It also defines which other DSN parts must be present.
-    * - User
-      - john
-      - Some transport wants username and password to authenticate the connection. Some public or private key. Some just API key.
-    * - Password
-      - pa$$word
-      - As mentioned above, read documentation for your particular transport and fill in the fields that are required. For SMPT this is for password.
-    * - Host
-      - smtp.mydomain.com
-      - For SMTP this is the domain name where your SMTP server is running. Other transports may have the domain handled inside it so many wants to put just ``default`` text here.
-    * - Path
-      - any/path
-      - This is usually empty. For SMTP this may be the path to the SMTP server. For other transports this may be the path to the API endpoint.
-    * - Port
-      - 465
-      - Important for SMTP. The port value defines which encryption is used. This is usually 465 for SSL or 587 for TLS. Avoid using port 25 for security reasons. For other transports this may be the port to the API endpoint.
-    * - Options
-      - timeout=10
-      - This is optional. This may be the timeout for the connection or similar configuration. The config form will allow you to create multiple options.
-
-.. note::
-  Use the Mautic's global configuration to paste in the DSN information, especially the API keys and passwords. The values must be URL-encoded, and the configuration form does that for you. If you are pasting DSN settings directly into the config/local.php file, you must URL-encode the values yourself.
-
-
-.. vale off
-
-Example API transport installation
-----------------------------------
-
-.. vale on
-
-.. warning::
-  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`. 
-
-If you want to use :xref:`Sendgrid` API instead of SMTP to send Emails, for example, you can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation.
-
-.. code-block:: shell
-    
-    composer require symfony/sendgrid-mailer
-
-After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In the example of using the Sendgrid API, the DSN looks like this:
-
-.. code-block:: shell
-    
-    sendgrid+api://KEY@default
-
-This is how it would be set up in Mautic's Email configuration:
-
-  .. image:: images/emails/sendgrid-api-dsn.png
-    :width: 400
-    :alt: Sendgrid API DSN example
-
-To replace the Sendgrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the Sendgrid API to send Emails. 
-
-.. warning::
-  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
-
-The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`.
-
-Immediate delivery
-******************
-
-This is the default means of delivery. As soon as an action in Mautic triggers an Email to send, it's sent immediately. If you expect to send a large number of Emails, you should use the queue. Sending Email immediately may slow the response time of Mautic if using a remote mail service, since Mautic has to establish a connection with that service before sending the mail. Also attempting to send large batches of Emails at once may hit your server's resource limits or Email sending limits if on a shared host.
-
-Queued delivery
-***************
-
-Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:
-
-.. code-block:: shell
-    
-    php /path/to/mautic/bin/console messenger:consume email_transport
-
-Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
 
 .. vale off
 
 Tracking Opened Emails
-**********************
+======================
 
 .. vale on
 
