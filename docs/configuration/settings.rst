@@ -16,7 +16,7 @@ General settings
 
 * **Site URL** - This is where Mautic is physically installed. Set the URL for this site here. Cron jobs needs this to correctly determine absolute URLs when generating links for Emails, etc. It 's also called Mautic's 'base URL'.
 
-* **Mautic's root URL** - When a User signs in to their Mautic instance, they go to ``mautic.example.com``. However, that Landing Page is also accessible to the public. If a Contact visits that address, they see the Mautic login page for that instance. 
+* **Mautic's root URL** - When a User signs in to their Mautic instance, they go to ``mautic.example.com``. However, that Landing Page is also accessible to the public. If a Contact visits that address, they see the Mautic login page for that instance.
 
   To brand that Landing Page, create a Mautic Landing Page that you'd want to greet any Contacts who visit your root ``URL``. Once you've done that, Users can sign in into Mautic by visiting ``mautic.example.com/s/login``.
 
@@ -174,7 +174,7 @@ The SMTP transport is the default transport used for sending Emails with Mautic.
 Mautic now uses a specific way of providing the connection details for Email transports to interpret, known as a Data Source Name, or DSN. This is the example Data Source Name configuration mentioned in the :xref:`Symfony Mailer` documentation for SMTP:
 
 .. code-block:: shell
-    
+
     smtp://user:pass@smtp.example.com:port
 
 Mautic creates this automatically from the values entered in the Email configuration:
@@ -225,18 +225,18 @@ Example API transport installation
 .. vale on
 
 .. warning::
-  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`. 
+  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`.
 
 If you want to use :xref:`Sendgrid` API instead of SMTP to send Emails, for example, you can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation.
 
 .. code-block:: shell
-    
+
     composer require symfony/sendgrid-mailer
 
 After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In the example of using the Sendgrid API, the DSN looks like this:
 
 .. code-block:: shell
-    
+
     sendgrid+api://KEY@default
 
 This is how it would be set up in Mautic's Email configuration:
@@ -245,7 +245,7 @@ This is how it would be set up in Mautic's Email configuration:
     :width: 400
     :alt: Sendgrid API DSN example
 
-To replace the SendGrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the SendGrid API to send Emails. 
+To replace the SendGrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the SendGrid API to send Emails.
 
 .. warning::
   It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
@@ -263,7 +263,7 @@ Queued delivery
 Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:
 
 .. code-block:: shell
-    
+
     php /path/to/mautic/bin/console messenger:consume email_transport
 
 Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
@@ -288,7 +288,7 @@ Mail send settings
   
 * **Custom return path (bounce) address** - Set a custom return path/bounce Email address for Emails sent from the system. Note that some mail transports, such as GMail, won't support this.
 
-* **Mailer is owner** - If Contacts in Mautic have owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they're listed as the owner for. 
+* **Mailer is owner** - If Contacts in Mautic have owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they're listed as the owner for.
 
 .. note:: 
 
@@ -300,7 +300,7 @@ Mail send settings
 Default frequency rule
 ======================
 
-* **Do not contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting. 
+* **Do not contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
 
 .. note:: 
 
@@ -447,7 +447,110 @@ Company settings
   :alt: Screenshot showing Company Merge Settings Configuration in Mautic
 
 * **Merge by unique fields with operator** - You can determine which operator to use when merging fields if there is more than one unique identifier.
-  
+
+Queue settings
+****************
+
+Purpose of the queuing
+======================
+
+Mautic can optionally use a queuing mechanism for sending emails. This feature is essential when Mautic is run **at large scale**. There will be more tasks that can utilize queuing in the future.
+
+When you enable queuing, emails are no longer sent immediately (e.g. within HTTP requests)
+but put in a queue and sent later using queue consumers. Using consumers help offload workload of your webserver and allows easier scaling of your instance.
+
+The queuing is disabled by default
+==================================
+
+After installing a fresh instance of Mautic, **the queuing feature is disabled** (the queue DSN is set to ``"sync://"``) as shown in the following screenshot.
+
+.. image:: images/queue-disabled.png
+  :width: 600
+  :alt: Queue is disabled
+
+How to enable the queuing
+=========================
+
+First you need to choose what technology (queuing transport) will drive your queue. The are several options available at the moment. It is up to you to choose which one fits your needs the best.
+
+**Currently available transports:**
+
+* :ref:`Doctrine`
+* :ref:`Redis`
+* :ref:`AMQP`
+* :ref:`Beanstalkd`
+* :ref:`Amazon SQS`
+
+Doctrine
+--------
+This transport is easy to setup as it does not require installing any additional extension.
+It uses database table ``messenger_messages`` for storing messages (the table name can be changed via options). The screenshot below shows the basic settings.
+
+.. image:: images/queue-doctrine.png
+  :width: 600
+  :alt: Example of Doctrine transport
+
+See `https://symfony.com/doc/5.4/messenger.html#doctrine-transport <https://symfony.com/doc/5.4/messenger.html#doctrine-transport>`_ for the complete list of configuration options.
+
+Redis
+-----
+This transport requires the Redis PHP extension (>=4.3) and a running `Redis <https://redis.io/>`_ server (^5.0). Once these requirements are met, the typical configuration looks as follows.
+
+.. image:: images/queue-redis.png
+  :width: 600
+  :alt: Example of Redis transport
+
+See `https://symfony.com/doc/5.4/messenger.html#redis-transport <https://symfony.com/doc/5.4/messenger.html#redis-transport>`_ for the complete list of configuration options.
+
+AMQP
+----
+The AMQP transport requires the AMQP PHP extension and a running AMQP service like `RabbitMQ <https://www.rabbitmq.com/>`_. See the screenshot below for an example of the configuration.
+
+.. image:: images/queue-amqp.png
+  :width: 600
+  :alt: Example of AMQP transport
+
+See `https://symfony.com/doc/5.4/messenger.html#amqp-transport <https://symfony.com/doc/5.4/messenger.html#amqp-transport>`_ for the complete list of configuration options.
+
+Beanstalkd
+----------
+The Beanstalkd transport requires a running `Beanstalkd <https://beanstalkd.github.io/>`_ service and a composer dependency installed via ``composer require symfony/beanstalkd-messenger``.
+After installing the composer dependency, you can fill in the configuration as follows.
+
+.. image:: images/queue-beanstalkd.png
+  :width: 600
+  :alt: Example of Beanstalkd transport
+
+See `https://symfony.com/doc/5.4/messenger.html#beanstalkd-transport <https://symfony.com/doc/5.4/messenger.html#beanstalkd-transport>`_ for the complete list of configuration options.
+
+Amazon SQS
+----------
+The Amazon SQS transport is ideal when your Mautic instance is hosted on AWS. You will need to install a composer dependency via ``composer require symfony/amazon-sqs-messenger``. See the example of the configuration below.
+
+.. image:: images/queue-amazon-sqs.png
+  :width: 600
+  :alt: Example of Amazon SQS transport
+
+See `https://symfony.com/doc/5.4/messenger.html#amazon-sqs <https://symfony.com/doc/5.4/messenger.html#amazon-sqs>`_ for the complete list of configuration options.
+
+How to consume messages from the queue
+======================================
+
+TBD
+
+Advanced setting
+================
+
+Retry strategy
+--------------
+
+TBD
+
+Queue for failures
+------------------
+
+TBD
+
 Notification settings
 *********************
 
