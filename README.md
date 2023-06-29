@@ -28,9 +28,10 @@ The following provides instructions for how to build docs locally for visualizat
 1. Install Python 3 for your OS if not already installed
 2. Install Sphinx `pip install sphinx`
 3. Install sphinx-rtd-theme `pip install sphinx-rtd-theme`
-4. CD into the docs directory `cd [path to this repo]/docs`
-5. Run `make html`
-6. This will generate HTML in docs/build/html. Setup a web server with the web root as docs/build/html or open docs/build/html/index.html in a browser.
+4. Install myst-parser `pip install myst-parser`
+5. CD into the docs directory `cd [path to this repo]/docs`
+6. Run `make html`
+7. This will generate HTML in docs/build/html. Setup a web server with the web root as docs/build/html or open docs/build/html/index.html in a browser.
  
 ### Vale
 Before pushing, run Vale and address suggestions and errors as applicable.
