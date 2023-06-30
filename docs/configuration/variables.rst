@@ -137,6 +137,14 @@ See :doc:`Companies</companies/companies_overview>` for more information.
    * - Zip Code (Company)
      - ``{contactfield=companyzipcode}``
 
+.. tip:: 
+  Custom Company Fields
+
+  The syntax for custom company fields is different than the core company field syntax. You must not add the word "company" in the variable, but instead treat it like a "contactfield":
+
+  `Hi {contactfield=customfieldalias},`
+
+
 Mautic Component tokens
 ***********************
 
