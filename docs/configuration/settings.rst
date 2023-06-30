@@ -457,7 +457,7 @@ Purpose of the queuing
 Mautic can optionally use a queuing mechanism for sending emails. This feature is essential when Mautic is run **at large scale**. There will be more tasks that can utilize queuing in the future.
 
 When you enable queuing, emails are no longer sent immediately (e.g. within HTTP requests)
-but put in a queue and sent later using queue consumers. Using consumers help offload workload of your webserver and allows easier scaling of your instance.
+but put in a queue and sent later using queue consumers (also known as workers). Using consumers help offload workload of your webserver and allows easier scaling of your instance.
 
 The queuing is disabled by default
 ==================================
