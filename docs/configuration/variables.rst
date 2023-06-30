@@ -137,6 +137,7 @@ See :doc:`Companies</companies/companies_overview>` for more information.
    * - Zip Code (Company)
      - ``{contactfield=companyzipcode}``
 
+
 .. tip:: 
   Custom Company Fields
 
