@@ -51,7 +51,7 @@ The IDP may ask for the following settings:
 Azure specific configuration
 ============================
 
-For Azure you need to make sure to put the complete XML schema with path instead of just Attribute name. So within Attributes do not put them like "emailaddress" or "surname". See below example for 3 required fields"
+For Azure you need to enter the complete XML schema including the path, rather than just the attribute name. For example, within ``Attributes`` don't enter the values as ``emailaddress`` or ``surname``.  Instead, see the following example:
 Email: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
 First Name: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
 Last Name: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
