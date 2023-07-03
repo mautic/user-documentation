@@ -48,6 +48,18 @@ The IDP may ask for the following settings:
 
 #. Custom attributes - Mautic requires three custom attributes in the IDP responses for the User Email, first name and last name. Username is also supported but is optional. Configure the attribute names used by the IDP in Mautic's Configuration > User/Authentication Settings under the 'Enter the names of the attributes the configured IDP uses for the following Mautic User fields' section.
 
+Azure Specific Configuration
+============================
+
+For Azure you need to make sure to put the complete XML schema with path instead of just Attribute name. So within Attributes do not put them like "emailaddress" or "surname". See below example for 3 required fields"
+Email: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
+First Name: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
+Last Name: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
+
+For other properties you can get these values from the metadata XML file that you download from Azure while doing the SIngle SIgn on configuration.
+
+The error that you get when you simply use simple attribute names is: "Invalid Login. Please verify credentials".
+
 Logging in
 ==========
 
