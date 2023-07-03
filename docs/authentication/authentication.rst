@@ -53,7 +53,7 @@ Azure specific configuration
 
 For Azure you need to enter the complete XML schema including the path, rather than just the attribute name. For example, within ``Attributes`` don't enter the values as ``emailaddress`` or ``surname``.  Instead, see the following example:
 Email: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
-First Name: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
+First Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname``
 Last Name: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
 
 For other properties you can get these values from the metadata XML file that you download from Azure while doing the SIngle SIgn on configuration.
