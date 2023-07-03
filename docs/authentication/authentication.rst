@@ -56,7 +56,7 @@ Email: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
 First Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname``
 Last Name: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
 
-For other properties you can get these values from the metadata XML file that you download from Azure while doing the SIngle SIgn on configuration.
+For other properties you can obtain the values from the metadata XML file that you download from Azure during the Single Sign On (SSO) configuration.
 
 The error that you get when you simply use simple attribute names is: "Invalid Login. Please verify credentials".
 
