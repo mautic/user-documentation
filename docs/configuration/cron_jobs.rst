@@ -85,6 +85,19 @@ You can also limit the number of Contacts to process per script execution using 
 
     that these messages are only added to the queue when frequency rules apply either system wide or per Contact.
 
+.. vale off
+
+Custom Field chron jobs
+=======================
+
+.. vale on
+
+**To keep contacts and company custom fields updated**
+
+.. code-block:: php
+
+    php /path/to/mautic/bin/console mautic:custom-field:create-column
+
 Optional
 ********
 
