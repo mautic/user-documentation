@@ -52,6 +52,14 @@ You can use a Campaign action to increase or decrease the Group Contact score.
   :width: 600
   :alt: Screenshot of Campaign Point action with Group
 
+Form action
+---------------
+You can use a Form action to increase or decrease the Group Contact score.
+
+.. image:: images/form-action-with-point-group.png
+  :width: 600
+  :alt: Screenshot of Form Adjust contact's points action with Group
+
 Segment filters
 ---------------
 Each Point Group adds a new filter that can be used to configurate the Segment.
@@ -79,3 +87,7 @@ You can generate a Report that contains information about Contact Point Groups.
 .. image:: images/group-report.png
   :width: 600
   :alt: Screenshot of Group Report
+
+Webhooks
+________
+Changing the Contact Group Points will not trigger the Contact Points Changed Event Webhook
