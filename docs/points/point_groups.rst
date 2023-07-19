@@ -89,5 +89,5 @@ You can generate a Report that contains information about Contact Point Groups.
   :alt: Screenshot of Group Report
 
 Webhooks
-________
+--------
 Changing the Contact Group Points will not trigger the Contact Points Changed Event Webhook
