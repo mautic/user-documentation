@@ -20,7 +20,7 @@ In order to configure the text messages correctly, follow these steps:
 
 #. Open *Twilio* Plugin and activate it.
 
-#. Copy the *Account Sender ID* from Twilio account and paste it to *Account Sender ID* field in the Twilio Plugin configuration.
+#. Copy the *Messaging Sender ID* from Twilio account and paste it to *Messaging Sender ID* field in the Twilio Plugin configuration.
 
 #. Unlock and copy the *Auth Token* and paste it to *Auth Token* field in the Twilio Plugin configuration.
 

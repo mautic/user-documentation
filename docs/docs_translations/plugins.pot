@@ -117,7 +117,7 @@ msgid "Open *Twilio* Plugin and activate it."
 msgstr ""
 
 #: ../plugins/twilio.rst:23
-msgid "Copy the *Account Sender ID* from Twilio account and paste it to *Account Sender ID* field in the Twilio Plugin configuration."
+msgid "Copy the *Messaging Sender ID* from Twilio account and paste it to *Messaging Sender ID* field in the Twilio Plugin configuration."
 msgstr ""
 
 #: ../plugins/twilio.rst:25
