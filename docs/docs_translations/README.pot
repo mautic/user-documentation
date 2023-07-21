@@ -1,0 +1,750 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-21 17:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../README.md:1
+msgid "Transifex Client"
+msgstr ""
+
+#: ../README.md:3
+msgid "Installation"
+msgstr ""
+
+#: ../README.md:5
+msgid "Installing with a script (Linux/Mac)"
+msgstr ""
+
+#: ../README.md:6
+msgid "You can install the latest Transifex CLI by executing:"
+msgstr ""
+
+#: ../README.md:12
+msgid "Or you can isntall a specific version if you need by executing:"
+msgstr ""
+
+#: ../README.md:19
+msgid "This script will:"
+msgstr ""
+
+#: ../README.md:20
+msgid "Try to find the correct version for your system."
+msgstr ""
+
+#: ../README.md:21
+msgid "Download & extract the CLI to the current folder."
+msgstr ""
+
+#: ../README.md:22
+msgid "Check for a profile in one of `.profile, .bashrc, .bash_profile, .zshrc` and append `export PATH=\"<PWD result>:$PATH\"`, so you can call 'tx' from any path."
+msgstr ""
+
+#: ../README.md:24
+msgid "**Note:** You need to restart your terminal for the `PATH` changes to be applied."
+msgstr ""
+
+#: ../README.md:26
+msgid "Download from Github Releases (Linux/Mac/Windows)"
+msgstr ""
+
+#: ../README.md:28
+msgid "Another way to install the Transifex CLI is to download the latest version of the binary from GitHub [here](https://github.com/transifex/cli/releases)."
+msgstr ""
+
+#: ../README.md:32
+msgid "Choose the binary according to your system, download it and unzip it. Copy the binary into the location you want and update the `PATH` variable of your system if necessary."
+msgstr ""
+
+#: ../README.md:36
+msgid "The other way to install Transifex CLI in the system is to use the code."
+msgstr ""
+
+#: ../README.md:38
+msgid "Clone the [repository](https://github.com/transifex/cli) and go into the directory"
+msgstr ""
+
+#: ../README.md:43
+msgid "Building from source"
+msgstr ""
+
+#: ../README.md:45
+msgid "The default way to build the binary is"
+msgstr ""
+
+#: ../README.md:50
+msgid "This method requires to have golang in your system. It compiles Transifex CLI and moves it into the `./bin/` directory of the repository."
+msgstr ""
+
+#: ../README.md:53
+msgid "If you don't have golang installed, but you have Docker enabled, you can use the following command:"
+msgstr ""
+
+#: ../README.md:60
+msgid "This will build the binary and it will copy it at `./bin/` in the repository."
+msgstr ""
+
+#: ../README.md:62
+msgid "Running from Docker (beta)"
+msgstr ""
+
+#: ../README.md:64
+msgid "You can skip the installation and run the Transifex client from Docker if it is available in your system. All you have to do is put this line:"
+msgstr ""
+
+#: ../README.md:71
+msgid "to your `~/.bashrc` / `~/.zshrc`. (The first time you use it you will have to wait for a ~5MB download)"
+msgstr ""
+
+#: ../README.md:75
+msgid "Running from Github actions (beta)"
+msgstr ""
+
+#: ../README.md:77
+msgid "You can invoke the CLI from within a Github workflow by using our Github action. See the instructions [here](https://github.com/transifex/cli-action)."
+msgstr ""
+
+#: ../README.md:80
+msgid "Migrating from older versions of the client"
+msgstr ""
+
+#: ../README.md:82
+msgid "The current version of the client maintains backwards compatibility for the `tx push` and `tx pull` commands. So, if you have a CI setup that uses them, you should not have to change anything. However, some things need to be different in the configuration files:"
+msgstr ""
+
+#: ../README.md:86
+msgid "The section headers in `.tx/config` need to be different to also store the organization slug. So after the migration `<project>.<resource>` should become `o:<org>:p:<proj>:r:<res>`. In case something fails during this process, we will provide a message with the failed migrated resource so that you can identify and change the section header manually."
+msgstr ""
+
+#: ../README.md:91
+msgid "You will be prompted for an API token in case you are using a username/password pair in your `~/.transifexrc` file or if you are not using one."
+msgstr ""
+
+#: ../README.md:94
+msgid "If you are migrating an existing software project from an older version of the Transifex client, you need to run:"
+msgstr ""
+
+#: ../README.md:101
+msgid "This will take care of all the changes and create a back up file of the original config in the same folder as `config_yyyymmddhhss.bak` before we start the migration process."
+msgstr ""
+
+#: ../README.md:104
+msgid "Differences With the Previous Version"
+msgstr ""
+
+#: ../README.md:106
+msgid "The two clients have some distinct differences when looking under the hood. The new client is using Go instead of Python"
+msgstr ""
+
+#: ../README.md:108
+msgid "for speed and"
+msgstr ""
+
+#: ../README.md:109
+msgid "for the ability to produce binary files for multiple platforms."
+msgstr ""
+
+#: ../README.md:112
+msgid "Additionally, client is using APIv3 instead of APIv2 because"
+msgstr ""
+
+#: ../README.md:113
+msgid "it is faster (calls occur asynchronously and you don't have to wait for parsing to finish) and"
+msgstr ""
+
+#: ../README.md:115
+msgid "APIv2 is getting deprecated."
+msgstr ""
+
+#: ../README.md:117
+msgid "`Init`"
+msgstr ""
+
+#: ../README.md:119
+msgid "The new client's init command creates the `.tx` folder in the current path, and the config file with the following content which is required for the configuration:"
+msgstr ""
+
+#: ../README.md:127
+msgid "In case there is already a `.tx/config` file in the current directory, the users will get a prompt that informs them that, if they proceed, the contents of their `.tx/config` file will be overridden. A `y/n` answer, is needed to proceed or abort."
+msgstr ""
+
+#: ../README.md:131
+msgid "`Add`"
+msgstr ""
+
+#: ../README.md:133
+msgid "For the previous client, parts of functionality in `tx config` command adds resources locally."
+msgstr ""
+
+#: ../README.md:136
+msgid "In the new client, this command is responsible to add a resource in the local config file. Note that it needs all `organization`, `project` and `resource` slugs in order to build the resource id for the APIv3."
+msgstr ""
+
+#: ../README.md:140
+msgid "It will create a new section in the `.tx/config` file for a resource like:"
+msgstr ""
+
+#: ../README.md:147
+msgid "`Push`"
+msgstr ""
+
+#: ../README.md:149
+msgid "The differences of the new client, are summarized here:"
+msgstr ""
+
+#: ../README.md:151
+#: ../README.md:162
+msgid "resource IDs, can be accepted without the `-r` flag"
+msgstr ""
+
+#: ../README.md:152
+msgid "when neither `-s/-t` are set, `-s` is assumed"
+msgstr ""
+
+#: ../README.md:153
+msgid "`--all` flag creates new languages on Transifex if local files exist for them (on previous client this was the default behavior, now it needs the `--all` flag)"
+msgstr ""
+
+#: ../README.md:156
+#: ../README.md:164
+msgid "without `--all` or `--languages`, the only languages that are considered are the intersection of local and remote languages"
+msgstr ""
+
+#: ../README.md:160
+msgid "`Pull`"
+msgstr ""
+
+#: ../README.md:163
+msgid "when neither `-s/-t` are set, `-t` is assumed"
+msgstr ""
+
+#: ../README.md:166
+msgid "`--json` download files (translations) as json files"
+msgstr ""
+
+#: ../README.md:167
+msgid "`--content_encoding/-e` The encoding of the file. This can be one of the following:"
+msgstr ""
+
+#: ../README.md:168
+msgid "text (default)"
+msgstr ""
+
+#: ../README.md:169
+msgid "base64"
+msgstr ""
+
+#: ../README.md:171
+msgid "Usage"
+msgstr ""
+
+#: ../README.md:173
+msgid "Initialising a Project"
+msgstr ""
+
+#: ../README.md:175
+msgid "The first thing we need to do is run:"
+msgstr ""
+
+#: ../README.md:181
+msgid "This will simply create an empty `.tx/config` file to mark the current folder as a _Transifex project_. Your directory structure should now look like this:"
+msgstr ""
+
+#: ../README.md:195
+msgid "Using Environment Variables"
+msgstr ""
+
+#: ../README.md:196
+msgid "The available environment variables for the CLI:"
+msgstr ""
+
+#: ../README.md:198
+msgid "`TX_TOKEN`: The api token to use"
+msgstr ""
+
+#: ../README.md:199
+msgid "`TX_HOSTNAME`: The API hostname"
+msgstr ""
+
+#: ../README.md:200
+msgid "`TX_CACERT`: Path to CA certificate bundle file"
+msgstr ""
+
+#: ../README.md:202
+msgid "You can either add these variables in your CI settings, your profile file or when executing the commands like: `TX_TOKEN=myapitoken tx pull`"
+msgstr ""
+
+#: ../README.md:205
+msgid "Adding Resources to Configuration"
+msgstr ""
+
+#: ../README.md:207
+msgid "We will add the php file as a source language file in our local configuration. The simplest way to do this is with `tx add` which will start an interactive session:"
+msgstr ""
+
+#: ../README.md:248
+msgid "Your `.tx/config` file should look like this:"
+msgstr ""
+
+#: ../README.md:261
+msgid "You can skip steps from the interactive session by adding flags to the `tx add` command. In fact, you can skip the interactive session entirely if you provide all the flags:"
+msgstr ""
+
+#: ../README.md:276
+msgid "Adding resources in bulk"
+msgstr ""
+
+#: ../README.md:278
+msgid "With the old client I could add multiple resources at the same time with `tx config mapping-bulk`. What should I do now?"
+msgstr ""
+
+#: ../README.md:281
+msgid "We decided not to implement this functionality in the new client because its usage was complicated and it couldn't satisfy every user's need anyway. You can add multiple resources with a relatively simple shell script. For example:"
+msgstr ""
+
+#: ../README.md:285
+msgid "Add every subfolder of a `locale` folder as a resource:"
+msgstr ""
+
+#: ../README.md:304
+msgid "Add specific folders as resources:"
+msgstr ""
+
+#: ../README.md:322
+msgid "Turn every `.po` file into a configured resource:"
+msgstr ""
+
+#: ../README.md:346
+msgid "Adding remote resources in bulk"
+msgstr ""
+
+#: ../README.md:348
+msgid "If you have content already setup in Transifex, you may want to setup local resources in order to pull the language files on your system. In order to do that, you can run the following command with Linux or Mac OS:"
+msgstr ""
+
+#: ../README.md:358
+msgid "The use of tx add remote appends the content in the .tx/config file and does not overwrite it. However, if the project and resource exist in the .tx/config file, then it will overwrite the previous information for the specific project & resource."
+msgstr ""
+
+#: ../README.md:360
+msgid "For Windows OS, please use double quotes instead of single quotes in the following example."
+msgstr ""
+
+#: ../README.md:362
+msgid "This will create entries in your configuration file for each resource in your remote project. ie the configuration file may look like this:"
+msgstr ""
+
+#: ../README.md:391
+msgid "The options for this command are:"
+msgstr ""
+
+#: ../README.md:393
+msgid "`--file-filter`: What to use as the file_filter and source_file options in the resulting configuration. This is a pattern that accepts the following parameters:"
+msgstr ""
+
+#: ../README.md:397
+msgid "`<project_slug>`"
+msgstr ""
+
+#: ../README.md:398
+msgid "`<resource_slug>` _(required)_"
+msgstr ""
+
+#: ../README.md:399
+msgid "`<lang>` _(required)_ - can be used multiple times in the filter path"
+msgstr ""
+
+#: ../README.md:400
+msgid "`<ext>`"
+msgstr ""
+
+#: ../README.md:402
+msgid "The default value for this option is `translations/<project_slug>.<resource_slug>/<lang>.<ext>` (the one we showed in our example)"
+msgstr ""
+
+#: ../README.md:406
+msgid "`--minimum-perc`: What to use as the minimum_perc option in the resulting configuration"
+msgstr ""
+
+#: ../README.md:408
+msgid "One or more project URLs."
+msgstr ""
+
+#: ../README.md:410
+msgid "After setting things up, you can pull the source files with `tx pull --source`."
+msgstr ""
+
+#: ../README.md:412
+msgid "Pushing Files to Transifex"
+msgstr ""
+
+#: ../README.md:414
+msgid "`tx push` is used to push language files (usually source language files) from your machine to Transifex. You will most likely want to do that frequently during the lifetime of you project when new source strings are introduced or existing ones are changed. This will make the new strings available to translators as soon as possible."
+msgstr ""
+
+#: ../README.md:420
+msgid "The simplest invocation of `tx push` is simply:"
+msgstr ""
+
+#: ../README.md:426
+msgid "This will attempt to push the source file of all local resources that have been configured with `tx add`."
+msgstr ""
+
+#: ../README.md:429
+#: ../README.md:617
+msgid "**Limiting resources:**"
+msgstr ""
+
+#: ../README.md:431
+msgid "You can limit the resources you want to push with:"
+msgstr ""
+
+#: ../README.md:437
+msgid "A resource ID must refer to a resource that has already been configured with `tx add` and has the form `<project>.<resource>`. So, if the URL of your resource in Transifex is `https://app.transifex.com/myorganization/myproject/myresource`, then the resource ID will be `myproject.myresource`."
+msgstr ""
+
+#: ../README.md:443
+#: ../README.md:628
+msgid "You can also use the `*` character to select multiple resources with the same pattern. So, for instance, if you have the `abc.def` resource ID in your configuration, you can select it with either `abc.*`, `*.def`, `ab*ef` or even `a*.d*f`."
+msgstr ""
+
+#: ../README.md:448
+#: ../README.md:633
+#: ../README.md:819
+#: ../README.md:871
+msgid "Note: for backwards compatibility with previous versions of the client, you can also use the `-r/--resources` flag. You can also use both at the same time:"
+msgstr ""
+
+#: ../README.md:458
+msgid "`tx push` will create the resources on Transifex if they are missing."
+msgstr ""
+
+#: ../README.md:460
+#: ../README.md:643
+msgid "**Language management:**"
+msgstr ""
+
+#: ../README.md:462
+msgid "By default, the client will push the source file (the file that's being pointed to by the `source_file` configuration option from `tx add`). If you use the `-t/--translation` flag, `tx push` will push translation files. This may be desirable if, for example, you previously pulled translation files with the `--mode translator` option, translated using an offline translation tool and now you want to push your work to Transifex, or if you are migrating from another localization management service to Transifex. If you use both the `-t` _and_ the `-s/--source` flags, then you will push both the source file and the translation files."
+msgstr ""
+
+#: ../README.md:472
+msgid "When you use `-t`, the client will find all local files that match the `file-filter` configuration option. The files that are found, and their language codes constitute the _local_ languages. By default, the client will ask the Transifex API for the languages that are supported by the project you are pushing to (the _remote_ languages) and will only push languages that are both _local_ and _remote_ (aka the **intersection** of _local_ and _remote_ languages)."
+msgstr ""
+
+#: ../README.md:480
+msgid "You can use the `-l/--languages` flag to handpick which languages you want to push. It only makes sense to include _local_ languages with the `-l` flag, ie languages for which a file exists according to the `file-filter` configuration option. The client will then push **only** the language files you have specified. If you specify _local_ languages that are not yet supported by the remote Transifex project, the client will attempt to add these languages to the project first. Be careful of this since it may affect your pricing if you are a paying customer."
+msgstr ""
+
+#: ../README.md:493
+msgid "The `-a/--all` flag will attempt to push **all** _local_ languages to the remote Transifex project, adding them if necessary. Essentially, `-a` is equivalent to using `-l` with all the _local_ language codes."
+msgstr ""
+
+#: ../README.md:497
+msgid "Transifex uses the _ISO/IEC 15897_ standard for language codes (for example `en_US`). If you use a different format for the _local_ language codes, you can define a mapping in your configuration file `.tx/config`. You can specify these mappings for all configured resources by adding them to the `[main]` section or you can specify mappings per resource. The \"per-resource\" mappings take precendence. Configuring a language mapping looks like this:"
+msgstr ""
+
+#: ../README.md:512
+#: ../README.md:716
+msgid "This means that the _remote_ `pt_PT` language code maps to the _local_ `pt-pt` language code and the _remote_ `pt_BR` language code maps to the _local_ `pt-br` language code."
+msgstr ""
+
+#: ../README.md:516
+msgid "The REMOTE_CODE is the language code supported by Transifex. And the LOCAL_CODE is your language code."
+msgstr ""
+
+#: ../README.md:519
+msgid "The `-l` flag works with both _local_ and _remote_ language codes."
+msgstr ""
+
+#: ../README.md:521
+msgid "**Skipping pushing older files:**"
+msgstr ""
+
+#: ../README.md:523
+msgid "The default behavior of the `tx push` command is to skip pushing a file when the remote resource on Transifex has had a change more recently than when the local file was last edited. To make sure that the local files are pushed even if they are older than the remote resource, use the `-f/--force` flag."
+msgstr ""
+
+#: ../README.md:528
+msgid "You can use the `--use-git-timestamps` flag to compare against the last time the local files were *committed* to the local git repository instead of the last modification time in the filesystem. This can be useful in cases where you have just cloned a repository or pulled a branch. In this case, the filesystem modification time will reflect the time you pulled and not the time the file was edited by an actual person. If you use the `--use-git-timestamps` flag and no information about a local git repository can be found, then the client will fall back to taking the filesystem timestamp into account."
+msgstr ""
+
+#: ../README.md:537
+#: ../README.md:738
+#: ../README.md:827
+#: ../README.md:846
+msgid "**Other flags:**"
+msgstr ""
+
+#: ../README.md:539
+msgid "`--xliff`: Push xliff files instead of regular ones. The files must be located **in the same place** as indicated by the `file-filter` configuration option, but with the added `.xlf` suffix (`tx pull`ing with the `--xliff` option will put xliff files in the correct positions so you will probably not have to do this by hand)"
+msgstr ""
+
+#: ../README.md:545
+msgid "`--branch`: Using this flag, you can access copies of the regular remote resource that are tied to the provided branch. So if `tx push proj.res` pushes to the `https://app.transifex.com/org/proj/res` resource, then `tx push --branch foo proj.res` will push to the `https://app.transifex.com/org/proj/foo--res` resource. This way you can separate the localization effort across different branches. If you supply an empty string as the branch (`--branch ''`), then the client will attempt to figure out the currently active branch in the local git repository. For example:"
+msgstr ""
+
+#: ../README.md:564
+msgid "This way, the \"regular\" `https://app.transifex.com/myorganization/myproject/myresource` resource will not be affected by the changes you did to the source strings and the localization effort can be done in parallel on the `https://app.transifex.com/myorganization/myproject/new_feature--myresource` resource."
+msgstr ""
+
+#: ../README.md:571
+msgid "Note: Starting from version 1.5.0 resources created using the `--branch` flag,   will have an enhanced functionality in transifex and will be able to automatically   be merged into their bases. Resources created using the `--branch`  prior to this   version, need to be pushed again in order for the new functionality to be available."
+msgstr ""
+
+#: ../README.md:580
+msgid "`--base`: Define the base branch when pushing a branch."
+msgstr ""
+
+#: ../README.md:582
+msgid "`--skip`: Normally, if an upload fails, the client will abort. This may not be desirable if most uploads are expected to succeed. For example, the reason of the failed upload may be a syntax error in _one_ of the language files. If you set the `--skip` flag and an upload fails, then the client will simply print a warning and move on to the next language file."
+msgstr ""
+
+#: ../README.md:588
+msgid "`--workers/-w` (default 5, max 30): The client will push files in parallel to improve speed. The `--workers` flag sets the number of concurrent uploads possible at any time."
+msgstr ""
+
+#: ../README.md:591
+#: ../README.md:802
+msgid "`--silent`: Reduce verbosity of the output."
+msgstr ""
+
+#: ../README.md:593
+msgid "`--replace-edited-strings`: If present, source strings that have been edited (in the editor UI or via the API) will not be protected from this source file push and will instead be replaced. This can also be set on a per-resource level in the configuration file."
+msgstr ""
+
+#: ../README.md:598
+msgid "`--keep-transations`: If present, translations of source strings with the same key whose content changes will not be discarded. This can also be set on a per-resource level in the configuration file."
+msgstr ""
+
+#: ../README.md:602
+msgid "Pulling Files from Transifex"
+msgstr ""
+
+#: ../README.md:604
+msgid "`tx pull` is used to pull language files (usually translation language files) from Transifex to your machine. Most likely, you will do this regularly when you want to incorporate newly available translations from Transifex into it."
+msgstr ""
+
+#: ../README.md:608
+msgid "The simplest invocation of `tx pull` is simply:"
+msgstr ""
+
+#: ../README.md:614
+msgid "This will attempt to pull the translation files of all local resources that have been configured with `tx add`."
+msgstr ""
+
+#: ../README.md:619
+msgid "You can limit the resources you want to pull with:"
+msgstr ""
+
+#: ../README.md:625
+msgid "As stated in the `tx push` section, a resource ID must refer to a resource that has already been configured with `tx add` and has the form `<project>.<resource>`."
+msgstr ""
+
+#: ../README.md:645
+msgid "By default, the client will pull the translation files of the existing files in the paths that are defined in the `file_filter` configuration option from `tx add`."
+msgstr ""
+
+#: ../README.md:648
+msgid "For instance, if the directory structure looks like this:"
+msgstr ""
+
+#: ../README.md:662
+msgid "and the `.tx/config` contains:"
+msgstr ""
+
+#: ../README.md:669
+msgid "If you use the `-s/--source` flag, `tx pull` will pull the source file that is pointed from the `source_file` option of the config file."
+msgstr ""
+
+#: ../README.md:672
+msgid "If you use both the `-t/--translation` _and_ the `-s/--source` flags, then you will pull both the source file, and the translation files."
+msgstr ""
+
+#: ../README.md:675
+msgid "Then the client will try to search for any existing language file located at the `locale/<lang>` path (where `<lang>` is the language code) and will try to update it, for example `locale/el.php`, `locale/fr.php`, etc."
+msgstr ""
+
+#: ../README.md:679
+msgid "In case that there aren't any translation files, like in the structure above, then you must either use the `-l/--language` or the `-a/--all` flag."
+msgstr ""
+
+#: ../README.md:682
+msgid "Use the `-l/--languages` flag to handpick which languages you want to pull. It only makes sense to include _remote_ languages with the `-l` flag, ie languages for which a file does not exist according to the `file_filter` configuration option. The client will then pull **only** the language files you have specified:"
+msgstr ""
+
+#: ../README.md:692
+msgid "Note: The languages that are defined with the -l/--language flag should belong to the project for the client to download them."
+msgstr ""
+
+#: ../README.md:696
+msgid "The `-a/--all` flag will attempt to pull **all** languages from the remote Transifex project. Essentially, `-a` is equivalent to using `-l` with all the project language codes."
+msgstr ""
+
+#: ../README.md:700
+msgid "As stated before, Transifex uses the _ISO/IEC 15897_ standard for language codes. If you use a different format for the _local_ language codes, you can  define a mapping in your configuration file `.tx/config`. You can specify these mappings for all configured resources by adding them to the `[main]` section or you can specify mappings per resource. The \"per-resource\" mappings take precendence. Configuring a language mapping looks like this:"
+msgstr ""
+
+#: ../README.md:720
+msgid "The `-l` flag works with _remote_ language codes."
+msgstr ""
+
+#: ../README.md:722
+msgid "**Skipping pulling older files:**"
+msgstr ""
+
+#: ../README.md:724
+msgid "The default behavior of the `tx pull` command is to skip pulling a file when a local file on a machine has had a change more recently than when the remote resource was last edited. To make sure that the remote resources are pulled even if they are older than the local files, use the `-f/--force` flag."
+msgstr ""
+
+#: ../README.md:729
+msgid "You can use the `--use-git-timestamps` flag to compare against the last time the local files were *committed* to the local git repository instead of the last modification time in the filesystem. This can be useful in cases where you have just cloned a repository or pulled a branch. In this case, the filesystem modification time will reflect the time you pulled and not the time the file was edited by an actual person. If you use the `--use-git-timestamps` flag and no information about a local git repository can be found, then the client will default to taking the filesystem timestamp into account."
+msgstr ""
+
+#: ../README.md:740
+msgid "`--xliff`: Pull xliff files instead of regular ones. The files will be placed **in the same place** as indicated by the `source-file` and `file-filter` configuration options, but with the added `.xlf` suffix."
+msgstr ""
+
+#: ../README.md:744
+msgid "`--json`: Pull translation files as json instead of regular ones. As above, the files will be placed **in the same place** as indicated by the `file-filter` configuration options, but with the added `.json` suffix. Currently, source files are not supporting json format."
+msgstr ""
+
+#: ../README.md:749
+msgid "`--disable-overwrite`: If a file exists do not update it. This is useful when using `-a/--all` flag and you don't want to change the existing files but only download other language files."
+msgstr ""
+
+#: ../README.md:753
+msgid "`--keep-new-files`: Used with `--disable-ovewrite` to create new files   if file already exists locally with a '.new' extension."
+msgstr ""
+
+#: ../README.md:756
+msgid "`--mode/-m`: The translation mode of the downloaded file. This can be one of the following: `'default', 'reviewed'`, `'proofread'`, `'translator'`, `'untranslated'`, `'onlytranslated'`, `'onlyreviewed'`, `'onlyproofread'`, `'sourceastranslation'` **(default mode is: **`'default'`). Use like` 'tx pull -m proofread'` to download only proofread translations."
+msgstr ""
+
+#: ../README.md:762
+msgid "`--branch`: Using this flag, you can access copies of the regular remote resource that are tied to the provided branch. So if `tx pull proj.res` pulls from the `https://app.transifex.com/org/proj/res` resource, then `tx pull --branch foo proj.res` will pull from the `https://app.transifex.com/org/proj/foo--res` resource. This way you can separate the localization effort across different branches. If you supply an empty string as the branch (`--branch ''`), then the client will attempt to figure out the currently active branch in the local git repository. For example:"
+msgstr ""
+
+#: ../README.md:780
+msgid "This way, the \"regular\"   `https://app.transifex.com/myorganization/myproject/myresource` resource will not be affected by the changes one did, and the localization effort can be done in parallel on the `https://app.transifex.com/myorganization/myproject/new_feature--myresource` resource."
+msgstr ""
+
+#: ../README.md:787
+msgid "`--skip`: Normally, if a download fails, the client will abort. This may not be desirable if most downloads are expected to succeed. For example, the reason of the failed download may be a syntax error in _one_ of the language files. If you set the `--skip` flag and an upload fails, then the client will simply print a warning and move on to the next language file."
+msgstr ""
+
+#: ../README.md:793
+msgid "`--minimum-perc=MINIMUM_PERC` Specify the minimum translation completion threshold required in order for a file to be downloaded."
+msgstr ""
+
+#: ../README.md:796
+msgid "`--workers/-w` (default 5, max 30): The client will pull files in parallel to improve speed. The `--workers` flag sets the number of concurrent downloads possible at any time."
+msgstr ""
+
+#: ../README.md:800
+msgid "`--pseudo`: Generate mock string translations with a ~20% default length increase in characters."
+msgstr ""
+
+#: ../README.md:804
+msgid "Removing resources from Transifex"
+msgstr ""
+
+#: ../README.md:805
+msgid "The tx delete command lets you delete a resource that's in your `config` file and on Transifex."
+msgstr ""
+
+#: ../README.md:807
+msgid "To delete a resource, use the following command:"
+msgstr ""
+
+#: ../README.md:812
+msgid "To delete all resources in a specific project at once, instead of referring to a specific resource_slug, you can use the asterisk character as follows:"
+msgstr ""
+
+#: ../README.md:828
+msgid "`--skip`: Normally, if a delete fails, the client will abort. This may not be desirable if most deletes are expected to succeed. For example, the reason of the failed delete may be a a resource that has translated content. If you set the `-s/--skip` flag and an delete fails, then the client will simply print a warning and move on to the next resource."
+msgstr ""
+
+#: ../README.md:833
+msgid "`--force`: In case you want to proceed to a deletion even if resources have translations use the `-f/--force` flag."
+msgstr ""
+
+#: ../README.md:835
+msgid "`--branch`: In case you want to delete a resource's branch that is on Transifex. If you supply an empty string as the branch (`--branch ''`), then the client will attempt to figure out the currently active branch in the local git repository."
+msgstr ""
+
+#: ../README.md:839
+msgid "Merging Resource"
+msgstr ""
+
+#: ../README.md:840
+msgid "The tx merge command lets you merge a branch resource with its base resource (applies only to resources created with the `--branch` flag)"
+msgstr ""
+
+#: ../README.md:842
+msgid "To merge a resource to its base resource, use the following command:"
+msgstr ""
+
+#: ../README.md:847
+msgid "`--conflict-resolution`: Set the conflict resolution strategy. Acceptable options are `USE_HEAD` (changes in the HEAD resource will be used) and `USE_BASE` (changes in the BASE resource will be used)"
+msgstr ""
+
+#: ../README.md:848
+msgid "`--force`: In case you want to proceed with the merge even if the source strings are diverged, use the `-f/--force` flag."
+msgstr ""
+
+#: ../README.md:850
+msgid "Getting the local status of the project"
+msgstr ""
+
+#: ../README.md:851
+msgid "The status command displays the existing configuration in a human readable format. It lists all resources that have been initialized under the local repo/directory and all their associated translation files:"
+msgstr ""
+
+#: ../README.md:865
+msgid "To get the status of specific resources just add the resources you want in your command:"
+msgstr ""
+
+#: ../README.md:879
+msgid "Updating the CLI app"
+msgstr ""
+
+#: ../README.md:880
+msgid "The `tx update` command provides a way to self update the application without going to Github releases page."
+msgstr ""
+
+#: ../README.md:886
+msgid "**Flags:**"
+msgstr ""
+
+#: ../README.md:887
+msgid "`--check`: Check if there is a new release. Nothing gets updated."
+msgstr ""
+
+#: ../README.md:888
+msgid "`--no-interactive`: Proceed to update if there is a newer version without seeing the confirmation prompt."
+msgstr ""
+
+#: ../README.md:889
+msgid "`--debug`: Enable logging for the binary update process."
+msgstr ""
+
+#: ../README.md:890
+msgid "License"
+msgstr ""
+
+#: ../README.md:892
+msgid "Licensed under Apache License 2.0, see [LICENSE](LICENSE) file."
+msgstr ""
