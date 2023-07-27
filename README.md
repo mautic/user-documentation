@@ -23,7 +23,7 @@ To make a small change to the base language files for the documentation, use the
 
 To make more complex changes you need to clone this repository and work on your local computer.
 
-1. Install a code editor, we recommend [Visual Studio Code](https://code.visualstudio.com) as this will automatically install all the extensions you need.
+1. Install a code editor, [Visual Studio Code](https://code.visualstudio.com) is recommended as it automatically installs all the extensions you need.
 2. Install [Github CLI](https://cli.github.com/) which makes it much easier to work with Git commands
 3. Install the dependencies from the requirements.txt file in the root of the /docs folder using the command `pip3 install -r requirements.txt`
 4. Create a working folder on your local computer
