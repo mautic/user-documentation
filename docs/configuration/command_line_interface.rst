@@ -21,7 +21,7 @@ Options
 .. vale off
 
 .. list-table:: 
-   :widths: 100 100
+   :widths: 50 50
    :header-rows: 1
 
    * - Options
@@ -71,93 +71,108 @@ These are the commands you may need to use in relation to your Mautic instance. 
 .. vale off
 
 .. list-table:: 
-   :widths: 100 100
+   :widths: 25 50 25
    :header-rows: 1
 
    * - Command
      - Description
-   * - mautic:assets:generate
+     - Aliases
+   * - ``mautic:assets:generate``
      - Combines and minifies Asset files (CSS/JS) from each bundle into single production files
-   * - mautic:broadcasts:send
+     - 
+   * - ``mautic:broadcasts:send``
      - Process Contacts pending to receive a Channel broadcast.
-   * - mautic:campaigns:execute
+     - 
+   * - ``mautic:campaigns:execute``
      - Execute specific scheduled events.
-   * - mautic:campaigns:messagequeue
-     - Process sending of messages queue, you can also use the alias of ``mautic:messages:send``.
-   * - mautic:campaigns:messages
-     - Process sending of messages queue, you can also use the alias of ``mautic:messages:send``.
-   * - mautic:campaigns:rebuild
-     - Rebuild Campaigns based on Contact Segments, you can also use the alias of ``mautic:messages:update``.
-   * - mautic:campaigns:trigger
+     - 
+   * - ``mautic:campaigns:rebuild``
+     - Rebuild Campaigns based on Contact Segments.
+     - ``mautic:campaigns:update``
+   * - ``mautic:campaigns:trigger``
      - Trigger timed events for published Campaigns.
-   * - mautic:campaigns:update
-     - Rebuild Campaigns based on Contact Segments, you can also use the alias of ``mautic:messages:rebuild``.
-   * - mautic:campaigns:validate
+     - 
+   * - ``mautic:campaigns:validate``
      - Validate if a Contact has been inactive for a decision and execute events if so.
-   * - mautic:citrix:sync
+     - 
+   * - ``mautic:citrix:sync``
      - Synchronizes registrant information from Citrix products
-   * - mautic:cache:clear
+     - 
+   * - ``mautic:cache:clear``
      - Clears Mautic cache, by using this command, you will erase the 10-minute Mautic cache, which contains things like segment counts and data for dashboard widgets.
-   * - mautic:contacts:deduplicate
+     - 
+   * - ``mautic:contacts:deduplicate``
      - Merge Contacts based on same unique identifiers
-   * - mautic:custom-field:create-column
+     - 
+   * - ``mautic:custom-field:create-column``
      - Creates the actual column in the table
-   * - mautic:email:fetch	
-     - Fetch and process monitored Email, you can also use the alias of ``mautic:email:fetch``.
-   * - mautic:emails:send
+   * - ``mautic:email:fetch``
+     - Fetch and process monitored Email.
+   * - messenger:consume email_transport
      - Processes mail queue
-   * - mautic:import
+   * - ``mautic:import``
      - If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
-   * - mautic:integration:fetchleads
-     - Fetch Contacts from Integration, you can also use the alias of ``mautic:integration:synccontacts``.
-   * - mautic:integration:pipedrive:fetch
+     - 
+   * - ``mautic:integration:fetchleads``
+     - Fetch Contacts from Integration.
+     - ``mautic:integration:synccontacts``
+   * - ``mautic:integration:pipedrive:fetch``
      - Pulls the data from Pipedrive and sends it to Mautic
-   * - mautic:integration:pipedrive:push
+     - 
+   * - ``mautic:integration:pipedrive:push``
      - 	Pushes the data from Mautic to Pipedrive
-   * - mautic:integration:pushactivity
-     - Push Contact activity to Integration, you can also use the alias of ``mautic:integration:pushleadactivity``.
-   * - mautic:integration:pushleadactivity
-     - Push Contact activity to Integration, you can also use the alias of ``mautic:integration:pushactivity``. 
-   * - mautic:integration:synccontacts
-     - Fetch Contacts from Integration, you can also use the alias of ``mautic:integration:fetchleads``.
-   * - mautic:install:data
+     - 
+   * - ``mautic:integration:pushleadactivity``
+     - Push Contact activity to Integration. 
+     - ``mautic:integration:pushactivity``
+   * - ``mautic:install:data``
      - Installs data
-   * - mautic:iplookup:download
+     - 
+   * - ``mautic:iplookup:download``
      - Fetch remote datastores for IP lookup services that leverage local lookups.
-   * - mautic:maintenance:cleanup
+     - 
+   * - ``mautic:maintenance:cleanup``
      - Cleans up older data.
-   * - mautic:messages:send
-     - Process sending of messages queue, you can also use the alias of ``mautic:campaigns:messagequeue`` and ``mautic:campaigns:messages``.
-   * - doctrine:migrations:generate
+     - 
+   * - ``mautic:messages:send``
+     - Process sending of messages queue.
+     - ``mautic:campaigns:messagequeue``, ``mautic:campaigns:messages``
+   * - ``doctrine:migrations:generate``
      - Generate a blank migration class.
-   * - mautic:plugins:install
-     - Installs Plugins, you can also use the alias of ``mautic:plugins:reload``.
-   * - mautic:plugins:reload
-     - Reloads Plugins, you can also use the alias of ``mautic:plugins:install`` or ``mautic:plugins:update``.
-   * - mautic:plugins:update
-     - Updates Plugins, you can also use the alias of ``mautic:plugins:reload``.
-   * - mautic:queue:process
+     - 
+   * - ``mautic:plugins:reload``
+     - Install, reloads or updates Plugins.
+     - ``mautic:plugins:install``, ``mautic:plugins:update``
+   * - ``mautic:queue:process``
      - Process queues
-   * - mautic:reports:scheduler
+     - 
+   * - ``mautic:reports:scheduler``
      - Processes scheduler for Report's export
-   * - mautic:segments:rebuild
-     - Update Contacts in smart Segments based on new Contact data, you can also use the alias of ``mautic:segments:update``.
-   * - mautic:segments:update
-     - Update Contacts in smart Segments based on new Contact data, , you can also use the alias of ``mautic:segments:rebuild``.
-   * - mautic:theme:json-config
+     - 
+   * - ``mautic:segments:update``
+     - Update Contacts in smart Segments based on new Contact data.
+     - ``mautic:segments:rebuild``
+   * - ``mautic:theme:json-config``
      - Converts Theme config to JSON from PHP
-   * - mautic:unusedip:delete
+     - 
+   * - ``mautic:unusedip:delete``
      - Deletes IP addresses that aren't used in any other database table
-   * - mautic:update:apply
+     - 
+   * - ``mautic:update:apply``
      - Updates the Mautic app.
-   * - mautic:update:find
+     - 
+   * - ``mautic:update:find``
      - Fetches updates for Mautic
-   * - mautic:webhooks:process
+     - 
+   * - ``mautic:webhooks:process``
      - Process queued Webhook payloads
-   * - social:monitor:twitter:hashtags
+     - 
+   * - ``social:monitor:twitter:hashtags``
      - Looks at the monitoring records and finds hashtags.
-   * - social:monitor:twitter:mentions
+     - 
+   * - ``social:monitor:twitter:mentions``
      - Searches for mentioned tweets
+     - 
 
 .. vale on
 
@@ -165,10 +180,10 @@ Doctrine commands
 =================
 
 .. list-table:: 
-   :widths: 100 100
+   :widths: 50 50
    :header-rows: 1
 
    * - Command
      - Description
-   * - doctrine:fixtures:load
+   * - ``doctrine:fixtures:load``
      - Installs Mautic sample data, overwriting existing data.

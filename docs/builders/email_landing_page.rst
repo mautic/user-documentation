@@ -127,6 +127,35 @@ If you search through the list of available Themes, the new MJML Themes ``Brienz
 
 To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`. 
 
+Custom fonts
+************
+
+From Mautic 5.x you can extend the Style Manager > Typography > Fonts list to include custom fonts.
+
+.. image:: images/editorfonts.jpg
+  :width: 280
+  :alt: Screenshot of the Fonts in Style Manager > Typography
+
+You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:
+
+.. code-block:: php
+
+    <?php
+    // Example local.php
+    'editor_fonts' => array(
+        '0' => array(
+            'name' => 'Smokum',
+            'font' => 'Smokum, cursive',
+            'url' => 'https://fonts.googleapis.com/css2?family=Smokum&display=swap'
+        ),
+        '1' => array(
+            'name' => 'Sofia',
+            'font' => 'Sofia, sans-serif',
+            'url' => 'https://fonts.googleapis.com/css?family=Sofia'
+        )
+    ),
+
+
 Reporting bugs
 ***************
 
