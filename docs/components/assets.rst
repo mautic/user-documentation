@@ -143,6 +143,8 @@ Display assets directly in the browser
 
 By default, Mautic supports the following file types for direct display in the browser:
 
+.. vale off
+
 - gif
 - jpg
 - jpeg
@@ -152,5 +154,7 @@ By default, Mautic supports the following file types for direct display in the b
 - pdf
 - png
 - wav
+
+.. vale on
 
 If you want to change this default behavior, you can modify the ``local.php`` file and set an array of extensions for the ``streamed_extensions`` parameter.
