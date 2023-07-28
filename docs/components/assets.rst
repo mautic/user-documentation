@@ -137,5 +137,20 @@ It's possible to delete an Asset by clicking on the 'delete' button while viewin
 
 .. warning:: 
     Once deleted, you can't retrieve an Asset, and statistics relating to the number of downloads for that Asset are no longer be available. Contact Points accumulated as a result of accessing the resource remain. It's recommended where possible to unpublish Assets which are no longer in use - in future there may be an archive feature.
-    
 
+Display assets directly in the browser
+--------------------------------------
+
+By default, Mautic supports the following file types for direct display in the browser:
+
+- gif
+- jpg
+- jpeg
+- mpg
+- mpeg
+- mp3
+- pdf
+- png
+- wav
+
+If you want to change this default behavior, you can modify the ``local.php`` file and set an array of extensions for the ``streamed_extensions`` parameter.
