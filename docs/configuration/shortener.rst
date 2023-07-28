@@ -3,8 +3,6 @@
 Shortener service
 #########
 
-.. vale on
-
 .. attention::
 
     Mautic 5 introduces a new shortener feature, replacing the old legacy shortener setup found in the configuration.
