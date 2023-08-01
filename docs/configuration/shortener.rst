@@ -5,7 +5,7 @@ Shortener service
 
 .. attention::
 
-    Mautic 5 introduces a new shortener feature, replacing the old legacy shortener setup found in the configuration.
+    Mautic 5 introduces a new shortening feature, replacing the previous legacy shortening system found in the settings. If you utilized the shortening service in Mautic 4, upon upgrading to Mautic 5, please follow the steps below to reconfigure it.
 
 The new shortener service allows developers to create plugins for any shortener service, with any type of authorization. By default, Mautic does not provide a shortener service plugin; you must install it either from the marketplace or manually.
 
