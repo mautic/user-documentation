@@ -87,7 +87,7 @@ You can also limit the number of Contacts to process per script execution using 
 
 .. vale off
 
-Custom Field chron jobs
+Custom Field cron jobs
 =======================
 
 .. vale on
