@@ -1,9 +1,7 @@
-.. vale off
 
 Contacts
 #########
 
-.. vale on
 
 Contacts are the central factor of a marketing automation platform. 
 These are all the individuals who have visited your websites or interacted with you in some way.
@@ -18,7 +16,7 @@ Visitors (formerly anonymous leads)
 
 Unidentified visitors to your site who haven't yet completed a Form or otherwise interacted with your site.
 
-Mautic tracks these Contacts, but usually keeps them hidden so as not to clutter up your Segment.
+Mautic tracks these Contacts, but usually keeps them hidden so as not to clutter up your view.
   
 Visitors are worth tracking, because these could be future customers. By tracking them before they have any interaction, you can retain a log of when they visited your site, which allows you to get a picture of their activity prior to engaging with you.
 
@@ -58,13 +56,13 @@ The second type of Contact is a known Contact. These Contacts have identified th
 
 As a result, these Contacts typically have a name, Email, and other identifying information associated with the Contact.
 
-These are Contacts which may have started as a visitor, but at some point provided additional information such as a name, Email address, social network handle, or other identifying characteristics which have enabled you to connect up the activity on your website with a known person. You can nurture these Contacts through the Mautic marketing automation platform, learn more about their behaviour, and take specific actions as a result of this information.
+These are Contacts which may have started as a visitor, but at some point provided additional information such as a name, Email address, social network handle, or other identifying characteristics which have enabled you to connect up the activity on your website with a known person. You can nurture these Contacts through the Mautic marketing automation platform, learn more about their behavior, and take specific actions as a result of this information.
 
 
 Changing the view
 -----------------
 
-The Segment is the default tabular view of all the Contacts in the system - by default the **list view** is enabled, but you can also choose to switch to the **card view** also known as **grid view** which uses avatars to depict the Contacts visually using cards. 
+By default the **list view** is used, but you can also choose to switch to the **card view** also known as **grid view** which uses avatars to depict the Contacts visually using cards. 
 If you’d like to see your Contacts in the card view, click the **C** button while you’re looking at the Contact list. To go back to the table or list view, press the **T** key.
 
 The :ref:`Manage Contacts<managing contacts>` section provides more information on how you can work with Contacts in Mautic.

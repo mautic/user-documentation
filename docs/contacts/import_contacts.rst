@@ -5,14 +5,14 @@ Import Contacts
 
 .. vale on
 
-The user interface from a CSV file can import Contacts. You can import from the browser or in the background via a cron job.
+Contact importing is possible through the user interface in Mautic. For larger imports it is recommended to complete the import in the background via a cron job.
 
-Since Mautic 2.9, you'll see that action in the Contact events history when an import job creates or updates a Contact.
+Since Mautic 2.9, Mautic shows in a Contact's event history when an import job creates or updates a Contact.
 
 Import file requirements
 ************************
 
-* The CSV file must be in UTF8 encoding. Other encodings may cause troubles while importing. Read the documentation of your spreadsheet program on how to export a spreadsheet to UTF8. Google Sheets encodes to UTF8 automatically, Libre/Open Office lets you choose before export.
+* The CSV file must use UTF8 encoding. Other encodings may cause failures while importing. Read the documentation of your spreadsheet program on how to export a spreadsheet to UTF8. Google Sheets encodes to UTF8 automatically, Libre/Open Office lets you choose before export.
 
 * For boolean values like ``doNotEmail`` or custom boolean field, use values ``true``, ``1``, ``on`` or ``yes`` as TRUE values. Anything else will be considered ``false``.
 For importing multiple Tags for a Contact separate them with ``|`` like ``tag-a|tag-b|tag-c``
@@ -20,16 +20,16 @@ For importing multiple Tags for a Contact separate them with ``|`` like ``tag-a|
 
   * Example: ``2019-01-02 19:08:42``.
     
-    Other formats may work too, but they may be problematic.
+    Other formats may work too, but they could be problematic.
 
 Tips
 ====
 
 * Use a header row with the column names matching the Mautic Contact Custom Field names. This way Mautic automatically pre-selects the mapping for you. For example, if you name the first name column as ``firstname``, this field will be mapped automatically to ``{contactfield=firstname}``.
 
-* When you set up your mapping, you have an option to skip the import on fields where a value already exists on the Contact record. This setting allows you to avoid erasing already existing data in your Mautic Contacts.
+* When you set up your mapping, you have an option to skip the import on fields where a value already exists on the Contact record. This setting allows you to avoid erasing data which already exists in your Mautic Contacts.
 
-* If your CSV contains thousands of Contacts or more, divide such CSV into several smaller CSV files to avoid memory issues and slow import speed.
+* If your CSV contains more than a few thousand contacts, it is recommended to divide the file into several smaller CSV files to avoid memory issues and slow import speeds.
 
 .. vale off
 
@@ -45,7 +45,7 @@ If using a Linux system, see the ``GNU`` parallel command ``sudo apt install par
 This generates files: ``split_list_part1.csv ...split_list_part9.csv, split_list_part10.csv``.
 
 Types of import
-===============
+***************
 
 Browser import
 --------------
@@ -57,9 +57,8 @@ Use the browser import method only if you don't have any other choice. Backgroun
 Background import
 -----------------
 
-Background import jobs (CLI command triggered manually or via a cron job) have the advantage of benevolent time limits. A CSV background import isn't restarted every batch (1 batch = 100 rows by default) - the last row imported is saved, and the next batch continues from that point. Background imports will always be faster and more reliable than browser imports.
+Background import jobs (triggered manually or via a cron job) have the advantage of benevolent time limits. A CSV background import isn't restarted every batch (1 batch = 100 rows by default) - the last row imported is saved, and the next batch continues from that point. Background imports will always be faster and more reliable than browser imports.
 
-This option is available since Mautic 2.9.
 
 .. warning:: 
 
@@ -78,7 +77,11 @@ If there is no import waiting in the queue, there won't be any messages or use `
 Automatic import type configuration
 -----------------------------------
 
-There is an option in the Global Mautic Configuration / Contact settings to define the optimal limit of browser import vs background import. If you enter 500, that means that if the CSV file being imported has less than ``500`` rows, the browser imports it. If it has more than 500 rows, it will be queued to be imported by the background job. The default value is 0 (zero), which means it shows two import buttons instead of one, and you have to decide what import option to use during every import.
+There is an option in the Global Mautic Configuration > Contact settings to define the optimal limit of browser import vs background import. 
+
+If you enter 500, that means that if the CSV file being imported has less than ``500`` rows, the browser imports it. If it has more than 500 rows, it will be queued to be imported by the background job.
+
+ The default value is 0 (zero), which means it shows two import buttons instead of one, and you have to decide what import option to use during every import.
 
 Parallel imports
 ----------------
@@ -87,7 +90,7 @@ The import can take several minutes. One import may still run when the other is 
 
 
 Import job list
-===============
+***************
 
 You can access the list of imports by going to the Contacts area, clicking the Action menu above the Contacts table, and then selecting the Import History option.
 
@@ -110,7 +113,7 @@ The table shows you:
 * when it was created
 * when the background job (System) last updated the statistics
 
-There is also a toggle switch which enables you to :ref:`stop and start<starting and stopping imports>` queued or **In Progress** imports. In the Mautic UI, publishing and unpublishing items are accomplished using this switch.
+There is also a toggle switch which enables you to :ref:`stop and start<starting and stopping imports>` queued or **In Progress** imports. In the Mautic user interface, publishing and unpublishing items are accomplished using this switch.
 
 Import job status
 =================
@@ -146,9 +149,8 @@ There are two charts:
 
 More detailed statistics and the import job configuration are available if you click *Details*. This includes import speed, field mappings, and job timestamps.
 
-
 Starting and stopping imports
-=============================
+*****************************
 
 How to start an import
 ----------------------
@@ -178,9 +180,9 @@ How to stop a background import
 
 2. In the top right corner above the table of Contacts open the sub menu of actions and select the :ref:`Import History<import job list>` option.
 
-3. Unpublish the import job you want to stop. The import changes :ref:`status<import job status>` to Stopped. It finishes importing the current batch and then stop.
+3. Unpublish the import job you want to stop. The import changes :ref:`status<import job status>` to Stopped. It finishes importing the current batch and then stops.
 
-4. To start the import again, simply publish it and the background job continues with the next :doc:`cron job execution</configuration/cron_jobs>`.
+4. To start the import again, publish it, and the background job continues with the next :doc:`cron job execution</configuration/cron_jobs>`.
 
 .. image:: images/import-publish.png
     :align: center

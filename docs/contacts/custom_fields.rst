@@ -76,7 +76,7 @@ There is a toggle switch which shows before each label title. You can find this 
 
 |
 
-Adding a new field
+Adding a new Custom Field
 ******************
 
 You can create additional custom fields and define the data type you want that field to hold. In addition to the data type you select the group for that particular field. This defines where the field displays on the Contact edit and detail view.
