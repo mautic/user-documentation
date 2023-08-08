@@ -92,7 +92,7 @@ Custom Field cron jobs
 
 .. vale on
 
-**To keep contacts and company custom fields updated**
+**To keep Contacts and Company Custom Fields updated**
 
 .. code-block:: php
 
