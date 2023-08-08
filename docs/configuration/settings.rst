@@ -171,7 +171,7 @@ SMTP transport
 
 The SMTP transport is the default transport used for sending Emails with Mautic. It's configured in the Mautic configuration under the Email Settings tab. The configuration is the same as in the :xref:`Symfony Mailer` documentation.
 
-Mautic now uses a specific way of providing the connection details for Email transports to interpret, which is called a Data Source Name, or DSN. This is the example Data Source Name configuration mentioned in the :xref:`Symfony Mailer` documentation for SMTP:
+Mautic now uses a specific way of providing the connection details for Email transports to interpret, known as a Data Source Name, or DSN. This is the example Data Source Name configuration mentioned in the :xref:`Symfony Mailer` documentation for SMTP:
 
 .. code-block:: shell
     
@@ -245,7 +245,7 @@ This is how it would be set up in Mautic's Email configuration:
     :width: 400
     :alt: Sendgrid API DSN example
 
-To replace the Sendgrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the Sendgrid API to send Emails. 
+To replace the SendGrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the Sendgrid API to send Emails. 
 
 .. warning::
   It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
@@ -470,7 +470,7 @@ Landing page settings
   :width: 600
   :alt: Screenshot showing Landing Page Settings Configuration in Mautic
 
-* **Show Category in page URL?** - If you use Categories, the Landing Page's associated Category displays in the URL if you select Yes.
+* **Show Category in Page URL?** - If you use Categories, the Landing Page's associated Category displays in the URL if you select Yes.
 
 * **Analytics script** - To track Landing Page visits and activity in other platforms such as Google Analytics, add those tracking scripts here.
 
