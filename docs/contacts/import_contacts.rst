@@ -15,7 +15,7 @@ Import file requirements
 * The CSV file must be in UTF8 encoding. Other encodings may cause troubles while importing. Read the documentation of your spreadsheet program on how to export a spreadsheet to UTF8. Google Sheets encodes to UTF8 automatically, Libre/Open Office lets you choose before export.
 
 * For boolean values like ``doNotEmail`` or custom boolean field, use values ``true``, ``1``, ``on`` or ``yes`` as TRUE values. Anything else will be considered ``false``.
-
+For importing multiple Tags for a Contact separate them with ``|`` like ``tag-a|tag-b|tag-c``
 * For date/time values, use ISO8601 notation ``i.e. YYYY-MM-DD hh:mm:ss``
 
   * Example: ``2019-01-02 19:08:42``.
