@@ -102,7 +102,7 @@ Please note that if you turn off any of these options in the global settings, th
 
 |
 
-Customize preference center
+Customize Preference Center
 ***************************
 
 It's possible to customize the personal Preference Center/unsubscribe page, edit text labels, format, and apply Themes using the Landing Page builder.
@@ -114,9 +114,9 @@ Creating a Preference Center Landing Page
 
 .. vale on
 
-When creating/editing a Landing Page, there is a toggle switch labeled *Is Preference Center*. If selected, Mautic marks the Page as a preference center Landing Page, making available the appropriate tokens.
+When creating/editing a Landing Page, there is a toggle switch labeled *Is Preference Center*. If selected, Mautic marks the Page as a Preference Center Landing Page, making available the appropriate tokens.
 
-When configured as a preference center in a Mautic Email, Mautic automatically directs recipients to this Preference Center when clicking on the ``{unsubscribe_url}`` link. It also shows or hides the Preference Center slots in the Builder.
+When configured as a Preference Center in a Mautic Email, Mautic automatically directs recipients to this Preference Center when clicking on the ``{unsubscribe_url}`` link. It also shows or hides the Preference Center slots in the Builder.
 
 .. image:: images/pref1.png
     :align: center
@@ -143,8 +143,8 @@ Save your changes, and the Preference Center Landing Page is ready.
 
 .. vale off 
 
-Landing Pages
-*************
+Accessing Preference Center Pages
+*********************************
 
 .. vale on
 
