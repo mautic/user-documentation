@@ -61,7 +61,7 @@ These are Contacts which may have started as a visitor, but at some point provid
 
 
 Changing the view
-=================
+*****************
 
 By default Mautic uses the **list view**, but you can also choose to switch to the **card view** also known as **grid view**, which uses avatars to depict the Contacts visually using cards. 
 
