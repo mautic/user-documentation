@@ -1,11 +1,11 @@
 .. vale off
 
-Manage custom fields
+Manage Custom Fields
 ####################
 
 .. vale on
 
-You can manage Custom Fields through the Admin menu (click the cogwheel upper right-hand side of Mautic).
+You can manage Custom Fields through the Admin menu - click the cogwheel upper right-hand side of Mautic.
 
 .. image:: images/admin-menu.png
     :align: center
@@ -31,7 +31,7 @@ You'll notice the group column shows the specific field on the Contact profile. 
 
 |
 
-1. **Lock icon** -  The core installation uses these fields, and they can't be removed.
+1. **Lock icon** -  The core installation uses these fields, you can't remove them.
 
 2. **List icon** - You can use these fields as filters for Segments.
 
@@ -39,7 +39,7 @@ You'll notice the group column shows the specific field on the Contact profile. 
 
 4. **Globe icon** - You can update these fields publicly through the :doc:`tracking pixel</configuration/variables>` URL query see :doc:`Contact Monitoring</contacts/manage_contacts>` for more details.
 
-It's important to note that from Mautic 5, you won't be able to edit the default value for any Fields that are used to identify a Contact or Company, including:
+It's important to note that from Mautic 5, you won't be able to edit the default value for any Fields used to identify a Contact or Company, including:
 
 * Email
 
@@ -76,8 +76,12 @@ There is a toggle switch which shows before each label title. You can find this 
 
 |
 
+.. vale off
+
 Adding a new Custom Field
-******************
+*************************
+
+.. vale on
 
 You can create additional custom fields and define the data type you want that field to hold. In addition to the data type you select the group for that particular field. This defines where the field displays on the Contact edit and detail view.
 
