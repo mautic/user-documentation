@@ -147,6 +147,7 @@ To make updates to several Contacts at once, select those Contacts then click th
 A modal window displays when you click one of the actions, with more configuration details. 
 
 
+
 You can use this feature to quickly update large volumes of Contacts, but it might be better to use a Campaign action - for example add all the Contacts you need to update into a segment and use a campaign to trigger the change - if you need to change more than a few hundred Contacts at a time.
 
 .. image:: images/batch-actions.png
@@ -364,7 +365,7 @@ Note that by default, Mautic won't track traffic originating from the same :xref
 
 .. vale off
 
-Tracking Script (``Javascript``)
+Tracking script (``JavaScript``)
 --------------------------------
 
 .. vale on
