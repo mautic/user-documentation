@@ -84,7 +84,6 @@ Parallel imports
 ----------------
 
 The import can take several minutes. One import might be running when you start another. There is the ``parallel_import_limit`` configurable option to prevent running out of server resources. By default, only 1 import runs at a time. You can change this option by adding it to your ``app/config/local.php`` file.
-
 Import job list
 ***************
 
