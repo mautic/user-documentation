@@ -4,6 +4,7 @@ Contacts
 
 
 Contacts are the central factor of a marketing automation platform. 
+
 These are all the individuals who have visited your websites or interacted with you in some way.
 
 Contact types
