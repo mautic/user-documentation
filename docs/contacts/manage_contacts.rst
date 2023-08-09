@@ -45,7 +45,7 @@ Quick Add is a short Form with the fields you deem most important. To display fi
 You can add the Contact through the New Contact Form and include much more detail, but for quick entry this is the easiest and fastest way to get the Contact into the system.
 
 Add new Contact
-=======
+===============
 
 .. image:: images/contact-manual-add.png
     :align: center
@@ -64,32 +64,18 @@ Use the tabs at the top to populate existing Custom Fields and social network pr
 .. vale off
 
 Importing Contact lists
-***********************
+=======================
 
 .. vale on
 
 Mautic offers the ability to import Contacts from other sources via CSV file - this is a great way to get up and running quickly if you need to import a lot of Contacts at once.
 
-To import your CSV file:
-
-1. :doc:`Create custom fields</contacts/custom_fields>` to match the fields in your list.
-
-2. On the Contacts page, click **Import** next to **+New**.
-
-3. Choose your UTF-8 encoded CSV file.
-
-4. Adjust the value in **Delimiter**, **Enclosure**, and **Escape**, if necessary.
-
-5. Click on **Upload**
-
-When you click **Upload**, you can match the fields found in the CSV file to the fields that you have in Mautic, which allows the data to be correctly imported.
-
-Following values results in **TRUE** when importing a ``Boolean`` value: ``1``, ``true``, ``on`` and ``yes``. Those values can be also capitalized and still taken as TRUE. **Mautic saves any other value as FALSE**.
+Read more about importing contacts in :doc:`/contacts/import_contacts`.
 
 .. vale off
 
 Exporting Contact lists
-***********************
+=======================
 
 .. vale on
 
@@ -106,7 +92,7 @@ Mautic supports exporting Contact lists in CSV and Excel formats.
 .. vale off
 
 Editing Contacts
-****************
+================
 
 .. vale on
 
@@ -116,8 +102,8 @@ From this screen, you can view the recent events and any notes saved against the
 
 To edit the Contact, click the '**edit**' button on the top-right menu.
 
-Contact duplicates
-******************
+Managing duplicates
+===================
 
 When Mautic tracks a Contact's actions - such as page hits or Form submissions - Contacts are automatically merged based on their unique identifiers, which are:
 
@@ -140,7 +126,7 @@ So, Mautic takes care of duplicate Contacts created by the event tracking. You c
 |
 
 Batch actions
-*************
+=============
 
 To make updates to several Contacts at once, select those Contacts then click the green arrow at the top of the checkbox column. 
 
