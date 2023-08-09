@@ -189,7 +189,7 @@ Mail send settings
 
 * **Service to send mail through** - Select the Email service provider you use, and enter your credentials. 
 
-See :ref:`here<contact's unsubscribe email preferences>` to unsubscribe Contact's Email preferences.
+See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Email subscription preferences.
   
 Default frequency rule
 ======================
