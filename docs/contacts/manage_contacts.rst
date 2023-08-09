@@ -70,7 +70,7 @@ Importing Contact lists
 
 Mautic offers the ability to import Contacts from other sources via CSV file - this is a great way to get up and running quickly if you need to import a lot of Contacts at once.
 
-Read more about importing contacts in :doc:`/contacts/import_contacts`.
+Read more about importing Contacts in :doc:`/contacts/import_contacts`.
 
 .. vale off
 
