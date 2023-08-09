@@ -26,8 +26,8 @@ The search box allows many different search types and follows the same search pr
 
 .. vale off
 
-Adding Contacts
-***************
+Working with Contacts
+*********************
 
 .. vale on
 
