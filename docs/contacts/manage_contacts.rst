@@ -111,7 +111,7 @@ When Mautic tracks a Contact's actions - such as page hits or Form submissions -
 
 * Cookie
 
-Mautic merges all actions to the Contact with the same cookie or creates a new cookie if it knows the unique cookie.
+Mautic merges all actions to the Contact with the same cookie or creates a new cookie if it knows the unique `device_id`.
 
 If a Contact sends a Form with an Email address, it merges the submission with the Contact having the same Email address. This happens even if the IP address or the cookie matches another Contact.
 
