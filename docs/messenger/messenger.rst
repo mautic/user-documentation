@@ -3,13 +3,26 @@ Messenger
 
 Messenger is a feature in Mautic 5.x that offers several significant benefits:
 
-- **Load distribution/control**: It enables you to balance and control the server load effectively.
-- **Improved client response**: By processing requests in the background, it ensures that the client receives a response before the completion of the request processing.
-- **Scalability**: It provides the flexibility to scale your Mautic instance by adding more workers.
-- **Support for multiple transports**: Messenger comes with support for various transports. It requires a configuration file for using a transport other than synchronous. You also have the capability to dispatch different types of messages to different transports. Furthermore, it's possible to create multiple different transports for a single endpoint. For instance, while one Doctrine transport uses the `messages_hit` table, another could use `messages_email`.
-- **Based on Symfony Messenger Component**: The Messenger feature is built upon the Symfony's Messenger component, offering robust performance and features.
+.. _highlights:
 
-Existing Mautic customers on version 3.x or 4.x who have used the now obsolete QueueBundle would need to configure Messenger to continue using it. Also, Messenger is already implemented for email (this document does not cover it), allowing users to configure it in Mautic's UI settings.
+**Load distribution/control**
+    It enables you to balance and control the server load effectively.
+
+**Improved client response**
+    By processing requests in the background, it ensures that the client receives a response before the completion of the request processing.
+
+**Scalability**
+    It provides the flexibility to scale your Mautic instance by adding more workers.
+
+**Support for multiple transports**
+    Messenger comes with support for various transports. It requires a configuration file for using a transport other than synchronous. You also have the capability to dispatch different types of messages to different transports. Furthermore, it's possible to create multiple different transports for a single endpoint. For instance, while one Doctrine transport uses the :code:`messages_hit` table, another could use the :code:`messages_email`.
+
+**Based on Symfony Messenger Component**
+    The Messenger feature is built upon the Symfony's Messenger component, offering robust performance and features.
+
+.. note::
+
+    Existing Mautic customers on version 3.x or 4.x who have used the now obsolete QueueBundle would need to configure Messenger to continue using it. Also, Messenger is already implemented for email (this document does not cover it), allowing users to configure it in Mautic's UI settings.
 
 Configuration
 =============
@@ -50,7 +63,7 @@ Every message needs to have a transport associated with it. The synchronous tran
 .. _default-configuration:
 
 The default configuration is as follows
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 .. code-block:: php
 
@@ -67,6 +80,8 @@ Consuming Messages
 ==================
 
 To consume or process messages from a transport, Symfony Messenger provides a console command ``messenger:consume``. You can specify the transport(s) as an argument, or it will consume messages from all configured transports by default.
+
+.. hint:::: You don't need to run this command if you are not using any asynchronous transport.
 
 Here's an example of consuming messages from a transport:
 
@@ -86,9 +101,9 @@ The command will keep running and consume messages as they come until it's manua
 
 
 Minimal working configuration that makes use of doctrine transport
------------------------------------------------------------------
+------------------------------------------------------------------
 
-.. note::
+.. hint::
 
   The configuration should be placed anywhere the container builder is available.
     Proposed location is ``app/config/config_local.php``.
@@ -109,14 +124,13 @@ Minimal working configuration that makes use of doctrine transport
 
 As the two hit messages that are implemented are routed(see :ref:`default-configuration`.) to the MauticMessengerTransports::HIT transport, the above configuration will make sure that the messages are sent in the database.
 
-Deprecations
-============
+Final thoughts
+==============
 
 .. warning::
 
     Existing Mautic customers on version 3.x or 4.x who have used the now obsolete QueueBundle would need to configure Messenger to continue using it. Also, Messenger is already implemented for email (this document does not cover it), allowing users to configure it in Mautic’s UI settings.
 
-Important Note
-==============
+.. note::
 
-Please note that this documentation is not intended to cover all aspects of the Messenger component or all its potential configurations. For comprehensive information and advanced configuration options, please refer to the official `Symfony documentation <https://symfony.com/doc/current/messenger.html>`_.
+    This documentation is not intended to cover all aspects of the Messenger component or all its potential configurations. For comprehensive information and advanced configuration options, please refer to the official `Symfony documentation <https://symfony.com/doc/current/messenger.html>`_.
