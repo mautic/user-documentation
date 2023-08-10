@@ -47,7 +47,10 @@ Every message needs to have a transport associated with it. The synchronous tran
         'serializer' => 'messenger.transport.jms_serializer',   // Smaller payload
     ],
 
-The default configuration is as follows:
+.. _default-configuration:
+
+The default configuration is as follows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: php
 
@@ -85,16 +88,26 @@ The command will keep running and consume messages as they come until it's manua
 Minimal working configuration that makes use of doctrine transport
 -----------------------------------------------------------------
 
-.. code-block:: php
-
-    MauticMessengerTransports::HIT    => [
-        'dsn'        => 'doctrine://default',
-        'serializer' => 'messenger.transport.jms_serializer',   // Smaller payload
-    ],
-
 .. note::
 
-    Just like the default configuration, this doesn't need any changes and will work out of the box. The messages will be processed synchronously; no messenger will be used. Users who prefer to configure the settings directly in their local configuration file, can do so with the legacy Mautic 2.x series. These steps remain the same for that version as well.
+  The configuration should be placed anywhere the container builder is available.
+    Proposed location is ``app/config/config_local.php``.
+
+.. code-block:: php
+
+    $container->loadFromExtension('framework', [
+        'messenger' => [
+            'failure_transport' => 'failed', // Define other than default if you wish
+            'transports'        => [
+                MauticMessengerTransports::HIT    => [
+                    'dsn'        => 'doctrine://default',
+                    'serializer' => 'messenger.transport.jms_serializer',   // Smaller payload
+                ],
+            ],
+        ],
+    ]);
+
+As the two hit messages that are implemented are routed(see :ref:`default-configuration`.) to the MauticMessengerTransports::HIT transport, the above configuration will make sure that the messages are sent in the database.
 
 Deprecations
 ============
