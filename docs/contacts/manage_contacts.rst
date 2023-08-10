@@ -616,7 +616,7 @@ Steps in Mautic
 
 You can get the ID from the Mautic URL as you view / edit the Form in the Mautic interface or in the Forms tables, last column. You can find the Form fields by looking at the HTML of the 'Manual Copy' of the HTML in the Forms editing page.
 
-3. Define in your Campaigns the screens you want to use as triggers - for example, 'cart_screen' etc. Mautic isn't looking for a real URL in the Form 'https://' for page_url, any typical string would do. Like this: ``https://example.com/mtracking.gif?page_url=cart_screen&email=myemail@example.com``
+3. Define in your Campaigns the screens you want to use as triggers - for example, 'cart_screen' etc. Mautic isn't looking for a real URL in the Form ``https://`` for ``page_url``, any typical string would do. Like this: ``https://example.com/mtracking.gif?page_url=cart_screen&email=myemail@example.com``
 
 .. vale off
 
