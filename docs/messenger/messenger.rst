@@ -62,8 +62,10 @@ Every message needs to have a transport associated with it. The synchronous tran
 
 .. _default-configuration:
 
-The default configuration is as follows
----------------------------------------
+Default routing configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The default routing configuration is as follows:
 
 .. code-block:: php
 
@@ -79,26 +81,19 @@ For more information on routing, refer to the `Symfony documentation <https://sy
 Consuming Messages
 ==================
 
-To consume or process messages from a transport, Symfony Messenger provides a console command ``messenger:consume``. You can specify the transport(s) as an argument, or it will consume messages from all configured transports by default.
+To consume or process messages from a transport, Symfony Messenger provides a console command ``messenger:consume hit``. You must specify the transport(s) as an argument.
 
-.. hint:::: You don't need to run this command if you are not using any asynchronous transport.
+.. hint:::: You don't need to run this command if you are not using any asynchronous transport. you can run this without
+argument for interactive dialog to select transport.
 
 Here's an example of consuming messages from a transport:
 
 .. code-block:: bash
 
-    php bin/console messenger:consume your_transport
+    php bin/console messenger:consume hit
 
-Replace ``your_transport`` with the name of your transport.
-
-To consume messages from all transports, you would use:
-
-.. code-block:: bash
-
-    php bin/console messenger:consume
-
-The command will keep running and consume messages as they come until it's manually stopped.
-
+.. note::
+    There are options to this call as well. For more information, refer to the `Symfony documentation <https://symfony.com/doc/current/messenger.html#consuming-messages>`_.
 
 Minimal working configuration that makes use of doctrine transport
 ------------------------------------------------------------------
