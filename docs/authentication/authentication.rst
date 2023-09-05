@@ -62,7 +62,7 @@ Example: Azure SAML SSO
 
 E-Mail: `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress`
 First Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname``
-Last Name: `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname`
+Last Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname``
 Username (optional): `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress`
 
 Logging in
