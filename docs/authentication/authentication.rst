@@ -48,7 +48,8 @@ The IDP may ask for the following settings:
 
 #. Custom attributes - Mautic requires three custom attributes in the IDP responses for the User Email, first name and last name. Username is also supported but is optional. Configure the attribute names used by the IDP in Mautic's Configuration > User/Authentication Settings under the 'Enter the names of the attributes the configured IDP uses for the following Mautic User fields' section.
 
-### Example Azure SAML SSO
+Example: Azure SAML SSO
+=======================
 
 1) Register new Enterprise applications -> Create your own Application -> Integrate any other application you don't find in the gallery (Non-gallery)
 2) Go to Single Sign-On
