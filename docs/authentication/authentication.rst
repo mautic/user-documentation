@@ -60,7 +60,7 @@ Example: Azure SAML SSO
 7) X.509-Certificate isn't required
 8) Use the following for the custom attributes fields:
 
-E-Mail: `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress`
+E-Mail: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
 First Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname``
 Last Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname``
 Username (optional): ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
