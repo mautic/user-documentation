@@ -57,7 +57,7 @@ Example: Azure SAML SSO
 4) ``Reply URL (Assertion Consumer Service URL)`` - Use ``https://example.com/s/saml/login_check``
 5) Download Federation Metadata XML from 3. SAML Certificates
 6) Upload the downloaded Federation Metadata XML to Mautic
-7) X.509-Certificate is not required
+7) X.509-Certificate isn't required
 8) Use the following for the custom attributes fields:
 
 E-Mail: `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress`
