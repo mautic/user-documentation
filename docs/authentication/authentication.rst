@@ -51,7 +51,7 @@ The IDP may ask for the following settings:
 Example: Azure SAML SSO
 =======================
 
-1) Register new Enterprise applications -> Create your own Application -> Integrate any other application you don't find in the gallery (Non-gallery)
+1) Register new Enterprise applications by navigating to ``Create your own Application`` and then ``Integrate any other application you don't find in the gallery (Non-gallery)``
 2) Go to Single Sign-On
 3) `Identifier (Entity ID)` - this will be site URL and is displayed at the top of User/Authentication Settings. Copy this exactly as is to the IDP.
 4) ``Reply URL (Assertion Consumer Service URL)`` - Use ``https://example.com/s/saml/login_check``
