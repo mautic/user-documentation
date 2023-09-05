@@ -54,7 +54,7 @@ Example: Azure SAML SSO
 1) Register new Enterprise applications -> Create your own Application -> Integrate any other application you don't find in the gallery (Non-gallery)
 2) Go to Single Sign-On
 3) `Identifier (Entity ID)` - this will be site URL and is displayed at the top of User/Authentication Settings. Copy this exactly as is to the IDP.
-4) `Reply URL (Assertion Consumer Service URL)` - Use `https://your-mautic.com/s/saml/login_check`
+4) ``Reply URL (Assertion Consumer Service URL)`` - Use ``https://example.com/s/saml/login_check``
 5) Download Federation Metadata XML from 3. SAML Certificates
 6) Upload the downloaded Federation Metadata XML to Mautic
 7) X.509-Certificate is not required
