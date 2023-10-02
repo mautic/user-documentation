@@ -18,7 +18,7 @@ The search filters for that entity aren't available if such a button is missing.
    
 |
 
-Mautic also has a 'global search' feature. In the top left-hand corner, click the magnifying glass icon next to the Mautic logo/notifications icon. This will open a search input where you can search across multiple different entities.
+Mautic also has a 'global search' feature. In the top left-hand corner, click the magnifying glass icon next to the Mautic logo/notifications icon. This opens a search input where you can search across multiple different entities.
 
 .. image:: images/global-search.png
    :align: center
@@ -31,7 +31,7 @@ Search operators
 
 Here are some search operators you can use:
 
-* ``+`` plus sign - Search for the exact string, for example, if you search for +admin, then administrator won't match.
+* ``+`` plus sign - Search for the exact string, for example, if you search for ``+admin``, then ``administrator`` won't match.
 
 * ``!`` exclamation mark - Not equals string
   
@@ -43,13 +43,13 @@ Here are some search operators you can use:
 
 * ``%`` - Use the % as a wildcard to search for specific names or values in a phrase for example, to find all Companies with the word ‘Technologies’ then type %technologies%
   
-Search filters
-==============
+Search operators filters
+========================
 
 Here are some search filters you can use:
 
-Contacts
---------
+Contacts search filters
+-----------------------
 
 .. code-block::
     
@@ -71,8 +71,8 @@ Contacts
     email_queued:EMAIL_ID
     email_pending:EMAIL_ID
 
-Companies
----------
+Companies search filters
+------------------------
 
 .. code-block:: 
 
@@ -83,8 +83,8 @@ Companies
     is:uncategorized
     category:{category alias}
 
-Segments
---------
+Segments search filters
+-----------------------
 
 .. code-block:: 
 
@@ -93,8 +93,8 @@ Segments
     name:*
     category:category-alias
 
-Assets
---------
+Assets search filters
+---------------------
 
 .. code-block:: 
 
@@ -106,8 +106,8 @@ Assets
     is:uncategorized
     category:{category alias}
 
-Forms
------
+Forms search filters
+--------------------
 
 .. code-block:: 
    
@@ -122,8 +122,8 @@ Forms
 
 .. vale off
 
-Landing Pages
--------------
+Landing Pages search filters
+----------------------------
 
 .. vale on
 
@@ -140,8 +140,8 @@ Landing Pages
 
 .. vale off
 
-Dynamic Content
----------------
+Dynamic Content search filters
+------------------------------
 
 .. vale on
 
@@ -156,8 +156,8 @@ Dynamic Content
     category:{category alias}
     lang:{lang code}
 
-Emails
---------
+Emails search filters
+---------------------
 
 .. code-block:: 
 
@@ -169,8 +169,8 @@ Emails
     category:{category alias}
     lang:{lang code}
 
-Focus items
------------
+Focus items search filters
+--------------------------
 
 .. code-block:: 
 
@@ -181,8 +181,8 @@ Focus items
     is:uncategorized
     category:{category alias}
 
-Manage actions
---------------
+Manage actions search filters
+-----------------------------
 
 .. code-block:: 
 
@@ -193,8 +193,8 @@ Manage actions
     is:uncategorized
     category:{category alias}
 
-Manage triggers
----------------
+Manage triggers search filters
+------------------------------
 
 .. code-block:: 
 
@@ -205,8 +205,8 @@ Manage triggers
     is:uncategorized
     category:{category alias}
 
-Stages
-------
+Stages search filters
+---------------------
 
 .. code-block:: 
 
@@ -217,8 +217,8 @@ Stages
     is:uncategorized
     category:{category alias}
 
-Reports
--------
+Reports search filters
+----------------------
 
 .. code-block:: 
 
@@ -229,8 +229,8 @@ Reports
     Categories
     ids:ID1,ID2 (comma separated IDs, no spaces) is:published is:unpublished
 
-Users
------
+Users search filters
+--------------------
 
 .. code-block:: 
 
@@ -248,8 +248,8 @@ Users
     is:admin
     name:*
 
-Webhooks
---------
+Webhooks search filters
+-----------------------
 
 
 .. code-block:: 

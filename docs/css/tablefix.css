@@ -12,3 +12,12 @@
 .wy-table-responsive th p {
     margin-bottom: unset;
 }
+
+
+/* img center */
+
+img.align-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mautic Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-17 15:34+0000\n"
+"POT-Creation-Date: 2023-07-21 17:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -345,53 +345,69 @@ msgid "To learn more about creating Themes please :doc:`check the documentation<
 msgstr ""
 
 #: ../builders/email_landing_page.rst:131
-msgid "Reporting bugs"
+msgid "Custom fonts"
 msgstr ""
 
-#: ../builders/email_landing_page.rst:134
-msgid "Known bugs / issues"
+#: ../builders/email_landing_page.rst:133
+msgid "From Mautic 5.x you can extend the Style Manager > Typography > Fonts list to include custom fonts."
 msgstr ""
 
-#: ../builders/email_landing_page.rst:136
-msgid "Please use the issue queue on the :xref:`GitHub repository` to find the latest updates and Report bugs with the Plugin. Be sure to search first in case someone has already reported the bug."
+#: ../builders/email_landing_page.rst:None
+msgid "Screenshot of the Fonts in Style Manager > Typography"
 msgstr ""
 
 #: ../builders/email_landing_page.rst:139
+msgid "You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:"
+msgstr ""
+
+#: ../builders/email_landing_page.rst:160
+msgid "Reporting bugs"
+msgstr ""
+
+#: ../builders/email_landing_page.rst:163
+msgid "Known bugs / issues"
+msgstr ""
+
+#: ../builders/email_landing_page.rst:165
+msgid "Please use the issue queue on the :xref:`GitHub repository` to find the latest updates and Report bugs with the Plugin. Be sure to search first in case someone has already reported the bug."
+msgstr ""
+
+#: ../builders/email_landing_page.rst:168
 msgid "Switching back to the legacy Builder"
 msgstr ""
 
-#: ../builders/email_landing_page.rst:141
+#: ../builders/email_landing_page.rst:170
 msgid "In case you aren't happy with the Plugin at the moment, you can easily switch back to the legacy Builder (original Mautic Builder). You can do so very quickly:"
 msgstr ""
 
-#: ../builders/email_landing_page.rst:143
+#: ../builders/email_landing_page.rst:172
 msgid "Go to Mautic Settings > Click the cogwheel on the right-hand top corner"
 msgstr ""
 
-#: ../builders/email_landing_page.rst:145
+#: ../builders/email_landing_page.rst:174
 msgid "Open the Plugins Directory > click \"Plugins\" inside the menu"
 msgstr ""
 
-#: ../builders/email_landing_page.rst:147
+#: ../builders/email_landing_page.rst:176
 msgid "Find the GrapesJs Plugin and click it > Click \"No\" and then \"Save and Close\""
 msgstr ""
 
-#: ../builders/email_landing_page.rst:149
+#: ../builders/email_landing_page.rst:178
 msgid "Clear the cache and reload the Landing Page - you may also need to clear your browser cache."
 msgstr ""
 
-#: ../builders/email_landing_page.rst:151
+#: ../builders/email_landing_page.rst:180
 msgid "After unloading GrapesJs Plugin, the legacy Builder becomes active again."
 msgstr ""
 
-#: ../builders/email_landing_page.rst:154
+#: ../builders/email_landing_page.rst:183
 msgid "Thanks and credits"
 msgstr ""
 
-#: ../builders/email_landing_page.rst:158
+#: ../builders/email_landing_page.rst:187
 msgid "Thank you to everyone who contributed to this project. Special thanks to Adrian Schimpf from :xref:`Aivie` for all their hard work in leading the project, to :xref:`Webmecanik` for initializing this amazing new builder and to Joey from :xref:`Friendly Automate` for donating three Email Themes to the Community. Additional contributions: Alex Hammerschmied from :xref:`hartmut.io`, Dennis Ameling."
 msgstr ""
 
-#: ../builders/email_landing_page.rst:162
+#: ../builders/email_landing_page.rst:191
 msgid "And of course a really big thank you to all the contributors who have helped to bring this project to this point."
 msgstr ""
