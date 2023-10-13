@@ -28,7 +28,9 @@ To make more complex changes, follow the steps below:
 3. Create a working folder on your local computer.
 4. Open a terminal and navigate to that folder using the command `cd <path/to/folder>`.
 5. Fork the `mautic/user-documentation` repository on GitHub.
-6. Once forked, branch off `5.x` in your forked repository.
+6. Once forked, if you know your way around Git and you are are writing documentation for something which is specific to the latest version of Mautic, you should branch from `main`.  
+
+If you are writing documentation for a feature which is coming in a future release - e.g. 5.0 - then branch off the relevant branch for that release, which should generally speaking match the branch used in the main mautic/mautic repository - e.g. `5.x`.
 7. Type `gh repo clone [your-forked-repo-name]/user-documentation` to clone your forked repository to your local computer.
 8. Open the folder `user-documentation` that is created in your editor.
 9. At the bottom left of your screen, you will see the default branch called 'main' is showing as your active branch. Click this, and a box will appear at the top of the page allowing you to 'create a new branch'. Type a name which relates to the work you plan to do.
