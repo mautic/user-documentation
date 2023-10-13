@@ -1,4 +1,4 @@
-Welcome to the Mautic end user documentation editor!
+Welcome to the Mautic end user documentation editor., open
 
 We've already set up everything you need. To get started, follow these steps:
 1. Open a file in the `docs/` folder (files that end with `.rst` are docs files)
@@ -6,4 +6,4 @@ We've already set up everything you need. To get started, follow these steps:
 
 Pretty cool, right?
 
-Happy writing!
+Happy writing.
