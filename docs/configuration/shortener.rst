@@ -13,7 +13,7 @@ The new URL shortener service allows developers to create Plugins for any shorte
 Example of setup Bitly plugin
 =================
 
-1. Install the Bitly bundle from the marketplace or using Composer:
+1. Install the Bitly bundle from the Marketplace or using Composer:
 
 .. code-block:: bash
 
