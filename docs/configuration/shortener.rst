@@ -7,7 +7,7 @@ Shortener service
 
     Mautic 5 introduces a new shortening feature, replacing the previous legacy shortening system found in the settings. If you utilized the shortening service in Mautic 4, upon upgrading to Mautic 5, please follow the steps below to reconfigure it.
 
-The new shortener service allows developers to create plugins for any shortener service, with any type of authorization. By default, Mautic does not provide a shortener service plugin; you must install it either from the marketplace or manually.
+The new URL shortener service allows developers to create Plugins for any shortener service, with any type of authorization. By default, Mautic does not provide a URL shortener service Plugin; you must install it either from the Marketplace or manually.
 
 
 Example of setup Bitly plugin
