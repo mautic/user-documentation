@@ -1,6 +1,6 @@
 .. vale off
 
-Shortener service
+URL shortener service
 #################
 
 .. attention::
