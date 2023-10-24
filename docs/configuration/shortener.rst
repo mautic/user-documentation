@@ -11,7 +11,7 @@ The new URL shortener service allows developers to create Plugins for any shorte
 
 
 Example of setup Bitly plugin
-=================
+=============================
 
 1. Install the Bitly bundle from the Marketplace or using Composer:
 
@@ -19,7 +19,7 @@ Example of setup Bitly plugin
 
     composer require webmecanik/mautic-bitly-bundle
 
-2. Obtain an access key from https://app.bitly.com/settings/api and set up/enable the Bitly plugin.
+2. Obtain an access key from :xref:`Bitly API settings` and set up/enable the Bitly plugin.
 
 3. Navigate to Configuration > System Settings > Shortener Service and designate Bitly as the default shortener service.
 
