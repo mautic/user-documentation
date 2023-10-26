@@ -536,7 +536,14 @@ See `https://symfony.com/doc/5.4/messenger.html#amazon-sqs <https://symfony.com/
 How to consume messages from the queue
 ======================================
 
-TBD
+To start consuming the messages from the queue, you need to run the following Symfony command.
+
+.. code-block::
+
+    php bin/console messenger:consume email
+
+If you don't use Kubernetes in your environment, use a process manager like Supervisor or systemd to keep your worker(s) running. More on this at
+`https://symfony.com/doc/5.4/messenger.html#consuming-messages-running-the-worker <https://symfony.com/doc/5.4/messenger.html#consuming-messages-running-the-worker>`_
 
 Advanced setting
 ================
@@ -544,12 +551,26 @@ Advanced setting
 Retry strategy
 --------------
 
-TBD
+When the processing of a message fails, the message is sent back to the queue for another try. You can adjust this behaviour in this section.
+See `https://symfony.com/doc/5.4/messenger.html#retries-failures <https://symfony.com/doc/5.4/messenger.html#retries-failures>`_ for more details.
+
+The screenshot below shows the default values.
+
+.. image:: images/queue-retry-strategy.png
+  :width: 600
+  :alt: Retry strategy defaults
 
 Queue for failures
 ------------------
 
-TBD
+If a message fails all its retries, it's discarded by default. To avoid this happening, you can optionally configure a queue for failures.
+For more details see the documentation on `https://symfony.com/doc/5.4/messenger.html#saving-retrying-failed-messages <https://symfony.com/doc/5.4/messenger.html#saving-retrying-failed-messages>`_.
+
+The screenshot below shows the example of configuring the failure queue using the Doctrine transport.
+
+.. image:: images/queue-failures.png
+  :width: 600
+  :alt: Example of failure configuration
 
 Notification settings
 *********************
