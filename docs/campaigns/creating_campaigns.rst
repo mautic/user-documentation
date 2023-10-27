@@ -50,7 +50,7 @@ To begin creating Campaigns, perform the following steps:
 #. Optionally, you can set the following properties:
 
 -  **Category** - Choose a Category to assign your Campaign to. Categories help you organize your Campaigns. To learn more about creating and managing Categories, see :doc:`/categories/categories-overview`.
--  **Priority** - Choose a priority for your campaign. Campaigns with higher priority will be processed before campaigns with normal priority.
+-  **Priority** - Choose a priority for your Campaign. Campaigns with higher priority will be processed before Campaigns with normal priority.
 -  **Allow Contacts to restart the Campaign** - Click the toggle switch to allow Contacts to restart the Campaign if you're building a Campaign for a recurring message - for example birthdays, subscriptions - or transactional operations - for example activity notifications, updating data. Enabling this option allows Contacts to go through the same Campaign multiple times.
 -  **Published** - Click the toggle switch to publish or un-publish the Campaign. Ensure that you don't publish a Campaign until you're actually ready for it to go live. You can also schedule to publish or un-publish a Campaign at a future date by selecting a time and date.
 
