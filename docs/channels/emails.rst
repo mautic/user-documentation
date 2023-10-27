@@ -225,15 +225,91 @@ Marketers can place the signature into an Email using the ``{signature}`` token.
 Email delivery
 ##############
 
-Mautic delivers Emails using the method defined by the system administrator. If you are the system administrator for your Company, then you need to add the Email protocol for your Mautic instance to use. Mautic integrates with any Email service provider which offers SMTP mail servers as well as several distinct services such as:
+As Mautic uses the :xref:`Symfony Mailer` library since v5, it supports all Symfony Mailer core plugins out of the box. Transports for other Email services might be found on GitHub or Packagist.
 
-- :xref:`Mandrill`
-- :xref:`GMail`
-- :xref:`Sendgrid`
-- :xref:`Mailjet`
-- :xref:`Postmark`
-- :xref:`Sendmail`
-- :xref:`Amazon SES`.
+SMTP transport
+**************
+
+The SMTP transport is the default transport used for sending Emails with Mautic. It's configured in the Mautic configuration under the Email Settings tab. The configuration is the same as in the :xref:`Symfony Mailer` documentation.
+
+Mautic now uses a specific way of providing the connection details for Email transports to interpret, which is called a Data Source Name, or DSN. This is the example Data Source Name configuration mentioned in the :xref:`Symfony Mailer` documentation for SMTP:
+
+.. code-block:: shell
+    
+    smtp://user:pass@smtp.example.com:port
+
+Mautic creates this automatically from the values entered in the Email configuration:
+
+.. image:: images/emails/smtp-dsn.png
+    :width: 400
+    :alt: SMTP API DSN example
+
+.. list-table:: Example DSN ``smtp://user:pass@smtp.example.com:port/path?option1=value1&option2=value2`` explained
+    :widths: 10 20 150
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - DSN part
+      - Example
+      - Explanation
+    * - Scheme
+      - smtp
+      - Defines which email transport (plugin) will handle the email sending. It also defines which other DSN parts must be present.
+    * - User
+      - john
+      - Some transport wants username and password to authenticate the connection. Some public or private key. Some just API key.
+    * - Password
+      - pa$$word
+      - As mentioned above, read documentation for your particular transport and fill in the fields that are required. For SMPT this is for password.
+    * - Host
+      - smtp.mydomain.com
+      - For SMTP this is the domain name where your SMTP server is running. Other transports may have the domain handled inside it so many wants to put just ``default`` text here.
+    * - Path
+      - any/path
+      - This is usually empty. For SMTP this may be the path to the SMTP server. For other transports this may be the path to the API endpoint.
+    * - Port
+      - 465
+      - Important for SMTP. The port value defines which encryption is used. This is usually 465 for SSL or 587 for TLS. Avoid using port 25 for security reasons. For other transports this may be the port to the API endpoint.
+    * - Options
+      - timeout=10
+      - This is optional. This may be the timeout for the connection or similar configuration. The config form will allow you to create multiple options.
+
+.. note::
+  Use the Mautic's global configuration to paste in the DSN information, especially the API keys and passwords. The values must be URL-encoded, and the configuration form does that for you. If you are pasting DSN settings directly into the config/local.php file, you must URL-encode the values yourself.
+
+
+.. vale off
+
+Example API transport installation
+
+.. vale on
+
+**********************************
+.. warning::
+  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`. 
+
+If you want to use :xref:`Sendgrid` API instead of SMTP to send Emails, for example, you can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation.
+
+.. code-block:: shell
+    
+    composer require symfony/sendgrid-mailer
+
+After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In the example of using the Sendgrid API, the DSN looks like this:
+
+.. code-block:: shell
+    
+    sendgrid+api://KEY@default
+
+This is how it would be set up in Mautic's Email configuration:
+
+  .. image:: images/emails/sendgrid-api-dsn.png
+    :width: 400
+    :alt: Sendgrid API DSN example
+
+To replace the Sendgrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the Sendgrid API to send Emails. 
+
+.. warning::
+  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
 
 The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`.
 
@@ -249,7 +325,7 @@ Mautic works most effectively with high send volumes if you use the queued deliv
 
 .. code-block:: shell
     
-    php /path/to/mautic/bin/console mautic:email:process
+    php /path/to/mautic/bin/console messenger:consume email_transport
 
 Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
 
@@ -342,225 +418,8 @@ If you select an Unsubscribe folder, Mautic also appends the Email as part of th
 Webhook bounce management
 *************************
 
-.. vale off
+Since Mautic 5 all the Email transports use the same Webhook (sometimes called callback) URL: ``https://mautic.example.com/mailer/callback``. Please follow the documentation for the specific Email transport you've installed to get more information about the Webhook configuration.
 
-Elastic Email Webhook
-=====================
-
-.. vale on
-
-1. Login to your Elastic Email account and go to Settings -> Notification.
-
-2. Fill in the Notification URL as ``https://mautic.example.com/mailer/elasticemail/callback``
-
-3. Check these actions: unsubscribed, complaints, bounce/error
-
-.. image:: images/bounce_management/elasticemail_webhook_1.png
-  :width: 400
-  :alt: Screenshot showing Elastic Email Webhook settings
-
-Useful resources
-~~~~~~~~~~~~~~~~
-
-- :xref:`Elastic Support` - Elastic Email's Help desk
-- :xref:`Getting Started with Elastic` - Getting Started resources from Elastic Email
-
-.. vale off
-
-Amazon SES Webhook
-==================
-
-.. vale on
-
-Mautic supports the bounce and complaint management from Amazon Simple Email Service (Amazon SES).
-
-1. Go to the Amazon Simple Notification Service - SNS - and create a new topic:
-
-.. image:: images/bounce_management/amazon_webhook_1.png
-  :width: 400
-  :alt: Screenshot showing Amazon SNS create new topic
-
-.. image:: images/bounce_management/amazon_webhook_2.png
-  :width: 400
-  :alt: Screenshot showing naming your SNS topic
-
-2. Click on the newly created topic to create a subscriber
-
-.. image:: images/bounce_management/amazon_webhook_3.png
-  :width: 400
-  :alt: Screenshot showing go to the topic
-
-.. image:: images/bounce_management/amazon_webhook_4.png
-  :width: 400
-  :alt: Screenshot showing new subscriber
-
-3. Enter the URL to the Amazon Webhook on your Mautic installation.
-
-.. note::
-  When using the **SMTP method**, the callback URL is your Mautic URL followed by ``/mailer/amazon/callback``.
-
-  When using the **API method** (available since Mautic 3.2), the callback URL is your Mautic URL followed by ``/mailer/amazon_api/callback``.
-
-  .. image:: images/bounce_management/amazon_webhook_5.png
-    :width: 400
-    :alt: Enter URL in Mautic
-
-1. The subscriber is in the pending state until it's confirmed. SES calls your Amazon Webhook with a ``SubscriptionConfirmation`` request including a callback URL. To confirm, Mautic sends a request back to this callback URL to validate the subscription. Therefore make sure your Mautic installation can connect to the internet, otherwise the subscription remains in the pending state and won't work. If your Webhook is https, you also need to make sure that your site is using a valid SSL certificate which is verifiable by Amazon.
-
-Check the log file for more information. If you are having problems getting the subscription out of the pending state, it may also help to configure the topic's 'Delivery status logging' settings, so that delivery status (at least for http/s) gets logged to CloudWatch. Then you can visit the Logs section of the CloudWatch Management Console and see the exact details of delivery failures. For example, an invalid SSL certificate might result in an event like the following appearing in the CloudWatch logs:
-
-.. code-block:: javascript
-
-  {
-      "notification": {
-          "messageId": "337517be-f32c-4137-bc8d-93dc29f45ff9",
-          "topicArn": "arn:aws:sns:eu-west-1:012345678901:Mautic",
-          "timestamp": "2019-05-31 15:34:13.687"
-      },
-      "delivery": {
-          "deliveryId": "a5dab35d-83f9-53c3-8ca6-e636c82668d4",
-          "destination": "https://mautic.example.com/mailer/amazon/callback",
-          "providerResponse": "SSLPeerUnverifiedException in HttpClient",
-          "dwellTimeMs": 42266,
-          "attempts": 3
-      },
-      "status": "FAILURE"
-  }
-
-  .. image:: images/bounce_management/amazon_webhook_6.png
-  :width: 400
-  :alt: Screenshot showing confirmation pending
-
-  5. The last step is to configure Amazon SES to deliver bounce and complaint messages using our SNS topic.
-
-  .. image:: images/bounce_management/amazon_webhook_7.png
-  :width: 400
-  :alt: Screenshot showing the configuring of SES
-
-  .. image:: images/bounce_management/amazon_webhook_8.png
-  :width: 400
-  :alt: Screenshot showing the selection of the SNS topic
-
-.. vale off
-
-Mandrill Webhook
-================
-
-.. vale on
-
-Mautic supports a few of Mandrill's Webhooks for bounces.
-
-1. Login to your Mandrill account and go to Settings -> Webhooks
-
-  .. image:: images/bounce_management/mandrill_webhook_1.png
-    :width: 400
-    :alt: Screenshot showing Mandrill Webhooks
-
-2. Click Add a Webhook
-
- .. image:: images/bounce_management/mandrill_webhook_2.png
-  :width: 400
-  :alt: Screenshot showing addition of Mandrill Webhooks
-
-.. vale off
-
-Mautic supports the following Webhooks: message is bounced, message is soft-bounced, message is rejected, message is marked as spam and message recipient unsubscribes.
-
-.. vale on
-
-1. Fill in the ``Post To URL`` as ``https://mautic.example.com/mailer/mandrill/callback`` then click Create Webhook.
-
-2. Click Custom Metadata and create two new metadata fields: ``hashId`` and ``contactId``
-
- .. image:: images/bounce_management/mandrill_webhook_5.png
-  :width: 400
-  :alt: Screenshot showing addition of metadata
-
- .. image:: images/bounce_management/mandrill_webhook_4.png
-  :width: 400
-  :alt: Screenshot showing addition of metadata
-
-.. vale off
-
-Mailjet Webhook
-===============
-
-.. vale on
-
-Mautic supports Mailjet's Webhooks for bounces, spam and blocked. Before any configuration, you'll need to create an account on :xref:`Mailjet`.
-
-1. Login to your Mailjet account and go to Account > Event tracking/triggers
-
- .. image:: images/bounce_management/mailjet_webhook_1.png
-  :width: 400
-  :alt: Screenshot showing Mailjet Webhooks
-
-2. On the event type list, select the one you want to link to your Mautic account
-
- .. image:: images/bounce_management/mailjet_webhook_2.png
-  :width: 400
-  :alt: Screenshot showing adding Webhooks
-
-.. vale off
-
-Mautic supports the following webhooks: message is bounced, message is blocked, message is spam.
-
-.. vale on
-
-3. Fill in the URL boxes as ``https://mautic.example.com/mailer/mailjet/callback``.
-
-.. vale off 
-
-SparkPost Webhook
-=================
-1. Login to your SparkPost account and go to Account -> Webhooks.
-
- .. image:: images/bounce_management/sparkpost_webhook_1.png
-  :width: 400
-  :alt: Screenshot showing SparkPost webhooks
-
-2. Click the New Webhook button top right
-
- .. image:: images/bounce_management/sparkpost_webhook_2.png
-  :width: 400
-  :alt: Screenshot showing new Webhooks
-
-3. Fill in the Target URL as ``https://mautic.example.com/mailer/sparkpost/callback``
-
-4. Select the following Events
-
- .. image:: images/bounce_management/sparkpost_webhook_2.png
-  :width: 400
-  :alt: Screenshot showing events
-
-SendGrid Webhook
-================
-
-.. vale on
-
-1. Login to your SendGrid account and go to Settings > Mail Setting > Mail Settings
-
- .. image:: images/bounce_management/sendgrid_webhook_1.png
-  :width: 400
-  :alt: Screenshot showing SendGrid Webhooks
-
-.. vale off
-
-2. Fill in the Target URL as `https://mautic.example.com/mailer/sendgrid_api/callback`
-  
-.. vale on
-
-3. Select the following Events
-
- .. image:: images/bounce_management/sendgrid_webhook_2.png
-  :width: 400
-  :alt: Screenshot showing Events
-
-4. Save setting - on the right side of "Event Notification" row:
-
- .. image:: images/bounce_management/sendgrid_webhook_3.png
-  :width: 400
-  :alt: Screenshot showing save settings
 
 .. vale off
 
