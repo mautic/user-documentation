@@ -454,13 +454,13 @@ Queue settings
 Purpose of the queuing
 ======================
 
-Mautic can optionally use a queuing mechanism for sending emails. This feature is essential when Mautic is run **at large scale**. There will be more tasks that can utilize queuing in the future.
+Mautic can optionally use a queuing mechanism for sending Emails. This feature is essential when running Mautic **at large scale**. It's planned to extend the tasks that can utilize queuing in the future.
 
-When you enable queuing, emails are no longer sent immediately (e.g. within HTTP requests)
+When you enable queuing, Emails are no longer sent immediately - for example, within the browser
 but put in a queue and sent later using queue consumers (also known as workers). Using consumers help offload workload of your webserver and allows easier scaling of your instance.
 
-The queuing is disabled by default
-==================================
+Mautic doesn't use queues by default
+====================================
 
 After installing a fresh instance of Mautic, **the queuing feature is disabled** (the queue DSN is set to ``"sync://"``) as shown in the following screenshot.
 
@@ -550,7 +550,7 @@ Advanced setting
 Retry strategy
 --------------
 
-When the processing of a message fails, the message is sent back to the queue for another try. You can adjust this behaviour in this section.
+When the processing of a message fails, Mautic sends the message back to the queue for another try. You can adjust this behaviour in this section.
 See :xref:`queue-retries-failures` for more details.
 
 The screenshot below shows the default values.
@@ -562,7 +562,7 @@ The screenshot below shows the default values.
 Queue for failures
 ------------------
 
-If a message fails all its retries, it's discarded by default. To avoid this happening, you can optionally configure a queue for failures.
+If a message fails all its retries, it's discarded by default. To avoid this happening, you can optionally configure a Queue for failures.
 For more details see the documentation on :xref:`queue-saving-retrying-failed-messages`.
 
 The screenshot below shows the example of configuring the failure queue using the Doctrine transport.
