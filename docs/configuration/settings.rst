@@ -490,38 +490,38 @@ It uses database table ``messenger_messages`` for storing messages (the table na
   :width: 600
   :alt: Example of Doctrine transport
 
-See `https://symfony.com/doc/5.4/messenger.html#doctrine-transport <https://symfony.com/doc/5.4/messenger.html#doctrine-transport>`_ for the complete list of configuration options.
+See :xref:`queue-doctrine-transport` for the complete list of configuration options.
 
 Redis
 -----
-This transport requires the Redis PHP extension (>=4.3) and a running `Redis <https://redis.io/>`_ server (^5.0). Once these requirements are met, the typical configuration looks as follows.
+This transport requires the Redis PHP extension (>=4.3) and a running :xref:`Redis` server (^5.0). Once these requirements are met, the typical configuration looks as follows.
 
 .. image:: images/queue-redis.png
   :width: 600
   :alt: Example of Redis transport
 
-See `https://symfony.com/doc/5.4/messenger.html#redis-transport <https://symfony.com/doc/5.4/messenger.html#redis-transport>`_ for the complete list of configuration options.
+See :xref:`queue-redis-transport` for the complete list of configuration options.
 
 AMQP
 ----
-The AMQP transport requires the AMQP PHP extension and a running AMQP service like `RabbitMQ <https://www.rabbitmq.com/>`_. See the screenshot below for an example of the configuration.
+The AMQP transport requires the AMQP PHP extension and a running AMQP service like :xref:`RabbitMQ`. See the screenshot below for an example of the configuration.
 
 .. image:: images/queue-amqp.png
   :width: 600
   :alt: Example of AMQP transport
 
-See `https://symfony.com/doc/5.4/messenger.html#amqp-transport <https://symfony.com/doc/5.4/messenger.html#amqp-transport>`_ for the complete list of configuration options.
+See :xref:`queue-amqp-transport` for the complete list of configuration options.
 
 Beanstalkd
 ----------
-The Beanstalkd transport requires a running `Beanstalkd <https://beanstalkd.github.io/>`_ service and a composer dependency installed via ``composer require symfony/beanstalkd-messenger``.
+The Beanstalkd transport requires a running :xref:`Beanstalkd` service and a composer dependency installed via ``composer require symfony/beanstalkd-messenger``.
 After installing the composer dependency, you can fill in the configuration as follows.
 
 .. image:: images/queue-beanstalkd.png
   :width: 600
   :alt: Example of Beanstalkd transport
 
-See `https://symfony.com/doc/5.4/messenger.html#beanstalkd-transport <https://symfony.com/doc/5.4/messenger.html#beanstalkd-transport>`_ for the complete list of configuration options.
+See :xref:`queue-beanstalkd-transport` for the complete list of configuration options.
 
 Amazon SQS
 ----------
@@ -531,7 +531,7 @@ The Amazon SQS transport is ideal when your Mautic instance is hosted on AWS. Yo
   :width: 600
   :alt: Example of Amazon SQS transport
 
-See `https://symfony.com/doc/5.4/messenger.html#amazon-sqs <https://symfony.com/doc/5.4/messenger.html#amazon-sqs>`_ for the complete list of configuration options.
+See :xref:`queue-amazon-sqs` for the complete list of configuration options.
 
 How to consume messages from the queue
 ======================================
@@ -542,8 +542,7 @@ To start consuming the messages from the queue, you need to run the following Sy
 
     php bin/console messenger:consume email
 
-If you don't use Kubernetes in your environment, use a process manager like Supervisor or systemd to keep your worker(s) running. More on this at
-`https://symfony.com/doc/5.4/messenger.html#consuming-messages-running-the-worker <https://symfony.com/doc/5.4/messenger.html#consuming-messages-running-the-worker>`_
+If you don't use Kubernetes in your environment, use a process manager like Supervisor or systemd to keep your worker(s) running. More on this at :xref:`queue-consuming-messages`
 
 Advanced setting
 ================
@@ -552,7 +551,7 @@ Retry strategy
 --------------
 
 When the processing of a message fails, the message is sent back to the queue for another try. You can adjust this behaviour in this section.
-See `https://symfony.com/doc/5.4/messenger.html#retries-failures <https://symfony.com/doc/5.4/messenger.html#retries-failures>`_ for more details.
+See :xref:`queue-retries-failures` for more details.
 
 The screenshot below shows the default values.
 
@@ -564,7 +563,7 @@ Queue for failures
 ------------------
 
 If a message fails all its retries, it's discarded by default. To avoid this happening, you can optionally configure a queue for failures.
-For more details see the documentation on `https://symfony.com/doc/5.4/messenger.html#saving-retrying-failed-messages <https://symfony.com/doc/5.4/messenger.html#saving-retrying-failed-messages>`_.
+For more details see the documentation on :xref:`queue-saving-retrying-failed-messages`.
 
 The screenshot below shows the example of configuring the failure queue using the Doctrine transport.
 
