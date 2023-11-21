@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Mautic
+# This file is distributed under the same license as the Mautic Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Ruth Cheesley <ruth@ruthcheesley.co.uk>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mautic Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-21 17:00+0200\n"
+"PO-Revision-Date: 2023-07-21 15:27+0000\n"
+"Last-Translator: Ruth Cheesley <ruth@ruthcheesley.co.uk>, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/mautic/teams/33223/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../authentication/authentication.rst:2
+msgid "Authentication"
+msgstr "Autenticação"
+
+#: ../authentication/authentication.rst:4
+msgid ""
+"Mautic uses basic authentication for Users, however there is the ability to "
+"integrate with a SAML SSO - Single Sign-On - provider."
+msgstr ""
+"O Mautic utiliza autenticação básica para Usuários, porém existe a "
+"possibilidade de integração com um provedor SAML SSO - Single Sign-On."
+
+#: ../authentication/authentication.rst:9
+msgid "SAML Single Sign On"
+msgstr "SAML Single Sign On"
+
+#: ../authentication/authentication.rst:13
+msgid ""
+"SAML is a single sign on protocol that allows single sign on and User "
+"creation in Mautic using a third party User source called an identity "
+"provider (IDP)."
+msgstr ""
+"SAML é um protocolo de assinatura única que permite login único e criação de"
+" Usuário no Mautic usando uma fonte terceira Origem do Usuário chamada "
+"provedor de identidade (IDP)."
+
+#: ../authentication/authentication.rst:16
+msgid "Turning on SAML"
+msgstr "Ativando o SAML"
+
+#: ../authentication/authentication.rst:17
+msgid ""
+"To turn on SAML support in Mautic, you first need the IDP's metadata XML "
+"which they provide. If it's a URL, browse to the URL then save the content "
+"into an XML file."
+msgstr ""
+"Para ativar o suporte a SAML no Mautic, primeiro você precisa do XML de "
+"metadados do IDP que eles fornecem. Se for uma URL, navegue até a URL e "
+"salve o conteúdo em um arquivo XML."
+
+#: ../authentication/authentication.rst:19
+msgid ""
+"Click the settings wheel in the top right corner to open the **Settings** "
+"menu."
+msgstr ""
+"Clique no ícone de configurações no canto superior direito para abrir o menu"
+" **Configurações**."
+
+#: ../authentication/authentication.rst:21
+msgid "Navigate to **Configuration** > **User/Authentication** Settings."
+msgstr ""
+"Navegue até **Configuração** > Configurações de **Usuário/Autenticação**."
+
+#: ../authentication/authentication.rstNone
+msgid "Screenshot of SAML SSO Settings"
+msgstr "Captura de tela das configurações de SAML SSO"
+
+#: ../authentication/authentication.rst:27
+msgid "Upload this file as the Identity Provider Metadata file."
+msgstr ""
+"Carregue este arquivo como o arquivo de Metadados do Provedor de Identidade."
+
+#: ../authentication/authentication.rst:29
+msgid ""
+"It's recommended to create a non-Admin Role as the default Role for created "
+"Users. Select this Role in the '**Default Role for created Users**' "
+"dropdown. For more information, see :doc:`Users and "
+"Roles</users_roles/managing_users>`."
+msgstr ""
+"É recomendável criar uma função não administrativa como a Função padrão para"
+" os Usuários criados. Selecione esta Função no menu suspenso '**Função "
+"Padrão para Usuários criados**'. Para mais informações, veja :doc:`Usuários "
+"e Funções1`."
+
+#: ../authentication/authentication.rstNone
+msgid "Screenshot of the User Role Permission"
+msgstr "Captura de tela da Permissão de Função do Usuário"
+
+#: ../authentication/authentication.rst:36
+msgid "Configuring the IDP"
+msgstr "Configurando o IDP"
+
+#: ../authentication/authentication.rst:37
+msgid "The IDP may ask for the following settings:"
+msgstr "O IDP pode solicitar as seguintes configurações:"
+
+#: ../authentication/authentication.rst:39
+msgid ""
+"Entity ID - this is site URL, displayed at the top of User/Authentication "
+"Settings. Copy this exactly 'as is' to the IDP."
+msgstr ""
+"ID da Entidade - este é o URL do site, exibido na parte superior das "
+"configurações de usuário/autenticação. Copie isso exatamente 'como está' "
+"para o IDP."
+
+#: ../authentication/authentication.rst:41
+msgid ""
+"Service Provider Metadata - if the provider requires a URL, use "
+"``https://example.com/saml/metadata.xml``. To use as a file rather than a "
+"URL, browse to that URL and save the content as an XML file."
+msgstr ""
+"Metadados do Provedor de Serviços - se o provedor exigir uma URL, use "
+"``https://exemplo.com.br/saml/metadata.xml``. Para usar como um arquivo em "
+"vez de um URL, navegue até esse URL e salve o conteúdo como um arquivo XML."
+
+#: ../authentication/authentication.rst:43
+msgid ""
+"Assertion Consumer Service - Use ``https://example.com/s/saml/login_check``."
+msgstr ""
+"Assertion Consumer Service - Use "
+"``https://exemplo.com.br/s/saml/login_check``."
+
+#: ../authentication/authentication.rst:45
+msgid ""
+"Issuer - this should come from the IDP but is often configurable. If it's a "
+"URL, be sure that the scheme - ``http://`` and ``https://`` - aren't part of"
+" it."
+msgstr ""
+"Emissor - deve vir do IDP, mas geralmente é configurável. Se for uma URL, "
+"certifique-se de que o esquema - ``http://`` e ``https://`` - não faz parte "
+"dela."
+
+#: ../authentication/authentication.rst:47
+msgid ""
+"Verify request signatures or a SSL certificate - If the IDP supports "
+"encrypting and validating request signatures from Mautic to the IDP, "
+"generate a self signed SSL certificate. Upload the certificate and private "
+"key through Mautic's Configuration > User/Authentication Settings under the "
+"'Use a custom X.509 certificate and private key to secure communication "
+"between Mautic and the IDP' section. Then upload the certificate to the IDP."
+msgstr ""
+"Verifique as assinaturas de solicitação ou um certificado SSL - Se o IDP "
+"oferecer suporte à criptografia e validação de assinaturas de solicitação do"
+" Mautic para o IDP, gere um certificado SSL auto assinado. Carregue o "
+"certificado e a chave privada através de Configuração do Mautic > "
+"Configurações de autenticação/usuário na seção 'Usar um certificado X.509 "
+"personalizado e chave privada para proteger a comunicação entre o Mautic e o"
+" IDP'. Em seguida, carregue o certificado no IDP."
+
+#: ../authentication/authentication.rst:49
+msgid ""
+"Custom attributes - Mautic requires three custom attributes in the IDP "
+"responses for the User Email, first name and last name. Username is also "
+"supported but is optional. Configure the attribute names used by the IDP in "
+"Mautic's Configuration > User/Authentication Settings under the 'Enter the "
+"names of the attributes the configured IDP uses for the following Mautic "
+"User fields' section."
+msgstr ""
+"Atributos personalizados - O Mautic requer três atributos personalizados nas"
+" respostas IDP para o e-mail do usuário, nome e sobrenome. O nome de usuário"
+" também é suportado, mas é opcional. Configure os nomes dos atributos usados"
+" pelo IDP nas Configurações > Configurações de Usuário/Autenticação na seção"
+" 'Entre com os nomes dos atributos de usos IDP configurados para seguir "
+"campos de usuários Mautic'."
+
+#: ../authentication/authentication.rst:52
+msgid "Logging in"
+msgstr "Fazendo login"
+
+#: ../authentication/authentication.rst:54
+msgid ""
+"Once configured with the IDP and the IDP with Mautic, Mautic redirects all "
+"logins to the IDP's login. ``/s/login`` is still available for direct logins"
+" but you have to access it directly."
+msgstr ""
+"Uma vez configurado com o IDP e o IDP com Mautic, o Mautic redireciona todos"
+" os logins para o login do IDP. ``/s/login`` ainda está disponível para "
+"logins diretos, mas você deve acessá-lo diretamente."
+
+#: ../authentication/authentication.rst:56
+msgid ""
+"Login to the IDP, which then redirects you back to Mautic. If the exchange "
+"is successful Mautic creates a User if it doesn't already exist, and logs "
+"the User into the system."
+msgstr ""
+"Faça login no IDP, que o redirecionará de volta ao Mautic. Se a troca for "
+"bem-sucedida, o Mautic cria um usuário, caso ainda não exista, e registra o "
+"usuário no sistema."
+
+#: ../authentication/authentication.rst:59
+msgid "Turning off SAML"
+msgstr "Desativando o SAML"
+
+#: ../authentication/authentication.rst:61
+msgid ""
+"To turn off SAML, click the Remove link to the right of the Identity "
+"provider metadata file label."
+msgstr ""
+"Para desativar o SAML, clique no link Remover à direita do rótulo do arquivo"
+" de metadados do provedor de identidade."
+
+#: ../authentication/authentication.rstNone
+msgid "Screenshot of the authentication settings section"
+msgstr "Captura de tela da seção de configurações de autenticação"

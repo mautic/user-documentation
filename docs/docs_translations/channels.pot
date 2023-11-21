@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mautic Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-17 15:34+0000\n"
+"POT-Creation-Date: 2023-07-21 17:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -326,493 +326,399 @@ msgid "Email delivery"
 msgstr ""
 
 #: ../channels/emails.rst:228
-msgid "Mautic delivers Emails using the method defined by the system administrator. If you are the system administrator for your Company, then you need to add the Email protocol for your Mautic instance to use. Mautic integrates with any Email service provider which offers SMTP mail servers as well as several distinct services such as:"
-msgstr ""
-
-#: ../channels/emails.rst:230
-msgid ":xref:`Mandrill`"
+msgid "As Mautic uses the :xref:`Symfony Mailer` library since v5, it supports all Symfony Mailer core plugins out of the box. Transports for other Email services might be found on GitHub or Packagist."
 msgstr ""
 
 #: ../channels/emails.rst:231
-msgid ":xref:`GMail`"
-msgstr ""
-
-#: ../channels/emails.rst:232
-msgid ":xref:`Sendgrid`"
+msgid "SMTP transport"
 msgstr ""
 
 #: ../channels/emails.rst:233
-msgid ":xref:`Mailjet`"
-msgstr ""
-
-#: ../channels/emails.rst:234
-msgid ":xref:`Postmark`"
+msgid "The SMTP transport is the default transport used for sending Emails with Mautic. It's configured in the Mautic configuration under the Email Settings tab. The configuration is the same as in the :xref:`Symfony Mailer` documentation."
 msgstr ""
 
 #: ../channels/emails.rst:235
-msgid ":xref:`Sendmail`"
-msgstr ""
-
-#: ../channels/emails.rst:236
-msgid ":xref:`Amazon SES`."
-msgstr ""
-
-#: ../channels/emails.rst:238
-msgid "The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`."
+msgid "Mautic now uses a specific way of providing the connection details for Email transports to interpret, which is called a Data Source Name, or DSN. This is the example Data Source Name configuration mentioned in the :xref:`Symfony Mailer` documentation for SMTP:"
 msgstr ""
 
 #: ../channels/emails.rst:241
-msgid "Immediate delivery"
+msgid "Mautic creates this automatically from the values entered in the Email configuration:"
 msgstr ""
 
-#: ../channels/emails.rst:243
-msgid "This is the default means of delivery. As soon as an action in Mautic triggers an Email to send, it's sent immediately. If you expect to send a large number of Emails, you should use the queue. Sending Email immediately may slow the response time of Mautic if using a remote mail service, since Mautic has to establish a connection with that service before sending the mail. Also attempting to send large batches of Emails at once may hit your server's resource limits or Email sending limits if on a shared host."
+#: ../channels/emails.rst:None
+msgid "SMTP API DSN example"
 msgstr ""
 
-#: ../channels/emails.rst:246
-msgid "Queued delivery"
+#: ../channels/emails.rst:247
+msgid "Example DSN ``smtp://user:pass@smtp.example.com:port/path?option1=value1&option2=value2`` explained"
 msgstr ""
 
-#: ../channels/emails.rst:248
-msgid "Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:"
+#: ../channels/emails.rst:252
+msgid "DSN part"
+msgstr ""
+
+#: ../channels/emails.rst:253
+msgid "Example"
 msgstr ""
 
 #: ../channels/emails.rst:254
-msgid "Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics."
+msgid "Explanation"
+msgstr ""
+
+#: ../channels/emails.rst:255
+msgid "Scheme"
+msgstr ""
+
+#: ../channels/emails.rst:256
+msgid "smtp"
+msgstr ""
+
+#: ../channels/emails.rst:257
+msgid "Defines which email transport (plugin) will handle the email sending. It also defines which other DSN parts must be present."
+msgstr ""
+
+#: ../channels/emails.rst:258
+msgid "User"
 msgstr ""
 
 #: ../channels/emails.rst:259
-msgid "Tracking Opened Emails"
+msgid "john"
+msgstr ""
+
+#: ../channels/emails.rst:260
+msgid "Some transport wants username and password to authenticate the connection. Some public or private key. Some just API key."
+msgstr ""
+
+#: ../channels/emails.rst:261
+msgid "Password"
+msgstr ""
+
+#: ../channels/emails.rst:262
+msgid "pa$$word"
 msgstr ""
 
 #: ../channels/emails.rst:263
-msgid "Mautic automatically tags each Email with a tracking pixel image. This allows Mautic to track when a Contact opens the Email and execute actions accordingly. Note that there are limitations to this technology - the Contact's Email client supporting HTML and auto-loading of images, and not blocking the loading of pixels. If the Email client doesn't load the image, there's no way for Mautic to know the opened status of the Email."
+msgid "As mentioned above, read documentation for your particular transport and fill in the fields that are required. For SMPT this is for password."
+msgstr ""
+
+#: ../channels/emails.rst:264
+msgid "Host"
 msgstr ""
 
 #: ../channels/emails.rst:265
-msgid "By default, Mautic adds the tracking pixel image at the end of the message, just before the ``</body>`` tag. If needed, one could use the ``{tracking_pixel}`` variable within the body content token to have it placed elsewhere. Beware that you shouldn't insert this directly after the opening ``<body>`` because this prevents correct display of pre-header text on some Email clients."
+msgid "smtp.mydomain.com"
+msgstr ""
+
+#: ../channels/emails.rst:266
+msgid "For SMTP this is the domain name where your SMTP server is running. Other transports may have the domain handled inside it so many wants to put just ``default`` text here."
 msgstr ""
 
 #: ../channels/emails.rst:267
-msgid "It's possible to turn off the tracking pixel entirely if you don't need to use it, in the Global Settings."
+msgid "Path"
+msgstr ""
+
+#: ../channels/emails.rst:268
+msgid "any/path"
+msgstr ""
+
+#: ../channels/emails.rst:269
+msgid "This is usually empty. For SMTP this may be the path to the SMTP server. For other transports this may be the path to the API endpoint."
+msgstr ""
+
+#: ../channels/emails.rst:270
+msgid "Port"
+msgstr ""
+
+#: ../channels/emails.rst:271
+msgid "465"
 msgstr ""
 
 #: ../channels/emails.rst:272
-msgid "Tracking links in Emails"
+msgid "Important for SMTP. The port value defines which encryption is used. This is usually 465 for SSL or 587 for TLS. Avoid using port 25 for security reasons. For other transports this may be the port to the API endpoint."
 msgstr ""
 
-#: ../channels/emails.rst:276
-msgid "Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the Click Counts tab."
+#: ../channels/emails.rst:273
+msgid "Options"
 msgstr ""
 
-#: ../channels/emails.rst:279
-msgid "Unsubscribing"
+#: ../channels/emails.rst:274
+msgid "timeout=10"
 msgstr ""
 
-#: ../channels/emails.rst:281
-msgid "Mautic has a built in means of allowing a Contact to unsubscribe from Email communication. You can insert the tokens ``{unsubscribe_text}`` or ``{unsubscribe_url}`` into your Email to have the text or the URL show at your desired location. The unsubscribe text token inserts a sentence with a link instructing the Contact to click to unsubscribe."
+#: ../channels/emails.rst:275
+msgid "This is optional. This may be the timeout for the connection or similar configuration. The config form will allow you to create multiple options."
+msgstr ""
+
+#: ../channels/emails.rst:278
+msgid "Use the Mautic's global configuration to paste in the DSN information, especially the API keys and passwords. The values must be URL-encoded, and the configuration form does that for you. If you are pasting DSN settings directly into the config/local.php file, you must URL-encode the values yourself."
 msgstr ""
 
 #: ../channels/emails.rst:283
-msgid "The unsubscribe URL token inserts the URL into your custom written instructions."
-msgstr ""
-
-#: ../channels/emails.rst:285
-#: ../channels/emails.rst:298
-msgid "For example:"
+msgid "Example API transport installation"
 msgstr ""
 
 #: ../channels/emails.rst:291
-msgid "You can find the configuration of the unsubscribe text in the global settings."
+msgid "If you want to use :xref:`Sendgrid` API instead of SMTP to send Emails, for example, you can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation."
 msgstr ""
 
-#: ../channels/emails.rst:294
-msgid "Online version"
+#: ../channels/emails.rst:297
+msgid "After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In the example of using the Sendgrid API, the DSN looks like this:"
 msgstr ""
 
-#: ../channels/emails.rst:296
-msgid "Mautic also enables the hosting of an online version of the Email sent. To use that feature, simply add the following as URL on text to generate the online version link ``{webview_url}``."
+#: ../channels/emails.rst:303
+msgid "This is how it would be set up in Mautic's Email configuration:"
 msgstr ""
 
-#: ../channels/emails.rst:305
-msgid "Bounce management"
-msgstr ""
-
-#: ../channels/emails.rst:307
-msgid "Mautic provides a feature which allows monitoring of IMAP accounts to detect bounced Emails and unsubscribe requests."
+#: ../channels/emails.rst:0
+msgid "Sendgrid API DSN example"
 msgstr ""
 
 #: ../channels/emails.rst:309
-msgid "Note that Mautic makes use of \"append\" Email addresses. The return-path or the list-unsubscribe header uses something like ``youraddress+bounce_abc123@example.com``. The bounce or unsubscribe allows Mautic to determine what type of Email it's when it examines the inbox through IMAP. The ``abc123`` gives Mautic information about the Email itself, for example which Contact it was it sent to, what Mautic Email address it originated from, etc."
+msgid "To replace the Sendgrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the Sendgrid API to send Emails."
 msgstr ""
 
-#: ../channels/emails.rst:311
-msgid "Some Email services overwrite the return-path header with that of the account's Email (GMail, Amazon SES). In these cases, IMAP bounce monitoring won't work."
+#: ../channels/emails.rst:312
+msgid "It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`."
 msgstr ""
 
-#: ../channels/emails.rst:313
-msgid "Elastic Email, SparkPost, Mandrill, Mailjet, SendGrid and Amazon SES support Webhook callbacks for bounce management. See below for more details."
+#: ../channels/emails.rst:314
+msgid "The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`."
 msgstr ""
 
-#: ../channels/emails.rst:318
-msgid "Monitored inbox configuration"
+#: ../channels/emails.rst:317
+msgid "Immediate delivery"
+msgstr ""
+
+#: ../channels/emails.rst:319
+msgid "This is the default means of delivery. As soon as an action in Mautic triggers an Email to send, it's sent immediately. If you expect to send a large number of Emails, you should use the queue. Sending Email immediately may slow the response time of Mautic if using a remote mail service, since Mautic has to establish a connection with that service before sending the mail. Also attempting to send large batches of Emails at once may hit your server's resource limits or Email sending limits if on a shared host."
 msgstr ""
 
 #: ../channels/emails.rst:322
-msgid "To use the Monitored Email feature you must have the PHP IMAP extension enabled (most shared hosts already have this turned on).  Go to the Mautic configuration and fill in the account details for the inbox(es) you wish to monitor."
+msgid "Queued delivery"
 msgstr ""
 
-#: ../channels/emails.rst:328
-msgid "It's possible to use a single inbox, or to configure a unique inbox per monitor."
+#: ../channels/emails.rst:324
+msgid "Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:"
 msgstr ""
 
 #: ../channels/emails.rst:330
-msgid "To fetch and process the messages, run the following command:"
+msgid "Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics."
 msgstr ""
 
-#: ../channels/emails.rst:336
-msgid "Note that it's best to create an Email address specifically for this purpose, as Mautic reads each message it finds in the given folder."
+#: ../channels/emails.rst:335
+msgid "Tracking Opened Emails"
 msgstr ""
 
-#: ../channels/emails.rst:338
-msgid "If sending mail through GMail, the Return Path of the Email is automatically rewritten as the GMail address. It's best to use a sending method other than GMail, although Mautic can monitor a GMail account for bounces."
+#: ../channels/emails.rst:339
+msgid "Mautic automatically tags each Email with a tracking pixel image. This allows Mautic to track when a Contact opens the Email and execute actions accordingly. Note that there are limitations to this technology - the Contact's Email client supporting HTML and auto-loading of images, and not blocking the loading of pixels. If the Email client doesn't load the image, there's no way for Mautic to know the opened status of the Email."
 msgstr ""
 
-#: ../channels/emails.rst:340
-msgid "If you select an Unsubscribe folder, Mautic also appends the Email as part of the \"List-Unsubscribe\" header. It then parses messages it finds in that folder and automatically unsubscribe the Contact."
+#: ../channels/emails.rst:341
+msgid "By default, Mautic adds the tracking pixel image at the end of the message, just before the ``</body>`` tag. If needed, one could use the ``{tracking_pixel}`` variable within the body content token to have it placed elsewhere. Beware that you shouldn't insert this directly after the opening ``<body>`` because this prevents correct display of pre-header text on some Email clients."
 msgstr ""
 
 #: ../channels/emails.rst:343
-msgid "Webhook bounce management"
+msgid "It's possible to turn off the tracking pixel entirely if you don't need to use it, in the Global Settings."
 msgstr ""
 
 #: ../channels/emails.rst:348
-msgid "Elastic Email Webhook"
+msgid "Tracking links in Emails"
 msgstr ""
 
 #: ../channels/emails.rst:352
-msgid "Login to your Elastic Email account and go to Settings -> Notification."
+msgid "Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the Click Counts tab."
 msgstr ""
 
-#: ../channels/emails.rst:354
-msgid "Fill in the Notification URL as ``https://mautic.example.com/mailer/elasticemail/callback``"
+#: ../channels/emails.rst:355
+msgid "Unsubscribing"
 msgstr ""
 
-#: ../channels/emails.rst:356
-msgid "Check these actions: unsubscribed, complaints, bounce/error"
+#: ../channels/emails.rst:357
+msgid "Mautic has a built in means of allowing a Contact to unsubscribe from Email communication. You can insert the tokens ``{unsubscribe_text}`` or ``{unsubscribe_url}`` into your Email to have the text or the URL show at your desired location. The unsubscribe text token inserts a sentence with a link instructing the Contact to click to unsubscribe."
 msgstr ""
 
-#: ../channels/emails.rst:None
-msgid "Screenshot showing Elastic Email Webhook settings"
+#: ../channels/emails.rst:359
+msgid "The unsubscribe URL token inserts the URL into your custom written instructions."
 msgstr ""
 
-#: ../channels/emails.rst:363
-msgid "Useful resources"
+#: ../channels/emails.rst:361
+#: ../channels/emails.rst:374
+msgid "For example:"
 msgstr ""
 
-#: ../channels/emails.rst:365
-msgid ":xref:`Elastic Support` - Elastic Email's Help desk"
+#: ../channels/emails.rst:367
+msgid "You can find the configuration of the unsubscribe text in the global settings."
 msgstr ""
 
-#: ../channels/emails.rst:366
-msgid ":xref:`Getting Started with Elastic` - Getting Started resources from Elastic Email"
+#: ../channels/emails.rst:370
+msgid "Online version"
 msgstr ""
 
-#: ../channels/emails.rst:371
-msgid "Amazon SES Webhook"
+#: ../channels/emails.rst:372
+msgid "Mautic also enables the hosting of an online version of the Email sent. To use that feature, simply add the following as URL on text to generate the online version link ``{webview_url}``."
 msgstr ""
 
-#: ../channels/emails.rst:375
-msgid "Mautic supports the bounce and complaint management from Amazon Simple Email Service (Amazon SES)."
+#: ../channels/emails.rst:381
+msgid "Bounce management"
 msgstr ""
 
-#: ../channels/emails.rst:377
-msgid "Go to the Amazon Simple Notification Service - SNS - and create a new topic:"
+#: ../channels/emails.rst:383
+msgid "Mautic provides a feature which allows monitoring of IMAP accounts to detect bounced Emails and unsubscribe requests."
 msgstr ""
 
-#: ../channels/emails.rst:None
-msgid "Screenshot showing Amazon SNS create new topic"
-msgstr ""
-
-#: ../channels/emails.rst:None
-msgid "Screenshot showing naming your SNS topic"
+#: ../channels/emails.rst:385
+msgid "Note that Mautic makes use of \"append\" Email addresses. The return-path or the list-unsubscribe header uses something like ``youraddress+bounce_abc123@example.com``. The bounce or unsubscribe allows Mautic to determine what type of Email it's when it examines the inbox through IMAP. The ``abc123`` gives Mautic information about the Email itself, for example which Contact it was it sent to, what Mautic Email address it originated from, etc."
 msgstr ""
 
 #: ../channels/emails.rst:387
-msgid "Click on the newly created topic to create a subscriber"
+msgid "Some Email services overwrite the return-path header with that of the account's Email (GMail, Amazon SES). In these cases, IMAP bounce monitoring won't work."
 msgstr ""
 
-#: ../channels/emails.rst:None
-msgid "Screenshot showing go to the topic"
+#: ../channels/emails.rst:389
+msgid "Elastic Email, SparkPost, Mandrill, Mailjet, SendGrid and Amazon SES support Webhook callbacks for bounce management. See below for more details."
 msgstr ""
 
-#: ../channels/emails.rst:None
-msgid "Screenshot showing new subscriber"
+#: ../channels/emails.rst:394
+msgid "Monitored inbox configuration"
 msgstr ""
 
-#: ../channels/emails.rst:397
-msgid "Enter the URL to the Amazon Webhook on your Mautic installation."
+#: ../channels/emails.rst:398
+msgid "To use the Monitored Email feature you must have the PHP IMAP extension enabled (most shared hosts already have this turned on).  Go to the Mautic configuration and fill in the account details for the inbox(es) you wish to monitor."
 msgstr ""
 
-#: ../channels/emails.rst:400
-msgid "When using the **SMTP method**, the callback URL is your Mautic URL followed by ``/mailer/amazon/callback``."
+#: ../channels/emails.rst:404
+msgid "It's possible to use a single inbox, or to configure a unique inbox per monitor."
 msgstr ""
 
-#: ../channels/emails.rst:402
-msgid "When using the **API method** (available since Mautic 3.2), the callback URL is your Mautic URL followed by ``/mailer/amazon_api/callback``."
+#: ../channels/emails.rst:406
+msgid "To fetch and process the messages, run the following command:"
 msgstr ""
 
-#: ../channels/emails.rst:0
-msgid "Enter URL in Mautic"
+#: ../channels/emails.rst:412
+msgid "Note that it's best to create an Email address specifically for this purpose, as Mautic reads each message it finds in the given folder."
 msgstr ""
 
-#: ../channels/emails.rst:408
-msgid "The subscriber is in the pending state until it's confirmed. SES calls your Amazon Webhook with a ``SubscriptionConfirmation`` request including a callback URL. To confirm, Mautic sends a request back to this callback URL to validate the subscription. Therefore make sure your Mautic installation can connect to the internet, otherwise the subscription remains in the pending state and won't work. If your Webhook is https, you also need to make sure that your site is using a valid SSL certificate which is verifiable by Amazon."
+#: ../channels/emails.rst:414
+msgid "If sending mail through GMail, the Return Path of the Email is automatically rewritten as the GMail address. It's best to use a sending method other than GMail, although Mautic can monitor a GMail account for bounces."
 msgstr ""
 
-#: ../channels/emails.rst:410
-msgid "Check the log file for more information. If you are having problems getting the subscription out of the pending state, it may also help to configure the topic's 'Delivery status logging' settings, so that delivery status (at least for http/s) gets logged to CloudWatch. Then you can visit the Logs section of the CloudWatch Management Console and see the exact details of delivery failures. For example, an invalid SSL certificate might result in an event like the following appearing in the CloudWatch logs:"
+#: ../channels/emails.rst:416
+msgid "If you select an Unsubscribe folder, Mautic also appends the Email as part of the \"List-Unsubscribe\" header. It then parses messages it finds in that folder and automatically unsubscribe the Contact."
 msgstr ""
 
-#: ../channels/emails.rst:447
-msgid "Mandrill Webhook"
+#: ../channels/emails.rst:419
+msgid "Webhook bounce management"
 msgstr ""
 
-#: ../channels/emails.rst:451
-msgid "Mautic supports a few of Mandrill's Webhooks for bounces."
+#: ../channels/emails.rst:421
+msgid "Since Mautic 5 all the Email transports use the same Webhook (sometimes called callback) URL: ``https://mautic.example.com/mailer/callback``. Please follow the documentation for the specific Email transport you've installed to get more information about the Webhook configuration."
 msgstr ""
 
-#: ../channels/emails.rst:453
-msgid "Login to your Mandrill account and go to Settings -> Webhooks"
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing Mandrill Webhooks"
-msgstr ""
-
-#: ../channels/emails.rst:459
-msgid "Click Add a Webhook"
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing addition of Mandrill Webhooks"
-msgstr ""
-
-#: ../channels/emails.rst:467
-msgid "Mautic supports the following Webhooks: message is bounced, message is soft-bounced, message is rejected, message is marked as spam and message recipient unsubscribes."
-msgstr ""
-
-#: ../channels/emails.rst:471
-msgid "Fill in the ``Post To URL`` as ``https://mautic.example.com/mailer/mandrill/callback`` then click Create Webhook."
-msgstr ""
-
-#: ../channels/emails.rst:473
-msgid "Click Custom Metadata and create two new metadata fields: ``hashId`` and ``contactId``"
-msgstr ""
-
-#: ../channels/emails.rst:0
-#: ../channels/emails.rst:0
-msgid "Screenshot showing addition of metadata"
-msgstr ""
-
-#: ../channels/emails.rst:486
-msgid "Mailjet Webhook"
-msgstr ""
-
-#: ../channels/emails.rst:490
-msgid "Mautic supports Mailjet's Webhooks for bounces, spam and blocked. Before any configuration, you'll need to create an account on :xref:`Mailjet`."
-msgstr ""
-
-#: ../channels/emails.rst:492
-msgid "Login to your Mailjet account and go to Account > Event tracking/triggers"
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing Mailjet Webhooks"
-msgstr ""
-
-#: ../channels/emails.rst:498
-msgid "On the event type list, select the one you want to link to your Mautic account"
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing adding Webhooks"
-msgstr ""
-
-#: ../channels/emails.rst:506
-msgid "Mautic supports the following webhooks: message is bounced, message is blocked, message is spam."
-msgstr ""
-
-#: ../channels/emails.rst:510
-msgid "Fill in the URL boxes as ``https://mautic.example.com/mailer/mailjet/callback``."
-msgstr ""
-
-#: ../channels/emails.rst:515
-msgid "SparkPost Webhook"
-msgstr ""
-
-#: ../channels/emails.rst:516
-msgid "Login to your SparkPost account and go to Account -> Webhooks."
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing SparkPost webhooks"
-msgstr ""
-
-#: ../channels/emails.rst:522
-msgid "Click the New Webhook button top right"
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing new Webhooks"
-msgstr ""
-
-#: ../channels/emails.rst:528
-msgid "Fill in the Target URL as ``https://mautic.example.com/mailer/sparkpost/callback``"
-msgstr ""
-
-#: ../channels/emails.rst:530
-#: ../channels/emails.rst:553
-msgid "Select the following Events"
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing events"
-msgstr ""
-
-#: ../channels/emails.rst:537
-msgid "SendGrid Webhook"
-msgstr ""
-
-#: ../channels/emails.rst:541
-msgid "Login to your SendGrid account and go to Settings > Mail Setting > Mail Settings"
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing SendGrid Webhooks"
-msgstr ""
-
-#: ../channels/emails.rst:549
-msgid "Fill in the Target URL as `https://mautic.example.com/mailer/sendgrid_api/callback`"
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing Events"
-msgstr ""
-
-#: ../channels/emails.rst:559
-msgid "Save setting - on the right side of \"Event Notification\" row:"
-msgstr ""
-
-#: ../channels/emails.rst:0
-msgid "Screenshot showing save settings"
-msgstr ""
-
-#: ../channels/emails.rst:568
+#: ../channels/emails.rst:427
 msgid "Create a Segment with bounced Emails"
 msgstr ""
 
-#: ../channels/emails.rst:572
+#: ../channels/emails.rst:431
 msgid "This isn't required, but if you want to be able to select the Contacts with bounced Emails easily - for example to delete all bounced Contacts - create a Segment with bounced Emails."
 msgstr ""
 
-#: ../channels/emails.rst:574
+#: ../channels/emails.rst:433
 msgid "Go to Segments > New."
 msgstr ""
 
-#: ../channels/emails.rst:575
+#: ../channels/emails.rst:434
 msgid "Type in the Segment name. For example Bounced Emails."
 msgstr ""
 
-#: ../channels/emails.rst:576
+#: ../channels/emails.rst:435
 msgid "Select the Filters tab."
 msgstr ""
 
-#: ../channels/emails.rst:577
+#: ../channels/emails.rst:436
 msgid "Create new Bounced Email equals Yes filter."
 msgstr ""
 
-#: ../channels/emails.rst:578
+#: ../channels/emails.rst:437
 msgid "Wait for the ``bin/console mautic:segments:update`` command to be automatically triggered by a cron job or execute it manually."
 msgstr ""
 
-#: ../channels/emails.rst:579
+#: ../channels/emails.rst:438
 msgid "All Contacts with bounced Emails should appear in this Segment."
 msgstr ""
 
-#: ../channels/emails.rst:584
+#: ../channels/emails.rst:443
 msgid "Troubleshooting Emails"
 msgstr ""
 
-#: ../channels/emails.rst:589
+#: ../channels/emails.rst:448
 msgid "Email open tracking"
 msgstr ""
 
-#: ../channels/emails.rst:591
+#: ../channels/emails.rst:450
 msgid "Mautic tracks Email opens using a tracking pixel. This is a 1 pixel GIF image in the source code of Email messages sent by Mautic."
 msgstr ""
 
-#: ../channels/emails.rst:593
+#: ../channels/emails.rst:452
 msgid "When a Contact opens an Email using an Email client like Outlook, Thunderbird, or GMail, the client tries to load the images in it. The image load request is what Mautic uses to track the Email open action."
 msgstr ""
 
-#: ../channels/emails.rst:595
+#: ../channels/emails.rst:454
 msgid "Some Email clients have auto loading images turned off, and Contacts have to selectively \"Load Images\" inside an Email message. Some automatically open all images before delivering the Email to the Contact."
 msgstr ""
 
-#: ../channels/emails.rst:597
+#: ../channels/emails.rst:456
 msgid "If the images aren't loaded for this reason or another, or if they're opened automatically before sending the Email on to the Contact, Mautic doesn't know about the open action. Therefore, Email open tracking isn't very accurate."
 msgstr ""
 
-#: ../channels/emails.rst:600
+#: ../channels/emails.rst:459
 msgid "Email link tracking"
 msgstr ""
 
-#: ../channels/emails.rst:602
+#: ../channels/emails.rst:461
 msgid "Before sending an Email, Mautic replaces all links in the Email with links back to Mautic including a unique key. If the Contact clicks on such a link, the link redirects the Contact to Mautic, which then tracks the click action and redirects the Contact to the original location. It's fast, so the Contact doesn't usually notice the additional redirect."
 msgstr ""
 
-#: ../channels/emails.rst:604
+#: ../channels/emails.rst:463
 msgid "If the Email click doesn't get tracked, make sure that:"
 msgstr ""
 
-#: ../channels/emails.rst:606
+#: ../channels/emails.rst:465
 msgid "Your Mautic server is on an accessible URL."
 msgstr ""
 
-#: ../channels/emails.rst:607
+#: ../channels/emails.rst:466
 msgid "You sent it to an existing Contact via a Campaign or a Segment Email. Emails sent by the Send Example link, direct Email from the Contact profile, or Form submission preview Emails won't replace links with trackable links."
 msgstr ""
 
-#: ../channels/emails.rst:608
+#: ../channels/emails.rst:467
 msgid "Make sure the URL in the href attribute is absolute and valid. It should start with ``http://`` or ideally ``https://``."
 msgstr ""
 
-#: ../channels/emails.rst:609
+#: ../channels/emails.rst:468
 msgid "You've opened the link in a incognito browser (not in the same session where you're logged into Mautic)"
 msgstr ""
 
-#: ../channels/emails.rst:610
+#: ../channels/emails.rst:469
 msgid "Check if Mautic replaced the link in the Email with a tracking link."
 msgstr ""
 
-#: ../channels/emails.rst:613
+#: ../channels/emails.rst:472
 msgid "Unsubscribe link doesn't work"
 msgstr ""
 
-#: ../channels/emails.rst:614
+#: ../channels/emails.rst:473
 msgid "The unsubscribe link **doesn't work in test Emails**."
 msgstr ""
 
-#: ../channels/emails.rst:616
+#: ../channels/emails.rst:475
 msgid "This is because Mautic sends test Emails to a Mautic User and not to a Mautic Contact."
 msgstr ""
 
-#: ../channels/emails.rst:618
+#: ../channels/emails.rst:477
 msgid "Mautic Users can't unsubscribe and therefore the unsubscribe link looks like this: ``https://mautic.example.com/|URL|``. However, the link **does** work correctly when you send the Email to a Contact."
 msgstr ""
 
-#: ../channels/emails.rst:620
+#: ../channels/emails.rst:479
 msgid "Best practice is to create a Segment with a small number of Contacts to receive test Emails - for example, yourself - which ensures that you can fully test features such as unsubscribe behaviour."
 msgstr ""
 
