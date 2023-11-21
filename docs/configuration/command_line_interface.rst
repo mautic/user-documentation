@@ -110,7 +110,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - ``mautic:email:fetch``
      - Fetch and process monitored Email.
      - 
-   * - messenger:consume email
+   * - ``messenger:consume email``
      - Processes mail queue
      - 
    * - ``mautic:import``
