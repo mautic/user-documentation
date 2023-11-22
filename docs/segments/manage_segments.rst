@@ -16,7 +16,7 @@ When viewing all Segments, the **# contacts** column on the right shows the numb
   :alt: Screenshot showing Contacts matching that particular Segment.
 
 .. note::
-  Mautic renamed lead lists to Segments in Mautic :xref:`1.4.0 release`.
+  Mautic renamed ``lead lists`` to ``Segments`` in Mautic :xref:`1.4.0 release`.
 
 .. vale off
 
@@ -398,7 +398,7 @@ Learn more about :xref:`Regex`.
 
 .. note:: 
 
-  MySQL (and Mautic) uses POSIX regular expressions, which could behave differently from other types of regular expressions.
+  MySQL (and Mautic) uses ``POSIX`` regular expressions, which could behave differently from other types of regular expressions.
 
 .. vale off
 
