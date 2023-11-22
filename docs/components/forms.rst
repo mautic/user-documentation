@@ -38,7 +38,7 @@ The following fields are available:
 
 - **Kiosk mode** - If Yes, Mautic turns off tracking of Contacts created through the Form, so that the Form doesn't generate cookies or associate any IP address with the Contact record. Marketers may refer to this as 'data entry mode'. It's ideal for using at conferences or events where several Contacts may enter their information using the same device, as it prevents associating the activity on the device to Contacts.
 
-- **Render style** - If Yes, the Form displays with the styling from either the selected Mautic Theme or the Attributes tab of the Form fields. When No, the Form adopts the styling of where it's embedded.
+- **Render style** - If Yes, the Form displays with the styling from either the selected Mautic Theme or the Attributes tab of the Form Fields. When No, the Form adopts the styling of where it's embedded.
 
 - **Theme** - Select a Mautic Theme which has styling for a Form. This dictates the styling of the Form when added to an external website or Application if 'Render style' is Yes.
 
@@ -142,7 +142,7 @@ Based on the field selected, Mautic displays various tabs in the fields editor i
 General
 ~~~~~~~
 
-- **Label** - This is the title of your field, telling the visitor what you'd like them to enter in the field. The label shows before the Form field by default.
+- **Label** - This is the title of your field, telling the visitor what you'd like them to enter in the field. The label shows before the Form Field by default.
 
 - **Show label?** - When No, Mautic won't display the label on the Form.
 
@@ -199,7 +199,7 @@ Checkbox group, radio group and select
 
 .. image:: images/forms/checkbox_field_values.png
   :width: 600
-  :alt: Screenshot showing checkbox field values with a mapped custom field
+  :alt: Screenshot showing checkbox field values with a mapped Custom Field
 
 With the checkbox, radio box and select fields, the properties tab allows you to choose what should be available for the visitor to select.
 
@@ -449,7 +449,7 @@ Creating Custom Fields
 
 .. vale on
 
-Using an example of wanting to show specific types of car based on the manufacturer, you would create the following custom fields:
+Using an example of wanting to show specific types of car based on the manufacturer, you would create the following Custom Fields:
 
 - **Car manufacturer**: this field should be of the Select data type. In this example, the options for this field are Ford, Nissan, Peugeot, and Fiat.
 - **Ford cars**: this field should be of the Select - Multiple data type. In this example, the available options for this field are Focus, Mustang, Fiesta, and Galaxy.

@@ -6,6 +6,7 @@ Autoloader
 autoloader
 Autowired
 autowired
+Azure
 bcc
 Beanstalkd
 Bing
@@ -18,6 +19,7 @@ CCPA
 Citrix
 Clearbit
 CloudAMQP
+CMS
 config
 Company(ies)
 Composer
@@ -25,6 +27,7 @@ configurator
 ConnectWise
 Contribution(s)
 CORS
+CRM
 cron
 Cron
 CTRL
@@ -41,6 +44,7 @@ Focus Items
 Froala
 Froogaloop
 gcm
+GDPR
 GIF
 GitBook
 GitHub
