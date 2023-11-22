@@ -94,6 +94,7 @@ post
 PUT
 Rackspace
 Remarketing
+REST
 Salesforce
 SAML
 Schimpf
