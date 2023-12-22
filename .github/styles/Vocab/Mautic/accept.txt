@@ -27,6 +27,7 @@ configurator
 ConnectWise
 Contribution(s)
 CORS
+cPanel
 CRM
 cron
 Cron
