@@ -146,7 +146,7 @@ Click **login** to continue working on your Mautic instance.
 Installing with command line
 ============================
 
-You can also install Mautic using the command line. You can either pass the settings parameters in the command, or create a local PHP file with your database settings. You can also define properties in this file using the syntax expected by the command-line options. Note that from Mautic 5.1 a complex password is required.
+You can also install Mautic using the command line. You can either pass the settings parameters in the command, or create a local PHP file with your database settings. You can also define properties in this file using the syntax expected by the command-line options. Note that Mautic requires a complex password from version 5.1.
 
 Use the command ``path/to/php bin/console mautic:install --help`` for the list of options and flags available.
 
