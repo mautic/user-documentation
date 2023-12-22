@@ -169,8 +169,12 @@ The following batch actions are currently available:
 
 If you need to delete large numbers of Contacts, visit the :doc:`segment docs</segments/manage_segments>` which explains how to delete thousands of Contacts easily.
 
-Contact details
-***************
+.. vale off
+
+Individual Contact details
+**************************
+
+.. vale on
 
 Each Contact has a detail page where you can see what Mautic knows about them.
 
@@ -376,14 +380,14 @@ Note that if a browser doesn't accept cookies, this may result in each hit creat
 
 .. code-block:: javascript
 
-    <script>
-        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
-            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
-            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','http(s)://example.com/mtc.js','mt');
+  <script>
+      (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+          w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+          m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','http(s)://example.com/mtc.js','mt');
 
-        mt('send', 'pageview');
-    </script>
+      mt('send', 'pageview');
+  </script>
 
 *Don't forget to change the scheme (http(s)) either to http or https depending what scheme you use for your Mautic. Also, change [example.com] to the domain where your Mautic runs.*
 
@@ -397,8 +401,8 @@ The advantage of JavaScript tracking is that the tracking request - which can ta
 
 * **Page URL** the URL of the current website.
 
-mt() events
-~~~~~~~~~~~
+``mt() events``
+~~~~~~~~~~~~~~~
 
 mt() supports two callbacks, ``onload`` and ``onerror`` accepted as the fourth argument. The ``onload`` method fires at loading of the pixel. If the pixel fails for whatever reason, it triggers ``onerror``.
 
@@ -690,8 +694,12 @@ How to test Google Analytics tracking code and campaign action
 
 |
 
-How to test Facebook Pixel tracking code and campaign action
+.. vale off
+
+How to test Facebook Pixel tracking code and Campaign action
 ------------------------------------------------------------
+
+.. vale on
 
 * Install the Facebook Pixel Helper
 * Create Campaign with a 'Visits a Page' decision and a 'Send tracking event' action
