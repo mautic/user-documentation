@@ -60,21 +60,21 @@ You can verify if your account has Alphanumeric Sender enabled by following thes
 
 #. Click Settings.
 
-#. Verify that "Alphanumeric Sender ID" is set to Enabled.
+#. Verify that you have ``Alphanumeric Sender ID``.
 
 Follow these steps to see if your account has Alphanumeric Sender enabled.
 
-.. vale on
+.. vale off
 
 Send SMS Messages using an Alphanumeric Sender ID with Mautic
 *************************************************************
 
-.. vale off 
+.. vale on
 
-Just setup your alias in plugin settings:
+Just set up your alias in Plugin settings:
 
  .. image:: images/alphanumeric-id.png
     :width: 400
     :alt: Screenshot of alphanumeric-id
 
-Read more info about :xref:`Alphanumeric Sender ID` on Twillio site.
+Read more info about :xref:`Alphanumeric Sender ID` on Twilio site.
