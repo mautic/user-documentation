@@ -93,7 +93,7 @@ Visitors can choose to close this type of Focus Item with the *X* button in the 
 Full page
 ~~~~~~~~~
 
-The full page Focus Item completely takes over the whole page, hiding the rest of the page content until the visitor clicks the *X* button in the top right hand corner of the Focus Item.
+The full page Focus Item completely takes over the whole page, hiding the page content until the visitor clicks the *X* button in the top right hand corner of the Focus Item.
 
 There are no additional configuration options for this style of Focus Item.
 
