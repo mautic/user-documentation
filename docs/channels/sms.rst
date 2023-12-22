@@ -1,4 +1,4 @@
-SMS Text messages
+SMS Text Messages
 #################
 
 With the SMS Channel it's possible to send text messages from Campaigns in Mautic.
