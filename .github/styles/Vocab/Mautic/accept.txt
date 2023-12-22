@@ -75,6 +75,8 @@ MaxMind
 Middlewares
 middlewares
 MJML
+MQL
+MQLs
 Multiselect
 multiselect
 MVP
