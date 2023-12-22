@@ -1,9 +1,5 @@
-.. vale off
-
 Import Contacts
 ###############
-
-.. vale on
 
 Contact importing is possible through the User Interface in Mautic. For larger imports it's recommended to complete the import in the background via a cron job.
 
@@ -197,11 +193,11 @@ When the background job finishes, either successfully or if it fails, you'll get
 FAQ
 ***
 
-Q. The import times out.  
+Q. The import times out, what should you do?  
 
 A. Either use the background job to import, or change the batch limit to smaller number than 100.
 
-Q: Are imported *Do Not Contact* values stored as a bounce or a ``unsubscription``? 
+Q. What happens with imported *Do Not Contact* values? Are they stored as a bounce or a ``unsubscription``? 
 
 A. It's stored as a ``Manual Unsubscription``. It's the same as marking the Contact *Do Not Contact* from the Contact's page.
 
