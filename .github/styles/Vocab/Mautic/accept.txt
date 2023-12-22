@@ -70,6 +70,7 @@ Joomla!
 Libre
 Licensor
 LinkedIn
+MailChimp
 Mailjet
 Marketing Messages
 Mautic
