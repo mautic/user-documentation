@@ -492,7 +492,7 @@ First you need to decide on a queuing transport to drive your queue. There are s
 Doctrine
 --------
 This transport is easy to setup as it doesn't require installing any additional extension.
-It uses database table ``messenger_messages`` for storing messages (the table name can be changed via options). The screenshot below shows the basic settings.
+It uses database table ``messenger_messages`` for storing messages - you can change the table name via options. The screenshot below shows the basic settings.
 It uses database table ``messenger_messages`` for storing messages - you can change the table name via options. The screenshot below shows the basic settings.
 .. image:: images/queue-doctrine.png
   :width: 600
