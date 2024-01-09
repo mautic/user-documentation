@@ -48,6 +48,23 @@ The IDP may ask for the following settings:
 
 #. Custom attributes - Mautic requires three custom attributes in the IDP responses for the User Email, first name and last name. Username is also supported but is optional. Configure the attribute names used by the IDP in Mautic's Configuration > User/Authentication Settings under the 'Enter the names of the attributes the configured IDP uses for the following Mautic User fields' section.
 
+Example: Azure SAML SSO
+=======================
+
+1) Register new Enterprise applications by navigating to ``Create your own Application`` and then ``Integrate any other application you don't find in the gallery (Non-gallery)``
+2) Go to Single Sign-On
+3) ``Identifier (Entity ID)`` - this is the site URL located at the top of User/Authentication Settings. Copy this exactly as is to the IDP.
+4) ``Reply URL (Assertion Consumer Service URL)`` - Use ``https://example.com/s/saml/login_check``
+5) Download Federation Metadata XML from 3. SAML Certificates
+6) Upload the downloaded Federation Metadata XML to Mautic
+7) X.509-Certificate isn't required
+8) Use the following for the custom attributes fields:
+
+E-Mail: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
+First Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname``
+Last Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname``
+Username (optional): ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
+
 Logging in
 ==========
 
