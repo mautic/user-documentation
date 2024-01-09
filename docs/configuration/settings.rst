@@ -464,14 +464,13 @@ Purpose of the queuing
 
 Mautic can optionally use a queuing mechanism for sending Emails. This feature is essential when running Mautic **at large scale**. It's planned to extend the tasks that can utilize queuing in the future.
 
-When you enable queuing, Emails are no longer sent immediately - for example, within the browser
-When you enable queuing, Emails are no longer sent immediately - for example, within the browser.
-but instead, Mautic places them in a queue and sends them later using queue consumers - also known as workers. Using consumers helps to offload the workload of your server, and allows easier scaling of your Mautic instance.```
+When you enable queuing, Emails are no longer sent immediately - for example, within the browser - but instead, Mautic places them in a queue and sends them later using queue consumers - also known as workers. Using consumers helps to offload the workload of your server, and allows easier scaling of your Mautic instance.
+
 Mautic doesn't use queues by default
 ====================================
 
 A fresh instance of Mautic has **the queuing feature turned off** (the queue DSN configuration is ``"sync://"``) as shown in the following screenshot.
-After installing a fresh instance of Mautic, **queues aren't used** (By default, Mautic has the queue DSN set to ``"sync://"``) as shown in the following screenshot.
+
 .. image:: images/queue-disabled.png
   :width: 600
   :alt: Queue turned off
@@ -479,8 +478,8 @@ After installing a fresh instance of Mautic, **queues aren't used** (By default,
 How to enable the queuing
 =========================
 
-First you need to choose the technology - queuing transport - to drive your queue. The are several options available at the moment. It's up to you to choose which one fits your needs the best.
 First you need to decide on a queuing transport to drive your queue. There are several options available at the moment. It's up to you to choose which one fits your needs the best.
+
 **Currently available transports:**
 
 * :ref:`Doctrine`
@@ -492,8 +491,9 @@ First you need to decide on a queuing transport to drive your queue. There are s
 Doctrine
 --------
 This transport is easy to setup as it doesn't require installing any additional extension.
+
 It uses database table ``messenger_messages`` for storing messages - you can change the table name via options. The screenshot below shows the basic settings.
-It uses database table ``messenger_messages`` for storing messages - you can change the table name via options. The screenshot below shows the basic settings.
+
 .. image:: images/queue-doctrine.png
   :width: 600
   :alt: Example of Doctrine transport
@@ -576,6 +576,7 @@ Queue for failures
 ------------------
 
 If a message fails all its retries, it's discarded by default. To avoid this happening, you can optionally configure a Queue for failures.
+
 For more details see the documentation on :xref:`queue-saving-retrying-failed-messages`.
 
 The screenshot below shows the example of configuring the failure queue using the Doctrine transport.
