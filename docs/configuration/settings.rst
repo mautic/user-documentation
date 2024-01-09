@@ -252,6 +252,8 @@ To replace the SendGrid API key, add it to the relevant field in the Email confi
 
 The table below lists available transport Plugins created for Mautic to include support for batch sending and callback handling.
 
+.. vale off
+
 .. list-table:: 
    :widths: 40 60
    :header-rows: 1
@@ -260,6 +262,7 @@ The table below lists available transport Plugins created for Mautic to include 
      - Command for installing
    * - :xref:`sparkpost-transport`
      - ``composer require ts-navghane/sparkpost-plugin``
+.. vale on
 
 Queue settings
 ==============

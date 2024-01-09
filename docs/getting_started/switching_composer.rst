@@ -10,7 +10,12 @@ However, many Mautic Users were running into installation and update errors, man
 
 In addition, Mautic recently introduced the :ref:`Mautic Marketplace` which isn't compatible with this installation method.
 
+
+.. vale off
+
 As a result of the reasons mentioned previously, Composer becomes the default method for installing and updating Mautic starting with the release of Mautic 5. Read more in the :xref:`composer blog post`.
+
+.. vale on
 
 Switching to a Composer-based installation
 ******************************************
