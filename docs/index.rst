@@ -59,7 +59,8 @@ There are different types of documentation available to help you navigate your w
    :maxdepth: 2
    :caption: Contacts
    :hidden:
-
+   
+   contacts/contacts_overview
    contacts/manage_contacts
    contacts/import_contacts
    contacts/custom_fields
@@ -180,6 +181,7 @@ There are different types of documentation available to help you navigate your w
 
    points/points
    points/points_troubleshooting
+   points/point_groups
 
 .. toctree::
    :maxdepth: 2

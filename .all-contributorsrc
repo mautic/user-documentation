@@ -1,0 +1,89 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "gustavokennedy",
+      "name": "Gustavo Kennedy Renkel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98914036?v=4",
+      "profile": "http://overall.cloud",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "zaharovrd",
+      "name": "Roman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8171816?v=4",
+      "profile": "http://www.youradman.com",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "tomekkowalczyk",
+      "name": "Tomasz Kowalczyk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39382654?v=4",
+      "profile": "http://adevo.pl",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kukis2107",
+      "name": "kukis2107",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60287846?v=4",
+      "profile": "https://github.com/kukis2107",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "putzwasser",
+      "name": "putzwasser",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26040044?v=4",
+      "profile": "https://github.com/putzwasser",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "Moongazer",
+      "name": "Moongazer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1685510?v=4",
+      "profile": "https://github.com/Moongazer",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "patrykgruszka",
+      "name": "Patryk Gruszka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8580942?v=4",
+      "profile": "https://github.com/patrykgruszka",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Amiyah14",
+      "name": "Emily",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45315891?v=4",
+      "profile": "https://github.com/Amiyah14",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "user-documentation",
+  "projectOwner": "mautic",
+  "commitType": "docs"
+}

@@ -146,7 +146,7 @@ Click **login** to continue working on your Mautic instance.
 Installing with command line
 ============================
 
-You can also install Mautic using the command line. You can either pass the settings parameters in the command, or create a local PHP file with your database settings. You can also define properties in this file using the syntax expected by the command-line options. 
+You can also install Mautic using the command line. You can either pass the settings parameters in the command, or create a local PHP file with your database settings. You can also define properties in this file using the syntax expected by the command-line options. Note that Mautic requires a complex password from version 5.1.
 
 Use the command ``path/to/php bin/console mautic:install --help`` for the list of options and flags available.
 
@@ -195,7 +195,7 @@ Use the syntax below within a ``local.php`` file:
     'db_backup_tables' => false,
     'db_backup_prefix' => 'bak_',
     'admin_email' => 'admin@example.com',
-    'admin_password' => 'mautic',
+    'admin_password' => 'Maut1cR0cks!',
     'mailer_transport' => null,
     'mailer_host' => null,
     'mailer_port' => null,
@@ -221,7 +221,7 @@ If desired, you can also add parameters in the install command:
   --mailer_from_name="Example From Name" --mailer_from_email="mautic@localhost"
   --mailer_transport="smtp" --mailer_host="localhost" --mailer_port="1025"
   --db_driver="pdo_mysql" --db_host="db" --db_port="3306" --db_name="db" --db_user="db" --db_password="db" 
-  --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="mautic"
+  --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="Maut1cR0cks!"
 
 As the installation process begins, it flags up warnings and aborts if there are any critical errors.
 
@@ -298,7 +298,7 @@ You can use :xref:`DDEV` which is recommended for testing and development with M
 This spins up a DDEV instance (which includes Mailhog, PHPMyAdmin, and Redis Commander) - by default at ``https://mautic.ddev.site`` - and also gives the option to set up Mautic ready for you to use.
 .. vale on
 
-This runs through the Composer install process, and installs Mautic at the command line with a default username of ``admin`` and password of ``mautic``.
+This runs through the Composer install process, and installs Mautic at the command line with a default username of ``admin`` and password of ``Maut1cR0cks!`` (note: pre Mautic 5.1 the password is just `mautic`.
 
 Installing with Composer
 ************************
