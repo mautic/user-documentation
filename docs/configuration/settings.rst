@@ -302,7 +302,13 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
+
+.. vale off
+
 * **Do not contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+
+.. vale on
+
 
 .. note:: 
 
@@ -459,22 +465,22 @@ Purpose of the queuing
 Mautic can optionally use a queuing mechanism for sending Emails. This feature is essential when running Mautic **at large scale**. It's planned to extend the tasks that can utilize queuing in the future.
 
 When you enable queuing, Emails are no longer sent immediately - for example, within the browser
-but put in a queue and sent later using queue consumers (also known as workers). Using consumers help offload workload of your webserver and allows easier scaling of your instance.
-
+When you enable queuing, Emails are no longer sent immediately - for example, within the browser.
+but instead, Mautic places them in a queue and sends them later using queue consumers - also known as workers. Using consumers helps to offload the workload of your server, and allows easier scaling of your Mautic instance.```
 Mautic doesn't use queues by default
 ====================================
 
 After installing a fresh instance of Mautic, **the queuing feature is disabled** (the queue DSN is set to ``"sync://"``) as shown in the following screenshot.
-
+After installing a fresh instance of Mautic, **queues aren't used** (By default, Mautic has the queue DSN set to ``"sync://"``) as shown in the following screenshot.
 .. image:: images/queue-disabled.png
   :width: 600
-  :alt: Queue is disabled
+  :alt: Queue is turned off
 
 How to enable the queuing
 =========================
 
 First you need to choose what technology (queuing transport) will drive your queue. The are several options available at the moment. It is up to you to choose which one fits your needs the best.
-
+First you need to decide on a queuing transport to drive your queue. There are several options available at the moment. It's up to you to choose which one fits your needs the best.
 **Currently available transports:**
 
 * :ref:`Doctrine`
@@ -485,9 +491,9 @@ First you need to choose what technology (queuing transport) will drive your que
 
 Doctrine
 --------
-This transport is easy to setup as it does not require installing any additional extension.
+This transport is easy to setup as it doesn't require installing any additional extension.
 It uses database table ``messenger_messages`` for storing messages (the table name can be changed via options). The screenshot below shows the basic settings.
-
+It uses database table ``messenger_messages`` for storing messages - the table name can be changed via options. The screenshot below shows the basic settings.
 .. image:: images/queue-doctrine.png
   :width: 600
   :alt: Example of Doctrine transport
@@ -517,7 +523,7 @@ See :xref:`queue-amqp-transport` for the complete list of configuration options.
 Beanstalkd
 ----------
 The Beanstalkd transport requires a running :xref:`Beanstalkd` service and a composer dependency installed via ``composer require symfony/beanstalkd-messenger``.
-After installing the composer dependency, you can fill in the configuration as follows.
+After installing the Composer dependency, you can fill in the configuration as follows.
 
 .. image:: images/queue-beanstalkd.png
   :width: 600
@@ -527,7 +533,7 @@ See :xref:`queue-beanstalkd-transport` for the complete list of configuration op
 
 Amazon SQS
 ----------
-The Amazon SQS transport is ideal when your Mautic instance is hosted on AWS. You will need to install a composer dependency via ``composer require symfony/amazon-sqs-messenger``. See the example of the configuration below.
+The Amazon SQS transport is ideal when hosting your Mautic instance on AWS. You need to install a Composer dependency via ``composer require symfony/amazon-sqs-messenger``. See the example of the configuration below.
 
 .. image:: images/queue-amazon-sqs.png
   :width: 600
@@ -535,10 +541,10 @@ The Amazon SQS transport is ideal when your Mautic instance is hosted on AWS. Yo
 
 See :xref:`queue-amazon-sqs` for the complete list of configuration options.
 
-How to consume messages from the queue
+How to consume messages from the Queue
 ======================================
 
-To start consuming the messages from the queue, you need to run the following Symfony command.
+To start consuming the messages from the Queue, you need to run the following Symfony command.
 
 .. code-block::
 
