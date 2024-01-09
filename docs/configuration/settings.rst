@@ -502,7 +502,7 @@ See :xref:`queue-doctrine-transport` for the complete list of configuration opti
 
 Redis
 -----
-This transport requires the Redis PHP extension (>=4.3) and a running :xref:`Redis` server (^5.0). Once these requirements are met, the typical configuration looks as follows.
+This transport requires the Redis PHP extension (>=4.3) and a running :xref:`Redis` server (^5.0). Once met, the typical configuration looks as follows.
 
 .. image:: images/queue-redis.png
   :width: 600
