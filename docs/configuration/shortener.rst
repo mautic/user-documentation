@@ -1,8 +1,6 @@
-.. vale off
-
 URL shortener service
 #################
-
+#####################
 .. attention::
 
     Mautic 5 introduces a new shortening feature, replacing the previous legacy shortening system found in the settings. If you utilized the shortening service in Mautic 4, upon upgrading to Mautic 5, please follow the steps below to reconfigure it.
