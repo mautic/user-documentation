@@ -470,16 +470,16 @@ but instead, Mautic places them in a queue and sends them later using queue cons
 Mautic doesn't use queues by default
 ====================================
 
-After installing a fresh instance of Mautic, **the queuing feature is disabled** (the queue DSN is set to ``"sync://"``) as shown in the following screenshot.
+A fresh instance of Mautic has **the queuing feature turned off** (the queue DSN configuration is ``"sync://"``) as shown in the following screenshot.
 After installing a fresh instance of Mautic, **queues aren't used** (By default, Mautic has the queue DSN set to ``"sync://"``) as shown in the following screenshot.
 .. image:: images/queue-disabled.png
   :width: 600
-  :alt: Queue is turned off
+  :alt: Queue turned off
 
 How to enable the queuing
 =========================
 
-First you need to choose what technology (queuing transport) will drive your queue. The are several options available at the moment. It is up to you to choose which one fits your needs the best.
+First you need to choose the technology - queuing transport - to drive your queue. The are several options available at the moment. It's up to you to choose which one fits your needs the best.
 First you need to decide on a queuing transport to drive your queue. There are several options available at the moment. It's up to you to choose which one fits your needs the best.
 **Currently available transports:**
 
@@ -522,14 +522,19 @@ See :xref:`queue-amqp-transport` for the complete list of configuration options.
 
 Beanstalkd
 ----------
-The Beanstalkd transport requires a running :xref:`Beanstalkd` service and a composer dependency installed via ``composer require symfony/beanstalkd-messenger``.
+The Beanstalkd transport requires a running :xref:`Beanstalkd` service and a Composer dependency installed via ``composer require symfony/beanstalkd-messenger``.
 After installing the Composer dependency, you can fill in the configuration as follows.
 
 .. image:: images/queue-beanstalkd.png
   :width: 600
   :alt: Example of Beanstalkd transport
 
+
+.. vale off
+
 See :xref:`queue-beanstalkd-transport` for the complete list of configuration options.
+
+.. vale on
 
 Amazon SQS
 ----------
@@ -550,7 +555,7 @@ To start consuming the messages from the Queue, you need to run the following Sy
 
     php bin/console messenger:consume email
 
-If you don't use Kubernetes in your environment, use a process manager like Supervisor or systemd to keep your worker(s) running. More on this at :xref:`queue-consuming-messages`
+If you don't use Kubernetes in your environment, use a process manager like ``Supervisor`` or ``systemd`` to keep your worker/s running. More on this at :xref:`queue-consuming-messages`
 
 Advanced setting
 ================
