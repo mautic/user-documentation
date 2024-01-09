@@ -309,7 +309,7 @@ This is how it would be set up in Mautic's Email configuration:
 To replace the Sendgrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the Sendgrid API to send Emails. 
 
 .. warning::
-  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
+  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace <marketplace/marketplace.rst>`.
 
 The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`.
 
