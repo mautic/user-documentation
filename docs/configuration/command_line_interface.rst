@@ -106,10 +106,13 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``mautic:custom-field:create-column``
      - Creates the actual column in the table
+     - 
    * - ``mautic:email:fetch``
      - Fetch and process monitored Email.
-   * - messenger:consume email_transport
+     - 
+   * - ``messenger:consume email``
      - Processes mail queue
+     - 
    * - ``mautic:import``
      - If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
      - 

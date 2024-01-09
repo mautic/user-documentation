@@ -21,22 +21,26 @@ For more background, our end goal, and to let us know if you want to help, pleas
 
 To make a small change to the base language files for the documentation, use the 'edit file' button on the documentation and commit your changes. This creates a new Pull Request.
 
-To make more complex changes you need to clone this repository and work on your local computer.
+To make more complex changes, follow the steps below:
 
-1. Install a code editor, [Visual Studio Code](https://code.visualstudio.com) is recommended as it automatically installs all the extensions you need.
-2. Install [Github CLI](https://cli.github.com/) which makes it much easier to work with Git commands
-3. Create a working folder on your local computer
-4. Open a terminal and navigate to that folder using the command `cd <path/to/folder>`
-5. Type `gh repo clone mautic/user-documentation` - you may be prompted to authenticate with GitHub the first time you do this
-6. Open the folder user-documentation that is created in your editor
-7. At the bottom left of your screen you will see the default branch called 'main' is showing as your active branch. Click this, and at the top of the page will show a box where you can select 'create a new branch'. Type a name which relates to the work you plan to do. Once you do this, the bottom left will change from 'main' to the name of the branch you created. At any time you can click back into that, and change back to 'main'.
-8. Now you are working on your own branch for this change, make the changes that you need to make by editing the files, which you should see on the left pane.
-9. Use the Source Control icon on the menu on the left, to view the files you have changed. Click the plus icon next to them to 'stage' them for committing. This allows you to save files in chunks, explaining what you're doing with each chunk, rather than en-mass. It makes it easier to reverse small parts in the future.
-10. If you're making any changes to text, remember to run the commands below to update the files for translations on Transifex and include those in your PR.
-11. Once you've committed all your changes, click the Publish Branch button. This might prompt you to create a fork of the repository - that's fine.
-12. Once you've published the branch, look for the Branches section in the accordion menu under the Source Control icon. Find your branch and hover over the icon which says 'Create pull request' and click it.
-13. This will take you to the web interface of GitHub, where you can give an appropriate title and description for the changes you are proposing.
-14. If you need to make changes in the future after review, switch back to this branch as mentioned in step 7. Make the changes, and then follow steps 9-12. Update the pull request when you have completed your changes and committed and pushed them, to ask the reviewer to re-review after the updates.
+1. Install a code editor. [Visual Studio Code](https://code.visualstudio.com) is recommended as it automatically installs all the extensions you need.
+2. Install [Github CLI](https://cli.github.com/) which simplifies Git commands.
+3. Create a working folder on your local computer.
+4. Open a terminal and navigate to that folder using the command `cd <path/to/folder>`.
+5. Fork the `mautic/user-documentation` repository on GitHub by clicking on the fork button at the top right.
+6. Once forked, if you know your way around Git and you are are writing documentation for something which is specific to the latest version of Mautic, you should branch from `main`.  
+
+If you are writing documentation for a feature which is coming in a future release - e.g. 5.0 - then branch off the relevant branch for that release, which should generally speaking match the branch used in the main mautic/mautic repository - e.g. `5.x`.
+7. Type `gh repo clone [your-forked-repo-name]/user-documentation` to clone your forked repository to your local computer.
+8. Open the folder `user-documentation` that is created in your editor.
+9. At the bottom left of your screen, you will see the default branch called 'main' is showing as your active branch. Click this, and a box will appear at the top of the page allowing you to 'create a new branch'. Type a name which relates to the work you plan to do.
+10. Make your desired changes by editing the files, which you can locate on the left pane.
+11. Use the Source Control icon on the menu on the left to view changed files. Click the plus icon next to them to 'stage' them for committing. This lets you save and describe changes in chunks, making it easier to reverse specific changes in the future.
+12. If editing text, ensure to run necessary commands to update files for translations on Transifex and include those updates in your PR.
+13. Commit all your changes, then click the 'Publish Branch' button. This action might prompt you to create a fork of the repository if not done earlier.
+14. Under the Source Control icon, navigate to the 'Branches' section. Find your branch, hover over the 'Create pull request' icon, and click it.
+15. This action will direct you to the GitHub web interface where you can add an appropriate title and description for your proposed changes.
+16. If reviewers request changes, switch back to the branch (as explained in step 9). Implement the necessary changes and follow steps 11-14 again. After updating, commit and push your changes, then notify the reviewer to check the updated content.
 
 ### Generating translations files
 
@@ -58,9 +62,10 @@ The following provides instructions for how to build docs locally for visualizat
 1. Install Python 3 for your OS if not already installed
 2. Install Sphinx `pip install sphinx`
 3. Install sphinx-rtd-theme `pip install sphinx-rtd-theme`
-4. CD into the docs directory `cd [path to this repo]/docs`
-5. Run `make html`
-6. This will generate HTML in docs/build/html. Setup a web server with the web root as docs/build/html or open docs/build/html/index.html in a browser.
+4. Install MyST Parser `pip install myst_parser`
+5. CD into the docs directory `cd [path to this repo]/docs`
+6. Run `make html`
+7. This will generate HTML in docs/build/html. Setup a web server with the web root as docs/build/html or open docs/build/html/index.html in a browser.
  
 ### Vale
 Before pushing, run Vale and address suggestions and errors as applicable.

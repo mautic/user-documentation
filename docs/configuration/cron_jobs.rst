@@ -85,6 +85,19 @@ You can also limit the number of Contacts to process per script execution using 
 
     that these messages are only added to the queue when frequency rules apply either system wide or per Contact.
 
+.. vale off
+
+Custom Field cron jobs
+=======================
+
+.. vale on
+
+**To keep Contacts and Company Custom Fields updated**
+
+.. code-block:: php
+
+    php /path/to/mautic/bin/console mautic:custom-field:create-column
+
 Optional
 ********
 
@@ -101,7 +114,7 @@ If the system configuration is queueing Emails, a cron job processes them.
 
 .. code-block:: php
 
-    php /path/to/mautic/bin/console messenger:consume email_transport
+    php /path/to/mautic/bin/console messenger:consume email
 
 .. vale off
 
