@@ -1,5 +1,4 @@
 URL shortener service
-#################
 #####################
 .. attention::
 
