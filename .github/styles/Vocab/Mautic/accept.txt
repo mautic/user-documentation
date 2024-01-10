@@ -75,6 +75,8 @@ MVP
 mysqldump
 namespace
 Namespace
+Nano
+nano
 noindex
 OAuth
 Packagist
