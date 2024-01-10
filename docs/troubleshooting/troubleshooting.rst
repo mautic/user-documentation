@@ -127,7 +127,7 @@ Need further help?
 
 If you need help, there are several places you can go to ask for assistance. Remember that most people who use the Community Forums, Chat, and GitHub are volunteers.
 
-If you think your configuration is causing the problem, ask on the :xref:`Community Forums`. Search before you post, as it's likely someone might have already answered your question in the past.
+If you think your configuration is causing the problem, ask on the :xref:`Mautic Community Forums`. Search before you post, as it's likely someone might have already answered your question in the past.
 
 You can also chat with someone in the live :xref:`Mautic Community Slack` however you must post all support requests must on the forums. Make a thread there first, then drop the link to the post in Slack if you are discussing it with someone.
 

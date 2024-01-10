@@ -28,7 +28,7 @@ Other
 =====
 Any other User who has access to a file comes into 'Other', meaning they have neither created the file, nor belong to a Group that owns the file. Practically, this means 'the rest of the world'. Hence, this is also referred to as **permissions for the world**.
 
-Linux distinguishes between these three User types to prevent Users accessing, editing, or deleting files they shouldn't be able to change. Read more about :xref:`File and Folder Ownership`.
+Linux distinguishes between these three User types to prevent Users accessing, editing, or deleting files they shouldn't be able to change. Read more about :xref:`Linux file and folder ownership documentation`
 
 Permissions and ownership settings are critical to ensuring the security of your server and Mautic instance, so it's important to get them right. If your files don't have the appropriate permissions in place, it's easier for hackers to intrude on your files and gain access to your Mautic instance. Setting your file permissions correctly may not save you from all attacks, but it helps make your Mautic instance a bit more secure.
 
