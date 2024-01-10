@@ -35,7 +35,7 @@ Before installing a package, ensure that:
   
 * Your server has enough free disk space to run the installation. Consider the database size as well.
   
-* PHP's `max_execution_time` is at least 240 seconds.
+* PHP's ``max_execution_time`` is at least 240 seconds.
 
 Downloading a production package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -325,14 +325,14 @@ The basic command to use the Recommended Project is:
 
 .. code-block:: shell
 
-  composer create-project mautic/recommended-project:^4 some-dir --no-interaction
+  composer create-project mautic/recommended-project:^5 some-dir --no-interaction
 
 With Composer you can add new dependencies to install along with Mautic:
 
 .. code-block:: shell
 
   cd your-directory
-  composer require mautic/mautic-saelos-bundle:~2.0
+  composer require mautic/mautic/helloworld-bundle
 
 The Composer ``create-project`` command passes ownership of all files to the created project. You should create a new git repository, and commit all files not excluded by the .gitignore file.
 
