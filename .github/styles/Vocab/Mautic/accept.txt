@@ -25,6 +25,7 @@ configurator
 ConnectWise
 Contribution(s)
 CORS
+cPanel
 cron
 Cron
 CTRL
@@ -39,6 +40,7 @@ Focus Item
 Focus Items
 Froala
 Froogaloop
+FTP
 gcm
 GIF
 GitBook
@@ -54,6 +56,7 @@ http
 https
 HubSpot
 IDP
+IIS
 IMAP
 infographics
 JavaScript
@@ -77,6 +80,7 @@ namespace
 Namespace
 Nano
 nano
+NGINX
 noindex
 OAuth
 Packagist
