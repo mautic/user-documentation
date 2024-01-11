@@ -38,7 +38,6 @@ There are different types of documentation available to help you navigate your w
    getting_started/how_to_update_mautic
 
 .. toctree:: 
-   :maxdepth: 2
    :caption: Troubleshooting
    :maxdepth: 2
    :hidden:
