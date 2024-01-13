@@ -65,7 +65,7 @@ Configure the HubSpot CRM Plugin
     
    * If you want to use the Plugin, set the *Publish* switch to **Yes**. Only do this when you have fully configured the Plugin settings.
 
-10. Set up the :ref:`cron job<configure mautic integration cron jobs>` if you haven't already configured it.
+10. Set up the :ref:`cron job<configure Mautic integration cron jobs>` if you haven't already configured it.
 
 .. tip:: 
 

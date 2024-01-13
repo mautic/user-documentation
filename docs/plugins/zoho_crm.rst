@@ -5,7 +5,7 @@ Zoho CRM
 
 .. vale on
 
-Mautic can push a Contact to :xref:`Zoho CRM` based on :ref:`Campaign actions<new campaign actions>` or :ref:`Point Triggers<points>`.
+Mautic can push a Contact to :xref:`Zoho CRM` based on :ref:`Campaign actions<new Campaign actions>` or :ref:`Point Triggers<Points>`.
 
 Language configuration warning
 ******************************
@@ -50,7 +50,7 @@ Configure the Zoho CRM Plugin
 
 |
 
-5. Select the correct data centre based on the URL of your Zoho CRM instance, and click the button to authorize the Plugin to access your instance. You will see a popup window which prompts you to log into Zoho and to authorize access - select Accept.
+1. Select the correct data centre based on the URL of your Zoho CRM instance, and click the button to authorize the Plugin to access your instance. A popup window prompts you to log into Zoho and to authorize access - select Accept.
 
 .. image:: images/zoho-confirmation.png
   :alt: Screenshot of Mautic Zoho Integration Plugin
@@ -61,7 +61,7 @@ Once you have authorized successfully, the button updates to show 'Reauthorize'.
 
 6. In the Features tab you can select the behaviour that you wish to have happen with this Integration:
 
-   * Triggered action push Contacts to Integration - when triggered, Contacts are pushed from Mautic to Zoho
+   * Triggered action push Contacts to Integration - when triggered, Mautic pushes Contacts to Zoho
    * Pull Contacts and/or Companies from Integration - pull all Contacts and/or Companies from ZohoCRM into Mautic
    * Push Contacts and/or Companies to this Integration - push all Contacts and/or Companies from Mautic into ZohoCRM
 
