@@ -85,7 +85,7 @@ You can also configure other options:
 
 .. note::
 
-    If the values are empty for the Mautic object, a value of 'Unknown' will be sent. If the ZohoCRM field is a pick list, be sure the list values of Mautic's field match those of the field in ZohoCRM.
+    If the values are empty for the Mautic object, a value of 'Unknown' is sent. If the ZohoCRM field is a pick list, be sure the list values of Mautic's field match those of the field in ZohoCRM.
 
 8. Set the Publish switch to **Yes**.
 9. Click **Save & Close**.

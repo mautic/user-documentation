@@ -16,13 +16,13 @@ Install Plugins
 
 .. vale on
 
-If you are on a freshly installed Mautic instance, there is a chance that you don't have the default Plugins installed yet. Click on the *Install/Upgrade Plugins* button in the top right corner and all the Plugins should appear.
+If you are on a freshly installed Mautic instance, there is a chance that you don't have the default Plugins installed yet. Click on the **Install/Upgrade Plugins** button in the top right corner and all the Plugins should appear.
 
 .. image:: images/install-plugins.png
   :width: 800
   :alt: Screenshot of install Plugins
 
-If you are trying to install a new Plugin that didn't come with the original Mautic installation files and it doesn't appear after you click ``Install/Upgrade plugins``, clear your Mautic cache and try the *Install/Upgrade Plugins* button again.
+If you're trying to install a new Plugin that didn't come with the original Mautic installation files and it doesn't appear after you click Install/Upgrade Plugins, clear your Mautic cache - using the command at the :doc:`command line</configuration/command_line_interface>` - and try the Install/Upgrade Plugins button again.
 
 .. vale off
 
