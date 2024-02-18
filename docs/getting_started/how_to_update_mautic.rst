@@ -24,6 +24,7 @@ This means that you have downloaded the files and database of your Mautic instan
 
 Updating Mautic Core (with Composer based)
 ******************************************
+.. vale on
 
 The Recommended Project attempts to keep all of your Mautic core files up-to-date.
 
@@ -43,11 +44,15 @@ Follow the steps below to update your core files.
 
 5 Run the following commands to update your database with any changes from the release:
 
+.. code-block:: shell
+
+```
 bin/console cache:clear
 bin/console mautic:update:apply --finish
 bin/console doctrine:migration:migrate --no-interaction
 bin/console doctrine:schema:update --no-interaction --force
 bin/console cache:clear
+```
 
 
 Checking for updates at the command line
