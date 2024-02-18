@@ -49,6 +49,7 @@ bin/console doctrine:migration:migrate --no-interaction
 bin/console doctrine:schema:update --no-interaction --force
 bin/console cache:clear
 
+
 Checking for updates at the command line
 ========================================
 
