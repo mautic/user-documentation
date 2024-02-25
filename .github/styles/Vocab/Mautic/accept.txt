@@ -44,6 +44,7 @@ Focus Item
 Focus Items
 Froala
 Froogaloop
+FTP
 gcm
 GDPR
 GIF
@@ -61,6 +62,7 @@ https
 HubSpot
 iContact
 IDP
+IIS
 IMAP
 IPs
 infographics
@@ -86,6 +88,9 @@ MVP
 mysqldump
 namespace
 Namespace
+Nano
+nano
+NGINX
 noindex
 OAuth
 Packagist

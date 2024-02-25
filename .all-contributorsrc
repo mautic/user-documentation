@@ -77,6 +77,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "J-Wick4",
+      "name": "John Wick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1954540?v=4",
+      "profile": "https://github.com/J-Wick4",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jagtapreshma",
+      "name": "jagtapreshma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81143250?v=4",
+      "profile": "https://github.com/jagtapreshma",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
