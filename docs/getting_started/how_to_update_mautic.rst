@@ -23,7 +23,7 @@ Before you commence updating Mautic, **please ensure that you have a tested back
 This means that you have downloaded the files and database of your Mautic instance, and you have re-created it in a test environment somewhere and tested that everything is working as expected. This is your only recourse if there are any problems with the update. Never update without having a working, up-to-date backup.
 
 Updating Mautic (Composer based installs)
-******************************************
+*******************************************
 .. vale on
 
 The Recommended Project attempts to keep all of your Mautic core files up-to-date.
@@ -34,13 +34,13 @@ If you customize any of the 'scaffolding' files - commonly ``.htaccess`` - you m
 
 Follow the steps below to update your core files.
 
-1 Run ``composer update mautic/core-lib --with-dependencies`` to update Mautic core and its dependencies.
+1. Run ``composer update mautic/core-lib --with-dependencies`` to update Mautic core and its dependencies.
 
-2 Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to ``.htaccess`` or others.
+2. Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to ``.htaccess`` or others.
 
-3 Commit everything all together in a single commit, so the ``docroot`` remains in sync with the core when checking out branches or running ``git bisect``.
+3. Commit everything all together in a single commit, so the ``docroot`` remains in sync with the core when checking out branches or running ``git bisect``.
 
-4 In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
+4. In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
 
 5 Run the following commands to update your database with any changes from the release:
 
