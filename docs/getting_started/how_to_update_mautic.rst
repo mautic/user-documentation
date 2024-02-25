@@ -22,37 +22,35 @@ Before you commence updating Mautic, **please ensure that you have a tested back
 
 This means that you have downloaded the files and database of your Mautic instance, and you have re-created it in a test environment somewhere and tested that everything is working as expected. This is your only recourse if there are any problems with the update. Never update without having a working, up-to-date backup.
 
-Updating Mautic Core (with Composer based)
+Updating Mautic (Composer based installs)
 ******************************************
 .. vale on
 
 The Recommended Project attempts to keep all of your Mautic core files up-to-date.
 
-The project mautic/core-composer-scaffold updates your scaffold files whenever there is an update to mautic/core-lib.
+The project ``mautic/core-composer-scaffold`` updates your scaffold files whenever there is an update to ``mautic/core-lib``.
 
-If you customize any of the "scaffolding" files - commonly .htaccess - you may need to merge conflicts if new release of Mautic Core result in changes to your modified files.
+If you customize any of the 'scaffolding' files - commonly ``.htaccess`` - you may need to merge conflicts if new release of Mautic results in changes to your modified files.
 
 Follow the steps below to update your core files.
 
-1 Run composer update mautic/core-lib --with-dependencies to update Mautic core and its dependencies.
+1 Run ``composer update mautic/core-lib --with-dependencies`` to update Mautic core and its dependencies.
 
-2 Run git diff to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to .htaccess or others.
+2 Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to ``.htaccess`` or others.
 
-3 Commit everything all together in a single commit, so the docroot remains in sync with the core when checking out branches or running git bisect.
+3 Commit everything all together in a single commit, so the ``docroot`` remains in sync with the core when checking out branches or running ``git bisect``.
 
-4 In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use git merge to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
+4 In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
 
 5 Run the following commands to update your database with any changes from the release:
 
 .. code-block:: shell
 
-```
 bin/console cache:clear
 bin/console mautic:update:apply --finish
 bin/console doctrine:migration:migrate --no-interaction
 bin/console doctrine:schema:update --no-interaction --force
 bin/console cache:clear
-```
 
 
 Checking for updates at the command line
@@ -173,4 +171,4 @@ In all cases, it's important to provide details about the issue, as well as the 
 
 If you don't provide the information requested as a minimum, the person who might try to help you has to ask you for it, so please save them the trouble and provide the information upfront. Also, importantly, please be polite. Mautic is an open source project, and people are giving their free time to help you.
 
-If you are sure that you have discovered a bug and you want to report it to developers, you can :xref:`Mautic Github New Issue` on GitHub. GitHub is not the right place to request support or ask for help with configuration errors. Always post on the forums first if you aren't sure, if a bug report is appropriate this can link to the forum thread.
+If you are sure that you have discovered a bug and you want to report it to developers, you can :xref:`Mautic Github New Issue` on GitHub. GitHub isn't the right place to request support or ask for help with configuration errors. Always post on the forums first if you aren't sure, if a bug report is appropriate this can link to the forum thread.
