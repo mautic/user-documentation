@@ -32,11 +32,11 @@ Using Categories for Contacts
 
 .. vale on
 
-In addition to organizing various Mautic elements Categories can be used to organize Contacts. In Contact details use the Preference menu to open Contact Preference Center.
+In addition to organizing various Mautic elements Categories can help you organize Contacts. In Contact details use the Preference menu to open Contact Preference Center.
 
 .. image:: images/assign-category-to-contact.jpeg
   :width: 600
   :alt: Screenshot of assigning Category to Contact
 
-Contact Categories can be used in Segment and dynamic content filters.
+Mautic allows the assignment of Contact Categories in Segment and Dynamic Content filters.
 

@@ -45,8 +45,8 @@ swap:
   point actions: Point Actions
   point triggers: Point Triggers
   points: Points
-  group: Group
-  groups: Groups
+  point group: Point Group
+  point groups: Point Groups
   plugin: Plugin
   plugins: Plugins
   report: Report

@@ -10,7 +10,7 @@ It's possible to add Contacts to Mautic through monitoring Twitter for mentions 
 Requirements
 ************
 
-- The :doc:`/plugins/twitter` plugin must be configured
+- You must first configure the :doc:`/plugins/twitter` Plugin
 - You must trigger the Social Monitoring :doc:`cron job </configuration/cron_jobs>` periodically.
 
 .. vale off
@@ -42,7 +42,7 @@ When selecting the Twitter Mention monitoring method, the following fields are a
 
 There are also the standard Mautic fields available:
 
-**Published** - This allows you to set the published status of the Social Monitor. Unpublished Social Monitors will not collect new Contacts.
+**Published** - This allows you to set the published status of the Social Monitor. Unpublished Social Monitors won't collect new Contacts.
 
 .. vale off
 
