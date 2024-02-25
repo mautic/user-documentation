@@ -1,4 +1,4 @@
-SMS Text messages
+SMS Text Messages
 #################
 
 With the SMS Channel it's possible to send text messages from Campaigns in Mautic.
@@ -22,7 +22,7 @@ Template Text Messages
 
 .. vale on
 
-A template Text Message is automatically sent by Campaigns, Forms, Point triggers etc. You can edit Template Text Messages after creation, but they can't manually send them to a Contact list.
+A template Text Message is automatically sent by Campaigns, Forms, Point Triggers etc. You can edit Template Text Messages after creation, but they can't manually send them to a Contact list.
 
 .. vale off
 

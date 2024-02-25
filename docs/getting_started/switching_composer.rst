@@ -6,11 +6,16 @@ How to switch to Composer
 .. vale on
 
 Until Mautic 4, you could download Mautic as a ZIP file and install it on any PHP server. 
-However, many Users were running into installation and update errors, many of which caused considerable frustration and in some cases, significant business disruption. 
+
+However, many Mautic Users were running into installation and update errors, many of which caused considerable frustration and in some cases, significant business disruption. 
 
 In addition, Mautic recently introduced the :ref:`Mautic Marketplace` which isn't compatible with this installation method.
 
-As a result of the reasons mentioned above, Composer becomes the default method for installing and updating Mautic starting with the release of Mautic 5. Read more in the :xref:`composer blog post`.
+.. vale off
+
+As a result of the reasons mentioned previously, Composer becomes the default method for installing and updating Mautic starting with the release of Mautic 5. Read more in the :xref:`composer blog post`.
+
+.. vale on
 
 Switching to a Composer-based installation
 ******************************************
@@ -49,7 +54,7 @@ Here's the steps to follow to switch to a Composer-based installation:
 
 #. Update your web server configuration to point to ``/var/www/html/docroot`` instead of ``/var/www/html``
 
-#. Log in to Mautic, and in your global settings enable the switch to fully manage Mautic with Composer - this will also enable you to work with the Mautic Marketplace.
+#. Log in to Mautic, and in your global settings enable the switch to fully manage Mautic with Composer - this also enables you to work with the Mautic Marketplace.
 
 .. image:: images/switch-enable-composer.png
   :width: 600
@@ -59,8 +64,8 @@ You have successfully switched to a Composer-based installation. Test Mautic to 
 
 .. vale off
 
-Frequently Asked Questions (FAQs)
-*********************************
+Frequently Asked Questions
+**************************
 
 Q: Is existing data retained?
 
