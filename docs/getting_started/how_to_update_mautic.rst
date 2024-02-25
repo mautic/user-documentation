@@ -42,15 +42,15 @@ Follow the steps below to update your core files.
 
 4. In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
 
-5 Run the following commands to update your database with any changes from the release:
+5. Run the following commands to update your database with any changes from the release:
 
 .. code-block:: shell
 
-bin/console cache:clear
-bin/console mautic:update:apply --finish
-bin/console doctrine:migration:migrate --no-interaction
-bin/console doctrine:schema:update --no-interaction --force
-bin/console cache:clear
+    bin/console cache:clear
+    bin/console mautic:update:apply --finish
+    bin/console doctrine:migration:migrate --no-interaction
+    bin/console doctrine:schema:update --no-interaction --force
+    bin/console cache:clear
 
 
 Checking for updates at the command line
