@@ -22,12 +22,42 @@ Before you commence updating Mautic, **please ensure that you have a tested back
 
 This means that you have downloaded the files and database of your Mautic instance, and you have re-created it in a test environment somewhere and tested that everything is working as expected. This is your only recourse if there are any problems with the update. Never update without having a working, up-to-date backup.
 
+Updating Mautic (Composer based installs)
+*****************************************
+
+The Recommended Project attempts to keep all of your Mautic core files up-to-date.
+
+The project ``mautic/core-composer-scaffold`` updates your scaffold files whenever there is an update to ``mautic/core-lib``.
+
+If you customize any of the 'scaffolding' files - commonly ``.htaccess`` - you may need to merge conflicts if new release of Mautic results in changes to your modified files.
+
+Follow the steps below to update your core files.
+
+1. Run ``composer update mautic/core-lib --with-dependencies`` to update Mautic core and its dependencies.
+
+2. Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to ``.htaccess`` or others.
+
+3. Commit everything all together in a single commit, so the ``docroot`` remains in sync with the core when checking out branches or running ``git bisect``.
+
+4. In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
+
+5. Run the following commands to update your database with any changes from the release:
+
+.. code-block:: shell
+
+    bin/console cache:clear
+    bin/console mautic:update:apply --finish
+    bin/console doctrine:migration:migrate --no-interaction
+    bin/console doctrine:schema:update --no-interaction --force
+    bin/console cache:clear
+
+
 Checking for updates at the command line
 ========================================
 
-From Mautic 5, you can only update Mautic via the command line. 
+From Mautic 6, the default way to install, update and manage Mautic changes to Composer. 
 
-Mautic 4.2 deprecated the update feature within the Mautic User Interface, but Mautic alerts you - see below - when a new version is available. 
+Since Mautic 4.2 deprecated the update feature within the Mautic User interface, you still receive a notification when a new version of Mautic is available until removal of this feature but it's recommended to update via the command line. 
 
 .. image:: images/gui-update-deprecated.png
   :width: 700
@@ -35,7 +65,7 @@ Mautic 4.2 deprecated the update feature within the Mautic User Interface, but M
   :alt: Screenshot showing deprecated update feature warning
 
 .. warning::
-    Before starting to upgrade, it's highly recommended to take a backup of your instance. If updates are available, an update notification displays followed by step-by-step instructions in the command-line interface to complete the process.
+    Before starting to upgrade, it's highly recommended to take a backup of your instance. If updates are available, an update notification displays, followed by step-by-step instructions in the command-line interface to complete the process.
 
 Log in via the command line, and change directory to the Mautic directory using the command:
 
@@ -49,7 +79,7 @@ The first step is to find out if there are any updates available using the follo
 
    php bin/console mautic:update:find
 
-The output from this command tells you if there are any updates to apply. The notification links to an announcement post which explains what the release includes, and the recommended environment requirements if they're not met - for example, a higher version of PHP needed or Plugins that need updating.
+The output from this command tells you if there are any updates to apply. The notification links to an announcement post which explains what the release includes, and the recommended environment requirements if they're not met - for example, a higher version of PHP required or Plugins needing updates.
 
 .. note::
     It's a good idea to review the announcement link for information about the release. There may be important information or steps that you may need to take before updating.
@@ -64,7 +94,6 @@ If there are updates available, run the following command to apply them:
 .. code-block:: shell
 
    php bin/console mautic:update:apply
-
 
 Next, a prompt displays asking you to run the command again with this additional argument:
 
@@ -112,7 +141,7 @@ If this has happened to you, head over to the Troubleshooting section for a step
 Stability levels
 ****************
 
-By default, Mautic receives notifications both in the user interface and at the command line for stable releases only.
+By default, Mautic receives notifications both in the User Interface and at the command line for stable releases only.
 
 If you wish to help with testing early access releases in a development environment, do the following
 
