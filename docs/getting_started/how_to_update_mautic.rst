@@ -75,6 +75,223 @@ This is followed by a prompt to run the command again with this additional argum
    php bin/console mautic:update:apply --finish
 
 
+To Update Mautic from 2.x to 3.x
+*********************************
+If you are on mautic 2.x + then it is better for you to upgrade to 3.x and higher version in this section let's deep dive into upgrading mautic from 2.x to 3.x version.
+
+Let's Get Started !
+
+1. Step One : Fix the data migrations, in your current mautic repo path execute the below commands:
+
+.. code-block:: shell
+
+    sudo php /var/www/html/mautic/app/console doctrine:migration:migrate
+
+    sudo php /var/www/html/mautic/app/console doctrine:schema:update --force
+
+    sudo -u www-data php /var/www/html/mautic/app/console cache:clear
+
+The cache clear may take some to get executed.
+
+After the Migration is done we can go ahead and update the Database !
+
+2. Upgrade to 2.16.5 (If you haven't yet) :
+
+.. code-block:: shell
+
+    cd /var/www/html/mautic
+    
+    sudo -u www-data php app/console mautic:update:find
+
+    sudo -u www-data php app/console mautic:update:apply
+
+
+3. Upgrade the to php 7.3 version :
+
+.. code-block:: shell
+
+    sudo apt upgrade -y
+
+    sudo apt install software-properties-common -y
+
+    sudo add-apt-repository ppa:ondrej/php
+
+    sudo apt update -y
+
+    sudo apt install php7.3
+
+    sudo apt install php7.3-common php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-curl php7.3-gd php7.3-imagick php7.3-cli php7.3-dev php7.3-imap php7.3-mbstring php7.3-opcache php7.3-soap php7.3-zip php7.3-intl -y
+
+4. Edit Your php ini file :
+
+.. code-block:: shell
+
+    sudo nano /etc/php/7.3/apache2/php.ini
+
+find the following attributes and change the values of the below variables as shown below.
+
+short_open_tag = On
+memory_limit = 256M
+upload_max_filesize = 100M
+max_execution_time = 300
+post_max_size = 64M
+
+5. Activate your php 7.3 Version and turn off 7.1 version :
+
+.. code-block:: shell
+
+    sudo a2enmod php7.3
+
+    sudo a2dismod php7.1
+
+    sudo systemctl restart apache2
+
+    php -v
+
+
+6. Update the Database
+
+- Backup your Database :
+
+.. code-block:: shell
+
+    mysqldump -u root -p --all-databases > all-db.sql
+
+    psw: ysSmK3t87wyC
+
+- Remove the old mariaDB db :
+
+.. code-block:: shell
+
+    sudo apt remove mariadb-server
+
+- Adding a New apt source :
+
+.. code-block:: shell
+
+    sudo apt install software-properties-common -y
+
+    sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+
+    sudo nano /etc/apt/sources.list.d/mariadb.list
+
+- Add :
+
+.. code-block:: shell
+
+    deb [arch=amd64,arm64,ppc64el] 
+    http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu bionic main
+    deb-src http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu bionic main
+
+
+- Update and Install the New Version of mariaDB :
+
+.. code-block:: shell
+
+    sudo apt update
+
+    sudo apt install mariadb-server -y
+
+    exit
+
+- Remove the Non-compatible plugins :
+
+.. code-block:: shell
+
+    cd /var/www/html/mautic/
+
+    sudo -u www-data php /var/www/html/mautic/app/console mautic:update:find
+
+- Search for the Upgrade :
+
+.. note::
+
+    This step really depends on your installed and non-M3 compatible plugins.
+
+.. code-block:: shell
+
+    cd /var/www/html/mautic/plugins
+
+    rm -R GautitClearcacheBundle/
+    rm -R MauticAdvancedTemplatesBundle/
+    rm -R SmsreaderBundle/
+
+Optionally in this step we could also just move them out from this folder  :
+
+.. code-block:: shell
+
+    mv /var/www/html/mautic/plugins/GautitClearcacheBundle /var/www/html
+    mv /var/www/html/mautic/plugins/MauticAdvancedTemplatesBundle /var/www/html
+    mv /var/www/html/mautic/plugins/MauticRecaptchaBundle /var/www/html
+    mv /var/www/html/mautic/plugins/SmsreaderBundle /var/www/html   
+
+
+
+7. Installing Mautic 3 
+
+To start can execute the below commands :
+
+.. code-block:: shell
+
+    sudo -u www-data php upgrade_v3.php
+
+If you installed via composer originally, you will need to use this trick :
+
+.. code-block:: shell
+
+    mv composer.json composer.json2
+    sudo -u www-data php upgrade_v3.php 
+
+- If you get an error here just check if the ownership permissions are set properly
+
+then run the upgrage again :
+
+.. code-block:: shell
+
+    sudo -u www-data php upgrade_v3.php
+
+8. Looking for new versions in 3.0 and then updating it 3.0+ :
+
+.. code-block:: shell
+
+    sudo -u www-data php /var/www/html/mautic/bin/console mautic:update:find
+    sudo -u www-data php /var/www/html/mautic/bin/console mautic:update:apply
+    sudo -u www-data php /var/www/html/mautic/bin/console mautic:update:apply --finish
+
+- set ownership and clear the cache :
+
+.. code-block:: shell
+
+    sudo chown -R www-data:www-data /var/www/html/mautic/
+    sudo chmod -R 755 /var/www/html/mautic/
+    sudo -u www-data php /var/www/html/mautic/bin/console cache:clear
+
+
+9. Last Step:
+
+Change your cron jobs from :
+
+.. code-block:: shell
+
+    /app/console
+
+to :
+
+.. code-block:: shell
+
+    /bin/console
+
+- If you would like to use the new Email Builder, go to plugins, click on install plugins and turn on the new builder.
+  You might need to log in and out before it's actvated.
+
+There you go finally upgraded to mautic 3.0 !!!
+
+
+
+
+
+
+
 Updating in the browser
 ***********************
 
