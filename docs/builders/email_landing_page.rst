@@ -9,7 +9,7 @@ Since :xref:`Mautic 3`, Mautic has shipped with an updated, modern Builder for c
 In :xref:`Mautic 4` it's the default Builder.
 
 
-.. attention:: 
+.. attention::
     To use your existing templates with the new Builder, you need to add one line to your configuration file. Read on for further details.
 
 .. vale off
@@ -66,7 +66,7 @@ About the builder
 Enabling the builder
 ====================
 
-Since Mautic 3.3-RC1 the Builder is available to enable in the Plugins section of Mautic. Go to the Settings by clicking the cog wheel at the top right > Plugins > GrapesJS and click the GrapesJS icon. Change the slider to Yes.
+Since Mautic 3.3-RC1 the Builder is available to enable in the Plugins section of Mautic. Go to the Settings by clicking the list settings icon at the top right > Plugins > GrapesJS and click the GrapesJS icon. Change the slider to Yes.
 
 Now you need to **clear your Mautic cache** located in ``var/cache`` and refresh the Landing Page before you can work with the new GrapesJS Builder. Some browsers may also require you to clear the browser cache.
 
@@ -102,13 +102,13 @@ If you wish to use the Theme in multiple builders, you can use this syntax:
 
 ``"builder": ["legacy", "grapesjsbuilder"],``
 
-.. warning:: 
+.. warning::
 
   This syntax changed between Mautic 3.3.* and Mautic 4 to enable support for multiple Builders - if you have been testing in the beta phase you need to update your configuration files to avoid a 500 error.
 
 The blank Theme contains an example of a full configuration file:
 
-.. code-block:: 
+.. code-block::
 
     {
       "name": "Blank",
@@ -125,7 +125,7 @@ Themes
 
 If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new Builder.
 
-To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`. 
+To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`.
 
 Custom fonts
 ************
@@ -169,7 +169,7 @@ Switching back to the legacy Builder
 
 In case you aren't happy with the Plugin at the moment, you can easily switch back to the legacy Builder (original Mautic Builder). You can do so very quickly:
 
-#. Go to Mautic Settings > Click the cogwheel on the right-hand top corner
+#. Go to Mautic Settings > Click the list settings icon on the right-hand top corner
 
 #. Open the Plugins Directory > click "Plugins" inside the menu
 
