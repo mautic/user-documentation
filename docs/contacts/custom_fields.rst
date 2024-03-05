@@ -5,7 +5,7 @@ Manage Custom Fields
 
 .. vale on
 
-You can manage Custom Fields through the Admin menu - click the cogwheel upper right-hand side of Mautic.
+You can manage Custom Fields through the Admin menu - click the list settings icon upper right-hand side of Mautic.
 
 .. image:: images/admin-menu.png
     :align: center

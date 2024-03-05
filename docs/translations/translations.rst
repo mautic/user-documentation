@@ -17,7 +17,7 @@ Default language
 
 The default language configuration happens first in the Mautic configuration. The default language is ``English - United States``. Every User has this language if they don't set something different in their profile.
 
-1. Open the configuration menu by clicking on the cog icon in the top right corner.
+1. Open the configuration menu by clicking on the list settings icon in the top right corner.
 2. Select the **Configuration** menu item.
 3. Select the default language.
 4. Save the configuration.

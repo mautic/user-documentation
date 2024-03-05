@@ -7,8 +7,8 @@ Queue
 
 You can improved scalability by activating the queuing mechanism for Email and Page opens. Use this if you are getting too much traffic at once from people opening Pages or opening Emails.
 
-.. note:: 
-    
+.. note::
+
     Mautic 3.x Users who are implementing RabbitMQ or Beanstalkd need to configure the settings directly in their local configuration file. If you are using the legacy Mautic 2.x series the steps below remains the same.
 
 Activating
@@ -16,7 +16,7 @@ Activating
 
 You can activate and configure the queuing mechanism by going to configuration:
 
-* Open the administrator menu by clicking the cog icon in the top right corner.
+* Open the administrator menu by clicking the list settings icon in the top right corner.
 * Select the *Configuration* menu item.
 * Select the *Queue Settings* tab.
 * Switch the *Queue Protocol* to either *RabbitMQ* or *Beanstalkd*.
@@ -38,31 +38,31 @@ Having set up a RabbitMQ server, you can configure Mautic to use it by setting t
    :widths: 40, 40, 60
 
    * - Parameter
-     - Default	
+     - Default
      - Description
-   * - ``rabbitmq_host``	
-     - ``'localhost'``	
+   * - ``rabbitmq_host``
+     - ``'localhost'``
      - The ``hostname`` of the RabbitMQ server
-   * - ``rabbitmq_port``	
+   * - ``rabbitmq_port``
      - ``'5672'``
      - The port that the RabbitMQ server is listening on
-   * - ``rabbitmq_vhost``	
+   * - ``rabbitmq_vhost``
      - ``'/'``
      - The virtual host to use for this RabbitMQ server
-   * - ``rabbitmq_user``	
+   * - ``rabbitmq_user``
      - ``'guest'``
      - The username for the RabbitMQ server
-   * - ``rabbitmq_password``	
-     - ``'guest'``	
+   * - ``rabbitmq_password``
+     - ``'guest'``
      - The password for the RabbitMQ server
-   * - ``rabbitmq_idle_timeout``	
-     - ``0``	
+   * - ``rabbitmq_idle_timeout``
+     - ``0``
      - 	The number of seconds after which the queue consumer should timeout when idle
-   * - ``rabbitmq_idle_timeout_exit_code``	
-     - ``0``	
+   * - ``rabbitmq_idle_timeout_exit_code``
+     - ``0``
      - 	The exit code returned when the consumer exits due to idle timeout
 
-Example: 
+Example:
 
 .. code-block::
 
@@ -74,29 +74,29 @@ Example:
     'rabbitmq_password' => 'some_password',
     'rabbitmq_idle_timeout' => 0,
     'rabbitmq_idle_timeout_exit_code' => 0,
-      
+
 
 Beanstalkd
 **********
 
 :xref:`Beanstalkd` is another available queue protocol that Mautic supports. To use it, you must have a Beanstalkd server running. On :xref:`Beanstalkd website`, you can obtain instructions on how to install Beanstalkd.
-   
-Once you have setup a Beanstalkd server, you can configure Mautic to use it by setting the appropriate parameters ``mautic.beanstalkd_*`` in your installation's configuration file.   
+
+Once you have setup a Beanstalkd server, you can configure Mautic to use it by setting the appropriate parameters ``mautic.beanstalkd_*`` in your installation's configuration file.
 
 .. list-table:: RabbitMQ
    :header-rows: 1
    :widths: 40, 40, 60
 
    * - Parameter
-     - Default	
+     - Default
      - Description
-   * - ``beanstalkd_host``	
-     - ``'localhost'``	
+   * - ``beanstalkd_host``
+     - ``'localhost'``
      - The ``hostname`` of the Beanstalkd server
-   * - ``beanstalkd_port``	
+   * - ``beanstalkd_port``
      - ``'11300'``
      - The port that the Beanstalkd server is listening on
-   * - ``beanstalkd_timeout``	
+   * - ``beanstalkd_timeout``
      - ``'60'``
      - The default Time To Run - TTR - for Beanstalkd jobs
 
