@@ -57,11 +57,11 @@ Add new Contact
 
 |
 
-This opens the new Contact screen, where you can enter all the information you have about the Contact. It also displays all published Contact fields when creating a new Contact. 
+This opens the new Contact screen, where you can enter all the information you have about the Contact. It also displays all published Contact fields when creating a new Contact.
 
-Use the tabs at the top to populate existing Custom Fields and social network profiles. 
+Use the tabs at the top to populate existing Custom Fields and social network profiles.
 
-.. note:: 
+.. note::
 
     Before you start adding Contacts, you may need to add :doc:`custom fields</contacts/custom_fields>` to capture all the information you require.
 
@@ -87,7 +87,7 @@ Mautic supports exporting Contact lists in CSV and Excel formats.
 
 * **Export to CSV** - Sends a downloadable link containing the CSV file of the Contact list to the Email address on your Mautic User profile.
 
-.. note:: 
+.. note::
 
     This feature currently supports the export of a maximum of one million Contacts. After clicking the link in the Email, Users must log into Mautic via the login screen. Users must login as the same authorized User that received the Email, after which the file download commences. Once downloaded, Users can share the file with other non-Mautic Users.
 
@@ -132,9 +132,9 @@ So, Mautic takes care of duplicate Contacts created by the event tracking. You c
 Batch actions
 =============
 
-To make updates to several Contacts at once, select those Contacts then click the green arrow at the top of the checkbox column. 
+To make updates to several Contacts at once, select those Contacts then click the green arrow at the top of the checkbox column.
 
-A modal window displays when you click one of the actions, with more configuration details. 
+A modal window displays when you click one of the actions, with more configuration details.
 
 
 
@@ -225,7 +225,7 @@ Event history tracks any engagements between Mautic and a Contact. To find certa
 
 **Email Read** - The date and time when a specific Email was first read. If the Contact opens the Email multiple times, expanding details on the event type displays the additional opens.
 
-.. note:: 
+.. note::
 
     To avoid performance issues, Mautic has a limit of displaying a maximum of 1,000 **Email Read** event details.
 
@@ -300,9 +300,9 @@ Change Contact Segments
 
 |
 
-1. Click the **drop down box arrow** in the top right hand corner of the Contact detail. 
+1. Click the **drop down box arrow** in the top right hand corner of the Contact detail.
 
-2. Select **Segments**. A modal box shows up where you'll see all the Segments. The green switch means that the Contact belongs to the Segment, the orange switch means the opposite. 
+2. Select **Segments**. A modal box shows up where you'll see all the Segments. The green switch means that the Contact belongs to the Segment, the orange switch means the opposite.
 
 3. Click the **switch** to add/remove the Contact to/from the Segment.
 
@@ -313,9 +313,9 @@ Change Contact Campaigns
 
 .. vale on
 
-1. Click the **drop down box arrow** in the top right hand corner of the Contact detail. 
+1. Click the **drop down box arrow** in the top right hand corner of the Contact detail.
 
-2. Select **Campaigns**. A modal box shows up where you'll see all the Campaigns. The green switch means that the Contact belongs to the Campaign, the orange switch means the opposite. 
+2. Select **Campaigns**. A modal box shows up where you'll see all the Campaigns. The green switch means that the Contact belongs to the Campaign, the orange switch means the opposite.
 
 3. Click the **switch** to add/remove the Contact to/from the Campaign.
 
@@ -326,17 +326,17 @@ Merge two Contacts
 
 .. vale on
 
-If you have 2 Contacts in the Mautic database who are physically one person, you can merge them with the Merge feature. 
+If you have 2 Contacts in the Mautic database who are physically one person, you can merge them with the Merge feature.
 
-1. Click the drop down box arrow in the top right hand corner of the Contact detail, 
+1. Click the drop down box arrow in the top right hand corner of the Contact detail,
 
-2. Select the Merge item, a modal box shows up. 
+2. Select the Merge item, a modal box shows up.
 
-3. Search for the Contact you want to merge into the current Contact. The select box updates as you search. 
+3. Search for the Contact you want to merge into the current Contact. The select box updates as you search.
 
 4. Select the right Contact and hit the **Merge** button.
 
-.. vale off 
+.. vale off
 
 Send Email to Contact
 =====================
@@ -364,9 +364,9 @@ Tracking script (``JavaScript``)
 
 .. vale on
 
-Since Mautic 1.4 the JavaScript tracking method is the primary way of website tracking. To implement it: 
+Since Mautic 1.4 the JavaScript tracking method is the primary way of website tracking. To implement it:
 
-1. Go to Mautic > *Settings* by clicking the cogwheel at the top right > *Configuration* > *Tracking Settings* to find the JS tracking code build for the Mautic instance
+1. Go to Mautic > *Settings* by clicking the list settings icon at the top right > *Configuration* > *Tracking Settings* to find the JS tracking code build for the Mautic instance
 
 2. Insert the code before the ending ``<body/>`` tag of the website you want to track
 
@@ -481,7 +481,7 @@ All the UTM tags are available in the time entry, just by toggling the entry det
 
 Please note that Mautic records UTM tags only on a Form submission that contains the action "Record UTM Tags".
 
-.. list-table:: 
+.. list-table::
    :widths: 100 100
    :header-rows: 1
 
@@ -499,7 +499,7 @@ Please note that Mautic records UTM tags only on a Form submission that contains
      - ``fa-map-marker``
    * - ``device``
      - ``fa-tablet`` if ``utm_source`` isn't available otherwise Mautic uses ``utm_source`` as the class. For example, if ``utm_source`` is ``Mobile``, Mautic uses ``fa-mobile``.
-  
+
 All the UTM tags are available in the time entry, just by toggling the entry details button.
 
 Please note that Mautic records UTM tags only on a Form submission that contains the action "Record UTM Tags".
@@ -571,7 +571,7 @@ Mautic makes this even easier by providing key Integrations to many existing Con
 
 .. vale off
 
-* Joomla! 
+* Joomla!
 * Drupal
 * WordPress
 * TYPO3
@@ -582,7 +582,7 @@ Mautic makes this even easier by providing key Integrations to many existing Con
 
 These are just a few of the Integrations already created by the Mautic community. It's expected that the list grows as developers submit their own Integrations.
 
-.. note:: 
+.. note::
 
     It's important to note that you aren't limited by these Plugins and you can place the tracking pixel directly on any HTML page for website tracking.
 
@@ -591,7 +591,7 @@ Identify visitors by tracking URL
 
 There's a configuration section for identifying visitors by tracking URL although this isn't recommended for use as it's open to abuse with spoof tracking. If enabled, Mautic identifies returning visitors by tracking URLs from Channels - especially from Emails - when no cookie exists yet.
 
-.. note:: 
+.. note::
 
     For this to work you must mark the Email Contact field as a unique identifier and it must be publicly editable in your Mautic configuration.
 
@@ -635,8 +635,8 @@ In your App
 
 A best-in-class approach is to have a class (say 'Mautic') that handles all your tracking needs. For example, this sample method call would POST to the Form with ID 3 - see previous section.
 
- .. note:: 
-  
+ .. note::
+
   For conciseness and ubiquity, these samples are in JavaScript / ECMAScript-type language, use similar call in your mobile App language of choice.
 
 ``mautic.addContact("myemail@example.com",3)``
@@ -650,7 +650,7 @@ Which is nothing more than an ``HTTP`` request to this GET-formatted URL - as al
 ``https://example.com/mtracking.gif?page_url=cart_screen&email=myemail@example.com``
 
 
-.. important:: 
+.. important::
 
     Make sure in your App, that the ``HTTP`` request is using a cookie - if possible, re-use the cookie from the ``mautic.addcontact`` POST request prior - **and** that you reuse this cookie from one request to the next. This is how Mautic - and other tracking software - knows that it's really the same Contact. If you can't do this, you may run into the - unlikely but possible - case where you have multiple Contacts from the same IP address and Mautic merges them all into a single Contact, as it can't tell who is who without a cookie.
 
@@ -743,28 +743,28 @@ Third party cookies
      - Expiration
      - Used by Mautic for tracking?
      - Description
-   * - mautic_device_id	
-     - 1 year	
-     - Yes	
+   * - mautic_device_id
+     - 1 year
+     - Yes
      - Used by Mautic to track the Contact for either the tracking pixel or if the same key isn't found in the browser's local storage for the monitored site.
-   * - ``mtc_id``	
-     - session	
-     - No	
+   * - ``mtc_id``
+     - session
+     - No
      - Stores the Mautic ID of the tracked Contact. No longer used - deprecated in Mautic 2.13 - but retained for backwards compatibility.
-   * - ``mautic_referer_id``	
-     - session	
-     - Yes	
+   * - ``mautic_referer_id``
+     - session
+     - Yes
      - Stores a reference to the last tracked page for the Contact and used by Mautic to determine when a Contact exists a page they visited.
    * - ``mtc_sid``
-     - session	
-     - No	
+     - session
+     - No
      - Deprecated cookie that's the same as ``mautic_device_id``. It's no longer actively used by Mautic but kept for BC reads.
-   * - ``mautic_session_id`` 
-     - unknown	
-     - No	
+   * - ``mautic_session_id``
+     - unknown
+     - No
      - Deprecated in Mautic 2 - no longer supported - and removed from Mautic 3
 
-First party 
+First party
 -----------
 
 .. list-table:: Campaign Actions in Mautic
@@ -775,15 +775,15 @@ First party
      - Expiration
      - Used by Mautic for tracking?
      - Description
-   * - mautic_device_id	
-     - session	
-     - No	
+   * - mautic_device_id
+     - session
+     - No
      - The monitored site may use this, but isn't used by Mautic to actively track the Contact.
-   * - ``mtc_id``	
-     - session	
-     - No	
+   * - ``mtc_id``
+     - session
+     - No
      - Stores the Mautic ID for the tracked Contact. It's not used for tracking. The monitored site can use this to leverage Mautic's REST API on the backend for the purposes of manipulating the Contact.
    * - ``mtc_sid``
-     - session	
-     - No	
+     - session
+     - No
      - Deprecated cookie that's the same as ``mautic_device_id``. It's no longer used by Mautic but kept for BC reads.

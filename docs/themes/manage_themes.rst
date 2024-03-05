@@ -5,13 +5,13 @@ Manage Themes
 
 .. vale on
 
-Themes control the look and feel of the Mautic Landing Pages, Emails, Forms and Message screens. 
+Themes control the look and feel of the Mautic Landing Pages, Emails, Forms and Message screens.
 
-A basic Mautic installation comes pre-packaged with a number of Themes for you to use 'as-is' or adapt to suit specific projects. 
+A basic Mautic installation comes pre-packaged with a number of Themes for you to use 'as-is' or adapt to suit specific projects.
 
 It's also possible to :xref:`create a Theme` for Mautic from scratch.
 
-Access the Theme Manager via the Admin Menu. Click the cog icon in the top right corner to open it and select the Theme menu item.
+Access the Theme Manager via the Admin Menu. Click the list settings icon in the top right corner to open it and select the Theme menu item.
 
 The Themes section displays the list of Themes with the following details:
 
@@ -25,9 +25,9 @@ The Themes section displays the list of Themes with the following details:
     :width: 600
     :alt: Screenshot of Theme list
 
-This list of Themes appears as selectable options in Forms, as this allows you to provide styling for Forms. 
+This list of Themes appears as selectable options in Forms, as this allows you to provide styling for Forms.
 
-Additionally, you can edit and customize Themes in the Email and Landing Page builders to meet your needs. 
+Additionally, you can edit and customize Themes in the Email and Landing Page builders to meet your needs.
 
 With the Email and Landing Page builders, you can start from a template and build your own variations using the drag-and-drop Builder. For more information, see :doc:`Email builder</builders/email_landing_page>` and :doc:`Landing Pages</components/landing_pages>`.
 
@@ -40,7 +40,7 @@ Installing a Theme
 
 It's necessary to install a new or edited Theme as a zip package. The zip package must have the same structure as the preinstalled Themes and the config.json file must be present in the root folder of the zip package. The :xref:`themes developer documentation` contains more on that.
 
-.. note:: 
+.. note::
 
     You must select and zip all the files when creating the zip package. Ensure that you don't zip the files within a folder, otherwise the Theme won't install.
 
@@ -147,7 +147,7 @@ You can assign your Mautic instance a default Theme for Landing Pages. Then use 
     :width: 600
     :alt: Screenshot of Theme
 
-.. note:: 
+.. note::
 
     Changing the Theme after building the Landing Page may cause content to not display if the two Themes don't use the same placeholders.
 

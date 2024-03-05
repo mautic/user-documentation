@@ -5,7 +5,7 @@ Mautic Marketplace
 
 .. vale on
 
-.. warning:: 
+.. warning::
 
     The current Marketplace version doesn't verify Mautic version compatibility of Plugins yet, as this requires a change in each existing Plugin.
 
@@ -36,14 +36,14 @@ If you haven't correctly set the Composer setting, Mautic displays a warning tha
   :width: 800
   :alt: Screenshot of Composer enabled
 
-.. vale off 
+.. vale off
 
 List of Plugins
 ***************
 
 .. vale on
 
-The list of Plugins available in the Marketplace is accessible from your Mautic administration menu. Click the **cog icon** in the top right hand corner to display the menu.
+The list of Plugins available in the Marketplace is accessible from your Mautic administration menu. Click the **list settings icon** in the top right hand corner to display the menu.
 
 The list view allows you to search for specific keywords. It displays quick stats including Plugin downloads and how many stars it has in :xref:`Packagist`. It also shows the vendor who has developed the Plugin. Sadly, the sorting by columns isn't available at the moment because it's not supported by the Packagist API. It's planned to add this in a future release.
 
@@ -159,7 +159,7 @@ List Plugins
   +-------------------------------------------------------+-----------+--------+
   Total packages: 69
   Execution time: 388 ms
-    
+
 There are options allowing you to filter or go to next pages. To display the full list, add ``--help`` after the command, as used in other Mautic commands.
 
 .. code:: shell
