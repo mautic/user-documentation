@@ -80,9 +80,9 @@ Head Components
 
 .. vale on
 
-Mautic processes most of the ``<mj-head>`` components. ``<mj-attributes>`` do not run.
+Mautic processes most of the ``<mj-head>`` components. ``<mj-attributes>`` don't run.
 
-**Tested elements** are: mj-breakpoint, mj-font, mj-html-attributes, mj-style, mj-title, mj-preview 
+**Tested elements** include: ``mj-breakpoint``, ``mj-font``, ``mj-html-attributes``, ``mj-style``, ``mj-title``, and ``mj-preview``.
 
 .. vale off
 
