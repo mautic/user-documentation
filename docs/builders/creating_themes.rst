@@ -80,7 +80,9 @@ Head Components
 
 .. vale on
 
-At present, Mautic won't process the ``<mj-head>`` tags. None of the ``<mj-attribuites>`` run, so you have to do all styling inline.
+Mautic processes most of the ``<mj-head>`` components. ``<mj-attributes>`` don't run.
+
+**Tested elements** include: ``mj-breakpoint``, ``mj-font``, ``mj-html-attributes``, ``mj-style``, ``mj-title``, and ``mj-preview``.
 
 .. vale off
 
