@@ -319,6 +319,10 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
+.. image:: images/default-frequency-rule.png
+  :width: 600
+  :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
+
 * **Do not contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
 
 .. note:: 
@@ -328,7 +332,7 @@ Default frequency rule
 Monitored inbox settings
 ========================
 
-.. image:: images/monitored-settings.png
+.. image:: images/monitored-inbox-settings.png
   :width: 600
   :alt: Screenshot showing Monitored Settings Configuration in Mautic
 
