@@ -21,7 +21,3 @@ Here is an example of the tracking JavaScript which you can access by clicking o
    mt('send', 'pageview');
 
 You should replace the site URL, ``example.com/mautic`` with the URL to your Mautic instance in the example provided, but it's recommended to copy the whole code block from the tracking settings in your Mautic instance.
-
-Type: Page Redirect
-From URL: /docs/build/html/configuration/cron_jobs.html#tracking-script
-To URL: /docs/build/html/configuration/tracking_script.html
