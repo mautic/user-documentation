@@ -80,16 +80,18 @@ To Update Mautic from 2.x to 3.x
 If you are on mautic 2.x + then it is better for you to upgrade to 3.x and higher version in this section let's deep dive into upgrading mautic from 2.x to 3.x version.
 
 Let's Get Started !
+.. note::
+    if you are not already operating with elevated privileges or have not set up the necessary permissions in your system configuration, you may be able to run these commands with sudo.
 
-1. Step One : Fix the data migrations, in your current mautic repo path execute the below commands:
+1. Step One : Fix the data migrations, in your current mautic repo path execute the below commands inside (cd /path/to/your/mautic) :
 
 .. code-block:: shell
 
-    sudo php /var/www/html/mautic/app/console doctrine:migration:migrate
+    php app/console doctrine:migration:migrate
 
-    sudo php /var/www/html/mautic/app/console doctrine:schema:update --force
+    php app/console doctrine:schema:update --force
 
-    sudo -u www-data php /var/www/html/mautic/app/console cache:clear
+    sudo -u www-data php app/console cache:clear
 
 The cache clear may take some to get executed.
 
@@ -99,7 +101,7 @@ After the Migration is done we can go ahead and update the Database !
 
 .. code-block:: shell
 
-    cd /var/www/html/mautic
+    cd /path/to/your/mautic
     
     sudo -u www-data php app/console mautic:update:find
 
@@ -110,17 +112,17 @@ After the Migration is done we can go ahead and update the Database !
 
 .. code-block:: shell
 
-    sudo apt upgrade -y
+    apt upgrade -y
 
-    sudo apt install software-properties-common -y
+    apt install software-properties-common -y
 
-    sudo add-apt-repository ppa:ondrej/php
+    add-apt-repository ppa:ondrej/php
 
-    sudo apt update -y
+    apt update -y
 
-    sudo apt install php7.3
+    apt install php7.3
 
-    sudo apt install php7.3-common php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-curl php7.3-gd php7.3-imagick php7.3-cli php7.3-dev php7.3-imap php7.3-mbstring php7.3-opcache php7.3-soap php7.3-zip php7.3-intl -y
+    apt install php7.3-common php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-curl php7.3-gd php7.3-imagick php7.3-cli php7.3-dev php7.3-imap php7.3-mbstring php7.3-opcache php7.3-soap php7.3-zip php7.3-intl -y
 
 4. Edit Your php ini file :
 
@@ -140,11 +142,11 @@ post_max_size = 64M
 
 .. code-block:: shell
 
-    sudo a2enmod php7.3
+    a2enmod php7.3
 
-    sudo a2dismod php7.1
+    a2dismod php7.1
 
-    sudo systemctl restart apache2
+    systemctl restart apache2
 
     php -v
 
@@ -157,23 +159,23 @@ post_max_size = 64M
 
     mysqldump -u root -p --all-databases > all-db.sql
 
-    psw: ysSmK3t87wyC
+    psw: "ENTER_YOUR_PASSWORD"
 
 - Remove the old mariaDB db :
 
 .. code-block:: shell
 
-    sudo apt remove mariadb-server
+    apt remove mariadb-server
 
 - Adding a New apt source :
 
 .. code-block:: shell
 
-    sudo apt install software-properties-common -y
+    apt install software-properties-common -y
 
-    sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+    apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 
-    sudo nano /etc/apt/sources.list.d/mariadb.list
+    nano /etc/apt/sources.list.d/mariadb.list
 
 - Add :
 
@@ -188,42 +190,11 @@ post_max_size = 64M
 
 .. code-block:: shell
 
-    sudo apt update
+    apt update
 
-    sudo apt install mariadb-server -y
+    apt install mariadb-server -y
 
     exit
-
-- Remove the Non-compatible plugins :
-
-.. code-block:: shell
-
-    cd /var/www/html/mautic/
-
-    sudo -u www-data php /var/www/html/mautic/app/console mautic:update:find
-
-- Search for the Upgrade :
-
-.. note::
-
-    This step really depends on your installed and non-M3 compatible plugins.
-
-.. code-block:: shell
-
-    cd /var/www/html/mautic/plugins
-
-    rm -R GautitClearcacheBundle/
-    rm -R MauticAdvancedTemplatesBundle/
-    rm -R SmsreaderBundle/
-
-Optionally in this step we could also just move them out from this folder  :
-
-.. code-block:: shell
-
-    mv /var/www/html/mautic/plugins/GautitClearcacheBundle /var/www/html
-    mv /var/www/html/mautic/plugins/MauticAdvancedTemplatesBundle /var/www/html
-    mv /var/www/html/mautic/plugins/MauticRecaptchaBundle /var/www/html
-    mv /var/www/html/mautic/plugins/SmsreaderBundle /var/www/html   
 
 
 
@@ -250,21 +221,21 @@ then run the upgrage again :
 
     sudo -u www-data php upgrade_v3.php
 
-8. Looking for new versions in 3.0 and then updating it 3.0+ :
+8. Looking for new versions in 3.0 and then updating it 3.0+ (inside your mautic folder) :
 
 .. code-block:: shell
 
-    sudo -u www-data php /var/www/html/mautic/bin/console mautic:update:find
-    sudo -u www-data php /var/www/html/mautic/bin/console mautic:update:apply
-    sudo -u www-data php /var/www/html/mautic/bin/console mautic:update:apply --finish
+    sudo -u www-data php bin/console mautic:update:find
+    sudo -u www-data php bin/console mautic:update:apply
+    sudo -u www-data php bin/console mautic:update:apply --finish
 
 - set ownership and clear the cache :
 
 .. code-block:: shell
 
-    sudo chown -R www-data:www-data /var/www/html/mautic/
-    sudo chmod -R 755 /var/www/html/mautic/
-    sudo -u www-data php /var/www/html/mautic/bin/console cache:clear
+    chown -R www-data:www-data /path/to/your/mautic/
+    chmod -R 755 /path/to/your/mautic/
+    sudo -u www-data php bin/console cache:clear
 
 
 9. Last Step:
@@ -326,7 +297,7 @@ you should see the .sql and .zip files generated by running the above command.
 
 .. code-block:: shell
 
-    sudo nano /etc/php/7.4/apache2/php.ini
+    nano /etc/php/7.4/apache2/php.ini
 
 after running this command one should change the following variables values accordingly :
 
@@ -348,9 +319,9 @@ after running this command one should change the following variables values acco
 
 .. code-block:: shell
 
-    sudo a2enmod php7.4
-    sudo a2dismod php7.3
-    sudo systemctl restart apache2
+    a2enmod php7.4
+    a2dismod php7.3
+    systemctl restart apache2
 
 and then check the current version of the php which is been used :
 
@@ -386,14 +357,14 @@ Let's look for a new version:
 
 .. code-block:: shell
 
-    cd /var/www/html/mautic
-    sudo -u www-data php /var/www/html/mautic/bin/console mautic:update:find
+    cd /path/to/your/mautic/
+    sudo -u www-data php bin/console mautic:update:find
 
 after finding the latest version we need to apply it :
 
 .. code-block:: shell
 
-    sudo -u www-data php /var/www/html/mautic/bin/console mautic:update:apply
+    sudo -u www-data php bin/console mautic:update:apply
 
 .. note::
     Now we are prompted to apply finish. I would like to stop here for a moment. I know, that it is not the right way to use sudo when you are working here, but it is just simpler for folks if we don't go into permissions. But using a root user during updates can cause file creation with the wrong ownership. In order to avoid it we will make sure by almost every step that the files belong to the right user. So we hand over the files to the www-data user all the time (which is running our we server.)
@@ -402,23 +373,23 @@ after finding the latest version we need to apply it :
 
 .. code-block:: shell
 
-    sudo chown -R www-data:www-data /var/www/html/mautic/
-    sudo chmod -R 755 /var/www/html/mautic/
+    chown -R www-data:www-data /path/to/your/mautic/
+    chmod -R 755 /path/to/your/mautic/
 
 - and now we can finish it by the following command :
 
 .. code-block:: shell
 
-    sudo -u www-data php /var/www/html/mautic/bin/console 
+    sudo -u www-data php /path/to/your/mautic/bin/console 
     mautic:update:apply --finish
 
 - If everything went well, we are on the 3.3.4 version, half way to 4.0.1. Let's look for a new version, and apply changes:
 
 .. code-block:: shell
 
-    sudo -u www-data php /var/www/html/mautic/bin/console 
+    sudo -u www-data php /path/to/your/mautic/bin/console 
     mautic:update:find
-    sudo -u www-data php /var/www/html/mautic/bin/console 
+    sudo -u www-data php /path/to/your/mautic/bin/console 
     mautic:update:apply
 
 .. note:: 
@@ -426,15 +397,15 @@ after finding the latest version we need to apply it :
 
 .. code-block:: shell
 
-    sudo chown -R www-data:www-data /var/www/html/mautic/
+    chown -R www-data:www-data /path/to/your/mautic/
 
-    sudo chmod -R 755 /var/www/html/mautic/
+    chmod -R 755 /path/to/your/mautic/
 
 And here comes the last step We are here ! Take a deep breath :
 
 .. code-block:: shell
 
-    sudo -u www-data php /var/www/html/mautic/bin/console 
+    sudo -u www-data php /path/to/your/mautic/bin/console 
     mautic:update:apply --finish
 
 Congrats you are on Mautic 4.x version give yourself a pat on your back !
