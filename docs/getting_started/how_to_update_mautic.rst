@@ -80,7 +80,9 @@ To Update Mautic from 2.x to 3.x
 If you are on mautic 2.x + then it is better for you to upgrade to 3.x and higher version in this section let's deep dive into upgrading mautic from 2.x to 3.x version.
 
 Let's Get Started !
+
 .. note::
+
     if you are not already operating with elevated privileges or have not set up the necessary permissions in your system configuration, you may be able to run these commands with sudo.
 
 1. Step One : Fix the data migrations, in your current mautic repo path execute the below commands inside (cd /path/to/your/mautic) :
