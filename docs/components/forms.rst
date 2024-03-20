@@ -242,7 +242,7 @@ Attributes
   :width: 600
   :alt: Screenshot showing the attributes for a checkbox group
 
-- **Field HTML name**: this is the machine name of the field, populated automatically from the label. You can customise this field if the label is long. You reference this field is when connecting Mautic Forms to other Forms, or when using the Manual Copy function to manually add the Form to your website or app.
+- **Field HTML name**: this is the machine name of the field, populated automatically from the label. You can customise this field if the label is long. You reference this field is when connecting Mautic Forms to other Forms, or when using the Self-hosted function to manually add the Form to your website or app.
 - **Label attributes**: this field changes the way the label text appears. You should use the format ``style="attribute: descriptor"`` to change the style. For example, to change the label to red, use ``style="color: red"`` or ``style="color: #ff0000"``.
 - **Input attributes**: changes the way any text inside the Form Field appears. This applies to the input placeholder text, text entered by the visitor submitting the Form, and the options for the select fields when Allow Multiple is Yes - including List - Country.
 - **Field container attributes**: this changes the Form Field. Use this to change the size of the box, fill color, rounded edges, or any other properties of the actual field.
@@ -415,14 +415,14 @@ Via IFrame
 
 IFrames can be more difficult to use, and blocking by browsers is more likely, however there are sometimes where using an IFrame is preferable. Be sure to adjust the width and height for the space required to fit the Form. The visitor may need to scroll within the IFrame depending on the resolution of their browser. It's possible to display an error message in the event that the visitor's browser doesn't support IFrames, by editing the text between the ``<p>`` and ``</p>`` tags before copying the code and pasting it into your website.
 
-Manual copy
+Self-hosted
 ===========
 
 .. image:: images/forms/embed_form_manual.png
   :width: 600
   :alt: Screenshot showing the options for manually embedding a Mautic Form.
 
-The manual copy option does provide more flexibility to extend Forms with JavaScript snippets and custom styling, however it's a manual process and any changes made within Mautic after copying the code won't be automatically reflected on your website unless you re-copy and paste the new HTML code.
+The Self-hosted option does provide more flexibility to extend Forms with JavaScript snippets and custom styling, however it's a manual process and any changes made within Mautic after copying the code won't be automatically reflected on your website unless you re-copy and paste the new HTML code.
 
 .. note::
   Before copying the code to embed your Mautic Forms, ensure that you are on the correct domain name - not a staging area or internal reference for example - as the Form embed code references the URL.
