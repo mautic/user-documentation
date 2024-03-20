@@ -15,9 +15,9 @@ To create a new Form:
 #. Go to Components > Forms and click New
 #. Select the type of Form you wish to create
     * **Campaign Form** - Mautic allows you to trigger a Campaign with the submission of this type of Form. Campaign Forms have less actions directly associated with the Form submit actions - which happen immediately after Form submission - as most actions trigger as part of a Campaign workflow.
-    * **Standalone Form** - A more commonly used Form, this allows the execution of many submit actions immediately at the point of Form submission. 
+    * **Standalone Form** - A more commonly used Form, this allows the execution of many submit actions immediately at the point of Form submission.
 
-.. warning:: 
+.. warning::
     Forms with a lot of submit actions - particularly when submitting to third party systems such as a Customer Relationship Management system - can have an impact on the Form submission time. This is especially the case if there are a lot of fields. Consider using a Campaign Form if you can wait for the cron job to trigger the actions.
 
 The following fields are available:
@@ -42,7 +42,7 @@ The following fields are available:
 
 - **Theme** - Select a Mautic Theme which has styling for a Form. This dictates the styling of the Form when added to an external website or Application if 'Render style' is Yes.
 
-.. note:: 
+.. note::
     Not all Themes include Form styling. Check the Features column on your Themes listing in the Theme Manager to see which Themes include styling for Forms.
 
 .. vale off
@@ -85,7 +85,7 @@ To add a new field to your Form:
 
    - **Checkbox Group** - This field allows a visitor to select one or more options from a list using checkboxes. This field type can also provide a single checkbox - for example to gain consent to use cookies and send marketing Emails or other messages to the Contact.
 
-   .. note:: 
+   .. note::
       You can associate checkbox group fields with *boolean* and *select - multiple* fields, but not *select* fields.
 
    - **Date** - This field allows the visitor to select a date with a calendar picker. The formatting of the date applies the default setting in your Configuration.
@@ -98,7 +98,7 @@ To add a new field to your Form:
 
    - **File** - This allows visitors to upload a file on the Form.
 
-   .. warning:: 
+   .. warning::
       When using the file upload field there is a limit of 1,000 submissions using the same filename. Note that you can attach the submitted files in the "Send Form result" action.
 
    - **HTML area** - This field allows marketers to add custom HTML to their Form.
@@ -186,9 +186,9 @@ CAPTCHA
   :width: 600
   :alt: Screenshot showing CAPTCHA Form properties
 
-With a CAPTCHA field, the answer field should be blank if you are using this as a honeypot to trap spam submissions. This hides the field, and spambots try to populate the field with data. 
+With a CAPTCHA field, the answer field should be blank if you are using this as a honeypot to trap spam submissions. This hides the field, and spambots try to populate the field with data.
 
-Mautic recognizes if there's data in a honeypot CAPTCHA field and understands that it can't be a human submitting the Form. 
+Mautic recognizes if there's data in a honeypot CAPTCHA field and understands that it can't be a human submitting the Form.
 
 To have a human answer a basic question or statement - for example ``What's 2+2`` or ``Enter 'CAPTCHA' here`` - you would enter the expected input in the answer field, in this case, ``4`` or ``CAPTCHA``.  The field's label should be the question, or you can use the label CAPTCHA and then have the question as the input placeholder.
 
@@ -233,9 +233,9 @@ When uploading a file within a Form there are several options under the properti
 Attributes
 ~~~~~~~~~~
 
-   Attributes are CSS tags which change the styling of a particular Form. 
+   Attributes are CSS tags which change the styling of a particular Form.
 
-.. note:: 
+.. note::
    Setting the Render Style to No on the Form means that Mautic ignores the styling in these fields.
 
 .. image:: images/forms/checkbox_group_attributes.png
@@ -273,7 +273,7 @@ Form actions
 
 You may want to trigger certain actions to happen immediately after Form submission - this is what Form actions are for. This might include communications with the Contact, tracking, internal notifications, or other Contact management tasks.
 
-.. note:: 
+.. note::
    The Form actions available in Mautic are also available in Standalone Forms, which include more options as they're not associated with Campaigns. Campaigns tend to trigger most actions through Campaign actions so Forms associated with Campaigns only have a basic set of Form actions.
 
 - **Add to Company's Score**: if a Contact associated with a Company record in Mautic has submitted the Form, you can add or subtract Points to the Company's overall score. Company scoring in Mautic doesn't aggregate Points for all its associated Contacts. Any actions that you want to contribute to a Company's score must be explicitly set. Negative numbers are valid if you want to subtract from a Company's score based on a Contact submitting a Form. If the Contact isn't tracked and the Form doesn't include a field mapped to Company or Company Name - on the Company object - the Company has no Points awarded.
@@ -288,7 +288,7 @@ You may want to trigger certain actions to happen immediately after Form submiss
   :width: 600
   :alt: Screenshot showing the adjust Contact score Form action.
 
-- **Modify Contact's Segments**: this action allows you to change a Contact's Segment membership when they submit a Form. Type in the name of the Segment to add the Contact to or remove the Contact from. You can use both fields at the same time, and can include multiple Segments in either or both fields.  
+- **Modify Contact's Segments**: this action allows you to change a Contact's Segment membership when they submit a Form. Type in the name of the Segment to add the Contact to or remove the Contact from. You can use both fields at the same time, and can include multiple Segments in either or both fields.
 
 Dynamic Segments based on filters update based on information in the Contact record automatically - you don't need add them to the Segment in a Form action.
 
@@ -360,7 +360,7 @@ You can style the message itself as you like, and you can click to insert the su
 
 .. image:: images/forms/send_form_results.png
   :width: 600
-  :alt: Screenshot showing the send Form results action. 
+  :alt: Screenshot showing the send Form results action.
 
 .. vale off
 
@@ -383,22 +383,22 @@ When working with Mautic Landing Pages or common Content Management Systems (CMS
 - **Mautic Landing Page**: ``{form= ID#}``
 - **Drupal 7.x**: ``{mauticform id =ID# width=300 px height=300 px}`` - be sure to change the width and height to the appropriate size for your website.
 
-.. warning:: 
-  This shortcode doesn't work for Drupal 8.x - it's recommended to use the Automatic Copy option instead.
+.. warning::
+  This shortcode doesn't work for Drupal 8.x - it's recommended to use the Embedded option instead.
 
 - **Joomla!**: ``{mauticform ID#}``
 - **WordPress**: ``[mautic type="form" id=ID#]``
 
-Automatic copy
+Embedded
 ==============
 
 .. image:: images/forms/embed_form.png
   :width: 600
-  :alt: Screenshot showing the options for embedding a Mautic Form. 
+  :alt: Screenshot showing the options for embedding a Mautic Form.
 
-The Automatic option for embedding Mautic Forms uses JavaScript and ensures that the Forms on your website are always up to date with what you have set in Mautic. If you make changes to the Form in Mautic, you don't have to worry about re-copying the Form code everywhere you use the Form. Features including auto-fill and progressive profiling **only** works with the Automatic option.
+The Embedded option for embedding Mautic Forms uses JavaScript and ensures that the Forms on your website are always up to date with what you have set in Mautic. If you make changes to the Form in Mautic, you don't have to worry about re-copying the Form code everywhere you use the Form. Features including auto-fill and progressive profiling **only** works with the Embedded option.
 
-.. note:: 
+.. note::
   Before copying the code to embed your Mautic Forms, ensure that you are on the correct domain name - not a staging area or internal reference for example - as the Form embed code references the URL.
 
 Via JavaScript
@@ -420,11 +420,11 @@ Manual copy
 
 .. image:: images/forms/embed_form_manual.png
   :width: 600
-  :alt: Screenshot showing the options for manually embedding a Mautic Form. 
+  :alt: Screenshot showing the options for manually embedding a Mautic Form.
 
 The manual copy option does provide more flexibility to extend Forms with JavaScript snippets and custom styling, however it's a manual process and any changes made within Mautic after copying the code won't be automatically reflected on your website unless you re-copy and paste the new HTML code.
 
-.. note:: 
+.. note::
   Before copying the code to embed your Mautic Forms, ensure that you are on the correct domain name - not a staging area or internal reference for example - as the Form embed code references the URL.
 
 #. Copy the JavaScript code in the first box, and paste it into the head or body of your page. If you have multiple Mautic Forms on the same page, add this once only.
@@ -459,7 +459,7 @@ Adding conditional fields to a Mautic Form
 
 Once you have created the required Custom Fields, add the parent field to the Form as detailed previously, and add the relevant information in the tabs.
 
-.. note:: 
+.. note::
   When using conditional fields, only ``Select``, ``Select - Multiple`` and ``Boolean`` field types are valid as the parent field.
 
 .. image:: images/forms/conditional_fields_1.png
@@ -478,13 +478,13 @@ Once saved, an option displays to add a conditional field.
   :width: 600
   :alt: Screenshot showing option to add a field based on the value of an existing field
 
-In this example, select the ``Checkbox Group`` option, and under the Condition tab, choose ``including`` and ``Ford``.  
+In this example, select the ``Checkbox Group`` option, and under the Condition tab, choose ``including`` and ``Ford``.
 
 .. image:: images/forms/conditional_fields_4.png
   :width: 600
   :alt: Screenshot showing selection of parent field
 
-This means that when the visitor selects Ford, the Form displays this field. 
+This means that when the visitor selects Ford, the Form displays this field.
 
 There are two options:
 
