@@ -523,15 +523,15 @@ If you're using a Content Management System, the easiest way is to let one of th
 
 Here are a couple code snippets that may help as well:
 
-HTML
-~~~~
+HTML snippet
+~~~~~~~~~~~~
 
 .. code-block:: shell
 
     <img src="https://example.com/mtracking.gif?page_url=http%3a%2f%2fexample.com%2fyour-product-page&page_title=Some%20Cool%20Product&email=user%40theirdomain.com&tags=ProductA,-ProductB" style="display: none;"  alt="mautic is open source marketing automation" />
 
-PHP
-~~~
+PHP snippet
+~~~~~~~~~~~
 
 .. code-block:: php
 
@@ -543,8 +543,8 @@ PHP
 
     echo '<img src="https://example.com/mtracking.gif?d=' . $d . '" style="display: none;" />';
 
-JavaScript
-~~~~~~~~~~
+JavaScript snippet
+~~~~~~~~~~~~~~~~~~
 
 .. code-block:: javascript
 
