@@ -107,11 +107,11 @@ Campaign-based Dynamic Web Content
 Creating the request
 ====================
 
-Use a Campaign Decision for ``Request Dynamic Content`` to use Campaign-based dynamic content. The Campaign Decision checks if a Campaign member visits a page where a Dynamic Content slot is. Visitors to a page with a Dynamic Content slot receive the Dynamic Content.
+Use a Campaign Decision for ``Request Dynamic Content`` to use Campaign-based Dynamic Content. The Campaign Decision checks if a Campaign member visits a page where a Dynamic Content slot is. Visitors to a page with a Dynamic Content slot receive the Dynamic Content.
 
 The following fields are available:
 
-- **Name** - the Campaign event. Start the name with something like Req-DWC: so when you're looking at Campaign Reports, you can see the event type.
+- **Name** - the Campaign event. Start the name with something like ``Req-DWC``: so when you're looking at Campaign Reports, you can see the event type.
 
 - **Requested Slot Name** - Mautic checks for the slot name. You can see how many Contacts got to the Campaign event where you're checking if their visits request the slot.
 

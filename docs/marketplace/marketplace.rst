@@ -84,7 +84,7 @@ From the list you can see Plugin versions, and the release cadence. When you cli
 Maintainers
 ===========
 
-In this section is a list of maintainers of the Plugin on Packagist. There may be more contributors in the GitHub repository. There is also a link to the maintainer's Packagist detail page where you can browse other PHP packages by the same maintainer.
+In this section is a list of maintainers of the Plugin on Packagist. There may be more contributors in the GitHub repository. There is also a link to the Packagist detail page for the maintainer, where you can browse other PHP packages by the same maintainer.
 
 GitHub information
 ==================

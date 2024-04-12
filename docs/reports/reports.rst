@@ -95,7 +95,7 @@ The parent data source provides a high-level summary of the data while the child
 * **Dynamic filters settings**
 
   - Show opened by default - If you want to ensure that the date filters and filter options for any other Report filters are visible on a Report detail page without needing to open the filters drop-down, select Yes. For example, for an Emails Report, you might want to view dynamic filters for subject or sent date.
-  - Hide date range - To hide the date range filter so that Users can’t change the dates that the Report displays data for, select to **Yes**.
+  - Hide date range - To hide the date range filter so that Users can't change the dates that the Report displays data for, select to **Yes**.
 
 
 Data
@@ -124,7 +124,7 @@ You can customize each Report to include the columns of choice, filter data base
 
 You can use Email or Contact ID to display a single row per Contact record. For example, you can group by **Contact ID** to view the unique number of Asset Downloads or Form Submissions for a single Form, instead of total Asset Downloads or Form Submissions, which could include duplicates.
 
-* **Calculated columns** - Select the function that you want to apply to individual columns. Calculated columns display count, average, sum, or the minimum or maximum values from a selected field. They're only available when using a grouping to show a calculation for that grouping. Continuing with the previous example of grouping by a Contact ID number or Email address, a COUNT calculation displays how many times that Contact record appears on the Report if not for the grouping.
+* **Calculated columns** - Select the function that you want to apply to individual columns. Calculated columns display count, average, sum, or the minimum or maximum values from a selected field. They're only available when using a grouping to show a calculation for that grouping. Continuing with the previous example of grouping by a Contact ID number or Email address, a ``COUNT`` calculation displays how many times that Contact record appears on the Report if not for the grouping.
   
 Graphs
 ======

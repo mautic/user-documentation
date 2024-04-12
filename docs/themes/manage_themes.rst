@@ -67,7 +67,7 @@ Deleting a Theme
 
 .. vale on
 
-To delete a user-created Theme:
+To delete a User-created Theme:
 
 1. Log in to Mautic.
 
@@ -149,7 +149,7 @@ You can assign your Mautic instance a default Theme for Landing Pages. Then use 
 
 .. note:: 
 
-    Changing the Theme after building the Page may cause content to not display if the two Themes don't use the same placeholders.
+    Changing the Theme after building the Landing Page may cause content to not display if the two Themes don't use the same placeholders.
 
 To assign a default Theme:
 

@@ -20,10 +20,10 @@ General settings
 
   To brand that Landing Page, create a Mautic Landing Page that you'd want to greet any Contacts who visit your root ``URL``. Once you've done that, Users can sign in into Mautic by visiting ``mautic.example.com/s/login``.
 
-* **404 page** - Select the Landing Page that you want to use as the 404 Landing Page. If you don't want to use Mautic's default 404 error page, create a custom Landing Page and select that page here. If you don't select any page, Mautic uses the default error page.
+* **404 page** - Select the Landing Page that you want to use as the 404 Landing Page. If you don't want to use Mautic's default 404 error page, create a custom Landing Page and select that Landing Page here. If you don't select any page, Mautic uses the default error page.
 
 
-* **Path to the cache, log, and images directory** - These are the file system paths where the cache, logs, and images are saved.
+* **Path to the cache, log, and images directory** - These are the file system paths where Mautic saves the cache, logs, and images.
 
 System defaults
 ===============
@@ -34,9 +34,9 @@ System defaults
 
 * **Default item limit per page** - The number of Contacts, Campaigns, Emails, etc. which display on each page when you go to an item section. The default is ``10``.
 
-* **Default timezone** - The User's default time zone, typically set to the time zone of the Company headquarters. Time zones are set for individual Users. The default is ``UTC``.
+* **Default timezone** - The User's default time zone, typically set to the time zone of the Company headquarters. Mautic allows the User to set their own time zones via their profile. The default is ``UTC``.
 
-  For example: headquarters is in Boston and the default is set to ``US`` Eastern Time ``America/New York``. A User in San Francisco US Pacific Time may set ``America/Los Angeles`` to use Pacific Time in the User interface.
+  For example: headquarters is in Boston and Mautic's timezone is ``America/New York``. A User in San Francisco which is Pacific Time may set ``America/Los Angeles`` to use Pacific Time in the User interface.
 
 * **Default language** - The initial language assigned to Users. Individual Users may select their own settings. Mautic uses ``English - United States`` by default.
 
@@ -44,20 +44,20 @@ System defaults
 
 * **Date Range Filter Default** - Sets the default for how far back from the current date Mautic looks for data in Reports including Campaign and Email snapshots charts on the item page. This setting allows you to control the default for how far back from the current date Mautic looks for data. If you've changed the setting on a Report, Mautic uses what you've entered. Mautic's default value is ``1 Month``.
    
-* **Default format for full dates, date only, short dates, and time only** - The default setting uses the standard US time format. The letters in the boxes are PHP code. See the :xref:`PHP manual for date functions`.
+* **Default format for full dates, date only, short dates, and time only** - The default setting uses the standard American time format. The letters in the boxes are PHP code. See the :xref:`PHP manual for date functions`.
 
 CORS settings
 =============
 
-Cross-Origin Resource Sharing (CORS) enables data to pass between your website and Mautic.
+Cross-Origin Resource Sharing - CORS - allows data to pass between your website and Mautic.
 
 .. image:: images/cors-settings.png
   :width: 600
   :alt: Screenshot showing CORS Settings Configuration in Mautic
 
-* **Restrict Domains** - When set to No, any web page can pass information to Mautic. Select Yes to limit communication with your Mautic instance to websites listed in Valid Domains strongly recommended.
+* **Restrict Domains** - When set to No, any website can pass information to Mautic. Selecting ``Yes`` to limit communication with your Mautic instance to websites listed in Valid Domains is **strongly recommended**.
 
-* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure (``https://``) website.
+* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website.
 
 .. note:: 
 
@@ -72,25 +72,25 @@ Miscellaneous settings
 
 * **Trusted hosts** - To explicitly allow the hosts that can send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?example.com$``. If left empty, Mautic will respond to all hosts.
   
-* **Trusted proxies** - To configure the IP addresses that should be trusted as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
+* **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
-* **IP lookup service** - By default, Mautic uses :xref:`MaxMind's` database to identify the city of a website visitor, based on the location of the Internet Service Provider (ISP) for their IP address.
+* **IP lookup service** - By default, Mautic uses :xref:`MaxMind's` database to identify the city of a website visitor, based on the location of the Internet Service Provider - ISP - for their IP address.
 
 * **IP lookup service authentication** - To use any IP lookup service which requires authentication, enter your credentials.
   
-* **List of IPs not to track Contacts with** - To turn off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn't recommend adding your office IP address. If you list your internal IP address, Mautic won't track clicks, page hits, etc., from that IP, **including when you are testing functionality**.
+* **List of IPs not to track Contacts with** - To turn off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn't recommend adding your office IP address. If you list your internal IP address, Mautic won't track clicks, page hits, etc., from that IP, **including when you are testing** which can cause difficulties.
 
-* **List of known Bots** - Mautic has the feature to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here (one per line).
+* **List of known Bots** - Mautic has the feature to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here - one per line.
   
 * **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here.
 
 .. note:: 
 
-    For bit.ly, use the following URL structure: https://api-ssl.bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl
+    For bit.ly, use the following URL structure: ``https://api-ssl.bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl``
 
 * **Item max lock time** - When a User edits a Campaign, Email, Landing Page, etc., Mautic locks the item to prevent simultaneous edits by other Users. When the initial User saves and closes or cancels out, the item may remain locked for this period of time. The default is ``0 seconds``.
 
-* **Translate page titles** - To translate page titles in the Contact activity history from non-Latin (non-English) characters to Latin characters (English).
+* **Translate page titles** - To translate page titles in the Contact activity history from non-Latin characters to Latin - English - characters.
 
 
 Update settings
@@ -102,7 +102,7 @@ Update settings
 
 * **Set the minimum stability level required for updates** - This allows you to receive notifications for early access releases. Always read the release notes before updating to an early access release. Set the minimum stability level required for updates. 
 
-* **Update Mautic through Composer [BETA]**  - Set to 'Yes' if you update Mautic through Composer. This is a prerequisite if you want to install and update Plugins through the Marketplace. This becomes the default installation and update method in Mautic 5.
+* **Update Mautic through Composer [beta]**  - Set to 'Yes' if you update Mautic through Composer. This is a prerequisite if you want to install and update Plugins through the Marketplace. This becomes the default installation and update method in Mautic 5.
 
 Theme settings
 **************
@@ -126,7 +126,7 @@ Full API documentation is available :xref:`Mautic developer API`.
 
 * **Enable http basic auth?** - Enables basic authentication for Mautic's API. It's recommended to only use this with secure sites (https).
 
-* **Access token lifetime** - When authorizing a new app or Integration, this setting limits how long the access token is valid (in minutes). The default is ``60`` minutes.
+* **Access token lifetime** - When authorizing a new app or Integration, this setting limits how long the access token is valid - in minutes. The default is ``60`` minutes.
 
   For example - You add a new Integration to your SaaS platform. Enter 30 here to limit the access token validity to ``30`` minutes. If you haven't completed the authentication in that period of time, you must revalidate.
 
@@ -154,9 +154,9 @@ Campaign settings
 
 * **Wait time before retrying a failed action** - If for any reason a Campaign action doesn't execute, this is the length of time Mautic waits before trying again.
 
-* **Use date range for all views** - When viewing a Campaign, the date range of actions, conditions, decisions, and Contacts displayed in the tabs is based on this setting.
+* **Use date range for all views** - When viewing a Campaign, the date range of actions, conditions, decisions, and Contacts displayed in the tabs, Mautic uses this date range by default.
 
-* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you will need to run a :ref:`cron job<campaign cron jobs>` to summarize existing data.
+* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`cron job<campaign cron jobs>` to summarize existing data.
 
 Email settings
 **************
@@ -164,7 +164,7 @@ Email settings
 Email transport settings
 ========================
 
-As Mautic uses the :xref:`Symfony Mailer` library since v5, it supports all Symfony Mailer core plugins out of the box. Transports for other Email services might be found on GitHub or Packagist.
+As Mautic uses the :xref:`Symfony Mailer` library since v5, it supports all Symfony Mailer core Plugins out of the box. 
 
 SMTP transport
 --------------
@@ -192,29 +192,29 @@ Mautic creates this automatically from the values entered in the Email configura
       - Example
       - Explanation
     * - Scheme
-      - smtp
-      - Defines which email transport (plugin) will handle the email sending. It also defines which other DSN parts must be present.
+      - ``smtp``
+      - Defines which transport Plugin handles the Email sending. It also defines which other DSN parts must be present.
     * - User
-      - john
+      - ``john``
       - Some transport wants username and password to authenticate the connection. Some public or private key. Some just API key.
     * - Password
-      - pa$$word
-      - As mentioned above, read documentation for your particular transport and fill in the fields that are required. For SMPT this is for password.
+      - ``pa$$word``
+      - As mentioned previously, read the documentation for your particular transport and fill in the fields it requires. For SMTP enter the password in this field.
     * - Host
-      - smtp.mydomain.com
-      - For SMTP this is the domain name where your SMTP server is running. Other transports may have the domain handled inside it so many wants to put just ``default`` text here.
+      - ``smtp.mydomain.com``
+      - For SMTP, this is the domain name where your SMTP server is running. Other transports may have the domain handled within the Plugin, so they may instruct you to enter ``default`` here.
     * - Path
-      - any/path
-      - This is usually empty. For SMTP this may be the path to the SMTP server. For other transports this may be the path to the API endpoint.
+      - ``example/path``
+      - This is usually empty. For SMTP this may be the path to the SMTP server. For other transports this may be the path to the API endpoint. Enter according to the documentation for your transport.
     * - Port
-      - 465
-      - Important for SMTP. The port value defines which encryption is used. This is usually 465 for SSL or 587 for TLS. Avoid using port 25 for security reasons. For other transports this may be the port to the API endpoint.
+      - ``465``
+      - Important for SMTP. The port value defines the encryption used. This is usually ``465`` for SSL or ``587`` for TLS. Avoid using port 25 for security reasons. For other transports this may be the port to the API endpoint.
     * - Options
-      - timeout=10
-      - This is optional. This may be the timeout for the connection or similar configuration. The config form will allow you to create multiple options.
+      - ``timeout=10``
+      - This is optional. This may be the timeout for the connection or similar configuration. The configuration allows you to create multiple options.
 
 .. note::
-  Use the Mautic's global configuration to paste in the DSN information, especially the API keys and passwords. The values must be URL-encoded, and the configuration form does that for you. If you are pasting DSN settings directly into the config/local.php file, you must URL-encode the values yourself.
+  Use Mautic's global configuration to paste in the DSN information, especially the API keys and passwords. The values must be URL-encoded, and the configuration form does that for you. If you are pasting DSN settings directly into the ``config/local.php`` file, you must URL-encode the values yourself.
 
 
 .. vale off
@@ -227,30 +227,47 @@ Example API transport installation
 .. warning::
   Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`.
 
-If you want to use :xref:`Sendgrid` API instead of SMTP to send Emails, for example, you can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation.
+If you want to use :xref:`SendGrid` API instead of SMTP to send Emails, for example, you can install the official Symfony SendGrid Transport by running the following command mentioned alongside others in the :xref:`Symfony Mailer` documentation.
 
 .. code-block:: shell
 
     composer require symfony/sendgrid-mailer
 
-After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In the example of using the Sendgrid API, the DSN looks like this:
+After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In the example of using the SendGrid API, the DSN looks like this:
 
 .. code-block:: shell
 
     sendgrid+api://KEY@default
 
-This is how it would be set up in Mautic's Email configuration:
+This is how you would configure Mautic's Email configuration:
 
   .. image:: images/sendgrid-api-dsn.png
     :width: 400
-    :alt: Sendgrid API DSN example
+    :alt: SendGrid API DSN example
 
 To replace the SendGrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the SendGrid API to send Emails.
 
 .. warning::
-  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
+  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports from Symfony **don't support batch sending, even via API**. They only send one Email per request, as opposed to a thousand Emails per request as is the case with some Mautic transports, which can make them slow at scale. They also **don't support transport callback handling used for bounce management**. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These Plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
 
-The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`.
+The table below lists available transport Plugins created for Mautic to include support for batch sending and callback handling.
+
+.. vale off
+
+.. list-table:: 
+   :widths: 40 60
+   :header-rows: 1
+
+   * - Link to Packagist
+     - Command for installing
+   * - :xref:`sparkpost-transport`
+     - ``composer require ts-navghane/sparkpost-plugin``
+.. vale on
+
+Queue settings
+==============
+
+The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`. Documentation relating to configuring the queue is in the :doc:`queue </queue/queue>` section.
 
 Immediate delivery
 ------------------
@@ -263,8 +280,8 @@ Queued delivery
 Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:
 
 .. code-block:: shell
-
-    php /path/to/mautic/bin/console messenger:consume email_transport
+    
+    php /path/to/mautic/bin/console messenger:consume email
 
 Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
 
@@ -284,7 +301,7 @@ Mail send settings
 
   Ensure that you configure your sender domain, ``DKIM``, bounce, and click tracking domains. For more information, see the :ref:`Email<emails>` documentation.
 
-* **Reply to address** -  To have Contacts reply to a different address than the specified From address, add the desired address here. This is the default ``reply-to`` address where messages are sent from Mautic unless it is overridden in an individual Email. If this field is blank, the address specified in **Email address to send mail** from is used. The ``reply-to`` setting is useful if your configured sender domain - which you use in the from address - contains a subdomain that doesn't have MX records or is otherwise an address that can't receive Emails.
+* **Reply to address** -  To have Contacts reply to a different address than the specified From address, add the desired address here. This is the default ``reply-to`` address where messages are sent from Mautic unless it is overridden in an individual Email. If this field is blank, Mautic uses the address specified in **Email address to send mail from**. The ``reply-to`` setting is useful if your configured sender domain - which you use in the from address - contains a subdomain that doesn't have MX records or is otherwise an address that can't receive Emails.
   
 * **Custom return path (bounce) address** - Set a custom return path/bounce Email address for Emails sent from the system. Note that some mail transports, such as GMail, won't support this.
 
@@ -302,13 +319,7 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
-
-.. vale off
-
 * **Do not contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
-
-.. vale on
-
 
 .. note:: 
 
@@ -600,8 +611,12 @@ If a Campaign or Webhook is automatically unpublished because of a high volume o
 
 * **Send notification to author** - Set this field to Yes to send an Email notification to the User who created the unpublished Campaign or Webhook. Deleted Users don't receive notifications.
 
-Landing page settings
+.. vale off
+
+Landing Page settings
 *********************
+
+.. vale on
 
 .. image:: images/landing-page-settings.png
   :width: 600
@@ -638,7 +653,7 @@ Mautic tracking settings
 .. note:: 
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
-  * Landing Pages including 4-byte UTF-8 characters, such as emojis and some Chinese or other non-Latin characters, in the Landing Page title or URL aren't tracked on a Contact's activity history in Mautic. All Latin characters used in English and other western languages are of 1-byte and are tracked.
+  * Landing Pages including 4-byte UTF-8 characters, such as emojis and some Chinese or other non-Latin characters, in the Landing Page title or URL aren't tracked on a Contact's activity history in Mautic. Mautic tracks all Latin characters used in English and other western languages which are of 1-byte.
 
 Facebook pixel
 ==============
@@ -649,9 +664,9 @@ Facebook pixel
 
 * **Facebook Pixel ID** - Enter your Facebook Pixel ID and select the options you'd like to use the pixel for.
 
-* **Enabled on your tracking landing page** - Select Yes to have Mautic append the Facebook Pixel to the Mautic tracking code to track Landing Pages where the tracking code exists.
+* **Enabled on your tracking Landing Page** - Select Yes to have Mautic append the Facebook Pixel to the Mautic tracking code to track Landing Pages where the tracking code exists.
 
-* **Enabled on Mautic landing page** - Select Yes to have Mautic add the Facebook Pixel to Mautic landing pages.
+* **Enabled on Mautic Landing Page** - Select Yes to have Mautic add the Facebook Pixel to Mautic Landing Pages.
 
 
 Google analytics
@@ -663,9 +678,9 @@ Google analytics
 
 * **Google Analytics ID** - Enter your Google Analytics ID and select the options you'd like to use the pixel for.
 
-* **Enabled on your tracking landing page** - Select Yes to have Mautic append the Google Analytics script to the Mautic tracking code to track Landing Pages where the tracking code exists.
+* **Enabled on your tracking Landing Page** - Select Yes to have Mautic append the Google Analytics script to the Mautic tracking code to track Landing Pages where the tracking code exists.
 
-* **Enabled on Mautic landing page** - Select Yes to have Mautic add the Google Analytics script to Mautic landing pages.
+* **Enabled on Mautic Landing Page** - Select Yes to have Mautic add the Google Analytics script to Mautic Landing Pages.
 
 * **Enabled IP** ``Anonymization`` - For subscribers sensitive to General Data Protection Regulation or other data privacy laws and regulations, select Yes to anonymize the IP address of web visitors before sending it to Google Analytics.* 
 

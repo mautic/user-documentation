@@ -12,8 +12,8 @@ Contact types
 
 There are two types of Contacts:
 
-Visitors (formerly anonymous leads)
-===================================
+Visitors - formerly ``anonymous leads``
+=======================================
 
 Unidentified visitors to your site who haven't yet completed a Form or otherwise interacted with your site.
 
@@ -37,7 +37,7 @@ If you have an IP lookup service :ref:`configured<miscellaneous settings>` in **
 
 * Scoring
 
-* Data from Forms - which don't include the unique identifier, since that would make the contact known
+* Data from Forms - which don't include the unique identifier, since that would make the Contact known
 
 .. note:: 
 

@@ -103,7 +103,7 @@ You can verify if your account has Alphanumeric Sender enabled by following thes
     :width: 400
     :alt: Screenshot of the Alphanumeric settings on Twilio.
 
-.. vale on
+.. vale off
 
 Adding alphanumeric sender ID to a Messaging Service
 ====================================================

@@ -38,7 +38,7 @@ The following fields are available:
 
 - **Kiosk mode** - If Yes, Mautic turns off tracking of Contacts created through the Form, so that the Form doesn't generate cookies or associate any IP address with the Contact record. Marketers may refer to this as 'data entry mode'. It's ideal for using at conferences or events where several Contacts may enter their information using the same device, as it prevents associating the activity on the device to Contacts.
 
-- **Render style** - If Yes, the Form displays with the styling from either the selected Mautic Theme or the Attributes tab of the Form fields. When No, the Form adopts the styling of where it's embedded.
+- **Render style** - If Yes, the Form displays with the styling from either the selected Mautic Theme or the Attributes tab of the Form Fields. When No, the Form adopts the styling of where it's embedded.
 
 - **Theme** - Select a Mautic Theme which has styling for a Form. This dictates the styling of the Form when added to an external website or Application if 'Render style' is Yes.
 
@@ -142,7 +142,7 @@ Based on the field selected, Mautic displays various tabs in the fields editor i
 General
 ~~~~~~~
 
-- **Label** - This is the title of your field, telling the visitor what you'd like them to enter in the field. The label shows before the Form field by default.
+- **Label** - This is the title of your field, telling the visitor what you'd like them to enter in the field. The label shows before the Form Field by default.
 
 - **Show label?** - When No, Mautic won't display the label on the Form.
 
@@ -152,14 +152,14 @@ General
 
 - **Help message** - This allows the marketer to add information for the visitor about what they should enter in the field, or why they should provide the information.
 
-- **Input placeholder** - This allows the marketer to add text within the Form field, which gives the visitor an idea of what they should enter. The text disappears as soon as they click into the field, whereas default values don't. This can be particularly helpful in prompting the visitor if you require the data in a particular format, for example ``@Twitter`` for a Twitter account, including the ``@`` symbol.
+- **Input placeholder** - This allows the marketer to add text within the Form Field, which gives the visitor an idea of what they should enter. The text disappears as soon as they click into the field, whereas default values don't. This can be particularly helpful in prompting the visitor if you require the data in a particular format, for example ``@Twitter`` for a Twitter account, including the ``@`` symbol.
 
 Mapped field
 ~~~~~~~~~~~~
 
 The mapped field tab allows the marketer to connect a field with an existing Contact or Company field in Mautic. This allows the data from the Form submission to automatically populate into the mapped field. Without the mapping, this information won't save in the Contact profile.
 
-The data type for the Form field should match the data type of the mapped field. For example, a date/time field should map to a Contact or Company field which uses the date/time field.
+The data type for the Form Field should match the data type of the mapped field. For example, a date/time field should map to a Contact or Company field which uses the date/time field.
 
 Validation
 ~~~~~~~~~~
@@ -199,11 +199,11 @@ Checkbox group, radio group and select
 
 .. image:: images/forms/checkbox_field_values.png
   :width: 600
-  :alt: Screenshot showing checkbox field values with a mapped custom field
+  :alt: Screenshot showing checkbox field values with a mapped Custom Field
 
 With the checkbox, radio box and select fields, the properties tab allows you to choose what should be available for the visitor to select.
 
-If you have mapped the Form field to a Custom Field in Mautic, there is also the option to use the values provided in the Custom Field rather than listing them separately. This helps to prevent duplication and errors in the Form options.
+If you have mapped the Form Field to a Custom Field in Mautic, there is also the option to use the values provided in the Custom Field rather than listing them separately. This helps to prevent duplication and errors in the Form options.
 
 If you prefer to create your own field options, the ``Optionlist`` allows you to add options with a label and value pair.
 
@@ -244,8 +244,8 @@ Attributes
 
 - **Field HTML name**: this is the machine name of the field, populated automatically from the label. You can customise this field if the label is long. You reference this field is when connecting Mautic Forms to other Forms, or when using the Manual Copy function to manually add the Form to your website or app.
 - **Label attributes**: this field changes the way the label text appears. You should use the format ``style="attribute: descriptor"`` to change the style. For example, to change the label to red, use ``style="color: red"`` or ``style="color: #ff0000"``.
-- **Input attributes**: changes the way any text inside the Form field appears. This applies to the input placeholder text, text entered by the visitor submitting the Form, and the options for the select fields when Allow Multiple is Yes - including List - Country.
-- **Field container attributes**: this changes the Form field. Use this to change the size of the box, fill color, rounded edges, or any other properties of the actual field.
+- **Input attributes**: changes the way any text inside the Form Field appears. This applies to the input placeholder text, text entered by the visitor submitting the Form, and the options for the select fields when Allow Multiple is Yes - including List - Country.
+- **Field container attributes**: this changes the Form Field. Use this to change the size of the box, fill color, rounded edges, or any other properties of the actual field.
 - **Radio/Check box label attributes**: similar to input attributes, when available this field allows you to customize the way that radio buttons and checkboxes appear.
 
 Behavior
@@ -304,7 +304,7 @@ Typically you would use a Form action to populate static Segments - Segments whi
   :width: 600
   :alt: Screenshot showing the modify Contact's Tags Form action.
 
-- **Record UTM Tags**: if the Page your Form is on has UTM tags, whether it's a Mautic Landing Page or an external website, Mautic can record those UTM Tags and save them to the Contact record for reporting. This is useful if you want to run Reports on where your new Contacts and Form submissions are originating from.
+- **Record UTM Tags**: if the page your Form is on has UTM tags, whether it's a Mautic Landing Page or an external website, Mautic can record those UTM Tags and save them to the Contact record for reporting. This is useful if you want to run Reports on where your new Contacts and Form submissions are originating from.
 
 .. image:: images/forms/record_utm_tags.png
   :width: 600
@@ -449,7 +449,7 @@ Creating Custom Fields
 
 .. vale on
 
-Using an example of wanting to show specific types of car based on the manufacturer, you would create the following custom fields:
+Using an example of wanting to show specific types of car based on the manufacturer, you would create the following Custom Fields:
 
 - **Car manufacturer**: this field should be of the Select data type. In this example, the options for this field are Ford, Nissan, Peugeot, and Fiat.
 - **Ford cars**: this field should be of the Select - Multiple data type. In this example, the available options for this field are Focus, Mustang, Fiesta, and Galaxy.
@@ -466,7 +466,7 @@ Once you have created the required Custom Fields, add the parent field to the Fo
   :width: 600
   :alt: Screenshot showing the parent field for a conditional field on a Mautic Form
 
-If you have defined the values in the Custom Field, turn the first switch to Yes to use those values. Otherwise, create the labels and values in the Properties tab. You can also associate the Form field with a Contact field where appropriate.
+If you have defined the values in the Custom Field, turn the first switch to Yes to use those values. Otherwise, create the labels and values in the Properties tab. You can also associate the Form Field with a Contact field where appropriate.
 
 .. image:: images/forms/conditional_fields_2.png
   :width: 600
