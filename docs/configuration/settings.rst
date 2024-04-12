@@ -225,7 +225,7 @@ Example API transport installation
 .. vale on
 
 .. warning::
-  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`.
+  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic>`.
 
 If you want to use :xref:`SendGrid` API instead of SMTP to send Emails, for example, you can install the official Symfony SendGrid Transport by running the following command mentioned alongside others in the :xref:`Symfony Mailer` documentation.
 
@@ -248,7 +248,7 @@ This is how you would configure Mautic's Email configuration:
 To replace the SendGrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the SendGrid API to send Emails.
 
 .. warning::
-  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports from Symfony **don't support batch sending, even via API**. They only send one Email per request, as opposed to a thousand Emails per request as is the case with some Mautic transports, which can make them slow at scale. They also **don't support transport callback handling used for bounce management**. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These Plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
+  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports from Symfony **don't support batch sending, even via API**. They only send one Email per request, as opposed to a thousand Emails per request as is the case with some Mautic transports, which can make them slow at scale. They also **don't support transport callback handling used for bounce management**. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These Plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace>`.
 
 The table below lists available transport Plugins created for Mautic to include support for batch sending and callback handling.
 

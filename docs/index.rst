@@ -56,6 +56,7 @@ There are different types of documentation available to help you navigate your w
    configuration/cron_jobs
    configuration/variables
    configuration/settings
+   configuration/shortener
 
 .. toctree::
    :caption: Authentication
