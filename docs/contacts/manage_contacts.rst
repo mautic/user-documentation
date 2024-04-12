@@ -504,8 +504,8 @@ All the UTM tags are available in the time entry, just by toggling the entry det
 
 Please note that Mautic records UTM tags only on a Form submission that contains the action "Record UTM Tags".
 
-Contact fields
-~~~~~~~~~~~~~~
+Updating Contact fields
+~~~~~~~~~~~~~~~~~~~~~~~
 
 You can also pass information specific to your Contact by setting Mautic Contact ``field(s)`` to be publicly editable. Note that values appended to the tracking pixel should be ``url`` encoded - %20 for spaces, %40 for @, etc.
 
