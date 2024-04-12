@@ -387,8 +387,8 @@ Unsubscribe settings
 
 .. vale off
 
-Tracking Opened Emails
-======================
+How to track opened Emails
+==========================
 
 .. vale on
 
@@ -400,8 +400,8 @@ It's possible to turn off the tracking pixel entirely if you don't need to use i
 
 .. vale off
 
-Tracking links in Emails
-========================
+How to track links in Emails
+============================
 
 .. vale on
 
@@ -468,7 +468,7 @@ Company settings
 * **Merge by unique fields with operator** - You can determine which operator to use when merging fields if there is more than one unique identifier.
 
 Queue settings
-****************
+**************
 
 Purpose of the queuing
 ======================
