@@ -264,8 +264,8 @@ The table below lists available transport Plugins created for Mautic to include 
      - ``composer require ts-navghane/sparkpost-plugin``
 .. vale on
 
-Queue settings
-==============
+Configuring the Queue
+=====================
 
 The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`. Documentation relating to configuring the queue is in the :doc:`queue </queue/queue>` section.
 
