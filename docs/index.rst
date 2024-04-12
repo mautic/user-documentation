@@ -162,7 +162,6 @@ There are different types of documentation available to help you navigate your w
 
    plugins/plugin_resources
    plugins/amazon
-   plugins/citrix
    plugins/clearbit
    plugins/connectwise
    plugins/fullcontact
