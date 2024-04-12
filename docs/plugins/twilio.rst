@@ -14,56 +14,56 @@ The first and default implemented service is :xref:`Twilio`.
 
 In order to configure the text messages correctly, follow these steps:
 
-#. Create an account at :xref:`Twilio`.
+1. Create an account at :xref:`Twilio`.
 
-#. In Mautic, go to *Settings* (cog icon) > *Plugins*.
+2. In Mautic, go to *Settings* (cog icon) > *Plugins*.
 
-#. Open *Twilio* Plugin and activate it.
+3. Open *Twilio* Plugin and activate it.
 
-#. Log into your Twilio account and go to *Dashboard*.
+4. Log into your Twilio account and go to *Dashboard*.
 
  .. image:: images/twilio-sid-authtoken.png
     :width: 400
     :alt: Screenshot of the SID and Auth Token fields
 
 
-#. Copy the *Account Sender ID (SID)* from Twilio account and paste it to *Account Sender ID* field in the Twilio Plugin configuration.
+5. Copy the *Account Sender ID (SID)* from Twilio account and paste it to *Account Sender ID* field in the Twilio Plugin configuration.
 
-#. Unlock and copy the *Auth Token* and paste it to *Auth Token* field in the Twilio Plugin configuration.
+6. Unlock and copy the *Auth Token* and paste it to *Auth Token* field in the Twilio Plugin configuration.
 
-#. Go to *Phone Numbers* > Active numbers in Twilio, add a phone number if you haven't already commissioned one.
+7. Go to *Phone Numbers* > Active numbers in Twilio, add a phone number if you haven't already commissioned one.
 
-#. Go to *Messaging* > *Services* in Twilio, and create a new Messaging Service. Select the appropriate settings from the dropdown in the first step as relevant to your usage of SMS messages with Mautic, then click 'Create Messaging Service' at the bottom right.
+8. Go to *Messaging* > *Services* in Twilio, and create a new Messaging Service. Select the appropriate settings from the dropdown in the first step as relevant to your usage of SMS messages with Mautic, then click 'Create Messaging Service' at the bottom right.
 
  .. image:: images/twilio-messaging-services.png
     :width: 400
     :alt: Screenshot of the Messaging Services interface
 
-#. Click the button to add your phone number as a Sender for this Messaging Service, then select the box and click 'Set up Integration' at the bottom right to move on to the next step.
+9. Click the button to add your phone number as a Sender for this Messaging Service, then select the box and click 'Set up Integration' at the bottom right to move on to the next step.
 
-#. Select 'Send a Webhook' under the Integration settings.
+10. Select 'Send a Webhook' under the Integration settings.
 
-#. Configure the Request URL and Fallback URL to use the callback URL of ``https://example.com/sms/twilio/callback`` where ``example.com`` is your Mautic instance domain. Also enter this in the 'Delivery Status Callback' field.
+11. Configure the Request URL and Fallback URL to use the callback URL of ``https://example.com/sms/twilio/callback`` where ``example.com`` is your Mautic instance domain. Also enter this in the 'Delivery Status Callback' field.
 
  .. image:: images/twilio-webhook-callback.png
     :width: 400
     :alt: Screenshot of the Messaging Services interface
 
-#. Click the 'Add Compliance Info' button to proceed to the next step, where you can register to send Application to Person (A2P) messages using a 10 digit long code phone number. Otherwise, click the button in the bottom right to complete setup. Click on 'View my new Messaging Service' to see the details of the service you just created. Once created you can view the SID from the Messaging > Services screen.
+12. Click the 'Add Compliance Info' button to proceed to the next step, where you can register to send Application to Person (A2P) messages using a 10 digit long code phone number. Otherwise, click the button in the bottom right to complete setup. Click on 'View my new Messaging Service' to see the details of the service you just created. Once created you can view the SID from the Messaging > Services screen.
 
  .. image:: images/twilio-messaging-service-id.png
     :width: 400
     :alt: Screenshot of the Messaging Services ID field on Twilio.
 
-#. Copy the Messaging Service ID and paste this into the 'Features' tab of your Mautic Twilio Plugin settings
+13. Copy the Messaging Service ID and paste this into the 'Features' tab of your Mautic Twilio Plugin settings
 
  .. image:: images/twilio-messaging-service-id-mautic.png
     :width: 400
     :alt: Screenshot of the Messaging Services ID field in Mautic.
 
-#. Configure the global frequency rules for the SMS Channel as appropriate for your business.
+14. Configure the global frequency rules for the SMS Channel as appropriate for your business.
 
-#. Select the *Published*? switch to *Yes* in the Enabled/Auth tab in Mautic and save the Plugin configuration.
+15. Select the *Published*? switch to *Yes* in the Enabled/Auth tab in Mautic and save the Plugin configuration.
 
 .. vale off
 
