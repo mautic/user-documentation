@@ -109,7 +109,7 @@ To mitigate the table lock issue, run the command only once daily when you know 
 Locally defined countries and regions
 *************************************
 
-Since Mautic 5.1 it is possible to define custom countries and regions via locally hosted JSON files. This is useful when you have a specific set of countries or regions that you want to use in your Mautic instance. You can define these in a file called ``countries.json`` or ``regions.json`` located in your defined ``upload_dir``. Example code snippets are below:
+Since Mautic 5.1 it's possible to define custom countries and regions via locally hosted JSON files. This is useful when you have a specific set of countries or regions that you want to use in your Mautic instance. You can define these in a file called ``countries.json`` or ``regions.json`` located in your defined ``upload_dir``. Example code snippets are below:
 
 .. code:: json
 
@@ -119,7 +119,7 @@ Since Mautic 5.1 it is possible to define custom countries and regions via local
 ]
 
 .. code:: json
-    
+
     {
   "Middle Earth": [
     "The Shire",
