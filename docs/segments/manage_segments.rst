@@ -135,8 +135,8 @@ Adding individual Contacts
 
 .. vale off
 
-Campaign action
-===============
+Using a Campaign action
+=======================
 
 .. vale on
 
@@ -257,8 +257,8 @@ Dynamic Segments
 
 Mautic moves Contacts into and out of dynamic Segments based on the filters applied to the Segment. As the data associated with the Contact updates, including Company associations and behaviors, Mautic updates Segment membership.
 
-Segment filters
-===============
+Configuring Segment filters
+===========================
 
 .. image:: images/filter-list.png
     :width: 400

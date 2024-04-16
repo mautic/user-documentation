@@ -70,8 +70,8 @@ If you want to use the Plugin, you have to publish it.
 
 .. vale off
 
-Test the Plugin
-***************
+Test the VTiger CRM Plugin
+**************************
 
 .. vale on
 
