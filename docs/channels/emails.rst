@@ -65,6 +65,12 @@ When creating the Email, there is an option to assign a language and a translati
 
 It's also possible to have translations of A/B test variants.
 
+From Mautic 5.1 it's possible to preview A/B and Translation variants:
+
+.. image:: images/emails/ab-translation-preview.png
+  :width: 400
+  :alt: Screenshot showing A/B and Translation preview
+
 Base64 encoded images
 =====================
 
