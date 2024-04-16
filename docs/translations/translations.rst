@@ -27,6 +27,7 @@ The default language configuration happens first in the Mautic configuration. Th
     :alt: Select the default language
 
 .. vale off
+
 User language
 =============
 
@@ -93,6 +94,7 @@ Try searching for 'Dashboard menu' within the Mautic/Mautic repository, as there
 The first file found is ``app/bundles/DashboardBundle/Translations/en_US/messages.ini`` and there is the line ``mautic.dashboard.menu.index="Dashboard"`` within the file, which is text to override.
 
 .. vale off
+
 Override the translation
 ========================
 
