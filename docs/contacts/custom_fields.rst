@@ -105,3 +105,22 @@ If you configure this option, the new Custom Field becomes visible in the list o
 This configuration helps prevent **http** request timeouts because it handles the long-running SQL query to create the new table column as a background task.
 
 To mitigate the table lock issue, run the command only once daily when you know that most of your audience is offline. With less traffic going into Mautic, the chances of encountering a problem are lower.
+
+Analyzing Custom Fields to optimize tables
+******************************************
+
+Since Mautic 5.1 there is a command which allows you to analyze the Custom Fields and optimize the tables. This command is useful when you have a lot of Custom Fields and you want to optimize the size of VARCHAR fields.
+
+Use the command:
+
+.. code-block:: bash
+
+    bin/console mautic:fields:analyse -t
+
+Use the -t argument to see the output in tabulated form in the console.
+
+Use the following to export the data to a file:
+
+.. code-block:: bash
+
+    bin/console mautic:fields:analyse > path/to/file.csv
