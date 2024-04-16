@@ -436,6 +436,8 @@ Beside this you can specify your date with text. These formulas are **translatab
 * ``this week`` / ``last week`` / ``next week``
 * ``this month`` / ``last month`` / ``next month``
 * ``this year`` / ``last year`` / ``next year``
+* ``first day of previous month`` / ``first day of January 2022``
+* ``last day of previous month`` / ``last day of January 2022``
 
 Example (Consider that today is ``2022-03-05``):
 
@@ -444,6 +446,8 @@ Example (Consider that today is ``2022-03-05``):
 * ``Date identified equals last month`` returns all Contacts identified in the specified date range, for example 2022-02-01 - 2022-02-28.
 * ``Date identified greater or equal last year`` returns all Contacts identified 2021-01-01 and after.
 * ``Date identified greater than last year`` returns all Contacts identified after 2021-12-31.
+* ``Date identified greater than first day of previous month`` returns all Contacts identified after 2022-02-01.
+* ``Date identified greater than last day of previous month`` returns all Contacts identified after 2022-02-28.
 * ``Custom Contact date field equal birthday -1 day`` returns all Contacts identified every year on 03-04 (4th march).
 * ``Custom Contact date field equal anniversary -1 month`` returns all Contacts identified every year on 02-04 (4th february)
 
