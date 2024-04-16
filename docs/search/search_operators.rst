@@ -169,7 +169,7 @@ Emails search filters
     category:{category alias}
     lang:{lang code}
 
-Focus items search filters
+Focus Items search filters
 --------------------------
 
 .. code-block:: 

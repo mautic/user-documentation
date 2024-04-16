@@ -6,7 +6,7 @@ What are Marketing Messages?
 
 Located under the Channels section in Mautic, Marketing Messages is one of the Channels available to you through which you can optimize and personalize communication with your customers.
 
-Marketing messages allow you to empower the customer to decide how they prefer to receive the content you send, by setting the Channel they prefer.
+Marketing Messages allow you to empower the customer to decide how they prefer to receive the content you send, by setting the Channel they prefer.
 
   .. image:: images/marketing_messages/marketing-messages.png
     :width: 200

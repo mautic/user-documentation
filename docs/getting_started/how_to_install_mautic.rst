@@ -35,7 +35,7 @@ Before installing a package, ensure that:
   
 * Your server has enough free disk space to run the installation. Consider the database size as well.
   
-* PHP's `max_execution_time` is at least 240 seconds.
+* PHP's ``max_execution_time`` is at least 240 seconds.
 
 Downloading a production package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -146,7 +146,7 @@ Click **login** to continue working on your Mautic instance.
 Installing with command line
 ============================
 
-You can also install Mautic using the command line. You can either pass the settings parameters in the command, or create a local PHP file with your database settings. You can also define properties in this file using the syntax expected by the command-line options. 
+You can also install Mautic using the command line. You can either pass the settings parameters in the command, or create a local PHP file with your database settings. You can also define properties in this file using the syntax expected by the command-line options. Note that Mautic requires a complex password from version 5.1.
 
 Use the command ``path/to/php bin/console mautic:install --help`` for the list of options and flags available.
 
@@ -195,7 +195,7 @@ Use the syntax below within a ``local.php`` file:
     'db_backup_tables' => false,
     'db_backup_prefix' => 'bak_',
     'admin_email' => 'admin@example.com',
-    'admin_password' => 'mautic',
+    'admin_password' => 'Maut1cR0cks!',
     'mailer_transport' => null,
     'mailer_host' => null,
     'mailer_port' => null,
@@ -221,7 +221,7 @@ If desired, you can also add parameters in the install command:
   --mailer_from_name="Example From Name" --mailer_from_email="mautic@localhost"
   --mailer_transport="smtp" --mailer_host="localhost" --mailer_port="1025"
   --db_driver="pdo_mysql" --db_host="db" --db_port="3306" --db_name="db" --db_user="db" --db_password="db" 
-  --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="mautic"
+  --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="Maut1cR0cks!"
 
 As the installation process begins, it flags up warnings and aborts if there are any critical errors.
 
@@ -257,7 +257,7 @@ Cloning Mautic from GitHub
 
 1. Install the :xref:`GitHub CLI` tool.
 
-2. Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork. You can also click to go directly to your fork if you already have one, if you don't then GitHub will offer to create one..
+2. Click **Fork** at the top-right corner of the Mautic GitHub repository to make a personal fork. You can also click to go directly to your fork if you already have one, if you don't then GitHub offers to create one.
 
 3. After the fork is complete, click the green **Code** button to access the command for cloning the repository.
 
@@ -274,8 +274,7 @@ Cloning Mautic from GitHub
 Install Mautic using DDEV
 ==========================
 
-You can use :xref:`DDEV` which is recommended for testing and development with Mautic. To get started:
-
+You can use :xref:`DDEV` which Mautic recommends for testing and development. To get started:
 
 #.  Install :xref:`DDEV`.
 
@@ -298,7 +297,7 @@ You can use :xref:`DDEV` which is recommended for testing and development with M
 This spins up a DDEV instance (which includes Mailhog, PHPMyAdmin, and Redis Commander) - by default at ``https://mautic.ddev.site`` - and also gives the option to set up Mautic ready for you to use.
 .. vale on
 
-This runs through the Composer install process, and installs Mautic at the command line with a default username of ``admin`` and password of ``mautic``.
+This runs through the Composer install process, and installs Mautic at the command line with a default username of ``admin`` and password of ``Maut1cR0cks!`` (note: pre Mautic 5.1 the password is just `mautic`.
 
 Installing with Composer
 ************************
@@ -325,14 +324,14 @@ The basic command to use the Recommended Project is:
 
 .. code-block:: shell
 
-  composer create-project mautic/recommended-project:^4 some-dir --no-interaction
+  composer create-project mautic/recommended-project:^5 some-dir --no-interaction
 
 With Composer you can add new dependencies to install along with Mautic:
 
 .. code-block:: shell
 
   cd your-directory
-  composer require mautic/mautic-saelos-bundle:~2.0
+  composer require mautic/mautic/helloworld-bundle
 
 The Composer ``create-project`` command passes ownership of all files to the created project. You should create a new git repository, and commit all files not excluded by the .gitignore file.
 
@@ -351,39 +350,6 @@ When installing the given ``composer.json`` the following occurs:
 - Themes - packages of type ``mautic-theme`` - are in ``docroot/themes/``.
 - Creates ``docroot/media`` directory.
 - Creates environment variables based on your ``.env`` file. See ``.env.example``.
-
-.. vale off
-
-Updating Mautic Core
-~~~~~~~~~~~~~~~~~~~~
-
-.. vale on
-
-The Recommended Project attempts to keep all of your Mautic core files up-to-date.
-
-The project ``mautic/core-composer-scaffold`` updates your scaffold files whenever there is an update to ``mautic/core-lib``.
-
-If you customize any of the "scaffolding" files - commonly .htaccess - you may need to merge conflicts if new release of Mautic Core result in changes to your modified files.
-
-Follow the steps below to update your core files.
-
-1 Run ``composer update mautic/core-lib --with-dependencies`` to update Mautic core and its dependencies.
-
-2 Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to .htaccess or others.
-
-3 Commit everything all together in a single commit, so the ``docroot`` remains in sync with the core when checking out branches or running git bisect.
-
-4 In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
-
-5 Run the following commands to update your database with any changes from the release:
-
-.. code-block:: shell
-  
-  bin/console cache:clear 
-  bin/console mautic:update:apply --finish 
-  bin/console doctrine:migration:migrate --no-interaction 
-  bin/console doctrine:schema:update --no-interaction --force 
-  bin/console cache:clear
 
 .. vale off
 

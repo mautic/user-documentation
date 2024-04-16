@@ -35,7 +35,7 @@ You'll notice the group column shows the specific field on the Contact profile. 
 
 2. **List icon** - You can use these fields as filters for Segments.
 
-3. **Asterisks icon** - These fields are required when filling in the Contact Form
+3. **Asterisks icon** - These are mandatory when filling in the Contact Form
 
 4. **Globe icon** - You can update these fields publicly through the :doc:`tracking pixel</configuration/variables>` URL query see :doc:`Contact Monitoring</contacts/manage_contacts>` for more details.
 
@@ -83,7 +83,7 @@ Adding a new Custom Field
 
 .. vale on
 
-You can create additional custom fields and define the data type you want that field to hold. In addition to the data type you select the group for that particular field. This defines where the field displays on the Contact edit and detail view.
+You can create additional Custom Fields and define the data type you want that field to hold. In addition to the data type you select the group for that particular field. This defines where the field displays on the Contact edit and detail view.
 
 .. image:: images/new-custom-field.jpeg
     :align: center
@@ -100,7 +100,7 @@ There is a way around this when you configure the processing of field creation i
 
 Since :xref:`Mautic 3` there is an option you can set in your ``app/config/local.php`` file: ``'create_custom_field_in_background' => true``,.
 
-If you configure this option, the new Custom Field becomes visible in the list of Custom Fields. The custom field remains unpublished until you run the command ``bin/console mautic:custom-field:create-column``. This command creates the actual column in the table and publishes the field metadata.
+If you configure this option, the new Custom Field becomes visible in the list of Custom Fields. The Custom Field remains unpublished until you run the command ``bin/console mautic:custom-field:create-column``. This command creates the actual column in the table and publishes the field metadata.
 
 This configuration helps prevent **http** request timeouts because it handles the long-running SQL query to create the new table column as a background task.
 
