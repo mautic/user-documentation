@@ -57,6 +57,7 @@ There are different types of documentation available to help you navigate your w
    configuration/tracking_script
    configuration/variables
    configuration/settings
+   configuration/shortener
 
 .. toctree::
    :caption: Authentication
@@ -163,7 +164,6 @@ There are different types of documentation available to help you navigate your w
 
    plugins/plugin_resources
    plugins/amazon
-   plugins/citrix
    plugins/clearbit
    plugins/connectwise
    plugins/fullcontact
