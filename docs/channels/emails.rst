@@ -46,7 +46,7 @@ There is a multi-select field that allows excluding Contacts belonging given Seg
 
 .. image:: images/emails/email-excluding-segments.png
   :width: 400
-  :alt: Screenshot showing selecting Segments that should be excluded
+  :alt: Screenshot showing selecting Segments to exclude.
 
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
