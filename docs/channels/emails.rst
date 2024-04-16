@@ -83,6 +83,8 @@ Tokens
 
 Mautic allows the use of tokens in Emails which gives the marketer the possibility to integrate a number of Contact fields in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
 
+It's also possible to override the 'from' field in an Email with a token from your :doc:`/contacts/custom_fields` since Mautic 5.1. 
+
 Check the :doc:`/configuration/variables` documentation for a list of all the available default fields.
 
 Default value
