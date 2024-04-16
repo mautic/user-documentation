@@ -39,8 +39,12 @@ Segment Emails are marketing Emails by default. On creation the marketer assigns
 
 This entry field is a multi-select which allows you to choose several Segments if necessary.
 
+.. vale off
+
 Excluding Segments
 ==================
+
+.. vale on
 
 There is a multi-select field that allows excluding Contacts belonging given Segments.
 
