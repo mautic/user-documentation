@@ -42,7 +42,7 @@ This entry field is a multi-select which allows you to choose several Segments i
 Excluding Segments
 ==================
 
-There is a multi-select field that allows excluding contacts belonging given segments.
+There is a multi-select field that allows excluding Contacts belonging given Segments.
 
 .. image:: images/emails/email-excluding-segments.png
   :width: 400
