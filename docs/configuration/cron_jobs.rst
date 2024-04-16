@@ -166,6 +166,15 @@ If the Mautic configuration settings include Webhook batch processing, use the f
 
     php /path/to/mautic/bin/console mautic:webhooks:process
 
+
+Since Mautic 5.1 it's also possible to run the Webhooks cron job in 'range mode'. This allows you to specify a range of Webhook events to process in a single run. This can be useful if you have a large number of Webhook events to process and want to avoid running out of memory. 
+
+To use this mode, you can specify the ``--min-id`` and ``--max-id`` options. For example, to process events for a Webhook with ID of 5, you can specify to only process the events for that Webhook with IDs between 1000 and 2000 using the following command:
+
+.. code-block:: bash
+
+    bin/console mautic:webhooks:process --webhook-id=5 --min-id=1000 --max-id=2000
+
 .. _cron jobs:
 
 .. vale off
