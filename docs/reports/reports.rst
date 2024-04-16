@@ -88,9 +88,9 @@ The parent data source provides a high-level summary of the data while the child
   
 * **Published** - Select **Yes** to ensure that the Report is active, ready to send when scheduled in the Report options.
 
-* **System Report** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report.
+* **Visible for all logged-in users** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report.
 
-* **Owner** - Select the owner of the Report to determine who can see the Report if the System Report setting is No.
+* **Owner** - Select the owner of the Report to determine who can see the Report if the Visible for all logged-in users setting is No.
 
 * **Dynamic filters settings**
 
