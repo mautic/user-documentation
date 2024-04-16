@@ -403,26 +403,20 @@ Form settings
 Contact settings
 ****************
 
-Multiple Company Management
+Multiple company management
 ===========================
 
-.. image:: images/multiple-companies-settings.png
-  :width: 600
-  :alt: Screenshot showing Multiple Company Management Configuration in Mautic
-
-* **Enable Multiple Companies** - This setting allows a contact to be associated with more than one company.
-
-  - **Enabled (Default)**: Contacts can belong to multiple companies. Suitable for businesses with complex client relationships across different industries or markets.
-
-    .. image:: images/multiple-companies-enabled.png
+ .. image:: images/multiple-companies-enabled.png
       :width: 600
       :alt: Screenshot showing the Multiple Companies feature enabled
 
-  - **Disabled**: Each contact is limited to a single company association. Ideal for simpler business models where contacts do not overlap between companies.
-
+This setting, when enabled, allow a Contact to link with more than one Company. It's beneficial for businesses that interact with clients across multiple companies.
+ 
+When you turn this off, a Contact can only link to one Company. This is ideal for businesses with simpler structures where each Contact only needs a single Company association.
+    
     .. image:: images/multiple-companies-disabled.png
       :width: 600
-      :alt: Screenshot showing the Multiple Companies feature disabled
+      :alt: Screenshot showing the Multiple Companies feature turned off
 
 Contact merge settings
 ======================
