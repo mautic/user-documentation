@@ -39,6 +39,15 @@ Segment Emails are marketing Emails by default. On creation the marketer assigns
 
 This entry field is a multi-select which allows you to choose several Segments if necessary.
 
+Excluding segments
+==================
+
+There is a multi-select field that allows excluding contacts belonging given segments.
+
+.. image:: images/emails/email-excluding-segments.png
+  :width: 400
+  :alt: Screenshot showing selecting Segments that should be excluded
+
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
 Email formats
@@ -370,4 +379,3 @@ This is because Mautic sends test Emails to a Mautic User and not to a Mautic Co
 Mautic Users can't unsubscribe and therefore the unsubscribe link looks like this: ``https://mautic.example.com/|URL|``. However, the link **does** work correctly when you send the Email to a Contact.
 
 Best practice is to create a Segment with a small number of Contacts to receive test Emails - for example, yourself - which ensures that you can fully test features such as unsubscribe behaviour.
-
