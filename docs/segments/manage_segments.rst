@@ -16,7 +16,7 @@ When viewing all Segments, the **# contacts** column on the right shows the numb
   :alt: Screenshot showing Contacts matching that particular Segment.
 
 .. note::
-  Mautic renamed lead lists to Segments in Mautic :xref:`1.4.0 release`.
+  Mautic renamed ``lead lists`` to ``Segments`` in Mautic :xref:`1.4.0 release`.
 
 .. vale off
 
@@ -135,8 +135,8 @@ Adding individual Contacts
 
 .. vale off
 
-Campaign action
-===============
+Using a Campaign action
+=======================
 
 .. vale on
 
@@ -257,8 +257,8 @@ Dynamic Segments
 
 Mautic moves Contacts into and out of dynamic Segments based on the filters applied to the Segment. As the data associated with the Contact updates, including Company associations and behaviors, Mautic updates Segment membership.
 
-Segment filters
-===============
+Configuring Segment filters
+===========================
 
 .. image:: images/filter-list.png
     :width: 400
@@ -398,7 +398,7 @@ Learn more about :xref:`Regex`.
 
 .. note:: 
 
-  MySQL (and Mautic) uses POSIX regular expressions, which could behave differently from other types of regular expressions.
+  MySQL (and Mautic) uses ``POSIX`` regular expressions, which could behave differently from other types of regular expressions.
 
 .. vale off
 

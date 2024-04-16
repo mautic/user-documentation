@@ -198,16 +198,16 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
    * - **Contact device**    
      - Checks if the Contact has interacted with your Campaign from a specific device type, brand, or OS.
    * - **Contact field value**    
-     - Checks if the information matches the selected criteria on the Contact record, the Contact’s primary Company, or UTM tags.
+     - Checks if the information matches the selected criteria on the Contact record, the Contact's primary Company, or UTM tags.
    * - **Contact owner**    
      - Checks if the selected User is the Contact's owner.
    * - **Contact Segments**    
      - Checks if the Contact is a member of selected Segments.
    * - **Contact Tags**    
      - Checks if specified Tags are on the Contact record.
-   * - **Contact points**
+   * - **Contact Points**
      - Checks if the Contact has a certain number of Points or a Group score.
-   * - **Form field value**    
+   * - **Form Field value**    
      - Checks if values submitted for a selected field on a selected Form matches specified criteria.
    * - **Has active notification**    
      - Checks if the Contact has an active web notification.	
