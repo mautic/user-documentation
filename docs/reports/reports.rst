@@ -75,8 +75,8 @@ The **Details** tab on a Report contains the same options across all Reports and
    * Mobile Notifications
    * Mobile Notifications Sent
 
-10. :doc:`Pages</components/landing_pages>` 
-   
+10. :doc:`Pages</components/landing_pages>`
+    
    * Landing Pages
    * Page hits
 
