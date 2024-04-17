@@ -259,7 +259,7 @@ Cloning Campaign events
 
 .. vale on
 
-Mautic's Campaign builder now includes a feature that allows Users to clone (copy and paste) Campaign events, making it easier to replicate complex workflows or reuse specific actions, decisions, or conditions across different Campaigns. This feature supports cloning events within the same Campaign as well as between different Campaigns.
+Since Mautic 5.1, the Campaign builder includes a feature that allows Users to clone - copy and paste - Campaign events, making it easier to replicate complex workflows or reuse specific actions, decisions, or conditions across different Campaigns. This feature supports cloning events within the same Campaign as well as between different Campaigns.
 
 To clone an event:
 
@@ -267,7 +267,7 @@ To clone an event:
 
 .. image:: images/clone-campaign-event.png
   :width: 277
-  :alt: Screenshot of hovering over a campaign event to reveal the clone option
+  :alt: Screenshot of hovering over a Campaign event to reveal the clone option
 
 
 2. Click on the anchor of the event after which you want to insert the cloned event. This opens up a modal window.
