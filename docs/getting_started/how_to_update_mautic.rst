@@ -77,15 +77,15 @@ This is followed by a prompt to run the command again with this additional argum
 
 To Update Mautic from 2.x to 3.x
 *********************************
-If you are on mautic 2.x + then it is better for you to upgrade to 3.x and higher version in this section let's deep dive into upgrading mautic from 2.x to 3.x version.
+If you are on Mautic 2.x + then it is better for you to upgrade to 3.x and higher version in this section let's deep dive into upgrading Mautic from 2.x to 3.x version.
 
-Let's Get Started !
+Getting Started !
 
 .. note::
 
-    if you are not already operating with elevated privileges or have not set up the necessary permissions in your system configuration, you may be able to run these commands with sudo.
+    if you are not already operating with elevated privileges or have not set up the necessary permissions in your system configuration, you may be able to run these commands with SUDO.
 
-1. Step One : Fix the data migrations, in your current mautic repo path execute the below commands inside (cd /path/to/your/mautic) :
+1. Step One : Fix the data migrations, in your current Mautic repository path execute the below commands inside (cd /path/to/your/Mautic) :
 
 .. code-block:: shell
 
@@ -110,7 +110,7 @@ After the Migration is done we can go ahead and update the Database !
     sudo -u www-data php app/console mautic:update:apply
 
 
-3. Upgrade the to php 7.3 version :
+3. Upgrade the to PHP 7.3 version :
 
 .. code-block:: shell
 
@@ -126,21 +126,22 @@ After the Migration is done we can go ahead and update the Database !
 
     apt install php7.3-common php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-curl php7.3-gd php7.3-imagick php7.3-cli php7.3-dev php7.3-imap php7.3-mbstring php7.3-opcache php7.3-soap php7.3-zip php7.3-intl -y
 
-4. Edit Your php ini file :
+4. Edit Your PHP INI file :
 
 .. code-block:: shell
 
     sudo nano /etc/php/7.3/apache2/php.ini
 
-find the following attributes and change the values of the below variables as shown below.
+Find the following attributes and change the values of the below variables as shown below:
 
-short_open_tag = On
-memory_limit = 256M
-upload_max_filesize = 100M
-max_execution_time = 300
-post_max_size = 64M
+- `short_open_tag = On`
+- `memory_limit = 256M`
+- `upload_max_filesize = 100M`
+- `max_execution_time = 300`
+- `post_max_size = 64M`
 
-5. Activate your php 7.3 Version and turn off 7.1 version :
+
+5. Activate your PHP 7.3 Version and turn off 7.1 version :
 
 .. code-block:: shell
 
@@ -208,7 +209,7 @@ To start can execute the below commands :
 
     sudo -u www-data php upgrade_v3.php
 
-If you installed via composer originally, you will need to use this trick :
+If you installed via Composer originally, you will need to use this trick :
 
 .. code-block:: shell
 
@@ -217,13 +218,13 @@ If you installed via composer originally, you will need to use this trick :
 
 - If you get an error here just check if the ownership permissions are set properly
 
-then run the upgrage again :
+then run the upgrade again :
 
 .. code-block:: shell
 
     sudo -u www-data php upgrade_v3.php
 
-8. Looking for new versions in 3.0 and then updating it 3.0+ (inside your mautic folder) :
+8. Looking for new versions in 3.0 and then updating it 3.0+ (inside your Mautic folder) :
 
 .. code-block:: shell
 
@@ -255,24 +256,26 @@ to :
     /bin/console
 
 - If you would like to use the new Email Builder, go to plugins, click on install plugins and turn on the new builder.
-  You might need to log in and out before it's actvated.
+  You might need to log in and out before it's activated.
 
-There you go finally upgraded to mautic 3.0 !!!
+There you go finally upgraded to Mautic 3.0 !!!
 
 If you are already on 3.x+ version and want to upgrade it to 4.x we got you covered check the below documentation.
 
 To Update Mautic from 3.x to 4.x
 *********************************
-- Mautic 4 is the most stable release,It is already being used by many customers.When it was upgraded from Mautic 2 to Mautic 3,It had several issues with the database structure and even the file system.Here is a simple guide to go ahead !.
 
-You need to be at the root folder which is the /var/www/html/ currently where the mautic code resides.
+- Mautic 4 is the most stable release. It is already being used by many customers. When it was upgraded from Mautic 2 to Mautic 3, it had several issues with the database structure and even the file system. Here is a simple guide to go ahead!
 
-1. First step is to backup the file system , as said you need to be at /var/www/html/ for upgrading and for executing the commands given below:
-the below command is used to backup your file system :
+You need to be at the root folder which is the /var/www/HTML/ currently where the Mautic code resides.
+
+1. First step is to backup the file system, as said you need to be at /var/www/HTML/ for upgrading and for executing the commands given below:
+the below command is used to backup your file system:
 
 .. code-block:: shell
 
     zip -r output_file.zip folder1
+
 
 2. Backup your Database
 
@@ -289,7 +292,7 @@ you can then check if your files are created By running the below command :
 you should see the .sql and .zip files generated by running the above command.
 
 3. Updating your current Environment
-- Updating your php version from php7.3 to php7.4 and updating rest packages :
+- Updating your PHP version from PHP7.3 to PHP7.4 and updating rest packages :
 
 .. code-block:: shell
 
@@ -315,7 +318,7 @@ after running this command one should change the following variables values acco
 
 .. note:: 
 
-    Regarding memory limit, you can be more generous and lift to 512M as well. Upload max filessize is also up to you. I suggest a minimum of 20MB.
+    Regarding memory limit, you can be more generous and lift to 512M as well. Upload max file size is also up to you. I suggest a minimum of 20MB.
 
 4. Now move to php4 officially, and restart our Apache :
 
@@ -338,7 +341,7 @@ and then check the current version of the php which is been used :
         PHP 7.4.23 (cli) (built: Aug 26 2021 15:51:37) ( NTS )
         Copyright (c) The PHP Group
         Zend Engine v3.4.0, Copyright (c) Zend Technologies
-            with Zend OPcache v7.4.23, Copyright (c), by Zend Technologies
+        with Zend OPcache v7.4.23, Copyright (c), by Zend Technologies
 
 then we need to stop the cron jobs running in the background
 
