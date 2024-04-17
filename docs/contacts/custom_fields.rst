@@ -109,7 +109,9 @@ To mitigate the table lock issue, run the command only once daily when you know 
 Analyzing Custom Fields to optimize tables
 ******************************************
 
-Since Mautic 5.1 there is a command which allows you to analyze the Custom Fields and optimize the tables. This command is useful when you have a lot of Custom Fields and you want to optimize the size of VARCHAR fields.
+Since Mautic 5.1 there is a command which allows you to analyze the Custom Fields and optimize the tables. This command is useful when you have a lot of Custom Fields and you want to optimize the size of VARCHAR fields.  
+
+Using this command allows you to optimize the VARCHAR columns so that you can create more Custom Fields if you hit the hard limit on the Leads table and can't create more.
 
 Use the command:
 
