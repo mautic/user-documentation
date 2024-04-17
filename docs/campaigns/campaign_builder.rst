@@ -266,7 +266,7 @@ To clone an event:
 1. Hover over the Campaign event that you want to clone and click the copy icon button to store the event in the clipboard:
 
 .. image:: images/clone-campaign-event.png
-  :width: 600
+  :width: 277
   :alt: Screenshot of hovering over a campaign event to reveal the clone option
 
 
@@ -275,7 +275,7 @@ To clone an event:
 3. In the modal window, click the "Insert" button to paste the stored event:
 
 .. image:: images/paste-cloned-event-modal.png
-  :width: 600
+  :width: 583
   :alt: Screenshot of the modal window with the insert option to paste the cloned event
 
 The cloned event is now inserted in the Campaign workflow.
