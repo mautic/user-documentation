@@ -403,7 +403,7 @@ Form settings
 Contact settings
 ****************
 
-Multiple company management
+Multiple Company management
 ===========================
 
  .. image:: images/multiple-companies-enabled.png
