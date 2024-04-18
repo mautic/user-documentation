@@ -403,8 +403,12 @@ Form settings
 Contact settings
 ****************
 
+.. vale off
+
 Multiple Company management
 ===========================
+
+.. vale on
 
  .. image:: images/multiple-companies-enabled.png
       :width: 600
