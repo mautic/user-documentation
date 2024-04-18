@@ -250,4 +250,5 @@ Actions and Decisions in Mautic require a :doc:`cron job</configuration/cron_job
 
    php /path/to/mautic/bin/console mautic:campaigns:trigger
 
-If you want to execute the command at different intervals for specific Campaigns, you can pass the ``--campaign-id=ID`` argument to the command.
+If you want to execute the command at different intervals for specific Campaigns, you can pass the ``--campaign-id=ID`` option to the command.
+If you want to ignore specific Campaigns, you can pass the ``--exclude=ID`` option to the command. Passing multiple options will ignore multiple Campaigns.
