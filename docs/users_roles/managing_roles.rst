@@ -92,7 +92,7 @@ There are permission levels relating to the editable fields in the Users section
 
 * **All** - this allows the Users with this Role to edit all fields relating to the Users section
 
-Since Mautic 5.1 there is an additional permission relating to allowing Users of Mautic to export information. You can set this permission within the Contact, Forms, and Reports Permissions. If this permission isn't set, the User won't see the options for, or be able to export information - such as lists of Contacts, Form submissions and Report data - from Mautic.
+Since Mautic 5.1 there is an additional permission relating to allowing Users of Mautic to export information. You can set this permission within the Contact, Forms, and Reports Permissions. If this permission isn't set, the User won't see the options for, or be able to export, information - such as lists of Contacts, Form submissions and Report data - from Mautic.
 
 .. note:: 
 
