@@ -73,6 +73,8 @@ By default, the script processes Contacts in batches of 100. If this is too many
 
 You can also limit the number of Contacts to process per script execution using ``--max-events`` to further limit resources used.
 
+Since Mautic 5.1, Campaigns are triggered from newest to oldest. This allows you to process newer Campaigns with higher priority.
+
 .. vale off
 
 **To send frequency rules rescheduled marketing Campaign messages:** Messages marked as *Marketing Messages* - such as Emails as part of a marketing Campaign - get held in a message queue IF frequency rules are setup as either system wide or per Contact. To process this queue and reschedule sending these messages, add this cron job:
