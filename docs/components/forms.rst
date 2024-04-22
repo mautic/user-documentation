@@ -284,15 +284,15 @@ There are two ways to configure a Form field to only display when the asked valu
 First, choose the Form that you want to use for progressive profiling. Go to the Form Fields and open the field configuration of the field you want to use for progressive profiling. Change to the Behavior tab. Here, you can configure the behavior of the fields.
 
 .. note::
-  It's recommended always to use the Email field, even if it's already known, because Mautic uses the Email as a unique identifier for Contacts. Additionally, the submit button field must always be visible; otherwise, the Form cannot be submitted by the Contact.
+  It's always recommended to use the Email field, even if it's already known because Mautic uses the Email as a unique identifier for Contacts. Additionally, the submit button field must always be visible; otherwise, the Form cannot be submitted by the Contact.
 
 1. **Show when value exists**:
-f this option is set to 'No,' Mautic checks if the value for this field exists in the database or if the value was provided in a former form submission already. If it finds a value, Mautic won't display the field in the form. If this option is set to 'Yes,' Mautic shows the field, regardless of whether a value is found or not. The default configuration for this option is 'Yes'.
+if this option is set to 'No,' Mautic checks if the value for this field exists in the database or if the value was provided in a former form submission already. If it finds a value, Mautic won't display the field in the form. If this option is set to 'Yes,' Mautic shows the field, regardless of whether a value is found or not. The default configuration for this option is 'Yes'.
 
 2. **Display field only after X submissions**:
-If you have a Form that you would like to use multiple times, with more fields occurring the more times a Contact fills it out, while still only using a single Form, the option 'Display field only after X submissions' is what you are looking for. As the name already states, the field will only appear once the Form has been submitted X times. This goes hand in hand very well with the ability to hide fields if the value is already known.
+if you have a Form that you'd like to use multiple times, with more fields appearing the more times a contact fills it out, while still using only a single Form, the option 'Display field only after X submissions' is what you're looking for. As the name suggests, the field appears only after the Form has been submitted X times. This feature pairs well with the ability to hide fields if the value is already known.
 
-For example: A Form asks for the Email, first, and last name of a Contact on the first time it is filled out, and when the Contact fills out the Form a second time, the first and the last name fields will be hidden, and instead, the Contact will be asked to fill in their company and phone.
+For example, a Form asks for the Email, first, and last name of a Contact on the first time it's filled out. When the Contact fills out the Form a second time, the first and last name fields are hidden, and instead, the Contact is asked to fill in their Company and phone.
 
 .. vale off
 
@@ -302,17 +302,17 @@ Limits of Progressive Profiling
 
 **The search history limit**
 
-Mautic Forms, which do not use progressive profiling, are as fast as they can be. The HTML of the Form is rendered once, stored, and this 'cached' HTML is used for the next Form load. When progressive profiling configuration is turned on for any of the Form fields, the Form HTML might be different for each Contact. It can even change for each Contact after each submission. The impact of this is that form-caching cannot be used, and the Form load time will be slower for progressive profiling Forms.
+Mautic Forms, which don't use progressive profiling, operate at their maximum speed. The HTML of the Form renders once, gets stored, and this 'cached' HTML is utilized for subsequent Form loads. However, when progressive profiling configuration is enabled for any of the Form fields, the Form HTML might differ for each Contact. It could even change for each Contact after every submission. Consequently, Form caching cannot be utilized, leading to slower Form load times for progressive profiling Forms.
 
-There is also a limit of 200 submissions from which Mautic searches for existing Form values. This limit was imposed to prevent possible long form loading times - or even hitting the server time or memory limits - when a contact has several thousand form submissions. This limit might cause Mautic to display/hide the wrong fields if the contact exceeds this limit.
+Mautic imposed a limit of 200 submissions from which it searches for existing Form values. This limit aims to prevent possible long Form loading times or hitting the server time or memory limits when a Contact has several thousand Form submissions. Exceeding this limit might cause Mautic to display/hide the wrong fields for a Contact.
 
 **The embed type limit**
 
-Progressive Profiling forms won't function if you embed your form as static HTML. However, they will work on form preview, form public pages, forms embedded via JS, and forms embedded via iframes.
+Progressive Profiling Forms don't function if you embed your Form as static HTML. However, they work on Form preview, Form public pages, Forms embedded via JS, and Forms embedded via iframes.
 
 **The kiosk mode limit**
 
-If you switch the form to Kiosk Mode, the Progressive Profiling features are turned off. In Kiosk Mode, the form always creates a new contact on each submission and does not track the device from which the form was submitted.
+When you switch the Form to Kiosk Mode, the Progressive Profiling features are disabled. In Kiosk Mode, the Form always creates a new Contact upon each submission and doesn't track the device from which the Form was submitted.
 
 Form actions
 ************
