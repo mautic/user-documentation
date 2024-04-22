@@ -73,7 +73,7 @@ By default, the script processes Contacts in batches of 100. If this is too many
 
 You can also limit the number of Contacts to process per script execution using ``--max-events`` to further limit resources used.
 
-Since Mautic 5.1, Campaigns are triggered from newest to oldest. This allows you to process newer Campaigns with higher priority.
+Since Mautic 5.1, Mautic triggers Campaigns in order from newest to oldest. This allows you to process newer Campaigns with higher priority.
 
 .. vale off
 
