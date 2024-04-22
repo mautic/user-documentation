@@ -274,20 +274,20 @@ Progressive profiling
 *********************
 .. vale on
 
-Progressive profiling is a powerful feature used to reduce the length of forms by hiding all the fields which are already known. This will prevent your contacts from feeling overwhelmed by massive forms and will even reduce the time it takes to fill out a form if fields are already known to your Mautic instance and thus are hidden for the contact.
+Progressive profiling is a powerful feature used to reduce the length of Forms by hiding all the fields that are already known. This prevents your Contacts from feeling overwhelmed by massive forms and even reduces the time it takes to fill out a Form if fields are already known to your Mautic instance and thus hidden for the Contact.
 
 Configuration
 ==============
 
-There are two ways to configure a form field to only display when the asked values are unknown.
+There are two ways to configure a Form field to only display when the asked values are unknown.
 
-First, choose the form that you want to use for progressive profiling. Go to the form fields and open the field configuration of the field you want to use for progressive profiling. Change to the Behavior tab, here you can configure the behaviour of the fields.
+First, choose the Form that you want to use for progressive profiling. Go to the form fields and open the field configuration of the field you want to use for progressive profiling. Change to the Behavior tab; here you can configure the behavior of the fields.
 
 .. note::
   We recommend to always use the email field, even though it might already be known, because Mautic uses the email as a unique identifier for contacts. Also the submit button field must be always visible because otherwise the form can not be submitted by the contact.
 
 1. **Show when value exists**:
-If this option is set to "No", Mautic checks if the value for this field exists in the database or if the value was provided in a former form submission already. If a value is found, the field won't be displayed in the form. If this option is set to "Yes", Mautic will show the field, regardless whether a value is found or not. The default configuration for this option is "Yes".
+If this option is set to 'No' Mautic checks if the value for this field exists in the database or if the value was provided in a former form submission already. If a value is found, the field won't be displayed in the form. If this option is set to 'Yes' Mautic will show the field, regardless of whether a value is found or not. The default configuration for this option is 'Yes'.
 
 2. **Display field only after X submissions**:
 If you have a form that you would like to use multiple times, with more fields occuring the more times a contact fills it out, while still only using a single form, the option "Display field only after X submissions" is what you are looking for. As the name already states, the field will only appear once the form hast been submitted X times. This goes hand in hand very well with the ability to hide fields if the value is already known.
