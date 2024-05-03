@@ -157,6 +157,21 @@ To import an especially large number of Contacts or Companies in the background,
 
 The time taken for this command to execute depends on the number of Contacts in the CSV file. However, on successful completion of the import operation, a notification appears on the Mautic dashboard.
 
+.. vale off
+
+Export Contacts cron job
+========================
+
+.. vale on
+
+To export Contacts to CSV - sending the results via Email - use the following command:
+
+.. code-block:: bash
+
+    php /path/to/mautic/bin/console mautic:contacts:scheduled_export
+
+The time taken for this command to execute depends on the number of Contacts in the CSV file. However, on successful completion of the export operation, Mautic sends an email with the link to download the CSV.
+
 Webhooks cron job
 =================
 
