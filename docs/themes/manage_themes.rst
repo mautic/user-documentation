@@ -109,7 +109,7 @@ Hiding a Theme
 
 .. vale on
 
-Users can't remove defautl Themes, but they can hide them from the list of Themes in the Email and Landing Page builders.
+Users can't remove default Themes, but they can hide them from the list of Themes in the Email and Landing Page builders.
 
 To hide a Theme:
 
