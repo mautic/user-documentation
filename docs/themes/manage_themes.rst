@@ -105,7 +105,7 @@ To preview a Theme:
 .. vale off
 
 Hiding a Theme
-******************
+**************
 
 .. vale on
 
