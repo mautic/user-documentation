@@ -106,6 +106,7 @@ This configuration helps prevent **http** request timeouts because it handles th
 
 To mitigate the table lock issue, run the command only once daily when you know that most of your audience is offline. With less traffic going into Mautic, the chances of encountering a problem are lower.
 
+
 Analyzing Custom Fields to optimize tables
 ******************************************
 
@@ -126,3 +127,29 @@ Use the following to export the data to a file:
 .. code-block:: bash
 
     bin/console mautic:fields:analyse > path/to/file.csv
+
+Locally defined countries and regions
+*************************************
+
+Since Mautic 5.1 it's possible to define custom countries and regions via locally hosted JSON files. This is useful when you have a specific set of countries or regions that you want to use in your Mautic instance. You can define these in a file called ``countries.json`` or ``regions.json`` located in your defined ``upload_dir`` which is ``media/files`` by default. Example code snippets are below:
+
+.. code-block:: json
+
+  [
+  "Middle Earth",
+  "Fillory"
+  ]
+
+.. code-block:: json
+  
+  {
+  "Middle Earth": [
+    "The Shire",
+    "Mordor"
+  ],
+  "Fillory": [
+    "Castle Whitespire",
+    "Ember's Tomb"
+  ]
+  }
+
