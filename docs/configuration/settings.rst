@@ -319,7 +319,11 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
-* **Do not contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+* **Do Not Contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+
+.. image:: images/default-frequency-rule.png
+  :width: 600
+  :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
 
 .. note:: 
 
@@ -328,7 +332,7 @@ Default frequency rule
 Monitored inbox settings
 ========================
 
-.. image:: images/monitored-settings.png
+.. image:: images/monitored-inbox-settings.png
   :width: 600
   :alt: Screenshot showing Monitored Settings Configuration in Mautic
 
@@ -448,7 +452,16 @@ Import settings
   :alt: Screenshot showing Import Settings Configuration in Mautic
 
 * **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV automatically sets to import in the background which requires a :ref:`cron job<import contacts cron job>` to trigger. Set to 0 if you want to always import files in the background recommended for performance optimization.
-   
+
+Export settings
+===============
+
+.. image:: images/export-settings.png
+  :width: 600
+  :alt: Screenshot showing Export Settings Configuration in Mautic
+
+* **Automatically export Contacts to CSV in the background** - If set to Yes, Mautic processes CSV exports of Contacts in the background and Mautic sends an Email with a link to download the file when it's processed.
+
 Segment settings
 ****************
 
