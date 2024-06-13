@@ -103,8 +103,8 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``mautic:contacts:deduplicate``
      - Merge Contacts based on same unique identifiers
-
-  * - ``mautic:contacts:scheduled_export``
+     - 
+   * - ``mautic:contacts:scheduled_export``
      - Processes exports of Contacts to a CSV file and sends the results via Email.
      -
    * - ``mautic:custom-field:create-column``
