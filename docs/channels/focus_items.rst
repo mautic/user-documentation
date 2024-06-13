@@ -154,7 +154,7 @@ When creating a new Focus Item, you can set the following fields:
 
 **Category** - Assign a Category to help you organize your Focus Items.
 
-**Active** - Whether the Focus Item is available for use - active - or not available - unactive
+**Active** - Whether the Focus Item is available for use - active - or not available - inactive.
 
 .. vale off
 
