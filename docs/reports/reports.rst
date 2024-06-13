@@ -162,11 +162,11 @@ Alternatively, you can select Weekdays to send the Report on the first or last w
 
 Once you've set all of the options you'd like in the **Details**, **Data**, **Graphs**, and **Schedule** tabs, click **Save & Close** to save the Report. Clicking **Apply** saves the progress you've made on building the Report and keeps you in the edit mode.
 
-You can identify scheduled reports in the list of Reports from Mautic 5.1 onwards by the paper aeroplane icon next to the Report name.
+You can identify scheduled Reports in the list of Reports from Mautic 5.1 and later by the paper aeroplane icon next to the Report name.
 
 .. image:: images/scheduled-report.png
    :align: center
-   :alt: Screenshot of Mautic Scheduled Report showing a paper aeroplan icon
+   :alt: Screenshot of Mautic Scheduled Report showing a paper aeroplane icon
 
 .. vale off
 
