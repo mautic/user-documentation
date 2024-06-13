@@ -39,6 +39,19 @@ Segment Emails are marketing Emails by default. On creation the marketer assigns
 
 This entry field is a multi-select which allows you to choose several Segments if necessary.
 
+.. vale off
+
+Excluding Segments
+==================
+
+.. vale on
+
+There is a multi-select field that allows excluding Contacts belonging given Segments.
+
+.. image:: images/emails/email-excluding-segments.png
+  :width: 400
+  :alt: Screenshot showing selecting Segments to exclude.
+
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
 Email formats
@@ -89,10 +102,12 @@ Tokens
 
 Mautic allows the use of tokens in Emails which gives the marketer the possibility to integrate a number of Contact fields in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
 
+It's also possible to override the 'from' field in an Email with a token from your :doc:`/contacts/custom_fields` since Mautic 5.1. 
+
 Check the :doc:`/configuration/variables` documentation for a list of all the available default fields.
 
 Default value
-~~~~~~~~~~~~~
+-------------
 
 A token can have a default value for cases when the Contact doesn't have the value known. You must specify the default value after a ``|`` character, for example:
 
@@ -103,7 +118,7 @@ A token can have a default value for cases when the Contact doesn't have the val
 The ``|friend`` tells Mautic to use 'friend' if there is no first name present in the Contact field.
 
 Encoded value
-~~~~~~~~~~~~~
+-------------
 
 It's possible to encode values used in a token using the following syntax:
 
@@ -114,7 +129,7 @@ It's possible to encode values used in a token using the following syntax:
 The ``|true`` tells Mautic to encode the value used, for example in URLs.
 
 Date formats
-~~~~~~~~~~~~
+------------
 
 To use custom date fields in tokens, use the following format:
 
@@ -150,7 +165,7 @@ To make use of monitoring replies from Contacts, you must have access to an IMAP
 ``php path/to/mautic/bin/console mautic:email:fetch``
 
 Usage
-~~~~~
+-----
 Contact replies within Campaigns function as decision after an Email Send action, to take further action based on whether the Contact has replied to the Email. Mautic tries to read the inbox, parse messages, and find replies from the specified Contact. The Contact, when matched with an incoming reply, proceeds down the positive path immediately after the reply detection.
 
 
@@ -277,7 +292,7 @@ For example:
     <a href="{webview_url}" target="_blank">View in your browser</a>
 
 Bounce management
-#################
+*****************
 
 Mautic provides a feature which allows monitoring of IMAP accounts to detect bounced Emails and unsubscribe requests.
 
@@ -290,7 +305,7 @@ Elastic Email, SparkPost, Mandrill, Mailjet, SendGrid and Amazon SES support Web
 .. vale off
 
 Monitored inbox configuration
-*****************************
+=============================
 
 .. vale on
 
@@ -315,7 +330,7 @@ If sending mail through GMail, the Return Path of the Email is automatically rew
 If you select an Unsubscribe folder, Mautic also appends the Email as part of the "List-Unsubscribe" header. It then parses messages it finds in that folder and automatically unsubscribe the Contact.
 
 Webhook bounce management
-*************************
+=========================
 
 Since Mautic 5 all the Email transports use the same Webhook - sometimes called callback - URL: ``https://mautic.example.com/mailer/callback``. Please follow the documentation for the specific Email transport you've installed to get more information about the Webhook configuration.
 
@@ -323,7 +338,7 @@ Since Mautic 5 all the Email transports use the same Webhook - sometimes called 
 .. vale off
 
 Create a Segment with bounced Emails
-************************************
+=====================================
 
 .. vale on
 
@@ -376,4 +391,3 @@ This is because Mautic sends test Emails to a Mautic User and not to a Mautic Co
 Mautic Users can't unsubscribe and therefore the unsubscribe link looks like this: ``https://mautic.example.com/|URL|``. However, the link **does** work correctly when you send the Email to a Contact.
 
 Best practice is to create a Segment with a small number of Contacts to receive test Emails - for example, yourself - which ensures that you can fully test features such as unsubscribe behaviour.
-
