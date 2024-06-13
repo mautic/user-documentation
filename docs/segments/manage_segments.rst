@@ -33,7 +33,7 @@ Creating a Segment
   :width: 700
   :alt: Screenshot showing creating a Segment.
 
-* **Public Segment** - This option determines if the Segment is available for all Users to see and use, or only the User who created the Segment.
+* **Visible to other Users** - This option determines if the Segment is available for all Users to see and use, or only the User who created the Segment.
 
 * **Available in Preference Center** - If set to **Yes**, Contacts can see and opt into or out of the Segment on a **Preference Center** page. The Segments display if the Preference Center has the **Segment List** slot type.
 
