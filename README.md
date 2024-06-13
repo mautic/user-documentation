@@ -87,7 +87,7 @@ You can automatically build changes to rst files using a file watcher.
 [RST Cheatsheet]: <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>
 [Sphinx Template]: <https://github.com/readthedocs/sphinx_rtd_theme/tree/master/docs/demo>
 [Sphinx Demo]: <https://sphinx-rtd-theme.readthedocs.io/en/stable/demo/structure.html>
-[Vale]: <https://docs.errata.ai/vale/install>
+[Vale]: <https://vale.sh/docs/vale-cli/installation/>
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
