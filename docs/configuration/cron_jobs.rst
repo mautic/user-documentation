@@ -157,6 +157,21 @@ To import an especially large number of Contacts or Companies in the background,
 
 The time taken for this command to execute depends on the number of Contacts in the CSV file. However, on successful completion of the import operation, a notification appears on the Mautic dashboard.
 
+.. vale off
+
+Export Contacts cron job
+========================
+
+.. vale on
+
+To export Contacts to CSV - sending the results via Email - use the following command:
+
+.. code-block:: bash
+
+    php /path/to/mautic/bin/console mautic:contacts:scheduled_export
+
+The time taken for this command to execute depends on the number of Contacts in the CSV file. However, on successful completion of the export operation, Mautic sends an email with the link to download the CSV.
+
 Webhooks cron job
 =================
 
@@ -165,6 +180,15 @@ If the Mautic configuration settings include Webhook batch processing, use the f
 .. code-block:: php
 
     php /path/to/mautic/bin/console mautic:webhooks:process
+
+
+Since Mautic 5.1 it's also possible to run the Webhooks cron job in 'range mode'. This allows you to specify a range of Webhook events to process in a single run. This can be useful if you have a large number of Webhook events to process and want to avoid running out of memory. 
+
+To use this mode, you can specify the ``--min-id`` and ``--max-id`` options. For example, to process events for a Webhook with ID of 5, you can specify to only process the events for that Webhook with IDs between 1000 and 2000 using the following command:
+
+.. code-block:: bash
+
+    bin/console mautic:webhooks:process --webhook-id=5 --min-id=1000 --max-id=2000
 
 .. _cron jobs:
 
