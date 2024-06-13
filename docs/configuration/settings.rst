@@ -378,7 +378,7 @@ Unsubscribe settings
 
 * **Show Contact preference settings** - Select **Yes** to direct the unsubscribe link to your configured Preference enter. If you haven't created a Preference Center, Mautic creates a default page based on the next 5 settings. The created page uses the default Theme for styling.
 
-* **Show Contact Segment preferences** - Select **Yes** to allow a Contact to change which Segments they're part of on the Preference Center. Segments won't display on the Preference Center page if they aren't active and public.
+* **Show Contact Segment preferences** - Select **Yes** to allow a Contact to change which Segments they're part of on the Preference Center. Segments won't display on the Preference Center if they aren't active and public.
 
 * **Show Contact frequency preferences** - Select **Yes** to allow an individual to limit the number of Marketing Messages they receive on each Channel from the Preference Center.
 
