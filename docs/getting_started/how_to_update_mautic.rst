@@ -33,7 +33,7 @@ If you customize any of the 'scaffolding' files - commonly ``.htaccess`` - you m
 
 Follow the steps below to update your core files.
 
-1. Backup your ``composer.lock`` and ``composer.json`` file. If something does not work as expected during the ``composer update`` command, restore them and run ``composer install`` to return your codebase to the state it was in before attempting to update.
+1. Backup your ``composer.lock`` and ``composer.json`` file. If something doesn't work as expected during the ``composer update`` command, restore them and run ``composer install`` to return your codebase to the state it was in before attempting to update.
 
 2. Edit the ``composer.json`` file, and change all previous versions with the version you wish to update to for all Mautic packages.
 
