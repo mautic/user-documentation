@@ -195,7 +195,7 @@ You can use the menu on the sidebar to configure the Focus Item to your liking. 
 Using Focus Items
 *****************
 
-Once you have created your Focus Item, you're ready to activate it to your website. If you're not quite ready for the Focus Item to go live but you need to get it set up on your website, you can set the Focus Item to unactive.
+Once you have created your Focus Item, you're ready to activate it to your website. If you're not quite ready for the Focus Item to go live but you need to get it set up on your website, set the Focus Item to inactive.
 
 Deploying to a website
 ======================
