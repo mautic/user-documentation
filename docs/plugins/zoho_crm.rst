@@ -5,7 +5,7 @@ Zoho CRM
 
 .. vale on
 
-Mautic can push a Contact to :xref:`Zoho CRM` based on :ref:`Campaign actions<new Campaign actions>` or :ref:`Point Triggers<Points>`.
+Mautic can push a Contact to :xref:`Zoho CRM` based on Campaign :ref:`Actions` or :ref:`Point triggers`.
 
 Language configuration warning
 ******************************

@@ -225,7 +225,7 @@ Example API transport installation
 .. vale on
 
 .. warning::
-  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`.
+  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic>`.
 
 If you want to use :xref:`SendGrid` API instead of SMTP to send Emails, for example, you can install the official Symfony SendGrid Transport by running the following command mentioned alongside others in the :xref:`Symfony Mailer` documentation.
 
@@ -248,7 +248,7 @@ This is how you would configure Mautic's Email configuration:
 To replace the SendGrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the SendGrid API to send Emails.
 
 .. warning::
-  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports from Symfony **don't support batch sending, even via API**. They only send one Email per request, as opposed to a thousand Emails per request as is the case with some Mautic transports, which can make them slow at scale. They also **don't support transport callback handling used for bounce management**. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These Plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace.rst>`.
+  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports from Symfony **don't support batch sending, even via API**. They only send one Email per request, as opposed to a thousand Emails per request as is the case with some Mautic transports, which can make them slow at scale. They also **don't support transport callback handling used for bounce management**. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These Plugins are available in the :doc:`Mautic Marketplace </marketplace/marketplace>`.
 
 The table below lists available transport Plugins created for Mautic to include support for batch sending and callback handling.
 
@@ -264,8 +264,8 @@ The table below lists available transport Plugins created for Mautic to include 
      - ``composer require ts-navghane/sparkpost-plugin``
 .. vale on
 
-Queue settings
-==============
+Configuring the Queue
+=====================
 
 The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`. Documentation relating to configuring the queue is in the :doc:`queue </queue/queue>` section.
 
@@ -319,7 +319,11 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
-* **Do not contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+* **Do Not Contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+
+.. image:: images/default-frequency-rule.png
+  :width: 600
+  :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
 
 .. note:: 
 
@@ -328,7 +332,7 @@ Default frequency rule
 Monitored inbox settings
 ========================
 
-.. image:: images/monitored-settings.png
+.. image:: images/monitored-inbox-settings.png
   :width: 600
   :alt: Screenshot showing Monitored Settings Configuration in Mautic
 
@@ -387,8 +391,8 @@ Unsubscribe settings
 
 .. vale off
 
-Tracking Opened Emails
-======================
+How to track opened Emails
+==========================
 
 .. vale on
 
@@ -400,8 +404,8 @@ It's possible to turn off the tracking pixel entirely if you don't need to use i
 
 .. vale off
 
-Tracking links in Emails
-========================
+How to track links in Emails
+============================
 
 .. vale on
 
@@ -448,7 +452,16 @@ Import settings
   :alt: Screenshot showing Import Settings Configuration in Mautic
 
 * **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV automatically sets to import in the background which requires a :ref:`cron job<import contacts cron job>` to trigger. Set to 0 if you want to always import files in the background recommended for performance optimization.
-   
+
+Export settings
+===============
+
+.. image:: images/export-settings.png
+  :width: 600
+  :alt: Screenshot showing Export Settings Configuration in Mautic
+
+* **Automatically export Contacts to CSV in the background** - If set to Yes, Mautic processes CSV exports of Contacts in the background and Mautic sends an Email with a link to download the file when it's processed.
+
 Segment settings
 ****************
 
@@ -468,7 +481,7 @@ Company settings
 * **Merge by unique fields with operator** - You can determine which operator to use when merging fields if there is more than one unique identifier.
 
 Queue settings
-****************
+**************
 
 Purpose of the queuing
 ======================
