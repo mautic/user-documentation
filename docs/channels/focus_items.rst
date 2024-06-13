@@ -160,7 +160,7 @@ When creating a new Focus Item, you can set the following fields:
 
 **Activate at (date/time)** - This allows you to define the date and time at which this Text Message is available for sending to Contacts
 
-**Disable at (date/time)** - This allows you to define the date and time at which this Text Message ceases to be available for sending to Contacts.
+**Deactivate at (date/time)** - This allows you to define the date and time at which this Text Message ceases to be available for sending to Contacts.
 
 .. vale on
 
