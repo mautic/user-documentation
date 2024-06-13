@@ -268,6 +268,52 @@ To change the order of fields on your Form:
 #. Click the field you would like to move
 #. Drag the field to a new location
 
+.. vale off
+
+Progressive profiling
+*********************
+.. vale on
+
+Progressive profiling is a powerful feature used to reduce the length of Forms by hiding all the fields that are already known. This prevents your Contacts from feeling overwhelmed by massive Forms and even reduces the time it takes to fill out a Form if fields are already known to your Mautic instance and thus hidden for the Contact.
+
+Configuration
+==============
+
+There are two ways to configure a Form Field to only display when the asked values are unknown.
+
+First, choose the Form that you want to use for progressive profiling. Go to the Form Fields and open the field configuration of the field you want to use for progressive profiling. Change to the Behavior tab. Here, you can configure the behavior of the fields.
+
+.. note::
+  It's always recommended to use the Email field, even if it's already known, because Mautic uses the Email as a unique identifier for Contacts. Additionally, ensure the submit button field is always visible. Otherwise, the Contact can't submit the Form.
+
+1. **Show when value exists**:
+if set to 'No,' Mautic checks whether the value for this field exists in the database or if a previous Form submission provided it. If found, Mautic won't display the field in the Form. If set to 'Yes,' Mautic displays the field regardless of the existence of a value in the field. The default configuration for this option is 'Yes'.
+
+2. **Display field only after X submissions**:
+if you have a Form that you'd like to use multiple times, with more fields appearing the more times a Contact fills it out, while still using only a single Form, the option 'Display field only after X submissions' is what you're looking for. As the name suggests, the field appears only after the Form has received X submissions. This feature pairs well with the ability to hide fields if the value is already known.
+
+For example, on the first time of completing the Form, it asks for the Email, first, and last name of a Contact. When the Contact fills out the Form a second time, it hides the first and last name fields, and instead, it prompts the Contact to fill in their Company and phone.
+
+.. vale off
+
+Limits of Progressive Profiling
+===============================
+.. vale on
+
+**The search history limit**
+
+Mautic Forms which don't use progressive profiling are as fast as they can be. The HTML of the Form renders once, gets stored, and Mautic uses this "cached" HTML  for the next Form load. When turning on progressive profiling for any of the Form Fields, the Form HTML might be different for each Contact. It can even change for each Contact after each submission. The impact of this is that you can't use Form-caching, and the Form load time is slower for a progressive profiling Form.
+
+Mautic imposed a limit of 200 submissions from which it searches for existing Form values. This limit aims to prevent possible long Form loading times or hitting the server time or memory limits when a Contact has several thousand Form submissions. Exceeding this limit might cause Mautic to display/hide the wrong fields for a Contact.
+
+**The embed type limit**
+
+Progressive Profiling Forms don't function if you embed your Form as static HTML. However, they work on Form preview, Form public pages, Forms embedded via JS, and Forms embedded via iframes.
+
+**The kiosk mode limit**
+
+When you switch the Form to Kiosk Mode, the Progressive Profiling features are turn off. In Kiosk Mode, the Form always creates a new Contact upon each submission and doesn't track the device submitting the Form.
+
 Form actions
 ************
 
@@ -504,7 +550,7 @@ Once saved, the Form displays the conditional field nested underneath the parent
 Blocking Form submissions from specified domains
 ************************************************
 
-Sometimes it's necessary to block certain domains from submitting Forms - for example to restrict access to proprietary content and reduce the volume of unqualified leads.
+Sometimes it's necessary to block certain domains from submitting Forms - for example to restrict access to proprietary content and reduce the volume of unqualified Contacts.
 
 Configuring blocked domains
 ===========================
