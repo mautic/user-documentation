@@ -339,6 +339,19 @@ These commands work with all available Plugins. To avoid performance issues when
     you can replace ``mautic:plugins:reload`` with ``mautic:plugins:install`` or ``mautic:plugins:update``. 
     They're the same commands with different alias.
 
+Exclude processed entities
+**************************
+
+This feature is particularly useful for managing data and ensuring that entities aren't processed multiple times unnecessarily. The ``--exclude`` option prevents the specified action from re-processing entities that it has already processed.. This option is available for the ``mautic:campaigns:trigger``, ``mautic:campaigns:rebuild``, and ``mautic:segments:update`` commands.
+
+.. code-block:: php
+
+    php /path/to/mautic/bin/console mautic:campaigns:trigger --exclude
+
+.. note ::
+
+    This is particularly useful for scenarios where you want to avoid redundant processing of entities, such as preventing a Campaign or Segment action from executing multiple times for the same Contact.
+
 Tips & troubleshooting
 **********************
 
