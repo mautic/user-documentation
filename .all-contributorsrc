@@ -77,6 +77,42 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "J-Wick4",
+      "name": "John Wick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1954540?v=4",
+      "profile": "https://github.com/J-Wick4",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jagtapreshma",
+      "name": "jagtapreshma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81143250?v=4",
+      "profile": "https://github.com/jagtapreshma",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "markusVJH",
+      "name": "Markus Heinilä",
+      "avatar_url": "https://avatars.githubusercontent.com/u/121946942?v=4",
+      "profile": "https://github.com/markusVJH",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "uadf",
+      "name": "CPweb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2785980?v=4",
+      "profile": "https://eglise.catholique.fr",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,

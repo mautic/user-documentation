@@ -37,6 +37,15 @@ There are different types of documentation available to help you navigate your w
    getting_started/switching_composer
    getting_started/how_to_update_mautic
 
+.. toctree:: 
+   :caption: Troubleshooting
+   :maxdepth: 2
+   :hidden:
+
+   troubleshooting/troubleshooting
+   troubleshooting/working_with_resource_limits
+   troubleshooting/file_ownership_permissions
+
 .. toctree::
    :caption: Configuration
    :maxdepth: 2
@@ -45,8 +54,10 @@ There are different types of documentation available to help you navigate your w
    configuration/maxmind_license
    configuration/command_line_interface
    configuration/cron_jobs
+   configuration/tracking_script
    configuration/variables
    configuration/settings
+   configuration/shortener
 
 .. toctree::
    :caption: Authentication
@@ -153,7 +164,6 @@ There are different types of documentation available to help you navigate your w
 
    plugins/plugin_resources
    plugins/amazon
-   plugins/citrix
    plugins/clearbit
    plugins/connectwise
    plugins/fullcontact

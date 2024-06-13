@@ -1,7 +1,7 @@
 Focus Items
 ###########
 
-Focus items allow you to engage Users on your site through bars, modals, notifications, popups, and light boxes. It's possible to initiate Focus Items at different times and with different actions such as exit intent.
+Focus Items allow you to engage Users on your site through bars, modals, notifications, popups, and light boxes. It's possible to initiate Focus Items at different times and with different actions such as exit intent.
 
 You can find Focus Items listed under the Channels menu.
 
@@ -31,8 +31,6 @@ For each type of Focus Item, there are settings to configure which control the t
     :width: 400
     :alt: Screenshot showing the engagement settings for Focus Items.
 
-.. vale off 
-
 - **Animate** - When set to Yes, this applies a slide-in animation to the Focus Item. When set to No, the item appears without any kind of sliding motion.
 - **When to engage** - This setting controls the Focus Item shows. There are several options:
    - **Upon arrival** - As soon as a visitor lands on the page
@@ -49,8 +47,7 @@ For each type of Focus Item, there are settings to configure which control the t
    - **Once per hour** -  Show the Focus Item once every hour that the visitor is on your website
    - **Once per day** - Show the Focus Item once per day that the visitor is on your website
 - **Stop engaging after a conversion** - This option is only available for the types which track a conversion (Collect Data and Emphasize a Link).  If set to Yes, the Focus Item no longer displays if the visitor has either submitted the Form (Collect Data type) or clicked on the link (Emphasize a Link type).
-
-.. vale on
+- **Stop engaging after closing Focus** - This option is available for Focus Items and uses cookies. If set to Yes, the Focus Item no longer displays to the visitor after they have interacted with it, until they clear their cookies.
 
 Styles
 ======
@@ -93,7 +90,7 @@ Visitors can choose to close this type of Focus Item with the *X* button in the 
 Full page
 ~~~~~~~~~
 
-The full page Focus Item completely takes over the whole page, hiding the rest of the page content until the visitor clicks the *X* button in the top right hand corner of the Focus Item.
+The full page Focus Item completely takes over the whole page, hiding the page content until the visitor clicks the *X* button in the top right hand corner of the Focus Item.
 
 There are no additional configuration options for this style of Focus Item.
 
@@ -127,7 +124,7 @@ This editor mode allows a simplified experience with a few fields - depending on
 - **Select the Form to insert** - This option is only available for Collect Data Focus Item types. It allows you to select an existing Mautic Form to use with the Focus Item. For styling and formatting reasons, you may want to create a Form specifically for the Focus Item, adding styling attributes to the Attributes tab on the Form fields.
 - **Link text** - This option is only available for Emphasize a Link Focus Item types. It allows you to specify the text used on the Focus Item's button.
 - **Link URL** - This option is only available for Emphasize a Link Focus Item types. It allows you to specify the URL where you'd like to drive visitors with the Focus Item.
-- **Open in a new window** - This option is only available for Emphasize a Link Focus Item types. If set to Yes, this ensures that the link is opened in a new window. If set to No, the link opens in the current tab.
+- **Open in a new window** - This option is only available for Emphasize a Link Focus Item types. If set to Yes, this ensures that the link opens in a new window. If set to No, the link opens in the current tab.
 
 Editor
 ~~~~~~
@@ -167,7 +164,7 @@ When creating a new Focus Item, you can set the following fields:
 
 .. vale on
 
-**Google Analytics UTM tags** - Mautic supports UTM tagging in Emails, Focus Items, and Landing Pages. Any UTM tags with values populated are automatically appended to the end of any links used in the focus item. See :doc:`/channels/utm_tags` for more information.
+**Google Analytics UTM tags** - Mautic supports UTM tagging in Emails, Focus Items, and Landing Pages. Any UTM tags with values populated are automatically appended to the end of any links used in the Focus Item. See :doc:`/channels/utm_tags` for more information.
 
   .. image:: images/focus_items/focus_item_create.png
     :width: 400
@@ -180,7 +177,7 @@ Using the Focus Item builder
 
 .. vale on
 
-After you specify the general information for the Focus Item, click the builder option in the top right corner. If you've specified a URL in the Website field on the details page, the system displays a preview. If you don't see a preview, the website might block iframe previews. Hence, you may need to add the focus item to a development or staging environment without these security restrictions - if available - to see the preview.
+After you specify the general information for the Focus Item, click the builder option in the top right corner. If you've specified a URL in the Website field on the details page, the system displays a preview. If you don't see a preview, the website might block iframe previews. Hence, you may need to add the Focus Item to a development or staging environment without these security restrictions - if available - to see the preview.
 
 .. note:: 
     The preview of the website doesn't appear until you select a style from the options on the Focus Item Builder.
@@ -203,11 +200,11 @@ Once you have created your Focus Item, you're ready to publish it to your websit
 Deploying to a website
 ======================
 
-When you save the Focus Item, the code snippet required to display it on your website is shown in a green box on the Focus Item overview.
+When you save the Focus Item, Mautic shows the code snippet required to display it on your website in a green box on the Focus Item overview.
 
   .. image:: images/focus_items/focus_item_embed.png
     :width: 400
-    :alt: Screenshot showing the Focus Item code to be embedded within a website.
+    :alt: Screenshot showing the Focus Item code to embed within a website.
 
 .. note:: 
     You may need assistance from your web development team to implement the Focus Item tracking code on your website.  
@@ -233,6 +230,6 @@ Measuring success
 
 When using the Emphasize a Link type, Mautic displays the link on the Focus Item overview where you can view the number of unique clicks.
 
-If you change the link in a Focus Item after deployment, all links are listed in the overview.
+If you change the link in a Focus Item after deployment, Mautic lists all links in the overview.
 
 Additionally, Mautic applies UTM tags on Focus Items to both Form submissions and link clicks. If you are using a Focus Item to submit a Form, it's recommended that you have a Submit Action on the Form to record the UTM tags.

@@ -1,7 +1,7 @@
 Mobile push notifications
 ###########################
 
-Mobile notifications integrate your iOS and Android app with :xref:`OneSignal`. Using your own OneSignal account, you can now push a notification to your Contacts's mobile device - with their permission. Enable the Plugin in Mautic's Plugin manager to see Mobile Notifications listed under Channels in the menu.
+Mobile notifications integrate your iOS and Android app with :xref:`OneSignal`. Using your own OneSignal account, you can now push a notification to your Contact's mobile device - with their permission. Enable the Plugin in Mautic's Plugin manager to see Mobile Notifications listed under Channels in the menu.
 
 For more detailed information see the :xref:`OneSignal iOS` and :xref:`OneSignal Android` documentation.
 

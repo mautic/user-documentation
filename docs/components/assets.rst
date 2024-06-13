@@ -35,8 +35,13 @@ Navigate to Components > Assets. Mautic lists any Assets you have previously cre
 
 You create Assets by uploading local resources on your computer, or by locating the Asset from a remote storage host such as Amazon S3. There are limitations by size due to the settings of your server - any such restriction may display as a warning message in the file upload section.
 
-Add UTM to Asset
-~~~~~~~~~~~~~~~~~~
+.. vale off
+
+Add UTM codes to Asset
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. vale on
+
 UTM parameters appended to the download link means that UTM data is available in the resource download Report.
 
 .. code-block:: php
@@ -82,7 +87,7 @@ The following fields are available:
 
 .. vale on
 
-- **Block search engines from indexing this file** - If you don't want to index files like PDF, DOCx and so forth, setting this switch to Yes sends the X-Robots-Tag no-index http header. If set to No, the header isn't sent and your files could become indexed by search engines.
+- **Block search engines from indexing this file** - If you don't want to index files like ``PDF``, ``DOCx`` and so forth, setting this switch to Yes sends the ``X-Robots-Tag no-index`` HTTP header. If set to No, the header isn't sent and your files could become indexed by search engines.
 
 Depending on the type of file uploaded, a preview may display after the upload completes.
 
@@ -108,7 +113,7 @@ Viewing an Asset
 
 Once you've uploaded an Asset, you'll want to make it available for your Contacts to access it. Using the Download URL from the Asset section in Mautic, you can track which Contacts are downloading or viewing the Assets.
 
-Copy and paste the link into your website, on a landing page, or as a link in an Email. 
+Copy and paste the link into your website, on a Landing Page, or as a link in an Email. 
 
 .. note:: 
     In a Mautic Email or Landing Page, append ``?stream=1`` to the end of the URL to open the Asset in a new tab.
@@ -137,5 +142,24 @@ It's possible to delete an Asset by clicking on the 'delete' button while viewin
 
 .. warning:: 
     Once deleted, you can't retrieve an Asset, and statistics relating to the number of downloads for that Asset are no longer be available. Contact Points accumulated as a result of accessing the resource remain. It's recommended where possible to unpublish Assets which are no longer in use - in future there may be an archive feature.
-    
 
+Display Assets directly in the browser
+======================================
+
+By default, Mautic supports the following file types for direct display in the browser:
+
+.. vale off
+
+- gif
+- jpg
+- jpeg
+- mpg
+- mpeg
+- mp3
+- pdf
+- png
+- wav
+
+.. vale on
+
+If you want to change this default behavior, you can modify the ``local.php`` file and set an array of extensions for the ``streamed_extensions`` parameter.

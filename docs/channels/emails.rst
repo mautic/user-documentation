@@ -19,7 +19,7 @@ Template Emails
 
 .. vale on
 
-Template Emails are transactional by default. They're used in Campaigns, Form submit actions, Point triggers, etc. It's possible to send template Emails to the same Contact multiple times. You can't send template Emails to a Contact outside of another Mautic Component except when sending an Email directly to a Contact - in this case Mautic clones the content.
+Template Emails are transactional by default. They're used in Campaigns, Form submit actions, Point Triggers, etc. It's possible to send template Emails to the same Contact multiple times. You can't send template Emails to a Contact outside of another Mautic Component except when sending an Email directly to a Contact - in this case Mautic clones the content.
 
 .. note::
     For this reason, template Emails sent directly to a Contact aren't associated with the template Email itself and thus stats aren't tracked against it.
@@ -38,6 +38,19 @@ Segment Emails are marketing Emails by default. On creation the marketer assigns
   :alt: Screenshot showing selecting Email Segments in Mautic
 
 This entry field is a multi-select which allows you to choose several Segments if necessary.
+
+.. vale off
+
+Excluding Segments
+==================
+
+.. vale on
+
+There is a multi-select field that allows excluding Contacts belonging given Segments.
+
+.. image:: images/emails/email-excluding-segments.png
+  :width: 400
+  :alt: Screenshot showing selecting Segments to exclude.
 
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
@@ -65,6 +78,12 @@ When creating the Email, there is an option to assign a language and a translati
 
 It's also possible to have translations of A/B test variants.
 
+From Mautic 5.1 it's possible to preview A/B and Translation variants:
+
+.. image:: images/emails/ab-translation-preview.png
+  :width: 400
+  :alt: Screenshot showing A/B and Translation preview
+
 Base64 encoded images
 =====================
 
@@ -83,10 +102,12 @@ Tokens
 
 Mautic allows the use of tokens in Emails which gives the marketer the possibility to integrate a number of Contact fields in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
 
+It's also possible to override the 'from' field in an Email with a token from your :doc:`/contacts/custom_fields` since Mautic 5.1. 
+
 Check the :doc:`/configuration/variables` documentation for a list of all the available default fields.
 
 Default value
-~~~~~~~~~~~~~
+-------------
 
 A token can have a default value for cases when the Contact doesn't have the value known. You must specify the default value after a ``|`` character, for example:
 
@@ -97,7 +118,7 @@ A token can have a default value for cases when the Contact doesn't have the val
 The ``|friend`` tells Mautic to use 'friend' if there is no first name present in the Contact field.
 
 Encoded value
-~~~~~~~~~~~~~
+-------------
 
 It's possible to encode values used in a token using the following syntax:
 
@@ -108,7 +129,7 @@ It's possible to encode values used in a token using the following syntax:
 The ``|true`` tells Mautic to encode the value used, for example in URLs.
 
 Date formats
-~~~~~~~~~~~~
+------------
 
 To use custom date fields in tokens, use the following format:
 
@@ -144,7 +165,7 @@ To make use of monitoring replies from Contacts, you must have access to an IMAP
 ``php path/to/mautic/bin/console mautic:email:fetch``
 
 Usage
-~~~~~
+-----
 Contact replies within Campaigns function as decision after an Email Send action, to take further action based on whether the Contact has replied to the Email. Mautic tries to read the inbox, parse messages, and find replies from the specified Contact. The Contact, when matched with an incoming reply, proceeds down the positive path immediately after the reply detection.
 
 
@@ -222,113 +243,6 @@ Using the Email signature
 
 Marketers can place the signature into an Email using the ``{signature}`` token.
 
-Email delivery
-##############
-
-As Mautic uses the :xref:`Symfony Mailer` library since v5, it supports all Symfony Mailer core plugins out of the box. Transports for other Email services might be found on GitHub or Packagist.
-
-SMTP transport
-**************
-
-The SMTP transport is the default transport used for sending Emails with Mautic. It's configured in the Mautic configuration under the Email Settings tab. The configuration is the same as in the :xref:`Symfony Mailer` documentation.
-
-Mautic now uses a specific way of providing the connection details for Email transports to interpret, which is called a Data Source Name, or DSN. This is the example Data Source Name configuration mentioned in the :xref:`Symfony Mailer` documentation for SMTP:
-
-.. code-block:: shell
-    
-    smtp://user:pass@smtp.example.com:port
-
-Mautic creates this automatically from the values entered in the Email configuration:
-
-.. image:: images/emails/smtp-dsn.png
-    :width: 400
-    :alt: SMTP API DSN example
-
-.. list-table:: Example DSN ``smtp://user:pass@smtp.example.com:port/path?option1=value1&option2=value2`` explained
-    :widths: 10 20 150
-    :header-rows: 1
-    :stub-columns: 1
-
-    * - DSN part
-      - Example
-      - Explanation
-    * - Scheme
-      - smtp
-      - Defines which email transport (plugin) will handle the email sending. It also defines which other DSN parts must be present.
-    * - User
-      - john
-      - Some transport wants username and password to authenticate the connection. Some public or private key. Some just API key.
-    * - Password
-      - pa$$word
-      - As mentioned above, read documentation for your particular transport and fill in the fields that are required. For SMPT this is for password.
-    * - Host
-      - smtp.mydomain.com
-      - For SMTP this is the domain name where your SMTP server is running. Other transports may have the domain handled inside it so many wants to put just ``default`` text here.
-    * - Path
-      - any/path
-      - This is usually empty. For SMTP this may be the path to the SMTP server. For other transports this may be the path to the API endpoint.
-    * - Port
-      - 465
-      - Important for SMTP. The port value defines which encryption is used. This is usually 465 for SSL or 587 for TLS. Avoid using port 25 for security reasons. For other transports this may be the port to the API endpoint.
-    * - Options
-      - timeout=10
-      - This is optional. This may be the timeout for the connection or similar configuration. The config form will allow you to create multiple options.
-
-.. note::
-  Use the Mautic's global configuration to paste in the DSN information, especially the API keys and passwords. The values must be URL-encoded, and the configuration form does that for you. If you are pasting DSN settings directly into the config/local.php file, you must URL-encode the values yourself.
-
-
-.. vale off
-
-Example API transport installation
-
-.. vale on
-
-**********************************
-.. warning::
-  Installing Symfony Transports is possible when you've :doc:`installed Mautic via Composer </getting_started/how_to_install_mautic.rst>`. 
-
-If you want to use :xref:`Sendgrid` API instead of SMTP to send Emails, for example, you can install the official Symfony Sendgrid Transport by running the following command that is mentioned along others in the :xref:`Symfony Mailer` documentation.
-
-.. code-block:: shell
-    
-    composer require symfony/sendgrid-mailer
-
-After that, you can configure the transport in the Mautic configuration. The example DSN is again mentioned in the :xref:`Symfony Mailer` documentation along with other transports. In the example of using the Sendgrid API, the DSN looks like this:
-
-.. code-block:: shell
-    
-    sendgrid+api://KEY@default
-
-This is how it would be set up in Mautic's Email configuration:
-
-  .. image:: images/emails/sendgrid-api-dsn.png
-    :width: 400
-    :alt: Sendgrid API DSN example
-
-To replace the Sendgrid API key, add it to the relevant field in the Email configuration and save. Mautic now uses the Sendgrid API to send Emails. 
-
-.. warning::
-  It's a nice perk that Mautic can use any transport provided by Symfony Mailer. However, be aware that such transports (from Symfony) don't support batch sending, even via API. They only send one email per request, as opposed to a thousand emails per request as is the case with some Mautic transports, which can make them slow at scale. They also don't support transport callback handling used for bounce management. If you plan to send larger volumes of Emails or need to use features which require callback handling, please consider using Email transports built specifically for such use. These plugins are available in the :doc:`Mautic Marketplace <marketplace/marketplace.rst>`.
-
-The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`.
-
-Immediate delivery
-******************
-
-This is the default means of delivery. As soon as an action in Mautic triggers an Email to send, it's sent immediately. If you expect to send a large number of Emails, you should use the queue. Sending Email immediately may slow the response time of Mautic if using a remote mail service, since Mautic has to establish a connection with that service before sending the mail. Also attempting to send large batches of Emails at once may hit your server's resource limits or Email sending limits if on a shared host.
-
-Queued delivery
-***************
-
-Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:
-
-.. code-block:: shell
-    
-    php /path/to/mautic/bin/console messenger:consume email_transport
-
-Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
-
 .. vale off
 
 Tracking Opened Emails
@@ -378,7 +292,7 @@ For example:
     <a href="{webview_url}" target="_blank">View in your browser</a>
 
 Bounce management
-#################
+*****************
 
 Mautic provides a feature which allows monitoring of IMAP accounts to detect bounced Emails and unsubscribe requests.
 
@@ -391,7 +305,7 @@ Elastic Email, SparkPost, Mandrill, Mailjet, SendGrid and Amazon SES support Web
 .. vale off
 
 Monitored inbox configuration
-*****************************
+=============================
 
 .. vale on
 
@@ -416,15 +330,15 @@ If sending mail through GMail, the Return Path of the Email is automatically rew
 If you select an Unsubscribe folder, Mautic also appends the Email as part of the "List-Unsubscribe" header. It then parses messages it finds in that folder and automatically unsubscribe the Contact.
 
 Webhook bounce management
-*************************
+=========================
 
-Since Mautic 5 all the Email transports use the same Webhook (sometimes called callback) URL: ``https://mautic.example.com/mailer/callback``. Please follow the documentation for the specific Email transport you've installed to get more information about the Webhook configuration.
+Since Mautic 5 all the Email transports use the same Webhook - sometimes called callback - URL: ``https://mautic.example.com/mailer/callback``. Please follow the documentation for the specific Email transport you've installed to get more information about the Webhook configuration.
 
 
 .. vale off
 
 Create a Segment with bounced Emails
-************************************
+=====================================
 
 .. vale on
 
@@ -477,4 +391,3 @@ This is because Mautic sends test Emails to a Mautic User and not to a Mautic Co
 Mautic Users can't unsubscribe and therefore the unsubscribe link looks like this: ``https://mautic.example.com/|URL|``. However, the link **does** work correctly when you send the Email to a Contact.
 
 Best practice is to create a Segment with a small number of Contacts to receive test Emails - for example, yourself - which ensures that you can fully test features such as unsubscribe behaviour.
-

@@ -198,16 +198,16 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
    * - **Contact device**    
      - Checks if the Contact has interacted with your Campaign from a specific device type, brand, or OS.
    * - **Contact field value**    
-     - Checks if the information matches the selected criteria on the Contact record, the Contact’s primary Company, or UTM tags.
+     - Checks if the information matches the selected criteria on the Contact record, the Contact's primary Company, or UTM tags.
    * - **Contact owner**    
      - Checks if the selected User is the Contact's owner.
    * - **Contact Segments**    
      - Checks if the Contact is a member of selected Segments.
    * - **Contact Tags**    
      - Checks if specified Tags are on the Contact record.
-   * - **Contact points**
+   * - **Contact Points**
      - Checks if the Contact has a certain number of Points or a Group score.
-   * - **Form field value**    
+   * - **Form Field value**    
      - Checks if values submitted for a selected field on a selected Form matches specified criteria.
    * - **Has active notification**    
      - Checks if the Contact has an active web notification.	
@@ -250,4 +250,34 @@ Actions and Decisions in Mautic require a :doc:`cron job</configuration/cron_job
 
    php /path/to/mautic/bin/console mautic:campaigns:trigger
 
-If you want to execute the command at different intervals for specific Campaigns, you can pass the ``--campaign-id=ID`` argument to the command.
+If you want to execute the command at different intervals for specific Campaigns, you can pass the ``--campaign-id=ID`` option to the command.
+
+If you want to ignore specific Campaigns, you can pass the ``--exclude=ID`` option to the command. Passing multiple options will ignore multiple Campaigns.
+
+.. vale off
+
+Cloning Campaign events
+-----------------------
+
+.. vale on
+
+Since Mautic 5.1, the Campaign builder includes a feature that allows Users to clone - copy and paste - Campaign events, making it easier to replicate complex workflows or reuse specific actions, decisions, or conditions across different Campaigns. This feature supports cloning events within the same Campaign as well as between different Campaigns.
+
+To clone an event:
+
+1. Hover over the Campaign event that you want to clone and click the copy icon button to store the event in the clipboard:
+
+.. image:: images/clone-campaign-event.png
+  :width: 277
+  :alt: Screenshot of hovering over a Campaign event to reveal the clone option
+
+
+2. Click on the anchor of the event after which you want to insert the cloned event. This opens up a modal window.
+
+3. In the modal window, click the "Insert" button to paste the stored event:
+
+.. image:: images/paste-cloned-event-modal.png
+  :width: 583
+  :alt: Screenshot of the modal window with the insert option to paste the cloned event
+
+The cloned event is now inserted in the Campaign workflow.

@@ -19,10 +19,10 @@ following set up:
 
 #. Create a Contact Segment or a Form to initialize your Campaign. If you already have an existing Segment or Form to use, ensure that they're up-to-date.
 
-#. Create any custom field that you need for your Contact profile.
+#. Create any Custom Field that you need for your Contact profile.
 #. Set up and configure any Integration that you intend to use in your Campaign.
-#. Set up appropriate Channels such as Text Messages, Email, Focus items to communicate with your Contacts.
-#. Create Assets, Landing pages, or other Components that you want to use for your Campaign. If using Assets, ensure that you upload them before creating your Campaign.
+#. Set up appropriate Channels such as Text Messages, Email, Focus Items to communicate with your Contacts.
+#. Create Assets, Landing Pages, or other Components that you want to use for your Campaign. If using Assets, ensure that you upload them before creating your Campaign.
 
 Although you can set up Channels and create Components during the process of creating the Campaign, it's ideal to have them ready beforehand as it makes the Campaign building process faster and more efficient.
 
