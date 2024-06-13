@@ -116,6 +116,9 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - ``messenger:consume email``
      - Processes mail queue
      - 
+   * - ``mautic:fields:analse``
+     - Analyze Custom Fields table and return table or file with results. See :doc:`/contacts/custom_fields`.
+     - 
    * - ``mautic:import``
      - If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
      - 
