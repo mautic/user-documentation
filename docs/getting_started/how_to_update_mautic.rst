@@ -35,7 +35,7 @@ Follow the steps below to update your core files.
 
 1. Backup your ``composer.lock`` and ``composer.json`` file. If something does not work as expected during the ``composer update`` command, restore them and run ``composer install`` to return your codebase to the state it was in before attempting to update.
 
-2. Edit the ``composer.json`` file, and change all previous versions with the version you wish to update to for all mautic packages.
+2. Edit the ``composer.json`` file, and change all previous versions with the version you wish to update to for all Mautic packages.
 
     * If you are running ``5.0.4`` and want to update to ``5.1.0``, replace ``5.0.4`` with ``5.1.0`` for all packages that start with ``mautic/`` and are set to ``5.0.4``.
     * You may also need to increase the versions of any other packages you have either manually added or added through :ref:`Mautic Marketplace`.
