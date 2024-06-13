@@ -78,7 +78,7 @@ There are several options for selecting permissions:
 
 There are permission levels relating to resources the User has created themselves, and those created by others:
 
-* **Own** - this allows the Users with this Role to ``view/edit/delete/enable`` their own resources in this part of Mautic, but not those created by others
+* **Own** - this allows the Users with this Role to ``view/edit/delete/activate`` their own resources in this part of Mautic, but not those created by others
 
 * **Others** - this allows the Users with this Role to ``view/edit/delete/enable`` their own resources in this part of Mautic, and those created by others
 
