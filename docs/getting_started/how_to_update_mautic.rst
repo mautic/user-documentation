@@ -33,15 +33,23 @@ If you customize any of the 'scaffolding' files - commonly ``.htaccess`` - you m
 
 Follow the steps below to update your core files.
 
-1. Run ``composer update mautic/core-lib --with-dependencies`` to update Mautic core and its dependencies.
+1. Backup your ``composer.lock`` and ``composer.json`` file. If something does not work as expected during the ``composer update`` command, restore them and run ``composer install`` to return your codebase to the state it was in before attempting to update.
 
-2. Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to ``.htaccess`` or others.
+2. Edit the ``composer.json`` file, and change all previous versions with the version you wish to update to for all mautic packages.
 
-3. Commit everything all together in a single commit, so the ``docroot`` remains in sync with the core when checking out branches or running ``git bisect``.
+    * If you are running ``5.0.4`` and want to update to ``5.1.0``, replace ``5.0.4`` with ``5.1.0`` for all packages that start with ``mautic/`` and are set to ``5.0.4``.
+    * You may also need to increase the versions of any other packages you have either manually added or added through :ref:`Mautic Marketplace`.
+    * If you have not added any extra packages, you can also replace the entire ``composer.json`` file with the newer version from the `repository <https://github.com/mautic/recommended-project>`_ that matches your desired target version.
 
-4. In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
+3. Run ``composer update --with-dependencies`` to update all packages.
 
-5. Run the following commands to update your database with any changes from the release:
+4. Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to ``.htaccess`` or others.
+
+5. Commit everything all together in a single commit, so the ``docroot`` remains in sync with the core when checking out branches or running ``git bisect``.
+
+6. In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
+
+7. Run the following commands to update your database with any changes from the release:
 
 .. code-block:: shell
 
