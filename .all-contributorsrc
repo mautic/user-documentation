@@ -104,6 +104,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "uadf",
+      "name": "CPweb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2785980?v=4",
+      "profile": "https://eglise.catholique.fr",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
