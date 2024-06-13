@@ -51,7 +51,7 @@ To begin creating Campaigns, perform the following steps:
 
 -  **Category** - Choose a Category to assign your Campaign to. Categories help you organize your Campaigns. To learn more about creating and managing Categories, see :doc:`/categories/categories-overview`.
 -  **Allow Contacts to restart the Campaign** - Click the toggle switch to allow Contacts to restart the Campaign if you're building a Campaign for a recurring message - for example birthdays, subscriptions - or transactional operations - for example activity notifications, updating data. Enabling this option allows Contacts to go through the same Campaign multiple times.
--  **Active** - Click the toggle switch to enable or disable the Campaign. Ensure that you don't enable a Campaign until you're actually ready for it to go live. You can also schedule to activate or disable a Campaign at a future date by selecting a time and date.
+-  **Active** - Click the toggle switch to turn the Campaign on or off. Ensure that you don't activate a Campaign until you're actually ready for it to go live. You can also schedule to activate or deactivate a Campaign at a future date by selecting a time and date.
 
 #. Click **Launch Campaign Builder** to start building your Campaign, and add at least one event. For information about how to use the
    Campaign Builder, see :doc:`/campaigns/creating_campaigns`.
