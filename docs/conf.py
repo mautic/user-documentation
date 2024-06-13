@@ -74,4 +74,6 @@ linkcheck_ignore = [
     r"https://support.twilio.com/*",
     # This is a demo URL and should not be checked
     r"https://api-ssl.bitly.com/*",
+    #This domain blocks the checker.
+    r"https://linuxize.com/*",
 ]

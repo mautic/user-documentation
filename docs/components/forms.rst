@@ -276,8 +276,8 @@ Progressive profiling
 
 Progressive profiling is a powerful feature used to reduce the length of Forms by hiding all the fields that are already known. This prevents your Contacts from feeling overwhelmed by massive Forms and even reduces the time it takes to fill out a Form if fields are already known to your Mautic instance and thus hidden for the Contact.
 
-Configuration
-==============
+Configuration of progressive profiling
+======================================
 
 There are two ways to configure a Form Field to only display when the asked values are unknown.
 
