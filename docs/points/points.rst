@@ -1,16 +1,17 @@
-.. vale off
 
 Points
 ######
 
-.. vale on
-
 Points provide a way for properly weighing Contacts. These Points have both triggers and actions. The following section outlines all the relevant term definitions, and a thorough understanding of how Points function. This helps make your overall marketing automation process successful using Points
 
-Point actions
+.. vale off
+
+Point Actions
 *************
 
-Point actions are those times when a Contact receives a change in their Point total. These actions can be either positive or negative Point changes and occur based on a particular action as you determine.
+.. vale on
+
+Point Actions are those times when a Contact receives a change in their Point total. These actions can be either positive or negative Point changes and occur based on a particular action as you determine.
 
 To add a new action:
 
@@ -27,11 +28,11 @@ To add a new action:
 
    * **Change Points (+/-)** - The value change to set for the action. The ``+`` isn't necessary when adding Points. When subtracting Points, add the ``-`` symbol.
 
-   * **When a Contact…** - This is the behavior or action the Contact must complete to trigger the action.
+   * **Actions taken by User** - This is the behavior or action the Contact must complete to trigger the action.
 
 3. On the right side is more information:
 
-   * **Category** - Organize your Point actions based on their goals, Campaigns, etc. For more information, see :doc:`Categories</categories/categories-overview>`. All Points accumulate on a Contact record, regardless of Category. There is one Points score for each Contact.
+   * **Category** - Organize your Point Actions based on their goals, Campaigns, etc. For more information, see :doc:`Categories</categories/categories-overview>`. All Points accumulate on a Contact record, regardless of Category. There is one Points score for each Contact.
 
    * **Active and Activate/Deactivate at date/time** - Once you have a Point action, Mautic awards Points when a Contact completes the action. Points aren't given for unactive actions. If you have target behaviors that you want to award Points for within a certain time period, you can set the activate and deactivate dates
 
@@ -39,8 +40,12 @@ To add a new action:
 
 4. Click **Save** or **Save & Close**.
 
-Point triggers
+.. vale off
+
+Point Triggers
 **************
+
+.. vale on
 
 Once a Contact has accumulated a Point total, you may want to trigger an action with the Contact. You may create multiple triggers for different Point values.
 
@@ -49,7 +54,7 @@ Once a Contact has accumulated a Point total, you may want to trigger an action 
 
 Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Category**, and **Active** options are all the same. The trigger fires based on the minimum number of Points. Set a number and decide if you want to **Trigger for existing applicable Contacts upon saving - if activated**. 
 
-Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point triggers and associated events are also fully customizable.
+Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point Triggers and associated events are also fully customizable.
 
 .. image:: images/trigger-events.png
     :alt: Screenshot of Points trigger events

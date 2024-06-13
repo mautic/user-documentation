@@ -33,7 +33,7 @@ Creating a Segment
   :width: 700
   :alt: Screenshot showing creating a Segment.
 
-* **Public Segment** - This option determines if the Segment is available for all Users to see and use, or only the User who created the Segment.
+* **Visible to other Users** - This option determines if the Segment is available for all Users to see and use, or only the User who created the Segment.
 
 * **Available in Preference Center** - If set to **Yes**, Contacts can see and opt into or out of the Segment on a **Preference Center** page. The Segments display if the Preference Center has the **Segment List** slot type.
 
@@ -135,8 +135,8 @@ Adding individual Contacts
 
 .. vale off
 
-Campaign action
-===============
+Using a Campaign action
+=======================
 
 .. vale on
 
@@ -257,8 +257,8 @@ Dynamic Segments
 
 Mautic moves Contacts into and out of dynamic Segments based on the filters applied to the Segment. As the data associated with the Contact updates, including Company associations and behaviors, Mautic updates Segment membership.
 
-Segment filters
-===============
+Configuring Segment filters
+===========================
 
 .. image:: images/filter-list.png
     :width: 400
@@ -436,6 +436,8 @@ Beside this you can specify your date with text. These formulas are **translatab
 * ``this week`` / ``last week`` / ``next week``
 * ``this month`` / ``last month`` / ``next month``
 * ``this year`` / ``last year`` / ``next year``
+* ``first day of previous month`` / ``first day of January 2022``
+* ``last day of previous month`` / ``last day of January 2022``
 
 Example (Consider that today is ``2022-03-05``):
 
@@ -444,6 +446,8 @@ Example (Consider that today is ``2022-03-05``):
 * ``Date identified equals last month`` returns all Contacts identified in the specified date range, for example 2022-02-01 - 2022-02-28.
 * ``Date identified greater or equal last year`` returns all Contacts identified 2021-01-01 and after.
 * ``Date identified greater than last year`` returns all Contacts identified after 2021-12-31.
+* ``Date identified greater than first day of previous month`` returns all Contacts identified after 2022-02-01.
+* ``Date identified greater than last day of previous month`` returns all Contacts identified after 2022-02-28.
 * ``Custom Contact date field equal birthday -1 day`` returns all Contacts identified every year on 03-04 (4th march).
 * ``Custom Contact date field equal anniversary -1 month`` returns all Contacts identified every year on 02-04 (4th february)
 
