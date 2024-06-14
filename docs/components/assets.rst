@@ -81,7 +81,7 @@ The following fields are available:
 
 .. vale off
 
-**Enable at (date/time)** - This allows you to define the date and time at which this Asset is available
+**Activate at (date/time)** - This allows you to define the date and time at which this Asset is available
 
 **Disable at (date/time)** - This allows you to define the date and time at which this Asset ceases to be available
 
