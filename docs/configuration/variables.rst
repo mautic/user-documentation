@@ -141,7 +141,7 @@ See :doc:`Companies</companies/companies_overview>` for more information.
 .. tip:: 
   Custom Company Fields
 
-  The syntax for custom company fields is different than the core company field syntax. You must not add the word "company" in the variable, but instead treat it like a "contactfield":
+  The syntax for custom Company fields is different than the core Company field syntax. You must **not** add the word "Company" in the variable, but instead treat it like a "contactfield":
 
   `Hi {contactfield=customfieldalias},`
 
