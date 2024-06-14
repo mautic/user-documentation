@@ -30,7 +30,7 @@ The following fields are available:
 
 - **Activate at (date/time)** - This allows you to define the date and time at which this Form is available for submissions.
 
-- **Disable at (date/time)** - This allows you to define the date and time at which this Form ceases to be available for submissions.
+- **Deactivate at (date/time)** - This allows you to define the date and time at which this Form ceases to be available for submissions.
 
 .. vale on
 
