@@ -25,7 +25,7 @@ To create new Categories, go to settings menu in the top right corner of Mautic.
 
 .. vale off
 
-When creating a new Category you can select type, title, description, alias, color and available status. The color will be helpful to quickly find Mautic elements by their appropriate Category when viewing things like the Calendar or other areas within Mautic.
+When creating a new Category you can select type, title, description, alias, color and availability status. The color will be helpful to quickly find Mautic elements by their appropriate Category when viewing things like the Calendar or other areas within Mautic.
 
 Using Categories for Contacts
 ******************************
