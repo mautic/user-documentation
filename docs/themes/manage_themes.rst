@@ -123,7 +123,7 @@ To hide a Theme:
 
 5. Select the drop-down before the Theme, and click **Hide**.
 
-6. Mautic moves the Theme to the bottom of the table and show it in grey. This means the Theme is hidden in the builders.
+6. Mautic moves the Theme to the bottom of the table and show it in grey, which hides it within builders.
 
 To revert this change open the context menu of the hidden Theme and click **Unhide**.
 
