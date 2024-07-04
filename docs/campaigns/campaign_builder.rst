@@ -247,14 +247,14 @@ For the Send Email, Marketing Message, Push Contact to Integration and Send a We
 
 1. **Interaction data retrieval**: the system retrieves interaction data for the Contact, including Email reads, Landing Page hits and Form submissions, to analyze the Contact's engagement patterns.
 
-2. **Minimum interactions requirement**: a Contact must have a minimum number of interactions for the system to calculate optimal timing. Each interaction type (Email open, website visit, Form submit) counts only once per hour. When a Contact doesn't have enough interaction data, default hour ranges and days adjust to the Contact's preferred timezone.
+2. **Minimum interactions requirement**: a Contact must have a minimum number of interactions for the system to calculate optimal timing. Each interaction type - Email open, website visit, Form submit - counts only once per hour. When a Contact doesn't have enough interaction data, default hour ranges and days adjust to the Contact's preferred timezone.
 
-3. **Optimal time calculation (execute event within 24 hours)**: based on the Contact's interaction data, the system calculates the optimal time for executing a Campaign event, considering the Contact's historical engagement patterns.
+3. **Optimal time calculation - execute event within 24 hours**: based on the Contact's interaction data, the system calculates the optimal time for executing a Campaign event, considering the Contact's historical engagement patterns.
     - If the Contact is within the optimal window at that moment, the event executes immediately.
     - If the current time is before today's optimal window, the event schedules for the first hour of that window.
     - If the current time is after today's optimal window, the event schedules for the first hour of the next day's optimal window.
 
-4. **Optimal date calculation (execute event within 7 days)**: the system calculates the optimal time as in the previous option and additionally determines the best day of the week. By default, a Contact can have multiple optimal days.
+4. **Optimal date calculation - execute event within 7 days**: the system calculates the optimal time as in the previous option and additionally determines the best day of the week. By default, a Contact can have multiple optimal days.
     - If the Contact is within the optimal window at that moment, the event executes immediately.
     - If the current time and day are before the optimal window, it schedules for the first optimal hour of the next optimal day.
 
