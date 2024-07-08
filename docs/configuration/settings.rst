@@ -169,10 +169,10 @@ The optimal for Contact event scheduler settings allow you to configure the defa
 
 * **Default Optimal Start Hour** - Set the default start hour for the optimal interaction window when specific Contact data is unavailable.
 * **Default Optimal End Hour** - Set the default end hour for the optimal interaction window when specific Contact data is unavailable.
-* **Default Optimal Days** - Select the default days of the week that are considered optimal for interaction when specific Contact data is unavailable.
-* **Interaction Data Cache Timeout** - Choose how long the interaction data should be cached.
-* **Fetch Interactions From** - Select the time frame for fetching interaction data. This determines how far back the system will look for interactions.
-* **Interaction Fetch Limit** - Set the maximum number of interactions of each type (for example: Page hits, Email reads, Form submits) to retrieve for timing optimization.
+* **Default Optimal Days** - Select the default days of the week considered optimal for interaction when specific Contact data is unavailable.
+* **Interaction Data Cache Timeout** - Choose how long to cache the interaction data for.
+* **Fetch Interactions From** - Select the time frame for fetching interaction data. This determines how far back to look for interactions.
+* **Interaction Fetch Limit** - Set the maximum number of interactions of each type - for example: Page hits, Email reads, Form submits - to retrieve for timing optimization.
 
 Email settings
 **************
