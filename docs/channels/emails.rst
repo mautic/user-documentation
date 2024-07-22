@@ -265,7 +265,7 @@ Tracking links in Emails
 
 Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the Click Counts tab.  
 
-You can disable tracking for a certain link by adding the mautic:disable:tracking="true" html attribute.  
+You can disable tracking for a certain link by adding the `mautic:disable:tracking="true"` HTML attribute.  
 
 For example:
 
