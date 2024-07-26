@@ -1,6 +1,8 @@
 GMail
 ######
 
+2024 June  -this plugin no longer works -as evidenced by comments in the Forums since 2022 - eg https://forum.mautic.org/t/mautic-gmail-plugin/22354
+
 This plugin enables the Mautic Helper Chrome Extension to track emails sent to leads directly from GMail.
 
 Requirements:
