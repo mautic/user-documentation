@@ -70,7 +70,7 @@ The available details fields are:
     Mautic parses the following tokens in the **Redirect URL/Message** field:
     - `{contactfield=ALIAS}` replacing it with the value of the current Contact's field, if any.
     - `{formfield=ALIAS}` replacing it with the value entered into the specified form field, if any.
-    - `{pagelink=PAGE_ID}` replacing it with an absolute URL to the page having the specified ID.
+    - `{pagelink=PAGE_ID}` replacing it with an absolute URL to the page with the specified ID.
 
 
 .. image:: images/forms/standalone_form.png
