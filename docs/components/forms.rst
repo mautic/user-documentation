@@ -66,6 +66,13 @@ The available details fields are:
    * **Display message** - shows a message over the Form once the Contact has submitted the Form.
 - **Redirect URL/Message** - If you decide to use the Redirect URL successful submit action, paste the URL where you'd like to direct submitters. If you use Display message, enter the message to display.
 
+.. note:: 
+    Mautic parses the following tokens in the **Redirect URL/Message** field:
+    - `{contactfield=ALIAS}` replacing it with the value of the current Contact's field, if any.
+    - `{formfield=ALIAS}` replacing it with the value entered into the specified Form field, if any.
+    - `{pagelink=PAGE_ID}` replacing it with an absolute URL to the page with the specified ID.
+
+
 .. image:: images/forms/standalone_form.png
   :width: 600
   :alt: Screenshot showing standalone Form
