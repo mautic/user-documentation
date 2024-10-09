@@ -1,6 +1,5 @@
-# Since Gitpod doesn't support caching custom Dockerfiles yet, we temporarily
-# use this once which has Python 3.9 and Vale preinstalled.
-image: dennisameling/python-vale:latest
+image: 
+  file: .gitpod.Dockerfile
 
 tasks:
   - before: pip install -r docs/requirements.txt
