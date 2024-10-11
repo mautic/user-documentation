@@ -5,4 +5,4 @@ Salesforce
 
 .. vale on
 
-Visit the :xref:`Knowledgebase SF` for details on how to configure the Salesforce integration.
+Visit the :xref:`Knowledgebase article on Salesforce` for details on how to configure the Salesforce integration.
