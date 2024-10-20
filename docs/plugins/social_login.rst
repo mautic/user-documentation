@@ -1,7 +1,7 @@
 .. vale off
 
 Social Login
-#############
+########
 
  .. image:: images/twilio-sid-authtoken.png
     :width: 400
