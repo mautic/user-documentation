@@ -99,6 +99,7 @@ Custom Field cron jobs
 .. code-block:: php
 
     php /path/to/mautic/bin/console mautic:custom-field:create-column
+    php /path/to/mautic/bin/console mautic:custom-field:delete-column
 
 Optional
 ********
