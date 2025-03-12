@@ -402,7 +402,7 @@ Previewing a Draft Email
 
 .. val on
 
-An email draft may be previewed by appending ``/draft`` to the end of the Email preview URL. If an Email has a Draft version, a Draft Preview URL will be present on the Email details page below the regular Preview URL.
+An Email Draft may be previewed by appending ``/draft`` to the end of the Email preview URL. If an Email has a Draft version, a Draft Preview URL will be present on the Email details page below the regular Preview URL.
 
 .. image:: images/emails/preview-draft.png
   :width: 400
