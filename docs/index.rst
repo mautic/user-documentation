@@ -246,3 +246,14 @@ There are different types of documentation available to help you navigate your w
 
    users_roles/managing_users
    users_roles/managing_roles
+
+.. toctree::
+   :maxdepth: 2
+   :caption: WordPress Plugin
+   :hidden:
+
+   wordpress/installation
+   wordpress/shortcodes
+   wordpress/tracking
+   wordpress/settings
+   wordpress/developers
