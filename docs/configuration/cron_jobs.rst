@@ -116,7 +116,7 @@ If the system configuration is queueing Emails, a cron job processes them. If yo
 
 .. code-block:: php
 
-    php /path/to/mautic/bin/console messenger:consume email
+    php /path/to/mautic/bin/console messenger:consume email --time-limit=160
 
 .. vale off
 
