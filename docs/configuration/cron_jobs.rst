@@ -114,7 +114,7 @@ Process Email queue cron job
 
 If the system configuration queues Emails, a Cron job processes them. If you plan to run `messenger:consume` using a Cron job, you should include at least one of these parameters: `--memory-limit`, `--limit` - the number of emails - or, `--time-limit`; otherwise, the command starts a long-lived process.
 
-.. code-block:: php
+.. code-block:: bash
 
     php /path/to/mautic/bin/console messenger:consume email --time-limit=160
 
