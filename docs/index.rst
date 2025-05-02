@@ -94,6 +94,8 @@ There are different types of documentation available to help you navigate your w
    campaigns/creating_campaigns
    campaigns/campaign_builder
    campaigns/managing_campaigns
+   campaigns/exporting_campaigns
+   campaigns/importing_campaigns
    campaigns/troubleshooting_campaigns
 
 .. toctree::
