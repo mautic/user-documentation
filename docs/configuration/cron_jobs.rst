@@ -112,7 +112,7 @@ Process Email queue cron job
 
 .. vale on
 
-If the system configuration queues Emails, a Cron job processes them. If you plan to run `messenger:consume` using a Cron job, you should include at least one of these parameters: `--memory-limit`, `--limit` - the number of emails - or, `--time-limit`; otherwise, the command starts a long-lived process.
+If the system configuration queues Emails, a Cron job processes them. If you plan to run ``messenger:consume`` using a Cron job, you should include at least one of these parameters: ``--memory-limit``, ``--limit`` - the number of emails, or ``--time-limit``. This starts a long-lived process and continues to run without one of these parameters.
 
 .. code-block:: bash
 
