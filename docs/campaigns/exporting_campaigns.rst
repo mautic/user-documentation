@@ -8,7 +8,7 @@ Exporting Campaigns
 Before importing or exporting data, as a safety precaution take a backup of your database so that you can restore data if required. Speak to the administrator of your domain to be able to do this as it requires specific technical knowledge.
 
 .. important::
-    The export feature is only available in Mautic 7.0 and later versions.
+    Both the import and the export features are only available in Mautic 7.0 and later versions.
 
 Supported Data Types
 --------------------
@@ -28,13 +28,16 @@ The export command will:
 .. important::
     The importing instance will need the same custom fields and plugins to be present.
 
-Export Features
+Export Mechanic
 ***************
 
-    - Exports data in structured JSON format
+Whether exporting via the UI, the command line or using the API, the export feature
+follows the same process.
+    - Checks that the user has adequate permissions to export
+    - Supports exporting multiple campaigns simultaneously
+    - Exports data in a structured JSON format
     - Exports assets into a separate folder in their original format
     - Zips the resulting collection of files for easy transfer across systems
-    - Supports exporting multiple campaigns simultaneously
 
 Export Methods
 **************
@@ -48,7 +51,7 @@ Manual export through Mautic Campaigns dashboard:
 
 1. Go to the Campaigns menu
 2. Select the campaign you want to export
-3. Select the export option
+3. Select the export option from the dropdown menu located next to the item selection
 
 **2. CLI-Based Export**
 -----------------------
@@ -60,7 +63,7 @@ Use the following commands:
     bin/console mautic:entity:export --entity=campaign --id=1 --zip-file
 
 * `entity` defines the type of entity to export, in this case `campaign`
-* `id` defines the id of the campaign to export
+* `id` defines the id of the campaign to export. Look at the URL to find the ID when you view or edit the campaign - the ID will appear in the URL e.g., /s/campaigns/view/123 where 123 is the ID
 * `zip-file` creates a zip file of the campaign and its dependencies
 
 .. code-block:: bash
@@ -72,7 +75,7 @@ Use the following commands:
 **3. API-Based Export**
 -----------------------
 
-You can export campaigns programmatically using the Mautic API:
+You can export campaigns programmatically using the Mautic API. You will need to authenticate for the API request. using the API credentials stored in Mautic's settings. For more detail on how to authenticate, see the `Mautic API documentation <https://docs.mautic.org/en/5.x/authentication/authentication.html>`_.
 
 Curl Example
 ************
