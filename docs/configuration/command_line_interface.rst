@@ -121,14 +121,21 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``mautic:email:fetch``
      - Fetch and process monitored Email.
-     - 
+  
+   * - ``mautic:entity:import --entity=campaign file=path-to-file/entity_data.zip``
+     - Imports campaign and dependent entities to Mautic from a ZIP file. See :doc:`/campaigns/importing-campaigns`.
+   
+   * - ``mautic:entity:export --entity=campaign --id=1``
+     - Exports campaign and dependent entities from Mautic to a ZIP file. See :doc:`/campaigns/exporting-campaigns`.
+   
    * - ``messenger:consume email``
      - Processes mail queue
      - 
-   * - ``mautic:fields:analse``
+   * - ``mautic:fields:analyse``
      - Analyze Custom Fields table and return table or file with results. See :doc:`/contacts/custom_fields`.
      - 
    * - ``mautic:import``
+     - Imports contacts from a CSV file
      - If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
      - 
    * - ``mautic:integration:fetchleads``

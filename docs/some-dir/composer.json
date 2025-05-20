@@ -1,0 +1,168 @@
+{
+  "name": "mautic/recommended-project",
+  "description": "Project template for Mautic 5 projects with composer",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.mautic.org/mautic-releases",
+  "support": {
+    "user-docs": "https://docs.mautic.org/en",
+    "developer-docs": "https://developer.mautic.org",
+    "chat": "https://www.mautic.org/slack"
+  },
+  "funding": [
+    {
+      "type": "other",
+      "url": "https://opencollective.com/mautic"
+    },
+    {
+      "type": "other",
+      "url": "https://github.com/sponsors/mautic"
+    }
+  ],
+  "authors": [
+    {
+      "name": "",
+      "role": ""
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.11",
+    "mautic/core-composer-scaffold": "4.x-dev",
+    "mautic/core-project-message": "4.x-dev",
+    "mautic/core-lib": "5.2.5",
+    "mautic/grapes-js-builder-bundle": "5.2.5",
+    "mautic/plugin-clearbit": "5.2.5",
+    "mautic/plugin-cloudstorage": "5.2.5",
+    "mautic/plugin-crm": "5.2.5",
+    "mautic/plugin-emailmarketing": "5.2.5",
+    "mautic/plugin-focus": "5.2.5",
+    "mautic/plugin-fullcontact": "5.2.5",
+    "mautic/plugin-gmail": "5.2.5",
+    "mautic/plugin-outlook": "5.2.5",
+    "mautic/plugin-social": "5.2.5",
+    "mautic/plugin-tagmanager": "5.2.5",
+    "mautic/plugin-zapier": "5.2.5",
+    "mautic/theme-aurora": "5.2.5",
+    "mautic/theme-blank": "5.2.5",
+    "mautic/theme-brienz": "5.2.5",
+    "mautic/theme-cards": "5.2.5",
+    "mautic/theme-confirmme": "5.2.5",
+    "mautic/theme-fresh-center": "5.2.5",
+    "mautic/theme-fresh-fixed": "5.2.5",
+    "mautic/theme-fresh-left": "5.2.5",
+    "mautic/theme-fresh-wide": "5.2.5",
+    "mautic/theme-goldstar": "5.2.5",
+    "mautic/theme-neopolitan": "5.2.5",
+    "mautic/theme-oxygen": "5.2.5",
+    "mautic/theme-paprika": "5.2.5",
+    "mautic/theme-skyline": "5.2.5",
+    "mautic/theme-sparse": "5.2.5",
+    "mautic/theme-sunday": "5.2.5",
+    "mautic/theme-vibrant": "5.2.5",
+    "mautic/theme-trulypersonal": "5.2.5",
+    "mautic/theme-1-2-1-2-column": "5.2.5",
+    "mautic/theme-1-2-1-column": "5.2.5",
+    "mautic/theme-1-2-column": "5.2.5",
+    "mautic/theme-1-3-1-3-column": "5.2.5",
+    "mautic/theme-1-3-column": "5.2.5",
+    "mautic/theme-attract": "5.2.5",
+    "mautic/theme-connect-through-content": "5.2.5",
+    "mautic/theme-creative": "5.2.5",
+    "mautic/theme-educate": "5.2.5",
+    "mautic/theme-gallery": "5.2.5",
+    "mautic/theme-make-announcement": "5.2.5",
+    "mautic/theme-showcase": "5.2.5",
+    "mautic/theme-simple-text": "5.2.5",
+    "mautic/theme-survey": "5.2.5",
+    "mautic/theme-welcome": "5.2.5"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/mautic/FOSOAuthServerBundle.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/mautic/SpBundle.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/mautic/SymfonyBridgeBundle.git"
+    }
+  ],
+  "conflict": {
+    "mautic/mautic": "*",
+    "mautic/core": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/installers": true,
+      "symfony/flex": true,
+      "mautic/core-composer-scaffold": true,
+      "mautic/core-project-message": true,
+      "php-http/discovery": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "MauticPlugin\\": "docroot/plugins/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@npm-ci",
+      "@npx-patch-package",
+      "@generate-assets"
+    ],
+    "post-update-cmd": [
+      "@npm-ci",
+      "@npx-patch-package",
+      "@generate-assets"
+    ],
+    "npm-ci": "npm ci --prefer-offline --no-audit",
+    "npx-patch-package": "npx patch-package",
+    "generate-assets": "@php bin/console mautic:assets:generate"
+  },
+  "extra": {
+    "mautic-scaffold": {
+      "locations": {
+        "web-root": "docroot/"
+      }
+    },
+    "installer-paths": {
+      "docroot/app": [
+        "type:mautic-core"
+      ],
+      "docroot/plugins/{$name}": [
+        "type:mautic-plugin"
+      ],
+      "docroot/themes/{$name}": [
+        "type:mautic-theme"
+      ]
+    },
+    "mautic-core-project-message": {
+      "include-keys": [
+        "homepage",
+        "support"
+      ],
+      "post-create-project-cmd-message": [
+        "<bg=blue;fg=white>                                                         </>",
+        "<bg=blue;fg=white>  Congratulations, you’ve installed the Mautic codebase  </>",
+        "<bg=blue;fg=white>  from the mautic/recommended-project template!          </>",
+        "<bg=blue;fg=white>                                                         </>",
+        "",
+        "<bg=yellow;fg=black>Next steps</>:",
+        "  * Install Mautic",
+        "  * Read the user guide",
+        "  * Get support: https://www.mautic.org/support",
+        "  * Get involved with the Mautic community:",
+        "      https://www.mautic.org/getting-involved",
+        "  * Remove the plugin that prints this message:",
+        "      composer remove mautic/core-project-message"
+      ]
+    }
+  }
+}
