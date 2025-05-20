@@ -13,20 +13,20 @@ Before importing or exporting data, as a safety precaution take a backup of your
 Supported data types
 --------------------
 
-Once a Campaign is selected, the export feature will extract all Campaign data and entities and any dependencies that the Campaign needs to function. This includes:
+When you select a Campaign, the export feature extracts all Campaign data and entities and any dependencies the Campaign needs to function. This includes:
 
     - Dynamic Content
     - Assets
     - Custom Fields
     - Other related dependencies
 
-The export command will:
+The export command:
 
     - Detect use of Plugins and Custom Fields
     - Include the data to support these dependencies
 
 .. important::
-    The importing instance will need the same Custom Fields and Plugins to be present.
+    The importing instance needs the same Custom Fields and Plugins to be present.
 
 Export mechanic
 ***************
@@ -36,13 +36,13 @@ follows the same process.
     - Checks that the user has adequate permissions to export
     - Supports exporting multiple Campaigns simultaneously
     - Exports data in a structured JSON format
-    - Exports assets into a separate folder in their original format
+    - Exports Assets into a separate folder in their original format
     - Zips the resulting collection of files for easy transfer across systems
 
 Export methods
 **************
 
-The export feature can be used in three ways:
+The Export feature can be used in three ways:
 
 **1. UI-based export**
 ----------------------
