@@ -5,12 +5,12 @@ Importing Campaigns
 
 .. vale on
 
-The Import feature allows you to add pre-configured campaigns to your Mautic instance using zip files containing all the relevant data to construct a campaign.
+The Import feature allows you to add pre-configured Campaigns to your Mautic instance using zip files containing all the relevant data to construct a Campaign.
 
 Import Process
 --------------
 
-Step-by-Step Import
+Step-by-step import
 *******************
 
 1. **Log into your Mautic account**
@@ -26,14 +26,14 @@ Step-by-Step Import
 4. **Select Campaign File**
    On the import screen:
    
-   - Choose the campaign zip file you wish to import
+   - Choose the Campaign zip file you wish to import
    - **Recommended:** Use a ZIP file created from the Mautic export function
-   - Ensures inclusion of campaign data, external assets, and dynamic content
+   - Ensures inclusion of Campaign data, external assets, and dynamic content
 
 .. important::
-    Only ZIP files are supported for campaign imports using the UI. In addition, correctly structured JSON files can be used with both the command line and API endpoints.
+    Only ZIP files are supported for Campaign imports using the UI. In addition, correctly structured JSON files can be used with both the command line and API endpoints.
 
-Import Mechanics
+Import mechanics
 ****************
 
 During the import process, Mautic performs a comprehensive analysis of the data to be imported:

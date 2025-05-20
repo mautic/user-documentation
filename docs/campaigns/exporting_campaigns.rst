@@ -17,16 +17,16 @@ Once a campaign is selected, the export feature will extract all campaign data a
 
     - Dynamic content
     - Assets
-    - Custom fields
+    - Custom Fields
     - Other related dependencies
 
 The export command will:
 
-    - Detect use of plugins and custom fields
+    - Detect use of plugins and Custom Fields
     - Include the data to support these dependencies
 
 .. important::
-    The importing instance will need the same custom fields and plugins to be present.
+    The importing instance will need the same Custom Fields and plugins to be present.
 
 Export Mechanic
 ***************
@@ -63,14 +63,14 @@ Use the following commands:
     bin/console mautic:entity:export --entity=campaign --id=1 --zip-file
 
 * `entity` defines the type of entity to export, in this case `campaign`
-* `id` defines the id of the campaign to export. Look at the URL to find the ID when you view or edit the campaign - the ID will appear in the URL e.g., /s/campaigns/view/123 where 123 is the ID
+* `id` defines the id of the campaign to export. Look at the URL to find the ID when you view or edit the campaign - the ID will appear in the URL for example, /s/campaigns/view/123 where 123 is the ID
 * `zip-file` creates a zip file of the campaign and its dependencies
 
 .. code-block:: bash
     
     bin/console mautic:entity:export --entity=campaign --id=1 --json-file
 
-* Creates only a JSON file and ignores any additional assets and files
+* Creates only a JSON file and ignores any additional assets
 
 **3. API-Based Export**
 -----------------------
@@ -95,7 +95,7 @@ Python Example
 
    # API Endpoint
    campaign_id = 1
-   url = f'https://{your-mautic-domain}/api/campaigns/export/{campaign_id}'
+   url = f'https://{your-domain}/api/campaigns/export/{campaign_id}'
 
    # Authentication
    headers = {
@@ -111,7 +111,7 @@ Python Example
        # Save or process the exported campaign
 
 .. important::
-    - Replace `{your-mautic-domain}` with your actual Mautic instance domain
+    - Replace `{your-domain}` with your actual Mautic instance domain
     - Replace `YOUR_ACCESS_TOKEN` with a valid authentication token
     - The API uses a GET request to export a specific campaign by ID
     - Ensure you have the necessary API permissions
