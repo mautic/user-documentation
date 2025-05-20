@@ -42,7 +42,7 @@ follows the same process.
 Export methods
 **************
 
-The Export feature can be used in three ways:
+You can use the Export feature in three ways:
 
 **1. UI-based export**
 ----------------------
