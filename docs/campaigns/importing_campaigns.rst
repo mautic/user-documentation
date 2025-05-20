@@ -7,7 +7,7 @@ Importing Campaigns
 
 The Import feature allows you to add pre-configured Campaigns to your Mautic instance using zip files containing all the relevant data to construct a Campaign.
 
-Import Process
+Import process
 --------------
 
 Step-by-step import
@@ -17,7 +17,7 @@ Step-by-step import
    Navigate to the main dashboard and authenticate.
 
 2. **Access Campaigns Section**
-   Click on the Campaigns menu to view existing campaigns.
+   Click on the Campaigns menu to view existing Campaigns.
 
 3. **Open Import Options**
    - Click the cog icon in the top-right corner
@@ -27,31 +27,31 @@ Step-by-step import
    On the import screen:
    
    - Choose the Campaign zip file you wish to import
-   - **Recommended:** Use a ZIP file created from the Mautic export function
-   - Ensures inclusion of Campaign data, external assets, and dynamic content
+   - **Recommended:** use a ZIP file created from the Mautic export function
+   - Ensures inclusion of Campaign data, external Assets, and Dynamic Content
 
 .. important::
-    Only ZIP files are supported for Campaign imports using the UI. In addition, correctly structured JSON files can be used with both the command line and API endpoints.
+    The UI only supports importing ZIP files. You can use both the command line and API endpoints to import correctly structured JSON files.
 
 Import mechanics
 ****************
 
-During the import process, Mautic performs a comprehensive analysis of the data to be imported:
+During the import process, Mautic performs a comprehensive analysis of the data to import:
 
-- Checks that the logged in user has the correct permissions to be able to import
-- Identifies required entities for campaign functionality
-- Validates if a campaign template depends on an external plugin:
+- Checks that the logged in User has the correct permissions to import
+- Identifies required entities for Campaign functionality
+- Validates if a Campaign template depends on an external Plugin:
   
-  * The import function verifies plugin installation
-  * When a required plugin is missing:
+  * The import function verifies Plugin installation
+  * When a required Plugin is missing:
     
     - The import process halts
-    - Prompts the user to install the necessary plugin before continuing
+    - Prompts the User to install the necessary Plugin before continuing
 
 - Validates for potential ID conflicts in imported entities
 - Where conflicts exist, provides options to:
   
-  * Update existing entities (allowing administrators to update existing campaigns)
+  * Update existing entities (allowing Administrators to update existing Campaigns)
   * Create new entities, using a new ID
 
 - **Automatic Data Mapping**
@@ -60,16 +60,16 @@ During the import process, Mautic performs a comprehensive analysis of the data 
 
 - **Campaign Activation**
   * After successful import, the campaign remains inactive by default, so that you stay in control
-  * Navigate to the campaign list to activate imported campaigns
+  * Navigate to the Campaigns list to activate imported Campaigns
   .. tip::
-To activate the imported campaign:
+To activate the imported Campaign:
       
       1. Go to the Campaigns section
-      2. Locate the newly imported campaign using the toggle next to the campaign name |activate_toggle|.
-      3. Toggle the campaign status to "Active"
+      2. Locate the newly imported Campaign using the toggle next to the Campaign name |activate_toggle|.
+      3. Toggle the Campaign status to "Active"
       
   .. |activate_toggle| image:: images/activate-campaign.png
-     :alt: Activate campaign toggle
+     :alt: Activate Campaign toggle
      :height: 20px
 
 Importing via the command line
