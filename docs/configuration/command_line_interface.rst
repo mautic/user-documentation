@@ -129,7 +129,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - Analyze Custom Fields table and return table or file with results. See :doc:`/contacts/custom_fields`.
      - 
    * - ``mautic:import``
-     - Imports contacts from a CSV file
+     - Imports Contacts from a CSV file
      - If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
      - 
    * - ``mautic:integration:fetchleads``
