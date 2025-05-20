@@ -10,50 +10,50 @@ Before importing or exporting data, as a safety precaution take a backup of your
 .. important::
     Both the import and the export features are only available in Mautic 7.0 and later versions.
 
-Supported Data Types
+Supported data types
 --------------------
 
-Once a campaign is selected, the export feature will extract all campaign data and entities and any dependencies that the campaign needs to function. This includes:
+Once a Campaign is selected, the export feature will extract all Campaign data and entities and any dependencies that the Campaign needs to function. This includes:
 
-    - Dynamic content
+    - Dynamic Content
     - Assets
     - Custom Fields
     - Other related dependencies
 
 The export command will:
 
-    - Detect use of plugins and Custom Fields
+    - Detect use of Plugins and Custom Fields
     - Include the data to support these dependencies
 
 .. important::
-    The importing instance will need the same Custom Fields and plugins to be present.
+    The importing instance will need the same Custom Fields and Plugins to be present.
 
-Export Mechanic
+Export mechanic
 ***************
 
-Whether exporting via the UI, the command line or using the API, the export feature
+Whether exporting via the UI, the command line or using the API, the Export feature
 follows the same process.
     - Checks that the user has adequate permissions to export
-    - Supports exporting multiple campaigns simultaneously
+    - Supports exporting multiple Campaigns simultaneously
     - Exports data in a structured JSON format
     - Exports assets into a separate folder in their original format
     - Zips the resulting collection of files for easy transfer across systems
 
-Export Methods
+Export methods
 **************
 
 The export feature can be used in three ways:
 
-**1. UI-Based Export**
+**1. UI-based export**
 ----------------------
 
 Manual export through Mautic Campaigns dashboard:
 
 1. Go to the Campaigns menu
-2. Select the campaign you want to export
-3. Select the export option from the dropdown menu located next to the item selection
+2. Select the Campaign you want to Export
+3. Select the Export option from the dropdown menu located next to the item selection
 
-**2. CLI-Based Export**
+**2. CLI-based export**
 -----------------------
 
 Use the following commands:
@@ -62,9 +62,9 @@ Use the following commands:
     
     bin/console mautic:entity:export --entity=campaign --id=1 --zip-file
 
-* `entity` defines the type of entity to export, in this case `campaign`
-* `id` defines the id of the campaign to export. Look at the URL to find the ID when you view or edit the campaign - the ID will appear in the URL for example, /s/campaigns/view/123 where 123 is the ID
-* `zip-file` creates a zip file of the campaign and its dependencies
+* `entity` defines the type of entity to Export, in this case `campaign`
+* `id` defines the id of the Campaign to Export. Look at the URL to find the ID when you view or edit the Campaign - the ID will appear in the URL for example, /s/campaigns/view/123 where 123 is the ID
+* `zip-file` creates a zip file of the Campaign and its dependencies
 
 .. code-block:: bash
     
@@ -72,12 +72,12 @@ Use the following commands:
 
 * Creates only a JSON file and ignores any additional assets
 
-**3. API-Based Export**
+**3. API-based export**
 -----------------------
 
-You can export campaigns programmatically using the Mautic API. You will need to authenticate for the API request. using the API credentials stored in Mautic's settings. For more detail on how to authenticate, see the `Mautic API documentation <https://docs.mautic.org/en/5.x/authentication/authentication.html>`_.
+You can export Campaigns programmatically using the Mautic API. You will need to authenticate for the API request. using the API credentials stored in Mautic's settings. For more detail on how to authenticate, see the `Mautic API documentation <https://docs.mautic.org/en/5.x/authentication/authentication.html>`_.
 
-Curl Example
+Curl example
 ************
 
 .. code-block:: bash
@@ -86,7 +86,7 @@ Curl Example
    --header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
    --data ''
 
-Python Example
+Python example
 **************
 
 .. code-block:: python
