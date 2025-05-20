@@ -102,15 +102,15 @@ Command parameters
 .. important::
     - Ensure the ZIP file is a valid Mautic Campaign export
     - The specified User must have appropriate import permissions
-    - Verify the file path is correct before running the command
+    - Verify the path is correct before running the command
 
 Importing using the Mautic API
 ------------------------------
 
 You can Import Campaigns programmatically using the Mautic API:
 
-Curl Example (ZIP File)
-***********************
+Curl example with ZIP file
+**************************
 
 .. code-block:: bash
 
@@ -119,7 +119,7 @@ Curl Example (ZIP File)
    -H 'Content-Type: multipart/form-data' \
    -F 'file=@/path/to/campaign_export.zip'
 
-Python Example (JSON Data)
+Python example with JSON data
 **************************
 
 .. code-block:: python
@@ -150,23 +150,23 @@ Python Example (JSON Data)
        imported_campaign = response.json()
        print("Campaign imported successfully")
 
-API Import Methods
+API import methods
 ******************
 
-Mautic supports two primary methods of API-based campaign import:
+Mautic supports two primary methods of API-based Campaign import:
 
 1. **ZIP File Import**
    - Use ``multipart/form-data`` content type
-   - Upload the complete campaign export ZIP file
-   - Includes all campaign assets and dependencies from the ZIP file
+   - Upload the complete Campaign export ZIP file
+   - Includes all Campaign assets and dependencies from the ZIP file
 
 2. **JSON Data Import**
    - Use ``application/json`` content type
-   - Send campaign details directly in the request body
-   - Useful for creating new campaigns or updating existing ones
+   - Send Campaign details directly in the request body
+   - Useful for creating new Campaigns or updating existing Campaigns
 
 .. important::
     - Replace ``{your-domain}`` with your actual Mautic instance domain
     - Ensure you have a valid access token by accessing the API Credentials section within Mautic's settings.
-    - The imported campaign must comply with Mautic's campaign structure
+    - The imported Campaign must comply with Mautic's Campaign structure
     - Verify import permissions and data integrity
