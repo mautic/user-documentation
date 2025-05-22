@@ -60,11 +60,12 @@ Use the following commands:
 
 .. code-block:: bash
     
-    bin/console mautic:entity:export --entity=campaign --id=1 --zip-file
+    bin/console mautic:entity:export --entity=campaign --id=1 --zip-file --path=path/to-file
 
 * `entity` defines the type of entity to Export, in this case `campaign`
 * `id` defines the id of the Campaign to Export. Look at the URL to find the ID when you view or edit the Campaign - the ID will appear in the URL for example, /s/campaigns/view/123 where 123 is the ID
 * `zip-file` creates a zip file of the Campaign and its dependencies
+* `path` specifies the directory where the exported file will be saved
 
 .. code-block:: bash
     
