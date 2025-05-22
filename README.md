@@ -1,9 +1,4 @@
-[![Documentation Status][RTD badge URL]][RTD URL]
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mautic/user-documentation)
+[![Documentation Status][RTD badge URL]][RTD URL] [![All Contributors](https://img.shields.io/github/all-contributors/mautic/user-documentation?color=ee8449&style=flat-square)](#contributors)
 
 # Mautic user documentation (new)
 
