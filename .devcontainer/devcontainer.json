@@ -1,0 +1,20 @@
+{
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11",
+            "installTools": true
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "swyddfa.esbonio",
+                "lextudio.restructuredtext",
+                "eamodio.gitlens",
+                "trond-snekvik.simple-rst"
+            ]
+        }
+    },
+    "postCreateCommand": "chmod +x .devcontainer/setup-project.sh && .devcontainer/setup-project.sh"
+}
