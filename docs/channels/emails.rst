@@ -187,6 +187,28 @@ To use custom date fields in tokens, use the following format:
 
 The date outputs in a human-readable format, configured in the settings in your Global Configuration > System Settings under 'Default format for date only' and 'Default time only format'.
 
+Label modifier for select and boolean fields
+---------------------------------------------
+
+For select and boolean field types, you can display the human-readable label instead of the stored value by using the ``|label`` modifier:
+
+.. code-block:: php
+
+    {contactfield=select_alias|label}
+    {contactfield=bool_alias|label}
+
+This is useful when your select fields store technical values but you want to display user-friendly labels in your Emails. For example:
+
+- A country select field storing ``us`` can display ``United States``
+- A boolean field storing ``1`` can display ``Yes``
+
+The modifier also works with company fields:
+
+.. code-block:: php
+
+    {contactfield=company_select_alias|label}
+    {contactfield=company_bool_alias|label}
+
 Contact replies
 ===============
 
