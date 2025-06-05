@@ -16,5 +16,5 @@ Example usage
 Parameters
 **********
 
-- **type:** Type of Mautic asset (``form``, etc.).
-- **id:** The ID of the Mautic form or asset you want to embed.
+- **type:** type of Mautic resource - for example ``form``.
+- **id:** the ID of the Mautic Form or Asset you want to embed.
