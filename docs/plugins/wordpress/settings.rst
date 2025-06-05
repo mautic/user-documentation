@@ -1,11 +1,11 @@
-Plugin Settings
+Plugin settings
 ###############
-Accessing the Settings
+Accessing the settings
 **********************
 
 Navigate to **Settings → WPMautic** from your WordPress dashboard.
 
-Available Options
+Available options
 *****************
 
 - **Base URL:** The URL where your Mautic instance is installed - for example ``https://example.mautic.com``.
