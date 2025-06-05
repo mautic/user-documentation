@@ -102,6 +102,8 @@ Since :xref:`Mautic 3` there is an option you can set in your ``app/config/local
 
 If you configure this option, the new Custom Field becomes visible in the list of Custom Fields. The Custom Field remains unpublished until you run the command ``bin/console mautic:custom-field:create-column``. This command creates the actual column in the table and publishes the field metadata.
 
+Similarly, the ``bin/console mautic:custom-field:delete-column`` command deletes the actual column in the table if you have turned on the ``create_custom_field_in_background`` config option. The column gets soft-deleted and removed from the user interface, but the data is still present in the database until you run the command to delete the column.
+
 This configuration helps prevent **http** request timeouts because it handles the long-running SQL query to create the new table column as a background task.
 
 To mitigate the table lock issue, run the command only once daily when you know that most of your audience is offline. With less traffic going into Mautic, the chances of encountering a problem are lower.

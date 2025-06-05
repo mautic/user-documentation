@@ -108,7 +108,10 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - Processes exports of Contacts to a CSV file and sends the results via Email.
      -
    * - ``mautic:custom-field:create-column``
-     - Creates the actual column in the table
+     - Creates the actual column in the table if the `create_custom_field_in_background` config option is set to true.
+     - 
+   * - ``mautic:custom-field:delete-column``
+     - Deletes the actual column in the table if the `create_custom_field_in_background` config option is set to true.
      - 
    * - ``mautic:email:fetch``
      - Fetch and process monitored Email.
