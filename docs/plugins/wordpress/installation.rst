@@ -1,4 +1,4 @@
-Installation & Activation
+Installation & activation
 #########################
 
 Requirements
