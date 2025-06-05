@@ -6,7 +6,7 @@ Available shortcodes
 
 WP Mautic currently provides a shortcode API through ``shortcodes.php``.
 
-Example Usage
+Example usage
 *************
 
 .. code-block:: php
