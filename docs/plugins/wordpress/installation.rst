@@ -10,7 +10,7 @@ Requirements
 Steps
 *****
 
-1. Download the WP Mautic plugin.
+1. Download the WP Mautic Plugin.
 2. Go to your WordPress Admin Dashboard → Plugins → Add New.
 3. Click 'Upload Plugin' and choose the downloaded ZIP file.
 4. Click 'Install Now' and then 'Activate.'
