@@ -180,6 +180,11 @@ There are different types of documentation available to help you navigate your w
    plugins/twilio
    plugins/twitter
    plugins/vtiger
+   plugins/wordpress/installation
+   plugins/wordpress/shortcodes
+   plugins/wordpress/tracking
+   plugins/wordpress/settings
+   plugins/wordpress/developers
    plugins/zapier
    plugins/zoho_crm
 
@@ -246,14 +251,3 @@ There are different types of documentation available to help you navigate your w
 
    users_roles/managing_users
    users_roles/managing_roles
-
-.. toctree::
-   :maxdepth: 2
-   :caption: WordPress Plugin
-   :hidden:
-
-   wordpress/installation
-   wordpress/shortcodes
-   wordpress/tracking
-   wordpress/settings
-   wordpress/developers
