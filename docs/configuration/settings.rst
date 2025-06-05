@@ -552,7 +552,7 @@ See :xref:`queue-redis-transport` for the complete list of configuration options
 
 AMQP
 ----
-The AMQP transport requires the AMQP PHP extension and a running AMQP service like :xref:`RabbitMQ` and a Composer dependency installed via ``composer require symfony/amqp-messenger``.. See the screenshot below for an example of the configuration.
+The AMQP transport requires the AMQP PHP extension and a running AMQP service like :xref:`RabbitMQ` and a Composer dependency installed via ``composer require symfony/amqp-messenger``. See the screenshot below for an example of the configuration.
 
 .. image:: images/queue-amqp.png
   :width: 600
