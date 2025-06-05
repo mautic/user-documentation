@@ -8,7 +8,7 @@ Environment
 
 Before you begin developing, ensure you have **Docker** running on your system.
 
-Getting Started
+Getting started
 ===============
 
 First, clone the WordPress development repository:
@@ -23,7 +23,7 @@ Change into the cloned directory:
 
   cd wordpress-develop
 
-Initial Setup
+Initial setup
 =============
 
 Run the following commands to set up your environment:
@@ -42,20 +42,20 @@ These commands:
 - Start the local Docker containers for WordPress.
 - Install WordPress into the Docker environment.
 
-Useful Commands
+Useful commands
 ===============
 
 After setup, you can use these commands to control your environment:
 
-- ``npm run env:start`` — Start Docker containers.
-- ``npm run env:stop`` — Stop Docker containers.
-- ``npm run env:restart`` — Restart Docker containers.
+- ``npm run env:start`` to start Docker containers.
+- ``npm run env:stop`` to stop Docker containers.
+- ``npm run env:restart`` to restart Docker containers.
 
 
-Hooks & Functions
-*****************
+Hooks and functions
+*******************
 
-Useful Functions
+Useful functions
 ================
 
 - ``wpmautic_option( $option, $default )`` — Retrieve plugin settings safely.
