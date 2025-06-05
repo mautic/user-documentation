@@ -1,7 +1,7 @@
-Shortcodes & Usage
-##################
+Shortcodes and usage
+####################
 
-Available Shortcodes
+Available shortcodes
 ********************
 
 WP Mautic currently provides a shortcode API through ``shortcodes.php``.

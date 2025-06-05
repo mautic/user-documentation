@@ -37,10 +37,14 @@ Run the following commands to set up your environment:
 
 These commands:
 
+.. vale off
+
 - Install all Node.js dependencies.
 - Build development versions of WordPress assets.
 - Start the local Docker containers for WordPress.
 - Install WordPress into the Docker environment.
+
+.. vale on
 
 Useful commands
 ===============
@@ -51,21 +55,20 @@ After setup, you can use these commands to control your environment:
 - ``npm run env:stop`` to stop Docker containers.
 - ``npm run env:restart`` to restart Docker containers.
 
-
 Hooks and functions
 *******************
 
 Useful functions
 ================
 
-- ``wpmautic_option( $option, $default )`` — Retrieve plugin settings safely.
-- ``wpmautic_base_script()`` — Get full URL of ``mtc.js`` script.
-- ``wpmautic_get_tracking_attributes()`` — Get custom tracking data array.
+- ``wpmautic_option( $option, $default )`` which retrieves the Plugin settings safely.
+- ``wpmautic_base_script()``which retrieves the full URL of the ``mtc.js`` script.
+- ``wpmautic_get_tracking_attributes()``which retrieves the custom tracking data array.
 
 Filters
 =======
 
-Extend the plugin using:
+Extend the Plugin using:
 
 .. code-block:: php
 
@@ -74,4 +77,4 @@ Extend the plugin using:
 Actions
 =======
 
-- ``wp_head`` or ``wp_footer`` — Automatically injects Mautic script depending on settings.
+- ``wp_head`` or ``wp_footer`` which automatically injects the Mautic script depending on settings.
