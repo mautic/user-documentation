@@ -1,13 +1,12 @@
 {
-    "image": "python:3.11-bookworm",
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:2": {}
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11",
+            "installTools": true
+        }
     },
     "customizations": {
         "vscode": {
-            "settings": {
-                "python.defaultInterpreterPath": "/usr/local/bin/python"
-            },
             "extensions": [
                 "ms-python.python",
                 "swyddfa.esbonio",
