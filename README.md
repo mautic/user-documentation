@@ -1,10 +1,8 @@
 [![Documentation Status][RTD badge URL]][RTD URL] [![All Contributors](https://img.shields.io/github/all-contributors/mautic/user-documentation?color=ee8449&style=flat-square)](#contributors)
 
-# Mautic user documentation (new)
+# Mautic user documentation
 
-This repository hosts the new end-user documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. Whenever a PR is merged, changes are deployed immediately to https://mautic-documentation.readthedocs.io/
-
-If you're looking for our current end-user documentation, please go to https://docs.mautic.org/ or the [GitHub repository][End user docs].
+This repository hosts the end-user documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. Whenever a PR is merged, changes are deployed immediately to https://docs.mautic.org/.
 
 ## Migration of end-user docs to Read the Docs
 
@@ -76,7 +74,6 @@ You can automatically build changes to rst files using a file watcher.
 
 
 [ReadTheDocs]: <https://readthedocs.org>
-[End user docs]: <https://github.com/mautic/mautic-documentation>
 [RTD badge URL]: <https://readthedocs.org/projects/mautic-documentation/badge/?version=latest>
 [RTD URL]: <https://mautic-documentation.readthedocs.io/en/latest/?badge=latest>
 [RST Cheatsheet]: <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>
