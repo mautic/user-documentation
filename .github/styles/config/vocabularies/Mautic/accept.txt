@@ -111,8 +111,6 @@ Schimpf
 SCP
 SendGrid
 SES
-Shortcodes
-Shortcode
 shortcode
 shortcodes
 SMS
