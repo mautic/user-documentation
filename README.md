@@ -1,16 +1,10 @@
 [![Documentation Status][RTD badge URL]][RTD URL] [![All Contributors](https://img.shields.io/github/all-contributors/mautic/user-documentation?color=ee8449&style=flat-square)](#contributors)
 
-# Mautic user documentation (new)
+# Mautic user documentation
 
-This repository hosts the new end-user documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. Whenever a PR is merged, changes are deployed immediately to https://mautic-documentation.readthedocs.io/
+This repository contains the end-user documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. When merging a PR, changes display immediately at https://docs.mautic.org/.
 
-If you're looking for our current end-user documentation, please go to https://docs.mautic.org/ or the [GitHub repository][End user docs].
-
-## Migration of end-user docs to Read the Docs
-
-We aim to move all aspects of the end-user documentation to Read the Docs.
-
-For more background, our end goal, and to let us know if you want to help, please join the Education Team channel (#t-education) on Slack (get an invite at https://mautic.org/slack). Thanks in advance!
+If you're looking for the current end-user documentation, please go to https://docs.mautic.org/.
 
 ## Making a PR
 
@@ -18,33 +12,24 @@ To make a small change to the base language files for the documentation, use the
 
 To make more complex changes, follow the steps below:
 
-1. Install a code editor. [Visual Studio Code](https://code.visualstudio.com) is recommended as it automatically installs all the extensions you need.
-2. Install [Github CLI](https://cli.github.com/) which simplifies Git commands.
-3. Create a working folder on your local computer.
-4. Open a terminal and navigate to that folder using the command `cd <path/to/folder>`.
-5. Fork the `mautic/user-documentation` repository on GitHub by clicking on the fork button at the top right.
-6. Once forked, if you know your way around Git and you are are writing documentation for something which is specific to the latest version of Mautic, you should branch from `main`.  
+1. Use 'Codespaces' under the Code menu to run the docs in the browser. Alternatively follow below to work locally. 
+2. You need to install a code editor. We recommend [Visual Studio Code](https://code.visualstudio.com) as it automatically installs all the extensions you need.
+3. Install [GitHub CLI](https://cli.github.com/) which simplifies Git commands.
+4. Create a working folder on your local computer.
+5. Open a terminal and navigate to that folder using the command `cd <path/to/folder>`.
+6. Fork the `mautic/user-documentation` repository on GitHub by clicking on the fork button at the top right.
+7. Once forked, if you know your way around Git and you are writing documentation for something which is specific to the latest version of Mautic, you should branch from the current default branch.  
 
-If you are writing documentation for a feature which is coming in a future release - e.g. 5.0 - then branch off the relevant branch for that release, which should generally speaking match the branch used in the main mautic/mautic repository - e.g. `5.x`.
-7. Type `gh repo clone [your-forked-repo-name]/user-documentation` to clone your forked repository to your local computer.
-8. Open the folder `user-documentation` that is created in your editor.
-9. At the bottom left of your screen, you will see the default branch called 'main' is showing as your active branch. Click this, and a box will appear at the top of the page allowing you to 'create a new branch'. Type a name which relates to the work you plan to do.
-10. Make your desired changes by editing the files, which you can locate on the left pane.
-11. Use the Source Control icon on the menu on the left to view changed files. Click the plus icon next to them to 'stage' them for committing. This lets you save and describe changes in chunks, making it easier to reverse specific changes in the future.
-12. If editing text, ensure to run necessary commands to update files for translations on Transifex and include those updates in your PR.
+If you are writing documentation for a feature which is coming in a future release - for example 7.0 - then branch off the relevant branch for that release, which should generally speaking match the branch used in the main `mautic/mautic` repository - for example `7.x`.
+8. Type `gh repo clone [your-forked-repo-name]/user-documentation` to clone your forked repository to your local computer.
+9. Open the folder `user-documentation` created in your filesystem.
+10. At the bottom left of your screen, the default branch is showing as your active branch. Click this, and a box appears at the top of the page allowing you to 'create a new branch'. Type a name which relates to the work you plan to do.
+11. Make your desired changes by editing the files, which you can locate on the left pane.
+12. Use the Source Control icon on the menu on the left to view changed files. Click the plus icon next to them to 'stage' them for committing. This lets you save and describe changes in chunks, making it easier to reverse specific changes in the future.
 13. Commit all your changes, then click the 'Publish Branch' button. This action might prompt you to create a fork of the repository if not done earlier.
 14. Under the Source Control icon, navigate to the 'Branches' section. Find your branch, hover over the 'Create pull request' icon, and click it.
-15. This action will direct you to the GitHub web interface where you can add an appropriate title and description for your proposed changes.
-16. If reviewers request changes, switch back to the branch (as explained in step 9). Implement the necessary changes and follow steps 11-14 again. After updating, commit and push your changes, then notify the reviewer to check the updated content.
-
-### Generating translations files
-
-Currently, we manually create the translation files necessary for Transifex to inform translators that there are changes to the content.
-
-To do this, run the following at the command line after following the steps below to build the documentation locally.
-
-1. Run the command in the /docs folder `sphinx-build -b gettext . docs_translations`
-2. Commit the files created with your pull request
+15. This action directs you to the GitHub web interface where you can add an appropriate title and description for your proposed changes.
+16. If reviewers request changes, switch back to the branch - as explained in step 10. Implement the necessary changes and follow steps 11-14 again. After updating be sure to commit and push your changes, then notify the reviewer to review the updated content.
 
 ## Build documentation locally
 
@@ -52,7 +37,7 @@ To do this, run the following at the command line after following the steps belo
 - [Sphinx Demo][Sphinx Demo]
 - [Sphinx Syntax][Sphinx Template]
 
-The following provides instructions for how to build docs locally for visualization without pushing to the remote:
+The following provides instructions for how to build docs locally for visualization without pushing to the remote.
 
 1. Install Python 3 for your OS if not already installed
 2. Install Sphinx `pip install sphinx`
@@ -60,7 +45,7 @@ The following provides instructions for how to build docs locally for visualizat
 4. Install MyST Parser `pip install myst_parser`
 5. CD into the docs directory `cd [path to this repo]/docs`
 6. Run `make html`
-7. This will generate HTML in docs/build/html. Setup a web server with the web root as docs/build/html or open docs/build/html/index.html in a browser.
+7. This generates HTML in `docs/build/html`. Setup a web server with the web root as `docs/build/html` or open `docs/build/html/index.html` in a browser.
  
 ### Vale
 Before pushing, run Vale and address suggestions and errors as applicable.
@@ -68,7 +53,7 @@ Before pushing, run Vale and address suggestions and errors as applicable.
 2. `vale .`
 
 ### PhpStorm/PyCharm File Watcher
-You can automatically build changes to rst files using a file watcher. 
+You can automatically build changes to `RST` files using a file watcher. 
 1. Go to Preferences -> Tools -> File Watchers -> + button -> custom
 2. Configure the watcher as presented in the screenshot
 
