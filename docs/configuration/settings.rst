@@ -158,6 +158,22 @@ Campaign settings
 
 * **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`cron job<campaign cron jobs>` to summarize existing data.
 
+Optimal for Contact event scheduler
+===================================
+
+.. image:: images/optimal-event-scheduler-settings.png
+  :width: 600
+  :alt: Screenshot showing Optimal for Contact event scheduler settings configuration in Mautic
+
+The optimal for Contact event scheduler settings allow you to configure the default timing and caching options used in the optimized event scheduler for Campaigns.
+
+* **Default Optimal Start Hour** - Set the default start hour for the optimal interaction window when specific Contact data is unavailable.
+* **Default Optimal End Hour** - Set the default end hour for the optimal interaction window when specific Contact data is unavailable.
+* **Default Optimal Days** - Select the default days of the week considered optimal for interaction when specific Contact data is unavailable.
+* **Interaction Data Cache Timeout** - Choose how long to cache the interaction data for.
+* **Fetch Interactions From** - Select the time frame for fetching interaction data. This determines how far back to look for interactions.
+* **Interaction Fetch Limit** - Set the maximum number of interactions of each type - for example: Page hits, Email reads, Form submits - to retrieve for timing optimization.
+
 Email settings
 **************
 
@@ -378,7 +394,7 @@ Unsubscribe settings
 
 * **Show Contact preference settings** - Select **Yes** to direct the unsubscribe link to your configured Preference enter. If you haven't created a Preference Center, Mautic creates a default page based on the next 5 settings. The created page uses the default Theme for styling.
 
-* **Show Contact Segment preferences** - Select **Yes** to allow a Contact to change which Segments they're part of on the Preference Center page. Segments won't display on the Preference Center page if they aren't published and public.
+* **Show Contact Segment preferences** - Select **Yes** to allow a Contact to change which Segments they're part of on the Preference Center. Segments won't display on the Preference Center if they aren't active and public.
 
 * **Show Contact frequency preferences** - Select **Yes** to allow an individual to limit the number of Marketing Messages they receive on each Channel from the Preference Center.
 
@@ -620,9 +636,9 @@ Notification settings
   :width: 600
   :alt: Screenshot showing Webhook Notification Settings Configuration in Mautic
 
-If a Campaign or Webhook is automatically unpublished because of a high volume of errors, Mautic sends a notification alerting Users.
+If a Campaign or Webhook is automatically deactivated because of a high volume of errors, Mautic sends a notification alerting Users.
 
-* **Send notification to author** - Set this field to Yes to send an Email notification to the User who created the unpublished Campaign or Webhook. Deleted Users don't receive notifications.
+* **Send notification to author** - Set this field to Yes to send an Email notification to the User who created the deactivated Campaign or Webhook. Deleted Users don't receive notifications.
 
 .. vale off
 
