@@ -84,7 +84,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Send Marketing Message**
      - Sends a message using the Contact's preferred Channel.
    * - **Update Contact**
-     - Updates the existing Contact's fields with the specified values.
+     - Updates the existing Contact's fields with the specified values. You can combine static values with Mautic variables like ``{contactfield=firstname}`` and date/time variables like ``now``, ``now+3hours`` in date/time fields or ``{datetime=now}`` in text fields.
    * - **Update Contact's primary Company**
      - Updates the existing Contact's primary Company fields with the specified value. See :doc:`documentation on Companies </companies/companies_overview>`.
    * - **Update Contact owner**
