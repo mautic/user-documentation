@@ -1,7 +1,7 @@
-.. vale off
-
 Landing Pages
 #############
+
+.. vale off
 
 Customizing the Preference Center
 *********************************

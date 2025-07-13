@@ -24,7 +24,7 @@ You can find a table with the list of the assigned Contacts displaying the date 
 
 Company duplicates
 *******************
-The Company name field is a unique identifier by default. You can choose any other Company field as unique identifier in the **custom fields** section.
+The Company name field is a unique identifier by default. You can choose any other Company field as unique identifier in the **Custom Fields** section.
 
 In *Configuration > Company Settings* you can choose the operator used when merging Companies with multiple identifiers - either **AND** or **OR**.
 
@@ -63,7 +63,7 @@ By default, a set of fields exist for Companies, but you can customize these fie
  
 #. Change the dropdown select box from Contact to Company objects
 
-#. Save the custom field
+#. Save the Custom Field
 
 .. vale off
 
@@ -138,10 +138,10 @@ Through a Form
 
 When identifying a Contact through a Form, you can also associate an existing Company or create a new one if:
 
-- The Form includes Company name as a Form field - mandatory for Company matching/creation,
-- The Form includes City as a Form field - mandatory for Company matching/creation),
-- The Form includes Country as a form field - mandatory for Company matching/creation,
-- The Form includes State as a form field - optional for Company matching/creation.
+- The Form includes Company name as a Form Field - mandatory for Company matching/creation,
+- The Form includes City as a Form Field - mandatory for Company matching/creation,
+- The Form includes Country as a Form Field - mandatory for Company matching/creation,
+- The Form includes State as a Form Field - optional for Company matching/creation.
   
 Company scoring
 ================

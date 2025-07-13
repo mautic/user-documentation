@@ -35,7 +35,7 @@ Before installing a package, ensure that:
   
 * Your server has enough free disk space to run the installation. Consider the database size as well.
   
-* PHP's `max_execution_time` is at least 240 seconds.
+* PHP's ``max_execution_time`` is at least 240 seconds.
 
 Downloading a production package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -257,7 +257,7 @@ Cloning Mautic from GitHub
 
 1. Install the :xref:`GitHub CLI` tool.
 
-2. Click **Fork** at the top-right corner of the Mautic GitHub repository page to make a personal fork. You can also click to go directly to your fork if you already have one, if you don't then GitHub will offer to create one..
+2. Click **Fork** at the top-right corner of the Mautic GitHub repository to make a personal fork. You can also click to go directly to your fork if you already have one, if you don't then GitHub offers to create one.
 
 3. After the fork is complete, click the green **Code** button to access the command for cloning the repository.
 
@@ -274,8 +274,7 @@ Cloning Mautic from GitHub
 Install Mautic using DDEV
 ==========================
 
-You can use :xref:`DDEV` which is recommended for testing and development with Mautic. To get started:
-
+You can use :xref:`DDEV` which Mautic recommends for testing and development. To get started:
 
 #.  Install :xref:`DDEV`.
 
@@ -325,14 +324,18 @@ The basic command to use the Recommended Project is:
 
 .. code-block:: shell
 
-  composer create-project mautic/recommended-project:^4 some-dir --no-interaction
+  composer create-project mautic/recommended-project:^5 some-dir --no-interaction
 
 With Composer you can add new dependencies to install along with Mautic:
 
 .. code-block:: shell
 
   cd your-directory
-  composer require mautic/mautic-saelos-bundle:~2.0
+  composer require mautic/mautic/helloworld-bundle
+
+.. note::
+
+  As this method of installation moves the core app files into a folder called ``docroot`` from which Mautic runs, you should ensure that you configure your web server to serve files from this directory. This might mean updating your virtual host and/or NGINX configuration to have ``<your directory>/docroot`` as the root directory. If you don't do this, it's likely you'll see errors when you try to access your Mautic instance.
 
 The Composer ``create-project`` command passes ownership of all files to the created project. You should create a new git repository, and commit all files not excluded by the .gitignore file.
 
@@ -345,45 +348,12 @@ What does the Recommended Project template actually do?
 
 When installing the given ``composer.json`` the following occurs:
 
-- Install Mautic in the ``docroot`` directory.
+- Install Mautic in the ``docroot`` directory. See earlier note about updating your hosting configuration.
 - Autoloader uses the generated Composer autoloader in ``vendor/autoload.php``, instead of the one provided by Mautic in ``docroot/vendor/autoload.php``.
 - Plugins - packages of type ``mautic-plugin`` - are in ``docroot/plugins/``.
 - Themes - packages of type ``mautic-theme`` - are in ``docroot/themes/``.
 - Creates ``docroot/media`` directory.
 - Creates environment variables based on your ``.env`` file. See ``.env.example``.
-
-.. vale off
-
-Updating Mautic Core
-~~~~~~~~~~~~~~~~~~~~
-
-.. vale on
-
-The Recommended Project attempts to keep all of your Mautic core files up-to-date.
-
-The project ``mautic/core-composer-scaffold`` updates your scaffold files whenever there is an update to ``mautic/core-lib``.
-
-If you customize any of the "scaffolding" files - commonly .htaccess - you may need to merge conflicts if new release of Mautic Core result in changes to your modified files.
-
-Follow the steps below to update your core files.
-
-1 Run ``composer update mautic/core-lib --with-dependencies`` to update Mautic core and its dependencies.
-
-2 Run ``git diff`` to determine if any of the scaffolding files have changed. Review the files for any changes and restore any customizations to .htaccess or others.
-
-3 Commit everything all together in a single commit, so the ``docroot`` remains in sync with the core when checking out branches or running git bisect.
-
-4 In the event that there are non-trivial conflicts in step 2, you may wish to perform these steps on a branch, and use ``git merge`` to combine the updated core files with your customized files. This facilitates the use of a three-way merge tool such as :xref:`kdiff3`. This setup isn't necessary if your changes are simple - keeping all of your modifications at the beginning or end of the file is a good strategy to keep merges easy.
-
-5 Run the following commands to update your database with any changes from the release:
-
-.. code-block:: shell
-  
-  bin/console cache:clear 
-  bin/console mautic:update:apply --finish 
-  bin/console doctrine:migration:migrate --no-interaction 
-  bin/console doctrine:schema:update --no-interaction --force 
-  bin/console cache:clear
 
 .. vale off
 
@@ -471,6 +441,10 @@ It's possible to change this folder to your own needs.
 
 In following examples, ``docroot`` moves into ``public``.
 
+.. note::
+
+  Remember that you must also update your web server configuration to point to the new folder.
+
 New installations
 -----------------
 
@@ -478,7 +452,7 @@ New installations
 
 .. code-block:: bash
   
-  composer create-project mautic/recommended-project:^4 some-dir --no-interaction --no-install
+  composer create-project mautic/recommended-project:^5 some-dir --no-interaction --no-install
 
 * Do a find and replace in the ``composer.json`` file to change ``docroot/`` into ``public/``
 * Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements

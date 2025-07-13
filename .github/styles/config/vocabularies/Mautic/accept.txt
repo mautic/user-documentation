@@ -6,6 +6,7 @@ Autoloader
 autoloader
 Autowired
 autowired
+Azure
 bcc
 Beanstalkd
 Bing
@@ -18,6 +19,7 @@ CCPA
 Citrix
 Clearbit
 CloudAMQP
+CMS
 config
 Company(ies)
 Composer
@@ -25,6 +27,8 @@ configurator
 ConnectWise
 Contribution(s)
 CORS
+cPanel
+CRM
 cron
 Cron
 CTRL
@@ -33,13 +37,16 @@ DDEV
 Do Not Contact
 DNC
 Dripflow
+DSN
 Dynamic Web Content
 FALSE
 Focus Item
 Focus Items
 Froala
 Froogaloop
+FTP
 gcm
+GDPR
 GIF
 GitBook
 GitHub
@@ -53,8 +60,11 @@ HTML
 http
 https
 HubSpot
+iContact
 IDP
+IIS
 IMAP
+IPs
 infographics
 JavaScript
 Joomla
@@ -62,6 +72,7 @@ Joomla!
 Libre
 Licensor
 LinkedIn
+MailChimp
 Mailjet
 Marketing Messages
 Mautic
@@ -69,12 +80,17 @@ MaxMind
 Middlewares
 middlewares
 MJML
+MQL
+MQLs
 Multiselect
 multiselect
 MVP
 mysqldump
 namespace
 Namespace
+Nano
+nano
+NGINX
 noindex
 OAuth
 Packagist
@@ -88,6 +104,7 @@ post
 PUT
 Rackspace
 Remarketing
+REST
 Salesforce
 SAML
 Schimpf
@@ -105,6 +122,7 @@ sublicense
 SugarCRM
 Suhosin
 Symfony
+TLS
 Todo
 Transifex
 TRUE

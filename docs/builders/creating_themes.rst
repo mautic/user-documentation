@@ -1,9 +1,5 @@
-.. vale off
-
 Creating Themes
 ###############
-
-.. vale on
 
 :xref:`MJML` allows marketers to create and maintain beautiful and responsive Themes for Mautic easily.
 
@@ -84,7 +80,9 @@ Head Components
 
 .. vale on
 
-At present, Mautic won't process the ``<mj-head>`` tags. None of the ``<mj-attribuites>`` run, so you have to do all styling inline.
+Mautic processes most of the ``<mj-head>`` components. ``<mj-attributes>`` don't run.
+
+**Tested elements** include: ``mj-breakpoint``, ``mj-font``, ``mj-html-attributes``, ``mj-style``, ``mj-title``, and ``mj-preview``.
 
 .. vale off
 
@@ -127,11 +125,11 @@ File structure
 Steps to save the Theme package
 ===============================
 
-Once your design in MJML is finalized, go through the following steps to create the Theme package:
+Once you have finalized your design in MJML, go through the following steps to create the Theme package:
 
 * Save your images in the Assets folder.
 
-* Save your MJML in the ``html`` folder as ``email.mjml.twig`` AND ``email.html.twig``.
+* Save your MJML in the ``html`` folder as ``email.mjml.twig`` **and** ``email.html.twig``.
 
 * Use the ``base.html.twig`` and ``message.html.twig`` files from the basic Theme or make your changes there.
 

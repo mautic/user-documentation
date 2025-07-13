@@ -67,7 +67,7 @@ Deleting a Theme
 
 .. vale on
 
-To delete a user-created Theme:
+To delete a User-created Theme:
 
 1. Log in to Mautic.
 
@@ -101,6 +101,33 @@ To preview a Theme:
 5. Select the drop-down before the Theme, and click **Preview**.
 
 6. Mautic displays the preview of the Theme.
+
+.. vale off
+
+Hiding a Theme
+**************
+
+.. vale on
+
+Users can't remove default Themes, but they can hide them from the list of Themes in the Email and Landing Page builders.
+
+To hide a Theme:
+
+1. Log in to Mautic.
+
+2. Click the **Settings** icon.
+
+3. Click **Themes**.
+
+4. In the Themes section, locate the Theme that you want to hide.
+
+5. Select the drop-down before the Theme, and click **Hide**.
+
+6. Mautic moves the Theme to the bottom of the table and show it in grey, which hides it within builders.
+.. vale off
+
+To revert this change open the context menu of the hidden Theme and click **Unhide**.
+.. vale on
 
 .. vale off
 
@@ -149,7 +176,7 @@ You can assign your Mautic instance a default Theme for Landing Pages. Then use 
 
 .. note:: 
 
-    Changing the Theme after building the Page may cause content to not display if the two Themes don't use the same placeholders.
+    Changing the Theme after building the Landing Page may cause content to not display if the two Themes don't use the same placeholders.
 
 To assign a default Theme:
 

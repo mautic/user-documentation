@@ -17,7 +17,7 @@ Using UTM tags in Mautic
 
 To use UTM tags with Google Analytics where they appear in your Google Analytics Dashboard, you must install your Google Analytics tracking code on the resource you are linking to. This synchronizes with your Google Analytics Dashboard and records the UTM tags.
 
-If you use a Mautic landing page, you must go to Settings > Configuration > Tracking Settings, and add your Google Analytics ID.
+If you use a Mautic Landing Page, you must go to Settings > Configuration > Tracking Settings, and add your Google Analytics ID.
 
   .. image:: images/utm_tags/add_ga_code.png
     :width: 400
@@ -40,18 +40,18 @@ The following table lists the Google Analytics UTM tags:
    * - Campaign Source
      - The referring source of the web activity. It indicates the social network, search engine, newsletter name, or any other specific source driving the traffic.  
         * Examples: ``facebook``, ``twitter``, ``blog``, ``newsletters``
-        * UTM code: utm_source
+        * UTM code: ``utm_source``
         * Sample code: ``utm_source=facebook``
    * - Campaign Medium
      - UTM tags - Mautic Documentation
          * Examples: ``cpc``, ``organic_social``
-         * UTM code: utm_medium
-         * Sample code: utm_medium=paid_social
+         * UTM code: ``utm_medium``
+         * Sample code: ``utm_medium=paid_social``
    * - Campaign Name
      - The specific promotion or Campaign title that you want to track.
-         * Examples: summer_sale, free_trial
-         * UTM code: utm_campaign
-         * Sample code: utm_campaign=summer_sale
+         * Examples: ``summer_sale``, ``free_trial``
+         * UTM code: ``utm_campaign``
+         * Sample code: ``utm_campaign=summer_sale``
    * - Campaign Content
      - The Assets within the messages. This non-configurable value auto-populates with the content Asset identifier associated with the specific Asset.
    * - Campaign Term
@@ -86,7 +86,7 @@ Using UTM tags in Focus Items
 Mautic supports UTM tagging in :doc:`/channels/focus_items`.  Mautic can automatically append UTM tags to all links in a Focus Item by entering the appropriate values in the field provided.
 
 #. Click Channels > Focus Items
-#. Create a new focus item or open an existing one.
+#. Create a new Focus Item or open an existing one.
 #. Locate the Google Analytics UTM tags section on the bottom right.
 #. Enter the appropriate information in the fields.
 #. Click Apply.

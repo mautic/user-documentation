@@ -1,9 +1,5 @@
-.. vale off
-
 Import Contacts
 ###############
-
-.. vale on
 
 Contact importing is possible through the User Interface in Mautic. For larger imports it's recommended to complete the import in the background via a cron job.
 
@@ -176,13 +172,13 @@ How to stop a background import
 
 2. In the top right corner of the Contacts page, open the sub menu of actions and select the :ref:`Import History<import job list>` option.
 
-3. Unpublish the import job you want to stop. The import changes :ref:`status<import job status>` to Stopped. It finishes importing the current batch and then stops.
+3. Deactivate the import job you want to stop. The import changes :ref:`status<import job status>` to Stopped. It finishes importing the current batch and then stops.
 
-4. To start the import again, publish it, and the background job continues with the next :doc:`cron job execution</configuration/cron_jobs>`.
+4. To start the import again, activate it, and the background job continues with the next :doc:`cron job execution</configuration/cron_jobs>`.
 
 .. image:: images/import-publish.png
     :align: center
-    :alt: Screenshot of Import publish
+    :alt: Screenshot of Import activation
 
 |
 
@@ -197,11 +193,11 @@ When the background job finishes, either successfully or if it fails, you'll get
 FAQ
 ***
 
-Q. The import times out.  
+Q. The import times out, what should you do?  
 
 A. Either use the background job to import, or change the batch limit to smaller number than 100.
 
-Q: Are imported *Do Not Contact* values stored as a bounce or a ``unsubscription``? 
+Q. What happens with imported *Do Not Contact* values? Are they stored as a bounce or a ``unsubscription``? 
 
 A. It's stored as a ``Manual Unsubscription``. It's the same as marking the Contact *Do Not Contact* from the Contact's page.
 
