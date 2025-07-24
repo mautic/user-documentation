@@ -65,6 +65,8 @@ Changing the view
 
 By default Mautic uses the **list view**, but you can also choose to switch to the **card view** also known as **grid view**, which uses avatars to depict the Contacts visually using cards. 
 
-If you'd like to see your Contacts in the card view, click the **C** button while you're looking at the Contact list. To go back to the table or list view, press the **T** key.
+If you'd like to see your Contacts in the card view (for software versions before 6): click **C** button to switch to Card View, click **T** button to switch back to Table/List View.
+
+For version 6 or later: click **V** button to toggle between Card View and Table View.
 
 The :ref:`Manage Contacts<managing contacts>` section provides more information on how you can work with Contacts in Mautic.
