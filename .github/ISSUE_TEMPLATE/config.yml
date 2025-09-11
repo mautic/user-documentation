@@ -1,0 +1,7 @@
+contact_links:
+  - name: Mautic Community Support
+    url: https://forum.mautic.org/
+    about: Please ask questions around Mautic product here.
+  - name: Report a bug and feature request for Mautic product
+    url: https://github.com/mautic/mautic/issues
+    about: Please create an issue to report a bug or request a feature for Mautic product here.
