@@ -1,0 +1,21 @@
+{
+    "image": "python:3.11-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {}
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python"
+            },
+            "extensions": [
+                "ms-python.python",
+                "swyddfa.esbonio",
+                "lextudio.restructuredtext",
+                "eamodio.gitlens",
+                "trond-snekvik.simple-rst"
+            ]
+        }
+    },
+    "postCreateCommand": "chmod +x .devcontainer/setup-project.sh && .devcontainer/setup-project.sh"
+}
