@@ -11,7 +11,7 @@ If the request is not complete but you want feedback or have quetions, you can s
 
 -->
 
-## Linked Issue
+## Linked issue
 
 
 <!-- PLEASE WRITE ABOVE THIS COMMENT. -->
