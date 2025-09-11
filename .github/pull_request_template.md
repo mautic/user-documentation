@@ -28,7 +28,7 @@ Doing so will automatically close the issue when one of our maintainers merges y
 
 -->
 
-## Screenshots or Screen Recordings
+## Screenshots or screen recordings
 
 <!-- 
 
