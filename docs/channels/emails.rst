@@ -71,6 +71,52 @@ Email overview
 
 The Email overview allows at-a-glance information regarding the success or failure of a particular Email. You can quickly see relevant information in regards to opens, bounces, successful click-throughs and other important statistics.
 
+.. vale off
+
+Email Drafts
+============
+
+Creating a draft Email
+----------------------
+
+.. vale on
+
+Mautic allows the creation of Email Drafts using the 'Save as Draft' button in the Email editor.
+
+This feature needs turning on by adding the configuration parameter ``email_draft_enabled`` to your ``local.php`` configuration file as detailed below.
+
+.. code:: php
+
+  'email_draft_enabled' => 1  
+
+Once turned on, the 'Save as Draft' button appears on the Email edit interface.
+
+.. image:: images/emails/save-draft.png
+  :width: 400
+  :alt: Screenshot showing the 'Save as Draft' button on the email edit page.
+
+Only one Draft at a time can exist for any given Email. When working with a Draft, the 'Save as draft' button instead displays two buttons, 'Apply Draft' and 'Discard Draft'.
+
+.. image:: images/emails/apply-draft.png
+  :width: 400
+  :alt: Screenshot showing the 'Apply Draft' and 'Discard Draft' buttons on the Email edit interface.
+
+An Email Draft allows changes to the content of the Email only. Changes to the Subject, Internal Name, selected Segment, etc. apply to the original Email even when editing a Draft version of it. The Draft content exists separately from the original Email.
+
+.. vale off
+
+Previewing a Draft Email
+------------------------
+
+.. val on
+
+An Email Draft may be previewed by appending ``/draft`` to the end of the Email preview URL. If an Email has a Draft version, a Draft Preview URL will be present on the Email details page below the regular Preview URL.
+
+.. image:: images/emails/preview-draft.png
+  :width: 400
+  :alt: Screenshot showing the Preview Draft URL link on the Email edit interface.
+
+
 Translations
 ============
 
@@ -160,7 +206,7 @@ To make use of monitoring replies from Contacts, you must have access to an IMAP
   :width: 400
   :alt: Screenshot showing IMAP mailbox setting for reply monitoring
 
-#. To fetch and process the replies, run the following cron command:
+#. To fetch and process the replies, run the following Cron command:
 
 ``php path/to/mautic/bin/console mautic:email:fetch``
 
@@ -263,7 +309,7 @@ Tracking links in Emails
 
 .. vale on
 
-Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the Click Counts tab.  
+Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the ``Click Counts`` tab.  
 
 You can turn off tracking for a certain link by adding the ``mautic:disable:tracking="true"`` HTML attribute.  
 
@@ -277,9 +323,9 @@ Unsubscribing
 *************
 
 Mautic has a built in means of allowing a Contact to unsubscribe from Email communication. You can insert various tokens into your Email to provide unsubscribe options at your desired location:
-- ``{unsubscribe_text}``: Inserts a sentence with a link instructing the Contact to click to unsubscribe.
-- ``{unsubscribe_url}``: Inserts the URL to the preferences center when it's activated, or to the unsubscribe page if not.
-- ``{dnc_url}``: Inserts the URL to unsubscribe from all marketing messages when the preference center is activated.
+- ``{unsubscribe_text}``: inserts a sentence with a link instructing the Contact to click to unsubscribe.
+- ``{unsubscribe_url}``: inserts the URL to the preferences center when it's activated, or to the unsubscribe page if not.
+- ``{dnc_url}``: inserts the URL to unsubscribe from all Marketing Messages when there is an active preference center.
 
 The unsubscribe URL token inserts the URL into your custom written instructions. 
 
@@ -360,10 +406,8 @@ This isn't required, but if you want to be able to select the Contacts with boun
 2. Type in the Segment name. For example Bounced Emails.
 3. Select the Filters tab.
 4. Create new Bounced Email equals Yes filter.
-5. Wait for the ``bin/console mautic:segments:update`` command to be automatically triggered by a cron job or execute it manually.
+5. Wait for the ``bin/console mautic:segments:update`` command to be automatically triggered by a Cron job or execute it manually.
 6. All Contacts with bounced Emails should appear in this Segment.
-
-.. vale off
 
 Troubleshooting Emails
 **********************
