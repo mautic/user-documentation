@@ -87,6 +87,4 @@ linkcheck_ignore = [
     r"https://dev.mysql.com/doc/refman/5.7/en/regexp.html",
     # 400 client error from this domain
     r"https://developers.facebook.com/products/facebook-login/",
-    # The URLs below broken and should be replaced by working ones (404 Client Error).
-    r"https://www.transifex.com/mautic/mautic/",
 ]
