@@ -39,6 +39,19 @@ Segment Emails are marketing Emails by default. On creation the marketer assigns
 
 This entry field is a multi-select which allows you to choose several Segments if necessary.
 
+.. vale off
+
+Excluding Segments
+==================
+
+.. vale on
+
+There is a multi-select field that allows excluding Contacts belonging given Segments.
+
+.. image:: images/emails/email-excluding-segments.png
+  :width: 400
+  :alt: Screenshot showing selecting Segments to exclude.
+
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
 Email formats
@@ -58,12 +71,64 @@ Email overview
 
 The Email overview allows at-a-glance information regarding the success or failure of a particular Email. You can quickly see relevant information in regards to opens, bounces, successful click-throughs and other important statistics.
 
+.. vale off
+
+Email Drafts
+============
+
+Creating a draft Email
+----------------------
+
+.. vale on
+
+Mautic allows the creation of Email Drafts using the 'Save as Draft' button in the Email editor.
+
+This feature needs turning on by adding the configuration parameter ``email_draft_enabled`` to your ``local.php`` configuration file as detailed below.
+
+.. code:: php
+
+  'email_draft_enabled' => 1  
+
+Once turned on, the 'Save as Draft' button appears on the Email edit interface.
+
+.. image:: images/emails/save-draft.png
+  :width: 400
+  :alt: Screenshot showing the 'Save as Draft' button on the email edit page.
+
+Only one Draft at a time can exist for any given Email. When working with a Draft, the 'Save as draft' button instead displays two buttons, 'Apply Draft' and 'Discard Draft'.
+
+.. image:: images/emails/apply-draft.png
+  :width: 400
+  :alt: Screenshot showing the 'Apply Draft' and 'Discard Draft' buttons on the Email edit interface.
+
+An Email Draft allows changes to the content of the Email only. Changes to the Subject, Internal Name, selected Segment, etc. apply to the original Email even when editing a Draft version of it. The Draft content exists separately from the original Email.
+
+.. vale off
+
+Previewing a Draft Email
+------------------------
+
+.. val on
+
+An Email Draft may be previewed by appending ``/draft`` to the end of the Email preview URL. If an Email has a Draft version, a Draft Preview URL will be present on the Email details page below the regular Preview URL.
+
+.. image:: images/emails/preview-draft.png
+  :width: 400
+  :alt: Screenshot showing the Preview Draft URL link on the Email edit interface.
+
+
 Translations
 ============
 
 When creating the Email, there is an option to assign a language and a translation parent. By selecting a translation parent, the current item is then considered to be a translation in the selected language of that parent item. If a Contact has a preferred language set, they receive the translated version in their preferred language if it exists. Otherwise, they receive the parent in the default language.
 
 It's also possible to have translations of A/B test variants.
+
+From Mautic 5.1 it's possible to preview A/B and Translation variants:
+
+.. image:: images/emails/ab-translation-preview.png
+  :width: 400
+  :alt: Screenshot showing A/B and Translation preview
 
 Base64 encoded images
 =====================
@@ -83,10 +148,12 @@ Tokens
 
 Mautic allows the use of tokens in Emails which gives the marketer the possibility to integrate a number of Contact fields in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
 
+It's also possible to override the 'from' field in an Email with a token from your :doc:`/contacts/custom_fields` since Mautic 5.1. 
+
 Check the :doc:`/configuration/variables` documentation for a list of all the available default fields.
 
 Default value
-~~~~~~~~~~~~~
+-------------
 
 A token can have a default value for cases when the Contact doesn't have the value known. You must specify the default value after a ``|`` character, for example:
 
@@ -97,7 +164,7 @@ A token can have a default value for cases when the Contact doesn't have the val
 The ``|friend`` tells Mautic to use 'friend' if there is no first name present in the Contact field.
 
 Encoded value
-~~~~~~~~~~~~~
+-------------
 
 It's possible to encode values used in a token using the following syntax:
 
@@ -108,7 +175,7 @@ It's possible to encode values used in a token using the following syntax:
 The ``|true`` tells Mautic to encode the value used, for example in URLs.
 
 Date formats
-~~~~~~~~~~~~
+------------
 
 To use custom date fields in tokens, use the following format:
 
@@ -139,12 +206,12 @@ To make use of monitoring replies from Contacts, you must have access to an IMAP
   :width: 400
   :alt: Screenshot showing IMAP mailbox setting for reply monitoring
 
-#. To fetch and process the replies, run the following cron command:
+#. To fetch and process the replies, run the following Cron command:
 
 ``php path/to/mautic/bin/console mautic:email:fetch``
 
 Usage
-~~~~~
+-----
 Contact replies within Campaigns function as decision after an Email Send action, to take further action based on whether the Contact has replied to the Email. Mautic tries to read the inbox, parse messages, and find replies from the specified Contact. The Contact, when matched with an incoming reply, proceeds down the positive path immediately after the reply detection.
 
 
@@ -242,12 +309,23 @@ Tracking links in Emails
 
 .. vale on
 
-Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the Click Counts tab.
+Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the ``Click Counts`` tab.  
+
+You can turn off tracking for a certain link by adding the ``mautic:disable:tracking="true"`` HTML attribute.  
+
+For example:
+
+.. code-block:: html
+  
+  <a href="https://mautic.example.com/" mautic:disable:tracking="true">Non tracked link</a>
 
 Unsubscribing
 *************
 
-Mautic has a built in means of allowing a Contact to unsubscribe from Email communication. You can insert the tokens ``{unsubscribe_text}`` or ``{unsubscribe_url}`` into your Email to have the text or the URL show at your desired location. The unsubscribe text token inserts a sentence with a link instructing the Contact to click to unsubscribe. 
+Mautic has a built in means of allowing a Contact to unsubscribe from Email communication. You can insert various tokens into your Email to provide unsubscribe options at your desired location:
+- ``{unsubscribe_text}``: inserts a sentence with a link instructing the Contact to click to unsubscribe.
+- ``{unsubscribe_url}``: inserts the URL to the preferences center when it's activated, or to the unsubscribe page if not.
+- ``{dnc_url}``: inserts the URL to unsubscribe from all Marketing Messages when there is an active preference center.
 
 The unsubscribe URL token inserts the URL into your custom written instructions. 
 
@@ -255,7 +333,8 @@ For example:
 
 .. code-block:: html
 
-        <a href="{unsubscribe_url}" target="_blank">Want to unsubscribe?</a>
+        <a href="{unsubscribe_url}" target="_blank">Manage your email preferences</a>
+        <a href="{dnc_url}" target="_blank">Unsubscribe from all emails</a>
 
 You can find the configuration of the unsubscribe text in the global settings.
 
@@ -271,7 +350,7 @@ For example:
     <a href="{webview_url}" target="_blank">View in your browser</a>
 
 Bounce management
-#################
+*****************
 
 Mautic provides a feature which allows monitoring of IMAP accounts to detect bounced Emails and unsubscribe requests.
 
@@ -284,7 +363,7 @@ Elastic Email, SparkPost, Mandrill, Mailjet, SendGrid and Amazon SES support Web
 .. vale off
 
 Monitored inbox configuration
-*****************************
+=============================
 
 .. vale on
 
@@ -309,7 +388,7 @@ If sending mail through GMail, the Return Path of the Email is automatically rew
 If you select an Unsubscribe folder, Mautic also appends the Email as part of the "List-Unsubscribe" header. It then parses messages it finds in that folder and automatically unsubscribe the Contact.
 
 Webhook bounce management
-*************************
+=========================
 
 Since Mautic 5 all the Email transports use the same Webhook - sometimes called callback - URL: ``https://mautic.example.com/mailer/callback``. Please follow the documentation for the specific Email transport you've installed to get more information about the Webhook configuration.
 
@@ -317,7 +396,7 @@ Since Mautic 5 all the Email transports use the same Webhook - sometimes called 
 .. vale off
 
 Create a Segment with bounced Emails
-************************************
+=====================================
 
 .. vale on
 
@@ -327,10 +406,8 @@ This isn't required, but if you want to be able to select the Contacts with boun
 2. Type in the Segment name. For example Bounced Emails.
 3. Select the Filters tab.
 4. Create new Bounced Email equals Yes filter.
-5. Wait for the ``bin/console mautic:segments:update`` command to be automatically triggered by a cron job or execute it manually.
+5. Wait for the ``bin/console mautic:segments:update`` command to be automatically triggered by a Cron job or execute it manually.
 6. All Contacts with bounced Emails should appear in this Segment.
-
-.. vale off
 
 Troubleshooting Emails
 **********************
@@ -370,4 +447,3 @@ This is because Mautic sends test Emails to a Mautic User and not to a Mautic Co
 Mautic Users can't unsubscribe and therefore the unsubscribe link looks like this: ``https://mautic.example.com/|URL|``. However, the link **does** work correctly when you send the Email to a Contact.
 
 Best practice is to create a Segment with a small number of Contacts to receive test Emails - for example, yourself - which ensures that you can fully test features such as unsubscribe behaviour.
-

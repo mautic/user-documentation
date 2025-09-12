@@ -1,0 +1,52 @@
+name: 📝 Documentation Fix
+description: Point out an error or suggest a change in the documentation.
+title: "[DOCS]:"
+labels: ["documentation", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the Mautic User Documentation! Please fill out the details below so we can fix it.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe what is inaccurate, missing, or confusing in the documentation.
+      placeholder: "e.g., The UI for General settings in page X is out of date."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: doc-link
+    attributes:
+      label: Relevant Documentation URL
+      description: Please provide a link to the exact documentation page that needs to be updated.
+      placeholder: "e.g., hhttps://docs.mautic.org/page-to-fix"
+
+  - type: dropdown
+    id: willingness-to-pr
+    attributes:
+      label: Are you willing to help us fix this by making a pull request?
+      description: Contributing a pull request is the fastest way to get this fixed.
+      options:
+        - "— Select an option —"
+        - "No"
+        - "Yes"
+        - "Yes, but I need help"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions (Optional)
+      description: How do you suggest the documentation could be fixed or improved?
+      placeholder: "e.g., I think the screenshot on page X should be updated to reflect the new UI."
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Screen Recordings (Optional)
+      description: To help us understand the issue visually, please attach any relevant images or recordings.
+      placeholder: "Drag and drop the files here."

@@ -237,6 +237,28 @@ This **doesn't work** for the Anniversary option.
 
 If a Contact appears again at a later date in that Segment because the value of the date has changed, then the Contact passes through the Campaign only once, and hence isn't included in the Campaign again.
 
+
+Smart event schedule
+~~~~~~~~~~~~~~~~~~~~~
+
+For the Send Email, Marketing Message, Push Contact to Integration and Send a Webhook actions, Mautic provides a smart event schedule option. This feature dynamically optimizes the timing of event execution based on individual Contact behaviors, increasing the likelihood of engagement.
+
+**How it Works**
+
+1. **Interaction data retrieval**: the system retrieves interaction data for the Contact, including Email reads, Landing Page hits and Form submissions, to analyze the Contact's engagement patterns.
+
+2. **Minimum interactions requirement**: a Contact must have a minimum number of interactions for the system to calculate optimal timing. Each interaction type - Email open, website visit, Form submit - counts only once per hour. When a Contact doesn't have enough interaction data, default hour ranges and days adjust to the Contact's preferred timezone.
+
+3. **Optimal time calculation - execute event within 24 hours**: based on the Contact's interaction data, the system calculates the optimal time for executing a Campaign event, considering the Contact's historical engagement patterns.
+    - If the Contact is within the optimal window at that moment, the event executes immediately.
+    - If the current time is before today's optimal window, the event schedules for the first hour of that window.
+    - If the current time is after today's optimal window, the event schedules for the first hour of the next day's optimal window.
+
+4. **Optimal date calculation - execute event within 7 days**: the system calculates the optimal time as in the previous option and additionally determines the best day of the week. By default, a Contact can have multiple optimal days.
+    - If the Contact is within the optimal window at that moment, the event executes immediately.
+    - If the current time and day are before the optimal window, it schedules for the first optimal hour of the next optimal day.
+
+
 .. vale off
 
 Triggering Campaign events
@@ -250,4 +272,34 @@ Actions and Decisions in Mautic require a :doc:`cron job</configuration/cron_job
 
    php /path/to/mautic/bin/console mautic:campaigns:trigger
 
-If you want to execute the command at different intervals for specific Campaigns, you can pass the ``--campaign-id=ID`` argument to the command.
+If you want to execute the command at different intervals for specific Campaigns, you can pass the ``--campaign-id=ID`` option to the command.
+
+If you want to ignore specific Campaigns, you can pass the ``--exclude=ID`` option to the command. Passing multiple options will ignore multiple Campaigns.
+
+.. vale off
+
+Cloning Campaign events
+-----------------------
+
+.. vale on
+
+Since Mautic 5.1, the Campaign builder includes a feature that allows Users to clone - copy and paste - Campaign events, making it easier to replicate complex workflows or reuse specific actions, decisions, or conditions across different Campaigns. This feature supports cloning events within the same Campaign as well as between different Campaigns.
+
+To clone an event:
+
+1. Hover over the Campaign event that you want to clone and click the copy icon button to store the event in the clipboard:
+
+.. image:: images/clone-campaign-event.png
+  :width: 277
+  :alt: Screenshot of hovering over a Campaign event to reveal the clone option
+
+
+2. Click on the anchor of the event after which you want to insert the cloned event. This opens up a modal window.
+
+3. In the modal window, click the "Insert" button to paste the stored event:
+
+.. image:: images/paste-cloned-event-modal.png
+  :width: 583
+  :alt: Screenshot of the modal window with the insert option to paste the cloned event
+
+The cloned event is now inserted in the Campaign workflow.

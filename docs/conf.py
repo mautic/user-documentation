@@ -61,7 +61,7 @@ epub_show_urls = 'footnote'
 
 # -- Internationalisation configuration
 
-locale_dirs = 'locale'
+locale_dirs = ['locale']
 
 # Please add links here that do not pass the "make checklinks" check.
 # A little context on the reason for ignoring is greatly appreciated!
@@ -74,4 +74,17 @@ linkcheck_ignore = [
     r"https://support.twilio.com/*",
     # This is a demo URL and should not be checked
     r"https://api-ssl.bitly.com/*",
+    # This domain blocks the checker (403 Client Error).
+    r"https://linuxize.com/*",
+    # The GitHub Search UI requires users to be authenticated with session cookies, which we can't set up programmatically
+    r"https://github.com/search*",
+    # Requires authentication.
+    r"https://www.maxmind.com/en/accounts/current*",
+    # 403 client error from these domains
+    r"https://www.maxmind.com/en/home",
+    r"https://www.maxmind.com/en/geolite2/signup",
+    r"https://support.maxmind.com/hc/en-us/search*",
+    r"https://dev.mysql.com/doc/refman/5.7/en/regexp.html",
+    # 400 client error from this domain
+    r"https://developers.facebook.com/products/facebook-login/",
 ]
