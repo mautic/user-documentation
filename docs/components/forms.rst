@@ -117,6 +117,8 @@ To add a new field to your Form:
 
    - **Radio group** - This field provides a group of single-select options with a radio button, sometimes referred to as an option button group.
 
+   - **Rating** - This field allows visitors to provide feedback using a visual rating system with stars or other symbols. Commonly used for surveys, product reviews, or satisfaction ratings.
+
    - **Select: Single or multiple choices** - This option shows a dropdown list where a visitor may choose one option. This field also allows multiple selections, which changes the display to a box with the options listed. On a mobile device, a single select box shows a dialog box with radio buttons, and with checkboxes for a multi-select field.
 
    - **Social login** - This allows the visitor to connect their Twitter, Facebook or LinkedIn profiles with their Contact record. You must configure the Plugin for the social network before using this field.
