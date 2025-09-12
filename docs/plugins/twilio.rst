@@ -10,7 +10,7 @@ Mautic - Twilio Plugin
 
 Before you start to send text messages from your Mautic instance, it needs to connect to the service which can send them.
 
-The first and default implemented service is :xref:`Twilio`.
+The first and default implemented service is :xref:`Twilio`. 
 
 In order to configure the text messages correctly, follow these steps:
 
@@ -76,11 +76,11 @@ Alphanumeric Sender ID allows you to send SMS messages using a personalized send
 
 Instead of using an E.164 formatted Twilio Phone number for the 'From' value, you can use a custom string like your own business' branding.
 
-.. note::
+.. note:: 
 
      You can't reply directly to messages sent out with an Alphanumeric Sender ID.
 
-.. vale off
+.. vale off 
 
 Alphanumeric Sender ID requirements
 ***********************************
