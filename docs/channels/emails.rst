@@ -235,7 +235,7 @@ Sending from the Contact owner
 
 .. vale on
 
-#. Open the Admin menu by clicking the list settings icon in the top right corner.
+#. Open the Admin menu by clicking the cog icon in the top right corner.
 #. Select the Configuration menu item.
 #. Select the Email Settings tab.
 #. Switch the Mailer is owner to Yes.
@@ -260,7 +260,7 @@ Signatures
 
 Setting a signature happens in two places:
 
-#. The default signature is in the Configuration > Email Settings tab. The default text is
+#. The default signature is in the Configuration > Email Settings tab. The default text is 
 
 .. code-block:: html
 
@@ -274,7 +274,7 @@ Mautic uses this signature by default if the Contact doesn't have an owner assig
 
 .. note::
   There are some exceptions where the Contact owner's signature isn't used, which is when a User sends an Email directly from a Contact's profile. In this case, Mautic uses the currently logged in User's signature, with the from name and Email specified in the Email send Form, and not the Contact owner. The values used are pre-filled with those of the currently logged in Mautic User.
-
+  
   It doesn't matter if the Contact has another owner assigned or if it doesn't have an owner at all.
 
   Also, when sending a test Email this is also the case.
@@ -327,7 +327,7 @@ Mautic has a built in means of allowing a Contact to unsubscribe from Email comm
 - ``{unsubscribe_url}``: inserts the URL to the preferences center when it's activated, or to the unsubscribe page if not.
 - ``{dnc_url}``: inserts the URL to unsubscribe from all Marketing Messages when there is an active preference center.
 
-The unsubscribe URL token inserts the URL into your custom written instructions.
+The unsubscribe URL token inserts the URL into your custom written instructions. 
 
 For example:
 
@@ -378,7 +378,7 @@ It's possible to use a single inbox, or to configure a unique inbox per monitor.
 To fetch and process the messages, run the following command:
 
 .. code-block:: shell
-
+  
   php /path/to/mautic/bin/console mautic:email:fetch
 
 Note that it's best to create an Email address specifically for this purpose, as Mautic reads each message it finds in the given folder.
@@ -432,7 +432,7 @@ Before sending an Email, Mautic replaces all links in the Email with links back 
 
 If the Email click doesn't get tracked, make sure that:
 
-1. Your Mautic server is on an accessible URL.
+1. Your Mautic server is on an accessible URL. 
 2. You sent it to an existing Contact via a Campaign or a Segment Email. Emails sent by the Send Example link, direct Email from the Contact profile, or Form submission preview Emails won't replace links with trackable links.
 3. Make sure the URL in the href attribute is absolute and valid. It should start with ``http://`` or ideally ``https://``.
 4. You've opened the link in a incognito browser (not in the same session where you're logged into Mautic)
