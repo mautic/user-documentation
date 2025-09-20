@@ -115,6 +115,12 @@ To fork this repository:
 
 After you forked the repository, you need to clone it. Cloning means making a copy of a repository in your local environment. In this case, you want to clone your forked repository.
 
+> [!IMPORTANT]
+>
+> The Mautic User Documentation contains multiple branches, each representing a specific version of Mautic. You should clone each branch into its own dedicated folder and make your changes within the appropriate folder.
+>
+> So, for example, when you need to make documentation changes for Mautic versions 6 and 7, clone the branch `6.0` and save it in a folder, then clone the branch `7.0` and save it in a separate folder. You can name the folder anything you want, but it's best to reflect the branch name. For example, use names like `user-docs-6`, `user-docs-7`, etc.
+
 Follow the steps below to clone your forked repository:
 
 1. Click your avatar on the top right.
@@ -124,15 +130,23 @@ Follow the steps below to clone your forked repository:
 
 3. Open your forked user-documentation repository. The URL should have your username. For example: `https://github.com/USERNAME/user-documentation`.
 4. Click the green 'Code' button on top.
-5. Select 'HTTPS' and copy the URL if you work with traditional Git, or select 'GitHub CLI' and copy the command if you work with [GitHub CLI](https://cli.github.com) (recommended - it makes commands much easier to remember!)
+5. Select 'HTTPS' and copy the URL.
 
-   ![Highlight of code button, copy symbol, HTTPS and GitHub CLI tabs on GitHub](../assets/images/code_button_https_tab_github.png)
+   ![Highlight of code button, copy symbol, and HTTPS tab on GitHub](../assets/images/code_button_https_tab_github.png)
 
 6. In your terminal, go to your local directory where you want to save this project.
-7. If you work with GitHub CLI, paste the command and hit enter. For traditional Git, run the command below and hit enter:
+7. Run the `git clone` command specifying the branch and folder name, and hit Enter:
 
    ```bash
-   git clone https://github.com/USERNAME/user-documentation
+   git clone --branch BRANCH https://github.com/USERNAME/user-documentation FOLDER-NAME
+   ```
+
+   Here are some examples:
+
+   ```bash
+   git clone --branch 5.2 https://github.com/USERNAME/user-documentation user-docs-5
+   git clone --branch 6.0 https://github.com/USERNAME/user-documentation user-docs-6
+   git clone --branch 7.0 https://github.com/USERNAME/user-documentation user-docs-7
    ```
 
 ### Create a new branch
