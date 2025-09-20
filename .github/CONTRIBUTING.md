@@ -314,6 +314,10 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
    ![Highlight port tab and globe icon to open preview in browser at VS Code on codespace](../assets/images/port_and_open_browser_vscode_codespace.png)
 
+> [!TIP]
+>
+> If you get `make: *** No rule to make target 'html'.  Stop.` error message after running `make html` command, in your terminal, check if you're in the correct directory. You should be in the `docs/` directory to run this command.
+
 <br />
 
 <details>
