@@ -10,87 +10,6 @@ All kinds of contributions are encouraged. For complete information on how to co
 
 All contributors are required to abide by our [Code of Conduct](https://mautic.org/code-of-conduct/).
 
-## Local development setup
-
-There are two ways to set up your local environment:
-
-### 1. With DDEV (recommended)
-
-Mautic uses [DDEV](https://ddev.com) to simplify local development and testing of documentation updates.
-
-Go to the [Get Started](https://ddev.com/get-started/) page for instructions to install DDEV on your local machine.
-
----
-
-> [!NOTE]
-> **For Windows users**: You can install and run DDEV on [traditional Windows](https://ddev.readthedocs.io/en/stable/#system-requirements-traditional-windows). However, it's recommended that you use [Windows Subsystem for Linux 2 (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/about) for faster and better performance.
->
-> If you're new to WSL, follow the instructions on the [DDEV blog](https://ddev.com/blog/watch-new-windows-installer/) to install and set up WSL and DDEV. 
-
----
-
-After you've installed DDEV, follow these steps:
-
-1. [Fork and clone](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository to your local machine.
-2. Navigate into the project directory by running: 
-
-   ```bash
-   cd user-documentation
-   ```
-3. Start the DDEV environment with this command:
-
-   ```bash
-   ddev start
-   ```
-4. After making changes to documentation files, you need to build the updated docs by running:
-
-   ```bash
-   ddev build-docs
-   ```
-5. Run the below command to view your changes live on your browser:
-
-   ```bash
-   ddev launch
-   ```
-   
-   This automatically opens your browser and navigates to `https://user-documentation.ddev.site/`.
-
-   **Note:** You must ensure that your changes work as expected. Every time you make changes, run `ddev build-docs` and refresh the page in your browser to see the changes.
-
-> [!TIP]
-> If you don't see the configuration take effect, run `ddev restart` to restart the project.
-
-### 2. With Sphinx (Python application)
-
-- [RST Syntax Cheatsheet][RST Cheatsheet]
-- [Sphinx Demo][Sphinx Demo]
-- [Sphinx Syntax][Sphinx Template]
-
-The following provides instructions for how to build docs locally for visualization without pushing to the remote:
-
-1. Install [Python 3](https://www.python.org/downloads/) for your OS if not already installed
-2. Install Sphinx `pip install sphinx`
-3. Install sphinx-rtd-theme `pip install sphinx-rtd-theme`
-4. Install MyST Parser `pip install myst_parser`
-5. CD into the docs directory `cd [path to this repo]/docs`
-6. Run `make html`
-
-   This will generate HTML in `docs/build/html`. Setup a web server with the web root as `docs/build/html` or open `docs/build/html/index.html` in a browser.
- 
-#### Vale
-
-Before pushing, run Vale and address suggestions and errors as applicable.
-1. Install [`vale`][Vale] 
-2. `vale .`
-
-#### PhpStorm/PyCharm File Watcher
-
-You can automatically build changes to rst files using a file watcher. 
-1. Go to Preferences -> Tools -> File Watchers -> + button -> custom
-2. Configure the watcher as presented in the screenshot
-
-<img width="753" alt="Screen Shot 2021-10-06 at 15 52 06" src="https://user-images.githubusercontent.com/63312/136281761-204861f9-340a-4e3e-8ce5-e0584236303c.png">
-
 ## Generating translations files
 
 Currently, we manually create the translation files necessary for Transifex to inform translators that there are changes to the content.
@@ -99,15 +18,6 @@ To do this, run the following at the command line after following the steps to b
 
 1. Run the command in the `/docs` folder `sphinx-build -b gettext . docs_translations`
 2. Commit the files created with your pull request
-
-
-[ReadTheDocs]: <https://readthedocs.org>
-[RTD badge URL]: <https://readthedocs.org/projects/mautic-documentation/badge/?version=latest>
-[RTD URL]: <https://mautic-documentation.readthedocs.io/en/latest/?badge=latest>
-[RST Cheatsheet]: <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>
-[Sphinx Template]: <https://github.com/readthedocs/sphinx_rtd_theme/tree/master/docs/demo>
-[Sphinx Demo]: <https://sphinx-rtd-theme.readthedocs.io/en/stable/demo/structure.html>
-[Vale]: <https://vale.sh/docs/vale-cli/installation/>
 
 ## Making a PR
 
