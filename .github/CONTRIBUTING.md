@@ -16,6 +16,8 @@ Contributions are always welcome, no matter how large or small, or at whatever s
   - [Forking the repository](#forking-the-repository)
   - [Clone the repository](#clone-the-repository)
   - [Create a new branch](#create-a-new-branch)
+    - [Ensure the correct base branch](#ensure-the-correct-base-branch)
+    - [Ways to create a new branch](#ways-to-create-a-new-branch)
   - [Push changes to the remote repository](#push-changes-to-the-remote-repository)
   - [Create a PR](#create-a-pr)
 - [Getting started](#getting-started)
@@ -138,7 +140,7 @@ Follow the steps below to clone your forked repository:
 7. Run the `git clone` command specifying the branch and folder name, and hit Enter:
 
    ```bash
-   git clone --branch BRANCH https://github.com/USERNAME/user-documentation FOLDER-NAME
+   git clone --branch BRANCH-NAME https://github.com/USERNAME/user-documentation FOLDER-NAME
    ```
 
    Here are some examples:
@@ -153,6 +155,24 @@ Follow the steps below to clone your forked repository:
 
 Before working on changes, ensure that you create a new branch and work on this branch. You don't want to directly work on the default — such as `main` — or any other base branch, because you won't be able to work on lots of things at the same time. If you make all those changes on one branch, it's not possible to separate them out and only merge one change at a time.
 
+#### Ensure the correct base branch
+
+Before you create a new branch, you must ensure that you're on the branch that you need to base your changes on. Here's how to do it:
+
+1. In the bottom left of your VS Code, look at the branch tab — it resembles the git branch symbol. It should show the branch that you need to base your changes on.
+
+   ![Branch tab at the bottom left of VS Code](../assets/images/bottom_branch_tab_vscode.png)
+   
+2. If you're not on the correct branch, click the branch tab and select the correct branch from the dropdown menu at the top.
+
+   If you prefer to switch it from the terminal, run the command below:
+
+   ```bash
+   git switch BRANCH-NAME
+   ```
+
+#### Ways to create a new branch
+
 There are two ways to create a new branch:
 
 1. **With Git Source Control in VS Code**
@@ -161,9 +181,7 @@ There are two ways to create a new branch:
 
    To create a new branch with Git source control:
 
-   1. Click the 'main' branch tab at the bottom left. It opens a dropdown menu at the top.
-
-      ![Branch tab at the bottom left of VS Code](../assets/images/bottom_branch_tab_vscode.png)
+   1. Click the branch tab — it resembles the git branch symbol — at the bottom left of your VS Code. It opens a dropdown menu at the top.
 
    2. Click 'Create new branch...'
 
