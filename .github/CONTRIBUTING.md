@@ -159,7 +159,7 @@ Before working on changes, ensure that you create a new branch and work on this 
 
 Before you create a new branch, you must ensure that you're on the branch that you need to base your changes on. Here's how to do it:
 
-1. In the bottom left of your VS Code, look at the branch tab — it resembles the git branch symbol. It should show the branch that you need to base your changes on.
+1. In the bottom left of your VS Code, look at the branch tab — it has a git branch symbol with a branch name. It should show the branch that you need to base your changes on.
 
    ![Branch tab at the bottom left of VS Code](../assets/images/bottom_branch_tab_vscode.png)
    
@@ -181,7 +181,7 @@ There are two ways to create a new branch:
 
    To create a new branch with Git source control:
 
-   1. Click the branch tab — it resembles the git branch symbol — at the bottom left of your VS Code. It opens a dropdown menu at the top.
+   1. Click the branch tab — it has a git branch symbol with a branch name — at the bottom left of your VS Code. It opens a dropdown menu at the top.
 
    2. Click 'Create new branch...'
 
@@ -254,11 +254,19 @@ There are two ways to push your changes to the remote repository:
 
 Once you've pushed your changes, you are ready to create a PR. To do so:
 
-1. Go to [https://github.com/mautic/user-documentation](https://github.com/mautic/user-documentation) and a green button prompts you to create a PR.
+1. Go to [https://github.com/mautic/user-documentation](https://github.com/mautic/user-documentation) and click the green button that prompts you to create a PR.
 
-2. Fill in the PR template. Please read the "[Submitting a PR](#submitting-a-pr)" section for all the information you need to include in your PR for the reviewers.
+2. **This step is crucial.** Each branch contains documentation for a specific version of Mautic. You must base your PR on the branch that corresponds to the version you are modifying. If you don't, your changes may apply to the wrong version of the documentation. For instance, if you're making updates for documentation version `7.0`, you must base your PR on the branch `7.0`.
 
-3. Submit it for review.
+    On the top, you should see a few dropdown menus — 'base repository', 'base', 'head repository', and 'compare'.
+
+    Click the 'base: BRANCH-NAME'. It should open a dropdown menu. Select the base branch to the branch that your PR modifies.
+
+    ![Highlight of PR base branch on GitHub](../assets/images/change_pr_base_branch_github.png)
+
+3. Fill in the PR template. Please read the "[Submitting a PR](#submitting-a-pr)" section for all the information you need to include in your PR for the reviewers.
+
+4. Submit it for review.
 
 ## Getting started
 
@@ -329,7 +337,7 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
    **Info:** Once you create a new branch, it automatically switches to your new branch. If you haven't seen the branch changes in your terminal, run `git status`, and you should see your branch name.
 
-7. All contents of the Mautic Community Handbook are available in the `docs/` directory. In your terminal, navigate to the `docs` directory with `cd docs`.
+7. All contents of the Mautic Community Handbook are available in the `docs/` directory. In your terminal, navigate to the `docs/` directory with `cd docs`.
 8. Find the folder and file that you need to work on.
 9. Work on your changes and use the live preview to view and test your changes in real-time.
 10. Ensure that the changes you made follow Mautic's style guide by running the Vale lint. Please read the "[Working with Vale](#working-with-vale)" section to use Vale.
@@ -348,7 +356,7 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
 > [!TIP]
 >
-> If you get `make: *** No rule to make target 'html'.  Stop.` error message after running `make html` command, in your terminal, check if you're in the correct directory. You should be in the `docs/` directory to run this command.
+> If you get `make: *** No rule to make target 'html'.  Stop.` error message after running `make html` command, you should check if you're in the correct directory. You must be in the `docs/` directory to run this command.
 
 <br />
 
@@ -448,15 +456,15 @@ To work locally, you first need to install these on your machine:
 9. Make changes and ensure that the changes you made follow Mautic's style guide by running the Vale lint. Please read the "[Working with Vale](#working-with-vale)" section to use Vale. Use the live preview to ensure everything works as intended in real time.
 10. Build the project by running:
 
-   ```bash
-   ddev build-docs
-   ```
+    ```bash
+    ddev build-docs
+    ```
 
 11. Run the below command to view your changes live on your browser:
 
-   ```bash
-   ddev launch
-   ```
+    ```bash
+    ddev launch
+    ```
 
    This command automatically opens your browser and navigates to `https://user-documentation.ddev.site/`.
 
