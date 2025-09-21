@@ -2,7 +2,13 @@
 
 # Mautic user documentation
 
-This repository hosts the User Documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. Whenever a PR is merged, changes are deployed immediately to https://docs.mautic.org/.
+This repository hosts the User Documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. Whenever a PR is merged, changes are deployed immediately to [https://docs.mautic.org/](https://docs.mautic.org/).
+
+## Contributing 🤝
+
+All kinds of contributions are encouraged. For complete information on how to contribute to the Mautic user documentation repository, please read the [Contributing Guidelines](.github/CONTRIBUTING.md).
+
+All contributors are required to abide by our [Code of Conduct](https://mautic.org/code-of-conduct/).
 
 ## Local development setup
 
