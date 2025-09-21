@@ -53,7 +53,9 @@ Contributions are always welcome, no matter how large or small, or at whatever s
 
   **Note:** Please don't ask maintainers to assign you to another issue before you have finished working on yours and created a PR.
 
-- Did you spot a bug or have an idea for enhancing the Mautic User Documentation? You can [create an issue](https://github.com/mautic/user-documentation/issues/new/choose) to address it.
+- Please don't ask maintainers to assign you to an issue that already has someone assigned to it. If the assigned issue hasn't been addressed for some time, leave a comment on the issue to ask about its status and progress, rather than taking it over without confirmation.
+
+- Did you spot a typo, missing instructions, or have an idea for enhancing the Mautic User Documentation? You can [create an issue](https://github.com/mautic/user-documentation/issues/new/choose) to address it.
 
   However, the Education Team needs to triage the issue before you can work on it. If you wish to work on the issue you submitted, please inform and tag the `@mautic/education-team-leaders` in the comment.
 
