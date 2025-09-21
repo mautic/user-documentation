@@ -343,7 +343,7 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
 8. All contents of the Mautic Community Handbook are available in the `docs/` directory. In your terminal, navigate to the `docs/` directory with `cd docs`.
 9. Find the folder and file that you need to work on.
-10. Work on your changes and use the live preview to view and test your changes in real-time.
+10. Work on your changes and use the [live preview](#live-preview-on-codespace) to view and test your changes in real-time.
 11. Ensure that the changes you made follow Mautic's style guide by running the Vale lint. Please read the "[Working with Vale](#working-with-vale)" section to use Vale.
 
 #### Live preview on codespace
@@ -466,7 +466,7 @@ To work locally, you first need to install these on your machine:
     ddev launch
     ```
 
-   This command automatically opens your browser and navigates to `https://user-documentation.ddev.site/`.
+   DDEV uses the folder name as the project name. This command automatically opens your browser and navigates to `https://FOLDER-NAME.ddev.site/`.
 
 <br />
 
