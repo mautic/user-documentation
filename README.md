@@ -2,13 +2,7 @@
 
 # Mautic user documentation
 
-This repository hosts the end-user documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. Whenever a PR is merged, changes are deployed immediately to https://docs.mautic.org/.
-
-## Migration of end-user docs to Read the Docs
-
-We aim to move all aspects of the end-user documentation to Read the Docs.
-
-For more background, our end goal, and to let us know if you want to help, please join the Education Team channel (#t-education) on Slack (get an invite at https://mautic.org/slack). Thanks in advance!
+This repository hosts the User Documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. Whenever a PR is merged, changes are deployed immediately to https://docs.mautic.org/.
 
 ## Local development setup
 
