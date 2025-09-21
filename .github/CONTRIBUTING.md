@@ -97,7 +97,7 @@ In this section, you can find the contributing workflow and best practices for c
 
 ### Forking the repository
 
-Forking this repository is the first thing you need to do before anything else. Fork means make a copy of a repository to your GitHub account.
+Forking this repository is the first thing you need to do before anything else. Fork means to make a copy of a repository to your GitHub account.
 
 To fork this repository:
 
@@ -288,7 +288,7 @@ To work directly on GitHub, follow the steps below:
 
    ![Screenshot of community handbook with a red box highlighting the Edit on GitHub button](../assets/images/edit-on-github.png)
 
-2. Click the edit button - which resembles a pencil - and make the necessary changes.
+2. Click the edit button — which resembles a pencil — and make the necessary changes.
 
    ![Screenshot of community handbook with a red box highlighting the Edit on GitHub button](../assets/images/edit-button-github.png)
 
@@ -298,7 +298,7 @@ To work directly on GitHub, follow the steps below:
 
 ### 2. GitHub Codespaces
 
-Using GitHub Codespaces enables you to spin up the project in the cloud quickly. Before you start, it's highly recommended to use Chrome or Firefox to work with Codespaces.
+Using GitHub Codespaces enables you to spin up the project in the cloud quickly. For a smooth process, use Chrome or Firefox browser to work with Codespaces.
 
 <details>
   <summary><strong>Tips to maximize free tier of Codespaces</strong></summary>
@@ -327,36 +327,38 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
 1. [Fork](#forking-the-repository) this repository to your own GitHub account.
 2. Go to your forked repository on GitHub.
-3. Click the green 'Code' button and select the 'Codespaces' tab.
-4. Click the green 'Create codespace on main' or 'plus' button to create a new codespace. Codespace automatically sets up the project and opens Visual Studio Code.
+3. Click the branch dropdown menu on the top left and select the branch you need to base your changes on. For example, if you need to update documentation for Mautic version 7, switch to `7.0`.
+
+   ![Highlight branch dropdown menu on GitHub](../assets/images/switch_branch_github.png)
+
+4. Click the green 'Code' button and select the 'Codespaces' tab.
+5. Click the green 'Create codespace on BRANCH-NAME' or '+' button to create a new codespace. Codespace automatically sets up the project and opens Visual Studio Code.
 
    ![Highlight Codespaces tab, plus icon, and Create codepace on main at GitHub](../assets/images/codespaces_tab_github.png)
 
-5. Wait until the codespace finishes building. Once it's finished, the build prompt closes, and the README preview opens. You can close this preview.
-6. [Create a new branch](#create-a-new-branch) to work on your changes.
+6. Wait until the codespace finishes building. Once it's finished, the build prompt closes, and the README preview opens. You can close this preview.
+7. [Create a new branch](#create-a-new-branch) to work on your changes.
 
    **Info:** Once you create a new branch, it automatically switches to your new branch. If you haven't seen the branch changes in your terminal, run `git status`, and you should see your branch name.
 
-7. All contents of the Mautic Community Handbook are available in the `docs/` directory. In your terminal, navigate to the `docs/` directory with `cd docs`.
-8. Find the folder and file that you need to work on.
-9. Work on your changes and use the live preview to view and test your changes in real-time.
-10. Ensure that the changes you made follow Mautic's style guide by running the Vale lint. Please read the "[Working with Vale](#working-with-vale)" section to use Vale.
+8. All contents of the Mautic Community Handbook are available in the `docs/` directory. In your terminal, navigate to the `docs/` directory with `cd docs`.
+9. Find the folder and file that you need to work on.
+10. Work on your changes and use the live preview to view and test your changes in real-time.
+11. Ensure that the changes you made follow Mautic's style guide by running the Vale lint. Please read the "[Working with Vale](#working-with-vale)" section to use Vale.
 
 #### Live preview on codespace
 
 1. Run `make html`. It generates the `build` folder.
-2. Click the preview button — resembles book and magnifying glass — at the top to trigger Esbonio, a tool used for live preview. A tab opens, but the preview won't work. You can safely close this tab.
+
+   **Tip:** If you get `make: *** No rule to make target 'html'.  Stop.` error message after running `make html` command, you should check if you're in the correct directory. You must be in the `docs/` directory to run this command.
+2. Click the preview button — resembles a book and a magnifying glass — at the top to trigger Esbonio, a tool used for live preview. A tab opens, but the preview won't work. You can safely close this tab.
 
    ![Highlight preview button on the top bar of VS Code on codespace](../assets/images/preview_button_vscode_codespace.png)
 
-3. At the bottom panel, click 'Port'.
+3. At the bottom panel, click the 'Ports' tab.
 4. Click the globe icon to open the live preview in your browser. Now you can see the project in real-time on localhost.
 
    ![Highlight port tab and globe icon to open preview in browser at VS Code on codespace](../assets/images/port_and_open_browser_vscode_codespace.png)
-
-> [!TIP]
->
-> If you get `make: *** No rule to make target 'html'.  Stop.` error message after running `make html` command, you should check if you're in the correct directory. You must be in the `docs/` directory to run this command.
 
 <br />
 
@@ -425,8 +427,6 @@ To work locally, you first need to install these on your machine:
 4. **GitHub CLI (Optional)**
 
    You can [download and install GitHub CLI](https://cli.github.com/) on your computer if you'd like. It could save you some time to work on your GitHub workflow with GitHub CLI, particularly if you want to help with code review.
-
-<br />
 
 #### Setting up local environment
 
