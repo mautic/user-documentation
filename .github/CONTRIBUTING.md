@@ -1,10 +1,10 @@
-# Contributing to Mautic User Documentation
+# Contributing to Mautic user documentation
 
 Contributions are always welcome, no matter how large or small, or at whatever skill level you are. Before contributing, please read the [Code of Conduct](https://mautic.org/code-of-conduct/) and follow the directions in this guide.
 
 ---
 
-## Table of Contents
+## Table of contents
 
 - [Communication expectation](#communication-expectation)
 - [Issues](#issues)
@@ -130,7 +130,7 @@ Follow the steps below to clone your forked repository:
 1. Click your avatar on the top right.
 2. Click 'Repositories'.
 
-   ![Repositores option from a dropdown menu on GitHub](../assets/images/repositories_option_github.png)
+   ![Repositories option from a dropdown menu on GitHub](../assets/images/repositories_option_github.png)
 
 3. Open your forked user-documentation repository. The URL should have your username. For example: `https://github.com/USERNAME/user-documentation`.
 4. Click the green 'Code' button on top.
