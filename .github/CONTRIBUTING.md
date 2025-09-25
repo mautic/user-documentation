@@ -338,7 +338,9 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
    ![Highlight Codespaces tab, plus icon, and Create codepace on main at GitHub](../assets/images/codespaces_tab_github.png)
 
-6. Wait until the codespace finishes building. Once it's finished, the build prompt closes, and the README preview opens. You can close this preview.
+6. Wait until the codespace finishes building. Once it's finished, the build prompt closes, the README preview opens — you can close this preview, and the `postCreateCommand` runs. Please wait until it finishes doing its job.
+
+   ![Screenshot of postCreateCommand running in terminal](../assets/images/postcreatecommand-on-terminal.png)
 7. [Create a new branch](#create-a-new-branch) to work on your changes.
 
    **Info:** Once you create a new branch, it automatically switches to your new branch. If you haven't seen the branch changes in your terminal, run `git status`, and you should see your branch name.
@@ -350,15 +352,16 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
 #### Live preview on codespace
 
-1. Run `make html`. It generates the `build` folder.
+1. Ensure that you're in the `docs/` directory.
+2. Run `make html`. It generates the `build` folder.
 
    **Tip:** If you get `make: *** No rule to make target 'html'.  Stop.` error message after running `make html` command, you should check if you're in the correct directory. You must be in the `docs/` directory to run this command.
-2. Click the preview button — resembles a book and a magnifying glass — at the top to trigger Esbonio, a tool used for live preview. A tab opens, but the preview won't work. You can safely close this tab.
+3. Click the preview button — resembles a book and a magnifying glass — at the top to trigger Esbonio, a tool used for live preview. A tab opens, but the preview won't work. You can safely close this tab.
 
    ![Highlight preview button on the top bar of VS Code on codespace](../assets/images/preview_button_vscode_codespace.png)
 
-3. At the bottom panel, click the 'Ports' tab.
-4. Click the globe icon to open the live preview in your browser. Now you can see the project in real-time on localhost.
+4. At the bottom panel, click the 'Ports' tab.
+5. Click the globe icon to open the live preview in your browser. Now you can see the project in real-time on localhost.
 
    ![Highlight port tab and globe icon to open preview in browser at VS Code on codespace](../assets/images/port_and_open_browser_vscode_codespace.png)
 
