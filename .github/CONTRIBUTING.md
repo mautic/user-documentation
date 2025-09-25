@@ -53,7 +53,7 @@ Contributions are always welcome, no matter how large or small, or at whatever s
 
   **Note:** Please don't ask maintainers to assign you to another issue before you have finished working on yours and created a PR.
 
-- Please don't ask maintainers to assign you to an issue that already has someone assigned to it. If the assigned issue hasn't been addressed for some time, leave a comment on the issue to ask about its status and progress, rather than taking it over without confirmation.
+- Please don't ask maintainers to assign you to an issue that already has someone assigned to it. If the assigned issue hasn't been addressed for a while and you're interested in working on it, leave a comment on the issue to ask about its status and progress.
 
 - Did you spot a typo, missing instructions, or have an idea for enhancing the Mautic User Documentation? You can [create an issue](https://github.com/mautic/user-documentation/issues/new/choose) to address it.
 
@@ -99,7 +99,7 @@ In this section, you can find the contributing workflow and best practices for c
 
 ### Forking the repository
 
-Forking this repository is the first thing you need to do before anything else. Fork means to make a copy of a repository to your GitHub account.
+Forking this repository is the first step you need to take before proceeding. Forking means making a copy of a repository to your GitHub account.
 
 To fork this repository:
 
@@ -107,7 +107,7 @@ To fork this repository:
 
    ![Fork button on GitHub](../assets/images/fork_button_github.png)
 
-2. Choose your username in the 'Choose the owner' dropdown menu. Do not select a company here; always choose your personal account — otherwise, maintainers can't collaborate and fix things for you on your PR.
+2. Choose your username in the 'Owner *' dropdown menu. **Don't select an organization here. Always choose your personal account**; otherwise, maintainers can't collaborate and fix things for you on your PR.
 
    ![Choose fork owner on GitHub](../assets/images/choose_fork_owner_github.png)
 
@@ -123,7 +123,7 @@ After you forked the repository, you need to clone it. Cloning means making a co
 >
 > The Mautic User Documentation contains multiple branches, each representing a specific version of Mautic. You should clone each branch into its own dedicated folder and make your changes within the appropriate folder.
 >
-> So, for example, when you need to make documentation changes for Mautic versions 6 and 7, clone the branch `6.0` and save it in a folder, then clone the branch `7.0` and save it in a separate folder. You can name the folder anything you want, but it's best to reflect the branch name. For example, use names like `user-docs-6`, `user-docs-7`, etc.
+> So, for example, when you need to make documentation changes for Mautic versions 6 and 7, clone the branch `6.0` and save it in a folder, then clone the branch `7.0` and save it in a separate folder. You can name the folder anything you want, but it's best to reflect the branch name. For example, use names like `user-docs-6`, `user-docs-7`, and so on.
 
 Follow the steps below to clone your forked repository:
 
@@ -155,13 +155,13 @@ Follow the steps below to clone your forked repository:
 
 ### Create a new branch
 
-Before working on changes, ensure that you create a new branch and work on this branch. You don't want to directly work on the default — such as `main` — or any other base branch, because you won't be able to work on lots of things at the same time. If you make all those changes on one branch, it's not possible to separate them out and only merge one change at a time.
+Before making changes, ensure that you create a new branch and work on it. You don't want to directly work on the default — such as `main` — or any other base branch, because you won't be able to work on lots of things at the same time. If you make all those changes on one branch, it's not possible to separate them out and only merge one change at a time.
 
 #### Ensure the correct base branch
 
 Before you create a new branch, you must ensure that you're on the branch that you need to base your changes on. Here's how to do it:
 
-1. In the bottom left of your VS Code, look at the branch tab — it has a git branch symbol with a branch name. It should show the branch that you need to base your changes on.
+1. In the bottom left of your VS Code, look at the branch tab — it has a git branch symbol with a branch name. It should indicate the branch from which you need to base your changes.
 
    ![Branch tab at the bottom left of VS Code](../assets/images/bottom_branch_tab_vscode.png)
    
@@ -231,7 +231,7 @@ There are two ways to push your changes to the remote repository:
 
 2. **On terminal**
 
-   1. Run `git status`. It gives you file paths of the files that you've worked on. You can later copy these paths for the next step.
+   1. Run `git status`. It provides you with file paths of the files you've worked on. You can later copy these paths for the next step.
    2. Add the file path(s) that hold your changes to the 'stage' phase by running this command:
 
       ```bash
@@ -258,9 +258,9 @@ Once you've pushed your changes, you are ready to create a PR. To do so:
 
 1. Go to [https://github.com/mautic/user-documentation](https://github.com/mautic/user-documentation) and click the green button that prompts you to create a PR.
 
-2. **This step is crucial.** Each branch contains documentation for a specific version of Mautic. You must base your PR on the branch that corresponds to the version you are modifying. If you don't, your changes may apply to the wrong version of the documentation. For instance, if you're making updates for documentation version `7.0`, you must base your PR on the branch `7.0`.
+2. **This step is crucial.** Each branch contains documentation for a specific version of Mautic. You must base your PR on the branch that corresponds to the version you are modifying. If you don't, your changes may apply to the wrong version of the documentation. For instance, if you're making updates for the documentation version `7.0`, you must base your PR on the `7.0` branch.
 
-    On the top, you should see a few dropdown menus — 'base repository', 'base', 'head repository', and 'compare'.
+    At the top, you should see several dropdown menus: 'base repository', 'base', 'head repository', and 'compare'.
 
     Click the 'base: BRANCH-NAME'. It should open a dropdown menu. Select the base branch to the branch that your PR modifies.
 
@@ -300,7 +300,7 @@ To work directly on GitHub, follow the steps below:
 
 ### 2. GitHub Codespaces
 
-Using GitHub Codespaces enables you to spin up the project in the cloud quickly. For a smooth process, use Chrome or Firefox browser to work with Codespaces.
+Using GitHub Codespaces enables you to quickly spin up the project in the cloud. For a smooth process, use the Chrome or Firefox browser to work with Codespaces.
 
 <details>
   <summary><strong>Tips to maximize free tier of Codespaces</strong></summary>
@@ -402,8 +402,8 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 > [!TIP]
 >
 > - Always refresh the page to view the new changes you have applied.
-> - All commands only work within the `docs/`directory. So, if you can't run a command, check if you're in the right directory.
-> - Read the "[Troubleshooting live preview](#troubleshooting-live-preview)" if you encounter trouble with the live preview on the codespace.
+> - All commands only work within the `docs/`directory. If you're unable to run a command, verify that you're in the correct directory.
+> - Read the "[Troubleshooting live preview](#troubleshooting-live-preview)" section if you encounter any issues with the live preview in the codespace.
 
 <br />
 
@@ -431,7 +431,7 @@ To work locally, you first need to install these on your machine:
 
 4. **GitHub CLI (Optional)**
 
-   You can [download and install GitHub CLI](https://cli.github.com/) on your computer if you'd like. It could save you some time to work on your GitHub workflow with GitHub CLI, particularly if you want to help with code review.
+   You can [download and install GitHub CLI](https://cli.github.com/) on your computer if you'd like. It could save you time to work on your GitHub workflow with GitHub CLI, particularly if you want to assist with code reviews.
 
 #### Setting up local environment
 
@@ -529,7 +529,7 @@ Enter the .py file name (use_lower_case_and_underscore of link name): mautic_use
 
 ### Check broken links
 
-When there's a broken link, the build fails. So, you need to ensure that there's no broken link. You can check the links by following the instructions below — depending on where you work on your changes — in the terminal.
+When there's a broken link, the build fails. Therefore, ensure that there are no broken links. You can check the links by following the instructions below, depending on where you work on your changes, in the terminal.
 
 If you work with Codespaces:
 
@@ -594,7 +594,7 @@ Your changes must follow Mautic's style guide. To ensure that the changes are co
 > [!IMPORTANT]
 >
 > - Ensure that you wrap the sentences that you'd like Vale to skip with both `.. vale off` and `.. vale on` statements, in order. Failing to do so results in Vale lint skipping the rest of the contents.
-> - Don't add the statements to skip the lint when it's not necessary. If you're uncertain, it's best not to wrap them in the statements and let the team review and provide suggestions.
+> - Don't add statements to skip lint, unless necessary. If you're uncertain, it's best not to wrap them in the statements and let the team review and provide suggestions.
 
 <br />
 
@@ -604,4 +604,4 @@ These contributing guidelines are adapted from [OpenSource-Communities/intro](ht
 
 ---
 
-Thank you for contributing to improving the Mautic User Documentation.
+Thank you for contributing to the improvement of the Mautic User Documentation.
