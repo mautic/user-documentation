@@ -111,9 +111,11 @@ To fork this repository:
 
    ![Choose fork owner on GitHub](../assets/images/choose_fork_owner_github.png)
 
-3. Click the green 'Create fork' button at the bottom.
+3. Uncheck the option of 'Copy the DEFAULT-BRANCH-NAME branch only' because later on, you want to be able to clone multiple branches.
 
-   ![Create fork button on GitHub](../assets/images/create_fork_button_github.png)
+4. Click the green 'Create fork' button at the bottom.
+
+   ![An uncheck state option to copy only default branch and a create fork button on GitHub](../assets/images/uncheck_option_and_create_fork_button_github.png)
 
 ### Clone the repository
 
@@ -121,7 +123,7 @@ After you forked the repository, you need to clone it. Cloning means making a co
 
 > [!IMPORTANT]
 >
-> The Mautic User Documentation contains multiple branches, each representing a specific version of Mautic. You should clone each branch into its own dedicated folder and make your changes within the appropriate folder.
+> The Mautic User Documentation contains multiple branches that represent specific versions of Mautic. You should clone each branch into its own dedicated folder and make your changes within the appropriate folder.
 >
 > So, for example, when you need to make documentation changes for Mautic versions 6 and 7, clone the branch `6.0` and save it in a folder, then clone the branch `7.0` and save it in a separate folder. You can name the folder anything you want, but it's best to reflect the branch name. For example, use names like `user-docs-6`, `user-docs-7`, and so on.
 
@@ -132,7 +134,7 @@ Follow the steps below to clone your forked repository:
 
    ![Repositories option from a dropdown menu on GitHub](../assets/images/repositories_option_github.png)
 
-3. Open your forked user-documentation repository. The URL should have your username. For example: `https://github.com/USERNAME/user-documentation`.
+3. Open your forked user-documentation repository. The URL should have your username. For example: `https://github.com/YOUR-GITHUB-USERNAME/user-documentation`.
 4. Click the green 'Code' button on top.
 5. Select 'HTTPS' and copy the URL.
 
@@ -142,15 +144,15 @@ Follow the steps below to clone your forked repository:
 7. Run the `git clone` command specifying the branch and folder name, and hit Enter:
 
    ```bash
-   git clone --branch BRANCH-NAME https://github.com/USERNAME/user-documentation FOLDER-NAME
+   git clone --branch BRANCH-NAME https://github.com/YOUR-GITHUB-USERNAME/user-documentation FOLDER-NAME
    ```
 
    Here are some examples:
 
    ```bash
-   git clone --branch 5.2 https://github.com/USERNAME/user-documentation user-docs-5
-   git clone --branch 6.0 https://github.com/USERNAME/user-documentation user-docs-6
-   git clone --branch 7.0 https://github.com/USERNAME/user-documentation user-docs-7
+   git clone --branch 5.2 https://github.com/YOUR-GITHUB-USERNAME/user-documentation user-docs-5
+   git clone --branch 6.0 https://github.com/YOUR-GITHUB-USERNAME/user-documentation user-docs-6
+   git clone --branch 7.0 https://github.com/YOUR-GITHUB-USERNAME/user-documentation user-docs-7
    ```
 
 ### Create a new branch
@@ -300,7 +302,7 @@ To work directly on GitHub, follow the steps below:
 
 ### 2. GitHub Codespaces
 
-Using GitHub Codespaces enables you to quickly spin up the project in the cloud. For a smooth process, use the Chrome or Firefox browser to work with Codespaces.
+Using GitHub Codespaces enables you to spin up the project in the cloud quickly. For a smooth process, use the Chrome or Firefox browser to work with Codespaces.
 
 <details>
   <summary><strong>Tips to maximize free tier of Codespaces</strong></summary>
@@ -355,7 +357,7 @@ Using GitHub Codespaces enables you to quickly spin up the project in the cloud.
 1. Ensure that you're in the `docs/` directory.
 2. Run `make html`. It generates the `build` folder.
 
-   **Tip:** If you get `make: *** No rule to make target 'html'.  Stop.` error message after running `make html` command, you should check if you're in the correct directory. You must be in the `docs/` directory to run this command.
+   **Tip:** If you get `make: *** No rule to make target 'html'.  Stop.` error message after running the `make html` command, you should check if you're in the correct directory. You must be in the `docs/` directory to run this command.
 3. Click the preview button — resembles a book and a magnifying glass — at the top to trigger Esbonio, a tool used for live preview. A tab opens, but the preview won't work. You can safely close this tab.
 
    ![Highlight preview button on the top bar of VS Code on codespace](../assets/images/preview_button_vscode_codespace.png)
@@ -577,7 +579,7 @@ Your changes must follow Mautic's style guide. To ensure that the changes are co
    .. vale on
    ```
 
-   If the suggestion targets a point in a list, you first need to ensure that the whole list follows the style guide. Then, wrap the entire list in the `.. vale off` and `.. vale on` statements as example below:
+   If the suggestion targets a specific point in a list, you first need to ensure that the entire list adheres to the style guide. Then, wrap the whole list in the `.. vale off` and `.. vale on` statements as example below:
 
    ```rst
    .. vale off
