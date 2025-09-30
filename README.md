@@ -10,15 +10,6 @@ All kinds of contributions are encouraged. For complete information on how to co
 
 All contributors are required to abide by our [Code of Conduct](https://mautic.org/code-of-conduct/).
 
-## Generating translations files
-
-Currently, we manually create the translation files necessary for Transifex to inform translators that there are changes to the content.
-
-To do this, run the following at the command line after following the steps to build the documentation locally.
-
-1. Run the command in the `/docs` folder `sphinx-build -b gettext . docs_translations`
-2. Commit the files created with your pull request
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
