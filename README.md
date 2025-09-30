@@ -4,6 +4,10 @@
 
 This repository hosts the User Documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. Whenever a PR is merged, changes are deployed immediately to [https://docs.mautic.org/](https://docs.mautic.org/).
 
+[ReadTheDocs]: <https://readthedocs.org>
+[RTD badge URL]: <https://readthedocs.org/projects/mautic-documentation/badge/?version=latest>
+[RTD URL]: <https://mautic-documentation.readthedocs.io/en/latest/?badge=latest>
+
 ## Contributing 🤝
 
 All kinds of contributions are encouraged. For complete information on how to contribute to the Mautic user documentation repository, please read the [Contributing Guidelines](.github/CONTRIBUTING.md).
