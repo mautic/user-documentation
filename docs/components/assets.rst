@@ -46,7 +46,7 @@ UTM parameters appended to the download link means that UTM data is available in
 
 .. code-block:: php
 
-``/asset/{id}:{name}?utm_source=test&utm_medium=test&utm_campaign=test&utm_id=test&utm_term=test&utm_content=test``
+  /asset/{id}:{name}?utm_source=test&utm_medium=test&utm_campaign=test&utm_id=test&utm_term=test&utm_content=test
 
 
 .. vale off
