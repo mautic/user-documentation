@@ -140,6 +140,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "adi-ray",
+      "name": "Aditya Ray",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96347576?v=4",
+      "profile": "https://www.adityaray.xyz",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
