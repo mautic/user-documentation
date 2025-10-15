@@ -59,7 +59,11 @@ With the bucket details and a user with the correct credentials, it's time to se
 2. Click the **Amazon S3** Plugin.
 3. Click the **install/upgrade Plugins**, if you don't see the Amazon S3 Plugin.
 4. Toggle the **Active** switch button to enable the Plugin.
+<<<<<<< HEAD
 5. Enter the **ID**, secret from your user, and the bucket name.
+=======
+5. Enter the **ID**, secret from your user, and the bucket name. 
+>>>>>>> 491622e (included given toggle point in .rst file)
 
 .. image:: images/amazon_enabled.png
   :width: 400
