@@ -138,7 +138,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/11647950?v=4",
       "profile": "https://pedaars.co.uk",
       "contributions": [
-      "doc"
+        "doc"
       ]
     },
     {
@@ -156,8 +156,8 @@
       "name": "Abi beniyal",
       "avatar_url": "https://avatars.githubusercontent.com/u/42829681?v=4",
       "profile": "https://github.com/beneyalraj",
-       "contributions": [
-       "doc"
+      "contributions": [
+        "doc"
       ]
     },
     {
@@ -167,6 +167,15 @@
       "profile": "https://github.com/favour-chibueze",
       "contributions": [
         "review"
+      ]
+    },
+    {
+      "login": "adi-ray",
+      "name": "Aditya Ray",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96347576?v=4",
+      "profile": "https://www.adityaray.xyz",
+      "contributions": [
+        "doc"
       ]
     }
   ],
