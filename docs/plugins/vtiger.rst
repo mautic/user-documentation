@@ -51,7 +51,7 @@ Configure the Vtiger CRM Plugin
 
 If you want to use the Plugin, you have to activate it. 
 
-1. Set the *Active* switch to **Yes**.
+
 
 .. image:: images/vtiger-mautic-enabled.png
   :alt: Screenshot of Vtiger Mautic Integration
