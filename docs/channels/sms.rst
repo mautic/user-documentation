@@ -46,7 +46,7 @@ Creating a Text Message
 
 To create a Text Message, navigate to Channels > Text Messages and click the 'New' button.
 
-  .. image:: images/sms/create-sms.png
+  .. image:: images/sms/sms-create-sms.png
     :width: 400
     :alt: Screenshot showing create new SMS button
 
@@ -61,7 +61,7 @@ Template Text Message fields
 
 The following fields are available:
 
-  .. image:: images/sms/new-triggered-text-message-fields.png
+  .. image:: images/sms/sms-new-triggered-text-message-fields.png
     :width: 400
     :alt: Screenshot showing the fields required for a new Template Text Message
 
