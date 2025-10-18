@@ -46,7 +46,7 @@ Creating a Text Message
 
 To create a Text Message, navigate to Channels > Text Messages and click the 'New' button.
 
-  .. image:: images/sms/sms-create-sms.png
+  .. image:: images/sms/create-sms.png
     :width: 400
     :alt: Screenshot showing create new SMS button
 
@@ -61,7 +61,7 @@ Template Text Message fields
 
 The following fields are available:
 
-  .. image:: images/sms/sms-new-triggered-text-message-fields.png
+  .. image:: images/sms/new-triggered-text-message-fields.png
     :width: 400
     :alt: Screenshot showing the fields required for a new Template Text Message
 
@@ -88,7 +88,7 @@ Segment Text Message fields
 
 The following fields are available:
 
-  .. image:: images/sms/sms-new-segment-sms.png
+  .. image:: images/sms/new-segment-sms.png
     :width: 400
     :alt: Screenshot showing the fields required for a new Segment Text Message
 
@@ -121,7 +121,7 @@ Creating Text Messages from Campaign Builder
 
 It's also possible to create a Text Message from within the Campaign Builder. To do this, select the Campaign Action of Send Text Message and press the New Text Message button rather than selecting an existing Text Message in the dropdown.
 
-  .. image:: images/sms/sms-send-sms-campaign.png
+  .. image:: images/sms/send-sms-campaign.png
     :width: 400
     :alt: Screenshot showing the option to create an SMS from a Campaign
 
