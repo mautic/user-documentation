@@ -88,7 +88,7 @@ Segment Text Message fields
 
 The following fields are available:
 
-  .. image:: images/sms/new-segment-sms.png
+  .. image:: images/sms/sms-new-segment-sms.png
     :width: 400
     :alt: Screenshot showing the fields required for a new Segment Text Message
 
