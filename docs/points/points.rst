@@ -17,8 +17,8 @@ To add a new action:
 
 1. Click **Points > Point Actions > + New**  - located in the top right corner.
 
-.. image:: images/points-action.png
-    :alt: Screenshot of Points action
+.. image:: images/new-points-action.png
+    :alt: Screenshot of New Points action
 
 2. In the main panel, there are four boxes for key information. Enter the appropriate information.
 
@@ -28,7 +28,7 @@ To add a new action:
 
    * **Change Points (+/-)** - The value change to set for the action. The ``+`` isn't necessary when adding Points. When subtracting Points, add the ``-`` symbol.
 
-   * **Actions taken by User** - This is the behavior or action the Contact must complete to trigger the action.
+   * **Actions taken by User** - This is the behaviour or action the Contact must complete to trigger the action.
 
 3. On the right side is more information:
 
@@ -49,15 +49,15 @@ Point Triggers
 
 Once a Contact has accumulated a Point total, you may want to trigger an action with the Contact. You may create multiple triggers for different Point values.
 
-.. image:: images/points-trigger.png
-    :alt: Screenshot of Points trigger
+.. image:: images/new-points-trigger.png
+    :alt: Screenshot of New Points trigger
 
 Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Category**, and **Active** options are all the same. The trigger fires based on the minimum number of Points. Set a number and decide if you want to **Trigger for existing applicable Contacts upon saving - if activated**. 
 
 Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point Triggers and associated events are also fully customizable.
 
-.. image:: images/trigger-events.png
-    :alt: Screenshot of Points trigger events
+.. image:: images/new-points-trigger-events.png
+    :alt: Screenshot of New Points trigger events
 
 Campaign triggers
 =================
