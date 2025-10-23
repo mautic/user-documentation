@@ -61,7 +61,6 @@ With the bucket details and a user with the correct credentials, it's time to se
 4. Enter the **ID**, secret from your user, and the bucket name. 
 
 .. image:: images/amazon-enabled.png
-  :width: 400
   :align: center
   :alt: Screenshot of Amazon Integration Form
 
