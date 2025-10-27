@@ -58,21 +58,20 @@ With the bucket details and a user with the correct credentials, it's time to se
 1. Go to **Settings** > **Plugins**
 2. Click the **Amazon S3** Plugin.
 3. Click the **install/upgrade Plugins**, if you don't see the Amazon S3 Plugin.
-4. Enter the **ID**, secret from your user, and the bucket name. 
+4. Toggle the **Active** switch button to enable the Plugin.
+5. Enter the **ID**, secret from your user, and the bucket name.
 
 .. image:: images/amazon-enabled.png
-  :align: center
   :alt: Screenshot of Amazon Integration Form
 
-5. Enter the **bucket location** as configured in Amazon S3.
-6. Click **Save** to save your changes
-7. Click the next tab, **Features**, to ensure that the option to use a cloud provider for Assets is selected.
+6. Enter the **bucket location** as configured in Amazon S3.
+7. Click **Save** to save your changes
+8. Click the next tab, **Features**, to ensure that the option to use a cloud provider for Assets is selected.
 
 .. image:: images/amazon-features.png
   :alt: Screenshot of Amazon Integration Form
 
-
-8. Click **Save & Close**, and refresh the Plugins page - the Amazon S3 Plugin icon will be in color rather than ``Grayscale``, indicating that it's active.
+9. Click **Save & Close**, and refresh the Plugins page - the Amazon S3 Plugin icon will be in color rather than ``Grayscale``, indicating that it's active.
 
 When you upload an Asset to your S3 bucket you can select it by creating a new Asset and choosing Remote Files > S3.
 
