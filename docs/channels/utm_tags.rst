@@ -19,9 +19,8 @@ To use UTM tags with Google Analytics where they appear in your Google Analytics
 
 If you use a Mautic Landing Page, you must go to Settings > Configuration > Tracking Settings, and add your Google Analytics ID.
 
-  .. image:: images/utm_tags/add_ga_code.png
-    :width: 400
-    :alt: Screenshot showing the option to add Google Analytics code
+  .. image:: images/utm_tags/add_google_analytics_id.png
+    :alt: Screenshot showing the option to add your Google Analytics ID
 
 If you use a non-Mautic Landing Page, you must manually embed the Google Analytics tracking script on the third-party Page.
 
