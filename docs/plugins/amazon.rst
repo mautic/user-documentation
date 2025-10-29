@@ -61,7 +61,7 @@ With the bucket details and a user with the correct credentials, it's time to se
 4. Toggle the **Active** switch button to enable the Plugin.
 5. Enter the **ID**, secret from your user, and the bucket name.
 
-.. image:: images/amazon-enabled.png
+.. image:: images/amazon_enabled.png
   :alt: Screenshot of Amazon Integration Form
 
 6. Enter the **bucket location** as configured in Amazon S3.
