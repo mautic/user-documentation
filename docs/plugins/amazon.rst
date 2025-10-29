@@ -68,7 +68,7 @@ With the bucket details and a user with the correct credentials, it's time to se
 7. Click **Save** to save your changes
 8. Click the next tab, **Features**, to ensure that the option to use a cloud provider for Assets is selected.
 
-.. image:: images/amazon-features.png
+.. image:: images/amazon_features.png
   :alt: Screenshot of Amazon Integration Form
 
 9. Click **Save & Close**, and refresh the Plugins page - the Amazon S3 Plugin icon will be in color rather than ``Grayscale``, indicating that it's active.
