@@ -17,8 +17,8 @@ To add a new action:
 
 1. Click **Points > Point Actions > + New**  - located in the top right corner.
 
-.. image:: images/points-action.png
-    :alt: Screenshot of Points action
+.. image:: images/new_points_action.png
+    :alt: Screenshot of New Points action
 
 2. In the main panel, there are four boxes for key information. Enter the appropriate information.
 
@@ -49,32 +49,44 @@ Point Triggers
 
 Once a Contact has accumulated a Point total, you may want to trigger an action with the Contact. You may create multiple triggers for different Point values.
 
-.. image:: images/points-trigger.png
-    :alt: Screenshot of Points trigger
+.. image:: images/new_points_trigger.png
+    :alt: Screenshot of New Points trigger
 
 Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Category**, and **Active** options are all the same. The trigger fires based on the minimum number of Points. Set a number and decide if you want to **Trigger for existing applicable Contacts upon saving - if activated**. 
 
 Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point Triggers and associated events are also fully customizable.
 
-.. image:: images/trigger-events.png
-    :alt: Screenshot of Points trigger events
+.. image:: images/new_points_trigger_events.png
+    :alt: Screenshot of New Points trigger events
 
 Campaign triggers
 =================
 
 **Modify Contact's Campaigns** - Add a Contact to or remove a Contact from any Campaigns you have activated.
 
+.. image:: images/modify_contacts_campaigns.png
+    :alt: Screenshot of Modify Contact's Campaigns
+
 Contact triggers
 ================
 
 **Modify Contact's Segments** - Add a Contact to or remove a Contact from any Segments you have activated.
 
+.. image:: images/modify_contacts_segments.png
+    :alt: Screenshot of Modify Contact's Segments
+
 **Modify Contact's tags** - Add or remove any Tags on the Contact record. If a Tag doesn't exist, you may create a new one in the edit window for this event.
+
+.. image:: images/modify_contacts_tags.png
+    :alt: Screenshot of Modify Contact's Tags
 
 Add-on triggers
 ===============
 
 **Push Contact to Integration** - To only push Contacts to an Integration after hitting a minimum Point total, use this option. You must have the **Triggered action push Contacts to Integration** option selected in the Integration. After selecting this event, the system displays a dialog box where you can choose which Integration to push the Contact to. For example, if you base your definition of a Marketing Qualified Lead (MQL) on Point values, you may decide to only push Contacts who are MQLs to your CRM. Once a Contact meets the Points requirement to be an MQL, use this action to push the Contact to your CRM.
+
+.. image:: images/push_contact_to_integration.png
+    :alt: Screenshot of Push Contact to Integration
 
 .. note:: 
 
@@ -85,8 +97,8 @@ Email triggers
 
 **Send an Email** - Send a template Email to the Contact based on their engagement. This may be some sort of special offer, congratulations, etc.
 
-.. image:: images/send-an-email-to-user.png
-    :alt: Screenshot of Send an Email to User Email trigger
+.. image:: images/send_an_email.png
+    :alt: Screenshot of Send an Email trigger
 
 **Send an Email to User** - Tell a team member that a Contact has reached a minimum number of Points. There is an option in this event to send the Email to the Contact's owner. You may either write a basic Email in the editor, or use a template Email.
   * Selecting a User and selecting the option of **send Email to Contact's owner** notifies both Contacts.
@@ -96,3 +108,6 @@ Email triggers
   * You can add more Emails to 'to', 'cc' and 'bcc' fields - separated by a comma. You can add space after each comma if needed.
 
   * Sends Notification to all address - User's Email, owner's Email, to, cc and bcc.
+
+.. image:: images/send_an_email_to_user.png
+    :alt: Screenshot of Send an Email to User Email trigger
