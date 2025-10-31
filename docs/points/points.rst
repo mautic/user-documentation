@@ -28,7 +28,7 @@ To add a new action:
 
    * **Change Points (+/-)** - The value change to set for the action. The ``+`` isn't necessary when adding Points. When subtracting Points, add the ``-`` symbol.
 
-   * **Actions taken by User** - This is the behaviour or action the Contact must complete to trigger the action.
+   * **Actions taken by User** - This is the behavior or action the Contact must complete to trigger the action.
 
 3. On the right side is more information:
 
