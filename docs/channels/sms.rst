@@ -46,7 +46,7 @@ Creating a Text Message
 
 To create a Text Message, navigate to Channels > Text Messages and click the 'New' button.
 
-  .. image:: images/sms/create_sms.png
+  .. image:: images/sms/sms-create-sms.png
     :width: 400
     :alt: Screenshot showing create new SMS button
 
@@ -61,7 +61,7 @@ Template Text Message fields
 
 The following fields are available:
 
-  .. image:: images/sms/new_template_sms.png
+  .. image:: images/sms/sms-new-triggered-text-message-fields.png
     :width: 400
     :alt: Screenshot showing the fields required for a new Template Text Message
 
@@ -88,7 +88,7 @@ Segment Text Message fields
 
 The following fields are available:
 
-  .. image:: images/sms/new_segment_sms.png
+  .. image:: images/sms/sms-new-segment-sms.png
     :width: 400
     :alt: Screenshot showing the fields required for a new Segment Text Message
 
@@ -121,7 +121,7 @@ Creating Text Messages from Campaign Builder
 
 It's also possible to create a Text Message from within the Campaign Builder. To do this, select the Campaign Action of Send Text Message and press the New Text Message button rather than selecting an existing Text Message in the dropdown.
 
-  .. image:: images/sms/send_sms_campaign.png
+  .. image:: images/sms/sms-send-sms-campaign.png
     :width: 400
     :alt: Screenshot showing the option to create an SMS from a Campaign
 
@@ -138,7 +138,7 @@ Mautic allows you to create a single message - for example 'Red shoes on offer t
 
 If a Contact's preferred Channel is Text Messages, Mautic delivers the message through the Text Message Channel when a Marketing Message includes a Text Message.
 
-  .. image:: images/sms/sms_send_marketing_message.png
+  .. image:: images/sms/sms-send-marketing-message.png
     :width: 400
     :alt: Screenshot showing the option to send a Text Message as a Marketing Message
 
@@ -152,7 +152,7 @@ Contacts can unsubscribe from your Text Messages by replying with the word ``STO
 
 You can also view SMS replies in the Contact timeline:
 
-  .. image:: images/sms/contact-reply.png
+  .. image:: images/sms/sms-contact-reply.png
     :width: 400
     :alt: Screenshot showing the reply from SMS 
 
@@ -165,7 +165,7 @@ Working with replies to Text Messages
 
 In a Mautic Campaign, where Mautic has an active Text Message provider, there is a Campaign Action called 'Sends a Text Message' which allows you to monitor incoming replies for specific patterns and take action accordingly.
 
-  .. image:: images/sms/sms_reply_campaigns.png
+  .. image:: images/sms/sms-reply-campaigns.png
     :width: 400
     :alt: Screenshot showing the Campaign action 'Sends a Text Message'
 
