@@ -28,8 +28,12 @@ The export command:
 .. important::
     The importing instance needs the same Custom Fields and Plugins to be present.
 
-How it works
-************
+.. vale off
+
+How exporting Campaigns works
+*****************************
+
+.. vale on
 
 Whether exporting via the UI, the command line or using the API, the Export feature
 follows the same process.

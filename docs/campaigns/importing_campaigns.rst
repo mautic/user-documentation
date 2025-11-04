@@ -61,8 +61,9 @@ During the import process, Mautic performs a comprehensive analysis of the data 
 - **Campaign Activation**
   * After successful import, the Campaign remains inactive by default, so that you stay in control
   * Navigate to the Campaigns list to activate imported Campaigns
-  .. tip::
-To activate the imported Campaign:
+
+.. tip::
+   To activate the imported Campaign:
       
       1. Go to the Campaigns section
       2. Locate the newly imported Campaign using the toggle next to the Campaign name |activate_toggle|.
@@ -120,7 +121,7 @@ Curl example with ZIP file
    -F 'file=@/path/to/campaign_export.zip'
 
 Python example with JSON data
-**************************
+*****************************
 
 .. code-block:: python
 
