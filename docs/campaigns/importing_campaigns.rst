@@ -67,6 +67,7 @@ During the import process, Mautic performs a comprehensive analysis of the data 
       
       1. Go to the Campaigns section
       2. Locate the newly imported Campaign using the toggle next to the Campaign name |activate_toggle|.
+      
       3. Toggle the Campaign status to "Active"
       
   .. |activate_toggle| image:: images/activate-campaign.png
