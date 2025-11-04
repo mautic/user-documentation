@@ -67,7 +67,7 @@ During the import process, Mautic performs a comprehensive analysis of the data 
       
       1. Go to the Campaigns section
       2. Locate the newly imported Campaign using the toggle next to the Campaign name |activate_toggle|.
-      
+
       3. Toggle the Campaign status to "Active"
       
   .. |activate_toggle| image:: images/activate-campaign.png
@@ -115,7 +115,7 @@ Curl example with ZIP file
 
 .. code-block:: bash
 
-   curl -X POST 'https://{your-domain}/api/campaigns/import' \
+   curl -X POST 'https://example.com/api/campaigns/import' \
    -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
    -H 'Content-Type: multipart/form-data' \
    -F 'file=@/path/to/campaign_export.zip'
@@ -128,7 +128,7 @@ Python example with JSON data
    import requests
 
    # API Endpoint
-   url = 'https://{your-domain}/api/campaigns/import'
+   url = 'https://example.com/api/campaigns/import'
 
    # Authentication
    headers = {
@@ -167,7 +167,7 @@ Mautic supports two primary methods of API-based Campaign import:
    - Useful for creating new Campaigns or updating existing Campaigns
 
 .. important::
-    - Replace ``{your-domain}`` with your actual Mautic instance domain
+    - Replace ``example.com`` with your actual Mautic instance domain
     - Ensure you have a valid access token by accessing the API Credentials section within Mautic's settings.
     - The imported Campaign must comply with Mautic's Campaign structure
     - Verify import permissions and data integrity
