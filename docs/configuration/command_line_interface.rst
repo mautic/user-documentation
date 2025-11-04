@@ -146,6 +146,9 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - ``mautic:maintenance:cleanup``
      - Cleans up older data.
      - 
+   * - ``mautic:remove:anonymous_contacts``
+     - Removes all annonymous contacts from segment and campaign memberships.
+     - 
    * - ``mautic:messages:send``
      - Process sending of messages queue.
      - ``mautic:campaigns:messagequeue``, ``mautic:campaigns:messages``
