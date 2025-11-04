@@ -71,7 +71,6 @@ During the import process, Mautic performs a comprehensive analysis of the data 
       
   .. |activate_toggle| image:: images/activate-campaign.png
      :alt: Activate Campaign toggle
-     :height: 20px
 
 Importing via the command line
 ------------------------------
