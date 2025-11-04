@@ -18,17 +18,20 @@ File and folder permissions specify who and what can read, write, modify, and ac
 
 User
 ====
+
 A User is the owner of the file. By default, the person who created a file becomes its owner. Hence, a User is also sometimes called an **owner**.
 
 Group
 =====
+
 A Group can contain multiple Users. All Users belonging to a Group have the same access permissions to the file. Groups simplify permissions - all Users in a specific Group inherit the permissions assigned to that Group, rather than having to assign permissions to each User individually.
 
 Other
 =====
+
 Any other User who has access to a file comes into 'Other', meaning they have neither created the file, nor belong to a Group that owns the file. Practically, this means 'the rest of the world'. Hence, this is also referred to as **permissions for the world**.
 
-Linux distinguishes between these three User types to prevent Users accessing, editing, or deleting files they shouldn't be able to change. Read more about :xref:`Linux file and folder ownership documentation`
+Linux distinguishes between these three User types to prevent Users accessing, editing, or deleting files they shouldn't be able to change. Read more about :xref:`Linux file and folder ownership documentation`.
 
 Permissions and ownership settings are critical to ensuring the security of your server and Mautic instance, so it's important to get them right. If your files don't have the appropriate permissions in place, it's easier for hackers to intrude on your files and gain access to your Mautic instance. Setting your file permissions correctly may not save you from all attacks, but it helps make your Mautic instance a bit more secure.
 
@@ -39,7 +42,7 @@ Mautic needs access to read and write files in the Mautic directory to enable ce
 
 Problems with permissions and ownership generally occur because:
 
-* You've uploaded Mautic or made changes to files and folders as a different User to the one that Mautic uses to run - for example you uploaded files using an FTP account with the username ``bob`` but your web server executes scripts as a User called ``www-data``.
+* You've uploaded Mautic or made changes to files and folders as a different User to the one that Mautic uses to run - for example you uploaded files using an FTP account with the username ``bob`` but your web server executes scripts as a User called ``www-data``
 * The User that Mautic uses to run doesn't have the appropriate permissions on the files and folders - for example, ``bob`` isn't able to create directories, or read files
 * You ran an update as a different User to that which Mautic uses to run - resulting in some files and folders having their ownership changed
 
@@ -50,11 +53,13 @@ Resetting the permissions of your files and folders requires running some comman
 
 Solution for hosting providers that offer cPanel access
 =======================================================
+
 A script to fix permissions & ownership, on files & directories, for cPanel accounts. You could ask your hosting provider to run that script to reset the permissions to the correct values. Find this handy script here: :xref:`cPanel fix permissions script`.
 
 Identifying the problem
 =======================
-Log into your server using SSH, and change to the Mautic directory using the command
+
+Log into your server using SSH, and change to the Mautic directory using the command:
 
 .. code:: bash
     
@@ -96,7 +101,7 @@ To find out which User Apache is running as, run the following command and take 
     
     ps aux | grep apache2
 
-Use this information to find the Groups with the following command
+Use this information to find the Groups with the following command:
 
 .. code:: bash
     
