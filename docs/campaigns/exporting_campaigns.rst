@@ -1,7 +1,7 @@
 .. vale off
 
 Exporting Campaigns
-##########################
+###################
 
 .. vale on
 
@@ -28,12 +28,13 @@ The export command:
 .. important::
     The importing instance needs the same Custom Fields and Plugins to be present.
 
-Export mechanic
-***************
+How it works
+************
 
 Whether exporting via the UI, the command line or using the API, the Export feature
 follows the same process.
-    - Checks that the user has adequate permissions to export
+
+    - Checks that the User has adequate permissions to export
     - Supports exporting multiple Campaigns simultaneously
     - Exports data in a structured JSON format
     - Exports Assets into a separate folder in their original format
@@ -44,17 +45,17 @@ Export methods
 
 You can use the Export feature in three ways:
 
-**1. UI-based export**
-----------------------
+UI-based export
+---------------
 
 Manual export through Mautic Campaigns dashboard:
 
-1. Go to the Campaigns menu
-2. Select the Campaign you want to Export
-3. Select the Export option from the dropdown menu located next to the item selection
+# Go to the Campaigns menu
+# Select the Campaign you want to Export
+# Select the Export option from the dropdown menu located next to the item selection
 
-**2. CLI-based export**
------------------------
+CLI-based export
+----------------
 
 Use the following commands:
 
@@ -63,20 +64,20 @@ Use the following commands:
     bin/console mautic:entity:export --entity=campaign --id=1 --zip-file --path=path/to-file
 
 * `entity` defines the type of entity to Export, in this case `campaign`
-* `id` defines the id of the Campaign to Export. Look at the URL to find the ID when you view or edit the Campaign - the ID will appear in the URL for example, /s/campaigns/view/123 where 123 is the ID
+* `id` defines the id of the Campaign to Export. Look at the URL to find the ID when you view or edit the Campaign - the ID appears in the URL for example, ``/s/campaigns/view/123`` where 123 is the ID
 * `zip-file` creates a zip file of the Campaign and its dependencies
-* `path` specifies the directory where the exported file will be saved
+* `path` specifies the directory to save the exported file.
 
 .. code-block:: bash
     
     bin/console mautic:entity:export --entity=campaign --id=1 --json-file
 
-* Creates only a JSON file and ignores any additional assets
+* Creates only a JSON file and ignores any additional resources
 
-**3. API-based export**
------------------------
+API-based export
+----------------
 
-You can export Campaigns programmatically using the Mautic API. You will need to authenticate for the API request. using the API credentials stored in Mautic's settings. For more detail on how to authenticate, see the `Mautic API documentation <https://docs.mautic.org/en/5.x/authentication/authentication.html>`_.
+You can export Campaigns programmatically using the Mautic API. You need to authenticate for the API request. using the API credentials stored in Mautic's settings. For more detail on how to authenticate, see the :doc:`Mautic API documentation authentication/authentication.html`.
 
 Curl example
 ************
@@ -96,7 +97,7 @@ Python example
 
    # API Endpoint
    campaign_id = 1
-   url = f'https://{your-domain}/api/campaigns/export/{campaign_id}'
+   url = f'https://example.com/api/campaigns/export/{campaign_id}'
 
    # Authentication
    headers = {
@@ -112,7 +113,7 @@ Python example
        # Save or process the exported campaign
 
 .. important::
-    - Replace `{your-domain}` with your actual Mautic instance domain
+    - Replace `example.com` with your actual Mautic instance domain
     - Replace `YOUR_ACCESS_TOKEN` with a valid authentication token
-    - The API uses a GET request to export a specific campaign by ID
+    - The API uses a GET request to export a specific Campaign by ID
     - Ensure you have the necessary API permissions
