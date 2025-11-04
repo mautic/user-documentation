@@ -1,7 +1,7 @@
 .. vale off
 
 Importing Campaigns
-##########################
+###################
 
 .. vale on
 
