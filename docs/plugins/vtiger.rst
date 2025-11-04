@@ -51,7 +51,14 @@ Configure the Vtiger CRM Plugin
 
 If you want to use the Plugin, you have to activate it. 
 
-1. Set the *Active* switch to **Yes**.
+1. Toggle the **Active** switch button to enable the Plugin.
+
+.. image:: images/vtiger-mautic-enabled.png
+  :alt: Screenshot of Vtiger Mautic Integration
+  :width: 500
+  :align: center
+
+|
 
 2. In the **Features tab** is Push Contacts to this Integration checkbox and it's checked by default.
 
