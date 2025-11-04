@@ -31,7 +31,7 @@ Step-by-step import
    - Ensures inclusion of Campaign data, external Assets, and Dynamic Content
 
 .. important::
-    The UI only supports importing ZIP files. You can use both the command line and API endpoints to import correctly structured JSON files.
+    The user interface only supports importing ZIP files. You can use both the command line and API endpoints to import correctly structured JSON files.
 
 Import mechanics
 ****************
