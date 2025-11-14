@@ -20,7 +20,7 @@ To turn on SAML support in Mautic, you first need the IDP's metadata XML which t
 
 2. Navigate to **Configuration** > **User/Authentication** Settings. 
 
-.. image:: images/turn-on-saml.png
+.. image:: images/turn_on_saml.png
   :width: 800
   :alt: Screenshot of SAML SSO Settings
 
@@ -28,7 +28,7 @@ To turn on SAML support in Mautic, you first need the IDP's metadata XML which t
 
 4. It's recommended to create a non-Admin Role as the default Role for created Users. Select this Role in the '**Default Role for created Users**' dropdown. For more information, see :doc:`Users and Roles</users_roles/managing_users>`.
 
-.. image:: images/roles-permissions.png
+.. image:: images/roles_permissions.png
   :width: 800
   :alt: Screenshot of the User Role Permission
 
@@ -77,6 +77,6 @@ Turning off SAML
 
 To turn off SAML, click the Remove link to the right of the Identity provider metadata file label.
 
-.. image:: images/authentication-settings.png
+.. image:: images/authentication_settings.png
   :width: 800
   :alt: Screenshot of the authentication settings section
