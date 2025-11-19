@@ -32,6 +32,7 @@ Contributions are always welcome, no matter how large or small, or at whatever s
   - [Create a new link](#create-a-new-link)
   - [Check broken links](#check-broken-links)
 - [Working with Vale](#working-with-vale)
+- [Updating contents and UI images](#updating-contents-and-ui-images)
 - [Credit](#credit)
 
 ---
@@ -598,7 +599,11 @@ Your changes must follow Mautic's style guide. To ensure that the changes are co
 > - Ensure that you wrap the sentences that you'd like Vale to skip with both `.. vale off` and `.. vale on` statements, in order. Failing to do so results in Vale lint skipping the rest of the contents.
 > - Don't add statements to skip lint, unless necessary. If you're uncertain, it's best not to wrap them in the statements and let the team review and provide suggestions.
 
-<br />
+## Updating contents and UI images
+
+To update the documentation contents and Mautic user interface (UI) images, you need to install and review Mautic to ensure accuracy.
+
+Please read the [Tester](https://contribute.mautic.org/en/latest/contributing/tester.html) page in the community handbook for complete instructions on installing Mautic.
 
 ## Credit
 
