@@ -20,6 +20,7 @@ Contributions are always welcome, no matter how large or small, or at whatever s
     - [Ways to create a new branch](#ways-to-create-a-new-branch)
   - [Push changes to the remote repository](#push-changes-to-the-remote-repository)
   - [Create a PR](#create-a-pr)
+    - [Git cherry-pick](#git-cherry-pick)
 - [Getting started](#getting-started)
   - [1. On GitHub](#1-on-github)
   - [2. GitHub Codespaces](#2-github-codespaces)
@@ -272,6 +273,74 @@ Once you've pushed your changes, you are ready to create a PR. To do so:
 3. Fill in the PR template. Please read the "[Submitting a PR](#submitting-a-pr)" section for all the information you need to include in your PR for the reviewers.
 
 4. Submit it for review.
+
+> [!IMPORTANT]
+>
+> If you mistakenly based your PR on the wrong branch or selected the wrong branch when creating a PR, as in step 2, follow the steps in the next "[Git cherry-pick](#git-cherry-pick)" section.
+
+#### Git cherry-pick
+
+Say you need to update the documentation for version `7.0`. By mistake, you create a new branch from branch `6.0` and work on this branch. Or you correctly apply your changes based on branch `7.0`, but when you create the PR, you forgot to set the base branch to `7.0`.
+
+When this happens, our maintainers will ask you to rebase your PR. You can either [rebase your PR](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) or create a new PR and use [git cherry-pick](https://www.atlassian.com/git/tutorials/cherry-pick) to incorporate your commits as follows:
+
+1. In your code editor, [create a new branch](#create-a-new-branch) and make sure that you base your new branch on the branch that you need to work on.
+2. On GitHub, go to your PR and close your PR by clicking the 'Close pull request' button at the bottom.
+3. Click the 'Commits' tab at the top. You should see the list of your commits.
+4. Click the copy icon next to the hash to copy the full SHA value. If you have multiple commits, start at the top and work through to the end.
+5. In your terminal, run this command:
+
+   ```bash
+   git cherry-pick commit-hash          
+   ```
+
+   Change the `commit-hash` with the full SHA value that you've copied. Here's an example:
+
+   ```bash
+   git cherry-pick a1b2c3d4e5f678901234567890abcdef12345678
+   ```
+
+6. If there are merge conflicts, resolve them before continuing. Once you've resolved them, you need to add the file(s) to the stage phase and continue the process:
+
+   ```bash
+   git add .
+   git cherry-pick --continue
+   ```
+
+   If you're using VSCode and a new tab opens to change the commit message, you can either enter a new one or close the tab to keep the original.
+
+   You might get prompted with the following message:
+
+   ```bash
+   On branch BRANCH-NAME
+   You are currently cherry-picking commit XXXXXXX.
+      (all conflicts fixed: run "git cherry-pick --continue")
+      (use "git cherry-pick --skip" to skip this patch)
+      (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+   nothing to commit, working tree clean
+   The previous cherry-pick is now empty, possibly due to conflict resolution.
+   If you wish to commit it anyway, use:
+
+      git commit --allow-empty
+
+   Otherwise, please use 'git cherry-pick --skip'
+   ```
+
+   If the files are in the state you want them to be, and you don't need a commit in your history, use the recommended skip option:
+
+   ```bash
+   git cherry-pick --skip
+   ```
+
+   If you want to have a record in your history showing that you attempted to apply this specific commit, use the command Git suggests:
+
+   ```bash
+   git commit --allow-empty
+   ```
+
+7. [Push your changes](#push-changes-to-the-remote-repository) to the remote repository.
+8. [Create a new PR](#create-a-pr). Ensure you change the base branch to the appropriate version branch before clicking the 'Create pull request' button.
 
 ## Getting started
 
