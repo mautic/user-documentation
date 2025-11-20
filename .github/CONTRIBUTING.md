@@ -353,9 +353,9 @@ When this happens, our maintainers will ask you to rebase your PR. You can eithe
 
 ## Getting started
 
-This project is built with [Sphinx](https://www.sphinx-doc.org/en/master/) and hosted on the [Read the Docs platform](https://readthedocs.org).
+We built this project with [Sphinx](https://www.sphinx-doc.org/en/master/) and host it on the [Read the Docs platform](https://readthedocs.org).
 
-The contents are available in the `docs/` directory and written in [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
+The `docs/` directory contains the content, written in [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
 
 ---
 
