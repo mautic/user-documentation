@@ -277,6 +277,10 @@ Once you've pushed your changes, you are ready to create a PR. To do so:
 
 This project is built with [Sphinx](https://www.sphinx-doc.org/en/master/) and hosted on the [Read the Docs platform](https://readthedocs.org). The contents are written in [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
 
+> [!NOTE]
+>
+> All contents of the Mautic User Documentation are available in the `docs/` directory.
+
 There are three ways to work on changes for the Mautic User Documentation:
 
 1. Directly on GitHub
@@ -348,7 +352,12 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
    **Info:** Once you create a new branch, it automatically switches to your new branch. If you haven't seen the branch changes in your terminal, run `git status`, and you should see your branch name.
 
-8. All contents of the Mautic User Documentation are available in the `docs/` directory. In your terminal, navigate to the `docs/` directory with `cd docs`.
+8. Go to the `docs/` directory:
+
+   ```bash
+   cd docs
+   ```
+
 9. Find the folder and file that you need to work on.
 10. Work on your changes and use the [live preview](#live-preview-on-codespace) to view and test your changes in real-time.
 11. Ensure that the changes you made follow Mautic's style guide by running the Vale lint. Please read the "[Working with Vale](#working-with-vale)" section to use Vale.
