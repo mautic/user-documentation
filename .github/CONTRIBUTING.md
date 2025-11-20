@@ -282,7 +282,7 @@ Once you've pushed your changes, you are ready to create a PR. To do so:
 
 Say you need to update the documentation for version `7.0`. By mistake, you create a new branch from branch `6.0` and work on this branch. Or you correctly apply your changes based on branch `7.0`, but when you create the PR, you forgot to set the base branch to `7.0`.
 
-When this happens, our maintainers will ask you to rebase your PR. You can either [rebase your PR](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) or create a new PR and use [git cherry-pick](https://www.atlassian.com/git/tutorials/cherry-pick) to incorporate your commits as follows:
+If this happens, a request is made by the Education Team maintainers to rebase your PR. You can either [rebase your PR](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) or create a new PR and use [git cherry-pick](https://www.atlassian.com/git/tutorials/cherry-pick) to incorporate your commits as follows:
 
 1. In your code editor, [create a new branch](#create-a-new-branch) and make sure that you base your new branch on the branch that you need to work on.
 2. On GitHub, go to your PR and close your PR by clicking the 'Close pull request' button at the bottom.
