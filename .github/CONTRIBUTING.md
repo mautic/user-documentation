@@ -286,8 +286,17 @@ When this happens, our maintainers will ask you to rebase your PR. You can eithe
 
 1. In your code editor, [create a new branch](#create-a-new-branch) and make sure that you base your new branch on the branch that you need to work on.
 2. On GitHub, go to your PR and close your PR by clicking the 'Close pull request' button at the bottom.
+
+   ![Close pull request button on GitHub](../assets/images/close_pr_button_github.png)
+
 3. Click the 'Commits' tab at the top. You should see the list of your commits.
+
+   ![Commits tab and list of commits on GitHub](../assets/images/commits_tab_github.png)
+
 4. Click the copy icon next to the hash to copy the full SHA value. If you have multiple commits, start at the top and work through to the end.
+
+   ![Copy icon button to copy the full SHA value on GitHub](../assets/images/copy_full_sha_github.png)
+   
 5. In your terminal, run this command:
 
    ```bash
