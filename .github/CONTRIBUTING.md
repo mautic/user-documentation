@@ -296,7 +296,7 @@ When this happens, our maintainers will ask you to rebase your PR. You can eithe
 4. Click the copy icon next to the hash to copy the full SHA value. If you have multiple commits, start at the top and work through to the end.
 
    ![Copy icon button to copy the full SHA value on GitHub](../assets/images/copy_full_sha_github.png)
-   
+
 5. In your terminal, run this command:
 
    ```bash
@@ -353,11 +353,11 @@ When this happens, our maintainers will ask you to rebase your PR. You can eithe
 
 ## Getting started
 
-This project is built with [Sphinx](https://www.sphinx-doc.org/en/master/) and hosted on the [Read the Docs platform](https://readthedocs.org). The contents are written in [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
+This project is built with [Sphinx](https://www.sphinx-doc.org/en/master/) and hosted on the [Read the Docs platform](https://readthedocs.org).
 
-> [!NOTE]
->
-> All contents of the Mautic User Documentation are available in the `docs/` directory.
+The contents are available in the `docs/` directory and written in [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
+
+---
 
 There are three ways to work on changes for the Mautic User Documentation:
 
