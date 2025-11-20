@@ -316,7 +316,7 @@ When this happens, our maintainers will ask you to rebase your PR. You can eithe
    git cherry-pick --continue
    ```
 
-   If you're using VSCode and a new tab opens to change the commit message, you can either enter a new one or close the tab to keep the original.
+   If you're using VS Code and a new tab opens to change the commit message, you can either enter a new one or close the tab to keep the original.
 
    You might get prompted with the following message:
 
@@ -363,7 +363,7 @@ There are three ways to work on changes for the Mautic User Documentation:
 
 1. Directly on GitHub
 2. With [GitHub Codespaces](https://github.com/features/codespaces) on your browser
-3. With code editor, such as [VSCode](https://code.visualstudio.com/), on your local machine — **recommended**
+3. With code editor, such as [VS Code](https://code.visualstudio.com/), on your local machine — **recommended**
 
 ### 1. On GitHub
 
