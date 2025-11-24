@@ -75,7 +75,7 @@ PRs are always welcome. However, before working on changes, you must ensure that
 1. Ensure that you address one issue in one PR. If you work on multiple issues, work on them separately and create one PR to address each issue.
 2. Make sure you give clear information about your changes in your PR:
 
-   - **A title**. The PR title must describe your changes. For example: `Convert Marketer section into RST`.
+   - **A title**. The PR title must describe your changes. For example: `Add WordPress Plugin documentation`.
    - **A description**. A clear description can help PR reviewers understand what kind of changes you made in your PR. It's always good to walk through the process of how a reviewer can test your changes.
    - **A related issue**. [Link the issue number](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) that you worked on and add a keyword of 'Closes', 'Fixes', or 'Resolves' in front of it. For example, `Closes #123`, `Fixes #234`, etc. You can find the issue number right next to the issue's title. Linking the issue number automatically closes your issue once your PR gets merged.
 
@@ -127,7 +127,7 @@ After you forked the repository, you need to clone it. Cloning means making a co
 >
 > The Mautic User Documentation contains multiple branches that represent specific versions of Mautic. You should clone each branch into its own dedicated folder and make your changes within the appropriate folder.
 >
-> So, for example, when you need to make documentation changes for Mautic version 7, clone the branch `7.0` and save it in a separate folder. You can name the folder anything you want, but it's best to reflect the branch name. For example, use name like `user-docs-7`.
+> So, for example, when you need to make documentation changes for Mautic versions 7 and 6, clone the branch `7.0` and save it in a folder, then clone the branch `6.0` and save it in a separate folder. You can name the folder anything you want, but it's best to reflect the branch name. For example, use names like `user-docs-7`, `user-docs-6`, and so on.
 
 Follow the steps below to clone your forked repository:
 
@@ -260,7 +260,7 @@ Once you've pushed your changes, you are ready to create a PR. To do so:
 
 1. Go to [https://github.com/mautic/user-documentation](https://github.com/mautic/user-documentation) and click the green button that prompts you to create a PR.
 
-2. **This step is crucial.** Each branch contains documentation for a specific version of Mautic. You must base your PR on the branch that corresponds to the version you are modifying. If you don't, your changes may apply to the wrong version of the documentation. For instance, if you're making updates for the documentation version `7.0`, you must base your PR on the `7.0` branch.
+2. **This step is crucial.** Each branch contains documentation for a specific version of Mautic. You must base your PR on the branch that corresponds to the version you are modifying. If you don't, your changes may apply to the wrong version of the documentation. For instance, if you're making updates for the documentation version `7.0`, you must base your PR on the `7.0` branch, and so on.
 
     At the top, you should see several dropdown menus: 'base repository', 'base', 'head repository', and 'compare'.
 
@@ -351,13 +351,17 @@ If this happens, a request is made by the Education Team maintainers to rebase y
 
 ## Getting started
 
-This project is built with [Sphinx](https://www.sphinx-doc.org/en/master/) and hosted on the [Read the Docs platform](https://readthedocs.org). The contents are written in [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
+We built this project with [Sphinx](https://www.sphinx-doc.org/en/master/) and host it on the [Read the Docs platform](https://readthedocs.org).
+
+The `docs/` directory contains the content, written in [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
+
+---
 
 There are three ways to work on changes for the Mautic User Documentation:
 
 1. Directly on GitHub
 2. With [GitHub Codespaces](https://github.com/features/codespaces) on your browser
-3. With code editor, such as [VSCode](https://code.visualstudio.com/), on your local machine — **recommended**
+3. With code editor, such as [VS Code](https://code.visualstudio.com/), on your local machine — **recommended**
 
 ### 1. On GitHub
 
@@ -408,7 +412,7 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
 1. [Fork](#forking-the-repository) this repository to your own GitHub account.
 2. Go to your forked repository on GitHub.
-3. Click the branch dropdown menu on the top left and select the branch you need to base your changes on. For example, if you need to update documentation for Mautic version 7, switch to `7.0`.
+3. Click the branch dropdown menu on the top left and select the branch you need to base your changes on. For example, if you need to update documentation for Mautic version 7, switch to `7.0`; for version 6, switch to `6.0`, and so on.
 
    ![Highlight branch dropdown menu on GitHub](../assets/images/switch_branch_github.png)
 
@@ -424,7 +428,12 @@ Using GitHub Codespaces enables you to spin up the project in the cloud quickly.
 
    **Info:** Once you create a new branch, it automatically switches to your new branch. If you haven't seen the branch changes in your terminal, run `git status`, and you should see your branch name.
 
-8. All contents of the Mautic Community Handbook are available in the `docs/` directory. In your terminal, navigate to the `docs/` directory with `cd docs`.
+8. Go to the `docs/` directory:
+
+   ```bash
+   cd docs
+   ```
+
 9. Find the folder and file that you need to work on.
 10. Work on your changes and use the [live preview](#live-preview-on-codespace) to view and test your changes in real-time.
 11. Ensure that the changes you made follow Mautic's style guide by running the Vale lint. Please read the "[Working with Vale](#working-with-vale)" section to use Vale.
@@ -522,6 +531,8 @@ To work locally, you first need to install these on your machine:
    ```bash
    cd user-documentation
    ```
+
+   Replace `user-documentation` with the name of the project you provided. For example, `user-docs-6`, `user-docs-7`, etc.
 
 5. [Create a new branch](#create-a-new-branch) to work on your changes.
 6. Start the DDEV environment with this command:
