@@ -689,9 +689,11 @@ Your changes must follow Mautic's style guide. To ensure that the changes are co
 
 ## Updating contents and UI images
 
-To update the documentation contents and Mautic user interface (UI) images, you need to install and review Mautic to ensure accuracy.
+To update the documentation and the user interface (UI) images for Mautic, please follow the instructions outlined in the Community Handbook:
 
-Please read the [Tester](https://contribute.mautic.org/en/latest/contributing/tester.html) page in the community handbook for complete instructions on installing Mautic.
+- Visit the [Contributing to Mautic’s Documentation](https://contribute.mautic.org/en/latest/contributing/contributing_docs_rst.html) page and adhere to the style guide while working on the content.
+
+- Refer to the [Tester](https://contribute.mautic.org/en/latest/contributing/tester.html) page for comprehensive instructions on installing Mautic to update the UI images.
 
 ## Credit
 
