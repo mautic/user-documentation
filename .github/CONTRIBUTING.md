@@ -55,7 +55,7 @@ Contributions are always welcome, no matter how large or small, or at whatever s
 
   **Note:** Please don't ask maintainers to assign you to another issue before you have finished working on yours and created a PR.
 
-- Please don't ask maintainers to assign you to an issue that already has someone assigned to it. If the assigned issue hasn't been addressed for a while and you're interested in working on it, leave a comment on the issue to ask about its status and progress.
+- Please don't ask maintainers to assign you to an issue that already has someone assigned to it. If the assigned issue hasn't been addressed for a while and you're interested in working on it, leave a comment to ask about its status and progress.
 
 - Did you spot a typo, missing instructions, or have an idea for enhancing the Mautic User Documentation? You can [create an issue](https://github.com/mautic/user-documentation/issues/new/choose) to address it.
 
@@ -75,9 +75,9 @@ PRs are always welcome. However, before working on changes, you must ensure that
 1. Ensure that you address one issue in one PR. If you work on multiple issues, work on them separately and create one PR to address each issue.
 2. Make sure you give clear information about your changes in your PR:
 
-   - **A title**. The PR title must describe your changes. For example: `Add WordPress Plugin documentation`.
+   - **A title**. The PR title must describe the changes you made. For example: `Add WordPress Plugin documentation`.
    - **A description**. A clear description can help PR reviewers understand what kind of changes you made in your PR. It's always good to walk through the process of how a reviewer can test your changes.
-   - **A related issue**. [Link the issue number](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) that you worked on and add a keyword of 'Closes', 'Fixes', or 'Resolves' in front of it. For example, `Closes #123`, `Fixes #234`, etc. You can find the issue number right next to the issue's title. Linking the issue number automatically closes your issue once your PR gets merged.
+   - **A related issue**. [Link the issue number](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) that you worked on and add a keyword of 'Closes', 'Fixes', or 'Resolves' in front of it. For example, `Closes #123`, `Fixes #234`, etc. You can find the issue number right next to the issue's title. Linking the issue number automatically closes it once your PR is merged.
 
 3. Provide screenshots for visual changes if necessary.
 
@@ -87,7 +87,7 @@ PRs are always welcome. However, before working on changes, you must ensure that
 
 ### After submitting a PR
 
-1. Ensure that all checks pass. If you see the linting build or prose failed, try to debug and fix it until all of them pass. If you have questions or need help, feel free to tag the `@mautic/education-team-leaders` in the comment.
+1. Ensure that all checks pass. If the linting build or prose fails, debug and fix it until all pass. If you have questions or need help, feel free to tag the `@mautic/education-team-leaders` in the comment.
 2. Please don't DM maintainers on Slack to review or ask feedback and questions about your PR.
 
    If you'd like feedback or ask questions about your PR, tag `@mautic/education-team-leaders` in the comment of your PR or use the `#t-education` channel on Slack. That way, not only maintainers, but the community can help you get unstuck. The team always gets a notification whenever there is an incoming PR. If you haven't received a review within a week, you can tag them in the PR comments to ask for an estimated review time.
@@ -109,7 +109,7 @@ To fork this repository:
 
    ![Fork button on GitHub](../assets/images/fork_button_github.png)
 
-2. Choose your username in the 'Owner *' dropdown menu. **Don't select an organization here. Always choose your personal account**; otherwise, maintainers can't collaborate and fix things for you on your PR.
+2. Choose your username in the 'Owner *' dropdown menu. **Don't select an organization here. Always choose your personal account**; otherwise, the team can't collaborate or fix issues in your PR.
 
    ![Choose fork owner on GitHub](../assets/images/choose_fork_owner_github.png)
 
@@ -121,7 +121,7 @@ To fork this repository:
 
 ### Clone the repository
 
-After you forked the repository, you need to clone it. Cloning means making a copy of a repository in your local environment. In this case, you want to clone your forked repository.
+After you forked the repository, you need to clone it. Cloning means copying a repository to your local environment. In this case, you want to clone your forked repository.
 
 > [!IMPORTANT]
 >
@@ -158,13 +158,13 @@ Follow the steps below to clone your forked repository:
 
 ### Create a new branch
 
-Before making changes, ensure that you create a new branch and work on it. You don't want to directly work on the default — such as `main` — or any other base branch, because you won't be able to work on lots of things at the same time. If you make all those changes on one branch, it's not possible to separate them out and only merge one change at a time.
+Before making changes, ensure that you create a new branch and work on it. You don't want to directly work on the default — such as `main` — or any other base branch, because you won't be able to work on lots of things at the same time. If you make all those changes on one branch, you can't separate them and merge only one change at a time.
 
 #### Ensure the correct base branch
 
 Before you create a new branch, you must ensure that you're on the branch that you need to base your changes on. Here's how to do it:
 
-1. In the bottom left of your VS Code, look at the branch tab — it has a git branch symbol with a branch name. It should indicate the branch from which you need to base your changes.
+1. In the bottom left of your VS Code, look at the branch tab — it has a git branch symbol with a branch name. It should indicate the branch you need to base your changes on.
 
    ![Branch tab at the bottom left of VS Code](../assets/images/bottom_branch_tab_vscode.png)
    
@@ -261,7 +261,7 @@ Once you've pushed your changes, you are ready to create a PR. To do so:
 
 1. Go to [https://github.com/mautic/user-documentation](https://github.com/mautic/user-documentation) and click the green button that prompts you to create a PR.
 
-2. **This step is crucial.** Each branch contains documentation for a specific version of Mautic. You must base your PR on the branch that corresponds to the version you are modifying. If you don't, your changes may apply to the wrong version of the documentation. For instance, if you're making updates for the documentation version `7.0`, you must base your PR on the `7.0` branch.
+2. **This step is crucial.** Each branch contains documentation for a specific version of Mautic. You must base your PR on the branch that corresponds to the version you are modifying. If you don't, your changes may apply to the wrong version of the documentation. For instance, if you're making updates for the documentation version `6.0`, you must base your PR on the `6.0` branch, and so on.
 
     At the top, you should see several dropdown menus: 'base repository', 'base', 'head repository', and 'compare'.
 
@@ -362,7 +362,7 @@ There are three ways to work on changes for the Mautic User Documentation:
 
 1. Directly on GitHub
 2. With [GitHub Codespaces](https://github.com/features/codespaces) on your browser
-3. With code editor, such as [VS Code](https://code.visualstudio.com/), on your local machine — **recommended**
+3. With a code editor, such as [VS Code](https://code.visualstudio.com/), on your local machine — **recommended**
 
 ### 1. On GitHub
 
@@ -384,7 +384,7 @@ To work directly on GitHub, follow the steps below:
 
 ### 2. GitHub Codespaces
 
-Using GitHub Codespaces enables you to spin up the project in the cloud quickly. For a smooth process, use the Chrome or Firefox browser to work with Codespaces.
+Using GitHub Codespaces lets you quickly spin up the project in the cloud. For a smooth process, use the Chrome or Firefox browser to work with Codespaces.
 
 <details>
   <summary><strong>Tips to maximize free tier of Codespaces</strong></summary>
@@ -512,7 +512,7 @@ To work locally, you first need to install these on your machine:
 
    Mautic uses [DDEV](https://ddev.com) to simplify local development and testing of documentation updates. Go to the [Get Started](https://ddev.com/get-started/) page on their website for instructions to install DDEV on your local machine.
 
-   **For Windows users**: you can install and run DDEV on [traditional Windows](https://ddev.readthedocs.io/en/stable/#system-requirements-traditional-windows). However, using [Windows Subsystem for Linux 2 (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/about) gives you faster and better performance. If you're new to WSL, follow the instructions on the [DDEV blog](https://ddev.com/blog/watch-new-windows-installer/) to install and set up WSL and DDEV.
+   **For Windows users**: you can install and run DDEV on [traditional Windows](https://ddev.readthedocs.io/en/stable/#system-requirements-traditional-windows). However, using [Windows Subsystem for Linux 2 (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/about) provides faster, better performance. If you're new to WSL, follow the instructions on the [DDEV blog](https://ddev.com/blog/watch-new-windows-installer/) to install and set up WSL and DDEV.
 
 3. **Vale**
 
@@ -577,7 +577,7 @@ If you're ready to push your changes to the remote repository and create a PR, p
 
 ## Working with links
 
-In this section, you can find the commands that you need for working with links. Ensure that you're in the `docs/` directory to work with these commands.
+In this section, you can find the commands you need to work with links. Ensure you're in the `docs/` directory to run these commands.
 
 ### Create a new link
 
@@ -605,7 +605,7 @@ Then input the answer to all prompts:
 <br />
 
 > [!TIP]
-> Ensure that all entries are clear and general so that anyone working with this project can easily search and reuse them.
+> Ensure that all entries are clear and general so that anyone working on this project can easily search for and reuse them.
 
 <br />
 
@@ -620,7 +620,7 @@ Enter the .py file name (use_lower_case_and_underscore of link name): mautic_use
 
 ### Check broken links
 
-When there's a broken link, the build fails. Therefore, ensure that there are no broken links. You can check the links by following the instructions below, depending on where you work on your changes, in the terminal.
+To prevent build failures, ensure there are no broken links. You can check the links by following the instructions below, depending on where you work on your changes, in the terminal.
 
 If you work with Codespaces:
 
@@ -701,4 +701,4 @@ These contributing guidelines are adapted from [OpenSource-Communities/intro](ht
 
 ---
 
-Thank you for contributing to the improvement of the Mautic User Documentation.
+Thank you for contributing to improving the Mautic User Documentation.
