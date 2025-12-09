@@ -37,15 +37,15 @@ The **Recent Activity** panel on the right displays the recent activities that h
 
 .. _campaign republish behavior:
 
-Campaign Republish Behavior
+Campaign republish behavior
 ***************************
 
 .. vale on
 
-When you unpublish and then republish a Campaign, Mautic provides control over how scheduled events with relative delays - such as "Send Email 5 days after joining" - should behave. This feature gives you flexibility in managing Campaign timing based on your specific use case.
+When you Unpublish and then republish a Campaign, Mautic provides control over how scheduled events with relative delays - such as "Send Email 5 days after joining" - should behave. This feature gives you flexibility in managing Campaign timing based on your specific use case.
 
 .. note::
-    This setting only affects events that use relative delays (interval-based scheduling). Events with absolute dates are not affected by this setting.
+    This setting only affects events that use relative delays (interval-based scheduling). Events with absolute dates aren't affected by this setting.
 
 Configuring republish behavior
 ===============================
@@ -73,9 +73,9 @@ This is the default behavior. The original trigger date is used and unpublished 
 - Campaign unpublished: January 5
 - Campaign republished: January 7
 
-**Result:** The event still executes on January 11, as originally scheduled.
+**Result:** the event still executes on January 11, as originally scheduled.
 
-**When to use:** This option maintains the original scheduled timing, treating the Campaign's publish state as irrelevant to the delay calculation. Use this when you want consistency with the original schedule, or when temporarily unpublishing a Campaign shouldn't affect when events execute.
+**When to use:** this option maintains the original scheduled timing, treating the Campaign's publish state as irrelevant to the delay calculation. Use this when you want consistency with the original schedule, or when temporarily using Unpublish on a Campaign shouldn't affect when events execute.
 
 Restart on republish
 --------------------
@@ -90,9 +90,9 @@ The delay counter resets completely when you republish the Campaign.
 - Campaign unpublished: January 5
 - Campaign republished: January 7
 
-**Result:** The event is rescheduled to execute 10 days after republishing, on January 17.
+**Result:** the event is rescheduled to execute 10 days after republishing, on January 17.
 
-**When to use:** This option is useful when you want to ensure all Contacts receive the full intended delay after any Campaign changes. For example, if you unpublish a Campaign to make significant updates and want everyone to experience the complete updated workflow timing.
+**When to use:** this option is useful when you want to ensure all Contacts receive the full intended delay after any Campaign changes. For example, if you Unpublish a Campaign to make significant updates and want everyone to experience the complete updated workflow timing.
 
 Count delay only while published
 ---------------------------------
@@ -107,25 +107,25 @@ Events only count days when the Campaign is published. Unpublished periods don't
 - Campaign unpublished: January 5 (after 4 days published)
 - Campaign republished: January 10 (after 5 days unpublished)
 
-**Result:** The event is rescheduled to execute on January 16. The 4 days while published (January 1-5) count toward the 10-day delay, leaving 6 more days needed after republishing (January 10 + 6 days = January 16).
+**Result:** the event is rescheduled to execute on January 16. The 4 days while published (January 1-5) count toward the 10-day delay, leaving 6 more days needed after republishing (January 10 + 6 days = January 16).
 
-**When to use:** This option is ideal when you want precise control over the actual time Contacts spend in an active Campaign state. Use this for compliance scenarios, trial periods, or when you need to pause campaigns without affecting the intended engagement timeline.
+**When to use:** this option is ideal when you want precise control over the actual time Contacts spend in an active Campaign state. Use this for compliance scenarios, trial periods, or when you need to pause Campaigns without affecting the intended engagement timeline.
 
 Viewing last publish date
 =========================
 
 On the Campaign details page, you can see the **Last Publish Date** which indicates when the Campaign was most recently published. This date is used as the reference point for the "Restart on republish" option to recalculate scheduled event timings.
 
-Publishing and unpublishing Campaigns
+Publish and Unpublish Campaigns
 ======================================
 
-When you publish or unpublish a Campaign, Mautic displays a confirmation message that shows the current republish behavior setting. This helps you understand what will happen to scheduled events before you confirm the action.
+When you publish or Unpublish a Campaign, Mautic displays a confirmation message that shows the current republish behavior setting. This helps you understand what happens to scheduled events before you confirm the action.
 
 .. warning::
-    When you unpublish a Campaign, all processing of Contacts and Campaign events - including scheduled events - stops immediately. Scheduled events remain in the queue but won't execute until you republish the Campaign.
+    When you Unpublish a Campaign, all processing of Contacts and Campaign events - including scheduled events - stops immediately. Scheduled events remain in the queue but won't execute until you republish the Campaign.
 
 .. note::
-    The recalculation of scheduled events happens when the Campaign event log is being evaluated by the cron job, not at the moment you republish the Campaign. This means that if a recalculated trigger date is still in the past when evaluated, the event executes immediately. If it's in the future, the event is rescheduled accordingly.
+    The recalculation of scheduled events happens when the Campaign event log is being evaluated by the Cron job, not at the moment you republish the Campaign. This means that if a recalculated trigger date is still in the past when evaluated, the event executes immediately. If it's in the future, the event is rescheduled accordingly.
 
 Tracking rescheduled events
 ===========================

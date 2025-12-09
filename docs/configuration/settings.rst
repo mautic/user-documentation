@@ -156,7 +156,7 @@ Campaign settings
 
 * **Use date range for all views** - When viewing a Campaign, the date range of actions, conditions, decisions, and Contacts displayed in the tabs, Mautic uses this date range by default.
 
-* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`cron job<campaign cron jobs>` to summarize existing data.
+* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<campaign cron jobs>` to summarize existing data.
 
 * **Campaign Republish Behaviour** - Configure how scheduled events with relative delays in the middle of the workflow should behave when the Campaign is republished after being unpublished for a while. This setting provides a global default that can be overridden per Campaign. See :ref:`Campaign Republish Behavior<campaign republish behavior>` for more information.
 
