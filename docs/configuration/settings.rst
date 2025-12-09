@@ -158,15 +158,15 @@ Campaign settings
 
 * **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<campaign cron jobs>` to summarize existing data.
 
-* **Campaign Republish Behaviour** - Configure how scheduled events with relative delays in the middle of the workflow should behave when the Campaign is republished after being unpublished for a while. This setting provides a global default that can be overridden per Campaign. See :ref:`Campaign Republish Behavior<campaign republish behavior>` for more information.
+* **Campaign Reactivation Behaviour** - Configure how scheduled events with relative delays in the middle of the workflow should behave when the Campaign is reactivated after being deactivated for a while. This setting provides a global default that can be overridden per Campaign. This setting affects how the :ref:`Campaign cron jobs<campaign cron jobs>` schedule events. See :ref:`Campaign Reactivation Behaviour<campaign reactivate behavior>` for more information.
 
   Available options:
 
-  - **Count delay regardless of publish state** - The original trigger date is used. Events execute based on the calendar days from when they were originally scheduled, regardless of whether the Campaign was published or unpublished during that period. This is the default behavior.
+  - **Count delay regardless of activation state** - The original trigger date is used. Events execute based on the calendar days from when they were originally scheduled, regardless of whether the Campaign was active or inactive during that period. This is the default behaviour.
   
-  - **Restart on republish** - The delay counter resets when the Campaign is republished. Events are rescheduled to execute the full delay period after the last publish date.
+  - **Restart on reactivation** - The delay counter resets when the Campaign is reactivated. Events are rescheduled to execute the full delay period after the last activation date.
   
-  - **Count delay only while published** - Events only count days when the Campaign is published. If the Campaign is unpublished, those days don't count toward the delay, and events are rescheduled accordingly when the Campaign is republished.
+  - **Count delay only while active** - Events only count days when the Campaign is active. If the Campaign is inactive, those days don't count toward the delay, and events are rescheduled accordingly when the Campaign is reactivated.
 
 Optimal for Contact event scheduler
 ===================================
