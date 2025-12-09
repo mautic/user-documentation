@@ -158,7 +158,7 @@ Campaign settings
 
 * **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<campaign cron jobs>` to summarize existing data.
 
-* **Campaign Reactivation Behaviour** - Configure how scheduled events with relative delays in the middle of the workflow should behave when the Campaign is reactivated after being deactivated for a while. This setting provides a global default that can be overridden per Campaign. This setting affects how the :ref:`Campaign cron jobs<campaign cron jobs>` schedule events. See :ref:`Campaign Reactivation Behaviour<campaign reactivate behavior>` for more information.
+* **Campaign Reactivation Behaviour** - Configure how scheduled events with relative delays in the middle of the workflow should behave when the Campaign is reactivated after being deactivated for a while. This setting provides a global default that can be overridden per Campaign. This setting affects how the :ref:`Campaign Cron jobs<campaign cron jobs>` schedule events. See :ref:`Campaign Reactivation Behaviour<campaign reactivate behavior>` for more information.
 
   Available options:
 
@@ -293,7 +293,7 @@ The table below lists available transport Plugins created for Mautic to include 
 Configuring the Queue
 =====================
 
-The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`. Documentation relating to configuring the queue is in the :doc:`queue </queue/queue>` section.
+The system can either send Emails immediately or queue them for processing in batches by a :doc:`Cron job </configuration/cron_jobs>`. Documentation relating to configuring the queue is in the :doc:`queue </queue/queue>` section.
 
 Immediate delivery
 ------------------
@@ -303,13 +303,13 @@ This is the default means of delivery. As soon as an action in Mautic triggers a
 Queued delivery
 ---------------
 
-Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:
+Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`Cron job </configuration/cron_jobs>` at the desired interval to run the command:
 
 .. code-block:: shell
     
     php /path/to/mautic/bin/console messenger:consume email
 
-Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
+Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`Cron job documentation </configuration/cron_jobs>` for more specifics.
 
 
 Mail send settings
@@ -477,7 +477,7 @@ Import settings
   :width: 600
   :alt: Screenshot showing Import Settings Configuration in Mautic
 
-* **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV automatically sets to import in the background which requires a :ref:`cron job<import contacts cron job>` to trigger. Set to 0 if you want to always import files in the background recommended for performance optimization.
+* **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV automatically sets to import in the background which requires a :ref:`Cron job<import contacts cron job>` to trigger. Set to 0 if you want to always import files in the background recommended for performance optimization.
 
 Export settings
 ===============
@@ -495,7 +495,7 @@ Segment settings
   :width: 600
   :alt: Screenshot showing Segment Settings Configuration in Mautic
 
-* **Show warning if Segment hasn't been rebuilt for X hours** - Every time a :ref:`cron jobs<segment cron jobs>` runs, Segments are rebuilt. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, after which the warning message appears.
+* **Show warning if Segment hasn't been rebuilt for X hours** - Every time a :ref:`Cron jobs<segment cron jobs>` runs, Segments are rebuilt. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, after which the warning message appears.
 
 Company settings
 ****************
@@ -778,7 +778,7 @@ Webhook settings
   :width: 600
   :alt: Screenshot showing Webhook Settings Configuration in Mautic
 
-* **Queue Mode** -  Select how to process Webhook events. The process immediately executes the Webhook event as soon as it arrives. The queue mode improves performance by only adding the event to the queue and requires processing by a :ref:`cron command<webhooks cron job>`.
+* **Queue Mode** -  Select how to process Webhook events. The process immediately executes the Webhook event as soon as it arrives. The queue mode improves performance by only adding the event to the queue and requires processing by a :ref:`Cron command<webhooks cron job>`.
 
 * **Order of the queued events** - Process the events in chronological or reverse chronological order if a Webhook has a queue of multiple events.
   
