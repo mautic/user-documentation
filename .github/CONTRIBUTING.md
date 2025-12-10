@@ -53,9 +53,13 @@ Contributions are always welcome, no matter how large or small, or at whatever s
 
   If an issue isn't assigned, it's assumed to be available for anyone to work on. So, ensure that you're assigned to an issue **before** beginning work to avoid conflicts.
 
-  **Note:** Please don't ask maintainers to assign you to another issue before you have finished working on yours and created a PR.
+- Please don't ask maintainers to assign you to:
 
-- Please don't ask maintainers to assign you to an issue that already has someone assigned to it. If the assigned issue hasn't been addressed for a while and you're interested in working on it, leave a comment to ask about its status and progress.
+   - Another issue before you have finished working on yours and created a PR.
+
+   - An issue that already has someone assigned to it.
+   
+     If the assigned issue hasn't been addressed for a while and you're interested in working on it, leave a comment to ask about its status and progress.
 
 - Did you spot a typo, missing instructions, or have an idea for enhancing the Mautic User Documentation? You can [create an issue](https://github.com/mautic/user-documentation/issues/new/choose) to address it.
 
