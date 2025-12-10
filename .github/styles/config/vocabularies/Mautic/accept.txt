@@ -20,6 +20,10 @@ Citrix
 Clearbit
 CloudAMQP
 CMS
+codespace
+Codespace
+codespaces
+Codespaces
 config
 Company(ies)
 Composer
