@@ -1,7 +1,7 @@
 Plugin resources
 ################
 
-Mautic Plugins are installable packages which can extend Mautic feature or integrate it with another system. You can find more information about how to create a Mautic Plugin in the :xref:`Plugins developer documentation`. 
+Mautic Plugins are installable packages which can extend Mautic feature or integrate it with another system. You can find more information about how to create a Mautic Plugin on the :xref:`Mautic Plugins` section in the Developer Documentation.
 
 You can find the Plugins in the right Admin menu.
 
