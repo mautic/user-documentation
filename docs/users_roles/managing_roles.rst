@@ -100,4 +100,4 @@ Since Mautic 5.1 there is an additional permission relating to allowing Users of
   
   For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
 
-You can also :xref:`create Roles using the API`.
+You can also create :xref:`Roles using the API`.
