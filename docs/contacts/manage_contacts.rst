@@ -355,7 +355,7 @@ Website monitoring
 
 It's possible to use Mautic to monitor all traffic on a website by loading a JavaScript file - recommended - or by adding a tracking pixel to resources. It's important to note that traffic isn't monitored from logged-in Mautic Users. To verify that the JavaScript/pixel is working, use an incognito or private browsing window or log out of Mautic prior to testing.
 
-Note that by default, Mautic won't track traffic originating from the same :xref:`private network` as itself, but you can configure Mautic to track this internal traffic by setting the ``track_private_ip_ranges`` configuration option to ``true`` in ``app/config/local.php`` then and then :xref:`clearing the symfony cache`.
+Note that by default, Mautic won't track traffic originating from the same :xref:`private network` as itself, but you can configure Mautic to track this internal traffic by setting the ``track_private_ip_ranges`` configuration option to ``true`` in ``app/config/local.php`` and clearing the :xref:`symfony cache`.
 
 .. vale off
 
