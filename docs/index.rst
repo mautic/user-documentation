@@ -180,6 +180,7 @@ There are different types of documentation available to help you navigate your w
    plugins/twilio
    plugins/twitter
    plugins/vtiger
+   plugins/wordpress
    plugins/zapier
    plugins/zoho_crm
 

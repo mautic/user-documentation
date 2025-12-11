@@ -1,4 +1,3 @@
-
 Social login
 ############
 
@@ -26,13 +25,13 @@ Before you can use social login, each social media Plugin needs authorization. H
     :width: 400
     :alt: Screenshot of a callback URL input field.
 
-2. **Add Your API Keys**: copy the API Key - Client Key - and API Secret - Client Secret - from the social platform. Paste these keys into the relevant fields in the Mautic Plugin configuration.```
+2. **Add Your API Keys**: copy the API Key - Client Key - and API Secret - Client Secret - from the social platform. Paste these keys into the relevant fields in the Mautic Plugin configuration.
 
 .. image:: images/API_key.png
     :width: 400
     :alt: Screenshot of an API Key input field.
 
-1. **Authorize the Plugin**: in the Mautic Plugin configuration, click **Authorize**. You must **turn on** the Plugin - do this by toggling the option to “Yes”. Finally, save your configuration to complete the setup.
+3. **Authorize the Plugin**: in the Mautic Plugin configuration, click **Authorize**. You must **turn on** the Plugin - do this by toggling the option to “Yes”. Finally, save your configuration to complete the setup.
 
 .. Tip:: You can manage each social network under its respective tab in Mautic's Plugin settings. Make sure each network is fully authorized by adding the required API credentials.
 
@@ -54,7 +53,7 @@ Having configured the social Plugins, you can add social login buttons to your M
 .. note:: 
    Only the buttons for Plugins you've authorized work in the Form. Ensure you've configured all Integrations correctly for a smooth User experience.
 
-Step 3: configuring features and mapping Contact fields```
+Step 3: configuring features and mapping Contact fields
 *******************************************************
 
 After configuration and authorization of the Plugin, you can customize how Mautic handles the incoming social profile data. Under the **Contact Field Mapping** tab in the Plugin settings, map the fields from the User's social profile - for example Email, Name - to the appropriate Mautic Contact fields.
