@@ -57,6 +57,7 @@ There are different types of documentation available to help you navigate your w
    configuration/tracking_script
    configuration/variables
    configuration/settings
+   configuration/smime_email_signing
    configuration/shortener
 
 .. toctree::
