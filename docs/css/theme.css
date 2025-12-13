@@ -13,3 +13,7 @@ a {
 .wy-menu-vertical a, .wy-side-nav-search>a {
     color: #ffffff;
 }
+
+.wy-side-nav-search .version-switch select option {
+    color: #404040;
+}

@@ -132,7 +132,7 @@ Custom fonts
 
 From Mautic 5.x you can extend the Style Manager > Typography > Fonts list to include custom fonts.
 
-.. image:: images/editorfonts.jpg
+.. image:: images/editorfonts.png
   :width: 280
   :alt: Screenshot of the Fonts in Style Manager > Typography
 
