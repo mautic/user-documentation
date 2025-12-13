@@ -288,20 +288,36 @@ Say you need to update the documentation for version `7.0`. By mistake, you crea
 
 If this happens, the Education Team requests that you rebase your PR. You can either [rebase your PR](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) or create a new PR and use [git cherry-pick](https://www.atlassian.com/git/tutorials/cherry-pick) to incorporate your commits as follows:
 
-1. In your code editor, [create a new branch](#create-a-new-branch) and make sure that you base your new branch on the branch that you need to work on.
-2. On GitHub, go to your PR and close your PR by clicking the 'Close pull request' button at the bottom.
+1. Go to your forked repository on GitHub and click the 'Sync fork' button. If you need to update your branch with the latest state of the original repository, you should see and click the green 'Update branch' button.
+
+   ![Sync fork and Update branch buttons on GitHub](../assets/images/sync-fork-update-branch-buttons-github.png)
+
+2. In your code editor, switch to the base branch and ensure it's also up to date by running the following commands:
+
+   ```bash
+   git switch BASE-BRANCH-NAME
+   git pull
+   ```
+
+3. Ensure you have the commits you need for cherry-picking by fetching all remote new files, commits, and branches that you don't have yet on your local machine. To do so, run:
+
+   ```bash
+   git fetch origin
+   ```
+
+4. [Create a new branch](#create-a-new-branch) from the base branch.
+5. On GitHub, go to your PR and close your PR by clicking the 'Close pull request' button at the bottom.
 
    ![Close pull request button on GitHub](../assets/images/close_pr_button_github.png)
 
-3. Click the 'Commits' tab at the top. You should see the list of your commits.
+6. In your now-closed PR, click the 'Commits' tab at the top. You will see the list of your commits.
 
    ![Commits tab and list of commits on GitHub](../assets/images/commits_tab_github.png)
 
-4. Click the copy icon next to the hash to copy the full SHA value. If you have multiple commits, start at the top and work through to the end.
+7. Click the copy icon next to the hash to copy the full SHA value. If you have multiple commits, start at the top and work through to the end.
 
    ![Copy icon button to copy the full SHA value on GitHub](../assets/images/copy_full_sha_github.png)
-
-5. In your terminal, run this command:
+8. In your terminal, run this command:
 
    ```bash
    git cherry-pick commit-hash          
@@ -313,7 +329,7 @@ If this happens, the Education Team requests that you rebase your PR. You can ei
    git cherry-pick a1b2c3d4e5f678901234567890abcdef12345678
    ```
 
-6. If there are merge conflicts, resolve them before continuing. Once you've resolved them, you need to add the files to the stage phase and continue the process:
+9. If there are merge conflicts, resolve them before continuing. Once you've resolved them, you need to add the files to the stage phase and continue the process:
 
    ```bash
    git add .
@@ -352,8 +368,8 @@ If this happens, the Education Team requests that you rebase your PR. You can ei
    git commit --allow-empty
    ```
 
-7. [Push your changes](#push-changes-to-the-remote-repository) to the remote repository.
-8. [Create a new PR](#create-a-pr). Ensure you change the base branch to the appropriate version branch before clicking the 'Create pull request' button.
+10. [Push your changes](#push-changes-to-the-remote-repository) to the remote repository.
+11. [Create a new PR](#create-a-pr). Ensure you change the base branch to the appropriate version branch before clicking the 'Create pull request' button.
 
 ## Getting started
 
