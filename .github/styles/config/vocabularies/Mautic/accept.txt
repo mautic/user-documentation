@@ -43,6 +43,7 @@ DNC
 Dripflow
 DSN
 Dynamic Web Content
+Esbonio
 FALSE
 Focus Item
 Focus Items
@@ -110,6 +111,7 @@ Rackspace
 rebase
 Remarketing
 REST
+RST
 Salesforce
 SAML
 Schimpf
