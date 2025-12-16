@@ -53,13 +53,7 @@ Contributions are always welcome, no matter how large or small, or at whatever s
 
   If an issue isn't assigned, it's assumed to be available for anyone to work on. So, ensure that you're assigned to an issue **before** beginning work to avoid conflicts.
 
-- Please don't ask maintainers to assign you to:
-
-   - Another issue before you have finished working on yours and created a PR.
-
-   - An issue that already has someone assigned to it.
-   
-     If the assigned issue hasn't been addressed for a while and you're interested in working on it, leave a comment to ask about its status and progress.
+- Don’t ask maintainers to assign you to another issue before you finish working on your current one and create a PR. Also, avoid requesting assignment to an issue that already has someone assigned. However, if the assignee hasn’t addressed the issue for a while and you’re interested in working on it, leave a comment to ask about its status and progress.
 
 - Did you spot a typo, missing instructions, or have an idea for enhancing the Mautic User Documentation? You can [create an issue](https://github.com/mautic/user-documentation/issues/new/choose) to address it.
 
@@ -85,7 +79,7 @@ PRs are always welcome. However, before working on changes, you must ensure that
 
    - **A title**. The PR title must describe the changes you made. For example: `Add WordPress Plugin documentation`.
    - **A description**. A clear description can help PR reviewers understand what kind of changes you made in your PR. It's always good to walk through the process of how a reviewer can test your changes.
-   - **A related issue**. [Link the issue number](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) that you worked on and add a keyword of 'Closes', 'Fixes', or 'Resolves' in front of it. For example, `Closes #123`, `Fixes #234`, etc. You can find the issue number right next to the issue's title. Linking the issue number automatically closes it once your PR is merged.
+   - **A related issue**. [Link the issue number](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) that you worked on and add a keyword of 'Closes', 'Fixes', or 'Resolves' in front of it. For example, `Closes #123`, `Fixes #234`, etc. You can find the issue number right next to the issue's title. When you link the issue number, the issue automatically closes once a maintainer merges your PR.
 
 3. Provide screenshots for visual changes if necessary.
 
@@ -225,13 +219,13 @@ There are two ways to push your changes to the remote repository:
 
       ![Source control icon on VS Code](../assets/images/git_source_control_vscode.png)
 
-   2. Click the '+' icon next to the name of the file to move it to the 'stage' phase. It means you're adding this file as 'ready' to commit.
+   2. Click the '+' icon next to the name of the file to move it to the staging area. It means you're adding this file as 'ready' to commit.
 
    3. After you add all the files that you want to commit, add a commit message describing the changes you made. For example, `fix broken links`.
 
    4. Click the 'Commit' button.
 
-      ![Highlight plus icon to stage files, commit message input, and commit button at Source Control at VS Code](../assets/images/stage_and_commit_source_control_vscode.png)
+      ![Highlight plus icon to add files to the staging area, commit message input, and commit button at Source Control at VS Code](../assets/images/stage_and_commit_source_control_vscode.png)
 
    5. Click the 'Publish Branch', which opens a dropdown menu.
 
@@ -244,7 +238,7 @@ There are two ways to push your changes to the remote repository:
 2. **On terminal**
 
    1. Run `git status`. It provides you with file paths of the files you've worked on. You can later copy these paths for the next step.
-   2. Add the file paths that hold your changes to the 'stage' phase by running this command:
+   2. Add the file paths that hold your changes to the staging area by running this command:
 
       ```bash
       git add file-path-1 file-path-2
@@ -314,7 +308,7 @@ If this happens, the Education Team requests that you rebase your PR. You can ei
 
    ![Close pull request button on GitHub](../assets/images/close_pr_button_github.png)
 
-6. In your now-closed PR, click the 'Commits' tab at the top. You will see the list of your commits.
+6. In your now-closed PR, click the 'Commits' tab at the top. You should see the list of your commits.
 
    ![Commits tab and list of commits on GitHub](../assets/images/commits_tab_github.png)
 
@@ -333,7 +327,7 @@ If this happens, the Education Team requests that you rebase your PR. You can ei
    git cherry-pick a1b2c3d4e5f678901234567890abcdef12345678
    ```
 
-9. If there are merge conflicts, resolve them before continuing. Once you've resolved them, you need to add the files to the stage phase and continue the process:
+9. If there are merge conflicts, resolve them before continuing. Once you've resolved them, you need to add the files to the staging area and continue the process:
 
    ```bash
    git add .
@@ -377,9 +371,9 @@ If this happens, the Education Team requests that you rebase your PR. You can ei
 
 ## Getting started
 
-We built this project with [Sphinx](https://www.sphinx-doc.org/en/master/) and host it on the [Read the Docs platform](https://readthedocs.org).
+Mautic built this project with [Sphinx](https://www.sphinx-doc.org/en/master/) and hosts it on [Read the Docs](https://readthedocs.org).
 
-The `docs/` directory contains the content, written in [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
+The `docs/` directory contains the content, written in [reStructuredText - RST](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
 
 ---
 
@@ -387,7 +381,7 @@ There are three ways to work on changes for the Mautic User Documentation:
 
 1. Directly on GitHub
 2. With [GitHub Codespaces](https://github.com/features/codespaces) on your browser
-3. With a code editor, such as [VS Code](https://code.visualstudio.com/), on your local machine — **recommended**
+3. With a code editor, such as [VS Code](https://code.visualstudio.com/), on your local machine - **recommended**
 
 ### 1. On GitHub
 
@@ -447,7 +441,7 @@ Using GitHub Codespaces lets you quickly spin up the project in the cloud. For a
 
    ![Highlight Codespaces tab, plus icon, and Create codepace on main at GitHub](../assets/images/codespaces_tab_github.png)
 
-6. Wait until the codespace has finished building. Once complete, the build prompt will close, and the README preview opens. You can close this preview, and the `postCreateCommand` runs. Please wait until it finishes its task.
+6. Wait until the codespace has finished building. Once complete, the build prompt closes, and the README preview opens. You can close this preview, and the `postCreateCommand` runs. Please wait until it finishes its task.
 
    ![Screenshot of postCreateCommand running in terminal](../assets/images/postcreatecommand_on_terminal.png)
 7. [Create a new branch](#create-a-new-branch) to work on your changes.
