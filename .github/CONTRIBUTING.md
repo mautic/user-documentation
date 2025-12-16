@@ -65,7 +65,11 @@ Contributions are always welcome, no matter how large or small, or at whatever s
 
   However, the Education Team needs to triage the issue before you can work on it. If you wish to work on the issue you submitted, please inform and tag the `@mautic/education-team-leaders` in the comment.
 
+<!-- vale off -->
+
 ## Pull requests (PRs)
+
+<!-- vale on -->
 
 PRs are always welcome. However, before working on changes, you must ensure that **you are assigned** to an existing issue and **link your work to the issue in your PR**.
 
@@ -314,7 +318,7 @@ If this happens, the Education Team requests that you rebase your PR. You can ei
 
    ![Commits tab and list of commits on GitHub](../assets/images/commits_tab_github.png)
 
-7. Click the copy icon next to the hash to copy the full SHA value. If you have multiple commits, start at the top and work through to the end.
+7. Click the copy icon next to the hash to copy the full SHA - Secure Hash Algorithm - value. If you have multiple commits, start at the top and work through to the end.
 
    ![Copy icon button to copy the full SHA value on GitHub](../assets/images/copy_full_sha_github.png)
 8. In your terminal, run this command:
