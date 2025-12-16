@@ -145,6 +145,7 @@ URLs
 UTM
 Vtiger
 Webmecanik
+WSL
 www
 YAML
 Zapier

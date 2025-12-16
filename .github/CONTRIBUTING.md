@@ -532,7 +532,7 @@ To work locally, you first need to install these on your machine:
 
    Mautic uses [DDEV](https://ddev.com) to simplify local development and testing of documentation updates. Go to the [Get Started](https://ddev.com/get-started/) page on their website for instructions to install DDEV on your local machine.
 
-   **For Windows users**: you can install and run DDEV on [traditional Windows](https://ddev.readthedocs.io/en/stable/#system-requirements-traditional-windows). However, using [Windows Subsystem for Linux 2 (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/about) provides faster, better performance. If you're new to WSL, follow the instructions on the [DDEV blog](https://ddev.com/blog/watch-new-windows-installer/) to install and set up WSL and DDEV.
+   **For Windows users**: you can install and run DDEV on [traditional Windows](https://ddev.readthedocs.io/en/stable/#system-requirements-traditional-windows). However, using [Windows Subsystem for Linux 2 - WSL2](https://learn.microsoft.com/en-us/windows/wsl/about) provides faster, better performance. If you're new to WSL, follow the instructions on the [DDEV blog](https://ddev.com/blog/watch-new-windows-installer/) to install and set up WSL and DDEV.
 
 3. **Vale**
 
