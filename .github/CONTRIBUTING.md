@@ -8,7 +8,7 @@ Contributions are always welcome, no matter how large or small, or at whatever s
 
 - [Communication expectation](#communication-expectation)
 - [Issues](#issues)
-- [Pull requests (PRs)](#pull-requests-prs)
+- [Pull requests](#pull-requests)
   - [Before submitting a PR](#before-submitting-a-pr)
   - [Submitting a PR](#submitting-a-pr)
   - [After submitting a PR](#after-submitting-a-pr)
@@ -59,13 +59,9 @@ Contributions are always welcome, no matter how large or small, or at whatever s
 
   However, the Education Team needs to triage the issue before you can work on it. If you wish to work on the issue you submitted, please inform and tag the `@mautic/education-team-leaders` in the comment.
 
-<!-- vale off -->
+## Pull requests
 
-## Pull requests (PRs)
-
-<!-- vale on -->
-
-PRs are always welcome. However, before working on changes, you must ensure that **you are assigned** to an existing issue and **link your work to the issue in your PR**.
+Pull requests - PRs - are always welcome. However, before working on changes, you must ensure that **you are assigned** to an existing issue and **link your work to the issue in your PR**.
 
 ### Before submitting a PR
 

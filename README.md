@@ -10,7 +10,7 @@ This repository hosts the User Documentation for Mautic on the [Read the Docs pl
 
 ## Contributing 🤝
 
-Mautic actively encourages all kinds of contributions. For complete information on how to contribute to the Mautic user documentation repository, please read the [Contributing Guidelines](.github/CONTRIBUTING.md).
+Mautic actively encourages all kinds of contributions. For complete information on how to contribute to this repository, please read the [Contributing Guidelines](.github/CONTRIBUTING.md).
 
 All contributors must abide by the Mautic [Code of Conduct](https://mautic.org/code-of-conduct/).
 
