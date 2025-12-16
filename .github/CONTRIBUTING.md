@@ -115,11 +115,11 @@ To fork this repository:
 
    ![Choose fork owner on GitHub](../assets/images/choose_fork_owner_github.png)
 
-3. Uncheck the option of 'Copy the DEFAULT-BRANCH-NAME branch only' because later on, you want to be able to clone multiple branches.
+3. Remove the check in option of 'Copy the DEFAULT-BRANCH-NAME branch only' because later on, you want to be able to clone multiple branches.
 
 4. Click the green 'Create fork' button at the bottom.
 
-   ![An uncheck state option to copy only default branch and a create fork button on GitHub](../assets/images/uncheck_option_and_create_fork_button_github.png)
+   ![A check box with the removed check to copy only default branch and a create fork button on GitHub](../assets/images/uncheck_option_and_create_fork_button_github.png)
 
 ### Clone the repository
 
@@ -463,7 +463,7 @@ Using GitHub Codespaces lets you quickly spin up the project in the cloud. For a
 1. Ensure that you're in the `docs/` directory.
 2. Run `make html`. It generates the `build` folder.
 
-   **Tip:** If you get `make: *** No rule to make target 'html'.  Stop.` error message after running the `make html` command, you should check if you're in the correct directory. You must be in the `docs/` directory to run this command.
+   **Tip:** if you get `make: *** No rule to make target 'html'.  Stop.` error message after running the `make html` command, you should check if you're in the correct directory. You must be in the `docs/` directory to run this command.
 
 3. Click the preview button that resembles a book and a magnifying glass at the top to trigger Esbonio, a tool used for live preview. A tab opens, but the preview won't work. You can safely close this tab.
 
