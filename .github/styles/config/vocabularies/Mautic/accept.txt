@@ -116,6 +116,7 @@ Schimpf
 SCP
 SendGrid
 SES
+SHA
 Shortcodes
 Shortcode
 shortcode
