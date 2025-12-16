@@ -319,6 +319,11 @@ For example:
   
   <a href="https://mautic.example.com/" data-mautic-disable-tracking="true">Non tracked link</a>
 
+.. note::
+
+   The ``mautic:disable:tracking`` attribute is deprecated.
+   Use ``data-mautic-disable-tracking="true"`` for all new emails and templates.
+
 Unsubscribing
 *************
 
