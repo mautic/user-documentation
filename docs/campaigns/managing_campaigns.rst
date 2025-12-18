@@ -95,7 +95,7 @@ The delay counter resets completely when you reactivate the Campaign.
 **When to use:** this option is useful when you want to ensure all Contacts receive the full intended delay after any Campaign changes. For example, if you deactivate a Campaign to make significant updates and want everyone to experience the complete updated workflow timing.
 
 Count delay only while active
-------------------------------
+-----------------------------
 
 Events only count days when the Campaign is active. Inactive periods don't count toward the delay.
 
