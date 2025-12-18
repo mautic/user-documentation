@@ -45,7 +45,7 @@ Campaign reactivation behaviour
 When you deactivate and then reactivate a Campaign, Mautic provides control over how scheduled events with relative delays - such as "Send Email 5 days after joining" - should behave. This feature gives you flexibility in managing Campaign timing based on your specific use case.
 
 .. note::
-    This setting only affects events that use relative delays (interval-based scheduling). Events with absolute dates aren't affected by this setting.
+    This setting only affects events that use relative delays - interval-based scheduling. Events with absolute dates aren't affected by this setting.
 
 Configuring reactivation behaviour
 ===================================
