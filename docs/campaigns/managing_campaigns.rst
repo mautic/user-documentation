@@ -112,12 +112,12 @@ Events only count days when the Campaign is active. Inactive periods don't count
 **When to use:** this option is ideal when you want precise control over the actual time Contacts spend in an active Campaign state. Use this for compliance scenarios, trial periods, or when you need to pause Campaigns without affecting the intended engagement timeline.
 
 Viewing last activation date
-=============================
+============================
 
 On the Campaign details page, you can see the **Last Publish Date** which indicates when the Campaign was most recently activated. This date is used as the reference point for the "Restart on reactivate" option to recalculate scheduled event timings.
 
 Activate and deactivate Campaigns
-==================================
+=================================
 
 When you activate or deactivate a Campaign, Mautic displays a confirmation message that shows the current reactivation behaviour setting. This helps you understand what happens to scheduled events before you confirm the action.
 
