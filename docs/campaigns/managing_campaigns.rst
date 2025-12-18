@@ -61,7 +61,7 @@ Reactivation behaviour options
 There are three options available for how scheduled events should behave after reactivation:
 
 Count delay regardless of activation state
--------------------------------------------
+------------------------------------------
 
 This is the default behaviour. The original trigger date is used and inactive time doesn't affect scheduling.
 
