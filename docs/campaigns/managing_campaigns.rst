@@ -78,7 +78,7 @@ This is the default behaviour. The original trigger date is used and inactive ti
 **When to use:** this option maintains the original scheduled timing, treating the Campaign's activation state as irrelevant to the delay calculation. Use this when you want consistency with the original schedule, or when temporarily deactivating a Campaign shouldn't affect when events execute.
 
 Restart on reactivation
----------------------
+-----------------------
 
 The delay counter resets completely when you reactivate the Campaign.
 
