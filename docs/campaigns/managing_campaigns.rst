@@ -56,7 +56,7 @@ You can configure the reactivation behaviour at two levels:
 2. **Per Campaign** - Set when creating or editing a Campaign. This overrides the global default for that specific Campaign.
 
 Reactivation behaviour options
-===============================
+==============================
 
 There are three options available for how scheduled events should behave after reactivation:
 
