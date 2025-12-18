@@ -48,7 +48,7 @@ When you deactivate and then reactivate a Campaign, Mautic provides control over
     This setting only affects events that use relative delays - interval-based scheduling. Events with absolute dates aren't affected by this setting.
 
 Configuring reactivation behaviour
-===================================
+==================================
 
 You can configure the reactivation behaviour at two levels:
 
