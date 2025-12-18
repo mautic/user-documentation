@@ -1,17 +1,13 @@
-
-
-S/MIME email signing
-###################
+S/MIME Email signing
+####################
 
 S/MIME - Secure/Multipurpose Internet Mail Extensions - is a standard for public key encryption and signing of Multipurpose Internet Mail Extensions - MIME - data. Mautic supports S/MIME Email signing to help verify the authenticity of your Emails and ensure that the Email content wasn't modified in transit.
 
 .. note::
     S/MIME signing is currently only available when using the SMTP Email transport. It doesn't work with API-based Email transports.
 
-
-
-What is S/MIME email signing?
-*****************************
+What's S/MIME Email signing?
+****************************
 
 S/MIME Email signing adds a digital signature to your Emails, which allows recipients to:
 
@@ -73,15 +69,15 @@ Configuration parameters
     Default: ``%kernel.project_dir%/var/smime_certificates``
 
 Generating S/MIME certificates
-*******************************
+******************************
 
 Each Email address that sends Emails from Mautic needs its own pair of certificates:
 
-- A **public certificate** (``.crt`` file) that verifies your identity
-- A **private key** (``.pem`` file) that signs the Emails
+- A **public certificate** - ``.crt`` file - that verifies your identity
+- A **private key** - ``.pem`` file - that signs the Emails
 
 Self-signed certificates
-=========================
+========================
 
 For testing purposes, you can create self-signed certificates. However, for production use, you should obtain certificates from a trusted Certificate Authority.
 
@@ -110,7 +106,7 @@ For production use, obtain S/MIME certificates from a trusted Certificate Author
 For detailed instructions on obtaining production certificates, see the :xref:`SparkPost S/MIME Technical Guide`.
 
 Installing certificates
-************************
+***********************
 
 Certificate file naming
 =======================
@@ -126,7 +122,7 @@ Replace ``email@example.com`` with the actual sender Email address.
     The Email address in the filename must exactly match the **From** address used when sending Emails.
 
 Certificate directory structure
-================================
+===============================
 
 Place your certificate files in the directory specified by ``smime_certificates_path``:
 
@@ -156,12 +152,12 @@ Ensure that the web server User has read access to the certificate directory and
     chmod 600 /path/to/mautic/var/smime_certificates/*.pem
 
 .. warning::
-    Private keys (``.pem`` files) should have restrictive permissions (``600``) to prevent unauthorized access.
+    Private keys - ``.pem`` files - should have restrictive permissions - ``600`` - to prevent unauthorized access.
 
 Encrypting private keys
-************************
+***********************
 
-For enhanced security, you can encrypt your private keys using Mautic's encryption system. Encrypted private keys are stored with the ``.pem.enc`` extension.
+To enhance security, you can encrypt your private keys using Mautic's encryption system. Mautic stores the encrypted private keys with the ``.pem.enc`` extension.
 
 Benefits of encryption
 ======================
@@ -176,7 +172,7 @@ Encrypting private keys adds an extra layer of security:
     Make sure you have a ``secret_key`` configured in your ``app/config/local.php`` file. Mautic creates this automatically during installation.
 
 Creating encrypted keys
-========================
+=======================
 
 To encrypt an existing private key:
 
@@ -224,7 +220,6 @@ After configuring S/MIME signing:
 
 4. If your Email client supports S/MIME, you should see a verification indicator - such as a seal or checkmark
 
-
 Troubleshooting S/MIME
 **********************
 
@@ -240,7 +235,6 @@ If Mautic doesn't sign Emails, select:
 5. **File permissions** - the web server User must have read access to the certificate files
 6. **Select logs** - look in ``var/logs/mautic_prod.log`` for any S/MIME-related errors
 
-
 Certificates not found errors
 =============================
 
@@ -251,7 +245,6 @@ If you see certificate errors in the logs:
 3. Ensure the Email address in the filename exactly matches the From address
 4. Verify file permissions allow the web server User to read the files
 
-
 Certificate validation errors
 =============================
 
@@ -261,7 +254,6 @@ If recipients Reports certificate validation errors:
 2. **Expired certificates** - select your certificate expiration dates
 3. **Certificate chain** - ensure you're using the full certificate chain from your Certificate Authority
 4. **Domain mismatch** - the certificate's Email address must match the From address
-
 
 Performance considerations
 ==========================
