@@ -6,8 +6,12 @@ S/MIME - Secure/Multipurpose Internet Mail Extensions - is a standard for public
 .. note::
     S/MIME signing is currently only available when using the SMTP Email transport. It doesn't work with API-based Email transports.
 
+.. vale off
+
 What's S/MIME Email signing?
 ****************************
+
+.. vale on
 
 S/MIME Email signing adds a digital signature to your Emails, which allows recipients to:
 
