@@ -25,6 +25,7 @@ Company(ies)
 Composer
 configurator
 ConnectWise
+CSR
 Contribution(s)
 CORS
 cPanel
