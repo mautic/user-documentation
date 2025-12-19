@@ -245,7 +245,7 @@ Certificates not found errors
 If you see certificate errors in the logs:
 
 1. Verify the ``smime_certificates_path`` specifies correctly in your configuration
-2. Select that Mautic names certificate files correctly - ``email@example.com.crt`` and ``.pem``
+2. Ensure that Mautic names certificate files correctly - ``email@example.com.crt`` and ``.pem``
 3. Ensure the Email address in the filename exactly matches the From address
 4. Verify file permissions allow the web server User to read the files
 
