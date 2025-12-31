@@ -120,7 +120,7 @@ API settings
   :width: 600
   :alt: Screenshot showing API Settings Configuration in Mautic
 
-Full API documentation is available :xref:`Mautic developer API`.
+Complete API documentation is available on the :xref:`Mautic REST API` section in the Developer Documentation.
 
 * **API enabled** - Select Yes to pass data in and out of Mautic through the API.
 
