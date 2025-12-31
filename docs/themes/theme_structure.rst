@@ -5,4 +5,4 @@ Theme Structure
 
 .. vale on
 
-Visit the :xref:`themes developer documentation` about Themes for details about the Theme structure.
+Visit the :xref:`Themes directory structure` section in the Developer Documentation for more details.
