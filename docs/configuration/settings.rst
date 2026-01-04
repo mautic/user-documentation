@@ -338,7 +338,9 @@ Mail send settings
     Mailer is owner overrides any other name or Email to send mail from, including the default and individual Emails. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can see this configuration for individual Emails, rather than globally.
     For more information see :doc:`Mailer is owner</channels/emails>`
 
-* **Service to send mail through** - Select the Email service provider you use, and enter your credentials. 
+* **Service to send mail through** - Select the Email service provider you use, and enter your credentials.
+
+For information on configuring S/MIME Email signing to verify Email authenticity, see :doc:`/configuration/smime_email_signing`.
 
 See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Email subscription preferences.
   
