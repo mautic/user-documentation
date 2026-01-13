@@ -97,4 +97,6 @@ linkcheck_ignore = [
     r"https://dev.mysql.com/doc/refman/5.7/en/regexp.html",
     # 400 client error from this domain
     r"https://developers.facebook.com/products/facebook-login/",
+    # 403 client error from this domain
+    r"https://www.vtiger.com/",
 ]
