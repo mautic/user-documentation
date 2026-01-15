@@ -6,7 +6,7 @@ Either way, the settings live in the ``local.php`` file.
 Here are the ``local.php`` parameters for Mautic 4.4.6:
 
 .. list-table::
-   :widths: 100 100 100
+   :widths: 25 50 25
    :header-rows: 1
 
    * - Parameter
