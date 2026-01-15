@@ -1,20 +1,22 @@
-/* override table width restrictions */
-.wy-table-responsive table td, .wy-table-responsive table th {
-    white-space: normal;
+/* Ensure the table takes full width and allows wrapping */
+.wy-table-responsive table.docutils {
+    width: 100% !important;
+    table-layout: auto !important;
 }
 
+/* Target the cells and the code blocks inside them */
+.wy-table-responsive table.docutils td, 
+.wy-table-responsive table.docutils td code,
+.wy-table-responsive table.docutils td span.pre {
+    white-space: normal !important;      /* Allows text to wrap to next line */
+    word-break: break-word !important;   /* Breaks long strings at sensible points */
+    overflow-wrap: anywhere !important;  /* Support for all modern browsers */
+}
+
+/* Prevent the container from forcing a horizontal scrollbar */
 .wy-table-responsive {
-    margin-bottom: 24px;
-    max-width: 100%;
-    overflow: visible;
+    overflow: visible !important;
 }
-
-.wy-table-responsive th p {
-    margin-bottom: unset;
-}
-
-
-/* img center */
 
 img.align-center {
     margin-left: auto;
