@@ -156,7 +156,7 @@ This is useful when your select fields store technical values but you want to di
 - A country select field storing ``us`` can display ``United States``
 - A boolean field storing ``1`` can display ``Yes``
 
-The modifier also works with company fields:
+The modifier also works with Company fields:
 
 .. code-block:: php
 
