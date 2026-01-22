@@ -81,7 +81,7 @@ To add a new field to your Form:
 
 #. Click the Add a new field dropdown and select the type of field you wish to use. Available fields include:
    
-   - **boolean** - Provides a TRUE/FALSE or yes/no selection. Configure to display positive, negative, or both labels. Use for binary choices, such as agreeing to terms or opting into communications.
+   - **boolean** - This field provides a TRUE/FALSE or yes/no selection. You can configure it to display positive, negative, or both labels. Use this field for binary choices, such as agreeing to terms or opting into communications.
 
    - **CAPTCHA** - A basic tool for spam protection requiring the Form submitter to answer a question, or detecting when spambots try to submit data in a hidden CAPTCHA field - sometimes referred to as a honeypot. It's recommended to use some kind of CAPTCHA on every Form. It's also possible to support reCAPTCHA and other tools with third-party Plugins.
 
