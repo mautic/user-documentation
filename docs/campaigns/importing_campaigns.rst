@@ -89,8 +89,12 @@ Once the import is successful, you should see a success notification.
 
    The Mautic instance only supports importing ZIP files. You can use both the command line and API endpoints to import correctly structured JSON files.
 
+.. vale off
+
 Activating an imported Campaign
 -------------------------------
+
+.. vale on
 
 Follow the steps below to activate an imported Campaign:
       
@@ -109,8 +113,12 @@ Follow the steps below to activate an imported Campaign:
 
    |
 
+   .. vale off
+
    .. image:: images/campaign_activation_prompt_message.png
-      :alt: A prompt message with text: All scheduled events will execute according to the Republish Behavior setting. Currently set to: Count delay regardless of publish state. 
+      :alt: A prompt message with text: All scheduled events will execute according to the Republish Behavior setting. Currently set to: Count delay regardless of publish state.
+
+   .. vale on
 
    |
 
@@ -202,13 +210,17 @@ Mautic supports two primary methods of API-based Campaign import:
    
    * Use ``multipart/form-data`` content type
    * Upload the complete Campaign export ZIP file
-   * Includes all Campaign assets and dependencies from the ZIP file
+   * Includes all Campaign Assets and dependencies from the ZIP file
 
 #. **JSON Data Import**
+
+.. vale off
    
    * Use ``application/json`` content type
    * Send Campaign details directly in the request body
    * Useful for creating new Campaigns or updating existing Campaigns
+
+.. vale on
 
 .. important::
     
