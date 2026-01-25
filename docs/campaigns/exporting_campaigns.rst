@@ -39,7 +39,7 @@ Permissions
     Checks that the logged-in User has the correct permissions to export.
 
 Bulk export
-    Supports exporting multiple campaigns simultaneously.
+    Supports exporting multiple Campaigns simultaneously.
 
 Data structure
     Exports data in a structured JSON format to ensure compatibility.
@@ -50,8 +50,12 @@ Asset management
 File packaging
     Zips the resulting collection of files into a single package for easy transfer across systems.
 
+.. vale off
+
 Exporting a Campaign
 ********************
+
+.. vale on
 
 You can export a Campaign in three ways.
 
