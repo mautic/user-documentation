@@ -60,13 +60,14 @@ Options
 
 Mautic commands
 ===============
+
 These are the commands you may need to use in relation to your Mautic instance. Add a ``bin/console`` before Mautic command.
 
 **Example**
 
 .. code-block:: shell
 
-  bin/console mautic:segments:update
+   bin/console mautic:segments:update
 
 .. vale off
 
@@ -121,13 +122,13 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``mautic:email:fetch``
      - Fetch and process monitored Email.
-  
+     -
    * - ``mautic:entity:import --entity=campaign file=path-to-file/entity_data.zip``
      - Imports campaign and dependent entities to Mautic from a ZIP file. See :doc:`/campaigns/importing-campaigns`.
-   
+     -
    * - ``mautic:entity:export --entity=campaign --id=1 path=path/to-file``
      - Exports campaign and dependent entities from Mautic to a ZIP file. See :doc:`/campaigns/exporting-campaigns`.
-   
+     -
    * - ``messenger:consume email``
      - Processes mail queue
      - 
@@ -137,7 +138,6 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - ``mautic:import``
      - Imports Contacts from a CSV file
      - If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
-     - 
    * - ``mautic:integration:fetchleads``
      - Fetch Contacts from Integration.
      - ``mautic:integration:synccontacts``
