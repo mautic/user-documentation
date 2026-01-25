@@ -61,13 +61,15 @@ Options
 Mautic commands
 ===============
 
-These are the commands you may need to use in relation to your Mautic instance. Add a ``bin/console`` before Mautic command.
+These are the commands you may need to use in relation to your Mautic instance.
 
-**Example**
+.. important::
 
-.. code-block:: shell
+   You need to add a ``bin/console`` before the Mautic command, as shown in the example below:
 
-   bin/console mautic:segments:update
+   .. code-block:: shell
+
+      bin/console mautic:segments:update
 
 .. vale off
 
