@@ -120,10 +120,10 @@ These are the commands you may need to use in relation to your Mautic instance.
      - Fetch and process monitored Email.
      -
    * - ``mautic:entity:import --entity=campaign file=path-to-file/entity_data.zip``
-     - Imports campaign and dependent entities to Mautic from a ZIP file. See :doc:`/campaigns/importing_campaigns`.
+     - Imports Campaign and dependent entities to Mautic from a ZIP file. See :doc:`/campaigns/importing_campaigns`.
      -
    * - ``mautic:entity:export --entity=campaign --id=1 path=path/to-file``
-     - Exports campaign and dependent entities from Mautic to a ZIP file. See :doc:`/campaigns/exporting_campaigns`.
+     - Exports Campaign and dependent entities from Mautic to a ZIP file. See :doc:`/campaigns/exporting_campaigns`.
      -
    * - ``messenger:consume email``
      - Processes mail queue
