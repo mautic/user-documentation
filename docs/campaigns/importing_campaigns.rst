@@ -1,82 +1,132 @@
-.. vale off
-
 Importing Campaigns
 ###################
 
+The import feature allows you to add pre-configured Campaigns to your Mautic instance using ZIP files that contain all the relevant data needed to construct a Campaign.
+
+How the importing Campaign works
+********************************
+
+During the import process, Mautic performs a comprehensive analysis of the data:
+
+Permissions
+    Checks that the logged-in User has the correct permissions to import.
+
+Entities
+    Identifies required entities for the Campaign to function.
+
+Plugin validation
+    The import function verifies Plugin installation. It checks if a Campaign template depends on an external Plugin. If a required Plugin is missing, the import process halts and prompts the User to install the necessary Plugin before continuing.
+
+Conflict resolution
+    Validates for potential ID conflicts in imported entities. Where conflicts exist, Mautic provides options to:
+    
+    * Update existing entities, allowing Administrators to update existing Campaigns.
+    * Create new entities using a new ID.
+
+Automatic data mapping
+    Mautic maps imported data to the correct locations and automatically creates any necessary dependent entities.
+
+Campaign activation
+    After a successful import, the Campaign remains inactive by default.
+
+.. vale off
+
+Importing a Campaign
+********************
+
 .. vale on
 
-The Import feature allows you to add pre-configured Campaigns to your Mautic instance using zip files containing all the relevant data to construct a Campaign.
+You can import a Campaign in three ways.
 
-Import process
---------------
+1.\ Using Mautic instance
+=========================
 
-Step-by-step import
-*******************
+#. Click on the **Campaigns** menu to view existing Campaigns.
 
-1. **Log into your Mautic account**
-   Navigate to the main dashboard and authenticate.
+#. Click the **Options** button that resembles a cog icon in the top-right corner.
 
-2. **Access Campaigns Section**
-   Click on the Campaigns menu to view existing Campaigns.
+#. Select **Import** from the dropdown menu.
 
-3. **Open Import Options**
-   - Click the cog icon in the top-right corner
-   - Select **Import** from the dropdown menu
+   |
 
-4. **Select Campaign File**
-   On the import screen:
-   
-   - Choose the Campaign zip file you wish to import
-   - **Recommended:** use a ZIP file created from the Mautic export function
-   - Ensures inclusion of Campaign data, external Assets, and Dynamic Content
+   .. image:: images/import_campaign.png
+      :alt: Import Campaign button in the Mautic Campaigns section
+
+   |
+
+#. Choose the Campaign ZIP file\* you wish to import, then click the **Upload** button.
+
+   |
+
+   .. image:: images/upload_zip_file.png
+      :alt: Choose file and Upload buttons to import Campaigns
+
+   |
+
+   .. tip::
+
+      \* Use a ZIP file created from the Mautic export function - **recommended**
+
+#. Ensures inclusion of Campaign data, external Assets, and Dynamic Content.
+
+#. Select an **Actions** option from the dropdown menu for the **Campaign** and **Segment** entities. Choose either **Update entity** or **Create new entity**.
+
+#. Click the **Proceed** button.
+
+   |
+
+   .. image:: images/select_actions_import_campaigns.png
+      :alt: Highlight of Actions dropdown menu and Proceed buttons in Mautic Import Campaigns 
+
+   |
+
+Once the import is successful, you should see a success notification.
+
+.. image:: images/campaign_import_successful.png
+   :alt: Campaign import successful notification
 
 .. important::
-    The user interface only supports importing ZIP files. You can use both the command line and API endpoints to import correctly structured JSON files.
 
-Import mechanics
-****************
+   The Mautic instance only supports importing ZIP files. You can use both the command line and API endpoints to import correctly structured JSON files.
 
-During the import process, Mautic performs a comprehensive analysis of the data to import:
+Activating an imported Campaign
+-------------------------------
 
-- Checks that the logged in User has the correct permissions to import
-- Identifies required entities for the Campaign to function
-- Validates if a Campaign template depends on an external Plugin:
-  
-  * The import function verifies Plugin installation
-  * When a required Plugin is missing:
-    
-    - The import process halts
-    - Prompts the User to install the necessary Plugin before continuing
-
-- Validates for potential ID conflicts in imported entities
-- Where conflicts exist, provides options to:
-  
-  * Update existing entities, allowing Administrators to update existing Campaigns
-  * Create new entities, using a new ID
-
-- **Automatic Data Mapping**
-  * Mautic intelligently maps imported data to the correct locations
-  * Creates any necessary dependent entities automatically
-
-- **Campaign Activation**
-  * After successful import, the Campaign remains inactive by default, so that you stay in control
-  * Navigate to the Campaigns list to activate imported Campaigns
-
-.. tip::
-   To activate the imported Campaign:
+Follow the steps below to activate an imported Campaign:
       
-      1. Go to the Campaigns section
-      2. Locate the newly imported Campaign using the toggle next to the Campaign name |activate_toggle|.
+#. Click on the **Campaigns** menu
+#. Locate the newly imported Campaign
+#. Click the red toggle button next to the Campaign's name to change the status to active
 
-      3. Toggle the Campaign status to "Active"
+   |
+
+   .. image:: images/campaign_inactive_toggle_button.png
+      :alt: Highlight of a Campaign's inactive toggle button
+
+   |
+
+#. Click **Yes** when a prompt message appears
+
+   |
+
+   .. image:: images/campaign_activation_prompt_message.png
+      :alt: A prompt message with text: All scheduled events will execute according to the Republish Behavior setting. Currently set to: Count delay regardless of publish state. 
+
+   |
+
+#. The toggle button automatically changes to green, indicating that the Campaign is active
       
-  .. |activate_toggle| image:: images/activate-campaign.png
-     :alt: Activate Campaign toggle
+   |
 
-Importing via the command line
-------------------------------
+   .. image:: images/campaign_active_toggle_button.png
+      :alt: Highlight of a Campaign's active toggle button 
 
-You can import Campaigns using the Mautic command-line console:
+   |
+
+2.\ Using the command line
+==========================
+
+You can import Campaigns using the command line:
 
 .. code-block:: bash
 
@@ -85,89 +135,84 @@ You can import Campaigns using the Mautic command-line console:
    --file=/tmp/entity_data.zip \
    --user=<user_id>
 
-Command parameters
-******************
+**Command parameters**
 
-- ``--entity=campaign``
-  * Specifies the type of entity being imported
-  * In this case, importing a Campaign
+* ``--entity=campaign``: specifies the type of entity to import, in this case, ``campaign``.
 
-- ``--file=/tmp/entity_data.zip``
-  * Path to the ZIP file containing the Campaign data
-  * Must be a valid export file created from a Mautic export
+* ``--file=/tmp/entity_data.zip``: the path to the ZIP file containing the Campaign data.
 
-- ``--user=<user_id>``
-  * ID of the user performing the import, which is logged against the audit trail
-  * Ensures proper access and permissions for the import process
+* ``--user=<user_id>``: the ID of the User performing the import.
 
 .. important::
-    - Ensure the ZIP file is a valid Mautic Campaign export
-    - The specified User must have appropriate import permissions
-    - Verify the path is correct before running the command
 
-Importing using the Mautic API
-------------------------------
+   * Ensure the ZIP file is a valid Mautic Campaign export
+   * The specified User must have appropriate import permissions
+   * Verify the path is correct before running the command
 
-You can Import Campaigns programmatically using the Mautic API:
+3.\ Using Mautic API
+====================
 
-Curl example with ZIP file
-**************************
+You can import Campaigns programmatically using the Mautic API.
 
-.. code-block:: bash
+#. **cURL example with ZIP file**
 
-   curl -X POST 'https://example.com/api/campaigns/import' \
-   -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
-   -H 'Content-Type: multipart/form-data' \
-   -F 'file=@/path/to/campaign_export.zip'
+   .. code-block:: bash
 
-Python example with JSON data
-*****************************
+      curl -X POST 'https://example.com/api/campaigns/import' \
+      -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
+      -H 'Content-Type: multipart/form-data' \
+      -F 'file=@/path/to/campaign_export.zip'
 
-.. code-block:: python
+#. **Python example with JSON data**
 
-   import requests
+   .. code-block:: python
 
-   # API Endpoint
-   url = 'https://example.com/api/campaigns/import'
+      import requests
 
-   # Authentication
-   headers = {
-       'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
-       'Content-Type': 'application/json'
-   }
+      # API Endpoint
+      url = 'https://example.com/api/campaigns/import'
 
-   # Campaign import data
-   payload = {
-       'name': 'Imported Campaign',
-       'description': 'Campaign imported via API',
-       # Add other campaign details as needed
-   }
+      # Authentication
+      headers = {
+          'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+          'Content-Type': 'application/json'
+      }
 
-   # Send import request
-   response = requests.post(url, headers=headers, json=payload)
+      # Campaign import data
+      payload = {
+          'name': 'Imported Campaign',
+          'description': 'Campaign imported via API',
+          # Add other campaign details as needed
+      }
 
-   # Handle response
-   if response.status_code == 200:
-       imported_campaign = response.json()
-       print("Campaign imported successfully")
+      # Send import request
+      response = requests.post(url, headers=headers, json=payload)
+
+      # Handle response
+      if response.status_code == 200:
+          imported_campaign = response.json()
+          print("Campaign imported successfully")
 
 API import methods
-******************
+------------------
 
 Mautic supports two primary methods of API-based Campaign import:
 
-1. **ZIP File Import**
-   - Use ``multipart/form-data`` content type
-   - Upload the complete Campaign export ZIP file
-   - Includes all Campaign assets and dependencies from the ZIP file
+#. **ZIP File Import**
+   
+   * Use ``multipart/form-data`` content type
+   * Upload the complete Campaign export ZIP file
+   * Includes all Campaign assets and dependencies from the ZIP file
 
-2. **JSON Data Import**
-   - Use ``application/json`` content type
-   - Send Campaign details directly in the request body
-   - Useful for creating new Campaigns or updating existing Campaigns
+#. **JSON Data Import**
+   
+   * Use ``application/json`` content type
+   * Send Campaign details directly in the request body
+   * Useful for creating new Campaigns or updating existing Campaigns
 
 .. important::
-    - Replace ``example.com`` with your actual Mautic instance domain
-    - Ensure you have a valid access token by accessing the API Credentials section within Mautic's settings.
-    - The imported Campaign must comply with Mautic's Campaign structure
-    - Verify import permissions and data integrity
+    
+   * Replace ``example.com`` with your actual Mautic instance domain
+   * Ensure you have a valid access token by accessing the API Credentials section within Mautic's settings.
+   * The imported Campaign must comply with Mautic's Campaign structure
+   * Verify import permissions and data integrity
