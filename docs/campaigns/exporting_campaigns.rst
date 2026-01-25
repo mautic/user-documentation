@@ -62,11 +62,16 @@ You can export a Campaign in three ways.
 1.\ Using Mautic instance
 =========================
 
-Manual export through the Mautic Campaigns dashboard:
+#. Go to the **Campaigns** menu.
+#. Click the three-dot icon next to the Campaign's name that you want to export to open the options.
+#. Select the **Export** option from the dropdown menu. It automatically downloads the ZIP file.
 
-#. Go to the **Campaigns** menu
-#. Select the Campaign you want to export
-#. Select the **Export** option from the dropdown menu located next to the item selection
+   |
+
+   .. image:: images/export_campaign.png
+      :alt: Highlight of Campaign menu, Options three-dot button, and Export option in the Mautic Campaigns section
+
+   |
 
 .. vale off
 
