@@ -50,7 +50,7 @@ You can import a Campaign in three ways.
    |
 
    .. image:: images/import_campaign.png
-      :alt: Import Campaign button in the Mautic Campaigns section
+      :alt: Highlight of Campaign menu, Options button, and Import option in the Mautic Campaigns section
 
    |
 
@@ -59,7 +59,7 @@ You can import a Campaign in three ways.
    |
 
    .. image:: images/upload_zip_file.png
-      :alt: Choose file and Upload buttons to import Campaigns
+      :alt: The Choose file and Upload buttons to import Campaigns
 
    |
 
