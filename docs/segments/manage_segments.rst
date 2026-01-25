@@ -1,23 +1,19 @@
-.. vale off
-
 Managing Segments
 #################
 
-.. vale on
-
-Segments in Mautic are lists or groups of Contacts. Use Segments to send Emails, trigger Campaigns, or for analysis. You can add and remove Contacts into *static* and *dynamic* Segment types.
+Segments in Mautic are lists or groups of Contacts. Use Segments to send Emails, trigger Campaigns, or for analysis. You can add and remove Contacts from **static** and **dynamic** Segment types.
 
 Segments provide ways to easily organize your Contacts. There are a variety of fields available for configuring these Segments.
 
-When viewing all Segments, the **# contacts** column on the right shows the number of Contacts included in that particular Segment. If the segment is new and has not been built it will show **Building** until the segment is rebuilt. If a segment has its filters changed it will show **Building (# contacts)** until the segment finishes rebuilding to reflect the new filters.
+.. vale off
 
-.. image:: images/contact-segment.png
-  :width: 700
-  :alt: Screenshot showing Contacts matching that particular Segment.
+When viewing all Segments, the **# contacts** column shows the number of Contacts included in each specific Segment. The **Building** or **Building (X Contacts)** label appears during the creation of a new Segment or when modifying an existing Segment's filter and remains visible until the building process completes.
 
-.. image:: images/contact-segment-building.png
-  :width: 700
-  :alt: Screenshot showing Contacts matching that particular Segment.
+.. vale on
+
+.. image:: images/contact_segments.png
+   :width: 700
+   :alt: Highlight Segments' Contacts column that consists of Contacts count and building labels
 
 .. note::
   Mautic renamed ``lead lists`` to ``Segments`` in Mautic :xref:`1.4.0 release`.
