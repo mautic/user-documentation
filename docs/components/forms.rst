@@ -88,9 +88,9 @@ To add a new field to your Form:
    .. note::
       You can associate checkbox group fields with *boolean* and *select - multiple* fields, but not *select* fields.
 
-   - **Date** - This field allows the visitor to select a date with a calendar picker. The formatting of the date applies the default setting in your Configuration. [A PHP parseable BNF-like string](https://www.php.net/manual/en/datetime.formats.php) can be used to set a dynamic/relative to now default value for this field.
+   - **Date** - This field allows the visitor to select a date with a calendar picker. The date formatting follows your default configuration settings. You can set a dynamic default value - such as ``now``, ``today +2 days 4am``, or ``2025-05-04`` - by using :xref:`supported PHP date and time formats`.
 
-   - **Date/time** - Similar to the date field, this allows the visitor to select both the date and the time using a calendar picker. [A PHP parseable BNF-like string](https://www.php.net/manual/en/datetime.formats.php) can be used to set a dynamic/relative to now default value for this field.
+   - **Date/Time** - This field allows the visitor to select both a date and a time with a calendar picker. You can set a dynamic default value - such as ``now``, ``today +2 days 4am``, or ``2025-05-04 14:30`` - by using :xref:`supported PHP date and time formats`.
 
    - **Description** - A basic header field, most often used to provide a visual title for the Form. The header field acts as the field name or label. The description area - accessed under the Properties tab - is a free text WYSIWYG editor, where you can add a description of the Form. By default, the description shows immediately below the header field in paragraph text format.
 
@@ -103,7 +103,7 @@ To add a new field to your Form:
 
    - **HTML area** - This field allows marketers to add custom HTML to their Form.
 
-   - **Hidden** - This field won't be visible on the Form, but include default values, saved along with the Form submission, for reporting or internal tagging purposes. [A PHP parseable BNF-like string](https://www.php.net/manual/en/datetime.formats.php) can be used to set a dynamic/relative to now default value for this field. Unlike **Date** or **Date/time**, a **Hidden** field's default value must end with `|date` for dynamic date parsing to work (e.g., `now|date`).
+   - **Hidden** - This field remains invisible on the Form but includes default values saved with the submission for reporting or internal tagging purposes. You can use :xref:`supported PHP date and time formats` to set a dynamic value. However, unlike Date or Date/Time fields, a Hidden field’s default value must end with the ``|date`` suffix to work. For example, ``now|date``, ``today +2 days 4am|date``, or ``2025-05-04 14:30|date``.
 
    - **Select: Country** - This populates Mautic's default, non-editable country list. To use a custom list you should make use of the Select field type and manually enter the countries you would like to include.
 
@@ -113,7 +113,7 @@ To add a new field to your Form:
 
    - **Password** - This allows the visitor to create a password. Use this field if the Form creates an account and Mautic posts the results to another system/Form. You must not save the entered field value to the Contact profile for security reasons.
 
-   - **Phone** - This field maps by default to the Phone field, and validates numbers using the international format for phone numbers. The validation requires a country code - for example +1 for the United States of America or +44 for the United Kingdom).
+   - **Phone** - This field maps by default to the Phone field, and validates numbers using the international format for phone numbers. The validation requires a country code - for example, +1 for the United States of America or +44 for the United Kingdom.
 
    - **Radio group** - This field provides a group of single-select options with a radio button, sometimes referred to as an option button group.
 
