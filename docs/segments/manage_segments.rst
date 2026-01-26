@@ -15,9 +15,6 @@ When viewing all Segments, the **# contacts** column shows the number of Contact
    :width: 700
    :alt: Highlight Segments' Contacts column that consists of Contacts count and building labels
 
-.. note::
-  Mautic renamed ``lead lists`` to ``Segments`` in Mautic :xref:`1.4.0 release`.
-
 .. vale off
 
 Creating a Segment
@@ -42,8 +39,6 @@ Creating a Segment
 On the Details tab, static, and dynamic Segments also have the option to display a different public name for a Segment.
 
 * **Public name** - Users can set a different name for the Segment, which is visible to Contacts in Preference Center options.
-
-Since :xref:`Mautic 3.2` it has been possible to provide a public name, in addition to an internal name, for a Segment.
 
 .. vale off
 
