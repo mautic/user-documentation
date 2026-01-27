@@ -66,9 +66,13 @@ The available details fields are:
 * **Description** - A description to describe the goal of the Form. It may help to include information such as the location where the Form appears.
 * **Successful Submit Action** - Options include:
 
+   .. vale off
+
    * **Remain at Form** - the Contact stays on the same page and the Form resets, allowing for another submission or continued browsing
    * **Redirect URL** - sends the Contact to a different website or a specific Mautic Landing Page after they click submit
    * **Display message** - shows a confirmation or thank you message on the screen after the Contact submits the Form
+
+   .. vale on
 
 * **Redirect URL/Message** - If you decide to use the **Successful Submit Action** of:
 
@@ -76,6 +80,8 @@ The available details fields are:
    * **Display message**: enter the message to display
 
   For these options, you can use placeholders to personalize the experience for your Contacts. Mautic automatically replaces these placeholders with specific details when the Contact submits the Form:
+
+  .. vale off
 
   .. list-table::
    :widths: 25 35 40
@@ -95,6 +101,8 @@ The available details fields are:
    * - ``{pagelink=ID}``
      - Replace ``ID`` with a link to a Mautic Landing Page.
      - Go to **Components > Landing Pages** and look at the **ID** column.
+
+.. vale on
 
 Fields
 ======

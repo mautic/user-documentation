@@ -9,7 +9,7 @@ You can manage Custom Fields through the Admin menu - click the cogwheel upper r
 
 .. image:: images/custom_fields_option.png
     :align: center
-    :alt: Highlight of custom fields option in the settings
+    :alt: Highlight of Custom Fields option in the settings
 
 |
 
