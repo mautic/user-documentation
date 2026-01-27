@@ -99,7 +99,7 @@ The available details fields are:
      
        Once updated, in the **Fields** tab, look at the bottom of the field's card. Use the lowercase version of the text shown after **contact:** for ``ALIAS``. For example, use ``timezone`` if the card shows ``contact: Timezone``.
    * - ``{pagelink=ID}``
-     - Replace ``ID`` with a link to a Mautic Landing Page.
+     - Replace ``ID`` with the ID of a Mautic Landing Page.
      - Go to **Components > Landing Pages** and look at the **ID** column.
 
 .. vale on
