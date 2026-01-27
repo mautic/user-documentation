@@ -7,17 +7,18 @@ Manage Custom Fields
 
 You can manage Custom Fields through the Admin menu - click the cogwheel upper right-hand side of Mautic.
 
-.. image:: images/admin-menu.png
+.. image:: images/custom_fields_option.png
     :align: center
-    :alt: Screenshot of Admin menu
-    :width: 200
+    :alt: Highlight of custom fields option in the settings
+
+|
 
 Custom Fields
 *************
 
 The **Custom Fields** page lets you view all existing Contact fields as well as any custom Contact fields you have created.
 
-.. image:: images/custom-fields.jpeg
+.. image:: images/custom_fields_page.png
     :align: center
     :alt: Screenshot of Custom Field
 
