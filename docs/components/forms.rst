@@ -84,7 +84,7 @@ The available details fields are:
   .. vale off
 
   .. list-table::
-   :widths: 25 35 40
+   :widths: 25 25 50
    :header-rows: 1
 
    * - Placeholder
@@ -95,7 +95,7 @@ The available details fields are:
      - Refer to :doc:`/contacts/custom_fields` to find aliases in the Custom Fields.
    * - ``{formfield=ALIAS}``
      - Replace ``ALIAS`` with the Form's **Matching field**.
-     - If you haven't set one yet, click the pencil icon on the field card to edit it, then select a field under the **Mapped Field** tab.
+     - If not set yet, click the pencil icon on the field card to edit it, then select a field from the **Matching field** dropdown menu, under the :ref:`Mapped Field <Mapped field>` tab.
      
        Once updated, in the **Fields** tab, look at the bottom of the field's card. Use the lowercase version of the text shown after **contact:** for ``ALIAS``. For example, use ``timezone`` if the card shows ``contact: Timezone``.
    * - ``{pagelink=ID}``
