@@ -13,7 +13,7 @@ To build your Campaign, perform the following steps:
 
    |
    
-   .. image:: images/campaign-sources.png
+   .. image:: images/campaign_sources.png
       :width: 400
       :align: center
       :alt: Screenshot of Campaign builder showing Contact sources
@@ -34,7 +34,7 @@ To build your Campaign, perform the following steps:
 
    |
 
-   .. image:: images/multi-source-campaign.png
+   .. image:: images/multi_source_campaign.png
       :width: 600
       :align: center
       :alt: Screenshot of Campaign builder showing multiple sources selected.
@@ -45,7 +45,7 @@ To build your Campaign, perform the following steps:
 
    |
 
-   .. image:: images/campaign-events.png
+   .. image:: images/campaign_events.png
       :width: 600
       :align: center
       :alt: Screenshot of Campaign builder showing the available Campaign events.
@@ -56,6 +56,7 @@ To build your Campaign, perform the following steps:
 
 Actions
 -------
+
 Campaign actions are events that you initiate on your Contacts or Contact records. These can represent sending communications to the Contact or may automate operational tasks to keep your marketing running. A single Campaign can include more than one action. When you create a Campaign, you select one of these actions to begin the workflow.
 
 The actions that Mautic offers in a Campaign include:
@@ -116,12 +117,11 @@ Notes on Campaign Actions
 
 .. vale on
 
-
 #. As the first step of your Campaign, you typically send out an Email to your Segments. When you add an Email to a Campaign, you can select a potential **delay** for Email delivery as shown in the following image.
 
    |
 
-   .. image:: images/send-email-delay-options.png
+   .. image:: images/send_email_delay_options.png
       :width: 600
       :align: center
       :alt: Screenshot of Campaign builder showing the Email send delay options.
@@ -161,7 +161,7 @@ A Contact takes this path if a Contact hasn't taken the action. Use an action's 
 
 Depending on meeting - or not meeting - the criteria for the decision, the Contact takes either the green or the red paths in the decision tree. For example, consider an instance where the decision is to visit a Landing Page. There can be two outcomes. If the Contact chooses to visit the Landing Page, then the green decision path connects to the next action in the Campaign workflow. If, however, the Contact doesn't visit the Landing Page, then the red decision path connects to a different action - for example a delay of 7 days then the marketer may send a follow up Email.
 
-.. image:: images/campaign-decisions.gif
+.. image:: images/campaign_decisions.gif
    :width: 600
    :align: center
    :alt: Screenshot showing Campaign decisions available in Mautic
@@ -323,7 +323,7 @@ To clone an event:
 
    |
 
-   .. image:: images/clone-campaign-event.png
+   .. image:: images/clone_campaign_event.png
       :width: 300
       :align: center
       :alt: Screenshot of hovering over a Campaign event to reveal the clone option
@@ -332,11 +332,11 @@ To clone an event:
 
 #. Click on the anchor of the event after which you want to insert the cloned event. This opens up a modal window.
 
-#. In the modal window, click the "Insert" button to paste the stored event:
+#. In the modal window, click the "Insert" button to paste the stored event.
 
    |
 
-   .. image:: images/paste-cloned-event-modal.png
+   .. image:: images/paste_cloned_event_modal.png
       :width: 600
       :align: center
       :alt: Screenshot of the modal window with the insert option to paste the cloned event
