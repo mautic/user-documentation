@@ -38,7 +38,7 @@ If you want to test an Integration Plugin to ensure that it's configured properl
 
 * The **Campaign Builder** has the *Push Contact to Integration* action which can be used in the Campaign configuration.
 
-* **Forms** have the *Push Contact to Integration* action which can be used after a Form is submitted.
+* **Forms** include the **Push Contact to Integration** action, which triggers after a Form submission.
 
 * The **Points Trigger** has the *Push Contact to Integration* action which can be triggered when a Contact achieves a configured point limit.
   

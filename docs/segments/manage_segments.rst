@@ -165,7 +165,11 @@ Form submit action
 
 .. vale on
 
+.. vale off
+
 **Modify Contact's Segment** is available as a submit action on :ref:`Forms<creating a new form>`.
+
+.. vale on
 
 1. Click **Actions**.
 
