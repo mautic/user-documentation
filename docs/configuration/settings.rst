@@ -691,8 +691,6 @@ Mautic tracking settings
 
     The default tracking code provided in a new instance updates and changes after you set up a new custom domain or when you make changes to an existing one. You must use the new tracking code that reflects the new or edited custom domain. If you are using the Plugin for WordPress, Drupal, or Joomla, re-enter your account information in the Plugin.
 
-* **Identify visitor by tracking URL** - Select **Yes** to have Mautic begin tracking a Contact after the Contact clicks a link in an Email on a device where no cookie exists.
-
 * **Anonymize IP** - Select **Yes** to not store full IP addresses for your visitors/Contacts. This setting aids customers in achieving General Data Protection Regulation compliance.
 
 * **Identify visitors by IP** - Select **Yes** to use the IP address to identify Contacts. It's possible to track unidentified visitors with the same IP address as an existing Contact. This may result in undesirable outcomes with large Companies who use the same externally facing IP address.
