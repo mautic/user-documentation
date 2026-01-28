@@ -82,5 +82,9 @@ linkcheck_ignore = [
     r"https://www.maxmind.com/en/accounts/current*",
     # The URLs below broken and should be replaced by working ones.
     r"https://staffwww.fullcoll.edu/sedwards/Nano/NanoKeyboardCommands.html",
-    r"https://blog.maxmind.com/search-results*"
+    r"https://blog.maxmind.com/search-results*",
+    # 400 client error from this domain
+    r"https://developers.facebook.com/products/facebook-login/",
+    # 403 client error from this domain
+    r"https://www.vtiger.com/",
 ]
