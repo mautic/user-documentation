@@ -13,12 +13,9 @@ Creating a new Form
 To create a new Form:
 
 #. Go to Components > Forms and click New
-#. Select the type of Form you wish to create
-    * **Campaign Form** - Mautic allows you to trigger a Campaign with the submission of this type of Form. Campaign Forms have less actions directly associated with the Form submit actions - which happen immediately after Form submission - as most actions trigger as part of a Campaign workflow.
-    * **Standalone Form** - A more commonly used Form, this allows the execution of many submit actions immediately at the point of Form submission.
 
-.. warning::
-    Forms with a lot of submit actions - particularly when submitting to third party systems such as a Customer Relationship Management system - can have an impact on the Form submission time. This is especially the case if there are a lot of fields. Consider using a Campaign Form if you can wait for the cron job to trigger the actions.
+.. note::
+    All Forms in Mautic can trigger Campaigns and have access to the full range of Form actions. You can use Forms as a Contact source in Campaigns to trigger workflows when Contacts submit them.
 
 The following fields are available:
 
@@ -51,7 +48,7 @@ Configuring Forms
 *****************
 .. vale on
 
-Once you have selected the type of Form, you have some additional options to set.
+Once you have created a new Form, you have some additional options to set.
 
 Details
 =======
@@ -66,9 +63,9 @@ The available details fields are:
    * **Display message** - shows a message over the Form once the Contact has submitted the Form.
 - **Redirect URL/Message** - If you decide to use the Redirect URL successful submit action, paste the URL where you'd like to direct submitters. If you use Display message, enter the message to display.
 
-.. image:: images/forms/standalone_form.png
+.. image:: images/forms/new_form.png
   :width: 600
-  :alt: Screenshot showing standalone Form
+  :alt: Screenshot showing new Form
 
 Fields
 ======
@@ -319,9 +316,6 @@ Form actions
 ************
 
 You may want to trigger certain actions to happen immediately after Form submission - this is what Form actions are for. This might include communications with the Contact, tracking, internal notifications, or other Contact management tasks.
-
-.. note::
-   The Form actions available in Mautic are also available in Standalone Forms, which include more options as they're not associated with Campaigns. Campaigns tend to trigger most actions through Campaign actions so Forms associated with Campaigns only have a basic set of Form actions.
 
 - **Add to Company's Score**: if a Contact associated with a Company record in Mautic has submitted the Form, you can add or subtract Points to the Company's overall score. Company scoring in Mautic doesn't aggregate Points for all its associated Contacts. Any actions that you want to contribute to a Company's score must be explicitly set. Negative numbers are valid if you want to subtract from a Company's score based on a Contact submitting a Form. If the Contact isn't tracked and the Form doesn't include a field mapped to Company or Company Name - on the Company object - the Company has no Points awarded.
 

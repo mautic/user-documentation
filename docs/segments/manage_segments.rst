@@ -165,7 +165,7 @@ Form submit action
 
 .. vale on
 
-**Modify Contact's Segment** is available as a submit action on :ref:`Standalone Forms<creating a new form>`. With a Campaign Form, create a Campaign with a **Modify Contact's Segment** action.
+**Modify Contact's Segment** is available as a submit action on :ref:`Forms<creating a new form>`.
 
 1. Click **Actions**.
 

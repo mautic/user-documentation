@@ -38,11 +38,11 @@ If you want to test an Integration Plugin to ensure that it's configured properl
 
 * The **Campaign Builder** has the *Push Contact to Integration* action which can be used in the Campaign configuration.
 
-* The **Standalone Form** has the *Push Contact to Integration* action which can be used after a standalone Form is submitted.
+* **Forms** have the *Push Contact to Integration* action which can be used after a Form is submitted.
 
 * The **Points Trigger** has the *Push Contact to Integration* action which can be triggered when a Contact achieves a configured point limit.
   
-Use any of those actions to test the Plugin and see if the Contact appears in the Integration. Here is an example of how you can configure the Standalone Form action:
+Use any of those actions to test the Plugin and see if the Contact appears in the Integration. Here is an example of how you can configure the Form action:
 
 .. image:: images/push-integration.png
   :alt: Screenshot of push Integration
