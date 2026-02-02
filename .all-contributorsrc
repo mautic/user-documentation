@@ -195,6 +195,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "sudohogan",
+      "name": "Isreal Hogan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101266221?v=4",
+      "profile": "https://portfolio-dun-one-68.vercel.app",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
