@@ -325,7 +325,8 @@ Unsubscribing
 Mautic has a built in means of allowing a Contact to unsubscribe from Email communication. You can insert various tokens into your Email to provide unsubscribe options at your desired location:
 - ``{unsubscribe_text}``: inserts a sentence with a link instructing the Contact to click to unsubscribe.
 - ``{unsubscribe_url}``: inserts the URL to the preferences center when it's activated, or to the unsubscribe page if not.
-- ``{dnc_url}``: inserts the URL to unsubscribe from all Marketing Messages when there is an active preference center.
+- ``{resubscribe_url}``: inserts the URL to the resubscribe page regardless of whether there's a preference centre in use. It resubscribes the Contact. Useful for double opt out Campaigns.
+- ``{dnc_url}``: inserts the URL to unsubscribe from all Marketing Messages when you activate the preference center.
 
 The unsubscribe URL token inserts the URL into your custom written instructions. 
 
