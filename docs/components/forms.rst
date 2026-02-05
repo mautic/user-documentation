@@ -114,6 +114,8 @@ To control the maximum number of fields shown on a Form:
 To add a new field to your Form:
 
 #. Click the Add a new field dropdown and select the type of field you wish to use. Available fields include:
+   
+   - **boolean** - This field provides a TRUE/FALSE or yes/no selection. You can configure it to display positive, negative, or both labels. Use this field for binary choices, such as agreeing to terms or opting into communications.
 
    - **CAPTCHA** - A basic tool for spam protection requiring the Form submitter to answer a question, or detecting when spambots try to submit data in a hidden CAPTCHA field - sometimes referred to as a honeypot. It's recommended to use some kind of CAPTCHA on every Form. It's also possible to support reCAPTCHA and other tools with third-party Plugins.
 
@@ -152,6 +154,8 @@ To add a new field to your Form:
    - **Radio group** - This field provides a group of single-select options with a radio button, sometimes referred to as an option button group.
 
    - **Select: Single or multiple choices** - This option shows a dropdown list where a visitor may choose one option. This field also allows multiple selections, which changes the display to a box with the options listed. On a mobile device, a single select box shows a dialog box with radio buttons, and with checkboxes for a multi-select field.
+
+   - **Slider** - This field provides an interactive slider control that allows visitors to select a numeric value from a predefined range by dragging a handle along a track. The slider displays the minimum and maximum values at each end and shows the current selected value as the visitor moves the handle.
 
    - **Social login** - This allows the visitor to connect their Twitter, Facebook or LinkedIn profiles with their Contact record. You must configure the Plugin for the social network before using this field.
 
