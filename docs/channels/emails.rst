@@ -187,6 +187,28 @@ To use custom date fields in tokens, use the following format:
 
 The date outputs in a human-readable format, configured in the settings in your Global Configuration > System Settings under 'Default format for date only' and 'Default time only format'.
 
+Label modifier for select and boolean fields
+--------------------------------------------
+
+For select and boolean field types, you can display the human-readable label instead of the stored value by using the ``|label`` modifier:
+
+.. code-block:: php
+
+   {contactfield=select_alias|label}
+   {contactfield=bool_alias|label}
+
+This is particularly useful when these fields contain technical values, but you want to show user-friendly labels in your Emails. For instance:
+
+* A country selection field storing ``us`` can display ``United States``
+* A boolean field storing ``1`` can display ``Yes``
+
+The modifier also works with Company fields:
+
+.. code-block:: php
+
+   {contactfield=company_select_alias|label}
+   {contactfield=company_bool_alias|label}
+
 Contact replies
 ===============
 
@@ -325,7 +347,8 @@ Unsubscribing
 Mautic has a built in means of allowing a Contact to unsubscribe from Email communication. You can insert various tokens into your Email to provide unsubscribe options at your desired location:
 - ``{unsubscribe_text}``: inserts a sentence with a link instructing the Contact to click to unsubscribe.
 - ``{unsubscribe_url}``: inserts the URL to the preferences center when it's activated, or to the unsubscribe page if not.
-- ``{dnc_url}``: inserts the URL to unsubscribe from all Marketing Messages when there is an active preference center.
+- ``{resubscribe_url}``: inserts the URL to the resubscribe page regardless of whether there's a preference centre in use. It resubscribes the Contact. Useful for double opt out Campaigns.
+- ``{dnc_url}``: inserts the URL to unsubscribe from all Marketing Messages when you activate the preference center.
 
 The unsubscribe URL token inserts the URL into your custom written instructions. 
 
