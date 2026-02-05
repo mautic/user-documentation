@@ -49,6 +49,7 @@ The following fields are available:
 
 Configuring Forms
 *****************
+
 .. vale on
 
 Once you have selected the type of Form, you have some additional options to set.
@@ -56,19 +57,52 @@ Once you have selected the type of Form, you have some additional options to set
 Details
 =======
 
+.. image:: images/forms/standalone_form.png
+   :alt: Screenshot showing standalone Form
+
 The available details fields are:
 
-- **Name** - Title your Form, including any terms you may want to use to search for the Form.
-- **Description** - Add a description, so other Mautic Users can see what the goal of the Form is. It may help to include information like any location where the Form appears.
-- **Successful Submit Action** - Options include:
-   * **Remain at Form** - nothing appears to happen, the Form remains as is
-   * **Redirect URL** - directs the Contact to another location, such as a thank you Landing Page, after submission
-   * **Display message** - shows a message over the Form once the Contact has submitted the Form.
-- **Redirect URL/Message** - If you decide to use the Redirect URL successful submit action, paste the URL where you'd like to direct submitters. If you use Display message, enter the message to display.
+* **Name** - Title of your Form, including any terms you may want to use to search for the Form.
+* **Description** - A description to describe the goal of the Form. It may help to include information such as the location where the Form appears.
+* **Successful Submit Action** - Options include:
 
-.. image:: images/forms/standalone_form.png
-  :width: 600
-  :alt: Screenshot showing standalone Form
+   .. vale off
+
+   * **Remain at Form** - the Contact stays on the same page and the Form resets, allowing for another submission or continued browsing
+   * **Redirect URL** - sends the Contact to a different website or a specific Mautic Landing Page after they click submit
+   * **Display message** - shows a confirmation or thank you message on the screen after the Contact submits the Form
+
+   .. vale on
+
+* **Redirect URL/Message** - If you decide to use the **Successful Submit Action** of:
+
+   * **Redirect URL**: paste the URL where you'd like to direct submitters   
+   * **Display message**: enter the message to display
+
+  For these options, you can use placeholders to personalize the experience for your Contacts. Mautic automatically replaces these placeholders with specific details when the Contact submits the Form:
+
+  .. vale off
+
+  .. list-table::
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Placeholder
+     - Replace with
+     - How to find the value
+   * - ``{contactfield=ALIAS}``
+     - Replace ``ALIAS`` with a value from the Contact's field.
+     - Refer to :doc:`/contacts/custom_fields` to find aliases in the Custom Fields.
+   * - ``{formfield=ALIAS}``
+     - Replace ``ALIAS`` with the Form's **Matching field**.
+     - If not set yet, click the pencil icon on the field card to edit it, then select a field from the **Matching field** dropdown menu, under the :ref:`Mapped Field <Mapped field>` tab.
+     
+       Once updated, in the **Fields** tab, look at the bottom of the field's card. Use the lowercase version of the text shown after **contact:** for ``ALIAS``. For example, use ``timezone`` if the card shows ``contact: Timezone``.
+   * - ``{pagelink=ID}``
+     - Replace ``ID`` with the ID of a Mautic Landing Page.
+     - Go to **Components > Landing Pages** and look at the **ID** column.
+
+.. vale on
 
 Fields
 ======
