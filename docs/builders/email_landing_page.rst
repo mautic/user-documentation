@@ -91,6 +91,23 @@ The functions of the Email Builder are as follows:
 
 #. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
+Concurrent edit protection
+==========================
+
+Mautic protects Emails and Landing Pages from data loss when multiple Users edit the same item simultaneously.
+
+If another User saves changes while you're editing, Mautic displays this error when you try to save:
+
+    'The record you are updating has been changed by someone else in the meantime. Please refresh the browser window and re-submit your changes.'
+
+When you see this message:
+
+1. Copy any unsaved changes you want to keep - for example, select and copy text you've added.
+2. Refresh your browser to load the latest version.
+3. Make your changes again and save.
+
+This ensures no User's work gets accidentally overwritten.
+
 Templates
 *********
 
