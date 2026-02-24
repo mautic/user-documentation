@@ -15,12 +15,12 @@ Point Actions are those times when a Contact receives a change in their Point to
 
 To add a new action:
 
-1. Click **Points > Point Actions > + New**  - located in the top right corner.
+1. Click **Points > Manage Actions > + New**  - located in the top right corner.
 
 .. image:: images/points-action.png
     :alt: Screenshot of Points action
 
-2. In the main panel, there are four boxes for key information. Enter the appropriate information.
+2. In the main panel, there are five boxes for key information. Enter the appropriate information.
 
    * **Name** - The name of your action. This is how the action displays in your list of actions, so choose an identifiable name.
 
@@ -28,11 +28,15 @@ To add a new action:
 
    * **Change Points (+/-)** - The value change to set for the action. The ``+`` isn't necessary when adding Points. When subtracting Points, add the ``-`` symbol.
 
-   * **Actions taken by User** - This is the behavior or action the Contact must complete to trigger the action.
+   * **Actions taken by contact** - This is the behavior or action the Contact must complete to trigger the action.
+
+   * **Point group** - This is the point group you want the action to be applied to.
 
 3. On the right side is more information:
 
    * **Category** - Organize your Point Actions based on their goals, Campaigns, etc. For more information, see :doc:`Categories</categories/categories-overview>`. All Points accumulate on a Contact record, regardless of Category. There is one Points score for each Contact.
+
+   * **Projects** - Organize your Point Actions based on their Campaigns project.
 
    * **Active and Activate/Deactivate at date/time** - Once you have a Point action, Mautic awards Points when a Contact completes the action. Points aren't given for inactive actions. If you have target behaviors that you want to award Points for within a certain time period, you can set the activate and deactivate dates
 
@@ -49,10 +53,14 @@ Point Triggers
 
 Once a Contact has accumulated a Point total, you may want to trigger an action with the Contact. You may create multiple triggers for different Point values.
 
+To add a new trigger:
+
+1. Click **Points > Manage Triggers > + New**  - located in the top right corner. This opens in the **Details** tab.
+
 .. image:: images/points-trigger.png
     :alt: Screenshot of Points trigger
 
-Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Category**, and **Active** options are all the same. The trigger fires based on the minimum number of Points. Set a number and decide if you want to **Trigger for existing applicable Contacts upon saving - if activated**. 
+Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Point group**, **Category**, **Projects** and **Active** options are all the same. The trigger fires based on the minimum number of Points. Set a number and decide if you want to **Trigger for existing applicable Contacts upon saving - if activated**. 
 
 Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point Triggers and associated events are also fully customizable.
 
