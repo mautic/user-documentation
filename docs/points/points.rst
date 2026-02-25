@@ -72,17 +72,29 @@ Campaign triggers
 
 **Modify Contact's Campaigns** - Add a Contact to or remove a Contact from any Campaigns you have activated.
 
+.. image:: images/point-trigger-modify-contacts-campaigns.png
+     :alt: Modify Contact’s Campaigns interface with input fields and action buttons
+
 Contact triggers
 ================
 
 **Modify Contact's Segments** - Add a Contact to or remove a Contact from any Segments you have activated.
 
+.. image:: images/point-trigger-modify-contacts-segment.png
+    :alt: Modify Contact’s Segments interface with input fields and action buttons
+
 **Modify Contact's tags** - Add or remove any Tags on the Contact record. If a Tag doesn't exist, you may create a new one in the edit window for this event.
+
+.. image:: images/point-trigger-modify-contact-tags.png
+    :alt: Modify Contact’s tags interface with input fields and action buttons
 
 Add-on triggers
 ===============
 
 **Push Contact to Integration** - To only push Contacts to an Integration after hitting a minimum Point total, use this option. You must have the **Triggered action push Contacts to Integration** option selected in the Integration. After selecting this event, the system displays a dialog box where you can choose which Integration to push the Contact to. For example, if you base your definition of a Marketing Qualified Lead (MQL) on Point values, you may decide to only push Contacts who are MQLs to your CRM. Once a Contact meets the Points requirement to be an MQL, use this action to push the Contact to your CRM.
+
+.. image:: images/point-trigger-push-contact-to-integration.png
+    :alt: Push Contact to Integration interface with input fields, a dropdown menu, and action buttons
 
 .. note:: 
 
@@ -93,8 +105,8 @@ Email triggers
 
 **Send an Email** - Send a template Email to the Contact based on their engagement. This may be some sort of special offer, congratulations, etc.
 
-.. image:: images/send-an-email-to-user.png
-    :alt: Screenshot of Send an Email to User Email trigger
+.. image:: images/point-trigger-send-an-email.png
+    :alt: Screenshot of Send an Email trigger
 
 **Send an Email to User** - Tell a team member that a Contact has reached a minimum number of Points. There is an option in this event to send the Email to the Contact's owner. You may either write a basic Email in the editor, or use a template Email.
   * Selecting a User and selecting the option of **send Email to Contact's owner** notifies both Contacts.
@@ -104,3 +116,6 @@ Email triggers
   * You can add more Emails to 'to', 'cc' and 'bcc' fields - separated by a comma. You can add space after each comma if needed.
 
   * Sends Notification to all address - User's Email, owner's Email, to, cc and bcc.
+
+  .. image:: images/send-an-email-to-user.png
+    :alt: Send an Email to User interface with input fields, a dropdown menu, a switch, and action buttons
