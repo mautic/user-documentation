@@ -65,7 +65,7 @@ Campaign triggers
 **Modify Contact's Campaigns** - Add a Contact to or remove a Contact from any Campaigns you have activated.
 
 .. image:: images/point-trigger-modify-contacts-campaigns.png
-     :alt: Screenshot of Points trigger modify contact's campaigns event
+     :alt: Modify Contact’s Campaigns interface with input fields and action buttons
 
 Contact triggers
 ================
@@ -73,12 +73,12 @@ Contact triggers
 **Modify Contact's Segments** - Add a Contact to or remove a Contact from any Segments you have activated.
 
 .. image:: images/point-trigger-modify-contacts-segment.png
-    :alt: Screenshot of Points trigger modify contact's segment event
+    :alt: Modify Contact’s Segments interface with input fields and action buttons
 
 **Modify Contact's tags** - Add or remove any Tags on the Contact record. If a Tag doesn't exist, you may create a new one in the edit window for this event.
 
 .. image:: images/point-trigger-modify-contact-tags.png
-    :alt: Screenshot of Points trigger modify contact's tags event
+    :alt: Modify Contact’s tags interface with input fields and action buttons
 
 Add-on triggers
 ===============
@@ -86,7 +86,7 @@ Add-on triggers
 **Push Contact to Integration** - To only push Contacts to an Integration after hitting a minimum Point total, use this option. You must have the **Triggered action push Contacts to Integration** option selected in the Integration. After selecting this event, the system displays a dialog box where you can choose which Integration to push the Contact to. For example, if you base your definition of a Marketing Qualified Lead (MQL) on Point values, you may decide to only push Contacts who are MQLs to your CRM. Once a Contact meets the Points requirement to be an MQL, use this action to push the Contact to your CRM.
 
 .. image:: images/point-trigger-push-contact-to-integration.png
-    :alt: Screenshot of Points trigger push contact to integration event
+    :alt: Push Contact to Integration interface with input fields, a dropdown menu, and action buttons
 
 .. note:: 
 
@@ -110,4 +110,4 @@ Email triggers
   * Sends Notification to all address - User's Email, owner's Email, to, cc and bcc.
 
   .. image:: images/send-an-email-to-user.png
-    :alt: Screenshot of Send an Email to User Email trigger
+    :alt: Send an Email to User interface with input fields, a dropdown menu, a switch, and action buttons
