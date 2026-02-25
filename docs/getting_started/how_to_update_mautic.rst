@@ -1,6 +1,6 @@
 .. vale off
 
-How to update Mautic
+How to update Mautic 
 ####################
 
 .. vale on
