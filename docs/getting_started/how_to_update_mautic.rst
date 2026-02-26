@@ -40,11 +40,22 @@ Since Mautic 4.2 deprecated the update feature within the Mautic User interface,
 .. warning::
     Before starting to upgrade, it's highly recommended to take a backup of your instance. If updates are available, an update notification displays, followed by step-by-step instructions in the command-line interface to complete the process.
 
-Log in via the command line, and change directory to the Mautic directory using the command:
+Log in via the command line as normal user with sudo rights (not as root). Change directory to the Mautic directory using the command:
 
 .. code-block:: shell
 
     cd /your/mautic/directory
+
+If your Mautic is installed in: /var/www/html/mautic/
+
+.. code-block:: shell
+
+    cd /var/www/html/mautic/
+
+
+Installing updates at the command line
+======================================
+If there are updates available, run the following command to apply them:
 
 The first step is to find out if there are any updates available using the following command:
 
@@ -59,11 +70,6 @@ The output from this command tells you if there are any updates to apply. The no
 
 After confirming system readiness, you can apply the updates.
 
-Installing updates at the command line
-======================================
-
-If there are updates available, run the following command to apply them:
-
 .. code-block:: shell
 
    php bin/console mautic:update:apply
@@ -73,6 +79,62 @@ Next, a prompt displays asking you to run the command again with this additional
 .. code-block:: shell
 
    php bin/console mautic:update:apply --finish
+
+
+Update at Ubuntu 24.04 and Apache
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you use Ubuntu 24.04 an Apache it's recommend, you use the following commands. So the rights of the files ownner is the apache server www-data and all is working:
+
+.. code-block:: shell
+
+    sudo -u www-data php bin/console mautic:update:find
+    sudo -u www-data php bin/console mautic:update:apply
+    sudo -u www-data php bin/console mautic:update:apply --finish
+
+Delete Cache:
+
+.. code-block:: shell
+
+    sudo -u www-data php /var/www/html/mautic/bin/console cache:clear
+
+
+If you have rights problems:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Set Owner to Apache:
+
+.. code-block:: shell
+
+    sudo chown -R www-data:www-data /var/www/html/mautic
+
+File permission set to 644
+
+.. code-block:: shell
+
+    sudo find /var/www/html/mautic -type f -exec chmod 644 {} +
+
+
+Directory permission set to 755
+
+.. code-block:: shell
+
+    sudo find /var/www/html/mautic -type d -exec chmod 755 {} +
+
+Some special rights für Apache auf Cache, Logs, Config, Media
+
+.. code-block:: shell
+
+    sudo chmod -R g+w /var/www/html/mautic/var/cache \
+                     /var/www/html/mautic/var/logs \
+                     /var/www/html/mautic/app/config \
+                     /var/www/html/mautic/media/files \
+                     /var/www/html/mautic/media/images \
+                     /var/www/html/mautic/translations
+
+
+
+
+
 
 Updating Mautic (Composer based installs)
 *****************************************
