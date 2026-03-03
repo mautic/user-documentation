@@ -15,12 +15,12 @@ Point Actions are those times when a Contact receives a change in their Point to
 
 To add a new action:
 
-1. On the left side, navigate to **Points > Manage Actions** and click the **New** button located in the top right corner to open the New Point Action window.
+1. On the left side, navigate to **Points > Manage Actions** and click the **New** button located in the top right corner to open the **New Point Action** window.
 
 .. image:: images/points-action.png
     :alt: Screenshot of Points action
 
-2. In the main panel, there are five boxes for key information. Enter the appropriate information.
+2. In the main panel, fill in the following fields:
 
    * **Name** - The name of your action. This is how the action displays in your list of actions, so choose an identifiable name.
 
@@ -28,7 +28,7 @@ To add a new action:
 
    * **Change Points (+/-)** - The value change to set for the action. The ``+`` isn't necessary when adding Points. When subtracting Points, add the ``-`` symbol.
 
-   * **Actions taken by Contact** - The specific Contact activity required to trigger the point action.
+   * **Action taken by Contact** - The specific Contact activity required to trigger the Point Action.
 
    * **Point Group** - Identify the target group for the action. An empty selection applies the action to all main Contact's Points by default.
 
@@ -53,20 +53,18 @@ Once a Contact has accumulated a Point total, you may want to trigger an action 
 
 To add a new trigger:
 
-1. On the left side, navigate to **Points > Manage Triggers** and click the **New** button located in the top right corner to create a new point trigger.
+1. On the left side, navigate to **Points > Manage Triggers** and click the **New** button located in the top right corner to create a new Point Trigger.
 
 .. image:: images/points-trigger.png
     :alt: Screenshot of Points trigger
 
-Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Point Group**, **Category** and **Active** options are all the same. 
-
-2. The main panel also includes additional options. Enter the appropriate information.
+2. Complete the main panel information. Use the **Name**, **Description**, **Point Group**, and **Category** fields as you do for Point Actions. The **Active** toggle and **Active and Activate/Deactivate at date/time** settings also work the same way. Then, fill in these extra fields:
 
     * **Minimum number of Points** - The minimum number of Points required to trigger the Point Action.
 
-    * **Contact color** - Designate a specific color to Contacts that have at least the minimum number of Points specified. 
+    * **Contact color** - This sets a highlight color for Contacts who earn at least the minimum number of Points. 
 
-    * **Trigger for existing applicable Contacts upon saving** - To apply the trigger to existing Contacts that have at least the minimum number of Points specified select **Yes**.
+    * **Trigger for existing applicable Contacts upon saving** - Select **Yes** to apply this trigger to Contacts who already have the minimum number of Points.
 
 Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point Triggers and associated events are also fully customizable.
 
