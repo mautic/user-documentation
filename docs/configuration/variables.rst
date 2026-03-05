@@ -213,6 +213,10 @@ See :doc:`Manage Emails</channels/emails>` for more information.
      - ``{tracking_pixel}``
    * - Unsubscribe Text
      - ``{unsubscribe_text}``
+   * - Unsubscribe URL
+     - ``{unsubscribe_url}``
+   * - Resubscribe URL
+     - ``{resubscribe_url}``
    * - Web View Text
      - ``{webview_text}``
    * - Web View URL
@@ -432,6 +436,8 @@ Alphabetical list
      - ``{contactfield=twitter}``
    * - Preferred Channel (Preference Center)
      - ``{preferredchannel}``
+   * - Resubscribe URL
+     - ``{resubscribe_url}``
    * - Share Buttons
      - ``{sharebuttons}``
    * - Success Message

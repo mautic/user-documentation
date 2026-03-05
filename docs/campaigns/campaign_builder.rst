@@ -10,49 +10,67 @@ The Campaign Builder provides a blank canvas on which you can build your Campaig
 To build your Campaign, perform the following steps:
 
 #. Click **Launch the Campaign Builder** on the New Campaigns wizard. The Contact Sources menu appears as shown in the following image.
+
+   |
    
-   .. image:: images/campaign-sources.png
-    :width: 400
-    :alt: Screenshot of Campaign builder showing Contact sources
+   .. image:: images/campaign_sources.png
+      :width: 400
+      :align: center
+      :alt: Screenshot of Campaign builder showing Contact sources
+
+   |
 
    In this step, you specify the Contacts to include in your Campaign. It's possible to trigger a Campaign when Contacts join a Segment, submit a Form, or a combination of the two.
 
 #. Select where your Campaign pulls the Contacts from:
 
-   -  **Contact Segments**: choose this option if you want to send your Campaign to a specific group of your Contacts that share certain attributes, for example, 'Located in the United States' or 'Visited Product A' and are in an existing Segment based on this criteria.
+   * **Contact Segments**: choose this option if you want to send your Campaign to a specific group of your Contacts that share certain attributes, for example, 'Located in the United States' or 'Visited Product A' and are in an existing Segment based on this criteria.
 
    Note that the Segment selection shows public Segments only. If you create a Segment marked as private, that Segment won't be available for use in Campaigns.
 
-   -  **Contact Forms**: choose this option if you want to start the Campaign when the Contact completes a specified Form. Forms are the primary point of gathering information about a Contact. It's possible to take action in a Campaign based on the Form field values submitted.
+   * **Contact Forms**: choose this option if you want to start the Campaign when the Contact completes a specified Form. Forms are the primary point of gathering information about a Contact. It's possible to take action in a Campaign based on the values submitted in the Form Field.
 
    You can select a mix of both types of Contact sources for your Campaign. To use both, click the grey selector button on either the left or right side of the **Contact source** box to add whichever source type you didn't originally select.
 
-  .. image:: images/multi-source-campaign.png
+   |
+
+   .. image:: images/multi_source_campaign.png
       :width: 600
+      :align: center
       :alt: Screenshot of Campaign builder showing multiple sources selected.
+
+   |  
 
 #. After selecting one or more Contact sources, click the grey selector button to add at least one event to your Campaign. A Campaign event comprises of a combination of actions, decisions, and/or conditions as shown in the following image:
 
-  .. image:: images/campaign-events.png
+   |
+
+   .. image:: images/campaign_events.png
       :width: 600
+      :align: center
       :alt: Screenshot of Campaign builder showing the available Campaign events.
+
+   |
 
   For more information about Campaign Actions, Decisions, and Conditions, see the following topics.
 
 Actions
 -------
+
 Campaign actions are events that you initiate on your Contacts or Contact records. These can represent sending communications to the Contact or may automate operational tasks to keep your marketing running. A single Campaign can include more than one action. When you create a Campaign, you select one of these actions to begin the workflow.
 
 The actions that Mautic offers in a Campaign include:
 
-.. list-table:: Campaign Actions in Mautic
-    :header-rows: 1
-    :widths: 5, 95
+.. vale off
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 70
 
    * - Action
      - Description
    * - **Add Do Not Contact**    
-     - Adds the Contact to the Do Not Contact (DNC) list
+     - Adds the Contact to the Do Not Contact - DNC - list
    * - **Add to Company's score**
      - Adds or subtracts a designated number of Points to or from the score for all Companies associated with the Contact.
    * - **Add Company action**  
@@ -74,7 +92,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Push Contact to Integration** 
      - Sends the Contact record to the selected Integration, either creating a new Contact in the chosen Integration or updating the connected Contact record.
    * - **Remove Do Not Contact**  
-     - Removes the Contact from the Do Not Contact (DNC) list.
+     - Removes the Contact from the Do Not Contact - DNC - list.
    * - **Send a Webhook** 
      - Sends a Webhook to a defined URL, using the GET, POST, PUT, PATCH, or DELETE methods. Headers and data is customizable, and support the use of tokens, such as Contact fields and the Contact's IP address. For example, ``{contactfield=firstname}``
    * - **Send Email**   
@@ -90,6 +108,8 @@ The actions that Mautic offers in a Campaign include:
    * - **Update Contact owner**
      - Updates the Contact's owner.
 
+.. vale on
+
 .. vale off
 
 Notes on Campaign Actions
@@ -97,19 +117,24 @@ Notes on Campaign Actions
 
 .. vale on
 
-
 #. As the first step of your Campaign, you typically send out an Email to your Segments. When you add an Email to a Campaign, you can select a potential **delay** for Email delivery as shown in the following image.
 
-.. image:: images/send-email-delay-options.png
-    :width: 600
-    :alt: Screenshot of Campaign builder showing the Email send delay options.
+   |
 
-When attaching an Action to a decision's **non-action** initiated decision path, the delay becomes how long the Contact has to take action before the Campaign progresses down the non-action path. Image showing delayed actions on a non-action decision path in a Campaign.
+   .. image:: images/send_email_delay_options.png
+      :width: 600
+      :align: center
+      :alt: Screenshot of Campaign builder showing the Email send delay options.
+
+   |
+
+   When attaching an Action to a decision's **non-action** initiated decision path, the delay becomes how long the Contact has to take action before the Campaign progresses down the non-action path. Image showing delayed actions on a non-action decision path in a Campaign.
 
 #. The Delete Contact action also deletes the Campaign event log record about that Contact. Therefore, though this action might always display 0% progress on the Campaign detail overview, it could have deleted some Contacts.
 
-.. note::
-    The Delete Contact action doesn't allow connection with other Campaign events. Since the Contact won't exist after triggering this action, Campaign events can't exist after this point.
+   .. note::
+  
+      The Delete Contact action doesn't allow connection with other Campaign events. Since the Contact won't exist after triggering this action, Campaign events can't exist after this point.
    
 After adding an action, you can place a decision on the Campaign.
 
@@ -136,15 +161,20 @@ A Contact takes this path if a Contact hasn't taken the action. Use an action's 
 
 Depending on meeting - or not meeting - the criteria for the decision, the Contact takes either the green or the red paths in the decision tree. For example, consider an instance where the decision is to visit a Landing Page. There can be two outcomes. If the Contact chooses to visit the Landing Page, then the green decision path connects to the next action in the Campaign workflow. If, however, the Contact doesn't visit the Landing Page, then the red decision path connects to a different action - for example a delay of 7 days then the marketer may send a follow up Email.
 
-.. image:: images/campaign-decisions.gif
-    :width: 600
-    :alt: Screenshot showing Campaign decisions available in Mautic
+.. image:: images/campaign_decisions.gif
+   :width: 600
+   :align: center
+   :alt: Screenshot showing Campaign decisions available in Mautic
+
+|
 
 Here are the decisions that Mautic offers in the Campaign Builder:
 
-.. list-table:: Decision Actions in Mautic
+.. vale off
+
+.. list-table::
    :header-rows: 1
-   :widths: 5, 95
+   :widths: 30, 70
 
    * - Decision
      - Description
@@ -159,14 +189,15 @@ Here are the decisions that Mautic offers in the Campaign Builder:
    * - **Visits a page**    
      - Specify one or multiple pages you want the Contact to visit. Can be Mautic Landing Pages or pages on your website.
    * - **Email-Related Decisions**    
-     - Some decisions in the Campaign Builder are available for use only if you select the Send Email Campaign action.		
+     - Some decisions in the Campaign Builder are available for use only if you select the Send Email Campaign action.
 
+.. vale on
 
 Here are the decisions that are Email-related:
 
-.. list-table:: Email-related Decision Actions in Mautic
+.. list-table::
    :header-rows: 1
-   :widths: 5, 95
+   :widths: 30, 70
 
    * - Decision
      - Description
@@ -176,8 +207,7 @@ Here are the decisions that are Email-related:
      - Tracks whether the Contact clicks a link within the sent Email. This infers that the Contact opened the Email.
    * - **Replies to Email**    
      - Tracks if a Contact has replied to an Email that you sent. For more information, see Contact replies.	
-	
-	
+
 Conditions
 ----------
 
@@ -187,9 +217,9 @@ A condition has two paths, denoted by red and green icons as explained in the pr
 
 Here are the different conditions that Mautic offers in the Campaign Builder:
 
-.. list-table:: Condition Actions in Mautic
+.. list-table::
    :header-rows: 1
-   :widths: 5, 95
+   :widths: 30, 70
 
    * - Condition
      - Description
@@ -216,10 +246,12 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
 	
 Notes on delayed conditions and dates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Mautic respects delays set on the condition itself before passing down to a delay on any connected action. For example, if you are coming from a negative path on 'Opens Email', you can set a condition of 'has active notification' with a relative date of 1 day, followed by 'Send Email' on the negative path with a relative date of 2 days. Mautic checks after 1 day if there is an active notification and if there isn't, schedules the Email for two days later.
 
 Using a custom date field to trigger a Campaign
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 In the condition based on a Contact field value, select the required date field. Then select date as the operator and select the required value from the drop-down list.
 
 In the Anniversary option, you can only enter the day and month values.
@@ -228,36 +260,36 @@ Mautic evaluates Campaign conditions immediately, therefore if the date in the f
 
 In order to run Campaigns based on a particular date where a Contact may or may not be "included" today:
 
-- create a Segment with a filter where the date field = ``TODAY``.
-- initiate the Campaign based on that Segment.
-- as Contacts move in and out of the Segment, the Campaign runs.
-- you can eliminate the condition since the Segment is changing daily.
+* create a Segment with a filter where the date field = ``TODAY``.
+* initiate the Campaign based on that Segment.
+* as Contacts move in and out of the Segment, the Campaign runs.
+* you can eliminate the condition since the Segment is changing daily.
 
 This **doesn't work** for the Anniversary option.
 
 If a Contact appears again at a later date in that Segment because the value of the date has changed, then the Contact passes through the Campaign only once, and hence isn't included in the Campaign again.
-
 
 Smart event schedule
 ~~~~~~~~~~~~~~~~~~~~~
 
 For the Send Email, Marketing Message, Push Contact to Integration and Send a Webhook actions, Mautic provides a smart event schedule option. This feature dynamically optimizes the timing of event execution based on individual Contact behaviors, increasing the likelihood of engagement.
 
-**How it Works**
+**How it works:**
 
-1. **Interaction data retrieval**: the system retrieves interaction data for the Contact, including Email reads, Landing Page hits and Form submissions, to analyze the Contact's engagement patterns.
+#. **Interaction data retrieval**: the system retrieves interaction data for the Contact, including Email reads, Landing Page hits and Form submissions, to analyze the Contact's engagement patterns.
 
-2. **Minimum interactions requirement**: a Contact must have a minimum number of interactions for the system to calculate optimal timing. Each interaction type - Email open, website visit, Form submit - counts only once per hour. When a Contact doesn't have enough interaction data, default hour ranges and days adjust to the Contact's preferred timezone.
+#. **Minimum interactions requirement**: a Contact must have a minimum number of interactions for the system to calculate optimal timing. Each interaction type - Email open, website visit, Form submit - counts only once per hour. When a Contact doesn't have enough interaction data, default hour ranges and days adjust to the Contact's preferred timezone.
 
-3. **Optimal time calculation - execute event within 24 hours**: based on the Contact's interaction data, the system calculates the optimal time for executing a Campaign event, considering the Contact's historical engagement patterns.
-    - If the Contact is within the optimal window at that moment, the event executes immediately.
-    - If the current time is before today's optimal window, the event schedules for the first hour of that window.
-    - If the current time is after today's optimal window, the event schedules for the first hour of the next day's optimal window.
+#. **Optimal time calculation - execute event within 24 hours**: based on the Contact's interaction data, the system calculates the optimal time for executing a Campaign event, considering the Contact's historical engagement patterns.
+    
+    * If the Contact is within the optimal window at that moment, the event executes immediately.
+    * If the current time is before today's optimal window, the event schedules for the first hour of that window.
+    * If the current time is after today's optimal window, the event schedules for the first hour of the next day's optimal window.
 
-4. **Optimal date calculation - execute event within 7 days**: the system calculates the optimal time as in the previous option and additionally determines the best day of the week. By default, a Contact can have multiple optimal days.
-    - If the Contact is within the optimal window at that moment, the event executes immediately.
-    - If the current time and day are before the optimal window, it schedules for the first optimal hour of the next optimal day.
-
+#. **Optimal date calculation - execute event within 7 days**: the system calculates the optimal time as in the previous option and additionally determines the best day of the week. By default, a Contact can have multiple optimal days.
+    
+    * If the Contact is within the optimal window at that moment, the event executes immediately.
+    * If the current time and day are before the optimal window, it schedules for the first optimal hour of the next optimal day.
 
 .. vale off
 
@@ -266,7 +298,7 @@ Triggering Campaign events
 
 .. vale on
 
-Actions and Decisions in Mautic require a :doc:`cron job</configuration/cron_jobs>` which executes the following command at the desired interval:
+Actions and Decisions in Mautic require a :doc:`Cron job</configuration/cron_jobs>` which executes the following command at the desired interval:
 
 .. code-block:: shell
 
@@ -287,19 +319,28 @@ Since Mautic 5.1, the Campaign builder includes a feature that allows Users to c
 
 To clone an event:
 
-1. Hover over the Campaign event that you want to clone and click the copy icon button to store the event in the clipboard:
+#. Hover over the Campaign event that you want to clone and click the copy icon button to store the event in the clipboard.
 
-.. image:: images/clone-campaign-event.png
-  :width: 277
-  :alt: Screenshot of hovering over a Campaign event to reveal the clone option
+   |
 
+   .. image:: images/clone_campaign_event.png
+      :width: 300
+      :align: center
+      :alt: Screenshot of hovering over a Campaign event to reveal the clone option
 
-2. Click on the anchor of the event after which you want to insert the cloned event. This opens up a modal window.
+   |
 
-3. In the modal window, click the "Insert" button to paste the stored event:
+#. Click on the anchor of the event after which you want to insert the cloned event. This opens up a modal window.
 
-.. image:: images/paste-cloned-event-modal.png
-  :width: 583
-  :alt: Screenshot of the modal window with the insert option to paste the cloned event
+#. In the modal window, click the "Insert" button to paste the stored event.
+
+   |
+
+   .. image:: images/paste_cloned_event_modal.png
+      :width: 600
+      :align: center
+      :alt: Screenshot of the modal window with the insert option to paste the cloned event
+
+   |
 
 The cloned event is now inserted in the Campaign workflow.
