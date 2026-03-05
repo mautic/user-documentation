@@ -321,6 +321,8 @@ Mail send settings
   
 * **Custom return path (bounce) address** - Set a custom return path/bounce Email address for Emails sent from the system. Note that some mail transports, such as GMail, won't support this.
 
+* **Email address length limit** - This setting determines the maximum allowed length for Email addresses, including the display name. The default value is 320 characters. If an Email address - including the display name - exceeds this limit, Mautic uses only the Email address without the display name when sending Emails. This helps prevent errors with Email servers that have strict length restrictions. You can adjust this value if you need to accommodate longer Email addresses or if you want to set a more restrictive limit.
+
 * **Mailer is owner** - If Contacts in Mautic have owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they're listed as the owner for.
 
 .. note:: 
@@ -670,8 +672,6 @@ Mautic tracking settings
 .. note:: 
 
     The default tracking code provided in a new instance updates and changes after you set up a new custom domain or when you make changes to an existing one. You must use the new tracking code that reflects the new or edited custom domain. If you are using the Plugin for WordPress, Drupal, or Joomla, re-enter your account information in the Plugin.
-
-* **Identify visitor by tracking URL** - Select **Yes** to have Mautic begin tracking a Contact after the Contact clicks a link in an Email on a device where no cookie exists.
 
 * **Anonymize IP** - Select **Yes** to not store full IP addresses for your visitors/Contacts. This setting aids customers in achieving General Data Protection Regulation compliance.
 
