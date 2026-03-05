@@ -52,6 +52,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://portfolio-dun-one-68.vercel.app"><img src="https://avatars.githubusercontent.com/u/101266221?v=4?s=100" width="100px;" alt="Isreal Hogan"/><br /><sub><b>Isreal Hogan</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/commits?author=sudohogan" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mheavey2"><img src="https://avatars.githubusercontent.com/u/85061867?v=4?s=100" width="100px;" alt="Margaret"/><br /><sub><b>Margaret</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/commits?author=mheavey2" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
