@@ -102,7 +102,7 @@ Using remote Assets
 
 .. vale on
 
-Instead of uploading a file from your computer, you can either provide a link to a file on a cloud storage provider or browse your integrated cloud storage provider - for example an Amazon S3 bucket - by selecting the Remote tab, rather than Local.
+Instead of uploading a file from your computer, you can either provide a link to a file on a cloud storage provider or browse your integrated cloud storage provider - for example, an Amazon S3 bucket - by selecting the Remote tab, rather than Local.
 
 **Optional remote URL validation:**
 
