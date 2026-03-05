@@ -106,10 +106,9 @@ Instead of uploading a file from your computer, you can either provide a link to
 
 **Optional remote URL validation:**
 
-You can enable an optional remote URL validation by adding the following line ``'validate_remote_domains' => true`` to ``config/local.php`` file.
-When you enable that validation, it allows only domains listed in the
-"Configuration" -> "System Settings" -> "Miscellaneous Settings" -> "Allowed remote domains" section.
-The validation considers the domain of your Mautic instance valid as well.
+You can enable optional remote URL validation by adding ``'validate_remote_domains' => true`` to the ``config/local.php`` file.
+
+When you enable this validation, Mautic only allows domains listed in **Configuration > System Settings > Miscellaneous Settings > Allowed remote domains**. The validation also considers the domain of your Mautic instance valid.
 
 .. vale off
 
