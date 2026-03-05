@@ -45,9 +45,9 @@ Campaign actions are events that you initiate on your Contacts or Contact record
 
 The actions that Mautic offers in a Campaign include:
 
-.. list-table:: Campaign Actions in Mautic
-    :header-rows: 1
-    :widths: 5, 95
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 70
 
    * - Action
      - Description
@@ -78,7 +78,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Send a Webhook** 
      - Sends a Webhook to a defined URL, using the GET, POST, PUT, PATCH, or DELETE methods. Headers and data is customizable, and support the use of tokens, such as Contact fields and the Contact's IP address. For example, ``{contactfield=firstname}``
    * - **Send Email**   
-     - Sends a transaction or marketing Email to the selected Contact. You can send a transactional Email to the Contact multiple times. You can only send a marketing Email to the Contact  once across multiple sources. If the Contact has already received this Email from another source or the current Campaign, they aren't sent the Email again and the Contact progresses through the Campaign.
+     - Sends a transactional or marketing Email to the selected Contact. Learn more about the difference in the :xref:`Transactional and Marketing Emails in Mautic` blog post.
    * - **Send Email to User** 
      - Sends an Email to an entity other than the Contact. This may be a Mautic User, the Contact's owner, or non-Users. Emails sent using this action don't generate any statistics for Contacts or Emails.
    * - **Send Marketing Message**
