@@ -27,30 +27,6 @@ The export command:
 
 .. vale off
 
-How the exporting Campaigns works
-*********************************
-
-.. vale on
-
-Whether exporting via Mautic instance, the command line, or the API, the process follows these logic steps:
-
-Permissions
-    Checks that the logged-in User has the correct permissions to export.
-
-Bulk export
-    Supports exporting multiple Campaigns simultaneously.
-
-Data structure
-    Exports data in a structured JSON format to ensure compatibility.
-
-Asset management
-    Exports Assets into a separate folder in their original format.
-
-File packaging
-    Zips the resulting collection of files into a single package for easy transfer across systems.
-
-.. vale off
-
 Exporting a Campaign
 ********************
 
@@ -152,3 +128,22 @@ Python example
    * Replace ``YOUR_ACCESS_TOKEN`` with a valid authentication token
    * The API uses a GET request to export a specific Campaign by ID
    * Ensure you have the necessary API permissions
+
+.. vale off
+
+How the exporting Campaigns works
+*********************************
+
+.. vale on
+
+Whether exporting via Mautic instance, the command line, or the API, the process follows these logic steps:
+
+.. vale off
+
+* **Permissions:** verifies that the logged-in User has the correct permissions to export.
+* **Bulk export:** supports exporting multiple Campaigns simultaneously.
+* **Data structure:** exports data in a structured JSON format to ensure compatibility.
+* **Asset management:** exports Assets into a separate folder in their original format.
+* **File packaging:** compresses the resulting collection of files into a single ZIP file for easy transfer across systems.
+
+.. vale on
