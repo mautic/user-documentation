@@ -176,7 +176,7 @@ See :doc:`Companies</companies/companies_overview>` for more information.
   
    **Custom Company fields**
 
-   The syntax for custom Company fields is different than the core Company field syntax. You must **not** add the word "Company" in the variable; instead, treat it as a ``contactfield``.
+   The syntax for custom Company fields differs from core Company field syntax. You must **not** add the word "Company" in the variable and instead treat it as a ``contactfield``.
 
 Mautic Component tokens
 ***********************
