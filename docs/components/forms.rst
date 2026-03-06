@@ -10,9 +10,7 @@ Creating a new Form
 
 .. vale on
 
-To create a new Form:
-
-#. Go to Components > Forms and click New
+To create a new Form, go to **Components > Forms** and click **New**.
 
 .. note::
     All Forms in Mautic can trigger Campaigns and have access to the full range of Form actions. You can use Forms as a Contact source in Campaigns to trigger workflows when Contacts submit them.
