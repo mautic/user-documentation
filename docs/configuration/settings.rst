@@ -681,7 +681,7 @@ Mautic tracking settings
 
 * **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent filling your logs with hits from bots.
 
-* **Append Segment IDs to Tracking URLs** - Select **Yes** to have Mautic append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact was part of when they clicked a link in an Email.
+* **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click on a link in an Email.
   
 .. note:: 
 
