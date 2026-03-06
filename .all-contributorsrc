@@ -195,6 +195,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "sudohogan",
+      "name": "Isreal Hogan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101266221?v=4",
+      "profile": "https://portfolio-dun-one-68.vercel.app",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mheavey2",
+      "name": "Margaret",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85061867?v=4",
+      "profile": "https://github.com/mheavey2",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
