@@ -8,6 +8,41 @@ Variables
 
   ``Hi {contactfield=firstname|there},``
 
+Token modifiers
+***************
+
+Label modifier for select and boolean fields
+============================================
+
+For select and boolean type fields, you can use the ``|label`` modifier to display the human-readable label instead of the stored value. It's beneficial when your select fields store values like codes or IDs, but you want to display friendly labels to your Contacts.
+
+**Syntax:**
+
+.. code-block:: text
+
+   {contactfield=field_alias|label}
+
+**Examples:**
+
+* For a select field with alias ``country_select`` that has options, such as ``us`` for ``United States`` or ``uk`` for ``United Kingdom``:
+
+   * ``{contactfield=country_select}`` displays the value ``us``
+   * ``{contactfield=country_select|label}`` displays the label ``United States``
+
+* For a boolean field with alias ``is_subscriber``:
+
+   * ``{contactfield=is_subscriber}`` displays the value ``1`` or ``0``
+   * ``{contactfield=is_subscriber|label}`` displays the label ``Yes`` or ``No``
+
+* For both Contact fields and Company fields:
+
+   * ``{contactfield=company_type|label}`` displays the label of a Company select field
+   * ``{contactfield=company_active|label}`` displays the label of a Company boolean field
+
+.. note::
+
+   The ``|label`` modifier only works with select and boolean field types. For other field types, it displays the regular value.
+
 Contact fields
 **************
 
@@ -184,6 +219,10 @@ See :doc:`Manage Emails</channels/emails>` for more information.
      - ``{tracking_pixel}``
    * - Unsubscribe Text
      - ``{unsubscribe_text}``
+   * - Unsubscribe URL
+     - ``{unsubscribe_url}``
+   * - Resubscribe URL
+     - ``{resubscribe_url}``
    * - Web View Text
      - ``{webview_text}``
    * - Web View URL
@@ -403,6 +442,8 @@ Alphabetical list
      - ``{contactfield=twitter}``
    * - Preferred Channel (Preference Center)
      - ``{preferredchannel}``
+   * - Resubscribe URL
+     - ``{resubscribe_url}``
    * - Share Buttons
      - ``{sharebuttons}``
    * - Success Message
