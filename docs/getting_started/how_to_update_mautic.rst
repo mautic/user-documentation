@@ -40,19 +40,13 @@ Since Mautic 4.2 deprecated the update feature within the Mautic User interface,
 .. warning::
     Before starting to upgrade, it's highly recommended to take a backup of your instance. If updates are available, an update notification displays, followed by step-by-step instructions in the command-line interface to complete the process.
 
-Log in via the command line as normal user with sudo rights (not as root). Change directory to the Mautic directory using the command:
+Log in via the command line as a normal user with sudo rights (not as root), then change directory to the Mautic directory using the command:
 
 .. code-block:: shell
 
     cd /your/mautic/directory
 
-If your Mautic is installed in: /var/www/html/mautic/
-
-.. code-block:: shell
-
-    cd /var/www/html/mautic/
-
-
+For example, if Mautic is installed in ``/var/www/html/mautic/``, use that path in the command above.
 Installing updates at the command line
 ======================================
 If there are updates available, run the following command to apply them:
@@ -84,7 +78,7 @@ Next, a prompt displays asking you to run the command again with this additional
 Update at Ubuntu 24.04 and Apache
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you use Ubuntu 24.04 an Apache it's recommend, you use the following commands. So the rights of the files ownner is the apache server www-data and all is working:
+If you use Ubuntu 24.04 and Apache, it's recommended that you use the following commands. This ensures the file owner is the Apache server user www-data and everything works correctly:
 
 .. code-block:: shell
 
@@ -99,7 +93,7 @@ Delete Cache:
     sudo -u www-data php /var/www/html/mautic/bin/console cache:clear
 
 
-If you have rights problems:
+Fixing file permission issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Set Owner to Apache:
 
@@ -120,7 +114,7 @@ Directory permission set to 755
 
     sudo find /var/www/html/mautic -type d -exec chmod 755 {} +
 
-Some special rights für Apache auf Cache, Logs, Config, Media
+Some special rights for Apache on Cache, Logs, Config, Media
 
 .. code-block:: shell
 
@@ -130,10 +124,6 @@ Some special rights für Apache auf Cache, Logs, Config, Media
                      /var/www/html/mautic/media/files \
                      /var/www/html/mautic/media/images \
                      /var/www/html/mautic/translations
-
-
-
-
 
 
 Updating Mautic (Composer based installs)
