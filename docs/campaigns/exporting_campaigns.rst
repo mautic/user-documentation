@@ -14,7 +14,6 @@ When you select a Campaign, the export feature extracts all Campaign data and en
 
 * Dynamic Content
 * Asset\*
-* Custom Fields
 * Other related dependencies
 
 The export command:
