@@ -23,13 +23,9 @@ The following fields are available:
 
 - **Published** - Whether the Form is available for use - published - or not available - unpublished. Unpublished Forms won't be visible when you've added the Form using JavaScript. If you used the manual method to copy and paste the Form HTML, the Form remains visible but visitors **won't** be able to submit it - an error message prevents them from submitting if they try to submit an unpublished Form.
 
-.. vale off
-
 - **Publish at (date/time)** - This allows you to define the date and time at which this Form is available for submissions.
 
 - **Unpublish at (date/time)** - This allows you to define the date and time at which this Form ceases to be available for submissions.
-
-.. vale on
 
 - **Disable search indexing** - If Yes, Mautic prevents search engines from finding and displaying the Form in search results by sending the ``noindex`` http header.
 
@@ -46,6 +42,7 @@ The following fields are available:
 
 Configuring Forms
 *****************
+
 .. vale on
 
 Once you have created a new Form, you have some additional options to set.
@@ -55,17 +52,19 @@ Details
 
 The available details fields are:
 
-- **Name** - Title your Form, including any terms you may want to use to search for the Form.
-- **Description** - Add a description, so other Mautic Users can see what the goal of the Form is. It may help to include information like any location where the Form appears.
-- **Successful Submit Action** - Options include:
-   * **Remain at Form** - nothing appears to happen, the Form remains as is
-   * **Redirect URL** - directs the Contact to another location, such as a thank you Landing Page, after submission
-   * **Display message** - shows a message over the Form once the Contact has submitted the Form.
-- **Redirect URL/Message** - If you decide to use the Redirect URL successful submit action, paste the URL where you'd like to direct submitters. If you use Display message, enter the message to display.
+* **Name** - Title of your Form, including any terms you may want to use to search for the Form.
+* **Description** - A description to describe the goal of the Form. It may help to include information such as the location where the Form appears.
+* **Successful Submit Action** - Options include:
+  
+  * **Remain at Form** - the Contact stays on the same page and the Form resets, allowing for another submission or continued browsing
+  * **Redirect URL** - sends the Contact to a different website or a specific Mautic Landing Page after they click submit
+  * **Display message** - shows a confirmation or thank you message on the screen after the Contact submits the Form
+
+* **Redirect URL/Message** - If you decide to use the Redirect URL successful submit action, paste the URL where you'd like to direct submitters. If you use Display message, enter the message to display.
 
 .. image:: images/forms/new_form.png
-  :width: 600
-  :alt: Screenshot showing new Form
+   :width: 600
+   :alt: New Form interface at Mautic
 
 Fields
 ======
@@ -77,6 +76,8 @@ To control the maximum number of fields shown on a Form:
 To add a new field to your Form:
 
 #. Click the Add a new field dropdown and select the type of field you wish to use. Available fields include:
+   
+   - **boolean** - This field provides a TRUE/FALSE or yes/no selection. You can configure it to display positive, negative, or both labels. Use this field for binary choices, such as agreeing to terms or opting into communications.
 
    - **CAPTCHA** - A basic tool for spam protection requiring the Form submitter to answer a question, or detecting when spambots try to submit data in a hidden CAPTCHA field - sometimes referred to as a honeypot. It's recommended to use some kind of CAPTCHA on every Form. It's also possible to support reCAPTCHA and other tools with third-party Plugins.
 
@@ -115,6 +116,8 @@ To add a new field to your Form:
    - **Radio group** - This field provides a group of single-select options with a radio button, sometimes referred to as an option button group.
 
    - **Select: Single or multiple choices** - This option shows a dropdown list where a visitor may choose one option. This field also allows multiple selections, which changes the display to a box with the options listed. On a mobile device, a single select box shows a dialog box with radio buttons, and with checkboxes for a multi-select field.
+
+   - **Slider** - This field provides an interactive slider control that allows visitors to select a numeric value from a predefined range by dragging a handle along a track. The slider displays the minimum and maximum values at each end and shows the current selected value as the visitor moves the handle.
 
    - **Social login** - This allows the visitor to connect their Twitter, Facebook or LinkedIn profiles with their Contact record. You must configure the Plugin for the social network before using this field.
 
