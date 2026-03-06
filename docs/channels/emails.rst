@@ -343,8 +343,7 @@ For example:
 
 .. note::
 
-   The ``mautic:disable:tracking`` attribute is deprecated.
-   Use ``data-mautic-disable-tracking="true"`` for all new emails and templates.
+   Use ``data-mautic-disable-tracking="true"`` for all new Emails and templates, as Mautic has deprecated the ``mautic:disable:tracking`` attribute.
 
 Unsubscribing
 *************
