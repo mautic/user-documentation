@@ -1,4 +1,4 @@
-# Contributing to Mautic user documentation
+# Contributing to Mautic User documentation
 
 Contributions are always welcome, no matter how large or small, or at whatever skill level you are. Before contributing, please read the [Code of Conduct](https://mautic.org/code-of-conduct/) and follow the directions in this guide.
 
@@ -36,13 +36,9 @@ Contributions are always welcome, no matter how large or small, or at whatever s
 
 - Don’t ask maintainers to assign you to another issue before you finish working on your current one and create a PR. Also, avoid requesting assignment to an issue that already has someone assigned. However, if the assignee hasn’t addressed the issue for a while and you’re interested in working on it, leave a comment to ask about its status and progress.
 
-<!-- vale off -->
-
-- Did you spot a typo, missing instructions, or have an idea for enhancing the Mautic user documentation? You can [create an issue](https://github.com/mautic/user-documentation/issues/new/choose) to address it.
+- Did you spot a typo, missing instructions, or have an idea for enhancing the Mautic User documentation? You can [create an issue](https://github.com/mautic/user-documentation/issues/new/choose) to address it.
 
   However, the Education Team needs to triage the issue before you can work on it. If you wish to work on the issue you submitted, please inform and tag the `@mautic/education-team-leaders` in the comment.
-
-<!-- vale on -->
 
 ## Pull requests
 
@@ -66,12 +62,8 @@ Please refer to the "[Contributing to Mautic’s documentation](https://contribu
 
 ## Credit
 
-<!-- vale off -->
-
-These contributing guidelines are adapted from [OpenSource-Communities/intro](https://github.com/OpenSource-Communities/intro/blob/main/contributing/CONTRIBUTING.md) repository.
-
-<!-- vale on -->
+Mautic adapted these contributing guidelines from the [OpenSource-Communities/intro](https://github.com/OpenSource-Communities/intro/blob/main/contributing/CONTRIBUTING.md) repository.
 
 ---
 
-Thank you for contributing to the improvement of the Mautic user documentation.
+Thank you for contributing to the improvement of the Mautic User documentation.
