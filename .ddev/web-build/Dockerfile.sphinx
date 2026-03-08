@@ -1,32 +1,16 @@
-#!/usr/bin/env bash
+# Update package list and install Python 3 tools: pip and venv
+RUN apt-get update && apt-get install -y python3-pip python3-venv
 
-## Description: Build User documentation using the Sphinx HTML builder.
-## Usage: build-docs
-## Example: ddev build-docs
+# Define the virtual environment location and create it
+ENV VENV_DIR=/opt/mautic-docs-venv
+RUN python3 -m venv $VENV_DIR
 
-# Ensure we fail on error
-set -e
+# Copy Python dependencies into the container and install them in the virtualenv
+COPY requirements.txt /tmp/requirements.txt
+RUN . $VENV_DIR/bin/activate && pip install --upgrade pip && pip install -r /tmp/requirements.txt
 
-# Initialize terminal colors/styles
-bold=$(tput bold)
-green=$(tput setaf 2)
-reset=$(tput sgr0)
-underline=$(tput smul)
+# Ensure the virtualenv's bin directory is added to PATH so that its tools (like sphinx-build) are accessible in all contexts
+ENV PATH="$PATH:/opt/mautic-docs-venv/bin"
 
-echo "${bold}${green}🔧 Building user documentation...${reset}"
-
-# Ensure we're in the right directory
-cd /var/www/html/docs
-echo
-
-# Run the build
-make html
-
-# Success message
-echo
-echo "${green}✅ Documentation build completed successfully!${reset}"
-echo "${green}📁 The HTML pages are in: ${bold}/var/www/html/docs/build/html${reset}"
-
-# Friendly access hint
-echo "${green}🌐 View the documentation at: ${bold}${underline}https://${DDEV_HOSTNAME}${reset}"
-echo
+# Persist the updated PATH for interactive shells (e.g., when using `ddev ssh`)
+RUN echo 'export PATH="$PATH:$VENV_DIR/bin"' > /etc/profile.d/venv-path.sh

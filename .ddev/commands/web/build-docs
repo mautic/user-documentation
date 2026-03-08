@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-## Description: Build User documentation using the Sphinx HTML builder.
+## Description: Build Mautic community handbook using the Sphinx HTML builder.
 ## Usage: build-docs
 ## Example: ddev build-docs
 
@@ -13,7 +13,7 @@ green=$(tput setaf 2)
 reset=$(tput sgr0)
 underline=$(tput smul)
 
-echo "${bold}${green}🔧 Building user documentation...${reset}"
+echo "${bold}${green}🔧 Building Mautic community handbook documentation...${reset}"
 
 # Ensure we're in the right directory
 cd /var/www/html/docs
