@@ -42,7 +42,7 @@ Campaign reactivation behaviour
 
 .. vale on
 
-When you deactivate and then reactivate a Campaign, Mautic provides control over how scheduled events with relative delays - such as "Send Email 5 days after joining" - should behave. This feature gives you flexibility in managing Campaign timing based on your specific use case.
+When you deactivate and then reactivate a Campaign, Mautic provides control over how scheduled events with relative delays - such as 'Send Email 5 days after joining' - should behave. This feature gives you flexibility in managing Campaign timing based on your specific use case.
 
 .. note::
     This setting only affects events that use relative delays - interval-based scheduling. Events with absolute dates aren't affected by this setting.
@@ -63,7 +63,7 @@ There are three options available for how scheduled events should behave after r
 Count delay regardless of activation state
 ------------------------------------------
 
-This is the default behaviour. The original trigger date is used and inactive time doesn't affect scheduling.
+This is the default behaviour. Mautic uses the original trigger date, and inactive time doesn't affect scheduling.
 
 **Example scenario:**
 
@@ -90,7 +90,7 @@ The delay counter resets completely when you reactivate the Campaign.
 - Campaign deactivated: January 5
 - Campaign reactivated: January 7
 
-**Result:** the event is rescheduled to execute 10 days after reactivation, on January 17.
+**Result:** Mautic reschedules the event to execute 10 days after reactivation, on January 17.
 
 **When to use:** this option is useful when you want to ensure all Contacts receive the full intended delay after any Campaign changes. For example, if you deactivate a Campaign to make significant updates and want everyone to experience the complete updated workflow timing.
 
@@ -107,21 +107,21 @@ Events only count days when the Campaign is active. Inactive periods don't count
 - Campaign deactivated: January 5 (after 4 days active)
 - Campaign reactivated: January 10 (after 5 days inactive)
 
-**Result:** the event is rescheduled to execute on January 16. The 4 days while active (January 1-5) count toward the 10-day delay, leaving 6 more days needed after reactivation (January 10 + 6 days = January 16).
+**Result:** Mautic reschedules the event to execute on January 16. The 4 days while active (January 1-5) count toward the 10-day delay, leaving 6 more days needed after reactivation (January 10 + 6 days = January 16).
 
 **When to use:** this option is ideal when you want precise control over the actual time Contacts spend in an active Campaign state. Use this for compliance scenarios, trial periods, or when you need to pause Campaigns without affecting the intended engagement timeline.
 
 Viewing last activation date
 ============================
 
-On the Campaign details page, you can see the **Last Publish Date** which indicates when the Campaign was most recently activated. This date is used as the reference point for the "Restart on reactivate" option to recalculate scheduled event timings.
+On the Campaign details page, you can see the **Last Publish Date** which indicates when the Campaign was most recently activated. This date is used as the reference point for the 'Restart on reactivate' option to recalculate scheduled event timings.
 
 Activate and deactivate Campaigns
 =================================
 
 When you activate or deactivate a Campaign, Mautic displays a confirmation message that shows the current reactivation behaviour setting. This helps you understand what happens to scheduled events before you confirm the action.
 
-For example: "All scheduled events execute according to the reactivation behaviour setting. Currently set to: Count delay regardless of activation state"
+For example: 'All scheduled events execute according to the reactivation behaviour setting. Currently set to: Count delay regardless of activation state'
 
 .. warning::
     When you deactivate a Campaign, all processing of Contacts and Campaign events - including scheduled events - stops immediately. Scheduled events remain in the queue but won't execute until you reactivate the Campaign.
