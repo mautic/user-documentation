@@ -7,23 +7,6 @@ Segments provide ways to easily organize your Contacts. There are a variety of f
 
 .. vale off
 
-Viewing Contact Segments
-************************
-
-.. vale on
-
-.. vale off
-
-When viewing all Segments, the **# contacts** column shows the number of Contacts included in each specific Segment. The **Building** or **Building (X Contacts)** label appears during the creation of a new Segment or when modifying an existing Segment's filter and remains visible until the building process completes.
-
-.. vale on
-
-.. image:: images/contact_segments.png
-   :width: 700
-   :alt: Highlight Segments' Contacts column that consists of Contacts count and building labels
-
-.. vale off
-
 Creating a Segment
 ******************
 
@@ -44,12 +27,29 @@ Creating a Segment
 #. Fill in other options:
 
    * **Visible to other Users** - This option determines if the Segment is available for all Users to see and use, or only the User who created the Segment.
-   * **Available in Preference Center** - If set to **Yes**, Contacts can see and opt into or out of the Segment on a **Preference Center** page. The Segments display if the Preference Center has the **Segment List** slot type.
-   * **Active** - If set to **No**, the Segment won't be available for use in filters for other Segments, as a Contact source in Campaigns, modify Segment actions, etc. You still see the Segment in your **Segment List**, but it won't exist anywhere else in Mautic.
+   * **Available in Preference Center** - If set to **Yes**, Contacts can see and opt into or out of the Segment on a **Preference Center** interface. The Segments display if the Preference Center has the **Segment List** slot type.
+   * **Active** - If set to **No**, the Segment won't be available for use in filters for other Segments, as a Contact source in Campaigns, modify Segment actions, etc. You still see the Segment in your Segments list, but it won't exist anywhere else in Mautic.
 
    * **Public name** - Users can set a different name for the Segment, which is visible to Contacts in the Preference Center options.
 
      On the **Details** tab, static and dynamic Segments also have the option to display a different public name for a Segment.
+
+.. vale off
+
+Viewing Contact Segments
+************************
+
+.. vale on
+
+.. vale off
+
+When viewing all Segments, the **# contacts** column shows the number of Contacts included in each specific Segment. The **Building** or **Building (X Contacts)** label appears during the creation of a new Segment or when modifying an existing Segment's filter and remains visible until the building process completes.
+
+.. vale on
+
+.. image:: images/contact_segments.png
+   :width: 700
+   :alt: Highlight Segments' Contacts column that consists of Contacts count and building labels
 
 .. vale off
 
@@ -60,7 +60,7 @@ Exporting Contacts of a Segment
 
 To export Contacts of a Segment:
 
-#. Click the **View X Contacts** label for the Segment that you want to export. This opens the Contacts page.
+#. Click the **View X Contacts** label for the Segment that you want to export. This opens the Contacts interface.
 
    |
 
