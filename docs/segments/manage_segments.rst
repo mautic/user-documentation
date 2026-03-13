@@ -69,7 +69,7 @@ To export Contacts of a Segment:
       :alt: Highlight of view 1 Contact label at Mautic Contact Segments interface.
 
    |
-#. Click the gear icon next to the search bar to open the options.
+#. Click the gear icon next to the search bar to open **Options**.
 #. Click **Export to CSV** or **Export to Excel** to export the Contacts in your preferred format.
 
    |
