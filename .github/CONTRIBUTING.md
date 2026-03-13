@@ -66,4 +66,4 @@ Mautic adapted these contributing guidelines from the [OpenSource-Communities/in
 
 ---
 
-Thank you for contributing to the improvement of the Mautic User Documentation.
+Thank you for contributing to the improvement of the Mautic user documentation.
