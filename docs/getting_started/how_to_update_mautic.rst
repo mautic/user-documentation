@@ -85,14 +85,14 @@ If updates are available, follow these steps to apply them:
 
 .. vale off
 
-Update at Ubuntu 24.04 and Apache
----------------------------------
+Running update commands as the web server user
+----------------------------------------------
 
 .. vale on
 
 .. vale off
 
-If you use Ubuntu 24.04 and Apache, use the following commands. This ensures the file owner is the Apache server user ``www-data``:
+When using Apache on Linux, run the following commands as the web server user - typically ``www-data``. This ensures that file ownership and permissions remain correct:
 
 .. vale on
 
