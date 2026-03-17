@@ -403,13 +403,13 @@ Message settings
 
 * **Default UTM medium** - Sets a site-wide default ``utm_medium`` value that pre-populates the UTM medium field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
 
-* **Default UTM campaign** - Sets a site-wide default ``utm_campaign`` value that pre-populates the UTM campaign field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+* **Default UTM Campaign** - Sets a site-wide default ``utm_campaign`` value that pre-populates the UTM Campaign field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
 
 * **Default UTM content** - Sets a site-wide default ``utm_content`` value that pre-populates the UTM content field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
 
 .. note::
 
-  These defaults only apply when creating a **new** Email. Editing an existing Email or cloning an Email never overwrites the values already on that Email — even if those fields are blank on the clone source.
+  These defaults only apply when creating a **new** Email. Editing an existing Email or cloning an Email never overwrites the values already on that Email, even if those fields are blank on the clone source.
 
 Unsubscribe settings
 ====================
@@ -436,7 +436,7 @@ Unsubscribe settings
 
 * **Show Contact's preferred Channel option** - If you have multiple Channels available within your Mautic instance. For example; Email, ``SMS``, mobile push, web notifications, etc., Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
-* **Default Preference Center page** - Select a Landing Page to use as the Preference Center for new Emails. When creating a new Email, this page pre-populates the Preference Center field. Editing an existing Email or cloning an Email does not change that Email's Preference Center — even if the clone source has no Preference Center set. For more information on configuring the Preference Center, see :doc:`here</contacts/preference_center>`.
+* **Default Preference Center Landing Page** - Select a Landing Page to use as the Preference Center for new Emails. When creating a new Email, this Landing Page pre-populates the Preference Center field. Editing an existing Email or cloning an Email doesn't change that Email's Preference Center, even if the clone source has no Preference Center set. Read the :doc:`/contacts/preference_center` section for more information.
 
 
 .. vale off
