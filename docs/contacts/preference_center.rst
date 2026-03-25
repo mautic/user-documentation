@@ -179,6 +179,9 @@ When creating or editing an Email, you can select the Preference Center Page fro
 
 |
 
+.. tip::
+    You can set a default Preference Center in Configuration > Email Settings. When you create a new Email, Mautic pre-populates the Preference Center field with this default selection. This saves time if most of your Emails use the same Preference Center page. For details, see :ref:`Unsubscribe settings<configuration/settings:Unsubscribe settings>`.
+
 Keep in mind that your mail must use the same language as the Preference Center landing page - if not, Mautic shows the default Preference Center.
 
 Now when sending the Email, all recipients can click the Unsubscribe link provided in the ``{unsubscribe_text}`` and ``{unsubscribe_url}`` variables, taking them to the new Preference Center.

@@ -398,13 +398,31 @@ Message settings
 * **Convert embed images to Base64** - Select **Yes** to display embedded images in Emails using embedded base64 code rather than as embedded images.
 
 * **Disable trackable URLs** - Removes tracking from URLs in your Emails. Select Yes to prevent tracking, reporting on, and using decisions based on link clicks. Some Email service providers don't like redirecting URLs. Using trackable URLs in your Emails may impact deliverability.
-  
+
+Default UTM tags
+----------------
+
+Configure default UTM tags for new Emails. When you create a new Email, Mautic pre-populates the UTM fields with these defaults. Existing Emails, edited Emails, and cloned Emails retain their own UTM values.
+
+* **Default UTM source** - The default value for the Campaign Source field. For example: ``newsletter``, ``website``.
+
+* **Default UTM medium** - The default value for the Campaign Medium field. For example: ``email``, ``cpc``.
+
+* **Default UTM campaign** - The default value for the Campaign Name field. For example: ``spring_sale``, ``product_launch``.
+
+* **Default UTM content** - The default value for the Campaign Content field. For example: ``header_link``, ``footer_link``.
+
+.. note::
+    Default UTM tags only apply to new Emails. If you edit an existing Email or clone an Email, the original values remain unchanged - even if those values are empty.
+
 Unsubscribe settings
 ====================
 
 .. image:: images/unsubscribe-settings.png
   :width: 600
   :alt: Screenshot showing Unsubscribe Settings Configuration in Mautic
+
+* **Default Preference Center** - Select a default Preference Center page for new Emails. When you create a new Email, Mautic pre-populates the Preference Center field with this selection. Existing Emails, edited Emails, and cloned Emails retain their own Preference Center selection. For more information on creating Preference Center pages, see the :doc:`Preference Center documentation</contacts/preference_center>`.
 
 * **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link. 
 

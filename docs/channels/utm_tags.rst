@@ -68,6 +68,19 @@ Using UTM tags in Emails
 
 Mautic supports UTM tagging in Emails. Mautic can automatically append UTM tags to all links in an Email by entering the appropriate Campaign values in the fields provided.
 
+Setting global UTM defaults
+===========================
+
+Configure default UTM values in Configuration > Email Settings. When you create a new Email, Mautic pre-populates the UTM fields with these defaults. This saves time if most of your Emails use similar tracking values.
+
+.. note::
+    Default UTM tags only apply to new Emails. If you edit an existing Email or clone an Email, the original values remain unchanged.
+
+For more details on configuring defaults, see :ref:`Default UTM tags<configuration/settings:Default UTM tags>`.
+
+Setting UTM tags on individual Emails
+=====================================
+
 #. In Mautic, click Channels > Emails.
 #. Create a new Email or edit an existing Email. If you choose to edit an existing Email, click the Email and then click Edit.
 #. Locate the Google Analytics UTM tags section on the bottom right.
