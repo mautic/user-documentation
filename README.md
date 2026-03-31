@@ -10,9 +10,13 @@ This repository hosts the User Documentation for Mautic on the [Read the Docs pl
 
 ## Contributing 🤝
 
-All kinds of contributions are encouraged. For complete information on how to contribute to the Mautic user documentation repository, please read the [Contributing Guidelines](.github/CONTRIBUTING.md).
+<!-- vale off -->
 
-All contributors are required to abide by our [Code of Conduct](https://mautic.org/code-of-conduct/).
+Mautic encourages all kinds of contributions. For complete information on how to contribute to the Mautic user documentation repository, please read the [Contributing Guidelines](.github/CONTRIBUTING.md).
+
+<!-- vale on -->
+
+All contributors must abide by the [Code of Conduct](https://mautic.org/code-of-conduct/).
 
 ## Contributors ✨
 
@@ -63,4 +67,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
