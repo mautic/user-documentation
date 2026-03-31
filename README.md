@@ -2,7 +2,7 @@
 
 # Mautic user documentation
 
-This repository hosts the User Documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. Whenever a PR is merged, changes are deployed immediately to [https://docs.mautic.org/](https://docs.mautic.org/).
+This repository hosts the User Documentation for Mautic on the [Read the Docs platform][ReadTheDocs]. When a maintainer merges a PR, Read the Docs immediately deploys the changes to [https://docs.mautic.org/](https://docs.mautic.org/).
 
 [ReadTheDocs]: <https://readthedocs.org>
 [RTD badge URL]: <https://readthedocs.org/projects/mautic-documentation/badge/?version=latest>
