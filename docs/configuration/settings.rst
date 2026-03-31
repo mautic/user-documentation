@@ -70,8 +70,26 @@ Miscellaneous settings
   :width: 600
   :alt: Screenshot showing Miscellaneous Settings Configuration in Mautic
 
-* **Trusted hosts** - To explicitly allow the hosts that can send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?example.com$``. If left empty, Mautic will respond to all hosts.
-  
+* **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. This field requires regular expression patterns, not plain hostnames. Separate multiple patterns with a comma.
+
+  For example, to allow requests from ``example.com``:
+
+  - **Correct:** ``^example\.com$`` - anchored pattern that matches only example.com
+  - **Incorrect:** ``example.com`` - plain hostname won't work
+
+  Additional examples:
+
+  - ``^.*\.example\.com$`` - matches any subdomain of example.com
+  - ``^(www\.)?example\.com$`` - matches example.com with or without www
+
+  Mautic validates your input and displays an error if the pattern isn't a valid regular expression. Invalid patterns won't save.
+
+  If left empty, Mautic responds to all hosts.
+
+.. caution::
+
+    Enter values carefully. An invalid pattern could prevent access to your Mautic instance. If you get locked out, you'll need to manually edit the database or configuration file to fix the setting.
+
 * **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
 * **IP lookup service** - By default, Mautic uses :xref:`MaxMind's` database to identify the city of a website visitor, based on the location of the Internet Service Provider - ISP - for their IP address.
