@@ -9,7 +9,7 @@ Themes control the look and feel of the Mautic Landing Pages, Emails, Forms and 
 
 A basic Mautic installation comes pre-packaged with a number of Themes for you to use 'as-is' or adapt to suit specific projects. 
 
-It's also possible to :xref:`create a Theme` for Mautic from scratch.
+It's also possible to create :xref:`Themes` for Mautic from scratch.
 
 Access the Theme Manager via the Admin Menu. Click the cog icon in the top right corner to open it and select the Theme menu item.
 
@@ -38,7 +38,7 @@ Installing a Theme
 
 .. vale on
 
-It's necessary to install a new or edited Theme as a zip package. The zip package must have the same structure as the preinstalled Themes and the config.json file must be present in the root folder of the zip package. The :xref:`themes developer documentation` contains more on that.
+It's necessary to install a new or edited Theme as a zip package. The zip package must have the same structure as the preinstalled Themes and the ``config.json`` file must be present in the root folder of the zip package. The :xref:`Themes directory structure` section in the Developer Documentation contains more information about that.
 
 .. note:: 
 
@@ -121,7 +121,7 @@ To download a Theme:
 
 5. Select the drop-down before the Theme, and click **Download**.
 
-Upon downloading a Theme on your local machine, you can modify it following the structure outlined in the :xref:`create a Theme` section of the Developer Documentation before reinstalling it for use in your instance.
+Upon downloading a Theme on your local machine, you can modify it following the structure outlined in the :xref:`Themes` section of the Developer Documentation before reinstalling it for use in your instance.
 
 .. vale off
 
