@@ -361,6 +361,31 @@ Once you have selected the field you can then choose the type of operation to pe
 
 .. vale off
 
+Operators for select fields
+===========================
+
+.. vale on
+
+Single-select fields like Country, Timezone, Region, and Locale have these operators:
+
+* **Equals** - The Contact's value exactly matches the selected option.
+* **Not equal** - The Contact's value doesn't match the selected option.
+* **Empty** - The Contact has no value for this field.
+* **Not empty** - The Contact has a value for this field.
+
+Multiselect fields and behavior filters like 'Submitted a specific form' have additional operators for matching multiple values:
+
+* **Including any of** - The Contact's value matches at least one selected option.
+* **Excluding any of** - The Contact's value doesn't match any selected option.
+* **Including all of** - The Contact's values include all selected options. Only available for fields where a Contact can have multiple values.
+* **Excluding all of** - The Contact's values don't include all selected options. Only available for fields where a Contact can have multiple values.
+
+.. note::
+
+   The 'including all of' and 'excluding all of' operators don't appear for single-select fields because a Contact can only have one value, making these operators impossible to use.
+
+.. vale off
+
 Matching part of a string
 =========================
 
