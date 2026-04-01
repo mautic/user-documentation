@@ -102,7 +102,13 @@ Using remote Assets
 
 .. vale on
 
-Instead of uploading a file from your computer, you can either provide a link to a file on a cloud storage provider or browse your integrated cloud storage provider - for example an Amazon S3 bucket - by selecting the Remote tab, rather than Local. 
+Instead of uploading a file from your computer, you can either provide a link to a file on a cloud storage provider or browse your integrated cloud storage provider - for example, an Amazon S3 bucket - by selecting the Remote tab, rather than Local.
+
+**Optional remote URL validation:**
+
+You can enable optional remote URL validation by adding ``'validate_remote_domains' => true`` to the ``config/local.php`` file.
+
+When you enable this validation, Mautic only allows domains listed in **Configuration > System Settings > Miscellaneous Settings > Allowed remote domains**. The validation also considers the domain of your Mautic instance valid.
 
 .. vale off
 

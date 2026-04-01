@@ -330,7 +330,9 @@ Mail send settings
     Mailer is owner overrides any other name or Email to send mail from, including the default and individual Emails. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can see this configuration for individual Emails, rather than globally.
     For more information see :doc:`Mailer is owner</channels/emails>`
 
-* **Service to send mail through** - Select the Email service provider you use, and enter your credentials. 
+* **Service to send mail through** - Select the Email service provider you use, and enter your credentials.
+
+For information on configuring S/MIME Email signing to verify Email authenticity, see :doc:`/configuration/smime_email_signing`.
 
 See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Email subscription preferences.
   
@@ -678,6 +680,8 @@ Mautic tracking settings
 * **Identify visitors by IP** - Select **Yes** to use the IP address to identify Contacts. It's possible to track unidentified visitors with the same IP address as an existing Contact. This may result in undesirable outcomes with large Companies who use the same externally facing IP address.
 
 * **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent filling your logs with hits from bots.
+
+* **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
   
 .. note:: 
 
