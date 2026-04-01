@@ -22,10 +22,7 @@ S/MIME Email signing adds a digital signature to your Emails, which allows recip
 .. note::
     This implementation focuses on **signing** Emails only. It doesn't encrypt the Email body, which means the Email content is still readable to anyone who has access to it. Many Email clients don't support S/MIME encryption, so signing provides verification without compatibility issues.
 
-For more detailed information about S/MIME and why to use it, see these articles from SparkPost:
-
-- :xref:`SparkPost S/MIME Overview`
-- :xref:`SparkPost S/MIME Technical Guide`
+For more detailed information about S/MIME and why to use it, see :xref:`S/MIME: secure Email encryption and signature`.
 
 How it works
 ************
@@ -107,7 +104,7 @@ For production use, obtain S/MIME certificates from a trusted Certificate Author
 2. Submitting the CSR to the CA along with identity verification documents
 3. Receiving the signed certificate from the CA
 
-For detailed instructions on obtaining production certificates, see the :xref:`SparkPost S/MIME Technical Guide`.
+To see an example of how this process works in practice, refer to the :xref:`Mozilla guide on obtaining S/MIME certificates` article by Mozilla.
 
 Installing certificates
 ***********************
@@ -286,13 +283,17 @@ Additional resources
 
 For more information about S/MIME:
 
-- :xref:`SparkPost S/MIME Overview`
-- :xref:`SparkPost S/MIME Technical Guide`
+- :xref:`S/MIME: secure Email encryption and signature`
+- :xref:`Mozilla guide on obtaining S/MIME certificates`
 - :xref:`OpenSSL Documentation`
 
 Related documentation
 *********************
 
+.. vale off
+
 - :doc:`/configuration/settings` - General Email settings configuration
-- :doc:`/Channels/Emails` - Emails overview and management
+- :doc:`/channels/emails` - Emails overview and management
 - :doc:`/configuration/cron_jobs` - Setting up Cron jobs for Email sending
+
+.. vale on
