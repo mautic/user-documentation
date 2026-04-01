@@ -22,7 +22,7 @@ S/MIME Email signing adds a digital signature to your Emails, which allows recip
 .. note::
     This implementation focuses on **signing** Emails only. It doesn't encrypt the Email body, which means the Email content is still readable to anyone who has access to it. Many Email clients don't support S/MIME encryption, so signing provides verification without compatibility issues.
 
-For more detailed information about S/MIME and why to use it, see :xref:`S/MIME: secure Email encryption and signature`.
+For more detailed information about S/MIME and why to use it, read this :xref:`S/MIME: secure Email encryption and signature` article by mailbox.
 
 How it works
 ************
