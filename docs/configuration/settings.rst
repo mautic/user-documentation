@@ -156,17 +156,17 @@ Campaign settings
 
 * **Use date range for all views** - When viewing a Campaign, the date range of actions, conditions, decisions, and Contacts displayed in the tabs, Mautic uses this date range by default.
 
-* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<campaign cron jobs>` to summarize existing data.
+* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<Campaign Cron jobs>` to summarize existing data.
 
-* **Campaign Reactivation Behaviour** - Configure how scheduled events with relative delays in the middle of the workflow should behave when the Campaign is reactivated after being deactivated for a while. This setting provides a global default that can be overridden per Campaign. This setting affects how the :ref:`Campaign Cron jobs<campaign cron jobs>` schedule events. See :ref:`Campaign Reactivation Behaviour<campaign reactivate behavior>` for more information.
+* **Campaign Reactivation Behavior** - Configure how Mautic handles scheduled events with relative delays in the middle of the workflow when you reactivate a Campaign after a period of deactivation. This setting provides a global default that you can override for an individual Campaign. This setting affects how the :ref:`Campaign Cron jobs<Campaign Cron jobs>` schedule events. See :ref:`Campaign reactivation behavior` section for more information.
 
   Available options:
 
-  - **Count delay regardless of activation state** - The original trigger date is used. Events execute based on the calendar days from when they were originally scheduled, regardless of whether the Campaign was active or inactive during that period. This is the default behaviour.
-  
-  - **Restart on reactivation** - The delay counter resets when the Campaign is reactivated. Events are rescheduled to execute the full delay period after the last activation date.
-  
-  - **Count delay only while active** - Events only count days when the Campaign is active. If the Campaign is inactive, those days don't count toward the delay, and events are rescheduled accordingly when the Campaign is reactivated.
+  * **Count delay regardless of activation state** - Mautic uses the original trigger date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
+
+  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules Events to execute the full delay period starting from the last activation date. 
+
+  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules Events accordingly when you reactivate the Campaign.
 
 Optimal for Contact event scheduler
 ===================================
@@ -499,7 +499,7 @@ Segment settings
   :width: 600
   :alt: Screenshot showing Segment Settings Configuration in Mautic
 
-* **Show warning if Segment hasn't been rebuilt for X hours** - Every time a :ref:`Cron jobs<segment cron jobs>` runs, Segments are rebuilt. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, after which the warning message appears.
+* **Show warning if Segment hasn't been rebuilt for X hours** - Every time a :ref:`Cron jobs<Segment Cron jobs>` runs, Segments are rebuilt. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, after which the warning message appears.
 
 Company settings
 ****************
@@ -782,7 +782,7 @@ Webhook settings
   :width: 600
   :alt: Screenshot showing Webhook Settings Configuration in Mautic
 
-* **Queue Mode** -  Select how to process Webhook events. The process immediately executes the Webhook event as soon as it arrives. The queue mode improves performance by only adding the event to the queue and requires processing by a :ref:`Cron command<webhooks cron job>`.
+* **Queue Mode** -  Select how to process Webhook events. The process immediately executes the Webhook event as soon as it arrives. The queue mode improves performance by only adding the event to the queue and requires processing by a :ref:`Cron command<Webhooks Cron job>`.
 
 * **Order of the queued events** - Process the events in chronological or reverse chronological order if a Webhook has a queue of multiple events.
   
