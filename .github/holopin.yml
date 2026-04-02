@@ -1,0 +1,11 @@
+organization: mautic
+holobytes:
+  - evolvingStickerId: cmg9s1kkz0046l204bc2k5k7e
+    icon: avocado
+    alias: hacktoberfest-2025
+
+# First time contributor badge
+stickers:
+  - id: cmc38nn5r166207icbleca9jp
+    name: First Contribution
+    alias: first-contribution
