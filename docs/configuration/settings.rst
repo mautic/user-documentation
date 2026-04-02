@@ -59,6 +59,10 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 * **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website.
 
+* **Trusted hosts** - To explicitly allow the hosts that can send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?example.com$``. If left empty, Mautic will respond to all hosts.
+  
+* **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
+
 .. note:: 
 
   In the Valid Domains field, don't include a slash at the end. For example, use ``https://www.example.com`` instead of ``https://www.example.com/``.
@@ -69,10 +73,6 @@ Miscellaneous settings
 .. image:: images/miscellaneous-settings.png
   :width: 600
   :alt: Screenshot showing Miscellaneous Settings Configuration in Mautic
-
-* **Trusted hosts** - To explicitly allow the hosts that can send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?example.com$``. If left empty, Mautic will respond to all hosts.
-  
-* **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
 * **IP lookup service** - By default, Mautic uses :xref:`MaxMind's` database to identify the city of a website visitor, based on the location of the Internet Service Provider - ISP - for their IP address.
 
@@ -441,6 +441,20 @@ Form settings
 
 Contact settings
 ****************
+
+.. vale off
+
+Multiple Company management
+===========================
+
+.. vale on
+
+.. image:: images/contact_settings_multiple_companies_enable.png
+   :width: 600
+   :alt: Contact Settings section with the 'Enable Multiple Companies' toggle switch set to on.
+
+This setting, when enabled, allows a Contact to link with more than one Company. It's beneficial for businesses that interact with clients across multiple Companies.
+When you turn this off, a Contact can only link to one Company. This is ideal for businesses with simpler structures where each Contact only needs a single Company association.
 
 Contact merge settings
 ======================
