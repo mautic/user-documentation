@@ -449,17 +449,15 @@ Multiple Company management
 
 .. vale on
 
- .. image:: images/multiple-companies-enabled.png
-      :width: 600
-      :alt: Screenshot showing the Multiple Companies feature enabled
+.. image:: images/contact_settings_multiple_companies_enable.png
+   :width: 600
+   :alt: Contact Settings section with the 'Enable Multiple Companies' toggle switch set to on.
 
 This setting, when enabled, allows a Contact to link with more than one Company. It's beneficial for businesses that interact with clients across multiple Companies.
 When you turn this off, a Contact can only link to one Company. This is ideal for businesses with simpler structures where each Contact only needs a single Company association.
 
  
-    .. image:: images/multiple-companies-disabled.png
-      :width: 600
-      :alt: Screenshot showing the Multiple Companies feature turned off
+
 
 
 Contact merge settings
