@@ -481,7 +481,7 @@ Import settings
   :width: 600
   :alt: Screenshot showing Import Settings Configuration in Mautic
 
-* **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV automatically sets to import in the background which requires a :ref:`Cron job<import contacts cron job>` to trigger. Set to 0 if you want to always import files in the background recommended for performance optimization.
+* **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV automatically sets to import in the background which requires a :ref:`Cron job<import Contacts Cron job>` to trigger. Set to 0 if you want to always import files in the background recommended for performance optimization.
 
 Export settings
 ===============
