@@ -122,6 +122,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "simachines",
+      "name": "ErnestB",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70729135?v=4",
+      "profile": "https://github.com/simachines",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
