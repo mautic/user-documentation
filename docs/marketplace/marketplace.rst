@@ -9,7 +9,7 @@ Mautic Marketplace
 
     The current Marketplace version doesn't verify Mautic version compatibility of Plugins yet, as this requires a change in each existing Plugin.
 
-    Please don't blindly manually install Plugins you see in the Mautic Marketplace, as they may not work with your version of Mautic. Always verify if they support your Mautic version before installing. Developers can refer to the :xref:`Developer Documentation Marketplace` for how to make your Plugin compatible with the Mautic Marketplace.
+    Please don't blindly manually install Plugins you see in the Mautic Marketplace, as they may not work with your version of Mautic. Always verify if they support your Mautic version before installing. Developers can refer to the :xref:`Marketplace` section in the Developer Documentation for how to make your Plugin compatible with the Mautic Marketplace.
 
 .. vale off
 
@@ -191,4 +191,4 @@ How to get your Plugin listed on the Mautic Marketplace
 
 .. vale on
 
-Please review the resources on the :xref:`Developer Documentation Marketplace` for more information.
+Please review the resources on the :xref:`Marketplace` section in the Developer Documentation for more information.

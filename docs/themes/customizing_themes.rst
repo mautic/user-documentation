@@ -14,7 +14,7 @@ Customizing an existing Theme
 
 .. vale on
 
-To customize the downloaded Theme, review the :xref:`themes developer documentation` for detailed guidance.
+To customize the downloaded Theme, review the :xref:`Themes directory structure` section in the Developer Documentation for detailed guidance.
 
 
 
