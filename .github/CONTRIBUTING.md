@@ -62,8 +62,8 @@ Please refer to the "[Contributing to Mautic’s documentation](https://contribu
 
 ## Credit
 
-These contributing guidelines are adapted from [OpenSource-Communities/intro](https://github.com/OpenSource-Communities/intro/blob/main/contributing/CONTRIBUTING.md) repository.
+Mautic adapted these contributing guidelines from the [OpenSource-Communities/intro](https://github.com/OpenSource-Communities/intro/blob/main/contributing/CONTRIBUTING.md) repository.
 
 ---
 
-Thank you for contributing to the improvement of the Mautic User Documentation.
+Thank you for contributing to the improvement of the Mautic user documentation.
