@@ -321,6 +321,8 @@ Mail send settings
   
 * **Custom return path (bounce) address** - Set a custom return path/bounce Email address for Emails sent from the system. Note that some mail transports, such as GMail, won't support this.
 
+* **Email address length limit** - This setting determines the maximum allowed length for Email addresses, including the display name. The default value is 320 characters. If an Email address - including the display name - exceeds this limit, Mautic uses only the Email address without the display name when sending Emails. This helps prevent errors with Email servers that have strict length restrictions. You can adjust this value if you need to accommodate longer Email addresses or if you want to set a more restrictive limit.
+
 * **Mailer is owner** - If Contacts in Mautic have owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they're listed as the owner for.
 
 .. note:: 
@@ -439,6 +441,20 @@ Form settings
 
 Contact settings
 ****************
+
+.. vale off
+
+Multiple Company management
+===========================
+
+.. vale on
+
+.. image:: images/contact_settings_multiple_companies_enable.png
+   :width: 600
+   :alt: Contact Settings section with the 'Enable Multiple Companies' toggle switch set to on.
+
+This setting, when enabled, allows a Contact to link with more than one Company. It's beneficial for businesses that interact with clients across multiple Companies.
+When you turn this off, a Contact can only link to one Company. This is ideal for businesses with simpler structures where each Contact only needs a single Company association.
 
 Contact merge settings
 ======================
