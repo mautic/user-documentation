@@ -121,3 +121,18 @@ In these cases, Mautic displays the widget on the dashboard, but with a message 
 
 If a Mautic User has permission to see only their own data from a bundle, they see only their own data in the Dashboard widgets. For example only Contacts which they own, Landing Page hits of the Landing Pages they created and so on.
 
+Widget error handling
+*********************
+
+If a Widget encounters an error while loading, Mautic displays an error message on that Widget while the rest of the Dashboard continues to work normally. This prevents a single failing Widget from blocking access to the entire Dashboard.
+
+When you see an error on a Widget:
+
+- The error may be temporary and resolve on its own
+- Other Widgets on your Dashboard aren't affected
+- Administrators can check the server logs for technical details
+
+.. note::
+
+  If a Widget consistently shows an error, contact your system administrator. The server logs contain details about what caused the Widget to fail.
+
