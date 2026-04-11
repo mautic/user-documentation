@@ -137,6 +137,12 @@ See :doc:`Companies</companies/companies_overview>` for more information.
    * - Zip Code (Company)
      - ``{contactfield=companyzipcode}``
 
+.. tip::
+  
+   **Custom Company fields**
+
+   The syntax for custom Company fields differs from core Company field syntax. You must **not** add the word 'Company' in the variable and instead treat it as a ``contactfield``.
+
 Mautic Component tokens
 ***********************
 
@@ -178,6 +184,10 @@ See :doc:`Manage Emails</channels/emails>` for more information.
      - ``{tracking_pixel}``
    * - Unsubscribe Text
      - ``{unsubscribe_text}``
+   * - Unsubscribe URL
+     - ``{unsubscribe_url}``
+   * - Resubscribe URL
+     - ``{resubscribe_url}``
    * - Web View Text
      - ``{webview_text}``
    * - Web View URL
@@ -397,6 +407,8 @@ Alphabetical list
      - ``{contactfield=twitter}``
    * - Preferred Channel (Preference Center)
      - ``{preferredchannel}``
+   * - Resubscribe URL
+     - ``{resubscribe_url}``
    * - Share Buttons
      - ``{sharebuttons}``
    * - Success Message
