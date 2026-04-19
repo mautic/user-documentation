@@ -393,23 +393,25 @@ Operators for select fields
 
 .. vale on
 
-Single-select fields like Country, Timezone, Region, and Locale have these operators:
+Single-select fields like Country, Timezone, Region, Locale, and custom select fields have these operators:
 
 * **Equals** - The Contact's value exactly matches the selected option.
 * **Not equal** - The Contact's value doesn't match the selected option.
 * **Empty** - The Contact has no value for this field.
 * **Not empty** - The Contact has a value for this field.
-
-Multiselect fields and behavior filters like 'Submitted a specific form' have additional operators for matching multiple values:
-
+* **Regexp** - The Contact's value matches the regular expression pattern.
+* **Not regexp** - The Contact's value doesn't match the regular expression pattern.
 * **Including any of** - The Contact's value matches at least one selected option.
 * **Excluding any of** - The Contact's value doesn't match any selected option.
-* **Including all of** - The Contact's values include all selected options. Only available for fields where a Contact can have multiple values.
-* **Excluding all of** - The Contact's values don't include all selected options. Only available for fields where a Contact can have multiple values.
+
+Multiselect fields have two additional operators for matching multiple values:
+
+* **Including all of** - The Contact's values include all selected options.
+* **Excluding all of** - The Contact's values don't include all selected options.
 
 .. note::
 
-   The 'including all of' and 'excluding all of' operators don't appear for single-select fields because a Contact can only have one value, making these operators impossible to use.
+   The 'including all of' and 'excluding all of' operators only appear for multiselect fields because they require the Contact to have multiple values. Single-select fields like Country, Timezone, Region, and Locale can only have one value, making these operators logically impossible.
 
 .. vale off
 
