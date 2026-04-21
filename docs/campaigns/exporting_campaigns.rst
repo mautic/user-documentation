@@ -1,7 +1,7 @@
 Exporting Campaigns
 ###################
 
-Before importing or exporting data, back up your database as a safety precaution in case you need to restore it. Speak to the administrator of your domain to do this, as it requires specific technical knowledge.
+Before importing or exporting data, back up your database as a safety precaution in case you need to restore it. Speak to the administrator of your Mautic instance to do this, as it requires specific technical knowledge.
 
 .. important::
 
@@ -65,10 +65,10 @@ Use the following commands to save the exported file:
 
 **Command parameters**
 
-* ``entity``: defines the type of entity to export, in this case, ``campaign``.
-* ``id``: defines the ID of the Campaign to export. When you view or edit the Campaign, look at the URL to find the ID. For example, ``/s/campaigns/view/123``, where ``123`` is the ID.
-* ``zip-file``: creates a ZIP file of the Campaign and its dependencies.
-* ``path``: specifies the directory to save the exported file.
+* ``--entity``: defines the type of entity to export, in this case, ``campaign``.
+* ``--id``: defines the ID of the Campaign to export. When you view or edit the Campaign, look at the URL to find the ID. For example, ``/s/campaigns/view/123``, where ``123`` is the ID.
+* ``--zip-file``: creates a ZIP file of the Campaign and its dependencies.
+* ``--path``: specifies the directory to save the exported file.
 
 **2. In a JSON file**
 

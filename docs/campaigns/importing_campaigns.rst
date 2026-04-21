@@ -39,10 +39,7 @@ You can import a Campaign in three ways.
 
    .. tip::
 
-      \* Use a ZIP file created from the Mautic export function - **recommended**
-
-#. Ensures inclusion of Campaign data, external Assets, and Dynamic Content.
-
+      \* Use a ZIP file created from the Mautic export function - **recommended**. This ensures inclusion of Campaign data, external Assets, and Dynamic Content.
 #. Select **Actions** option from the dropdown menu for the **Campaign** and **Segment** entities. Choose either **Update entity** or **Create new entity**.
 
 #. Click the **Proceed** button.
