@@ -59,11 +59,17 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 * **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website.
 
-* **Trusted hosts** - To explicitly allow the hosts that can send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?example.com$``. If left empty, Mautic will respond to all hosts.
-  
+* **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. Enter the domain name where your Mautic is installed, such as ``mautic.yourdomain.com``. Separate multiple hosts with a comma. You can also use regular expressions for advanced matching, which Mautic encloses with ``/`` delimiters. For example, ``.*\.?trusted.com$`` becomes ``/.*\.?trusted.com$/``. If left empty, Mautic responds to all hosts.
+
+  Mautic validates your input when you save. If a value isn't a valid domain name or regex pattern, you'll see an error message.
+
+  .. caution::
+
+      Setting this incorrectly can prevent access to your Mautic instance. If you get locked out, you'll need to manually edit the database or configuration file to fix the setting.
+
 * **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
-.. note:: 
+.. note::
 
   In the Valid Domains field, don't include a slash at the end. For example, use ``https://www.example.com`` instead of ``https://www.example.com/``.
 
@@ -73,28 +79,6 @@ Miscellaneous settings
 .. image:: images/miscellaneous-settings.png
   :width: 600
   :alt: Screenshot showing Miscellaneous Settings Configuration in Mautic
-
-* **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. This field requires regular expression patterns, not plain hostnames. Separate multiple patterns with a comma.
-
-  For example, to allow requests from ``example.com``:
-
-  - **Correct:** ``^example\.com$`` - anchored pattern that matches only example.com
-  - **Incorrect:** ``example.com`` - plain hostname won't work
-
-  Additional examples:
-
-  - ``^.*\.example\.com$`` - matches any subdomain of example.com
-  - ``^(www\.)?example\.com$`` - matches example.com with or without www
-
-  Mautic validates your input and displays an error if the pattern isn't a valid regular expression. Invalid patterns won't save.
-
-  If left empty, Mautic responds to all hosts.
-
-.. caution::
-
-    Enter values carefully. An invalid pattern could prevent access to your Mautic instance. If you get locked out, you'll need to manually edit the database or configuration file to fix the setting.
-
-* **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
 * **IP lookup service** - By default, Mautic uses :xref:`MaxMind's` database to identify the city of a website visitor, based on the location of the Internet Service Provider - ISP - for their IP address.
 
