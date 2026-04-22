@@ -105,7 +105,6 @@ POST
 post
 PUT
 Rackspace
-rebase
 Remarketing
 REST
 Salesforce
