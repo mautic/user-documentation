@@ -61,11 +61,11 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 * **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. Enter the domain name where your Mautic is installed, such as ``mautic.yourdomain.com``. Separate multiple hosts with a comma. You can also use regular expressions for advanced matching, which Mautic encloses with ``/`` delimiters. For example, ``.*\.?trusted.com$`` becomes ``/.*\.?trusted.com$/``. If left empty, Mautic responds to all hosts.
 
-  Mautic validates your input when you save. If a value isn't a valid domain name or regex pattern, you'll see an error message.
+  Mautic validates your input during the save process. Invalid domain names or regex patterns trigger an error message.
 
   .. caution::
 
-      Setting this incorrectly can prevent access to your Mautic instance. If you get locked out, you'll need to manually edit the database or configuration file to fix the setting.
+      Incorrect settings can prevent access to your Mautic instance. Getting locked out requires manually editing the database or configuration file to fix the setting.
 
 * **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
