@@ -477,7 +477,7 @@ Example - Consider that today is ``2022-03-05``:
 * ``Date identified greater or equal -1`` year returns all Contacts identified 2021-03-05 and after.
 * ``Date identified greater than -1`` year returns all Contacts identified after 2021-03-05.
 
-Beside this you can specify your date with text. These formulas are **translatable**, so make sure you use them in correct format.
+Beside this you can specify your date with text. These formulas are **translatable** - Mautic displays them in your current language setting.
 
 * ``birthday`` / ``anniversary``
 * ``birthday -7 days`` / ``anniversary -7 days``
@@ -487,6 +487,10 @@ Beside this you can specify your date with text. These formulas are **translatab
 * ``this year`` / ``last year`` / ``next year``
 * ``first day of previous month`` / ``first day of January 2022``
 * ``last day of previous month`` / ``last day of January 2022``
+
+.. tip::
+
+   Relative date values like ``today``, ``tomorrow``, and ``this week`` work correctly regardless of your Mautic language setting. Switching languages doesn't affect how Segments evaluate these filters.
 
 Example (Consider that today is ``2022-03-05``):
 
