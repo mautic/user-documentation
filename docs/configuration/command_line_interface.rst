@@ -91,7 +91,10 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - ``mautic:campaigns:update``
    * - ``mautic:campaigns:trigger``
      - Trigger timed events for active Campaigns.
-     - 
+     -
+   * - ``mautic:campaigns:summarize``
+     - Build summary statistics for Campaign events. Supports ``--campaign-id`` to process a single Campaign.
+     -
    * - ``mautic:campaigns:validate``
      - Validate if a Contact has been inactive for a decision and execute events if so.
      - 
