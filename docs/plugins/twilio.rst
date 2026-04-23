@@ -67,6 +67,28 @@ In order to configure the text messages correctly, follow these steps:
 
 .. vale off
 
+Enabling MMS (Multimedia Messaging)
+===================================
+
+.. vale on
+
+To send MMS messages with images attached, enable MMS in your Twilio Messaging Service:
+
+#. In Twilio Console, go to **Messaging** > **Services**.
+
+#. Select your Messaging Service.
+
+#. In the **Settings** section, locate the **MMS** option.
+
+#. Toggle **MMS** to **On**.
+
+.. note::
+    MMS through Twilio is available for phone numbers in the United States and Canada only. When sending to Contacts outside these regions, Mautic sends the image as a URL link instead.
+
+For more information on creating MMS messages in Mautic, see :ref:`channels/sms:Sending MMS (Multimedia Messages)`.
+
+.. vale off
+
 Alphanumeric Sender ID
 ======================
 

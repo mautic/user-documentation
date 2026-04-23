@@ -114,6 +114,52 @@ The following fields are available:
 
 **Unpublish at (date/time)** - This allows you to define the date and time at which this Text Message ceases to be available for sending to Contacts.
 
+.. vale off
+
+Sending MMS (Multimedia Messages)
+=================================
+
+.. vale on
+
+Mautic supports sending MMS, which allows you to attach images to your Text Messages. MMS messages appear in the Text Messages list with an image icon indicator, and the Campaign Builder dropdown shows an ``[MMS]`` prefix for messages with media attached.
+
+.. note::
+    MMS is currently available for Contacts with phone numbers in the United States and Canada only. When sending to Contacts outside these regions, the image is sent as a URL link instead.
+
+.. vale off
+
+Enabling MMS for a Text Message
+-------------------------------
+
+.. vale on
+
+To send a Text Message with media:
+
+1. Create or edit a Text Message.
+
+2. Toggle the **Is MMS** option to enable media attachments.
+
+3. Add media using one of the following methods:
+
+   - Click the **Upload Media** button to select an image from your Mautic Asset Manager
+   - Enter an external image URL in the text field and press Enter or click the arrow button to add it
+
+4. To remove an attached image, click the **X** overlay that appears when you select the image thumbnail.
+
+.. vale off
+
+MMS media requirements
+----------------------
+
+.. vale on
+
+- **Supported formats**: ``.gif``, ``.png``, ``.jpg``, and ``.jpeg``
+- **Maximum images**: 10 images per MMS
+- **Total size limit**: 5 MB for all attached media combined
+
+.. note::
+    Mautic doesn't validate external URLs. Ensure your external images use a supported format and the total size is under 5 MB.
+
 Creating Text Messages from Campaign Builder
 ============================================
 
