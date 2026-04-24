@@ -355,7 +355,7 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
-* **Do Not Contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+* **Do Not Contact more than <number> each <period>** - This limits the number of Emails a Contact receives in a certain period of time day, week, month. Emails with **Send to unsubscribed contacts** enabled don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
 
 .. image:: images/default-frequency-rule.png
   :width: 600
@@ -406,9 +406,11 @@ Unsubscribe settings
   :width: 600
   :alt: Screenshot showing Unsubscribe Settings Configuration in Mautic
 
-* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link. 
+* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link.
 
   For example - Edit between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the URL as it's tokenized. If you add ``{unsubscribe_url}`` as a token in the Email, you won't see this text.
+
+* **Disable unsubscribe link in header** - Select **Yes** to prevent Mautic from adding unsubscribe headers to Emails. When set to **No** (the default), Mautic automatically includes RFC 8058-compliant ``List-Unsubscribe`` and ``List-Unsubscribe-Post`` headers in Emails where **Send to unsubscribed contacts** is disabled. These headers enable one-click unsubscribe functionality in Email clients that support this feature, such as Gmail and Apple Mail.
 
 * **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. Don't edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
 

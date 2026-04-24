@@ -14,3 +14,18 @@ How to set frequency rules
 
 
 * Individually, from a Contact's detail page under the dropdown menu on the upper right-hand side, you can select the Channels where you want the rules to apply. Setting the rule here overrides the general settings.
+
+.. vale off
+
+Emails and frequency rules
+**************************
+
+.. vale on
+
+Frequency rules determine whether an Email counts towards the Contact's communication limits. This behavior depends on the **Send to unsubscribed contacts** setting configured in the Email's Advanced tab.
+
+* When **Send to unsubscribed contacts** is set to **No**, the Email counts towards the Contact's frequency rule limits. If a Contact has reached their limit, Mautic postpones the Email until the limit resets.
+
+* When **Send to unsubscribed contacts** is set to **Yes**, the Email doesn't count towards frequency rule limits. This ensures that important transactional communications are delivered regardless of how many other Emails the Contact has received.
+
+For more information about the **Send to unsubscribed contacts** setting, see :doc:`/channels/emails`.
