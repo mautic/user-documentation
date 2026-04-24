@@ -89,10 +89,10 @@ Email report columns
 
 When using 'Emails' as the data source, you can add the following columns to measure Email engagement:
 
-* **Read count** - the number of Contacts who opened the Email.
-* **Unsubscribed** - the number of Contacts who unsubscribed after receiving the Email.
-* **Bounced** - the number of Emails that bounced.
-* **Unsubscribe-to-Open Ratio** - the percentage of unsubscribed Contacts relative to those who opened the Email. This helps you understand how Email content affects unsubscribe rates among engaged recipients.
+* **Read count:** the number of Contacts who opened the Email.
+* **Unsubscribed:** the number of Contacts who unsubscribed after receiving the Email.
+* **Bounced:** the number of Emails that bounced.
+* **Unsubscribe-to-Open Ratio:** the percentage of unsubscribed Contacts relative to those who opened the Email. This helps you understand how Email content affects unsubscribe rates among engaged recipients.
 
 .. tip::
    Use the Unsubscribe-to-Open Ratio to compare the unsubscribe impact of different Emails. A high ratio may indicate that the Email content didn't meet recipient expectations, while a low ratio suggests it resonated with those who read it.
