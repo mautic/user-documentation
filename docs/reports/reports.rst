@@ -84,6 +84,19 @@ As demonstrated, Mautic displays the data sources in the format: ``<Parent data 
 
 The parent data source provides a high-level summary of the data while the child data source provides a more granular view of Contact behavior that includes your Custom Fields and values.
 
+* **Description - optional** - Add detailed information about the Report, helping you and other Users better understand what the Report is for. You may want to include more information about filters, people, or departments.
+
+* **Published** - Select **Yes** to ensure that the Report is active, ready to send when scheduled in the Report options.
+
+* **Visible for all logged-in Users** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report.
+
+* **Owner** - Select the owner of the Report to determine who can see the Report if the 'Visible for all logged-in Users' setting is No.
+
+* **Dynamic filters settings**
+
+  - Opened by default - If you want to ensure that the date filters and filter options for any other Report filters are visible on a Report detail page without needing to open the filters drop-down, select Yes. For example, for an Emails Report, you might want to view dynamic filters for subject or sent date.
+  - Hide date range - To hide the date range filter so that Users can't change the dates that the Report displays data for, select to **Yes**.
+
 Email report columns
 --------------------
 
@@ -97,19 +110,6 @@ When using 'Emails' as the data source, you can add the following columns to mea
 .. tip::
 
    Use the Unsubscribe-to-Open Ratio to compare the unsubscribe impact of different Emails. A high ratio may indicate that the Email content didn't meet recipient expectations, while a low ratio suggests it resonated with those who read it.
-
-* **Description - optional** - Add detailed information about the Report, helping you and other Users better understand what the Report is for. You may want to include more information about filters, people, or departments.
-  
-* **Published** - Select **Yes** to ensure that the Report is active, ready to send when scheduled in the Report options.
-
-* **Visible for all logged-in Users** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report.
-
-* **Owner** - Select the owner of the Report to determine who can see the Report if the 'Visible for all logged-in Users' setting is No.
-
-* **Dynamic filters settings**
-
-  - Opened by default - If you want to ensure that the date filters and filter options for any other Report filters are visible on a Report detail page without needing to open the filters drop-down, select Yes. For example, for an Emails Report, you might want to view dynamic filters for subject or sent date.
-  - Hide date range - To hide the date range filter so that Users can't change the dates that the Report displays data for, select to **Yes**.
 
 
 Data
