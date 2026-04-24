@@ -35,7 +35,8 @@ Deleting a Tag
 #. Confirm the deletion.
 
 .. note::
-    Deleting a Tag doesn't delete the Contacts associated with it. The Tag is simply removed from those Contacts.
+
+   Deleting a Tag doesn't delete the Contacts associated with it. The Tag is simply removed from those Contacts.
 
 Searching Tags
 **************
