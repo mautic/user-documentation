@@ -509,6 +509,8 @@ Updating Contact fields
 
 You can also pass information specific to your Contact by setting Mautic Contact ``field(s)`` to be publicly editable. Note that values appended to the tracking pixel should be ``url`` encoded - %20 for spaces, %40 for @, etc.
 
+.. _tracking pixel query Tags:
+
 Tags
 ~~~~
 

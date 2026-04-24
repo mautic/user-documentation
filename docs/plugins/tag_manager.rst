@@ -14,7 +14,7 @@ Accessing the Tag Manager
 
 .. vale on
 
-Go to **Contacts** > **Manage Tags** to open the Tag Manager list page. This page shows all existing Tags with their names, descriptions, and Contact counts.
+Go to **Contacts > Manage Tags** to open the Tag Manager list page. This page shows all existing Tags with their names, descriptions, and Contact counts.
 
 .. vale off
 
@@ -63,7 +63,7 @@ Searching Tags
 
 Use the search box at the top of the Tag Manager list to find specific Tags. Mautic searches both the Tag name and description. This helps you find Tags even if you only remember part of the description.
 
-For example, say you have a Tag named 'VIP' with the description 'High-value customers who purchased premium plans'. You can find it by searching for 'VIP', 'premium', or 'high-value'.
+For example, you have a Tag named 'VIP' with the description "High-value customers who purchased premium plans." You can find it by searching for 'VIP', 'premium', or 'high-value'.
 
 .. vale off
 
@@ -74,10 +74,10 @@ Assigning Tags to Contacts
 
 You can assign Tags to Contacts in several ways:
 
-* **Contact detail page** - Open a Contact, go to the 'Tags' tab, and add or remove Tags directly.
+* **Contact detail page** - Open a Contact, go to the **Tags** tab, and add or remove Tags directly.
 * **Batch actions** - Select multiple Contacts in the Contact list, then use the bulk action menu to add or remove Tags.
-* **Campaign actions** - Use the 'Modify Contact Tags' action in Campaigns to automatically add or remove Tags based on Contact behavior.
+* **Campaign actions** - Use the **Modify Contact Tags** action in Campaigns to automatically add or remove Tags based on Contact behavior.
 * **Form actions** - Configure a Form to add Tags to Contacts when they submit it.
 * **Tracking pixel** - Pass Tags via the tracking URL using the ``tags`` parameter.
 
-For more information on using Tags with the tracking pixel, see :ref:`contacts/manage_contacts:Tags`.
+For more information on using Tags with the tracking pixel, see :ref:`Tracking pixel query <tracking pixel query Tags>` section.
