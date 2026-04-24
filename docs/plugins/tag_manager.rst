@@ -15,24 +15,24 @@ Go to **Contacts** > **Manage Tags** to open the Tag Manager list page. This pag
 Creating a Tag
 **************
 
-1. Click the **New** button in the top right corner.
-2. Enter a **Name** for the Tag. This is the only required field.
-3. Optionally, add a **Description** to provide more context about when to use this Tag.
-4. Click **Save & Close** to create the Tag.
+#. Click the **New** button in the top right corner.
+#. Enter a **Name** for the Tag. This is the only required field.
+#. Optionally, add a **Description** to provide more context about when to use this Tag.
+#. Click **Save & Close** to create the Tag.
 
 Editing a Tag
 *************
 
-1. Click on the Tag name in the list to open it.
-2. Modify the name or description as needed.
-3. Click **Save & Close** to apply changes.
+#. Click on the Tag name in the list to open it.
+#. Modify the name or description as needed.
+#. Click **Save & Close** to apply changes.
 
 Deleting a Tag
 **************
 
-1. Select the checkbox next to the Tag you want to delete.
-2. Click the dropdown arrow next to the **New** button and select **Delete Selected**.
-3. Confirm the deletion.
+#. Select the checkbox next to the Tag you want to delete.
+#. Click the dropdown arrow next to the **New** button and select **Delete Selected**.
+#. Confirm the deletion.
 
 .. note::
     Deleting a Tag doesn't delete the Contacts associated with it. The Tag is simply removed from those Contacts.
