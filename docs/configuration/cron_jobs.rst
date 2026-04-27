@@ -193,6 +193,10 @@ To use this mode, you can specify the ``--min-id`` and ``--max-id`` options. For
 
     bin/console mautic:webhooks:process --webhook-id=5 --min-id=1000 --max-id=2000
 
+.. note::
+
+    The command returns a success exit code (0) when there are no published Webhooks to process. This behavior allows the command to run in automated workflows without triggering false failure alerts when no Webhooks require processing.
+
 .. _cron jobs:
 
 .. vale off
