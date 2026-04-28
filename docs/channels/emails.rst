@@ -191,6 +191,22 @@ When sending Emails, Mautic determines the **From address** using the following 
 
 This hierarchy ensures Emails always have a valid sender while allowing personalization when Contact data is available.
 
+Inserting tokens
+----------------
+
+When editing Email content in the builder's text editor, use the **Insert token** dropdown to add tokens. The dropdown groups tokens by category, with prefixes that help you find the right field:
+
+- **Contact** - Contact fields such as First Name, Last Name, Email
+- **Company** - Company fields associated with the Contact
+- **Owner** - Fields from the Contact's assigned owner (Mautic User)
+- **Page** - Landing Page links
+- **DWC** - Dynamic Web Content slots
+- **Focus** - Focus Item links
+- **Asset** - Asset download links
+- **Email** - Email links
+
+Each token displays with its category prefix, for example ``Contact: First Name`` or ``Owner: Email``, so you can identify the data source at a glance.
+
 Default value
 -------------
 
