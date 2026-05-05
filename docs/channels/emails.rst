@@ -288,18 +288,21 @@ Setting a signature happens in two places:
 
   Best regards,<br/>|FROM_NAME|.
 
-Mautic replaces the ``|FROM_NAME|`` token with the name which is also defined in the Email Settings tab.
+Mautic replaces the ``|FROM_NAME|`` token with the name defined in the Email Settings tab.
 
-Mautic uses this signature by default if the Contact doesn't have an owner assigned.
+Mautic uses this signature when the Email doesn't have **Use owner as mailer** enabled.
 
-#. Every Mautic User can configure their own signature in their account settings. Mautic uses this signature by default if the Contact has an owner assigned to them.
+#. Each Mautic User can configure their own signature in their account settings. Mautic uses this signature when the Email has **Use owner as mailer** enabled and the Contact has an owner assigned.
+
+.. important::
+  For the ``{signature}`` token to use the owner's signature, the Email must have **Use owner as mailer** enabled in its advanced settings. Enabling the global **Mailer is owner** setting in Configuration alone isn't sufficient.
+
+  If the owner doesn't have a signature configured, the ``{signature}`` token resolves to empty when owner-as-mailer is enabled.
 
 .. note::
-  There are some exceptions where the Contact owner's signature isn't used, which is when a User sends an Email directly from a Contact's profile. In this case, Mautic uses the currently logged in User's signature, with the from name and Email specified in the Email send Form, and not the Contact owner. The values used are pre-filled with those of the currently logged in Mautic User.
-  
-  It doesn't matter if the Contact has another owner assigned or if it doesn't have an owner at all.
+  When a User sends an Email directly from a Contact's profile, Mautic uses the logged-in User's signature with the from name and Email address specified in the Email send Form - not the Contact owner's signature. Mautic pre-fills these values with those of the logged-in User.
 
-  Also, when sending a test Email this is also the case.
+  This applies regardless of whether the Contact has a different owner assigned, or no owner at all. The same behavior applies when sending test Emails.
 
 
 .. vale off
