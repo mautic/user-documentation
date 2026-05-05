@@ -87,6 +87,10 @@ Miscellaneous settings
 * **List of IPs not to track Contacts with** - To turn off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn't recommend adding your office IP address. If you list your internal IP address, Mautic won't track clicks, page hits, etc., from that IP, **including when you are testing** which can cause difficulties.
 
 * **List of known Bots** - Mautic has the feature to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here - one per line.
+
+  .. note::
+
+     In addition to this configurable list, Mautic automatically detects common bots using the Matomo device-detector library. This includes well-known bots like Googlebot, Bingbot, and social media crawlers, which improves the accuracy of your Email open and page visit statistics without any additional setup.
   
 * **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here.
 
