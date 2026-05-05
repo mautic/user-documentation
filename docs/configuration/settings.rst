@@ -540,9 +540,9 @@ Company list settings
   :width: 600
   :alt: Screenshot showing Company List Settings Configuration in Mautic
 
-* **Columns** - Select from the left which fields appear on the Company list when you go to Companies in Mautic and view the list.
+* **Columns** - Select from the left which fields appear on the Company list (when you go to Companies in Mautic and view the list).
 
-To display the fields, select them from the left and move them to the right column, or remove from the right column if you don't want them to appear in the list. You can also reorder columns by dragging them within the right column. The available fields include Company name, Company email, Company website, Score, # contacts, ID, and any custom Company fields you've created.
+To display the fields, select them from the left and move them to the right column, or remove from the right column if you don't want them to appear in the list.
 
 Queue settings
 **************
