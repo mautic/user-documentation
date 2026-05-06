@@ -177,9 +177,13 @@ Cron job to schedule Reports
 
 Mautic requires the following cron command to be able to send scheduled Reports:
 
-``php /path/to/mautic/bin/console mautic:reports:scheduler [--report=ID]``
+``php /path/to/mautic/bin/console mautic:reports:scheduler [--report=ID] [--cleanup-only]``
 
-The ``--report=ID`` argument allows you to specify a Report by ID if required. For more information, see :ref:`Cron jobs<send scheduled reports cron job>`.
+- The ``--report=ID`` argument allows you to specify a Report by ID if required.
+
+- The ``--cleanup-only`` argument runs only the cleanup operation to remove old exported files without sending Reports.
+
+For more information, see :ref:`Send scheduled Reports cron job<send scheduled reports cron job>`.
 
 Report options
 ==============
