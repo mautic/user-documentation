@@ -87,6 +87,54 @@ Since Mautic 5.1, Mautic triggers Campaigns in order from newest to oldest. This
 
     that these messages are only added to the queue when frequency rules apply either system wide or per Contact.
 
+Resume stuck Campaign Contacts cron job
+=======================================
+
+Sometimes Contacts can get stuck in Campaign workflows due to exceptions, server issues, or Events being added after the Contact has already progressed past that point in the Campaign. The ``mautic:campaigns:resume-stuck`` command identifies and processes these stuck Contacts.
+
+.. code-block:: php
+
+    php /path/to/mautic/bin/console mautic:campaigns:resume-stuck <campaign-id>
+
+This command:
+
+- Finds Contacts that are stuck at specific points in a Campaign due to previous exceptions or errors
+- Identifies Contacts where new Events were added after they had already executed parent Events
+- Resumes execution for these Contacts so they can continue through the Campaign workflow
+- Ignores Contacts that were manually removed from the Campaign
+- Skips scheduled Events that haven't been executed yet
+- Doesn't process decision Events as they require Contact interaction
+
+Command parameters:
+~~~~~~~~~~~~~~~~~~~
+
+- ``<campaign-id>`` (required): The ID of the Campaign to process.
+
+- ``--dry-run``: Find stuck Contacts and their next Events without actually executing them. Useful for previewing what the command would do.
+
+- ``--batch-limit=X`` or ``-l X``: Set the batch size of Contacts to process per round. Defaults to 1000.
+
+- ``--min-contact-id=X``: Process only Contacts with ID greater than or equal to this value.
+
+- ``--max-contact-id=X``: Process only Contacts with ID less than or equal to this value.
+
+Example usage:
+
+.. code-block:: php
+
+    # Preview stuck contacts without executing events
+    php /path/to/mautic/bin/console mautic:campaigns:resume-stuck 5 --dry-run
+
+    # Process stuck contacts in campaign 5 with smaller batches
+    php /path/to/mautic/bin/console mautic:campaigns:resume-stuck 5 --batch-limit=100
+
+    # Process a specific range of contacts
+    php /path/to/mautic/bin/console mautic:campaigns:resume-stuck 5 --min-contact-id=1000 --max-contact-id=2000
+
+.. note::
+
+    This command only works with published Campaigns that aren't deleted. It processes a maximum of 5000 records in a single execution to prevent performance issues.
+
 .. vale off
 
 Custom Field cron jobs

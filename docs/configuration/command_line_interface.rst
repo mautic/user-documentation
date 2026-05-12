@@ -89,6 +89,9 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - ``mautic:campaigns:rebuild``
      - Rebuild Campaigns based on Contact Segments.
      - ``mautic:campaigns:update``
+   * - ``mautic:campaigns:resume-stuck``
+     - Resume execution for Contacts stuck in Campaign workflows.
+     -
    * - ``mautic:campaigns:trigger``
      - Trigger timed events for active Campaigns.
      - 
