@@ -190,6 +190,29 @@ The optimal for Contact event scheduler settings allow you to configure the defa
 * **Fetch Interactions From** - Select the time frame for fetching interaction data. This determines how far back to look for interactions.
 * **Interaction Fetch Limit** - Set the maximum number of interactions of each type - for example: Page hits, Email reads, Form submits - to retrieve for timing optimization.
 
+Advanced Campaign performance settings
+======================================
+
+Mautic provides additional performance-related configuration parameters for Campaigns that you must configure by editing the ``config/local.php`` file directly. These settings help you balance UI responsiveness against database load on high-volume instances.
+
+* **campaign_event_cache_ttl** - Controls how long Mautic caches Campaign event statistics - such as execution counts shown in the Campaign builder - before refreshing them from the database. The default is ``600`` seconds (10 minutes). Lower values provide fresher statistics in the UI but increase database queries. Higher values reduce database load but delay when new executions appear in the UI. Set to ``0`` to turn off caching entirely.
+
+  To configure this setting, add or modify the parameter in your ``config/local.php`` file:
+
+  .. code-block:: php
+
+      'campaign_event_cache_ttl' => 600, // seconds
+
+  .. note::
+
+      This setting only takes effect if Doctrine result caching is enabled in your Mautic instance.
+
+* **campaign_contact_count_cache_ttl** - Controls how long Mautic caches Campaign Contact counts before refreshing them from the database. The default is ``43200`` seconds (12 hours). Adjust this value if you need Campaign Contact counts to update more frequently.
+
+  .. code-block:: php
+
+      'campaign_contact_count_cache_ttl' => 43200, // seconds
+
 Email settings
 **************
 
