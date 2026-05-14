@@ -195,7 +195,9 @@ Image
 History
 =======
 
-Event history tracks any engagements between Mautic and a Contact. To find certain event types, search in the **Include events by source** text box. To exclude event types from the history while you're looking at it, use **Exclude events by source**.
+Event history tracks any engagements between Mautic and a Contact. Mautic groups events by day so you can scan activity quickly. Group headers display "Today", "Yesterday", or a formatted date, while individual events show only the time.
+
+To find specific event types, search in the **Include events by source** text box. To exclude event types from the history, use **Exclude events by source**.
 
 **Accessed from IP** - IP addresses which the Contact has opened or clicked Emails, visited your tracked pages, etc. from.
 
