@@ -115,7 +115,6 @@ There are different types of documentation available to help you navigate your w
    channels/social_monitoring
    channels/web_notifications
    channels/push_notifications
-   channels/utm_tags
 
 .. toctree::
    :maxdepth: 2

@@ -5,7 +5,7 @@ UTM tags as Segment filters
 
 .. vale on
 
-Segments can include or exclude Contacts based on UTM values that have been recorded on their profile. All five standard UTM fields are available as filter conditions: ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, and ``utm_term``. This lets you build Segments like "all Contacts who came from the spring sale Email Campaign" or "all Contacts whose source was Google," and use those Segments for targeted sends, Reporting, or Campaign entry Points.
+Segments can include or exclude Contacts based on UTM values that have been recorded on their profile. All five standard UTM fields are available as filter conditions: ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, and ``utm_term``. This lets you build Segments like "all Contacts who came from the spring sale Email Campaign" or "all Contacts whose source was Google," and use those Segments for targeted sends, Reporting, or Campaign entry points.
 
 The UTM data queried here comes from the **Record UTM Tags** Form action and from Page visits, Landing Page and tracked website Pages, where UTM parameters were present in the URL. UTM data from Asset downloads store separately and isn't available in Segment filters. To follow the steps below, Contacts must already have UTM data on their profile and you need permission to create or edit Segments in Mautic.
 
@@ -28,7 +28,7 @@ Create segment filters
 
 #. Save the Segment.
 
-The preceding example applies the operator and value ``newsletter`` to ``utm_source``, which selects all Contacts whose source was recorded as ``newsletter`` at any Point in their history. You could equally filter on ``utm_medium = email`` to target all Email-acquired Contacts, or combine both filters with and logic to narrow the audience to Contacts acquired specifically via the newsletter Channel using Email delivery.
+The preceding example applies the operator and value ``newsletter`` to ``utm_source``, which selects all Contacts whose source was recorded as ``newsletter`` at any point in their history. You could equally filter on ``utm_medium = email`` to target all Email-acquired Contacts, or combine both filters with and logic to narrow the audience to Contacts acquired specifically via the newsletter Channel using Email delivery.
 
 Combining filters this way reflects how UTM parameters are designed to work together. Filtering on a single field, ``utm_campaign`` alone, for instance, can include Contacts from multiple Channels. Adding a second filter on ``utm_medium`` narrows the Segment to Contacts from a specific Channel within that Campaign, which is often the more actionable audience for a targeted send.
 

@@ -28,7 +28,7 @@ Add UTM recording
 
 #. Save the action and then save the Form.
 
-#. Confirm with the website team that Campaign URLs Pointing to Pages with this Form include UTM parameters in the query string, for example:
+#. Confirm with the website team that Campaign URLs pointing to Pages with this Form include UTM parameters in the query string, for example:
 
    .. code-block:: text
 

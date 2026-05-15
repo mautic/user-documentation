@@ -5,7 +5,43 @@ UTM tags overview
 
 .. vale on
 
-UTM (Urchin Tracking Module) parameters are short tags appended to URLs that tell analytics tools where a visitor came from, which Campaign, Channel, source, and so on. has native support for UTM tags across a wide range of its features, but **how UTM data flows through the system isn't uniform**. Different features capture, generate, store, and use UTM data in different ways, and confusing them Contacts to gaps in tracking, empty fields, or misplaced expectations.
+UTM (Urchin Tracking Module) parameters are short tags appended to URLs that tell analytics tools where a visitor came from, which Campaign, Channel, source, and so on. has native support for UTM tags across a wide range of its features, but **how UTM data flows through the system isn't uniform**. Different features capture, generate, store, and use UTM data in different ways, and confusing them leads to gaps in tracking, empty fields, or misplaced expectations.
+
+Understanding UTM parameters
+****************************
+
+The five standard UTM parameters are:
+
+.. list-table::
+   :widths: 20, 80
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+   * - **utm_source**
+     - The referring source of the web activity. Indicates the social network, search engine, newsletter name, or any other specific source driving the traffic. Examples: ``facebook``, ``twitter``, ``blog``, ``newsletter``
+   * - **utm_medium**
+     - The Channel or method of delivery. Examples: ``email``, ``cpc``, ``organic_social``, ``organic``, ``social``
+   * - **utm_campaign**
+     - The specific promotion or marketing initiative title that you want to track. Examples: ``summer_sale``, ``free_trial``, ``spring_sale_2026``
+   * - **utm_content**
+     - Optional, used to distinguish between multiple versions of the same message or content variant within a Campaign. Examples: ``welcome_email_1``, ``banner_version_a``
+   * - **utm_term**
+     - Optional, used to track search keywords or content categories. Auto-populated in some contexts.
+
+You don't need to fill all five parameters. Use one, a few, or all as required for your tracking needs.
+
+Using UTM tags in Mautic
+************************
+
+To use UTM tags with Google Analytics where they appear in your Google Analytics Dashboard, you must install your Google Analytics tracking code on the resource you are linking to. This synchronizes with your Google Analytics Dashboard and records the UTM tags.
+
+If you use a Mautic Landing Page, you must go to Settings > Configuration > Tracking Settings, and add your Google Analytics ID.
+
+.. image:: ../channels/images/utm_tags/add_google_analytics_id.png
+   :alt: Screenshot showing the option to add your Google Analytics ID
+
+If you use a non-Mautic Landing Page, you must manually embed the Google Analytics tracking script on the third-party Page.
 
 Feature groups
 **************
@@ -56,6 +92,9 @@ These features take UTM values you configure inside Mautic and automatically sta
    * - **Push notifications**
      - UTM fields on the notification
      - When a web/mobile push notification send. Tracked URLs inside the notification payload have UTM parameters appended before delivery.
+   * - **Focus Items**
+     - UTM fields on the Focus Item configuration
+     - When a Focus Item displays on a webpage. Tracked links inside the Focus Item content have UTM parameters appended when rendered.
 
 Using UTM data for targeting
 =============================
@@ -95,7 +134,7 @@ Captured UTM data surfaces in several places for visibility and Reporting.
      - Asset download Reports expose all five UTM fields.
 
 REST API
-*********
+=========
 
 Two REST endPoints manage UTM data directly on Contacts:
 
