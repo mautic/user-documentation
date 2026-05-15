@@ -97,8 +97,12 @@ The parent data source provides a high-level summary of the data while the child
   - Opened by default - If you want to ensure that the date filters and filter options for any other Report filters are visible on a Report detail page without needing to open the filters drop-down, select Yes. For example, for an Emails Report, you might want to view dynamic filters for subject or sent date.
   - Hide date range - To hide the date range filter so that Users can't change the dates that the Report displays data for, select to **Yes**.
 
+.. vale off
+
 Email Report columns
 --------------------
+
+.. vale on
 
 When using 'Emails' as the data source, you can add the following columns to measure Email engagement:
 
