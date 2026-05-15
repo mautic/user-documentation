@@ -14,7 +14,11 @@ Accessing the Tag Manager
 
 .. vale on
 
+.. vale off
+
 Go to **Contacts > Manage Tags** to open the Tag Manager list page. This page shows all existing Tags with their names, descriptions, and Contact counts.
+
+.. vale on
 
 .. vale off
 
@@ -74,10 +78,14 @@ Assigning Tags to Contacts
 
 You can assign Tags to Contacts in several ways:
 
+.. vale off
+
 * **Contact detail page** - Open a Contact, go to the **Tags** tab, and add or remove Tags directly.
 * **Batch actions** - Select multiple Contacts in the Contact list, then use the bulk action menu to add or remove Tags.
 * **Campaign actions** - Use the **Modify Contact Tags** action in Campaigns to automatically add or remove Tags based on Contact behavior.
 * **Form actions** - Configure a Form to add Tags to Contacts when they submit it.
 * **Tracking pixel** - Pass Tags via the tracking URL using the ``tags`` parameter.
+
+.. vale on
 
 For more information on using Tags with the tracking pixel, see :ref:`Tracking pixel query <tracking pixel query Tags>` section.
