@@ -80,9 +80,11 @@ Head Components
 
 .. vale on
 
-Mautic processes most of the ``<mj-head>`` components. ``<mj-attributes>`` don't run.
+Mautic processes the ``<mj-head>`` components, including ``<mj-attributes>``.
 
-**Tested elements** include: ``mj-breakpoint``, ``mj-font``, ``mj-html-attributes``, ``mj-style``, ``mj-title``, and ``mj-preview``.
+With ``<mj-attributes>``, you can define default styling for Builder blocks. When you drag blocks into the Email editor, they inherit the Theme's colors, fonts, and spacing rather than generic defaults. The Brienz Theme demonstrates this approach.
+
+**Tested elements** include: ``mj-attributes``, ``mj-breakpoint``, ``mj-font``, ``mj-html-attributes``, ``mj-style``, ``mj-title``, and ``mj-preview``.
 
 .. vale off
 
