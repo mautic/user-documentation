@@ -224,6 +224,20 @@ There are different types of documentation available to help you navigate your w
 
 .. toctree::
    :maxdepth: 2
+   :caption: UTM Tags
+   :hidden:
+
+   utm_tags/utm_tags_overview
+   utm_tags/utm_tags_landing_pages
+   utm_tags/utm_tags_asset_downloads
+   utm_tags/utm_tags_forms
+   utm_tags/utm_tags_emails
+   utm_tags/utm_tags_dynamic_web_content
+   utm_tags/utm_tags_campaign_conditions
+   utm_tags/utm_tags_segment_filters
+
+.. toctree::
+   :maxdepth: 2
    :caption: Themes
    :hidden:
 
