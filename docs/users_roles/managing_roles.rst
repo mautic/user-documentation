@@ -139,7 +139,11 @@ There are additional permissions for specific features:
 Contact permissions
 ~~~~~~~~~~~~~~~~~~~
 
+.. vale off
+
 The Contact Permissions section includes several permission categories:
+
+.. vale on
 
 * **Contacts - User has access to** - determines which Contact records a User can view, edit, create, and delete.
 
@@ -153,7 +157,7 @@ The Contact Permissions section includes several permission categories:
 
 .. note::
 
-   Notes permissions determine which notes a User can view, edit, and delete based on note ownership - not Contact ownership. A User with ``Edit own`` Notes permission can edit notes they created, even on Contacts owned by other Users. See :ref:`notes<notes>` for more details.
+   Notes permissions determine which notes a User can view, edit, and delete based on note ownership - not Contact ownership. A User with ``Edit own`` notes permission can edit notes they created, even on Contacts owned by other Users. See :ref:`notes<notes>` for more details.
 
 .. note::
 
