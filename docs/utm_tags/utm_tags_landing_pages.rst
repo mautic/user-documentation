@@ -1,22 +1,22 @@
 .. vale off
 
-Capturing UTM tags from landing pages
+Capturing UTM tags from Landing Pages
 ######################################
 
 .. vale on
 
-When a known Contact visits a Page, either a Mautic-built Landing Page or an external website Page that has the Mautic tracking script installed, registers a Page hit on their profile as behavioral activity. If the URL they landed on contains UTM parameters, Mautic automatically extracts and stores them on the Contact record. This enables segmentation and Reporting based on which Campaigns, Channels, or sources drove that visit.
+When a known Contact visits a Landing Page, either a Mautic-built Landing Page or an external website page that has the Mautic tracking script installed, registers a page hit on their profile as behavioral activity. If the URL they landed on contains UTM parameters, Mautic automatically extracts and stores them on the Contact record. This enables segmentation and Reporting based on which Campaigns, Channels, or sources drove that visit.
 
-There is nothing to configure on the Landing Page or website Page itself. The UTM parameters must already be present in the URL the Contact clicks, meaning whoever creates the link that brings the Contact to that Page is responsible for including the UTM parameters in it. reads what's there.
+There is nothing to configure on the Landing Page or website page itself. The UTM parameters must already be present in the URL the Contact clicks, meaning whoever creates the link that brings the Contact to that page is responsible for including the UTM parameters in it. Mautic reads what's there.
 
 .. note::
 
-   There is no action, no field, and no toggle to enable inside the Page itself. If a colleague asks "where do you set up UTM tags on this Landing Page?", the answer is: you set them in the link that brings people there.
+   There is no action, no field, and no toggle to enable inside the Landing Page itself. If a colleague asks "where do you set up UTM tags on this Landing Page?", the answer is: you set them in the link that brings people there.
 
 Examples
 ********
 
-The following URLs show how UTM parameters appear on both an external website Page and a Mautic Landing Page:
+The following URLs show how UTM parameters appear on both an external website page and a Mautic Landing Page:
 
 .. code-block:: text
 
@@ -26,9 +26,9 @@ The following URLs show how UTM parameters appear on both an external website Pa
 
    https://your-mautic.com/Page/landing-slug?utm_source=google&utm_medium=cpc&utm_campaign=spring_sale_2026
 
-The first URL contains three UTM parameters: ``utm_source`` identifies the traffic origin as a newsletter, ``utm_medium`` identifies the delivery Channel as Email, and ``utm_campaign`` groups the traffic under the ``spring_sale_2026`` Campaign name. The second URL shows the same pattern applied to a Mautic-hosted Landing Page, the slug ``/Page/landing-slug`` is the Mautic Page path, and the query string carries the UTM data.
+The first URL contains three UTM parameters: ``utm_source`` identifies the traffic origin as a newsletter, ``utm_medium`` identifies the delivery Channel as Email, and ``utm_campaign`` groups the traffic under the ``spring_sale_2026`` Campaign name. The second URL shows the same pattern applied to a Mautic-hosted Landing Page, the slug ``/Page/landing-slug`` is the Mautic Landing Page path, and the query string carries the UTM data.
 
-These parameters are chosen to reflect the realistic distribution Channel for each URL. The external-Page URL uses ``utm_medium=email`` because a newsletter link drove the visit, while the Mautic Landing Page URL uses ``utm_medium=cpc`` because a paid search ad drove it. Using accurate medium values ensures your analytics tool groups traffic into the correct Channels and your Reporting reflects the actual performance of each Channel.
+Choose parameters to reflect the realistic distribution Channel for each URL. The external-page URL uses ``utm_medium=email`` because a newsletter link drove the visit, while the Mautic Landing Page URL uses ``utm_medium=cpc`` because a paid search ad drove it. Using accurate medium values ensures your analytics tool groups traffic into the correct Channels and your Reporting reflects the actual performance of each Channel.
 
 .. seealso::
 
