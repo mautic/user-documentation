@@ -9,8 +9,8 @@ When a Contact submits a Mautic Form, you can automatically capture the UTM para
 
 That means the website is responsible for ensuring UTM parameters include in the Landing Page URL, picks them up at submission time. The five standard parameters it captures are ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, and ``utm_term``. To follow the steps below, you need permission to edit Forms in Mautic and a Form already embedded on a website Page where the site sends UTM-tagged traffic.
 
-Step-by-step guide
-*******************
+Add UTM recording
+*****************
 
 #. Open the Mautic Form you want to configure by going to **Components** > **Forms** and clicking the Form name.
 
@@ -20,7 +20,7 @@ Step-by-step guide
 
 #. Select **Record UTM tags** from the action type dropdown.
 
-#. Fill in the **Name** field with a label for your own reference — ``Record UTM tags on submit``. The description is optional.
+#. Fill in the **Name** field with a label for your own reference, ``Record UTM tags on submit``. The description is optional.
 
    .. warning::
 
@@ -46,7 +46,7 @@ The choice to use three parameters rather than all five reflects a practical min
 
 .. tip::
 
-   If a visitor arrives without UTM parameters in the URL but the Page referrer URL does contain them — they clicked through from a Page that had UTM parameters, falls back to reading those from the Page referrer. Don't rely on this as a primary strategy, but it prevents the data from always being empty in this scenario.
+   If a visitor arrives without UTM parameters in the URL but the Page referrer URL does contain them, they clicked through from a Page that had UTM parameters, falls back to reading those from the Page referrer. Don't rely on this as a primary strategy, but it prevents the data from always being empty in this scenario.
 
 After saving, the **Record UTM tags** action should appear in the Form's action list. When a Contact submits the Form from a UTM-tagged URL, their profile shows a **UTM tags recorded** timeline entry, separate from the Form submission entry, with the associated Form ID and the captured field values. If UTM fields are empty after a test submission, the URL used during the test didn't contain UTM parameters. that's a website-side issue, not a Mautic configuration issue.
 

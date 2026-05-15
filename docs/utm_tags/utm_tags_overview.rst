@@ -33,7 +33,7 @@ These features read UTM parameters from URLs and save them to a Contact's record
      - See :doc:`utm_tags_landing_pages`
    * - **Asset download**
      - On direct Asset download via a UTM-tagged URL, stores UTM parameters on the download record only, not on the Contact profile. UTM data isn't captured when the download trigger by a Form action.
-     - See :doc:`utm_tags_Asset_downloads`
+     - See :doc:`utm_tags_asset_downloads`
 
 Outbound tagging (appending UTM to links)
 ==========================================
@@ -115,7 +115,7 @@ The most common source of confusion with Mautic's UTM system is treating all fea
 .. seealso::
 
    - :doc:`utm_tags_landing_pages`
-   - :doc:`utm_tags_Asset_downloads`
+   - :doc:`utm_tags_asset_downloads`
    - :doc:`utm_tags_forms`
    - :doc:`utm_tags_emails`
    - :doc:`utm_tags_dynamic_web_content`

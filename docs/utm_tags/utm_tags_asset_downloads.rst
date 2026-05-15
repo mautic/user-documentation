@@ -7,8 +7,8 @@ UTM tags on Asset downloads
 
 Mautic can capture UTM parameters when a Contact downloads a managed Asset, a file hosted inside Mautic. However, this behavior differs significantly from UTM capture on Forms, Emails, Dynamic Web Content (DWC) blocks, and Pages. Understanding the distinction prevents tracking gaps and misplaced expectations.
 
-How it works
-************
+How asset download UTM works
+*****************************
 
 UTM values on Asset downloads are only populated when the Asset URL is shared directly as a link with UTM parameters manually included, for example, inside an Email, a button, or any other Channel where you control the full URL:
 

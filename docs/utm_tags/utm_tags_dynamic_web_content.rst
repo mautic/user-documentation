@@ -9,8 +9,8 @@ When you add UTM fields to a Dynamic Web Content (Dynamic Web Content (DWC)) blo
 
 This means you can track in Google Analytics, or any other analytics tool, exactly how many people clicked links coming from that specific Dynamic Web Content (DWC) block, without manually editing each URL in your content. To use this, you need permission to edit Dynamic Web Content in Mautic, a Dynamic Web Content (DWC) block with at least one outbound link, and an analytics tool set up on the destination website to receive UTM-tagged traffic.
 
-Step-by-step guide
-*******************
+Configure DWC blocks
+********************
 
 #. Open the Dynamic Web Content block you want to configure by going to **Components** > **Dynamic Web Content** and clicking the block name.
 
@@ -18,9 +18,9 @@ Step-by-step guide
 
 #. Fill in the UTM fields you want to apply to links inside this block:
 
-   - ``Campaign``, the Campaign name — ``spring_sale_2026``
-   - ``Medium``, the Channel type — ``website``
-   - ``Source``, where the block is placed — ``dwc``
+   - ``Campaign``, the Campaign name, ``spring_sale_2026``
+   - ``Medium``, the Channel type, ``website``
+   - ``Source``, where the block is placed, ``dwc``
    - ``Content`` is optional, use it if you need finer-grained tracking
 
 #. Save the Dynamic Web Content (DWC) block.

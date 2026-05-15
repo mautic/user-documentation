@@ -9,8 +9,8 @@ Inside a Mautic Campaign, you can branch the flow based on the UTM values record
 
 For this to work, Contacts must already have UTM data on their profile, captured via a Form submission with the **Record UTM tags** action or via a Page visit with UTM parameters in the URL. The Campaign must also have a trigger (Segment membership, Form submission, or similar) configured before adding condition nodes.
 
-Step-by-step guide
-*******************
+Configure conditions
+********************
 
 #. Open the Campaign you want to configure by going to **Campaigns** and clicking the Campaign name, then opening the Campaign builder.
 
@@ -24,7 +24,7 @@ Step-by-step guide
    - ``Content``
    - ``Term``
 
-#. Select the field you want to evaluate and enter the value to match — set ``Medium`` to ``email``, or ``Campaign`` to ``spring_sale_2026``.
+#. Select the field you want to evaluate and enter the value to match, set ``Medium`` to ``email``, or ``Campaign`` to ``spring_sale_2026``.
 
 #. Connect the condition node's **Yes** and **No** paths to the appropriate next steps in the Campaign flow.
 
@@ -45,4 +45,4 @@ Contacts with matching UTM values should route to the "Yes" path once the Campai
    - :doc:`utm_tags_overview`
    - :doc:`utm_tags_forms`
    - :doc:`utm_tags_segment_filters`
-   - :doc:`/Campaigns/campaign_builder`
+   - :doc:`/campaigns/campaign_builder`

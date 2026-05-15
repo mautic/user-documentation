@@ -9,8 +9,8 @@ Segments can include or exclude Contacts based on UTM values that have been reco
 
 The UTM data queried here comes from the **Record UTM Tags** Form action and from Page visits, Landing Page and tracked website Pages, where UTM parameters were present in the URL. UTM data from Asset downloads store separately and isn't available in Segment filters. To follow the steps below, Contacts must already have UTM data on their profile and you need permission to create or edit Segments in Mautic.
 
-Step-by-step guide
-*******************
+Create segment filters
+**********************
 
 #. Go to **Segments** and open an existing Segment or create a new one.
 
@@ -24,7 +24,7 @@ Step-by-step guide
    - ``utm_content``
    - ``utm_term``
 
-#. Select the operator and enter the value to match — ``newsletter``, ``email``, or ``spring_sale_2026``.
+#. Select the operator and enter the value to match, ``newsletter``, ``email``, or ``spring_sale_2026``.
 
 #. Save the Segment.
 
@@ -47,4 +47,4 @@ After the Segment updates, it should show Contacts whose recorded UTM values mat
    - :doc:`utm_tags_overview`
    - :doc:`utm_tags_forms`
    - :doc:`utm_tags_campaign_conditions`
-   - :doc:`/Segments/manage_segments`
+   - :doc:`/segments/manage_segments`

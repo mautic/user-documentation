@@ -13,8 +13,8 @@ To use this, you need permission to edit Emails in Mautic, at least one outbound
 
    Use the same ``Campaign`` value across your Email, Dynamic Web Content (DWC) blocks, and any paid ads running at the same time. All traffic from a single Campaign then rolls up cleanly under one Campaign name in Analytics, regardless of which Channel drove the click.
 
-Step-by-step guide
-*******************
+Configure email UTM tags
+************************
 
 #. Open the Email you want to configure by going to **Channels** > **Emails** and clicking the Email name.
 
@@ -22,10 +22,10 @@ Step-by-step guide
 
 #. Fill in the four available UTM fields:
 
-   - ``Source``, where the Email is coming from — ``newsletter`` or ``mautic``
-   - ``Medium``, the Channel — ``email``
-   - ``Campaign``, the Campaign name — ``spring_sale_2026``
-   - ``Content``, optional. useful for distinguishing between multiple Emails in the same Campaign — ``welcome_email_1``
+   - ``Source``, where the Email is coming from, ``newsletter`` or ``mautic``
+   - ``Medium``, the Channel, ``email``
+   - ``Campaign``, the Campaign name, ``spring_sale_2026``
+   - ``Content``, optional. useful for distinguishing between multiple Emails in the same Campaign, ``welcome_email_1``
 
 #. Save the Email.
 
