@@ -5,9 +5,9 @@ Capturing UTM tags from Landing Pages
 
 .. vale on
 
-When a known Contact visits a Landing Page, either a Mautic-built Landing Page or an external website page that has the Mautic tracking script installed, registers a page hit on their profile as behavioral activity. If the URL they landed on contains UTM parameters, Mautic automatically extracts and stores them on the Contact record. This enables segmentation and Reporting based on which Campaigns, Channels, or sources drove that visit.
+When a known Contact visits a Landing Page, either a Mautic-built Landing Page or an external website with the Mautic tracking script installed, Mautic registers a visit on their profile as behavioral activity. If the URL they landed on contains UTM parameters, Mautic automatically extracts and stores them on the Contact record. This enables segmentation and Reporting based on which Campaigns, Channels, or sources drove that visit.
 
-There is nothing to configure on the Landing Page or website page itself. The UTM parameters must already be present in the URL the Contact clicks, meaning whoever creates the link that brings the Contact to that page is responsible for including the UTM parameters in it. Mautic reads what's there.
+There is nothing to configure on the Landing Page or website itself. The UTM parameters must already be present in the URL the Contact clicks, meaning whoever creates the link that brings the Contact there is responsible for including the UTM parameters in it. Mautic reads what's there.
 
 .. note::
 
@@ -16,7 +16,7 @@ There is nothing to configure on the Landing Page or website page itself. The UT
 Examples
 ********
 
-The following URLs show how UTM parameters appear on both an external website page and a Mautic Landing Page:
+The following URLs show how UTM parameters appear on both external websites and Mautic Landing Pages:
 
 .. code-block:: text
 
@@ -28,7 +28,7 @@ The following URLs show how UTM parameters appear on both an external website pa
 
 The first URL contains three UTM parameters: ``utm_source`` identifies the traffic origin as a newsletter, ``utm_medium`` identifies the delivery Channel as Email, and ``utm_campaign`` groups the traffic under the ``spring_sale_2026`` Campaign name. The second URL shows the same pattern applied to a Mautic-hosted Landing Page, the slug ``/Page/landing-slug`` is the Mautic Landing Page path, and the query string carries the UTM data.
 
-Choose parameters to reflect the realistic distribution Channel for each URL. The external-page URL uses ``utm_medium=email`` because a newsletter link drove the visit, while the Mautic Landing Page URL uses ``utm_medium=cpc`` because a paid search ad drove it. Using accurate medium values ensures your analytics tool groups traffic into the correct Channels and your Reporting reflects the actual performance of each Channel.
+Choose parameters to reflect the realistic distribution Channel for each URL. The external website URL uses ``utm_medium=email`` because a newsletter link drove the visit, while the Mautic Landing Page URL uses ``utm_medium=cpc`` because a paid search ad drove it. Using accurate medium values ensures your analytics tool groups traffic into the correct Channels and your Reporting reflects the actual performance of each Channel.
 
 .. seealso::
 
