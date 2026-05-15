@@ -5,7 +5,7 @@ UTM tags overview
 
 .. vale on
 
-UTM (Urchin Tracking Module) parameters are short tags appended to URLs that tell analytics tools where a visitor came from, which Campaign, Channel, source, and so on. has native support for UTM tags across a wide range of its features, but **how UTM data flows through the system isn't uniform**. Different features capture, generate, store, and use UTM data in different ways, and confusing them leads to gaps in tracking, empty fields, or misplaced expectations.
+UTM (Urchin Tracking Module) parameters are short tags appended to URLs that tell analytics tools where a visitor came from, which Campaign, Channel, source, and so on. Mautic has native support for UTM tags across a wide range of its features, but how UTM data flows through the system isn't uniform. Different features capture, generate, store, and use UTM data in different ways, and confusing them leads to gaps in tracking, empty fields, or misplaced expectations.
 
 Understanding UTM parameters
 ****************************

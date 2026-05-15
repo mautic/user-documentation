@@ -1,9 +1,5 @@
-.. vale off
-
-Capturing UTM tags from Landing Pages
+Capturing UTM tags from landing pages
 ######################################
-
-.. vale on
 
 When a known Contact visits a Landing Page, either a Mautic-built Landing Page or an external website with the Mautic tracking script installed, Mautic registers a visit on their profile as behavioral activity. If the URL they landed on contains UTM parameters, Mautic automatically extracts and stores them on the Contact record. This enables segmentation and Reporting based on which Campaigns, Channels, or sources drove that visit.
 
