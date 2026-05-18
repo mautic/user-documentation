@@ -121,6 +121,12 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``mautic:fields:analse``
      - Analyze Custom Fields table and return table or file with results. See :doc:`/contacts/custom_fields`.
+     -
+   * - ``mautic:forms:delete-orphan-form-submission-records-from-form-results-table``
+     - Deletes orphan records from Form results tables where the associated submission record no longer exists. Run this after directly deleting submission records from the database.
+     -
+   * - ``mautic:forms:delete-results-table``
+     - Deletes orphan Form results tables where the associated Form has been deleted. Run this after directly deleting Forms from the database.
      - 
    * - ``mautic:import``
      - If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
