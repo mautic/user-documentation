@@ -106,10 +106,20 @@ Email Report columns
 
 When using 'Emails' as the data source, you can add the following columns to measure Email engagement:
 
-* **Read count:** the number of Contacts who opened the Email.
+* **Sent count:** the number of Emails sent to Contacts.
+* **Read count:** the number of unique Contacts who opened the Email.
+* **Read ratio:** the percentage of sent Emails that were opened by Contacts.
+* **Click-through count:** the number of unique Contacts who clicked any link in the Email.
+* **Click-through rate:** the percentage of sent Emails that resulted in at least one click.
+* **Click-to-open rate:** the percentage of opened Emails that resulted in at least one click. This helps you understand how engaging the Email content is to recipients who already opened it.
 * **Unsubscribed:** the number of Contacts who unsubscribed after receiving the Email.
-* **Bounced:** the number of Emails that bounced.
+* **Unsubscribed ratio:** the percentage of sent Emails that resulted in an unsubscribe.
 * **Unsubscribe-to-Open Ratio:** the percentage of unsubscribed Contacts relative to those who opened the Email. This helps you understand how Email content affects unsubscribe rates among engaged recipients.
+* **Bounced:** the number of Emails that bounced.
+* **Bounced ratio:** the percentage of sent Emails that bounced.
+* **Clicks:** the total number of link clicks across all recipients (non-unique).
+* **Unique clicks:** the number of unique Contacts who clicked any link in the Email.
+* **DNC Preferences:** summary of Do Not Contact preferences for the Email.
 
 .. tip::
 
