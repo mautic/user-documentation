@@ -118,8 +118,8 @@ When using 'Emails' as the data source, you can add the following columns to mea
 * **Bounced:** the number of Emails that bounced.
 * **Bounced ratio:** the percentage of sent Emails that bounced.
 * **Clicks:** the total number of link clicks across all recipients (non-unique).
-* **Unique clicks:** the number of unique Contacts who clicked any link in the Email.
-* **DNC Preferences:** summary of Do Not Contact preferences for the Email.
+* **Unique clicks:** the total number of unique clicks across all trackable links. A Contact clicking multiple different links is counted multiple times. If you need the number of unique Contacts who clicked any link, use **Click-through count** instead.
+* **DNC Preferences:** summary of all Do Not Contact preferences for the Contact across all channels and Emails.
 
 .. tip::
 
