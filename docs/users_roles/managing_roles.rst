@@ -147,7 +147,7 @@ The Contact Permissions section includes several permission categories:
 
 * **Contacts - User has access to** - determines which Contact records a User can view, edit, create, and delete.
 
-* **Notes - User has access to** - determines which notes attached to Contacts a User can access. This is separate from Contact permissions, giving you fine-grained control over note management. For example, a User might view all Contacts but only edit their own notes on those Contacts.
+* **Notes - User has access to** - determines which Notes attached to Contacts a User can access. This is separate from Contact permissions, giving you fine-grained control over note management. For example, a User might view all Contacts but only edit their own Notes on those Contacts.
 
 * **Segments - User has access to** - determines which Segments a User can access.
 
@@ -157,7 +157,7 @@ The Contact Permissions section includes several permission categories:
 
 .. note::
 
-   Notes permissions determine which notes a User can view, edit, and delete based on note ownership - not Contact ownership. A User with ``Edit own`` notes permission can edit notes they created, even on Contacts owned by other Users. See :ref:`notes<notes>` for more details.
+   Notes permissions determine which Notes a User can view, edit, and delete based on Note ownership - not Contact ownership. A User with ``Edit own`` Notes permission can edit Notes they created, even on Contacts owned by other Users. See :ref:`Notes<notes>` for more details.
 
 .. note::
 
