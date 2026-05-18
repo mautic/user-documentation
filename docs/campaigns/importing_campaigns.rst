@@ -202,7 +202,7 @@ Mautic supports two primary methods of API-based Campaign import:
 
 .. vale off
 
-How the importing Campaign works
+How Campaign import works
 ********************************
 
 .. vale on

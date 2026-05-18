@@ -131,7 +131,7 @@ Python example
 
 .. vale off
 
-How the exporting Campaigns works
+How Campaign export works
 *********************************
 
 .. vale on
