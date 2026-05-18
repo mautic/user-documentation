@@ -107,7 +107,7 @@ Email Report columns
 When using 'Emails' as the data source, you can add the following columns to measure Email engagement:
 
 * **Sent count:** the number of Emails sent to Contacts.
-* **Read count:** the number of unique Contacts who opened the Email.
+* **Read count:** the number of Emails opened by Contacts.
 * **Read ratio:** the percentage of sent Emails that were opened by Contacts.
 * **Click-through count:** the number of unique Contacts who clicked any link in the Email.
 * **Click-through rate:** the percentage of sent Emails that resulted in at least one click.
