@@ -7,6 +7,15 @@ Using the Campaign Builder
 
 The Campaign Builder provides a blank canvas on which you can build your Campaign workflow. The Campaign Builder allows the use of conditions, decisions, and actions. It enables you to create a simple workflow by dragging and dropping various decisions, actions, and conditions onto a canvas.
 
+.. _navigating-the-canvas:
+
+Navigating the canvas
+---------------------
+
+When you open the Campaign Builder, Mautic centers the view on your Campaign. The canvas uses an infinite-canvas interaction style without visible scrollbars, giving you more space for complex workflows.
+
+To pan around the canvas, click and drag on any empty area of the canvas background. Your cursor changes to indicate when panning is active. You can navigate freely while still dragging nodes to position Campaign events.
+
 To build your Campaign, perform the following steps:
 
 #. Click **Launch the Campaign Builder** on the New Campaigns wizard. The Contact Sources menu appears as shown in the following image.
