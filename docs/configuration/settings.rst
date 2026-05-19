@@ -540,9 +540,7 @@ Company list settings
   :width: 600
   :alt: Screenshot showing Company List Settings Configuration in Mautic
 
-* **Columns** - Select from the left which fields appear on the Company list (when you go to Companies in Mautic and view the list).
-
-To display the fields, select them from the left and move them to the right column, or remove from the right column if you don't want them to appear in the list.
+* **Columns** - Under **Configuration** and **Company Settings**, use this section to manage the visible columns for Companies. Move fields from the left list to the right list to display them on the main Companies overview, or remove fields from the right list to hide them from the view.
 
 Queue settings
 **************
