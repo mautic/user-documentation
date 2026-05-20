@@ -195,7 +195,7 @@ Image
 History
 =======
 
-Event history tracks any engagements between Mautic and a Contact. Mautic groups events by day so you can scan activity quickly. Group headers display "Today", "Yesterday", or a formatted date, while individual events show only the time.
+Event history tracks any engagements between Mautic and a Contact. Mautic groups events by day so you can scan activity quickly. Group headers display 'Today', 'Yesterday', or a formatted date, while individual events show only the time.
 
 To find specific event types, search in the **Include events by source** text box. To exclude event types from the history, use **Exclude events by source**.
 
