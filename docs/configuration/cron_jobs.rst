@@ -296,10 +296,6 @@ Command parameters:
 
 - ``--cleanup-only`` runs only the cleanup operation, removing old exported Report files without sending scheduled Reports. Use this to separate the cleanup and sending tasks to prevent duplicate Report Emails.
 
-.. note::
-
-    For releases prior to 1.1.3, it's required to append ``--env=prod`` to the cron job command to ensure commands execute correctly.
-
 Preventing duplicate Report Emails
 **********************************
 
