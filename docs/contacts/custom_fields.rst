@@ -129,7 +129,7 @@ When creating a new Custom Field, you may see a card labeled **Should this be a 
 
 Mautic stores Fields and Tags differently in the database. You can create unlimited Tags, but Custom Fields have server capacity limits and may impact performance. Use Tags for simple categorization and Custom Fields only when you need capabilities that Tags don't provide.
 
-For more information on using Tags, see :ref:`contacts/manage_contacts:Tags`.
+For more information on using Tags, see the :ref:`Tags in manage Contacts` section.
 
 Creating Custom Fields via a command
 ************************************
