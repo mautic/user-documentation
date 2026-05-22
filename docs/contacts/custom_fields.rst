@@ -92,10 +92,14 @@ You can create additional Custom Fields and define the data type you want that f
 
 |
 
+.. vale off
+
 Deciding between a Custom Field and a Tag
 =========================================
 
-When creating a new Custom Field, you may see a card labeled **Should this be a field?** on the form. Clicking this card opens a decision helper modal that guides you through choosing whether to use a Custom Field or a Tag for storing your Contact information.
+.. vale on
+
+When creating a new Custom Field, you may see a card labeled **Should this be a field?** on the Form. Clicking this card opens a decision helper modal that guides you through choosing whether to use a Custom Field or a Tag for storing your Contact information.
 
 .. image:: images/field-vs-tag-decision-helper.png
     :align: center
@@ -105,21 +109,25 @@ When creating a new Custom Field, you may see a card labeled **Should this be a 
 
 **Use a Custom Field when you need to:**
 
-- Personalize Emails with the data, such as a name or date
-- Store unique Contact information like names, dates, or phone numbers
-- Import or export the information regularly
-- Use the data in complex conditional logic or workflows
+* Personalize Emails with the data, such as a name or date
+* Store unique Contact information like names, dates, or phone numbers
+* Import or export the information regularly
+* Use the data in complex conditional logic or workflows
+
+.. vale off
 
 **Use a Tag when you need to:**
 
-- Track an action, interest, or behavior, such as a product purchased, web page visited, or survey completed
-- Quickly add or remove multiple labels at once
-- Organize Contacts by source, Campaign, or how they joined your list
-- Create simple yes/no classifications for automation, such as 'VIP customer' or 'Newsletter subscriber'
+* Track an action, interest, or behavior, such as a product purchased, web page visited, or survey completed
+* Quickly add or remove multiple labels at once
+* Organize Contacts by source, Campaign, or how they joined your list
+* Create simple yes/no classifications for automation, such as 'VIP customer' or 'Newsletter subscriber'
+
+.. vale on
 
 **Why does it matter?**
 
-Fields and Tags are stored differently in the database. You can create unlimited Tags, but Custom Fields are limited by server capacity and may impact performance. Use Tags for simple categorization and Custom Fields only when you need capabilities that Tags don't provide.
+Mautic stores Fields and Tags differently in the database. You can create unlimited Tags, but Custom Fields have server capacity limits and may impact performance. Use Tags for simple categorization and Custom Fields only when you need capabilities that Tags don't provide.
 
 For more information on using Tags, see :ref:`contacts/manage_contacts:Tags`.
 
