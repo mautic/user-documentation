@@ -10,18 +10,20 @@ The Amazon S3 Plugin allows you to host your :doc:`Assets</components/assets>` o
 Setting up an S3 bucket
 ***********************
 
-To get started, you need to sign up for an Amazon account. Ensure you are familiar with the :xref:`pricing tiers for S3` before you commit to using it.
+Follow these steps to :xref:`set up Amazon S3` and create a bucket:
 
-If you are new to Amazon Web Services, follow these steps to set up your Amazon S3 account. The following steps are important to ensure you aren't using your root account for day-to-day tasks:
+#. :xref:`Create an AWS account` if you haven't. Ensure you are familiar with the :xref:`pricing tiers for S3` before you commit to using it.
+#. If you already have an AWS account, :xref:`access AWS account` and select **IAM user** as user type.
 
-1. :xref:`Create an AWS account`
-2. :xref:`Set up an IAM user`
-3. :xref:`Sign in as IAM user`
-4. :xref:`Set up your bucket`
+   .. important::
 
-.. note:: 
+      Ensure you aren't using your root account for day-to-day tasks.
 
-     The region you select for your bucket is important from a data protection perspective and you will need to copy this value to use when you set up Mautic. Consult your privacy policy and act accordingly.
+#.  :xref:`Create a bucket`.
+
+   .. note:: 
+
+      The region you select for your bucket is important for data protection, and you need to copy this value and use it when you set up Mautic. Consult your privacy policy and act accordingly.
 
 Now that you have created a bucket, create a user who can access it. Instead of using the credentials for your master account which expose you to significant risk if they're ever exposed, use the credentials for this user in Mautic.
 
