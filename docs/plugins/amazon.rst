@@ -12,6 +12,8 @@ Setting up an S3 bucket
 
 Follow these steps to :xref:`set up Amazon S3` and create a bucket:
 
+.. vale off
+
 #. :xref:`Create an AWS account` if you haven't. Ensure you are familiar with the :xref:`pricing tiers for S3` before you commit to using it.
 #. If you already have an AWS account, :xref:`access AWS account` and select **IAM user** as user type.
 
@@ -24,6 +26,8 @@ Follow these steps to :xref:`set up Amazon S3` and create a bucket:
    .. note:: 
 
       The region you select for your bucket is important for data protection, and you need to copy this value and use it when you set up Mautic. Consult your privacy policy and act accordingly.
+
+.. vale on
 
 Now that you have created a bucket, create a user who can access it. Instead of using the credentials for your master account which expose you to significant risk if they're ever exposed, use the credentials for this user in Mautic.
 
