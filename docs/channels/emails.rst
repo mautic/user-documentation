@@ -288,10 +288,10 @@ The **Send to unsubscribed contacts** toggle allows you to send Emails to Contac
 
 Use this option for truly transactional communications that Contacts must receive regardless of their subscription status, such as:
 
-- Terms and conditions updates
-- Legal notifications
-- Account-related communications
-- Service announcements
+* Terms and conditions updates
+* Legal notifications
+* Account-related communications
+* Service announcements
 
 Enabling the toggle
 ===================
@@ -304,7 +304,7 @@ Enabling the toggle
 
 .. warning::
 
-   Use this feature responsibly. Sending marketing content to unsubscribed Contacts may violate data protection regulations such as the General Data Protection Regulation (GDPR), the Controlling the Assault of Non-Solicited Pornography And Marketing Act (CAN-SPAM), or Canada's Anti-Spam Legislation (CASL). Only use this setting for legitimate transactional communications.
+   Use this feature responsibly. Sending marketing content to unsubscribed Contacts may violate data protection regulations such as the General Data Protection Regulation - GDPR, the Controlling the Assault of Non-Solicited Pornography And Marketing Act - CAN-SPAM Act, or Canada's Anti-Spam Legislation - CASL. Only use this setting for legitimate transactional communications.
 
 .. vale off
 
