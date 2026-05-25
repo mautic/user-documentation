@@ -15,7 +15,7 @@ Follow these steps to :xref:`set up Amazon S3` and create a bucket:
 .. vale off
 
 #. :xref:`Create an AWS account` if you haven't. Ensure you are familiar with the :xref:`pricing tiers for S3` before you commit to using it.
-#. If you already have an AWS account, :xref:`access AWS account` and select **IAM user** as user type.
+#. If you already have one, :xref:`access AWS account` and select **IAM user** as user type.
 
    .. important::
 
