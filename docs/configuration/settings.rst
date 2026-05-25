@@ -646,9 +646,9 @@ The screenshot below shows the default values.
   :width: 600
   :alt: Retry strategy defaults
 
-* **Max retries** - The maximum number of times Mautic retries a failed message before giving up. Set to ``0`` to disable retries. The default is ``3``.
+* **Max retries** - The maximum number of times Mautic retries a failed message before giving up. Set to ``0`` to turn off retries. The default is ``3``.
 
-* **Delay** - The initial delay in milliseconds before the first retry attempt. The default is ``1000`` (1 second).
+* **Delay** - The initial delay in milliseconds before the first retry attempt. The default is ``1000``, which is 1 second.
 
 * **Multiplier** - The factor by which the delay increases after each retry attempt. For example, with a delay of 1000 ms and a multiplier of 2, the delays are 1000 ms, 2000 ms, 4000 ms, and so on. Values less than 1 aren't allowed. The default is ``2``.
 
