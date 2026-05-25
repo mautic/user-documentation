@@ -282,9 +282,9 @@ If set to No, Mautic uses the address and name supplied in the Email 'From' fiel
 Send to unsubscribed contacts
 *****************************
 
-.. vale on
-
 The **Send to unsubscribed contacts** toggle allows you to send Emails to Contacts who have unsubscribed from your communications. This feature is available in the Advanced tab for both Template and Segment Emails.
+
+.. vale on
 
 Use this option for truly transactional communications that Contacts must receive regardless of their subscription status, such as:
 
@@ -303,17 +303,23 @@ Enabling the toggle
 #. Confirm to enable the setting, then save the Email.
 
 .. warning::
-    Use this feature responsibly. Sending marketing content to unsubscribed Contacts may violate data protection regulations such as GDPR, CAN-SPAM, or CASL. Only use this setting for legitimate transactional communications.
+
+   Use this feature responsibly. Sending marketing content to unsubscribed Contacts may violate data protection regulations such as the General Data Protection Regulation (GDPR), the Controlling the Assault of Non-Solicited Pornography And Marketing Act (CAN-SPAM), or Canada's Anti-Spam Legislation (CASL). Only use this setting for legitimate transactional communications.
+
+.. vale off
 
 .. note::
-    Enabling this toggle requires the **Send to unsubscribed contacts** permission assigned to your Role. See :doc:`/users_roles/managing_roles` for details on configuring permissions.
+
+   Enabling this toggle requires the **Send to unsubscribed contacts** permission assigned to your Role. See :doc:`/users_roles/managing_roles` for details on configuring permissions.
+
+.. vale on
 
 Frequency rules behavior
 ========================
 
-When **Send to unsubscribed contacts** is enabled, the Email doesn't count towards the Contact's :doc:`frequency rules </contacts/frequency_rules>` limits. This ensures that important transactional Emails aren't blocked by communication frequency restrictions.
+Enabling **Send to unsubscribed contacts** prevents the Email from counting towards the Contact's :doc:`frequency rules </contacts/frequency_rules>` limits. This ensures that important transactional Emails reach Contacts regardless of communication frequency restrictions.
 
-When the toggle is disabled, the Email counts towards frequency rule limits as normal.
+Disabling the toggle causes the Email to count towards frequency rule limits as normal.
 
 Signatures
 **********
