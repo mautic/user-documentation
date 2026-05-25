@@ -304,7 +304,9 @@ Enabling the toggle
 
 .. warning::
 
-   Use this feature responsibly. Sending marketing content to unsubscribed Contacts may violate data protection regulations such as the General Data Protection Regulation - GDPR, the Controlling the Assault of Non-Solicited Pornography And Marketing Act - CAN-SPAM Act, or Canada's Anti-Spam Legislation - CASL. Only use this setting for legitimate transactional communications.
+   **In many countries, sending marketing Emails to Contacts who have unsubscribed is illegal.** This feature exists solely for genuinely transactional communications such as receipts, password resets, legal notices, and account updates—not marketing content.
+
+   Misusing this feature to send marketing or promotional Emails to unsubscribed Contacts can result in serious legal consequences, including fines and penalties under data protection regulations such as the General Data Protection Regulation - GDPR, the Controlling the Assault of Non-Solicited Pornography And Marketing Act - CAN-SPAM Act, or Canada's Anti-Spam Legislation - CASL.
 
 .. vale off
 
