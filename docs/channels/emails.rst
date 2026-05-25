@@ -306,7 +306,7 @@ Enabling the toggle
     Use this feature responsibly. Sending marketing content to unsubscribed Contacts may violate data protection regulations such as GDPR, CAN-SPAM, or CASL. Only use this setting for legitimate transactional communications.
 
 .. note::
-    Enabling this toggle requires the **Include unsubscribed contacts** permission assigned to your Role. See :doc:`/users_roles/managing_roles` for details on configuring permissions.
+    Enabling this toggle requires the **Send to unsubscribed contacts** permission assigned to your Role. See :doc:`/users_roles/managing_roles` for details on configuring permissions.
 
 Frequency rules behavior
 ========================

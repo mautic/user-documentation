@@ -94,7 +94,7 @@ There are permission levels relating to the editable fields in the Users section
 
 Since Mautic 5.1 there is an additional permission relating to allowing Users of Mautic to export information. You can set this permission within the Contact, Forms, and Reports Permissions. If this permission isn't set, the User won't see the options for, or be able to export, information - such as lists of Contacts, Form submissions and Report data - from Mautic.
 
-The Email permissions include an **Include unsubscribed contacts** option. When granted, Users with this permission can enable the **Send to unsubscribed contacts** toggle on Emails. This allows sending Emails to Contacts who have unsubscribed, which is necessary for transactional communications such as legal notices or account updates. Without this permission, the toggle isn't editable in the Email's Advanced settings.
+The Email permissions include a **Send to unsubscribed contacts** option. When granted, Users with this permission can enable the **Send to unsubscribed contacts** toggle on Emails. This allows sending Emails to Contacts who have unsubscribed, which is necessary for transactional communications such as legal notices or account updates. Without this permission, the toggle isn't editable in the Email's Advanced settings.
 
 .. note:: 
 
