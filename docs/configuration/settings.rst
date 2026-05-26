@@ -325,9 +325,9 @@ Mail send settings
   :width: 600
   :alt: Screenshot showing Mail Send Settings Configuration in Mautic
 
-* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``.
-  
-* **Email address to send mail from** - The Email address for the name you're sending mail from. The address displays in the ``From:`` field when your Contacts receive your Emails.
+* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``. You can also use Contact field tokens like ``{contactfield=companyname|Default Name}`` to personalize the sender name per Contact.
+
+* **Email address to send mail from** - The Email address for the name you're sending mail from. The address displays in the ``From:`` field when your Contacts receive your Emails. You can use Contact field tokens like ``{contactfield=companyemail|info@default.com}`` to send from Contact-specific Email addresses, such as the Contact's assigned Company Email. When using tokens, always provide a default value after the ``|`` character as a fallback.
 
 .. note::
 
@@ -341,10 +341,9 @@ Mail send settings
 
 * **Mailer is owner** - If Contacts in Mautic have owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they're listed as the owner for.
 
-.. note:: 
+.. note::
 
-    Mailer is owner overrides any other name or Email to send mail from, including the default and individual Emails. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can see this configuration for individual Emails, rather than globally.
-    For more information see :doc:`Mailer is owner</channels/emails>`
+    When enabled, Mailer is owner sends Emails from the Contact's owner, overriding system defaults and plain Email From addresses. However, tokenized From addresses on an Email's Advanced tab take precedence over the owner sender when the token resolves to a valid value. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can configure this setting for individual Emails, rather than globally. For more information see :doc:`Mailer is owner</channels/emails>`. For the complete sender resolution hierarchy, see :ref:`Sender resolution hierarchy<sender-resolution-hierarchy>`.
 
 * **Service to send mail through** - Select the Email service provider you use, and enter your credentials.
 

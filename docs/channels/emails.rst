@@ -148,9 +148,43 @@ Tokens
 
 Mautic allows the use of tokens in Emails which gives the marketer the possibility to integrate a number of Contact fields in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
 
-It's also possible to override the 'from' field in an Email with a token from your :doc:`/contacts/custom_fields` since Mautic 5.1. 
-
 Check the :doc:`/configuration/variables` documentation for a list of all the available default fields.
+
+Tokenized From addresses
+------------------------
+
+Mautic allows you to use Contact field tokens in the From address and name fields. This makes Emails appear as though they're coming from a Contact-specific sender, such as their assigned Company.
+
+You can use tokens in:
+
+* The system-wide Email Settings **Name to send mail as** and **Email address to send mail from** fields
+* The **From Name** and **From Address** fields on an individual Email's Advanced tab
+
+For example, to send Emails from the Contact's Company:
+
+.. code-block:: php
+
+    {contactfield=companyname|Default Name}
+    {contactfield=companyemail|info@default.com}
+
+The token format follows the standard Contact field syntax. You can include an optional default value after the ``|`` character. If Mautic can't resolve the token to a value, it uses the default value instead.
+
+.. note::
+    The Contact field used in the Email address must contain a valid Email address. If using a custom field, ensure it's configured as an Email field type to guarantee proper validation.
+
+.. _sender-resolution-hierarchy:
+
+Sender resolution hierarchy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When sending Emails, Mautic determines the From address using the following priority order:
+
+1. **Tokenized Email Advanced From** - If the Email's Advanced tab has a From address with a Contact field token, and that token resolves to a valid value for the Contact, Mautic uses that address.
+2. **Owner sender** - If **Mailer is owner** is enabled and the Contact has an assigned owner, Mautic uses the owner's Email address.
+3. **Plain Email Advanced From** - If the Email's Advanced tab has a standard Email address, without tokens, Mautic uses that address.
+4. **System default sender** - Mautic falls back to the system default from Email Settings. If the system default contains tokens, Mautic resolves them. If token resolution fails, Mautic uses the token's default value.
+
+This hierarchy ensures Emails always have a valid sender while allowing personalization when Contact data is available.
 
 Default value
 -------------
