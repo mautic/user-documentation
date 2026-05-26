@@ -296,11 +296,15 @@ Use this option for truly transactional communications that Contacts must receiv
 Enabling the toggle
 ===================
 
+.. vale off
+
 #. Open the Email you want to edit.
 #. Click the **Advanced** tab.
 #. Set **Send to unsubscribed contacts** to **Yes**.
 #. A warning message appears asking you to confirm this action, as sending Emails to unsubscribed Contacts may have legal implications.
 #. Confirm to enable the setting, then save the Email.
+
+.. vale on
 
 .. warning::
 
@@ -319,7 +323,11 @@ Enabling the toggle
 Frequency rules behavior
 ========================
 
+.. vale off
+
 Enabling **Send to unsubscribed contacts** prevents the Email from counting towards the Contact's :doc:`frequency rules </contacts/frequency_rules>` limits. This ensures that important transactional Emails reach Contacts regardless of communication frequency restrictions.
+
+.. vale on
 
 Disabling the toggle causes the Email to count towards frequency rule limits as normal.
 
