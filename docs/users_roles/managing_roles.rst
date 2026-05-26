@@ -157,12 +157,10 @@ The Contact Permissions section includes several permission categories:
 
 .. note::
 
-   Notes permissions determine which Notes a User can view, edit, and delete based on Note ownership - not Contact ownership. A User with ``Edit own`` Notes permission can edit Notes they created, even on Contacts owned by other Users. See :ref:`Notes<notes>` for more details.
+   * **Notes permissions** determine which Notes a User can view, edit, and delete based on Note ownership - not Contact ownership. A User with ``Edit own`` Notes permission can edit Notes they created, even on Contacts owned by other Users. See :ref:`Notes<notes>` for more details.
 
-.. note::
+   * **User permissions** restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see.
 
-  User permissions restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see.
-
-  For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
+     For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
 
 You can also create :xref:`Roles using the API`.

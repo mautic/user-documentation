@@ -310,7 +310,7 @@ The edit and delete buttons for Notes appear based on your Notes permissions and
 
 For example, if you have ``Edit own`` Notes permission, you can edit your own Notes on any Contact you can view - even Contacts owned by other Users. However, you can't edit Notes that other Users created unless you also have ``Edit others`` permission.
 
-See :doc:`/users_roles/managing_roles` for details on configuring Notes permissions.
+See :doc:`/users_roles/managing_roles` for details on configuring permissions.
 
 Social
 ======
