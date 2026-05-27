@@ -587,13 +587,22 @@ To configure globally blocked domains - applying to all Forms in your Mautic ins
   :width: 600
   :alt: Screenshot showing global domain blocking
 
-Specify domains, one per line, using either full Email addresses or entire domains using an asterisk before the domain name, which acts as a wildcard. Ensure you save your changes.
+Specify domains, one per line. You can enter:
+
+- A plain domain name such as ``blocked.com`` to block all Email addresses from that domain
+- A full Email address such as ``spam@example.com`` to block a specific address
+- A wildcard pattern such as ``*@blocked.com`` to match patterns
+
+Ensure you save your changes.
 
 
 Applying domain name filtering to a Form
 ========================================
 
-To apply domain name filtering on a Mautic Form, add an Email field to the Form - after setting up the domain exclusions in the previous step - and under the Validation tab, set the Domain name submission filter switch to Yes.
+To apply domain name filtering on a Mautic Form, add an Email field to the Form. Under the Validation tab, set the Domain name submission filter switch to Yes.
+
+.. note::
+  When you have blocked domains configured in **Configuration > Form Settings**, new Email fields automatically enable the Domain name submission filter. You can turn this off for individual fields if needed.
 
 .. image:: images/forms/block_domains_form.png
   :width: 600

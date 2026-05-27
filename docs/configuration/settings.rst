@@ -455,7 +455,7 @@ Form settings
   :width: 600
   :alt: Screenshot showing Form Settings Configuration in Mautic
 
-* **Do not accept submission from these domain names** - To block Contacts with specific Email domains from submitting your Forms, enter those domains in the dialog box. Select an option on each Form you want to apply this block to. You can restrict either specific Email aliases that belong to a domain or an entire domain. To block the entire domain, you can use wildcards (*).
+* **Do not accept submission from these domain names** - To block Contacts with specific Email domains from submitting your Forms, enter those domains in the dialog box, one per line. You can enter a plain domain name such as ``blocked.com``, a full Email address such as ``spam@example.com``, or a wildcard pattern such as ``*@blocked.com``. Enable the Domain name submission filter option on each Email field where you want to apply this block. When blocked domains are configured here, new Email fields on Forms automatically enable the filter.
 
 Contact settings
 ****************
