@@ -11,6 +11,7 @@ Azure
 bcc
 Beanstalkd
 Bing
+Bingbot
 bitwise
 blocklist
 boolean
@@ -54,6 +55,7 @@ GitBook
 GitHub
 Gitpod
 GMail
+Googlebot
 Grav
 Gravatar
 Hammerschmied
@@ -78,6 +80,7 @@ MailChimp
 Mailjet
 Marketing Messages
 Mautic
+Matomo
 MaxMind
 Middlewares
 middlewares
