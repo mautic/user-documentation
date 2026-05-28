@@ -296,9 +296,9 @@ Setting a signature happens in two places:
 
    .. important::
 
-     For the ``{signature}`` token to use the owner's signature, the Email must have **Use owner as mailer** enabled in its advanced settings. Enabling the global **Mailer is owner** setting in Configuration alone isn't sufficient.
+     For the ``{signature}`` token to use the owner's signature, you must enable **Use owner as mailer** in the Email's advanced settings. Enabling only the global **Mailer is owner** setting in Configuration isn't sufficient.
 
-     If the owner doesn't have a signature configured, the ``{signature}`` token resolves to empty when owner-as-mailer is enabled.
+     If the owner hasn't configured a signature, the ``{signature}`` token resolves to empty when you enable owner-as-mailer.
 
 
    .. vale off
