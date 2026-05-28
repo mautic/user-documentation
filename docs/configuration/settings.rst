@@ -90,7 +90,11 @@ Miscellaneous settings
 
   .. note::
 
+     .. vale off
+
      In addition to this configurable list, Mautic automatically detects common bots using the Matomo device-detector library. This includes well-known bots like Googlebot, Bingbot, and social media crawlers, which improves the accuracy of your Email open and page visit statistics without any additional setup.
+
+     .. vale on
   
 * **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here.
 
