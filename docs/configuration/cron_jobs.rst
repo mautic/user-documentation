@@ -305,7 +305,7 @@ Preventing duplicate Report Emails
 
 Running the Report send and cleanup operations at the same time can cause duplicate Report Emails. To prevent this, run separate Cron jobs:
 
-#. A cleanup-only job that removes old exported files:
+#. A cleanup-only job that removes old exported files without sending Report Emails:
 
    .. code-block:: php
 
