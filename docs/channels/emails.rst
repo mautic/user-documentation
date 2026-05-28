@@ -282,27 +282,32 @@ Signatures
 
 Setting a signature happens in two places:
 
-#. The default signature is in the Configuration > Email Settings tab. The default text is 
+#. The default signature is in the **Configuration** > **Email Settings** tab. The default text is:
 
-.. code-block:: html
+   .. code-block:: html
 
-  Best regards,<br/>|FROM_NAME|.
+      Best regards,<br/>|FROM_NAME|.
 
-Mautic replaces the ``|FROM_NAME|`` token with the name defined in the Email Settings tab.
+   Mautic replaces the ``|FROM_NAME|`` token with the name defined in the Email Settings tab.
 
-Mautic uses this signature when the Email doesn't have **Use owner as mailer** enabled.
+   Mautic uses this signature when the Email doesn't have **Use owner as mailer** enabled.
 
 #. Each Mautic User can configure their own signature in their account settings. Mautic uses this signature when the Email has **Use owner as mailer** enabled and the Contact has an owner assigned.
 
-.. important::
-  For the ``{signature}`` token to use the owner's signature, the Email must have **Use owner as mailer** enabled in its advanced settings. Enabling the global **Mailer is owner** setting in Configuration alone isn't sufficient.
+   .. important::
 
-  If the owner doesn't have a signature configured, the ``{signature}`` token resolves to empty when owner-as-mailer is enabled.
+     For the ``{signature}`` token to use the owner's signature, the Email must have **Use owner as mailer** enabled in its advanced settings. Enabling the global **Mailer is owner** setting in Configuration alone isn't sufficient.
 
-.. note::
-  When a User sends an Email directly from a Contact's profile, Mautic uses the logged-in User's signature with the from name and Email address specified in the Email send Form - not the Contact owner's signature. Mautic pre-fills these values with those of the logged-in User.
+     If the owner doesn't have a signature configured, the ``{signature}`` token resolves to empty when owner-as-mailer is enabled.
 
-  This applies regardless of whether the Contact has a different owner assigned, or no owner at all. The same behavior applies when sending test Emails.
+
+   .. vale off
+
+   When a User sends an Email directly from a Contact's profile, Mautic uses the logged-in User's signature with the 'From' name and email address specified in the **Send email** form, not the Contact owner's signature. Mautic pre-fills these values with those of the logged-in User.
+
+   .. vale on
+
+   This applies regardless of whether the Contact has a different owner assigned, or no owner at all. The same behavior applies when sending test Emails.
 
 
 .. vale off
