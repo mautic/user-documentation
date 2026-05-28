@@ -445,7 +445,7 @@ However, you can specify much more here. Mautic recognizes relative formats too 
 
 .. note::
 
-  Hour-based relative filters work with date and time fields such as **Date last active** or **Date modified**. These filters compare the full timestamp including time, not just the date portion.
+   Hour-based relative filters work with date and time fields such as **Date last active** or **Date modified**. These filters compare the full timestamp including time, not just the date portion.
 
 Example - Consider that today is ``2022-03-05``:
 
