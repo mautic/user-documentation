@@ -106,9 +106,11 @@ Email Report columns
 
 When using 'Emails' as the data source, you can add the following columns to measure Email engagement:
 
+.. vale off
+
 * **Sent count:** the number of Emails sent to Contacts.
-* **Read count:** the number of Emails opened by Contacts.
-* **Read ratio:** the percentage of sent Emails that were opened by Contacts.
+* **Read count:** the number of Emails that Contacts opened.
+* **Read ratio:** the percentage of sent Emails that Contacts opened.
 * **Click-through count:** the number of unique Contacts who clicked any link in the Email.
 * **Click-through rate:** the percentage of sent Emails that resulted in at least one click.
 * **Click-to-open rate:** the percentage of opened Emails that resulted in at least one click. This helps you understand how engaging the Email content is to recipients who already opened it.
@@ -117,11 +119,13 @@ When using 'Emails' as the data source, you can add the following columns to mea
 * **Unsubscribe-to-Open Ratio:** the percentage of unsubscribed Contacts relative to those who opened the Email. This helps you understand how Email content affects unsubscribe rates among engaged recipients.
 * **Bounced:** the number of Emails that bounced.
 * **Bounced ratio:** the percentage of sent Emails that bounced.
-* **Clicks:** the total number of link clicks across all recipients (non-unique).
+* **Clicks:** the total number of link clicks across all recipients - non-unique.
 * **Clicks ratio:** the percentage of sent Emails that resulted in a click, based on total clicks rather than unique Contacts.
 * **Unique clicks:** the total number of unique clicks across all trackable links. A Contact clicking multiple different links is counted multiple times. If you need the number of unique Contacts who clicked any link, use **Click-through count** instead.
 * **Unique clicks ratio:** the percentage of sent Emails that resulted in a unique click, based on summed per-link unique hits.
-* **DNC Preferences:** summary of all Do Not Contact preferences for the Contact across all channels and Emails.
+* **DNC Preferences:** summary of all Do Not Contact preferences for the Contact across all Channels and Emails.
+
+.. vale on
 
 .. tip::
 
