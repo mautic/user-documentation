@@ -54,3 +54,16 @@ You can preview a Landing Page Draft may by appending ``/draft`` to the end of t
   :width: 400
   :alt: Screenshot showing the Preview Draft URL link on the Landing Page edit interface.
 
+.. vale off
+
+Downloading Landing Page previews as PDF
+========================================
+
+.. vale on
+
+You can download Landing Page previews as PDF files. In the Preview URL panel on the Landing Page details overview, a download button appears next to the preview button. Clicking this button opens a PDF version of the Landing Page preview in a new browser tab.
+
+The PDF download feature works with both standard previews and Draft previews. If a Landing Page has a Draft version, both preview panels include download buttons.
+
+If you select a Contact in the preview settings before downloading, the PDF includes Contact-specific token values rendered in the content.
+

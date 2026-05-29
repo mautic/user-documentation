@@ -116,6 +116,19 @@ An Email Draft may be previewed by appending ``/draft`` to the end of the Email 
   :width: 400
   :alt: Screenshot showing the Preview Draft URL link on the Email edit interface.
 
+.. vale off
+
+Downloading Email previews as PDF
+---------------------------------
+
+.. vale on
+
+You can download Email previews as PDF files. In the Preview URL panel on the Email details page, a download button appears next to the preview button. Clicking this button opens a PDF version of the Email preview in a new browser tab.
+
+The PDF download feature works with both standard previews and Draft previews. If an Email has a Draft version, both preview panels include download buttons.
+
+If you select a Contact in the preview settings before downloading, the PDF includes Contact-specific token values rendered in the content.
+
 
 Translations
 ============
