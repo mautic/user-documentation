@@ -10,10 +10,15 @@ Frequency rules are a set of rules used to define the number of times you should
 How to set frequency rules
 ***************************
 
+.. vale off
+
 * Globally, from the configuration panel, you can set frequency rules for both Email and SMS settings.
 
 
 * Individually, from a Contact's detail page under the dropdown menu on the upper right-hand side, you can select the Channels where you want the rules to apply. Setting the rule here overrides the general settings.
+* 
+
+.. vale on
 
 .. vale off
 
