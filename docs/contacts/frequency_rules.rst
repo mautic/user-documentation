@@ -20,17 +20,17 @@ How to set frequency rules
 
 .. vale on
 
-.. vale off
-
 Emails and frequency rules
 **************************
 
-.. vale on
+.. vale off
 
 Frequency rules determine whether an Email counts towards the Contact's communication limits. This behavior depends on the **Send to unsubscribed contacts** setting configured in the Email's Advanced tab.
 
-* When **Send to unsubscribed contacts** is set to **No**, the Email counts towards the Contact's frequency rule limits. If a Contact has reached their limit, Mautic postpones the Email until the limit resets.
-
 * When you set **Send to unsubscribed contacts** to **Yes**, the Email doesn't count towards frequency rule limits. This ensures that Mautic delivers important transactional communications regardless of how many other Emails the Contact has received.
+
+.. vale on
+
+When you set **Send to unsubscribed contacts** to **No**, the Email counts towards the Contact's frequency rule limits. If a Contact has reached their limit, Mautic postpones the Email until the limit resets.
 
 See :ref:`send to unsubscribed Contacts` for more information.

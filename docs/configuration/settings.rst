@@ -362,12 +362,12 @@ Default frequency rule
 .. vale on
 
 .. image:: images/default-frequency-rule.png
-  :width: 600
-  :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
+   :width: 600
+   :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
 
-.. note:: 
+.. note::
 
-  More information is available in the :doc:`Default Frequency Rule documentation</contacts/frequency_rules>`.
+   More information is available in the :doc:`Default Frequency Rule documentation </contacts/frequency_rules>`.
 
 Monitored inbox settings
 ========================
