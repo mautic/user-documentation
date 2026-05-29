@@ -16,7 +16,6 @@ blocklist
 boolean
 booleans
 cc
-CAN
 CASL
 CCPA
 Citrix
@@ -122,7 +121,6 @@ Shortcode
 shortcode
 shortcodes
 SMS
-SPAM
 SMTP
 SNS
 SparkPost

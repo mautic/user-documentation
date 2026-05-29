@@ -312,7 +312,11 @@ Enabling the toggle
 
    **In many countries, sending marketing Emails to Contacts who have unsubscribed is illegal.** This feature exists solely for genuinely transactional communications such as receipts, password resets, legal notices, and account updates—not marketing content.
 
+   .. vale off
+
    Misusing this feature to send marketing or promotional Emails to unsubscribed Contacts can result in serious legal consequences, including fines and penalties under data protection regulations such as the General Data Protection Regulation - GDPR, the Controlling the Assault of Non-Solicited Pornography And Marketing Act - CAN-SPAM Act, or Canada's Anti-Spam Legislation - CASL.
+
+   .. vale on
 
 .. vale off
 
@@ -327,11 +331,13 @@ Frequency rules behavior
 
 .. vale off
 
-Enabling **Send to unsubscribed contacts** prevents the Email from counting towards the Contact's :doc:`frequency rules </contacts/frequency_rules>` limits. This ensures that important transactional Emails reach Contacts regardless of communication frequency restrictions.
+Frequency rules determine whether an Email counts towards the Contact's :doc:`frequency rules </contacts/frequency_rules>` limits. This behavior depends on the **Send to unsubscribed contacts** setting configured in the Email's Advanced tab.
+
+* When you set **Send to unsubscribed contacts** to **No**, the Email counts towards the Contact's frequency rule limits. If a Contact has reached their limit, Mautic postpones the Email until the limit resets.
+
+* When you set **Send to unsubscribed contacts** to **Yes**, the Email doesn't count towards frequency rule limits. This ensures that Mautic delivers important transactional communications regardless of how many other Emails the Contact has received.
 
 .. vale on
-
-Disabling the toggle causes the Email to count towards frequency rule limits as normal.
 
 Signatures
 **********
