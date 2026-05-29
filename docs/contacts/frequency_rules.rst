@@ -28,4 +28,4 @@ Frequency rules determine whether an Email counts towards the Contact's communic
 
 * When you set **Send to unsubscribed contacts** to **Yes**, the Email doesn't count towards frequency rule limits. This ensures that Mautic delivers important transactional communications regardless of how many other Emails the Contact has received.
 
-For more information about the **Send to unsubscribed contacts** setting, see :doc:`/channels/emails`.
+See :ref:`send to unsubscribed Contacts` for more information.

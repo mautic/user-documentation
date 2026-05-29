@@ -279,10 +279,12 @@ If set to No, Mautic uses the address and name supplied in the Email 'From' fiel
 
 .. vale off
 
+.. _send to unsubscribed Contacts:
+
 Send to unsubscribed contacts
 *****************************
 
-The **Send to unsubscribed contacts** toggle allows you to send Emails to Contacts who have unsubscribed from your communications. This feature is available in the Advanced tab for both Template and Segment Emails.
+The **Send to unsubscribed contacts** toggle allows you to send Emails to Contacts who have unsubscribed from your communications. This feature is available in the **Advanced** tab for both Template and Segment Emails.
 
 .. vale on
 
@@ -316,7 +318,7 @@ Enabling the toggle
 
 .. note::
 
-   Enabling this toggle requires the **Send to unsubscribed contacts** permission assigned to your Role. See :doc:`/users_roles/managing_roles` for details on configuring permissions.
+   Enabling this toggle requires the **Send to unsubscribed contacts** Email permission assigned to your Role. See :ref:`Setting Role permissions <setting granular permissions>` for details on configuring permissions.
 
 .. vale on
 

@@ -357,7 +357,7 @@ Default frequency rule
 
 .. vale off
 
-* **Do Not Contact more than <number> each <period>** - This limits the number of Emails a Contact receives in a certain period of time day, week, month. Emails with **Send to unsubscribed contacts** enabled don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+* **Do Not Contact more than <number> each <period>** - This limits the number of Emails a Contact receives in a certain period of time: day, week, or month. Emails with **Send to unsubscribed contacts** enabled don't count towards this limit. You can adjust this at the individual Contact level, either manually or via the **Preference Center** setting.
 
 .. vale on
 

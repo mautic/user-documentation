@@ -38,6 +38,8 @@ Limit these accounts, and ensure that their credentials are secure.
 
 If you select this option, you won't be able to configure anything under **Permissions** because by default, this account has full access to everything.
 
+.. _setting granular permissions:
+
 Setting granular permissions
 ============================
 
@@ -96,7 +98,7 @@ Since Mautic 5.1 there is an additional permission relating to allowing Users of
 
 .. vale off
 
-The Email permissions include a **Send to unsubscribed contacts** option. When granted, Users with this permission can enable the **Send to unsubscribed contacts** toggle on Emails. This allows sending Emails to Contacts who have unsubscribed, which is necessary for transactional communications such as legal notices or account updates. Without this permission, the toggle isn't editable in the Email's Advanced settings.
+The Email permissions include a **Send to unsubscribed contacts** option. When granted, Users with this permission can enable the **Send to unsubscribed contacts** toggle on Emails. This allows sending Emails to Contacts who have unsubscribed, which is necessary for transactional communications such as legal notices or account updates. Without this permission, the toggle isn't editable in the Email's **Advanced** settings.
 
 .. vale on
 
