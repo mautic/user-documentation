@@ -436,11 +436,16 @@ Date filters allow you to choose a date via DatePicker:
 
 However, you can specify much more here. Mautic recognizes relative formats too - these string aren't translatable:
 
+* ``+1 hour`` / ``-2 hours`` / ``3 hours ago``
 * ``+1 day`` - you can also use ``1 day``
 * ``-2 days`` - you can also use ``2 days ago``
 * ``+1 week`` / ``-2 weeks`` / ``3 weeks ago``
 * ``+5 months`` / ``-6 months`` / ``7 months ago``
 * ``+1 year`` / ``-2 years`` / ``3 years ago``
+
+.. note::
+
+   Hour-based relative filters work with date and time fields such as **Date last active** or **Date modified**. These filters compare the full timestamp including time, not just the date portion.
 
 Example - Consider that today is ``2022-03-05``:
 
