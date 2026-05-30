@@ -341,9 +341,9 @@ Mail send settings
 
 * **Mailer is owner** - If Contacts in Mautic have owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they're listed as the owner for.
 
-   .. note::
+  .. note::
 
-      When enabled, **Mailer is owner** sends Emails from the Contact's owner, overriding system defaults and plain Email From addresses. However, tokenized From addresses on an Email's **Advanced** tab take precedence over the owner sender when the token resolves to a valid value. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can configure this setting for individual Emails, rather than globally. For more information, see :ref:`mailer as owner` and :ref:`Sender resolution hierarchy<sender resolution hierarchy>`.
+     When enabled, **Mailer is owner** sends Emails from the Contact's owner, overriding system defaults and plain Email From addresses. However, tokenized From addresses on an Email's **Advanced** tab take precedence over the owner sender when the token resolves to a valid value. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can configure this setting for individual Emails, rather than globally. For more information, see :ref:`mailer as owner` and :ref:`sender resolution hierarchy`.
 
 * **Service to send mail through** - Select the Email service provider you use, and enter your credentials.
 
