@@ -175,7 +175,7 @@ The token format follows the standard Contact field syntax. You can include an o
 
 .. note::
 
-   The Contact field used in the Email address must contain a valid Email address. If using a custom field, ensure it's configured as an Email field type to guarantee proper validation.
+   The Contact field used in the Email address must contain a valid Email address. If using a Custom Field, ensure it's configured as an Email field type to guarantee proper validation.
 
 .. _sender resolution hierarchy:
 
@@ -185,7 +185,7 @@ Sender resolution hierarchy
 When sending Emails, Mautic determines the **From address** using the following priority order:
 
 #. **Tokenized Email Advanced From** - If the Email's **Advanced** tab has a **From address** with a Contact field token, and that token resolves to a valid value for the Contact, Mautic uses that address.
-#. **Owner sender** - If **Mailer is owner** is enabled and the Contact has an assigned owner, Mautic uses the owner's Email address.
+#. **Owner sender** - If you enable **Mailer is owner** and the Contact has an assigned owner, Mautic uses the owner's Email address.
 
    .. note::
 
