@@ -52,7 +52,9 @@ To begin creating Campaigns, perform the following steps:
 #. Optionally, you can set the following properties:
 
    *  **Category** - Choose a Category to assign your Campaign to. Categories help you organize your Campaigns. To learn more about creating and managing Categories, see :doc:`/categories/categories-overview`.
-   *  **Allow Contacts to restart the Campaign** - Controls whether Contacts who have previously exited the Campaign can re-enter and go through the workflow again. Enable this option for recurring messages - for example birthdays or subscription renewals - or for transactional operations - for example activity notifications. When enabled, Contacts can complete the Campaign multiple times. When disabled, Contacts who exit the Campaign - whether naturally through the workflow or by being removed from a source Segment - can't restart the Campaign even if they later re-qualify for the source Segment or Form.
+   *  **Allow Contacts to restart the Campaign** - Controls whether Contacts who have previously exited the Campaign can re-enter and go through the workflow again. Enable this option for recurring messages, such as birthdays or subscription renewals, or for transactional operations like activity notifications.
+
+     When enabled, Contacts can complete the Campaign multiple times. When disabled, Contacts who exit the Campaign - whether naturally through the workflow or by being removed from a source Segment - can't restart the Campaign even if they later re-qualify for the source Segment or Form.
    *  **Campaign Reactivation Behavior** - Configure how scheduled events with relative delays should behave when you reactivate a deactivated Campaign. You can override the global default setting for this specific Campaign. See the :ref:`Campaign reactivation behavior` section for more information about the available options.
    *  **Active** - Click the toggle switch to turn the Campaign on or off. Ensure that you don't activate a Campaign until you're actually ready for it to go live. You can also schedule to activate or deactivate a Campaign at a future date by selecting a time and date.
 
