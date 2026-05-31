@@ -207,7 +207,7 @@ Advanced Campaign performance settings
 
 Mautic provides additional performance-related configuration parameters for Campaigns that you must configure by editing the ``config/local.php`` file directly. These settings help you balance UI responsiveness against database load on high-volume instances.
 
-* ``campaign_event_cache_ttl`` - Controls how long Mautic caches Campaign event statistics - such as execution counts shown in the Campaign builder - before refreshing them from the database. The default is ``600`` seconds, which is 10 minutes. Lower values provide fresher statistics in the UI but increase database queries. Higher values reduce database load but delay when new executions appear in the UI. Set to ``0`` to turn off caching entirely.
+* ``campaign_event_cache_ttl`` - Controls how long Mautic caches Campaign event statistics - such as execution counts shown in the Campaign builder - before refreshing them from the database. The default is ``600`` seconds, which is 10 minutes. Lower values provide fresher statistics in the UI but increase the number of database queries. Higher values reduce database load but delay the appearance of new executions in the UI. Set to ``0`` to turn off caching entirely.
 
   To configure this setting, you can add or modify the parameter in your ``config/local.php`` file:
 
