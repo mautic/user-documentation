@@ -106,17 +106,21 @@ You can also create :xref:`Roles using the API`.
 
 .. vale off
 
-Using same-role permissions
+Using Same Role permissions
 ===========================
 
 .. vale on
 
-Same-role permissions provide an intermediate access level between **Own** and **Others**. This allows team-based collaboration where Users can share resources within their team without granting access to resources from other teams.
+Same Role permissions provide an intermediate access level between **Own** and **Others**. This allows team-based collaboration where Users can share resources within their team without granting access to resources from other teams.
 
-When same-role permissions apply
+.. vale off
+
+When Same Role permissions apply
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Same-role permissions apply to the following areas of Mautic:
+.. vale on
+
+Same Role permissions apply to the following areas of Mautic:
 
 * Assets
 * Campaigns
@@ -134,13 +138,15 @@ For each area, you can set **View Same Role**, **Edit Same Role**, **Delete Same
 Example: regional teams sharing content
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. vale off
+
 A company has marketing teams in multiple countries. Each team needs to collaborate on shared content, but shouldn't access other teams' work.
 
-1. Create a Role called ``Italy`` and assign all Italian team members to it.
+.. vale on
 
-2. Create a Role called ``Germany`` and assign all German team members to it.
-
-3. For each Role, enable the same-role permissions. For example, select **View Same Role**, **Edit Same Role**, and **Publish Same Role** for Emails and Campaigns.
+#. Create a Role called ``Italy`` and assign all Italian team members to it.
+#. Create a Role called ``Germany`` and assign all German team members to it.
+#. For each Role, enable the Same Role permissions. For example, select **View Same Role**, **Edit Same Role**, and **Publish Same Role** for Emails and Campaigns.
 
 With this setup:
 
@@ -154,12 +160,10 @@ This pattern works for any scenario where groups need internal collaboration wit
 Combining permission levels
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Same-role permissions work alongside Own and Others permissions. Mautic checks permissions in this order:
+Same Role permissions work alongside Own and Others permissions. Mautic checks permissions in this order:
 
-1. If a User has **Others** permission, they can access all resources regardless of who created them.
-
-2. If a User has **Same Role** permission, they can access resources created by themselves and by other Users sharing the same Role.
-
-3. If a User has only **Own** permission, they can access only resources they created themselves.
+#. If a User has **Others** permission, they can access all resources regardless of who created them.
+#. If a User has **Same Role** permission, they can access resources created by themselves and by other Users sharing the same Role.
+#. If a User has only **Own** permission, they can access only resources they created themselves.
 
 You can grant broader access to specific Users by assigning them to a Role with **Others** permissions, such as a manager or administrator Role that can oversee all teams.
