@@ -110,9 +110,9 @@ Deleting Companies
 
 Deleting a Company updates the Contact-Company relationships for all Contacts associated with that Company:
 
-- If a Contact has multiple Companies, Mautic assigns the most recently attached Company as the new primary Company.
+* If a Contact has multiple Companies, Mautic assigns the most recently attached Company as the new primary Company.
 
-- If a Contact has only that Company, the Contact no longer has any Company association.
+* If a Contact has only that Company, the Contact no longer has any Company association.
 
 A confirmation dialog explains this behavior before you delete a Company or multiple Companies.
 
