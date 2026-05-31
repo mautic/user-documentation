@@ -186,11 +186,6 @@ When sending Emails, Mautic determines the **From address** using the following 
 
 #. **Tokenized Email Advanced From** - If the Email's **Advanced** tab has a **From address** with a Contact field token, and that token resolves to a valid value for the Contact, Mautic uses that address.
 #. **Owner sender** - If you enable **Mailer is owner** and the Contact has an assigned owner, Mautic uses the owner's Email address.
-
-   .. note::
-
-      When enabled, **Mailer is owner** sends Emails from the Contact's owner, overriding system defaults and plain Email From addresses. However, tokenized From addresses on an Email's **Advanced** tab take precedence over the owner sender when the token resolves to a valid value. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can configure this setting for individual Emails, rather than globally. For more information, see :ref:`mailer as owner`. For the complete sender resolution hierarchy, see :ref:`Sender resolution hierarchy<sender resolution hierarchy>`.
-
 #. **Plain Email Advanced From** - If the Email's **Advanced** tab has a standard Email address, without tokens, Mautic uses that address.
 #. **System default sender** - Mautic falls back to the system default from **Email Settings**. If the system default contains tokens, Mautic resolves them. If token resolution fails, Mautic uses the token's default value.
 
