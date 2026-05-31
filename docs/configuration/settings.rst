@@ -217,7 +217,7 @@ Mautic provides additional performance-related configuration parameters for Camp
 
   .. note::
 
-     This setting requires Doctrine result caching in your Mautic instance.
+     To use this setting, you must enable Doctrine result caching in your Mautic instance.
 
 * ``campaign_contact_count_cache_ttl`` - Controls how long Mautic caches Campaign Contact counts before refreshing them from the database. The default is ``43200`` seconds, which is 12 hours. Adjust this value if you need Campaign Contact counts to update more frequently.
 
