@@ -115,8 +115,8 @@ Same Role permissions provide an intermediate access level between **Own** and *
 
 .. vale off
 
-When Same Role permissions apply
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Where Same Role permissions apply
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. vale on
 
