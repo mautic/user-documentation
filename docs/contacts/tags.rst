@@ -94,11 +94,11 @@ Contact Tags condition
 
 Use the **Contact Tags** condition to create different Campaign paths based on whether a Contact has specific Tags.
 
-1. In the Campaign Builder, click the connector below an event.
-2. Select **Condition**.
-3. Choose **Contact Tags**.
-4. Configure which Tags to validate.
-5. Click **Add** to save the condition.
+#. In the Campaign Builder, click the connector below an event.
+#. Select **Condition**.
+#. Choose **Contact Tags**.
+#. Configure which Tags to check for.
+#. Click **Add** to save the condition.
 
 Contacts with matching Tags follow the **Yes** path, while others follow the **No** path.
 
