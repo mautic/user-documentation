@@ -59,7 +59,7 @@ Batch updates
 Using the tracking script
 -------------------------
 
-You can also add or remove Tags from Contacts using the tracking script or tracking pixel. For more information, see :ref:`Tags <contacts/manage_contacts:Tags>` in the Contact tracking documentation.
+You can also add or remove Tags from Contacts using the tracking script or tracking pixel. For more information, see :ref:`Contact tracking` section.
 
 .. vale off
 
