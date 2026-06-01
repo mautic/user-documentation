@@ -59,7 +59,7 @@ Batch updates
 Using the tracking script
 -------------------------
 
-You can also add or remove Tags from Contacts using the tracking script or tracking pixel. For more information, see :ref:`Tags <contacts/manage_contacts:Tags>` in the Contact Monitoring documentation.
+You can also add or remove Tags from Contacts using the tracking script or tracking pixel. For more information, see :ref:`Tags <contacts/manage_contacts:Tags>` in the Contact tracking documentation.
 
 .. vale off
 
@@ -97,7 +97,7 @@ Use the **Contact Tags** condition to create different Campaign paths based on w
 #. In the Campaign Builder, click the connector below an event.
 #. Select **Condition**.
 #. Choose **Contact Tags**.
-#. Configure which Tags to check for.
+#. Configure which Tags to match.
 #. Click **Add** to save the condition.
 
 Contacts with matching Tags follow the **Yes** path, while others follow the **No** path.
@@ -119,8 +119,12 @@ You can automatically add or remove Tags when a Contact submits a Form.
 
 This is helpful for tagging Contacts based on which Forms they complete, such as marking someone as interested in a specific product.
 
+.. vale off
+
 Using Tags in Segments
 **********************
+
+.. vale on
 
 You can use Tags as filters when building Segments:
 
