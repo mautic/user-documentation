@@ -78,6 +78,7 @@ There are different types of documentation available to help you navigate your w
    contacts/custom_fields
    contacts/frequency_rules
    contacts/preference_center
+   contacts/tags
 
 .. toctree::
    :maxdepth: 2
