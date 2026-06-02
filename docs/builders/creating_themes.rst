@@ -84,6 +84,17 @@ Mautic processes the ``<mj-head>`` components, including ``<mj-attributes>``.
 
 With ``<mj-attributes>``, you can define default styling for Builder blocks. When you drag blocks into the Email editor, they inherit the Theme's colors, fonts, and spacing rather than generic defaults. The Brienz Theme demonstrates this approach.
 
+With ``<mj-preview>``, you can set the preview text that recipients see in their inbox before opening the Email. This text appears after the subject line in most Email clients and helps improve open rates by giving recipients a glimpse of the Email content.
+
+.. code-block:: xml
+
+    <mj-head>
+      <mj-preview>Your preview text here</mj-preview>
+      <mj-attributes>
+        <!-- your default styles -->
+      </mj-attributes>
+    </mj-head>
+
 **Tested elements** include: ``mj-attributes``, ``mj-breakpoint``, ``mj-font``, ``mj-html-attributes``, ``mj-style``, ``mj-title``, and ``mj-preview``.
 
 .. vale off
