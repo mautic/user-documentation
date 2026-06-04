@@ -38,6 +38,8 @@ Limit these accounts, and ensure that their credentials are secure.
 
 If you select this option, you won't be able to configure anything under **Permissions** because by default, this account has full access to everything.
 
+.. _setting granular permissions:
+
 Setting granular permissions
 ============================
 
@@ -92,7 +94,14 @@ There are permission levels relating to the editable fields in the Users section
 
 * **All** - this allows the Users with this Role to edit all fields relating to the Users section
 
-Since Mautic 5.1 there is an additional permission relating to allowing Users of Mautic to export information. You can set this permission within the Contact, Forms, and Reports Permissions. If this permission isn't set, the User won't see the options for, or be able to export, information - such as lists of Contacts, Form submissions and Report data - from Mautic.
+There are additional permissions for specific features:
+
+.. vale off
+
+* **Export** - This permission controls whether Users can export information. You can set this permission within Contact, Forms, and Reports permissions. If you don't set the permission, the User won't see the options for, or be able to export, information - such as lists of Contacts, Form submissions, and Report data - from Mautic.
+* **Send to unsubscribed contacts** - This Email permission allows Users to enable the **Send to unsubscribed contacts** toggle on Emails. This allows sending Emails to Contacts who have unsubscribed, which is necessary for transactional communications such as legal notices or account updates. Without this permission, the toggle isn't editable in the Email's **Advanced** settings.
+
+.. vale on
 
 .. note:: 
 
