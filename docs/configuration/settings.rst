@@ -390,15 +390,23 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
-* **Do Not Contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+.. vale off
+
+* **Do Not Contact more than <number> each <period>** - This limits the number of Emails a Contact receives in a certain period of time: day, week, or month. You can adjust this at the individual Contact level, either manually or via the **Preference Center** setting. Emails with **Send to unsubscribed contacts** enabled don't count towards this limit. You configure **Send to unsubscribed contacts** directly within each Email's settings, not in the **Preference Center**.
+
+.. vale on
 
 .. image:: images/default-frequency-rule.png
-  :width: 600
-  :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
+   :width: 600
+   :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
 
-.. note:: 
+.. note::
 
-  More information is available in the :doc:`Default Frequency Rule documentation</contacts/frequency_rules>`.
+   .. vale off
+
+   More information is available in the :doc:`Default Frequency Rule documentation </contacts/frequency_rules>`.
+
+   .. vale on
 
 Monitored inbox settings
 ========================
@@ -441,9 +449,13 @@ Unsubscribe settings
   :width: 600
   :alt: Screenshot showing Unsubscribe Settings Configuration in Mautic
 
-* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link. 
+.. vale off
+
+* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link.
 
   For example - Edit between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the URL as it's tokenized. If you add ``{unsubscribe_url}`` as a token in the Email, you won't see this text.
+
+* **Disable unsubscribe link in header** - Select **Yes** to prevent Mautic from adding unsubscribe headers to Emails. When set to **No** - the default - Mautic automatically includes RFC 8058-compliant ``List-Unsubscribe`` and ``List-Unsubscribe-Post`` headers in Emails where you disable **Send to unsubscribed contacts**. Email clients that support this feature - such as GMail and Apple Mail - use these headers to display one-click unsubscribe capability.
 
 * **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. Don't edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
 
@@ -459,6 +471,7 @@ Unsubscribe settings
 
 * **Show Contact's preferred Channel option** - If you have multiple Channels available within your Mautic instance. For example; Email, ``SMS``, mobile push, web notifications, etc., Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
+.. vale on
 
 .. vale off
 

@@ -277,6 +277,67 @@ If set to Yes, the global setting takes precedence.
 
 If set to No, Mautic uses the address and name supplied in the Email 'From' fields.
 
+.. vale off
+
+.. _send to unsubscribed Contacts:
+
+Send to unsubscribed contacts
+*****************************
+
+The **Send to unsubscribed contacts** toggle allows you to send Emails to Contacts who have unsubscribed from your communications. This feature is available in the **Advanced** tab for both Template and Segment Emails.
+
+.. vale on
+
+Use this option for truly transactional communications that Contacts must receive regardless of their subscription status, such as:
+
+* Terms and conditions updates
+* Legal notifications
+* Account-related communications
+* Service announcements
+
+Enabling the toggle
+===================
+
+.. vale off
+
+#. Open the Email you want to edit.
+#. Click the **Advanced** tab.
+#. Set **Send to unsubscribed contacts** to **Yes**.
+#. A warning message appears asking you to confirm this action, as sending Emails to unsubscribed Contacts may have legal implications.
+#. Confirm to enable the setting, then save the Email.
+
+.. vale on
+
+.. warning::
+
+   **In many countries, sending marketing Emails to Contacts who have unsubscribed is illegal.** This feature exists solely for genuinely transactional communications such as receipts, password resets, legal notices, and account updates—not marketing content.
+
+   .. vale off
+
+   Misusing this feature to send marketing or promotional Emails to unsubscribed Contacts can result in serious legal consequences, including fines and penalties under data protection regulations such as the General Data Protection Regulation - GDPR, the Controlling the Assault of Non-Solicited Pornography And Marketing Act - CAN-SPAM Act, or Canada's Anti-Spam Legislation - CASL.
+
+   .. vale on
+
+.. vale off
+
+.. note::
+
+   Enabling this toggle requires the **Send to unsubscribed contacts** Email permission assigned to your Role. See :ref:`Setting Role permissions <setting granular permissions>` for details on configuring permissions.
+
+.. vale on
+
+Frequency rules behavior
+========================
+
+.. vale off
+
+The **Send to unsubscribed contacts** setting configured in the Email's Advanced tab determines whether an Email counts towards the Contact's :doc:`frequency rules </contacts/frequency_rules>` limits.
+
+* When you set **Send to unsubscribed contacts** to **No**, the Email counts towards the Contact's frequency rule limits. If a Contact has reached their limit, Mautic postpones the Email until the limit resets.
+* When you set **Send to unsubscribed contacts** to **Yes**, the Email doesn't count towards frequency rule limits. Mautic delivers important transactional communications regardless of how many other Emails the Contact has received.
+
+.. vale on
+
 Signatures
 **********
 
