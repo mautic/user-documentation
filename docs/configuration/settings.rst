@@ -87,6 +87,14 @@ Miscellaneous settings
 * **List of IPs not to track Contacts with** - To turn off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn't recommend adding your office IP address. If you list your internal IP address, Mautic won't track clicks, page hits, etc., from that IP, **including when you are testing** which can cause difficulties.
 
 * **List of known Bots** - Mautic has the feature to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here - one per line.
+
+  .. note::
+
+     .. vale off
+
+     In addition to this configurable list, Mautic automatically detects common bots using the Matomo device-detector library. This includes well-known bots like Googlebot, Bingbot, and social media crawlers, which improves the accuracy of your Email open and page visit statistics without any additional setup.
+
+     .. vale on
   
 * **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here.
 
@@ -189,6 +197,33 @@ The optimal for Contact event scheduler settings allow you to configure the defa
 * **Interaction Data Cache Timeout** - Choose how long to cache the interaction data for.
 * **Fetch Interactions From** - Select the time frame for fetching interaction data. This determines how far back to look for interactions.
 * **Interaction Fetch Limit** - Set the maximum number of interactions of each type - for example: Page hits, Email reads, Form submits - to retrieve for timing optimization.
+
+.. vale off
+
+Advanced Campaign performance settings
+======================================
+
+.. vale on
+
+Mautic provides additional performance-related configuration parameters for Campaigns that you must configure by editing the ``config/local.php`` file directly. These settings help you balance UI responsiveness against database load on high-volume instances.
+
+* ``campaign_event_cache_ttl`` - Controls how long Mautic caches Campaign event statistics - such as execution counts shown in the Campaign builder - before refreshing them from the database. The default is ``600`` seconds, which is 10 minutes. Lower values provide fresher statistics in the UI but increase the number of database queries. Higher values reduce database load but delay the appearance of new executions in the UI. Set to ``0`` to turn off caching entirely.
+
+  To configure this setting, you can add or modify the parameter in your ``config/local.php`` file:
+
+  .. code-block:: php
+
+     'campaign_event_cache_ttl' => 600, // seconds
+
+  .. note::
+
+     To use this setting, you must enable Doctrine result caching in your Mautic instance.
+
+* ``campaign_contact_count_cache_ttl`` - Controls how long Mautic caches Campaign Contact counts before refreshing them from the database. The default is ``43200`` seconds, which is 12 hours. Adjust this value if you need Campaign Contact counts to update more frequently.
+
+  .. code-block:: php
+
+     'campaign_contact_count_cache_ttl' => 43200, // seconds
 
 Email settings
 **************
