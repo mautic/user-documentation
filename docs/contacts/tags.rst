@@ -77,11 +77,11 @@ Modify Contact's Tags action
 
 Use the **Modify Contact's Tags** action to add or remove Tags from Contacts as they progress through a Campaign.
 
-1. In the Campaign Builder, click the connector below an event.
-2. Select **Action**.
-3. Choose **Modify Contact's Tags**.
-4. Select Tags to add or remove.
-5. Click **Add** to save the action.
+#. In the Campaign Builder, click the connector below an event.
+#. Select **Action**.
+#. Choose **Modify Contact's Tags**.
+#. Select Tags to add or remove.
+#. Click **Add** to save the action.
 
 This action is useful for marking Contacts who have reached certain Stages, completed specific Actions, or require follow-up.
 
@@ -111,7 +111,7 @@ Using Tags in Forms
 
 You can automatically add or remove Tags when a Contact submits a Form.
 
-#. Navigate to **Components > Forms** and edit a Form.
+#. Navigate to **Components** > **Forms** and edit a Form.
 #. In the Form builder, go to the **Actions** tab.
 #. Click **Add new action** and select **Modify Contact's Tags**.
 #. Select Tags to add or remove upon Form submission.
@@ -131,7 +131,7 @@ You can use Tags as filters when building Segments:
 #. Navigate to **Segments** and create or edit a Segment.
 #. Go to the **Filters** tab.
 #. Add a filter and select **Tags** from the Contact field options.
-#. Choose the operator - for example, **Includes**, **Excludes**, **Empty**, or **Not empty**.
+#. Choose the operator. For example, **Includes**, **Excludes**, **Empty**, or **Not empty**.
 #. Select the Tag or Tags to filter by.
 #. Click **Save** to apply the filter.
 
