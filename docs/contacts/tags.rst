@@ -32,22 +32,14 @@ Adding Tags to Contacts
 
 .. vale on
 
-.. vale off
-
 Manual assignment
 -----------------
-
-.. vale on
-
-.. vale off
 
 #. Navigate to the Contact's record.
 #. Click **Edit** to open the Contact edit form.
 #. In the **Tags** field, start typing to search existing Tags or enter a new Tag name.
 #. Press Enter or select from the dropdown to apply the Tag.
 #. Click **Save** to save the changes.
-
-.. vale on
 
 Batch updates
 -------------
@@ -63,7 +55,7 @@ Batch updates
 Using the tracking script
 -------------------------
 
-You can also add or remove Tags from Contacts using the tracking script or tracking pixel. For more information, see :ref:`Tags <contacts/manage_contacts:Tags>` in the Contact Monitoring documentation.
+You can also add or remove Tags from Contacts using the tracking script or tracking pixel. For more information, see :ref:`Contact tracking` section.
 
 .. vale off
 
@@ -87,11 +79,7 @@ Use the **Modify Contact's Tags** action to add or remove Tags from Contacts as 
 #. Select Tags to add or remove.
 #. Click **Add** to save the action.
 
-.. vale off
-
-This action is useful for marking Contacts who have reached certain stages, completed specific actions, or require follow-up.
-
-.. vale on
+This action is useful for marking Contacts who have reached certain Stages, completed specific Actions, or require follow-up.
 
 .. vale off
 
@@ -105,7 +93,7 @@ Use the **Contact Tags** condition to create different Campaign paths based on w
 #. In the Campaign Builder, click the connector below an event.
 #. Select **Condition**.
 #. Choose **Contact Tags**.
-#. Configure which Tags to check for.
+#. Configure which Tags to match.
 #. Click **Add** to save the condition.
 
 Contacts with matching Tags follow the **Yes** path, while others follow the **No** path.
@@ -119,7 +107,7 @@ Using Tags in Forms
 
 You can automatically add or remove Tags when a Contact submits a Form.
 
-#. Navigate to **Components > Forms** and edit a Form.
+#. Navigate to **Components** > **Forms** and edit a Form.
 #. In the Form builder, go to the **Actions** tab.
 #. Click **Add new action** and select **Modify Contact's Tags**.
 #. Select Tags to add or remove upon Form submission.
@@ -127,15 +115,19 @@ You can automatically add or remove Tags when a Contact submits a Form.
 
 This is helpful for tagging Contacts based on which Forms they complete, such as marking someone as interested in a specific product.
 
+.. vale off
+
 Using Tags in Segments
 **********************
+
+.. vale on
 
 You can use Tags as filters when building Segments:
 
 #. Navigate to **Segments** and create or edit a Segment.
 #. Go to the **Filters** tab.
 #. Add a filter and select **Tags** from the Contact field options.
-#. Choose the operator - for example, **Includes**, **Excludes**, **Empty**, or **Not empty**.
+#. Choose the operator. For example, **Includes**, **Excludes**, **Empty**, or **Not empty**.
 #. Select the Tag or Tags to filter by.
 #. Click **Save** to apply the filter.
 
