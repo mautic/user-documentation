@@ -59,7 +59,17 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 * **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website.
 
-.. note:: 
+* **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. Enter the domain name where you installed Mautic, such as ``mautic.example.com``. Separate multiple hosts with a comma. You can also use regular expressions for advanced matching, which Mautic encloses with ``/`` delimiters. For instance, ``.*\.?example.com$`` becomes ``/.*\.?example.com$/``. If left empty, Mautic responds to all hosts.
+
+  Mautic validates your input during the save process. Invalid domain names or regular expression patterns trigger an error message.
+
+  .. caution::
+
+     Incorrect settings can prevent access to your Mautic instance. Getting locked out requires manually editing the database or configuration file to fix the setting.
+
+* **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
+
+.. note::
 
   In the Valid Domains field, don't include a slash at the end. For example, use ``https://www.example.com`` instead of ``https://www.example.com/``.
 
@@ -69,10 +79,6 @@ Miscellaneous settings
 .. image:: images/miscellaneous-settings.png
   :width: 600
   :alt: Screenshot showing Miscellaneous Settings Configuration in Mautic
-
-* **Trusted hosts** - To explicitly allow the hosts that can send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?example.com$``. If left empty, Mautic will respond to all hosts.
-  
-* **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
 * **IP lookup service** - By default, Mautic uses :xref:`MaxMind's` database to identify the city of a website visitor, based on the location of the Internet Service Provider - ISP - for their IP address.
 
@@ -156,7 +162,17 @@ Campaign settings
 
 * **Use date range for all views** - When viewing a Campaign, the date range of actions, conditions, decisions, and Contacts displayed in the tabs, Mautic uses this date range by default.
 
-* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`cron job<campaign cron jobs>` to summarize existing data.
+* **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<Campaign Cron jobs>` to summarize existing data.
+
+* **Campaign Reactivation Behavior** - Configure how Mautic handles scheduled events with relative delays in the middle of the workflow when you reactivate a Campaign after a period of deactivation. This setting provides a global default that you can override for an individual Campaign. This setting affects how the :ref:`Campaign Cron jobs<Campaign Cron jobs>` schedule events. See :ref:`Campaign reactivation behavior` section for more information.
+
+  Available options:
+
+  * **Count delay regardless of activation state** - Mautic uses the original trigger date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
+
+  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules Events to execute the full delay period starting from the last activation date. 
+
+  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules Events accordingly when you reactivate the Campaign.
 
 Optimal for Contact event scheduler
 ===================================
@@ -283,7 +299,7 @@ The table below lists available transport Plugins created for Mautic to include 
 Configuring the Queue
 =====================
 
-The system can either send Emails immediately or queue them for processing in batches by a :doc:`cron job </configuration/cron_jobs>`. Documentation relating to configuring the queue is in the :doc:`queue </queue/queue>` section.
+The system can either send Emails immediately or queue them for processing in batches by a :doc:`Cron job </configuration/cron_jobs>`. Documentation relating to configuring the queue is in the :doc:`queue </queue/queue>` section.
 
 Immediate delivery
 ------------------
@@ -293,13 +309,13 @@ This is the default means of delivery. As soon as an action in Mautic triggers a
 Queued delivery
 ---------------
 
-Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`cron job </configuration/cron_jobs>` at the desired interval to run the command:
+Mautic works most effectively with high send volumes if you use the queued delivery method. Mautic stores the Email in the configured spool directory until the execution of the command to process the queue. Set up a :doc:`Cron job </configuration/cron_jobs>` at the desired interval to run the command:
 
 .. code-block:: shell
     
     php /path/to/mautic/bin/console messenger:consume email
 
-Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`cron job documentation </configuration/cron_jobs>` for more specifics.
+Some hosts may have limits on the number of Emails sent during a specified time frame and/or limit the execution time of a script. If that's the case for you, or if you just want to moderate batch processing, you can configure batch numbers and time limits in Mautic's Configuration. See the :doc:`Cron job documentation </configuration/cron_jobs>` for more specifics.
 
 
 Mail send settings
@@ -444,6 +460,20 @@ Form settings
 Contact settings
 ****************
 
+.. vale off
+
+Multiple Company management
+===========================
+
+.. vale on
+
+.. image:: images/contact_settings_multiple_companies_enable.png
+   :width: 600
+   :alt: Contact Settings section with the 'Enable Multiple Companies' toggle switch set to on.
+
+This setting, when enabled, allows a Contact to link with more than one Company. It's beneficial for businesses that interact with clients across multiple Companies.
+When you turn this off, a Contact can only link to one Company. This is ideal for businesses with simpler structures where each Contact only needs a single Company association.
+
 Contact merge settings
 ======================
 
@@ -471,7 +501,7 @@ Import settings
   :width: 600
   :alt: Screenshot showing Import Settings Configuration in Mautic
 
-* **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV automatically sets to import in the background which requires a :ref:`cron job<import contacts cron job>` to trigger. Set to 0 if you want to always import files in the background recommended for performance optimization.
+* **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV automatically sets to import in the background which requires a :ref:`Cron job<import Contacts Cron job>` to trigger. Set to 0 if you want to always import files in the background recommended for performance optimization.
 
 Export settings
 ===============
@@ -489,7 +519,7 @@ Segment settings
   :width: 600
   :alt: Screenshot showing Segment Settings Configuration in Mautic
 
-* **Show warning if Segment hasn't been rebuilt for X hours** - Every time a :ref:`cron jobs<segment cron jobs>` runs, Segments are rebuilt. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, after which the warning message appears.
+* **Show warning if Segment hasn't been rebuilt for X hours** - Every time a :ref:`Cron jobs<Segment Cron jobs>` runs, Segments are rebuilt. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, after which the warning message appears.
 
 Company settings
 ****************
@@ -680,6 +710,8 @@ Mautic tracking settings
 * **Identify visitors by IP** - Select **Yes** to use the IP address to identify Contacts. It's possible to track unidentified visitors with the same IP address as an existing Contact. This may result in undesirable outcomes with large Companies who use the same externally facing IP address.
 
 * **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent filling your logs with hits from bots.
+
+* **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
   
 .. note:: 
 
@@ -770,7 +802,7 @@ Webhook settings
   :width: 600
   :alt: Screenshot showing Webhook Settings Configuration in Mautic
 
-* **Queue Mode** -  Select how to process Webhook events. The process immediately executes the Webhook event as soon as it arrives. The queue mode improves performance by only adding the event to the queue and requires processing by a :ref:`cron command<webhooks cron job>`.
+* **Queue Mode** -  Select how to process Webhook events. The process immediately executes the Webhook event as soon as it arrives. The queue mode improves performance by only adding the event to the queue and requires processing by a :ref:`Cron command<Webhooks Cron job>`.
 
 * **Order of the queued events** - Process the events in chronological or reverse chronological order if a Webhook has a queue of multiple events.
   

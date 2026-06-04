@@ -10,15 +10,10 @@ Creating a new Form
 
 .. vale on
 
-To create a new Form:
+To create a new Form, go to **Components > Forms** and click **New**.
 
-#. Go to Components > Forms and click New
-#. Select the type of Form you wish to create
-    * **Campaign Form** - Mautic allows you to trigger a Campaign with the submission of this type of Form. Campaign Forms have less actions directly associated with the Form submit actions - which happen immediately after Form submission - as most actions trigger as part of a Campaign workflow.
-    * **Standalone Form** - A more commonly used Form, this allows the execution of many submit actions immediately at the point of Form submission.
-
-.. warning::
-    Forms with a lot of submit actions - particularly when submitting to third party systems such as a Customer Relationship Management system - can have an impact on the Form submission time. This is especially the case if there are a lot of fields. Consider using a Campaign Form if you can wait for the cron job to trigger the actions.
+.. note::
+    All Forms in Mautic can trigger Campaigns and have access to the full range of Form actions. You can use Forms as a Contact source in Campaigns to trigger workflows when Contacts submit them.
 
 The following fields are available:
 
@@ -26,13 +21,9 @@ The following fields are available:
 
 - **Published** - Whether the Form is available for use - published - or not available - unpublished. Unpublished Forms won't be visible when you've added the Form using JavaScript. If you used the manual method to copy and paste the Form HTML, the Form remains visible but visitors **won't** be able to submit it - an error message prevents them from submitting if they try to submit an unpublished Form.
 
-.. vale off
-
 - **Publish at (date/time)** - This allows you to define the date and time at which this Form is available for submissions.
 
 - **Unpublish at (date/time)** - This allows you to define the date and time at which this Form ceases to be available for submissions.
-
-.. vale on
 
 - **Disable search indexing** - If Yes, Mautic prevents search engines from finding and displaying the Form in search results by sending the ``noindex`` http header.
 
@@ -52,13 +43,14 @@ Configuring Forms
 
 .. vale on
 
-Once you have selected the type of Form, you have some additional options to set.
+Once you have created a new Form, you have some additional options to set.
 
 Details
 =======
 
-.. image:: images/forms/standalone_form.png
-   :alt: Screenshot showing standalone Form
+.. image:: images/forms/new_form.png
+   :width: 600
+   :alt: New Form interface at Mautic
 
 The available details fields are:
 
@@ -114,8 +106,6 @@ To control the maximum number of fields shown on a Form:
 To add a new field to your Form:
 
 #. Click the Add a new field dropdown and select the type of field you wish to use. Available fields include:
-   
-   - **boolean** - This field provides a TRUE/FALSE or yes/no selection. You can configure it to display positive, negative, or both labels. Use this field for binary choices, such as agreeing to terms or opting into communications.
 
    - **CAPTCHA** - A basic tool for spam protection requiring the Form submitter to answer a question, or detecting when spambots try to submit data in a hidden CAPTCHA field - sometimes referred to as a honeypot. It's recommended to use some kind of CAPTCHA on every Form. It's also possible to support reCAPTCHA and other tools with third-party Plugins.
 
@@ -357,9 +347,6 @@ Form actions
 ************
 
 You may want to trigger certain actions to happen immediately after Form submission - this is what Form actions are for. This might include communications with the Contact, tracking, internal notifications, or other Contact management tasks.
-
-.. note::
-   The Form actions available in Mautic are also available in Standalone Forms, which include more options as they're not associated with Campaigns. Campaigns tend to trigger most actions through Campaign actions so Forms associated with Campaigns only have a basic set of Form actions.
 
 - **Add to Company's Score**: if a Contact associated with a Company record in Mautic has submitted the Form, you can add or subtract Points to the Company's overall score. Company scoring in Mautic doesn't aggregate Points for all its associated Contacts. Any actions that you want to contribute to a Company's score must be explicitly set. Negative numbers are valid if you want to subtract from a Company's score based on a Contact submitting a Form. If the Contact isn't tracked and the Form doesn't include a field mapped to Company or Company Name - on the Company object - the Company has no Points awarded.
 

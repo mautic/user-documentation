@@ -38,25 +38,29 @@ first Campaign.
 
 To begin creating Campaigns, perform the following steps:
 
+.. vale off
+
 #. Launch your Mautic instance.
 #. Click **Campaigns** in the left navigation menu. The Campaigns page appears.
 #. Click **New** on the Campaigns page. The New Campaign wizard appears as shown in the following image. Screenshot of the New Campaign screen
 
-.. image:: images/new-campaign.png
-  :width: 600
-  :alt: Screenshot of the create a new Campaign interface
+   .. image:: images/new-campaign.png
+      :width: 600
+      :alt: Screenshot of the create a new Campaign interface
 
 #. Enter a name and a brief description for your Campaign.
 #. Optionally, you can set the following properties:
 
--  **Category** - Choose a Category to assign your Campaign to. Categories help you organize your Campaigns. To learn more about creating and managing Categories, see :doc:`/categories/categories-overview`.
--  **Allow Contacts to restart the Campaign** - Click the toggle switch to allow Contacts to restart the Campaign if you're building a Campaign for a recurring message - for example birthdays, subscriptions - or transactional operations - for example activity notifications, updating data. Enabling this option allows Contacts to go through the same Campaign multiple times.
--  **Active** - Click the toggle switch to turn the Campaign on or off. Ensure that you don't activate a Campaign until you're actually ready for it to go live. You can also schedule to activate or deactivate a Campaign at a future date by selecting a time and date.
+   *  **Category** - Choose a Category to assign your Campaign to. Categories help you organize your Campaigns. To learn more about creating and managing Categories, see :doc:`/categories/categories-overview`.
+   *  **Allow Contacts to restart the Campaign** - Click the toggle switch to allow Contacts to restart the Campaign if you're building a Campaign for a recurring message - for example birthdays, subscriptions - or transactional operations - for example activity notifications, updating data. Enabling this option allows Contacts to go through the same Campaign multiple times.
+   *  **Campaign Reactivation Behavior** - Configure how scheduled events with relative delays should behave when you reactivate a deactivated Campaign. You can override the global default setting for this specific Campaign. See the :ref:`Campaign reactivation behavior` section for more information about the available options.
+   *  **Active** - Click the toggle switch to turn the Campaign on or off. Ensure that you don't activate a Campaign until you're actually ready for it to go live. You can also schedule to activate or deactivate a Campaign at a future date by selecting a time and date.
 
 #. Click **Launch Campaign Builder** to start building your Campaign, and add at least one event. For information about how to use the Campaign Builder, see :doc:`/campaigns/campaign_builder`.
 
-#. After adding events to your Campaign, close the Campaign Builder and
-   click **Save & Close** to save your changes.
+#. After adding events to your Campaign, close the Campaign Builder and click **Save & Close** to save your changes.
+
+.. vale on
 
 Add or remove Contacts in batch
 *******************************
