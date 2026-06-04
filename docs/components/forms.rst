@@ -51,14 +51,14 @@ To configure a submission limit:
 #. In the Form Builder, expand the **Advanced options** accordion.
 #. In the **Submissions limit** section, set the following fields:
 
-   - **Maximum submissions** - Enter the maximum number of submissions the Form accepts. Leave blank for unlimited submissions.
-   - **Limit reached message** - Enter a custom message to display when the Form reaches its submission limit. If left blank, Mautic displays a default message.
+   * **Maximum submissions** - Enter the maximum number of submissions the Form accepts. Leave blank for unlimited submissions.
+   * **Limit reached message** - Enter a custom message to display when the Form reaches its submission limit. If left blank, Mautic displays a default message.
 
 When a Form reaches its submission limit:
 
-- The Form stops accepting new submissions and displays the configured message.
-- The Form owner receives a notification that the Form has reached its limit.
-- If you delete submissions - individually or in bulk - and the count drops below the limit, the Form automatically reopens to accept new submissions.
+* The Form stops accepting new submissions and displays the configured message.
+* The Form owner receives a notification that the Form has reached its limit.
+* If you delete submissions - individually or in bulk - and the count drops below the limit, the Form automatically reopens to accept new submissions.
 
 .. note::
     The submission count updates in real time. Deleting submissions reduces the count, potentially reopening a Form that was previously at its limit.
