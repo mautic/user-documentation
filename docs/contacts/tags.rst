@@ -35,11 +35,15 @@ Adding Tags to Contacts
 Manual assignment
 -----------------
 
+.. vale off
+
 #. Navigate to the Contact's record.
 #. Click **Edit** to open the Contact edit form.
 #. In the **Tags** field, start typing to search existing Tags or enter a new Tag name.
 #. Press Enter or select from the dropdown to apply the Tag.
 #. Click **Save** to save the changes.
+
+.. vale on
 
 Batch updates
 -------------
