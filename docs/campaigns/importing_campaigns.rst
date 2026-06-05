@@ -42,6 +42,11 @@ You can import a Campaign in three ways.
       \* Use a ZIP file created from the Mautic export function - **recommended**. This ensures inclusion of Campaign data, external Assets, and Dynamic Content.
 #. Select **Actions** option from the dropdown menu for the **Campaign** and **Segment** entities. Choose either **Update entity** or **Create new entity**.
 
+   These options appear when the import process detects existing Campaigns or Segments that match the imported data.
+
+   * **Update entity** - Overwrites the existing Campaign or Segment in Mautic with the imported data. Use this option to update configuration, but note that it can overwrite or destroy existing changes on your instance.
+   * **Create new entity** - Forces Mautic to create a brand-new Campaign or Segment, even if a matching one already exists. This is the safer option to prevent data loss, but it can lead to duplicate resources.
+
 #. Click the **Proceed** button.
 
    |
@@ -81,6 +86,17 @@ Follow the steps below to activate an imported Campaign:
    |
 
 #. Click **Yes** when a prompt message appears.
+
+   .. warning::
+          
+   Activating a Campaign starts execution immediately. Review all Campaign steps, configurations, and associated Assets thoroughly before turning on a Campaign to prevent unintended execution of events. 
+          
+   When a Campaign goes live, scheduled events with relative delays follow the **Campaign Republish Behavior** configuration. If the Campaign uses a specific setting instead of the global default, the execution behavior changes:
+
+   * **Use global setting** - Applies the default behavior configured in the global Mautic settings.
+   * **Restart on republish** - Resets the delay timer completely. The delay period starts over from zero the moment the Campaign becomes active.
+   * **Count delay only while published** - Pauses the delay timer while the Campaign is inactive. The timer resumes from where it paused once the Campaign becomes active again.
+   * **Count delay regardless of publish state** - default option. Keeps the delay timer running continuously in the background, even while the Campaign remains inactive.
 
    |
 
@@ -203,7 +219,7 @@ Mautic supports two primary methods of API-based Campaign import:
 .. vale off
 
 How Campaign import works
-********************************
+*************************
 
 .. vale on
 
