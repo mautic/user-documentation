@@ -274,6 +274,8 @@ Command parameters:
 
 - ``--min-contact-id`` and ``--max-contact-id`` allows the separation of Email sending by smaller chunks, by specifying contact ID ranges. If those ranges won't overlap, this allows you to run several broadcast commands in parallel.
 
+.. _send scheduled Reports Cron job:
+
 .. vale off
 
 Send scheduled Reports cron job
@@ -285,11 +287,37 @@ Starting with Mautic 2.12.0, it's now possible to use cron to send scheduled Rep
 
 .. code-block:: php
 
-    php /path/to/mautic/bin/console mautic:reports:scheduler [--report=ID]
+    php /path/to/mautic/bin/console mautic:reports:scheduler [--report=ID] [--cleanup-only]
 
-.. note:: 
+Command parameters
+------------------
 
-    for releases prior to 1.1.3, it's required to append ``--env=prod`` to the cron job command to ensure commands execute correctly.
+- ``--report=ID`` specifies a Report by ID. If not provided, processes all scheduled Reports.
+
+- ``--cleanup-only`` runs only the cleanup operation, removing old exported Report files without sending scheduled Reports. Use this to separate the cleanup and sending tasks to prevent duplicate Report Emails.
+
+.. vale off
+
+Preventing duplicate Report Emails
+**********************************
+
+.. vale on
+
+Running the Report send and cleanup operations at the same time can cause duplicate Report Emails. To prevent this, run separate Cron jobs:
+
+#. A cleanup-only job that removes old exported files without sending Report Emails:
+
+   .. code-block:: php
+
+       php /path/to/mautic/bin/console mautic:reports:scheduler --cleanup-only
+
+#. A separate job that sends scheduled Reports:
+
+   .. code-block:: php
+
+       php /path/to/mautic/bin/console mautic:reports:scheduler
+
+Stagger these jobs so they don't run at the same time.
 
 .. vale off
 
