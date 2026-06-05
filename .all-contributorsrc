@@ -1,243 +1,252 @@
 {
-	"files": [
+  "files": [
     "README.md"
   ],
-	"imageSize": 100,
-	"commit": false,
-	"commitConvention": "angular",
-	"contributors": [
-		{
-			"login": "gustavokennedy",
-			"name": "Gustavo Kennedy Renkel",
-			"avatar_url": "https://avatars.githubusercontent.com/u/98914036?v=4",
-			"profile": "http://overall.cloud",
-			"contributions": [
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "gustavokennedy",
+      "name": "Gustavo Kennedy Renkel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98914036?v=4",
+      "profile": "http://overall.cloud",
+      "contributions": [
         "translation"
       ]
-		},
-		{
-			"login": "zaharovrd",
-			"name": "Roman",
-			"avatar_url": "https://avatars.githubusercontent.com/u/8171816?v=4",
-			"profile": "http://www.youradman.com",
-			"contributions": [
+    },
+    {
+      "login": "zaharovrd",
+      "name": "Roman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8171816?v=4",
+      "profile": "http://www.youradman.com",
+      "contributions": [
         "translation"
       ]
-		},
-		{
-			"login": "tomekkowalczyk",
-			"name": "Tomasz Kowalczyk",
-			"avatar_url": "https://avatars.githubusercontent.com/u/39382654?v=4",
-			"profile": "http://adevo.pl",
-			"contributions": [
+    },
+    {
+      "login": "tomekkowalczyk",
+      "name": "Tomasz Kowalczyk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39382654?v=4",
+      "profile": "http://adevo.pl",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "kukis2107",
-			"name": "kukis2107",
-			"avatar_url": "https://avatars.githubusercontent.com/u/60287846?v=4",
-			"profile": "https://github.com/kukis2107",
-			"contributions": [
+    },
+    {
+      "login": "kukis2107",
+      "name": "kukis2107",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60287846?v=4",
+      "profile": "https://github.com/kukis2107",
+      "contributions": [
         "translation"
       ]
-		},
-		{
-			"login": "putzwasser",
-			"name": "putzwasser",
-			"avatar_url": "https://avatars.githubusercontent.com/u/26040044?v=4",
-			"profile": "https://github.com/putzwasser",
-			"contributions": [
+    },
+    {
+      "login": "putzwasser",
+      "name": "putzwasser",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26040044?v=4",
+      "profile": "https://github.com/putzwasser",
+      "contributions": [
         "review"
       ]
-		},
-		{
-			"login": "Moongazer",
-			"name": "Moongazer",
-			"avatar_url": "https://avatars.githubusercontent.com/u/1685510?v=4",
-			"profile": "https://github.com/Moongazer",
-			"contributions": [
+    },
+    {
+      "login": "Moongazer",
+      "name": "Moongazer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1685510?v=4",
+      "profile": "https://github.com/Moongazer",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "patrykgruszka",
-			"name": "Patryk Gruszka",
-			"avatar_url": "https://avatars.githubusercontent.com/u/8580942?v=4",
-			"profile": "https://github.com/patrykgruszka",
-			"contributions": [
+    },
+    {
+      "login": "patrykgruszka",
+      "name": "Patryk Gruszka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8580942?v=4",
+      "profile": "https://github.com/patrykgruszka",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "Amiyah14",
-			"name": "Emily",
-			"avatar_url": "https://avatars.githubusercontent.com/u/45315891?v=4",
-			"profile": "https://github.com/Amiyah14",
-			"contributions": [
+    },
+    {
+      "login": "Amiyah14",
+      "name": "Emily",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45315891?v=4",
+      "profile": "https://github.com/Amiyah14",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "J-Wick4",
-			"name": "John Wick",
-			"avatar_url": "https://avatars.githubusercontent.com/u/1954540?v=4",
-			"profile": "https://github.com/J-Wick4",
-			"contributions": [
+    },
+    {
+      "login": "J-Wick4",
+      "name": "John Wick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1954540?v=4",
+      "profile": "https://github.com/J-Wick4",
+      "contributions": [
         "bug"
       ]
-		},
-		{
-			"login": "jagtapreshma",
-			"name": "jagtapreshma",
-			"avatar_url": "https://avatars.githubusercontent.com/u/81143250?v=4",
-			"profile": "https://github.com/jagtapreshma",
-			"contributions": [
+    },
+    {
+      "login": "jagtapreshma",
+      "name": "jagtapreshma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81143250?v=4",
+      "profile": "https://github.com/jagtapreshma",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "markusVJH",
-			"name": "Markus Heinilä",
-			"avatar_url": "https://avatars.githubusercontent.com/u/121946942?v=4",
-			"profile": "https://github.com/markusVJH",
-			"contributions": [
+    },
+    {
+      "login": "markusVJH",
+      "name": "Markus Heinilä",
+      "avatar_url": "https://avatars.githubusercontent.com/u/121946942?v=4",
+      "profile": "https://github.com/markusVJH",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "uadf",
-			"name": "CPweb",
-			"avatar_url": "https://avatars.githubusercontent.com/u/2785980?v=4",
-			"profile": "https://eglise.catholique.fr",
-			"contributions": [
+    },
+    {
+      "login": "uadf",
+      "name": "CPweb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2785980?v=4",
+      "profile": "https://eglise.catholique.fr",
+      "contributions": [
         "review"
       ]
-		},
-		{
-			"login": "heebinho",
-			"name": "Renato Heeb",
-			"avatar_url": "https://avatars.githubusercontent.com/u/1469531?v=4",
-			"profile": "http://renatoheeb.com",
-			"contributions": [
+    },
+    {
+      "login": "heebinho",
+      "name": "Renato Heeb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1469531?v=4",
+      "profile": "http://renatoheeb.com",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "fee-sah-yor",
-			"name": "fisayo~",
-			"avatar_url": "https://avatars.githubusercontent.com/u/101174144?v=4",
-			"profile": "https://github.com/fee-sah-yor",
-			"contributions": [
+    },
+    {
+      "login": "fee-sah-yor",
+      "name": "fisayo~",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101174144?v=4",
+      "profile": "https://github.com/fee-sah-yor",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "pedaars",
-			"name": "Aaron Pedwell",
-			"avatar_url": "https://avatars.githubusercontent.com/u/11647950?v=4",
-			"profile": "https://pedaars.co.uk",
-			"contributions": [
+    },
+    {
+      "login": "pedaars",
+      "name": "Aaron Pedwell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11647950?v=4",
+      "profile": "https://pedaars.co.uk",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "adiati98",
-			"name": "Ayu Adiati",
-			"avatar_url": "https://avatars.githubusercontent.com/u/45172775?v=4",
-			"profile": "https://adiati.com",
-			"contributions": [
+    },
+    {
+      "login": "adiati98",
+      "name": "Ayu Adiati",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45172775?v=4",
+      "profile": "https://adiati.com",
+      "contributions": [
         "doc",
         "review"
       ]
-		},
-		{
-			"login": "beneyalraj",
-			"name": "Abi beniyal",
-			"avatar_url": "https://avatars.githubusercontent.com/u/42829681?v=4",
-			"profile": "https://github.com/beneyalraj",
-			"contributions": [
+    },
+    {
+      "login": "beneyalraj",
+      "name": "Abi beniyal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42829681?v=4",
+      "profile": "https://github.com/beneyalraj",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "favour-chibueze",
-			"name": "Favour Chibueze ",
-			"avatar_url": "https://avatars.githubusercontent.com/u/46398983?v=4",
-			"profile": "https://github.com/favour-chibueze",
-			"contributions": [
+    },
+    {
+      "login": "favour-chibueze",
+      "name": "Favour Chibueze ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46398983?v=4",
+      "profile": "https://github.com/favour-chibueze",
+      "contributions": [
         "review"
       ]
-		},
-		{
-			"login": "adi-ray",
-			"name": "Aditya Ray",
-			"avatar_url": "https://avatars.githubusercontent.com/u/96347576?v=4",
-			"profile": "https://www.adityaray.xyz",
-			"contributions": [
+    },
+    {
+      "login": "adi-ray",
+      "name": "Aditya Ray",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96347576?v=4",
+      "profile": "https://www.adityaray.xyz",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "ashwini2k6",
-			"name": "Ashwini Kumar",
-			"avatar_url": "https://avatars.githubusercontent.com/u/217481134?v=4",
-			"profile": "https://github.com/ashwini2k6",
-			"contributions": [
+    },
+    {
+      "login": "ashwini2k6",
+      "name": "Ashwini Kumar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/217481134?v=4",
+      "profile": "https://github.com/ashwini2k6",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "Lokesh9106",
-			"name": "Lokesh9106",
-			"avatar_url": "https://avatars.githubusercontent.com/u/231150390?v=4",
-			"profile": "https://github.com/Lokesh9106",
-			"contributions": [
+    },
+    {
+      "login": "Lokesh9106",
+      "name": "Lokesh9106",
+      "avatar_url": "https://avatars.githubusercontent.com/u/231150390?v=4",
+      "profile": "https://github.com/Lokesh9106",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "sudohogan",
-			"name": "Isreal Hogan",
-			"avatar_url": "https://avatars.githubusercontent.com/u/101266221?v=4",
-			"profile": "https://portfolio-dun-one-68.vercel.app",
-			"contributions": [
+    },
+    {
+      "login": "sudohogan",
+      "name": "Isreal Hogan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101266221?v=4",
+      "profile": "https://portfolio-dun-one-68.vercel.app",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "mheavey2",
-			"name": "Margaret",
-			"avatar_url": "https://avatars.githubusercontent.com/u/85061867?v=4",
-			"profile": "https://github.com/mheavey2",
-			"contributions": [
+    },
+    {
+      "login": "mheavey2",
+      "name": "Margaret",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85061867?v=4",
+      "profile": "https://github.com/mheavey2",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "simachines",
-			"name": "ErnestB",
-			"avatar_url": "https://avatars.githubusercontent.com/u/70729135?v=4",
-			"profile": "https://github.com/simachines",
-			"contributions": [
+    },
+    {
+      "login": "simachines",
+      "name": "ErnestB",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70729135?v=4",
+      "profile": "https://github.com/simachines",
+      "contributions": [
         "doc"
       ]
-		},
-		{
-			"login": "msoukhomlinov",
-			"name": "Max Soukhomlinov",
-			"avatar_url": "https://avatars.githubusercontent.com/u/12015350?v=4",
-			"profile": "https://github.com/msoukhomlinov",
-			"contributions": [
+    },
+    {
+      "login": "msoukhomlinov",
+      "name": "Max Soukhomlinov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12015350?v=4",
+      "profile": "https://github.com/msoukhomlinov",
+      "contributions": [
         "doc"
       ]
-		}
-	],
-	"contributorsPerLine": 7,
-	"skipCi": true,
-	"repoType": "github",
-	"repoHost": "https://github.com",
-	"projectName": "user-documentation",
-	"projectOwner": "mautic",
-	"commitType": "docs"
+    },
+    {
+      "login": "stefan-franz",
+      "name": "Stefan Franz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96744684?v=4",
+      "profile": "https://github.com/stefan-franz",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "user-documentation",
+  "projectOwner": "mautic",
+  "commitType": "docs"
 }
