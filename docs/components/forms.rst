@@ -61,7 +61,8 @@ When a Form reaches its submission limit:
 * If you delete submissions - individually or in bulk - and the count drops below the limit, the Form automatically reopens to accept new submissions.
 
 .. note::
-    The submission count updates in real time. Deleting submissions reduces the count, potentially reopening a Form that was previously at its limit.
+
+   The submission count updates in real time. Deleting submissions reduces the count, potentially reopening a Form that was previously at its limit.
 
 .. vale off
 
