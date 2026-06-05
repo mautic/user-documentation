@@ -7,6 +7,10 @@ Tag Manager
 
 Tags help you organize and categorize your Contacts. Unlike Segments, Tags are labels you manually assign to Contacts. You can add or remove them anytime. Use Tags to mark Contacts based on characteristics, behaviors, or other criteria that matter to your marketing.
 
+The Tag Manager is primarily for reviewing existing Tags in your Mautic instance and deleting Tags you no longer need. Most users create Tags inline - directly in the Tag input field when editing a Contact, configuring a Campaign action, setting up a Form action, or anywhere else the Tag input appears. Type a Tag name and press Enter. If the Tag exists, you can select it; if not, Mautic creates it automatically.
+
+For details on inline Tag creation and other ways to work with Tags, see :ref:`Tags <contacts/tags:Tags>`.
+
 .. vale off
 
 Accessing the Tag Manager
@@ -22,15 +26,19 @@ Go to **Contacts > Manage Tags** to open the Tag Manager list page. This page sh
 
 .. vale off
 
-Creating a Tag
-**************
+Creating a Tag in the Tag Manager
+*********************************
 
 .. vale on
+
+You can also create Tags directly in the Tag Manager:
 
 #. Click the **New** button in the top right corner.
 #. Enter a **Name** for the Tag. This is the only required field.
 #. Optionally, add a **Description** to provide more context about when to use this Tag.
 #. Click **Save & Close** to create the Tag.
+
+This approach is useful when you want to add descriptions to Tags before assigning them, or when planning your Tag structure in advance.
 
 .. vale off
 
