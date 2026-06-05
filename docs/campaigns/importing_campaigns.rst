@@ -44,8 +44,12 @@ You can import a Campaign in three ways.
 
    These options appear when the import process detects existing Campaigns or Segments that match the imported data.
 
+.. vale off
+
    * **Update entity** - Overwrites the existing Campaign or Segment in Mautic with the imported data. Use this option to update configuration, but note that it can overwrite or destroy existing changes on your instance.
    * **Create new entity** - Forces Mautic to create a brand-new Campaign or Segment, even if a matching one already exists. This is the safer option to prevent data loss, but it can lead to duplicate resources.
+
+.. vale on
 
 #. Click the **Proceed** button.
 
@@ -93,10 +97,14 @@ Follow the steps below to activate an imported Campaign:
           
    When a Campaign goes live, scheduled events with relative delays follow the **Campaign Republish Behavior** configuration. If the Campaign uses a specific setting instead of the global default, the execution behavior changes:
 
+   .. vale off
+   
    * **Use global setting** - Applies the default behavior configured in the global Mautic settings.
    * **Restart on republish** - Resets the delay timer completely. The delay period starts over from zero the moment the Campaign becomes active.
    * **Count delay only while published** - Pauses the delay timer while the Campaign is inactive. The timer resumes from where it paused once the Campaign becomes active again.
    * **Count delay regardless of publish state** - default option. Keeps the delay timer running continuously in the background, even while the Campaign remains inactive.
+   
+   .. vale on
 
    |
 
