@@ -452,7 +452,7 @@ Message settings
 
 .. note::
 
-  These defaults only apply when creating a **new** Email. Editing an existing Email or cloning an Email never overwrites the values already on that Email, even if those fields are blank on the clone source.
+  The default UTMs only apply when creating a **new** Email. Editing an existing Email or cloning an Email never overwrites the values already on that Email, even if those fields are blank on the clone source.
 
 Unsubscribe settings
 ====================
