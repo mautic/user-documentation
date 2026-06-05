@@ -16,6 +16,9 @@ When you select a Campaign, the export feature extracts all Campaign data and en
 * Asset\*
 * Other related dependencies
 
+.. note::
+
+   \* The exported Campaign includes only directly associated Assets.
 The export command:
 
 * Detect use of Plugins and Custom Fields
@@ -87,6 +90,16 @@ You can programmatically export Campaigns using the Mautic API. To do this, you 
 
 For more details on how to authenticate, see the :doc:`Authentication page </authentication/authentication>`.
 
+.. important::
+
+   * The API uses a GET request to export a specific Campaign by ID.   
+    
+   * Before running the following cURL or Python examples, ensure you:
+
+     * Replace ``example.com`` with the actual Mautic instance domain.
+     * Replace ``YOUR_ACCESS_TOKEN`` with a valid authentication token.
+     * Verify that the User account has the necessary API permissions.
+
 .. vale on
 
 cURL example
@@ -94,9 +107,8 @@ cURL example
 
 .. code-block:: bash
 
-   curl --location 'https://{your-mautic-domain}/api/campaigns/export/1' \
-   --header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
-   --data ''
+   curl --location 'https://example.com/api/campaigns/export/1' \
+   --header 'Authorization: Bearer YOUR_ACCESS_TOKEN'
 
 Python example
 --------------
@@ -121,13 +133,6 @@ Python example
    if response.status_code == 200:
        export_file = response.content
        # Save or process the exported campaign
-
-.. important::
-
-   * Replace ``example.com`` with your actual Mautic instance domain
-   * Replace ``YOUR_ACCESS_TOKEN`` with a valid authentication token
-   * The API uses a GET request to export a specific Campaign by ID
-   * Ensure you have the necessary API permissions
 
 .. vale off
 
