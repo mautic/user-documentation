@@ -171,6 +171,13 @@
 			"avatar_url": "https://avatars.githubusercontent.com/u/70729135?v=4",
 			"profile": "https://github.com/simachines",
 			"contributions": ["doc"]
+		},
+    {
+			"login": "msoukhomlinov",
+			"name": "Max Soukhomlinov",
+			"avatar_url": "https://avatars.githubusercontent.com/u/12015350?v=4",
+			"profile": "https://github.com/msoukhomlinov",
+			"contributions": ["doc"]
 		}
 	],
 	"contributorsPerLine": 7,
