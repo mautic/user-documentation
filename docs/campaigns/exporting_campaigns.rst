@@ -19,6 +19,7 @@ When you select a Campaign, the export feature extracts all Campaign data and en
 .. note::
 
    \* The exported Campaign includes only directly associated Assets.
+
 The export command:
 
 * Detect use of Plugins and Custom Fields
@@ -137,7 +138,7 @@ Python example
 .. vale off
 
 How Campaign export works
-*********************************
+*************************
 
 .. vale on
 
