@@ -94,8 +94,8 @@ The parent data source provides a high-level summary of the data while the child
 
 * **Dynamic filters settings**
 
-  - Opened by default - If you want to ensure that the date filters and filter options for any other Report filters are visible on a Report detail page without needing to open the filters drop-down, select Yes. For example, for an Emails Report, you might want to view dynamic filters for subject or sent date.
-  - Hide date range - To hide the date range filter so that Users can't change the dates that the Report displays data for, select to **Yes**.
+  - Opened by default - Select **Yes** to display dynamic filter options on the Report detail page without requiring Users to open the Filters panel. For example, in an Emails Report, you might want quick access to filters for subject or sent date. The Filters panel only appears when the Report has dynamic filters configured.
+  - Hide date range - Select **Yes** to hide the date range filter, preventing Users from changing the dates for the Report data. When visible, the date range filter appears above the Report table.
 
 
 Data
@@ -116,9 +116,9 @@ You can customize each Report to include the columns of choice, filter data base
 
 * **Filters** -  Filter the data using conditions and values. This allows the generation of very granular Reports. This option helps you to narrow down the data included in the Report. The data Points used for filters don’t have to be columns that appear in the Report table. A commonly used filter for any Reports that include Contact record data is Email Not Empty, which displays only identified Contacts in the Report. Additional use cases can include Contacts or items that match a certain value, events happening within a certain date range, etc.
 
-.. note:: 
+.. note::
 
-   Setting the **Dynamic** option to **Yes** makes it easier for Users viewing the Report to change the data they see without actually editing the Report. Users can see the filter by opening the **Filters** drop-down from the top of the Report page.
+   Setting **Dynamic** to **Yes** allows Users to change the data they see in a Report without editing it. They can access the filter from the **Filters** panel at the top of the Report page. The Filters panel only appears when a Report has at least one dynamic filter configured.
 
 * **Group by** - Select the columns for which you want to group data. By default, Reports show all items individually. In many Reports, you may see the same Contact, Company, or item appear multiple times. To only see each record listed once, you can add a grouping based on some attribute for the record. 
 
