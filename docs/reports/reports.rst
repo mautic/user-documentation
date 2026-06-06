@@ -97,6 +97,19 @@ The parent data source provides a high-level summary of the data while the child
   - Opened by default - Select **Yes** to display dynamic filter options on the Report detail page without requiring Users to open the Filters panel. For example, in an Emails Report, you might want quick access to filters for subject or sent date. The Filters panel only appears when the Report has dynamic filters configured.
   - Hide date range - Select **Yes** to hide the date range filter, preventing Users from changing the dates for the Report data. When visible, the date range filter appears above the Report table.
 
+Quick Filters
+-------------
+
+Use the **Quick Filters** dropdown next to the date range filter to apply common date ranges with a single click. The available options are:
+
+* **Today** - Shows data from today only
+* **Yesterday** - Shows data from yesterday only
+* **Last 7 days** - Shows data from the past week
+* **Last 30 days** - Shows data from the past month
+* **Last 90 days** - Shows data from the past quarter
+
+Selecting a quick filter automatically updates the date range fields and refreshes the Report.
+
 
 Data
 ====
