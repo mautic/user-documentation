@@ -163,11 +163,19 @@ The following batch actions are currently available:
 
 * **Export** - Allows you to export selected Contacts to CSV.
 
+* **Find and Replace** - Updates field values across selected Contacts by finding a specific value and replacing it with a new one. Select a Contact field, enter the value to find, and specify the replacement value. Only Contacts with the matching field value receive the update.
+
 * **Set Do Not Contact (DNC)** - This action sets all selected Contacts as DNC for the Email Channel, and it allows you to provide a custom message as "reason" for why the Contacts were manually unsubscribed by a Mautic User.
 
 * **Delete Selected (batch delete)** - The batch delete action in the Contact table allows the deletion of up to 100 Contacts at a time. This limit is there as a performance precaution, since deleting more Contacts at a time could cause performance degradation issues.
 
 If you need to delete large numbers of Contacts, visit the :doc:`segment docs</segments/manage_segments>` which explains how to delete thousands of Contacts easily.
+
+You can also access Find and Replace from the page actions menu without selecting any rows. This applies the replacement to all Contacts matching your current search.
+
+.. note::
+
+  You need edit permissions to use Find and Replace. Users with ``lead:leads:editown`` can update Contacts they own, while Users with ``lead:leads:editother`` can update any Contact.
 
 .. vale off
 

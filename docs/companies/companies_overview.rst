@@ -34,10 +34,27 @@ In *Configuration > Company Settings* you can choose the operator used when merg
 
 These settings allow  Mautic to find and merge duplicate Companies during the import, using the Integrations Framework and in other parts of Mautic.
 
+Batch actions
+*************
+
+To update several Companies at once, select those Companies in the list, then click the green arrow at the top of the checkbox column.
+
+The following batch actions are available:
+
+* **Find and Replace** - Updates field values across selected Companies by finding a specific value and replacing it with a new one. Select a Company field, enter the value to find, and specify the replacement value. Only Companies with the matching field value receive the update.
+
+* **Delete Selected** - Deletes the selected Companies.
+
+You can also access Find and Replace from the page actions menu without selecting any rows. This applies the replacement to all Companies matching your current search.
+
+.. note::
+
+  You need edit permissions to use Find and Replace. Users with ``lead:leads:editown`` can update Companies they own, while Users with ``lead:leads:editother`` can update any Company.
+
 Company actions
 ***************
 
-.. vale off 
+.. vale off
 
 Merging Companies
 =================
