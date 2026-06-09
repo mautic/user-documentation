@@ -205,7 +205,7 @@ To find specific event types, search in the **Include events by source** text bo
 
 **Asset Downloaded** - Lists which Assets a Contact downloaded from your Landing Pages or website. Combining this information with other data can help with analyzing what led a Contact to download the Asset.
 
-**Campaign Action Triggered** - Actions within Campaigns which have already happened.
+**Campaign Action Triggered** - Actions within Campaigns that have already happened. For condition and decision events, expand the details to see evaluation results, including the field checked, operator used, comparison value, actual value, and whether the condition evaluated to yes or no.
 
 **Campaign Event Scheduled** - Actions within Campaigns which take place in the future. Expand the details to see the event's scheduled date and time. Click the clock icon to reschedule the event, or click **X** to cancel the event. A warning icon means an execution error on the first try caused a rescheduling of the event.
 
