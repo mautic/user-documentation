@@ -95,8 +95,13 @@ The actions that Mautic offers in a Campaign include:
      - Removes the Contact from the Do Not Contact - DNC - list.
    * - **Send a Webhook** 
      - Sends a Webhook to a defined URL, using the GET, POST, PUT, PATCH, or DELETE methods. Headers and data is customizable, and support the use of tokens, such as Contact fields and the Contact's IP address. For example, ``{contactfield=firstname}``
-   * - **Send Email**   
-     - Sends a transaction or marketing Email to the selected Contact. You can send a transactional Email to the Contact multiple times. You can only send a marketing Email to the Contact  once across multiple sources. If the Contact has already received this Email from another source or the current Campaign, they aren't sent the Email again and the Contact progresses through the Campaign.
+   * - **Send Email**
+     - Sends an Email to the selected Contact. The action includes a **Repeatable email** toggle:
+
+        * Set to **Yes** to allow sending the Email to the same Contact multiple times within the Campaign.
+        * Set to **No** to send the Email only once across all sources. If a Contact has already received this non-repeatable Email, Mautic skips the send and moves them to the next Campaign step.
+
+      If you enabled **Send to unsubscribed contacts** for the selected Email, Mautic displays this information in the action configuration.
    * - **Send Email to User** 
      - Sends an Email to an entity other than the Contact. This may be a Mautic User, the Contact's owner, or non-Users. Emails sent using this action don't generate any statistics for Contacts or Emails.
    * - **Send Marketing Message**

@@ -198,6 +198,33 @@ The optimal for Contact event scheduler settings allow you to configure the defa
 * **Fetch Interactions From** - Select the time frame for fetching interaction data. This determines how far back to look for interactions.
 * **Interaction Fetch Limit** - Set the maximum number of interactions of each type - for example: Page hits, Email reads, Form submits - to retrieve for timing optimization.
 
+.. vale off
+
+Advanced Campaign performance settings
+======================================
+
+.. vale on
+
+Mautic provides additional performance-related configuration parameters for Campaigns that you must configure by editing the ``config/local.php`` file directly. These settings help you balance UI responsiveness against database load on high-volume instances.
+
+* ``campaign_event_cache_ttl`` - Controls how long Mautic caches Campaign event statistics - such as execution counts shown in the Campaign builder - before refreshing them from the database. The default is ``600`` seconds, which is 10 minutes. Lower values provide fresher statistics in the UI but increase the number of database queries. Higher values reduce database load but delay the appearance of new executions in the UI. Set to ``0`` to turn off caching entirely.
+
+  To configure this setting, you can add or modify the parameter in your ``config/local.php`` file:
+
+  .. code-block:: php
+
+     'campaign_event_cache_ttl' => 600, // seconds
+
+  .. note::
+
+     To use this setting, you must enable Doctrine result caching in your Mautic instance.
+
+* ``campaign_contact_count_cache_ttl`` - Controls how long Mautic caches Campaign Contact counts before refreshing them from the database. The default is ``43200`` seconds, which is 12 hours. Adjust this value if you need Campaign Contact counts to update more frequently.
+
+  .. code-block:: php
+
+     'campaign_contact_count_cache_ttl' => 43200, // seconds
+
 Email settings
 **************
 
@@ -362,15 +389,23 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
-* **Do Not Contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+.. vale off
+
+* **Do Not Contact more than <number> each <period>** - This limits the number of Emails a Contact receives in a certain period of time: day, week, or month. You can adjust this at the individual Contact level, either manually or via the **Preference Center** setting. Emails with **Send to unsubscribed contacts** enabled don't count towards this limit. You configure **Send to unsubscribed contacts** directly within each Email's settings, not in the **Preference Center**.
+
+.. vale on
 
 .. image:: images/default-frequency-rule.png
-  :width: 600
-  :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
+   :width: 600
+   :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
 
-.. note:: 
+.. note::
 
-  More information is available in the :doc:`Default Frequency Rule documentation</contacts/frequency_rules>`.
+   .. vale off
+
+   More information is available in the :doc:`Default Frequency Rule documentation </contacts/frequency_rules>`.
+
+   .. vale on
 
 Monitored inbox settings
 ========================
@@ -405,7 +440,19 @@ Message settings
 * **Convert embed images to Base64** - Select **Yes** to display embedded images in Emails using embedded base64 code rather than as embedded images.
 
 * **Disable trackable URLs** - Removes tracking from URLs in your Emails. Select Yes to prevent tracking, reporting on, and using decisions based on link clicks. Some Email service providers don't like redirecting URLs. Using trackable URLs in your Emails may impact deliverability.
-  
+
+* **Default UTM source** - Sets a site-wide default ``utm_source`` value that pre-populates the UTM source field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+* **Default UTM medium** - Sets a site-wide default ``utm_medium`` value that pre-populates the UTM medium field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+* **Default UTM Campaign** - Sets a site-wide default ``utm_campaign`` value that pre-populates the UTM Campaign field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+* **Default UTM content** - Sets a site-wide default ``utm_content`` value that pre-populates the UTM content field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+.. note::
+
+  The default UTMs only apply when creating a **new** Email. Editing an existing Email or cloning an Email never overwrites the values already on that Email, even if those fields are blank on the clone source.
+
 Unsubscribe settings
 ====================
 
@@ -413,9 +460,13 @@ Unsubscribe settings
   :width: 600
   :alt: Screenshot showing Unsubscribe Settings Configuration in Mautic
 
-* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link. 
+.. vale off
+
+* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link.
 
   For example - Edit between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the URL as it's tokenized. If you add ``{unsubscribe_url}`` as a token in the Email, you won't see this text.
+
+* **Disable unsubscribe link in header** - Select **Yes** to prevent Mautic from adding unsubscribe headers to Emails. When set to **No** - the default - Mautic automatically includes RFC 8058-compliant ``List-Unsubscribe`` and ``List-Unsubscribe-Post`` headers in Emails where you disable **Send to unsubscribed contacts**. Email clients that support this feature - such as GMail and Apple Mail - use these headers to display one-click unsubscribe capability.
 
 * **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. Don't edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
 
@@ -431,6 +482,9 @@ Unsubscribe settings
 
 * **Show Contact's preferred Channel option** - If you have multiple Channels available within your Mautic instance. For example; Email, ``SMS``, mobile push, web notifications, etc., Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
+* **Default Preference Center Landing Page** - Select a Landing Page to use as the Preference Center for new Emails. When creating a new Email, this Landing Page pre-populates the Preference Center field. Editing an existing Email or cloning an Email doesn't change that Email's Preference Center, even if the clone source has no Preference Center set. Read the :doc:`/contacts/preference_center` section for more information.
+
+.. vale on
 
 .. vale off
 
