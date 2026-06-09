@@ -53,7 +53,7 @@ Batch updates
 #. Select the checkboxes next to the desired Contacts.
 #. Click the green arrow at the top of the column.
 #. Select **Change Tags** from the dropdown menu.
-#. In the **Add tags** or **Remove tags** fields, select existing Tags from the dropdown or type a new Tag name and press Enter to create it.
+#. In the **Add tags** or **Remove tags** fields, select existing Tags from the dropdown.
 #. Click **Save**.
 
 Using the tracking script
