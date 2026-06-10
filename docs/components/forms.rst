@@ -61,7 +61,7 @@ To configure a submission limit:
    * **Limit reached message** - Enter a custom message to display when the Form reaches its submission limit. If left blank, Mautic displays a default message.
 
 .. image:: images/forms/form_advanced_options.png
-   :width: 600
+   :width: 300
    :alt: Advanced options section in the Form editor showing the Submissions limit settings with Maximum submissions and Limit reached message fields
 
 .. vale on
