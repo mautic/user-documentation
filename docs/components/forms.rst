@@ -54,11 +54,15 @@ To configure a submission limit:
 
 .. vale off
 
-#. On the 'New Form' or 'Edit Form' page, expand the **Advanced options** section.
+#. On the 'New Form' or 'Edit Form' page, expand the **Advanced options** section at the bottom right.
 #. In the **Submissions limit** section, set the following fields:
 
    * **Maximum submissions** - Enter the maximum number of submissions the Form accepts. Leave blank for unlimited submissions.
    * **Limit reached message** - Enter a custom message to display when the Form reaches its submission limit. If left blank, Mautic displays a default message.
+
+.. image:: images/forms/form_advanced_options.png
+   :width: 600
+   :alt: Advanced options section in the Form editor showing the Submissions limit settings with Maximum submissions and Limit reached message fields
 
 .. vale on
 
