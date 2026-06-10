@@ -39,7 +39,11 @@ The following fields are available:
 Advanced options
 ****************
 
-The New Form or Edit Form page includes an **Advanced options** section where you can configure additional settings.
+.. vale off
+
+The 'New Form' or 'Edit Form' page includes an **Advanced options** section where you can configure additional settings.
+
+.. vale on
 
 Submission limits
 =================
@@ -50,7 +54,7 @@ To configure a submission limit:
 
 .. vale off
 
-#. On the New Form or Edit Form page, expand the **Advanced options** section.
+#. On the 'New Form' or 'Edit Form' page, expand the **Advanced options** section.
 #. In the **Submissions limit** section, set the following fields:
 
    * **Maximum submissions** - Enter the maximum number of submissions the Form accepts. Leave blank for unlimited submissions.
