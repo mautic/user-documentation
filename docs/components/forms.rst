@@ -39,7 +39,7 @@ The following fields are available:
 Advanced options
 ****************
 
-The Form Builder includes an **Advanced options** section where you can configure additional settings.
+The New Form or Edit Form page includes an **Advanced options** section where you can configure additional settings.
 
 Submission limits
 =================
@@ -48,11 +48,15 @@ Submission limits let you restrict how many submissions a Form can accept. This 
 
 To configure a submission limit:
 
-#. In the Form Builder, expand the **Advanced options** accordion.
+.. vale off
+
+#. On the New Form or Edit Form page, expand the **Advanced options** section.
 #. In the **Submissions limit** section, set the following fields:
 
    * **Maximum submissions** - Enter the maximum number of submissions the Form accepts. Leave blank for unlimited submissions.
    * **Limit reached message** - Enter a custom message to display when the Form reaches its submission limit. If left blank, Mautic displays a default message.
+
+.. vale on
 
 When a Form reaches its submission limit:
 
