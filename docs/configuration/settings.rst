@@ -536,11 +536,11 @@ Company merge settings
 Company list settings
 =====================
 
-.. image:: images/company-list-settings.png
-  :width: 600
-  :alt: Screenshot showing Company List Settings Configuration in Mautic
+.. image:: images/company_list_settings.png
+   :width: 600
+   :alt: Screenshot showing Company List Settings Configuration in Mautic
 
-* **Columns** - Under **Configuration** and **Company Settings**, use this section to manage the visible columns for Companies. Move fields from the left list to the right list to display them on the main Companies overview, or remove fields from the right list to hide them from the view.
+* **Columns** - Manage the visible columns for Companies in this section. Move fields from the left list to the right list to display them on the main Companies overview, or remove fields from the right list to hide them.
 
 Queue settings
 **************
