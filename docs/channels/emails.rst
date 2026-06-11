@@ -148,9 +148,48 @@ Tokens
 
 Mautic allows the use of tokens in Emails which gives the marketer the possibility to integrate a number of Contact fields in your Emails. These can be easily placed within your Emails and are automatically replaced with the appropriate text once sent.
 
-It's also possible to override the 'from' field in an Email with a token from your :doc:`/contacts/custom_fields` since Mautic 5.1. 
-
 Check the :doc:`/configuration/variables` documentation for a list of all the available default fields.
+
+.. vale off
+
+Tokenized From addresses
+------------------------
+
+.. vale on
+
+Mautic allows you to use Contact field tokens in the **From address** and **From name** fields. This makes Emails appear as though they're coming from a Contact-specific sender, such as their assigned Company.
+
+You can use tokens in:
+
+* The **Name to send mail as** and **Email address to send mail from** fields in the system-wide **Email Settings**
+* The **From Name** and **From Address** fields on an individual Email's **Advanced** tab
+
+For example, to send Emails from the Contact's Company:
+
+.. code-block:: php
+
+   {contactfield=companyname|Default Name}
+   {contactfield=companyemail|info@default.com}
+
+The token format follows the standard Contact field syntax. You can include an optional default value after the ``|`` character. If Mautic can't resolve the token to a value, it uses the default value instead.
+
+.. note::
+
+   The Contact field used in the Email address must contain a valid Email address. If using a Custom Field, ensure it's configured as an Email field type to guarantee proper validation.
+
+.. _sender resolution hierarchy:
+
+Sender resolution hierarchy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When sending Emails, Mautic determines the **From address** using the following priority order:
+
+#. **Tokenized Email Advanced From** - If the Email's **Advanced** tab has a **From address** with a Contact field token, and that token resolves to a valid value for the Contact, Mautic uses that address.
+#. **Owner sender** - If you enable **Mailer is owner** and the Contact has an assigned owner, Mautic uses the owner's Email address.
+#. **Plain Email Advanced From** - If the Email's **Advanced** tab has a standard Email address, without tokens, Mautic uses that address.
+#. **System default sender** - Mautic falls back to the system default from **Email Settings**. If the system default contains tokens, Mautic resolves them. If token resolution fails, Mautic uses the token's default value.
+
+This hierarchy ensures Emails always have a valid sender while allowing personalization when Contact data is available.
 
 Default value
 -------------
@@ -241,6 +280,8 @@ Contact replies within Campaigns function as decision after an Email Send action
   :width: 400
   :alt: Screenshot showing Contact replies Campaign action
 
+.. _mailer as owner:
+
 .. vale off
 
 Mailer as Owner
@@ -277,30 +318,100 @@ If set to Yes, the global setting takes precedence.
 
 If set to No, Mautic uses the address and name supplied in the Email 'From' fields.
 
+.. vale off
+
+.. _send to unsubscribed Contacts:
+
+Send to unsubscribed contacts
+*****************************
+
+The **Send to unsubscribed contacts** toggle allows you to send Emails to Contacts who have unsubscribed from your communications. This feature is available in the **Advanced** tab for both Template and Segment Emails.
+
+.. vale on
+
+Use this option for truly transactional communications that Contacts must receive regardless of their subscription status, such as:
+
+* Terms and conditions updates
+* Legal notifications
+* Account-related communications
+* Service announcements
+
+Enabling the toggle
+===================
+
+.. vale off
+
+#. Open the Email you want to edit.
+#. Click the **Advanced** tab.
+#. Set **Send to unsubscribed contacts** to **Yes**.
+#. A warning message appears asking you to confirm this action, as sending Emails to unsubscribed Contacts may have legal implications.
+#. Confirm to enable the setting, then save the Email.
+
+.. vale on
+
+.. warning::
+
+   **In many countries, sending marketing Emails to Contacts who have unsubscribed is illegal.** This feature exists solely for genuinely transactional communications such as receipts, password resets, legal notices, and account updates—not marketing content.
+
+   .. vale off
+
+   Misusing this feature to send marketing or promotional Emails to unsubscribed Contacts can result in serious legal consequences, including fines and penalties under data protection regulations such as the General Data Protection Regulation - GDPR, the Controlling the Assault of Non-Solicited Pornography And Marketing Act - CAN-SPAM Act, or Canada's Anti-Spam Legislation - CASL.
+
+   .. vale on
+
+.. vale off
+
+.. note::
+
+   Enabling this toggle requires the **Send to unsubscribed contacts** Email permission assigned to your Role. See :ref:`Setting Role permissions <setting granular permissions>` for details on configuring permissions.
+
+.. vale on
+
+Frequency rules behavior
+========================
+
+.. vale off
+
+The **Send to unsubscribed contacts** setting configured in the Email's Advanced tab determines whether an Email counts towards the Contact's :doc:`frequency rules </contacts/frequency_rules>` limits.
+
+* When you set **Send to unsubscribed contacts** to **No**, the Email counts towards the Contact's frequency rule limits. If a Contact has reached their limit, Mautic postpones the Email until the limit resets.
+* When you set **Send to unsubscribed contacts** to **Yes**, the Email doesn't count towards frequency rule limits. Mautic delivers important transactional communications regardless of how many other Emails the Contact has received.
+
+.. vale on
+
 Signatures
 **********
 
 Setting a signature happens in two places:
 
-#. The default signature is in the Configuration > Email Settings tab. The default text is 
+#. The default signature is in the **Configuration** > **Email Settings** tab. The default text is:
 
-.. code-block:: html
+   .. code-block:: html
 
-  Best regards,<br/>|FROM_NAME|.
+      Best regards,<br/>|FROM_NAME|.
 
-Mautic replaces the ``|FROM_NAME|`` token with the name which is also defined in the Email Settings tab.
+   Mautic replaces the ``|FROM_NAME|`` token with the name defined in the Email Settings tab.
 
-Mautic uses this signature by default if the Contact doesn't have an owner assigned.
+   Mautic uses this signature when the Email doesn't have **Use owner as mailer** enabled.
 
-#. Every Mautic User can configure their own signature in their account settings. Mautic uses this signature by default if the Contact has an owner assigned to them.
+#. Each Mautic User can configure their own signature in their account settings. Mautic uses this signature when the Email has **Use owner as mailer** enabled and the Contact has an owner assigned.
+
+   .. important::
+
+     For the ``{signature}`` token to use the owner's signature, you must enable **Use owner as mailer** in the Email's advanced settings. Enabling only the global **Mailer is owner** setting in Configuration isn't sufficient.
+
+     If the owner hasn't configured a signature, the ``{signature}`` token resolves to empty when you enable owner-as-mailer.
+
 
 .. note::
-  There are some exceptions where the Contact owner's signature isn't used, which is when a User sends an Email directly from a Contact's profile. In this case, Mautic uses the currently logged in User's signature, with the from name and Email specified in the Email send Form, and not the Contact owner. The values used are pre-filled with those of the currently logged in Mautic User.
-  
-  It doesn't matter if the Contact has another owner assigned or if it doesn't have an owner at all.
 
-  Also, when sending a test Email this is also the case.
+   .. vale off
 
+   When a User sends an Email directly from a Contact's profile, Mautic uses the logged-in User's signature with the 'From' name and email address specified in the **Send email** form, not the Contact owner's signature. Mautic pre-fills these values with those of the logged-in User.
+
+   .. vale on
+
+   This applies regardless of whether the Contact has a different owner assigned, or no owner at all. The same behavior applies when sending test Emails.
 
 .. vale off
 
