@@ -328,17 +328,25 @@ Merge two Contacts
 
 .. vale on
 
-If you have 2 Contacts in the Mautic database who are physically one person, you can merge them with the Merge feature. 
+If you have 2 Contacts in the Mautic database who are physically one person, you can merge them with the Merge feature.
 
-1. Click the drop down box arrow in the top right hand corner of the Contact detail, 
+1. Click the drop down box arrow in the top right hand corner of the Contact detail,
 
-2. Select the Merge item, a modal box shows up. 
+2. Select the Merge item, a modal box shows up.
 
-3. Search for the Contact you want to merge into the current Contact. The select box updates as you search. 
+3. Search for the Contact you want to merge into the current Contact. The select box updates as you search.
 
 4. Select the right Contact and hit the **Merge** button.
 
-.. vale off 
+When you merge Contacts, the surviving Contact receives the following data:
+
+* **Field data** - Values from the merged Contact fill empty fields on the surviving Contact.
+* **Owner** - If the surviving Contact doesn't have an owner, it inherits the merged Contact's owner.
+* **Points** - Points from both Contacts combine.
+* **Tags** - Tags from both Contacts combine.
+* **Company associations** - Company associations from the merged Contact transfer to the surviving Contact. If both Contacts have a primary Company, the surviving Contact keeps its primary. If only the merged Contact has a primary Company, the surviving Contact inherits that primary designation.
+
+.. vale off
 
 Send Email to Contact
 =====================
