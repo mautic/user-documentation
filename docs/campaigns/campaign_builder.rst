@@ -12,9 +12,7 @@ The Campaign Builder provides a blank canvas on which you can build your Campaig
 Navigating the canvas
 ---------------------
 
-When you open the Campaign Builder, Mautic centers the view on your Campaign. The canvas uses an infinite-canvas design, allowing you to pan freely in any direction without traditional scrolling boundaries. This gives you more space to build complex workflows.
-
-To pan around the canvas, hold the spacebar and drag with your mouse. The cursor changes to a grab icon while panning. Release the spacebar to resume normal editing. This works like common design tools such as Figma or Photoshop, letting you navigate large Campaigns without accidentally selecting or moving individual nodes.
+To pan around the Campaign Builder canvas, hold the spacebar and drag with your mouse. The cursor changes to a grab icon while panning. Release the spacebar to resume normal editing. This works like common design tools such as Figma or Photoshop, letting you navigate large Campaigns without accidentally selecting or moving individual nodes.
 
 To build your Campaign, perform the following steps:
 
