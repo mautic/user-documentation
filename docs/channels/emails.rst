@@ -71,6 +71,10 @@ Email overview
 
 The Email overview allows at-a-glance information regarding the success or failure of a particular Email. You can quickly see relevant information in regards to opens, bounces, successful click-throughs and other important statistics.
 
+Click the **Details** expander below the Email subject to view additional information about the Email, including category, creator, theme, and send statistics.
+
+For Segment Emails, the Details section also displays the target Segments as clickable links. Click any Segment name to navigate directly to that Segment's detail page.
+
 .. vale off
 
 Email Drafts
