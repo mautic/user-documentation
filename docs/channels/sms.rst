@@ -124,7 +124,7 @@ Sending MMS (Multimedia Messages)
 Mautic supports sending MMS, which allows you to attach images to your Text Messages. MMS messages appear in the Text Messages list with an image icon indicator, and the Campaign Builder dropdown shows an ``[MMS]`` prefix for messages with media attached.
 
 .. note::
-    MMS is currently available for Contacts with phone numbers in the United States and Canada only. When sending to Contacts outside these regions, the image is sent as a URL link instead.
+    MMS is currently available for Contacts with phone numbers in the United States, Canada, and Australia only. When sending to Contacts outside these regions, Mautic sends the image as a URL link instead.
 
 .. vale off
 
