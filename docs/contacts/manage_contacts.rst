@@ -171,11 +171,11 @@ The following batch actions are currently available:
 
 If you need to delete large numbers of Contacts, visit the :doc:`segment docs</segments/manage_segments>` which explains how to delete thousands of Contacts easily.
 
-You can also access Find and Replace from the page actions menu without selecting any rows. This applies the replacement to all Contacts matching your current search.
+You can also access **Find and Replace** from the list view actions without selecting any rows. This applies the replacement to all Contacts matching your current search.
 
 .. note::
 
-  You need edit permissions to use Find and Replace. Users with ``lead:leads:editown`` can update Contacts they own, while Users with ``lead:leads:editother`` can update any Contact.
+  You need edit permissions to use **Find and Replace**. Users with ``lead:leads:editown`` can update Contacts they own, while Users with ``lead:leads:editother`` can update any Contact.
 
 .. vale off
 
