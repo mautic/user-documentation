@@ -128,7 +128,7 @@ These are the commands you may need to use in relation to your Mautic instance.
    * - ``mautic:entity:import --entity=campaign --file=path-to-file/entity_data.zip --user=1``
      - Imports Campaign and dependent entities to Mautic from a ZIP file. See :doc:`/campaigns/importing_campaigns`.
      -
-   * - ``mautic:entity:export --entity=campaign --id=1 --zip-file=path/to-file/campaign_export.zip --path=path/to-file``
+   * - ``mautic:entity:export --entity=campaign --id=1 --zip-file --path=path/to-file``
      - Exports Campaign and dependent entities from Mautic to a ZIP file. See :doc:`/campaigns/exporting_campaigns`.
      -
    * - ``messenger:consume email``
