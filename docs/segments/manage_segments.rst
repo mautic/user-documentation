@@ -347,9 +347,9 @@ You must ensure that you use the correct operator and time frame to build an eff
 
 Once you've selected a date field as your filter, such as the default **Date last active** field or a custom **Birthday** field, you'll have a list of operators to choose from:
 
-* **Equals** - The value on the Contact record exactly matches the filter value.
+* **Is equal to** - The value on the Contact record exactly matches the filter value.
 
-* **Not Equal** - The value on the Contact record is any value that doesn't match the filter value.
+* **Is not equal to** - The value on the Contact record is any value that doesn't match the filter value.
 
 * **Greater than** - The value on the Contact record is at a later date in time than X date. For example, ``Greater than`` today means anytime from tomorrow until the end of time.
 
@@ -359,17 +359,17 @@ Once you've selected a date field as your filter, such as the default **Date las
 
 * **Less than or equal** - The value on the Contact record is at an earlier date in time than X date. For example, ``Less than or equal today`` means anytime from the beginning of time until today.
 
-* **Empty** - No value exists in the field on the Contact record.
+* **Is empty** - No value exists in the field on the Contact record.
 
-* **Not empty** - A value exists in the field on the Contact record.
+* **Is not empty** - A value exists in the field on the Contact record.
 
-* **Like** - This operator isn't supported in date or date-time fields, don't use it.
+* **Contains** - This operator isn't supported in date or date-time fields, don't use it.
 
-* **Not like** - This operator isn't supported in date or date-time fields, don't use it.
+* **Doesn't contain** - This operator isn't supported in date or date-time fields, don't use it.
 
-* **Regexp** - Segment includes Contacts with values that match the specified regular expression pattern. If you aren't proficient with regular expression, don't use this operator.
+* **Matches pattern** - Segment includes Contacts with values that match the specified regular expression pattern. If you aren't proficient with regular expression, don't use this operator.
 
-* **Not regexp** - Segment includes Contacts with values that don't match the specified regular expression pattern. If you aren't proficient with regular expressions, don't use this operator.
+* **Does not match pattern** - Segment includes Contacts with values that don't match the specified regular expression pattern. If you aren't proficient with regular expressions, don't use this operator.
 
 * **Starts with** - Segment includes Contacts whose field values begin with the specified numbers. These filter values should generally reference years, or years and months.
 
@@ -379,7 +379,7 @@ Once you've selected a date field as your filter, such as the default **Date las
 
   *For example, A value of 1 matches anyone whose field value is on the 1^st, 21^st, or 31^st of any month but a value of 01 matches the 1 st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.*
 
-* **Contains** - Segment includes Contacts with the specified filter value anywhere in the field value.
+* **In list** - Segment includes Contacts with the specified filter value anywhere in the field value.
 
 .. image:: images/operators-2.png
     :alt: Screenshot showing Operators.
@@ -393,26 +393,26 @@ Matching part of a string
 
 .. vale on
 
-There are 5 filters you can use for matching part of a string - ``starts with``, ``ends with``, ``contains``, ``like`` and ``regexp``.
-First three filters match strings as you enter it. ``like`` filter is for advanced Users - you can specify which type you want to use with ``%`` character:
+There are 5 filters you can use for matching part of a string - ``starts with``, ``ends with``, ``in list``, ``contains`` and ``matches pattern``.
+The first three filters match strings as you enter them. The ``contains`` filter is for advanced Users - you can specify which type you want to use with the ``%`` character:
 
 * ``My string%`` is the same as ``starts with`` filter with ``My string`` value.
 
 * ``%My string`` is the same as ``ends with`` filter with ``My string`` value.
 
-* ``%My string%`` is the same as ``contains`` filter with ``My string`` value.
+* ``%My string%`` is the same as ``in list`` filter with ``My string`` value.
 
-* ``My string`` is the same as ``contains`` filter with ``My string`` value.
+* ``My string`` is the same as ``in list`` filter with ``My string`` value.
 
 A few notes for text filters:
 
-* You should use ``starts with``, ``ends with``, ``contains`` rather than ``like`` as they're more specific, and therefore can be more effective.
+* You should use ``starts with``, ``ends with``, ``in list`` rather than ``contains`` as they're more specific, and therefore can be more effective.
 
-*  A ``%`` character in the middle of the string has no special meaning. A ``contains`` filter with ``my % string`` searches for a string with ``%`` in the middle. The same is TRUE for a ``like`` filter with ``%my % string%`` value. There is no need to escape this character.
+*  A ``%`` character in the middle of the string has no special meaning. An ``in list`` filter with ``my % string`` searches for a string with ``%`` in the middle. The same is TRUE for a ``contains`` filter with ``%my % string%`` value. There is no need to escape this character.
 
-* Mautic searches for the ``%`` character in a value for the ``like`` filter, if finding at least one ``%`` Mautic doesn't perform any modification.
+* Mautic searches for the ``%`` character in a value for the ``contains`` filter, if finding at least one ``%`` Mautic doesn't perform any modification.
 
-You can use regular expressions in a ``regexp`` filter. Mautic recognises all common operators like ``|`` for OR  - for example ``first string|second string``, character sets including ``[0-9]``, ``[a-z0-9]`` and so forth, repetitions (``+``, ``*``, ``?``) and more.
+You can use regular expressions in a ``matches pattern`` filter. Mautic recognises all common operators like ``|`` for OR  - for example ``first string|second string``, character sets including ``[0-9]``, ``[a-z0-9]`` and so forth, repetitions (``+``, ``*``, ``?``) and more.
 
 You have to escape special characters with ``\`` if you want to use them as matching character.
 
@@ -449,9 +449,9 @@ However, you can specify much more here. Mautic recognizes relative formats too 
 
 Example - Consider that today is ``2022-03-05``:
 
-* ``Date identified equals -1 week`` returns all Contacts identified on 2022-02-26.
+* ``Date identified is equal to -1 week`` returns all Contacts identified on 2022-02-26.
 * ``Date identified less than -1 week`` returns all Contacts identified before 2022-02-26.
-* ``Date identified equals -1 months`` returns all Contacts identified on 2022-02-05.
+* ``Date identified is equal to -1 months`` returns all Contacts identified on 2022-02-05.
 * ``Date identified greater or equal -1`` year returns all Contacts identified 2021-03-05 and after.
 * ``Date identified greater than -1`` year returns all Contacts identified after 2021-03-05.
 
@@ -472,15 +472,15 @@ Beside this you can specify your date with text. These formulas are **translatab
 
 Example (Consider that today is ``2022-03-05``):
 
-* ``Date identified equals last week`` returns all Contacts identified in the specified date range, for example 2022-03-01 - 2022-03-07.
+* ``Date identified is equal to last week`` returns all Contacts identified in the specified date range, for example 2022-03-01 - 2022-03-07.
 * ``Date identified less than last week`` returns all Contacts identified before 2022-02-22.
-* ``Date identified equals last month`` returns all Contacts identified in the specified date range, for example 2022-02-01 - 2022-02-28.
+* ``Date identified is equal to last month`` returns all Contacts identified in the specified date range, for example 2022-02-01 - 2022-02-28.
 * ``Date identified greater or equal last year`` returns all Contacts identified 2021-01-01 and after.
 * ``Date identified greater than last year`` returns all Contacts identified after 2021-12-31.
 * ``Date identified greater than first day of previous month`` returns all Contacts identified after 2022-02-01.
 * ``Date identified greater than last day of previous month`` returns all Contacts identified after 2022-02-28.
-* ``Custom Contact date field equal birthday -1 day`` returns all Contacts identified every year on 03-04 (4th march).
-* ``Custom Contact date field equal anniversary -1 month`` returns all Contacts identified every year on 02-04 (4th february)
+* ``Custom Contact date field is equal to birthday -1 day`` returns all Contacts identified every year on 03-04 (4th march).
+* ``Custom Contact date field is equal to anniversary -1 month`` returns all Contacts identified every year on 02-04 (4th february)
 
 Once you have created your Segment, any applicable Contact is automatically added through the execution of a :ref:`cron job<import contacts cron job>`. This is the essence of Segments.
 
