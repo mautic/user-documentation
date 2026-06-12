@@ -78,7 +78,7 @@ Use the following commands to save the exported file:
 
 .. code-block:: bash
     
-    bin/console mautic:entity:export --entity=campaign --id=1 --json-file
+    bin/console mautic:entity:export --entity=campaign --id=1 --json-only
 
 * Creates only a JSON file and ignores any additional resources.
 
