@@ -205,7 +205,7 @@ Focus Items without filters continue to work as before, requiring manual embeddi
 
 .. note::
 
-   Filter-based Focus Items require the Mautic tracking script to be installed on your website. Ensure your CORS settings include your website domain.
+   Filter-based Focus Items require you to install the Mautic tracking script on your website. Ensure your CORS settings include your website domain.
 
 .. vale off
 
@@ -253,7 +253,11 @@ Filter-based delivery
 
 When you configure filters on a Focus Item, Mautic automatically delivers it through the tracking script to Contacts matching the filter criteria. This is the simplest method because it doesn't require any additional code beyond the standard Mautic tracking script already on your website.
 
+.. vale off
+
 The tracking script calls Mautic to determine whether the visiting Contact matches any active Focus Items with filters. If there's a match, the Focus Item displays automatically according to its engagement settings - appearing as a modal, bar, notification, or full page overlay depending on the style you've configured.
+
+.. vale on
 
 This method works well when you want to:
 
@@ -263,7 +267,7 @@ This method works well when you want to:
 
 .. note::
 
-   Filter-based delivery only works for tracked Contacts. Anonymous visitors who haven't been identified don't see filter-based Focus Items.
+   Filter-based delivery only works for tracked Contacts. Anonymous visitors that Mautic hasn't yet identified don't see filter-based Focus Items.
 
 Direct embedding
 ================
