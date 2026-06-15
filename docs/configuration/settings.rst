@@ -710,7 +710,7 @@ Advanced setting
 Retry strategy
 --------------
 
-When the processing of a message fails, Mautic sends the message back to the queue for another try. You can adjust this behaviour in this section.
+When the processing of a message fails, Mautic sends the message back to the queue for another try. You can adjust this behavior in this section.
 See :xref:`queue-retries-failures` for more details.
 
 The screenshot below shows the default values.
@@ -718,6 +718,14 @@ The screenshot below shows the default values.
 .. image:: images/queue-retry-strategy.png
   :width: 600
   :alt: Retry strategy defaults
+
+* **Max retries** - The maximum number of times Mautic retries a failed message before giving up. Set to ``0`` to turn off retries. Negative values aren't allowed. The default is ``3``.
+
+* **Delay** - The initial delay in milliseconds before the first retry attempt. Negative values aren't allowed. The default is ``1000``, which is 1 second.
+
+* **Multiplier** - The factor by which the delay increases after each retry attempt. For example, with a delay of 1000 ms and a multiplier of 2, the delays are 1000 ms, 2000 ms, 4000 ms, and so on. Values less than 1 aren't allowed. The default is ``2``.
+
+* **Max delay** - The maximum delay in milliseconds between retry attempts. Set to ``0`` for no limit. Negative values aren't allowed. The default is ``0``.
 
 Queue for failures
 ------------------
