@@ -304,7 +304,11 @@ Configuring Segment filters
 
   * Contact behavior and actions
 
+    .. vale off
+
     * Behavioral date filters, such as **Read any email (date)** and **Sent any email (date)**, evaluate the most recent date when a Contact has multiple occurrences. For example, if a Contact read emails on January 1 and March 15, the **Read any email (date)** filter evaluates March 15 as the Contact's read date.
+
+    .. vale on
 
   * Primary Company fields
 
