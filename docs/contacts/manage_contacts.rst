@@ -195,7 +195,9 @@ Image
 History
 =======
 
-Event history tracks any engagements between Mautic and a Contact. To find certain event types, search in the **Include events by source** text box. To exclude event types from the history while you're looking at it, use **Exclude events by source**.
+Event history tracks any engagements between Mautic and a Contact. Mautic groups events by day so you can scan activity quickly. Group headers display 'Today', 'Yesterday', or a formatted date, while individual events show only the time.
+
+To find specific event types, search in the **Include events by source** text box. To exclude event types from the history, use **Exclude events by source**.
 
 **Accessed from IP** - IP addresses which the Contact has opened or clicked Emails, visited your tracked pages, etc. from.
 
@@ -344,6 +346,8 @@ Send Email to Contact
 .. vale on
 
 This option enables Users to send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the individual message.
+
+.. _Contact tracking:
 
 Contact tracking
 ****************
@@ -508,6 +512,8 @@ Updating Contact fields
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 You can also pass information specific to your Contact by setting Mautic Contact ``field(s)`` to be publicly editable. Note that values appended to the tracking pixel should be ``url`` encoded - %20 for spaces, %40 for @, etc.
+
+.. _Tags in manage Contacts:
 
 Tags
 ~~~~
