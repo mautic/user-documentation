@@ -400,10 +400,16 @@ Single-select fields, such as Country, Timezone, Region, Locale, and custom sele
 * **Including any of** - The Contact's value matches at least one of the selected options.
 * **Excluding any of** - The Contact's value matches none of the selected options.
 
-A multiselect field adds two operators for matching against multiple values:
+A multiselect field can hold more than one value at once, so it offers a different set of operators:
 
+* **Including any of** - The Contact's values include at least one of the selected options.
+* **Excluding any of** - The Contact's values include none of the selected options.
 * **Including all of** - The Contact's values include every selected option.
 * **Excluding all of** - The Contact's values don't include every selected option.
+* **Empty** - The Contact has no value for this field.
+* **Not empty** - The Contact has a value for this field.
+
+The two sets aren't identical. A multiselect field doesn't offer **Equals**, **Not equal**, **Regexp**, or **Not regexp**, since those compare against a single value. Instead, it adds **Including all of** and **Excluding all of** to match against every selected value.
 
 .. note::
 
