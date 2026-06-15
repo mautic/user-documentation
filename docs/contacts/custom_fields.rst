@@ -131,6 +131,45 @@ Mautic stores Fields and Tags differently in the database. You can create unlimi
 
 For more information on using Tags, see the :ref:`Tags in manage Contacts` section.
 
+.. _custom field groups:
+
+Custom Field Groups
+*******************
+
+Custom Field Groups let you organize Contact and Company Custom Fields into named tabs, alongside the built-in groups - Core, Social, Personal, and Professional for Contacts, and Core, Professional, and Other for Companies. Each group appears as a tab on the Contact and Company edit and detail views, so you can keep related Fields together.
+
+Only administrators can manage Custom Field Groups. To open the list, go to **Settings > Custom Field Groups**. The list shows each group's name, alias, and the number of Fields assigned to it.
+
+.. vale off
+
+Adding a Custom Field Group
+===========================
+
+.. vale on
+
+#. Go to **Settings > Custom Field Groups** and select **New**.
+#. Enter a **Name**. The name can contain only letters, numbers, and spaces.
+#. Optionally, add a **Description**.
+#. Use the **Group order** dropdown to choose the group this one should appear before. Leave it empty to place the group last. This controls the tab order on Contact and Company views.
+#. Select **Save & Close**.
+
+When you create a group, Mautic generates an **Alias** from the name - for example, 'Billing' becomes 'billing'. Your Fields reference the group by this alias, so it's read-only and never changes, even if you rename the group later.
+
+Ordering groups
+===============
+
+Custom groups always appear after the default groups on Contact and Company views. The **Group order** dropdown sets the order of your custom groups relative to each other - pick the group this one should appear before, or leave it empty to place it last.
+
+Assigning Fields to a group
+===========================
+
+You assign a Custom Field to a group from the Field, not from the group. When you add or edit a Contact or Company Custom Field on the **Custom Fields** page, choose the group from the **Group** dropdown. This dropdown lists both the default groups and any custom groups you've created.
+
+Deleting a Custom Field Group
+=============================
+
+You can delete a group only when it has no Fields assigned to it. If you try to delete a group that still has Fields, Mautic blocks the deletion and shows this message: 'Cannot delete this field group because it still has fields assigned to it. Reassign or remove the fields first.' Reassign those Fields to another group or remove them, then delete the group.
+
 Creating Custom Fields via a command
 ************************************
 
