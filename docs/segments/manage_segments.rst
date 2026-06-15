@@ -386,12 +386,8 @@ Once you've selected a date field as your filter, such as the default **Date las
 
 Once you have selected the field you can then choose the type of operation to perform. These vary depending on the way you wish to filter your Contacts.
 
-.. vale off
-
 Operators for select fields
 ===========================
-
-.. vale on
 
 Single-select fields, such as Country, Timezone, Region, Locale, and custom select fields, offer these operators:
 
