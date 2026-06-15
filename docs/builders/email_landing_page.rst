@@ -60,6 +60,25 @@ Asset manager
 
 With the Asset Manager is easier to organize your media files and it's enough to double click the image to change it.
 
+Editing text
+============
+
+GrapesJS uses inline text editing. Select a text Component and start typing to make changes directly on the canvas - there's no need to open a separate dialog.
+
+The text editor includes standard formatting options:
+
+* Bold, italic, underline and strikethrough
+* Text alignment
+* Ordered and unordered lists
+* Links and anchors
+* Tokens for personalization
+
+You can paste content from external sources like Microsoft Word or Google Docs. The editor preserves basic formatting while adapting it for Email and Landing Page layouts.
+
+.. tip::
+
+   Click outside the text Component or press ``Escape`` to finish editing and return to the canvas.
+
 About the builder
 *****************
 
@@ -127,10 +146,26 @@ If you search through the list of available Themes, the new MJML Themes ``Brienz
 
 To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`. 
 
-Custom fonts
-************
+Typography
+**********
 
-From Mautic 5.x you can extend the Style Manager > Typography > Fonts list to include custom fonts.
+The Style Manager includes a Typography section for styling text Components. Select any text Component on the canvas, then open the Style panel to access these controls:
+
+* **Font family** - choose from available fonts
+* **Font size** - set the text size in pixels
+* **Font weight** - adjust text weight from light to bold
+* **Letter spacing** - control spacing between characters
+* **Color** - set the text color
+* **Line height** - adjust vertical spacing between lines
+* **Text align** - align text left, center, right, or justify
+* **Text shadow** - add shadow effects to text
+
+These settings apply to the selected Component and override Theme defaults. Use them to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
+
+Custom fonts
+============
+
+From Mautic 5.x you can extend the **Typography** > **Fonts** list to include custom fonts.
 
 .. image:: images/editorfonts.jpg
   :width: 280

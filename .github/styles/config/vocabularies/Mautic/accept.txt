@@ -123,6 +123,7 @@ SMTP
 SNS
 SparkPost
 SSO
+strikethrough
 sublicense
 SugarCRM
 Suhosin
