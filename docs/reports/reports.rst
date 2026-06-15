@@ -85,7 +85,7 @@ As demonstrated, Mautic displays the data sources in the format: ``<Parent data 
 The parent data source provides a high-level summary of the data while the child data source provides a more granular view of Contact behavior that includes your Custom Fields and values.
 
 * **Description - optional** - Add detailed information about the Report, helping you and other Users better understand what the Report is for. You may want to include more information about filters, people, or departments.
-  
+
 * **Published** - Select **Yes** to ensure that the Report is active, ready to send when scheduled in the Report options.
 
 * **Visible for all logged-in Users** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report.
@@ -96,6 +96,40 @@ The parent data source provides a high-level summary of the data while the child
 
   - Opened by default - If you want to ensure that the date filters and filter options for any other Report filters are visible on a Report detail page without needing to open the filters drop-down, select Yes. For example, for an Emails Report, you might want to view dynamic filters for subject or sent date.
   - Hide date range - To hide the date range filter so that Users can't change the dates that the Report displays data for, select to **Yes**.
+
+.. vale off
+
+Email Report columns
+--------------------
+
+.. vale on
+
+When using 'Emails' as the data source, you can add the following columns to measure Email engagement:
+
+.. vale off
+
+* **Sent count:** the number of Emails sent to Contacts.
+* **Read count:** the number of Emails that Contacts opened.
+* **Read ratio:** the percentage of sent Emails that Contacts opened.
+* **Click-through count:** the number of unique Contacts who clicked any link in the Email.
+* **Click-through rate:** the percentage of sent Emails that resulted in at least one click.
+* **Click-to-open rate:** the percentage of opened Emails that resulted in at least one click. This helps you understand how engaging the Email content is to recipients who already opened it.
+* **Unsubscribed:** the number of Contacts who unsubscribed after receiving the Email.
+* **Unsubscribed ratio:** the percentage of sent Emails that resulted in an unsubscribe.
+* **Unsubscribe-to-Open Ratio:** the percentage of unsubscribed Contacts relative to those who opened the Email. This helps you understand how Email content affects unsubscribe rates among engaged recipients.
+* **Bounced:** the number of Emails that bounced.
+* **Bounced ratio:** the percentage of sent Emails that bounced.
+* **Clicks:** the total number of link clicks across all recipients - non-unique.
+* **Clicks ratio:** the percentage of sent Emails that resulted in a click, based on total clicks rather than unique Contacts.
+* **Unique clicks:** the total number of unique clicks across all trackable links. Each link counts separately, so a Contact clicking multiple different links adds multiple unique clicks. If you need the number of unique Contacts who clicked any link, use **Click-through count** instead.
+* **Unique clicks ratio:** the percentage of sent Emails that resulted in a unique click, based on summed per-link unique hits.
+* **DNC Preferences:** summary of all Do Not Contact preferences for the Contact across all Channels and Emails.
+
+.. vale on
+
+.. tip::
+
+   Use the Unsubscribe-to-Open Ratio to compare the unsubscribe impact of different Emails. A high ratio may indicate that the Email content didn't meet recipient expectations, while a low ratio suggests it resonated with those who read it.
 
 
 Data
