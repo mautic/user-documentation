@@ -158,7 +158,8 @@ MMS media requirements
 * **Total size limit**: 5 MB for all attached media combined
 
 .. note::
-    Mautic doesn't validate external URLs. Ensure your external images use a supported format and the total size is under 5 MB.
+   
+   Mautic doesn't validate external URLs. Ensure your external images use a supported format and the total size is under 5 MB.
 
 Creating Text Messages from Campaign Builder
 ============================================
