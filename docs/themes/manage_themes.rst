@@ -42,23 +42,19 @@ When you select a Theme in the Email or Landing Page builders, Themes may show t
 
 The following tags are available:
 
-**Newsletter** - For regular newsletter communications.
+.. vale off
 
-**Promotion** - For promotional and marketing campaigns.
+* **Newsletter** - For regular newsletter communications.
+* **Promotion** - For promotional and marketing Campaigns.
+* **Transactional** - For transactional messages like order confirmations or receipts.
+* **Registration** - For registration and sign-up flows.
+* **Contact** - For Contact forms and inquiries.
+* **Thank you** - For thank you and confirmation pages.
+* **Download** - For download and resource pages.
+* **Coming soon** - For pre-launch or coming soon pages.
+* **Adaptative** - Themes with this tag respond to your brand configuration in system settings, automatically applying your brand colors and styles.
 
-**Transactional** - For transactional messages like order confirmations or receipts.
-
-**Registration** - For registration and sign-up flows.
-
-**Contact** - For contact forms and inquiries.
-
-**Thank you** - For thank you and confirmation pages.
-
-**Download** - For download and resource pages.
-
-**Coming soon** - For pre-launch or coming soon pages.
-
-**Adaptative** - Themes with this tag respond to your brand configuration in system settings, automatically applying your brand colors and styles.
+.. vale on
 
 .. vale off
 
