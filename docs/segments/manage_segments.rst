@@ -351,10 +351,22 @@ Once you've selected a date field as your filter, such as the default **Date las
 
 * **Is equal to** - The value on the Contact record exactly matches the filter value.
 * **Is not equal to** - The value on the Contact record is any value that doesn't match the filter value.
-* **Greater than** - The value on the Contact record is at a later date in time than X date. For example, ``Greater than`` today means anytime from tomorrow until the end of time.
-* **Greater than or equal** - The value on the Contact record is either at a later date in time than or including X date. For example, ``Greater than or equal`` today means anytime from today until the end of time.
-* **Less than** - The value on the Contact record is at an earlier date in time than X date. For example, ``Less than today`` means anytime from the beginning of time until yesterday.
-* **Less than or equal** - The value on the Contact record is at an earlier date in time than X date. For example, ``Less than or equal today`` means anytime from the beginning of time until today.
+* **Greater than** - The value on the Contact record is at a later date in time than X date.
+
+  For example, ``Greater than`` today means anytime from tomorrow until the end of time.
+
+* **Greater than or equal** - The value on the Contact record is either at a later date in time than or including X date.
+
+  For example, ``Greater than or equal`` today means anytime from today until the end of time.
+
+* **Less than** - The value on the Contact record is at an earlier date in time than X date.
+
+  For example, ``Less than today`` means anytime from the beginning of time until yesterday.
+
+* **Less than or equal** - The value on the Contact record is at an earlier date in time than X date.
+
+  For example, ``Less than or equal today`` means anytime from the beginning of time until today.
+
 * **Is empty** - No value exists in the field on the Contact record.
 * **Is not empty** - A value exists in the field on the Contact record.
 * **Contains** - This operator isn't supported in date or date-time fields, don't use it.
@@ -363,11 +375,11 @@ Once you've selected a date field as your filter, such as the default **Date las
 * **Does not match pattern** - Segment includes Contacts with values that don't match the specified regular expression pattern. If you aren't proficient with regular expressions, don't use this operator.
 * **Starts with** - Segment includes Contacts whose field values begin with the specified numbers. These filter values should generally reference years, or years and months.
 
-  For example: a value of 19 matches any Contacts whose field value has a year in the 1900^s. A value of 200 matches Contacts with a year value between 2000 and 2009 and a value of 2020-11 matches Contacts with a field value in November 2020.
+  For example, a value of 19 matches any Contacts whose field value has a year in the 1900^s. A value of 200 matches Contacts with a year value between 2000 and 2009 and a value of 2020-11 matches Contacts with a field value in November 2020.
 
 * **Ends with** - Segment includes Contacts whose field values end with the specified numbers. These filter values should generally reference days, or months and days.
 
-  For example: a value of 1 matches anyone whose field value is on the 1^st, 21^st, or 31^st of any month but a value of 01 matches the 1 st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.
+  For example, a value of 1 matches anyone whose field value is on the 1^st, 21^st, or 31^st of any month but a value of 01 matches the 1 st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.
 
 * **In list** - Segment includes Contacts with the specified filter value anywhere in the field value.
 
@@ -446,7 +458,7 @@ However, you can specify much more here. Mautic recognizes relative formats too 
 
    Hour-based relative filters work with date and time fields such as **Date last active** or **Date modified**. These filters compare the full timestamp including time, not just the date portion.
 
-Example - Consider that today is ``2022-03-05``:
+**Example: consider that today is ``2022-03-05``:**
 
 * ``Date identified is equal to -1 week`` returns all Contacts identified on 2022-02-26.
 * ``Date identified less than -1 week`` returns all Contacts identified before 2022-02-26.
@@ -469,7 +481,7 @@ Beside this you can specify your date with text. These formulas are **translatab
 
    Relative date values like ``today``, ``tomorrow``, and ``this week`` work correctly regardless of your Mautic language setting. Switching languages doesn't affect how Segments evaluate these filters.
 
-Example (Consider that today is ``2022-03-05``):
+**Example: consider that today is ``2022-03-05``:**
 
 * ``Date identified is equal to last week`` returns all Contacts identified in the specified date range, for example 2022-03-01 - 2022-03-07.
 * ``Date identified less than last week`` returns all Contacts identified before 2022-02-22.
