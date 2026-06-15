@@ -175,6 +175,8 @@ Filters
 
 The Filters tab lets you define Contact filters for the Focus Item. When you add filters, the Mautic tracking script automatically displays the Focus Item to visitors whose Contact profile matches the specified criteria. You don't need to manually embed the Focus Item code or use a Campaign to show it to specific audiences.
 
+.. vale off
+
 Filters use the same filter interface as :doc:`/components/dynamic_web_content` and Segments, including:
 
 * Contact field values such as email, name, or Custom Fields
@@ -182,6 +184,8 @@ Filters use the same filter interface as :doc:`/components/dynamic_web_content` 
 * Tags
 * Device information including type, brand, and operating system
 * Location data such as country, region, or timezone
+
+.. vale on
 
 To configure filters:
 
@@ -200,7 +204,8 @@ When a Focus Item has filters configured:
 Focus Items without filters continue to work as before, requiring manual embedding or Campaign delivery.
 
 .. note::
-    Filter-based Focus Items require the Mautic tracking script to be installed on your website. Ensure your CORS settings include your website domain.
+
+   Filter-based Focus Items require the Mautic tracking script to be installed on your website. Ensure your CORS settings include your website domain.
 
 .. vale off
 
@@ -231,9 +236,13 @@ Once you have created your Focus Item, you're ready to activate it to your websi
 
 There are three ways to deploy a Focus Item:
 
+.. vale off
+
 * **Filter-based delivery** - Automatically displays to visitors matching Contact filters via the tracking script
 * **Direct embedding** - Manually embed the Focus Item code on specific pages
 * **Campaign delivery** - Trigger the Focus Item as part of a Campaign workflow
+
+.. vale on
 
 .. vale off
 
@@ -244,7 +253,7 @@ Filter-based delivery
 
 When you configure filters on a Focus Item, Mautic automatically delivers it through the tracking script to Contacts matching the filter criteria. This is the simplest method because it doesn't require any additional code beyond the standard Mautic tracking script already on your website.
 
-The tracking script calls Mautic to check if the visiting Contact matches any published Focus Items with filters. If there's a match, the Focus Item displays automatically according to its engagement settings - appearing as a modal, bar, notification, or full page overlay depending on the style you've configured.
+The tracking script calls Mautic to determine whether the visiting Contact matches any active Focus Items with filters. If there's a match, the Focus Item displays automatically according to its engagement settings - appearing as a modal, bar, notification, or full page overlay depending on the style you've configured.
 
 This method works well when you want to:
 
@@ -253,7 +262,8 @@ This method works well when you want to:
 * Display different content to visitors based on their Tags or device type
 
 .. note::
-    Filter-based delivery only works for tracked Contacts. Anonymous visitors who haven't been identified don't see filter-based Focus Items.
+
+   Filter-based delivery only works for tracked Contacts. Anonymous visitors who haven't been identified don't see filter-based Focus Items.
 
 Direct embedding
 ================
@@ -277,7 +287,8 @@ You can trigger a Focus Item to appear as part of a Campaign workflow. This does
 Within the Campaign, add a decision for ``Visits a Page``, and then select the Action of ``Show Focus Item``. Note that you must precede it by ``Visits a Page`` to trigger the Focus Item.
 
 .. warning::
-    Campaign-based delivery can be less reliable than filter-based or direct embedding methods because it depends on the Campaign cron job timing. Consider using filter-based delivery for targeting specific Contact profiles, or direct embedding for guaranteed display.
+
+   Campaign-based delivery can be less reliable than filter-based or direct embedding methods because it depends on the Campaign Cron job timing. Consider using filter-based delivery for targeting specific Contact profiles, or direct embedding for guaranteed display.
 
 Measuring success
 *****************
