@@ -94,8 +94,8 @@ The parent data source provides a high-level summary of the data while the child
 
 * **Dynamic filters settings**
 
-  - Opened by default - Select **Yes** to display dynamic filter options on the Report detail page without requiring Users to open the Filters panel. For example, in an Emails Report, you might want quick access to filters for subject or sent date. The Filters panel only appears when the Report has dynamic filters configured.
-  - Hide date range - Select **Yes** to hide the date range filter, preventing Users from changing the dates for the Report data. When visible, the date range filter appears at the top of the Report table.
+  * Opened by default - Select **Yes** to display dynamic filter options on the Report detail page without requiring Users to open the Filters panel. For example, in an Emails Report, you might want quick access to filters for subject or sent date. The Filters panel only appears when the Report has dynamic filters configured.
+  * Hide date range - Select **Yes** to hide the date range filter, preventing Users from changing the dates for the Report data. When visible, the date range filter appears at the top of the Report table.
 
 
 Data
