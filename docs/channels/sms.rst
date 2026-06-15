@@ -116,7 +116,9 @@ The following fields are available:
 
 .. vale off
 
-Sending MMS (Multimedia Messages)
+.. _sending MMS in SMS section:
+
+Sending Multimedia Messages - MMS
 =================================
 
 .. vale on
@@ -135,16 +137,14 @@ Enabling MMS for a Text Message
 
 To send a Text Message with media:
 
-1. Create or edit a Text Message.
+#. Create or edit a Text Message.
+#. Toggle the **Is MMS** option to enable media attachments.
+#. Add media using one of the following methods:
 
-2. Toggle the **Is MMS** option to enable media attachments.
+   * Click the **Upload Media** button to select an image from your Mautic Asset Manager
+   * Enter an external image URL in the text field and press Enter or click the arrow button to add it
 
-3. Add media using one of the following methods:
-
-   - Click the **Upload Media** button to select an image from your Mautic Asset Manager
-   - Enter an external image URL in the text field and press Enter or click the arrow button to add it
-
-4. To remove an attached image, click the **X** overlay that appears when you select the image thumbnail.
+#. To remove an attached image, click the **X** overlay that appears when you select the image thumbnail.
 
 .. vale off
 
@@ -153,9 +153,9 @@ MMS media requirements
 
 .. vale on
 
-- **Supported formats**: ``.gif``, ``.png``, ``.jpg``, and ``.jpeg``
-- **Maximum images**: 10 images per MMS
-- **Total size limit**: 5 MB for all attached media combined
+* **Supported formats**: ``.gif``, ``.png``, ``.jpg``, and ``.jpeg``
+* **Maximum images**: 10 images per MMS
+* **Total size limit**: 5 MB for all attached media combined
 
 .. note::
     Mautic doesn't validate external URLs. Ensure your external images use a supported format and the total size is under 5 MB.
