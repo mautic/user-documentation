@@ -156,6 +156,17 @@ You define options as elements of the ``'editor_fonts'`` array in the local conf
     ),
 
 
+Linking an image
+****************
+
+You can turn any image in a Landing Page into a clickable link straight from the Builder, without editing the code. Select the image in the canvas, open the Settings panel on the right, and use the link fields below the 'Alt' and 'Title' fields.
+
+* The ``href`` field sets the URL the image links to. When you set it, Mautic wraps the image in a link. Leave it empty and the image stays a plain image.
+* The ``target`` field controls where the link opens. Choose 'This window' to open the link in the current tab, or select a new window to open it in a new tab.
+* The ``rel`` field sets the value of the link's ``rel`` attribute, such as ``nofollow`` or ``noopener``. This field is optional.
+
+Because Mautic only wraps the image in a link when you set the ``href`` field, an image without a URL renders normally. The link settings persist when you save and reopen the Landing Page.
+
 Reporting bugs
 ***************
 
