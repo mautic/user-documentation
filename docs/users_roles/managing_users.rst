@@ -41,3 +41,49 @@ To set up a User manually:
 * **Language** - Select a language for each User, to improve their experience in Mautic. 
 
 When creating your Users, inform them of the credentials. Mautic doesn't send an Email notifying Users of their login information. Manually informing them is necessary.
+
+.. vale off
+
+Inviting a User by Email
+************************
+
+.. vale on
+
+Instead of creating a User manually and sharing credentials yourself, you can invite someone by Email. Mautic sends them an invitation link, and the invitee sets up their own account by choosing a username and password. This requires the **Create** permission for Users.
+
+To invite a User:
+
+#. Navigate to **Settings** > **Users**.
+
+#. Click **Invite user** in the top right corner. You can also select **Invite your team** from the profile menu in the top right of the screen.
+
+#. In the 'Collaborate with your organization' window, enter the **Email address** of the person you want to invite.
+
+#. Select a **Role** to assign to the invited User.
+
+#. Click **Send invite**.
+
+Mautic sends an invitation Email to that address with a link to create an account. The link expires after 48 hours. If you invite the same Email address again, any earlier invitation for that address stops working.
+
+.. note::
+
+   You can only invite an Email address that doesn't already belong to an existing User. If the address is already in use, ask that person to sign in with their existing account instead.
+
+.. vale off
+
+Completing the invitation
+=========================
+
+.. vale on
+
+When the invited person opens the link in the Email, Mautic shows a registration form where they finish setting up their account. The form pre-fills the Email address and Role from the invitation, and the invitee provides:
+
+* **Username** - The name they use to log in.
+
+* **First name** and **Last name** - The invitee's name.
+
+* **Password** and **Confirm Password** - Their login password. Passwords must be at least six characters in length. Use a combination of upper and lower case letters, special characters, and numbers.
+
+* **Language** - The language for their Mautic experience, or the system default.
+
+After the invitee clicks **Create Account**, Mautic creates the User and redirects them to the login page, where they can sign in with their new credentials.
