@@ -391,6 +391,8 @@ Operators for select fields
 
 Single-select fields, such as Country, Timezone, Region, Locale, and custom select fields, offer these operators:
 
+.. vale off
+
 * **Is equal to** - The Contact's value exactly matches the selected option.
 * **Is not equal to** - The Contact's value doesn't match the selected option.
 * **Is empty** - The Contact has no value for this field.
@@ -400,7 +402,11 @@ Single-select fields, such as Country, Timezone, Region, Locale, and custom sele
 * **Includes any of** - The Contact's value matches at least one of the selected options.
 * **Excludes any of** - The Contact's value matches none of the selected options.
 
+.. vale on
+
 A multiselect field can hold more than one value at once, so it offers a different set of operators:
+
+.. vale off
 
 * **Includes any of** - The Contact's values include at least one of the selected options.
 * **Excludes any of** - The Contact's values include none of the selected options.
@@ -410,6 +416,8 @@ A multiselect field can hold more than one value at once, so it offers a differe
 * **Is not empty** - The Contact has a value for this field.
 
 The two sets aren't identical. A multiselect field doesn't offer **Is equal to**, **Is not equal to**, **Matches pattern**, or **Does not match pattern**, since those compare against a single value. Instead, it adds **Includes all of** and **Excludes all of** to match against every selected value.
+
+.. vale on
 
 .. note::
 
