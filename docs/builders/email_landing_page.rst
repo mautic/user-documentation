@@ -165,7 +165,7 @@ These settings apply to the selected Component and override Theme defaults. Use 
 Custom fonts
 ============
 
-From Mautic 5.x you can extend the **Typography** > **Fonts** list to include custom fonts.
+You can extend the **Typography** > **Fonts** list to include custom fonts.
 
 .. image:: images/editorfonts.jpg
   :width: 280
