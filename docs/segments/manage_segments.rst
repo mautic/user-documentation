@@ -339,7 +339,8 @@ Operators
 =========
 
 .. image:: images/operators.png
-    :alt: Screenshot showing Operators.
+    :alt: Segment Filters tab showing Date added and Date last active filters with the and/or condition dropdown open.
+    :width: 943
 
 .. vale on
 
@@ -386,7 +387,8 @@ Once you've selected a date field as your filter, such as the default **Date las
 .. vale on
 
 .. image:: images/operators-2.png
-    :alt: Screenshot showing Operators.
+    :alt: Segment filter operator dropdown expanded for a date field, showing the Mautic 7.x operator labels such as is equal to, is not equal to, more recent than, contains, and in list.
+    :width: 752
 
 Once you have selected the field you can then choose the type of operation to perform. These vary depending on the way you wish to filter your Contacts.
 
