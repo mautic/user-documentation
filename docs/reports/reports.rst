@@ -89,8 +89,8 @@ The **Details** tab on a Report contains the same options across all Reports and
 
 * **Description - optional** - Add detailed information about the Report, helping you and other Users better understand what the Report is for. You may want to include more information about filters, people, or departments.
 * **Published** - Select **Yes** to ensure that the Report is active, ready to send when scheduled in the Report options.
-* **Visible for all logged-in Users** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report.
-* **Owner** - Select the owner of the Report to determine who can see the Report if the 'Visible for all logged-in Users' setting is No.
+* **Visible for all logged-in Users** - Select **Yes** so that all Users can access the Report. If set to **No**, only the owner of the Report and Users with permission to view others' Reports can see the Report.
+* **Owner** - Select the owner of the Report to determine who can see the Report if the **Visible for all logged-in users** setting is **No**.
 * **Dynamic filters settings**
 
   * Opened by default - Select **Yes** to display dynamic filter options on the Report detail page without requiring Users to open the Filters panel. For example, in an Emails Report, you might want quick access to filters for subject or sent date. The Filters panel only appears when the Report has dynamic filters configured.
