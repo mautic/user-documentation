@@ -84,18 +84,18 @@ As demonstrated, Mautic displays the data sources in the format: ``<Parent data 
 
 The parent data source provides a high-level summary of the data while the child data source provides a more granular view of Contact behavior that includes your Custom Fields and values.
 
+.. vale off
+
 * **Description - optional** - Add detailed information about the Report, helping you and other Users better understand what the Report is for. You may want to include more information about filters, people, or departments.
-  
 * **Published** - Select **Yes** to ensure that the Report is active, ready to send when scheduled in the Report options.
-
 * **Visible for all logged-in Users** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report.
-
 * **Owner** - Select the owner of the Report to determine who can see the Report if the 'Visible for all logged-in Users' setting is No.
-
 * **Dynamic filters settings**
 
   * Opened by default - Select **Yes** to display dynamic filter options on the Report detail page without requiring Users to open the Filters panel. For example, in an Emails Report, you might want quick access to filters for subject or sent date. The Filters panel only appears when the Report has dynamic filters configured.
   * Hide date range - Select **Yes** to hide the date range filter, preventing Users from changing the dates for the Report data. When visible, the date range filter appears at the top of the Report table.
+
+.. vale on
 
 
 Data
@@ -118,7 +118,11 @@ You can customize each Report to include the columns of choice, filter data base
 
 .. note::
 
+   .. vale off
+
    Setting **Dynamic** to **Yes** allows Users to change the data they see in a Report without editing it. They can access the filter from the **Filters** panel at the top of the Report page. The Filters panel only appears when a Report has at least one dynamic filter configured.
+
+   .. vale on
 
 * **Group by** - Select the columns for which you want to group data. By default, Reports show all items individually. In many Reports, you may see the same Contact, Company, or item appear multiple times. To only see each record listed once, you can add a grouping based on some attribute for the record. 
 
