@@ -9,8 +9,6 @@ Point Insights turn :doc:`Point Groups</points/point_groups>` into actionable kn
 
 For example, if you track engagement with different areas of your website using separate Point Groups, a Point Insight can identify the area each Contact is most active in and record that 'primary interest' on the Contact. You can then use that Custom Field to build Segments, show Dynamic Web Content, or tailor your Campaigns.
 
-Point Insights currently offer a single Insight type, 'Compare Point Groups', and a single action, 'Set Custom Field to winning Point Group'.
-
 .. vale off
 
 Managing Point Insights
@@ -29,23 +27,19 @@ Creating a Point Insight
 
 .. vale on
 
-When you create or edit a Point Insight, configure the following fields:
+The **New Point Insight** form runs the **Set custom field to winning point group** action: it compares the Point Groups you select and writes the winner to a Custom Field. Configure these fields:
 
 * **Name** - The name of the Insight as it appears in your list of Insights.
 
 * **Description** - An optional description to help you identify the Insight.
 
-* **Category** - Organize your Insights by Category. For more information, see :doc:`Categories</categories/categories-overview>`.
-
-* **Published** - Only published Insights run. Set this to **No** to stop an Insight from evaluating Contacts.
-
-* **Insight** - The type of Insight. The only option is 'Compare Point Groups'.
-
-* **Insight Action** - What happens when the Insight runs. The only option is 'Set Custom Field to winning Point Group'.
-
-* **Point Groups to Compare** - Select two or more Point Groups whose scores you want to compare for each Contact.
+* **Point Groups to Compare** - Choose one or more Point Groups whose scores you want to compare for each Contact.
 
 * **Custom Field** - The Contact Custom Field that receives the result. Only published text Custom Fields on Contacts appear in this list. For more information, see :doc:`Custom Fields</contacts/custom_fields>`.
+
+* **Category** - Organize your Insights by Category. For more information, see :doc:`Categories</categories/categories-overview>`.
+
+* **Active** - Only active Insights run. Set this to **No** to stop an Insight from evaluating Contacts.
 
 Click **Save & Close** to store the Insight.
 
@@ -56,7 +50,7 @@ How Point Insights work
 
 .. vale on
 
-Mautic re-evaluates your published Point Insights automatically whenever a Contact's score changes in one of the Point Groups an Insight compares. You don't need to schedule anything or run a command.
+Mautic re-evaluates your active Point Insights automatically whenever a Contact's score changes in one of the Point Groups an Insight compares. You don't need to schedule anything or run a command.
 
 When an Insight runs for a Contact, Mautic compares the Contact's scores across the selected Point Groups and finds the winner, the Point Group with the highest score. It then writes the winner's ID and name to the chosen Custom Field in the format ``ID (PointGroupName)``, for example ``12 (Umbrellas)``.
 
