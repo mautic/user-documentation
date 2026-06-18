@@ -66,7 +66,7 @@ To invite a User:
    You can also find and select it from the profile menu.
 
    .. image:: images/invite_your_team_button_profile_menu.png
-     :width: 400
+     :height: 300
      :alt: Profile menu in the top right of the screen with the Invite your team option highlighted.
 
    |
@@ -78,6 +78,7 @@ To invite a User:
    |
 
    .. image:: images/invite_your_team.png
+     :width: 600
      :alt: Collaborate with your organization window showing the Email address field, the Role selector, and the Send invite button.
 
    |
@@ -100,11 +101,8 @@ When the invited person opens the link in the Email, Mautic shows a registration
 .. vale on
 
 * **Username** - The name they use to log in.
-
 * **First name** and **Last name** - The invitee's name.
-
 * **Password** and **Confirm Password** - Their login password. Passwords must be at least six characters in length. Use a combination of upper and lower case letters, special characters, and numbers.
-
 * **Language** - The language for their Mautic experience, or the system default.
 
 .. vale off
