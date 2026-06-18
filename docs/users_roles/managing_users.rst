@@ -53,15 +53,38 @@ Instead of creating a User manually and sharing credentials yourself, you can in
 
 To invite a User:
 
-#. Navigate to **Settings** > **Users**.
+.. vale off
 
-#. Click **Invite user** in the top right corner. You can also select **Invite your team** from the profile menu in the top right of the screen.
+#. Navigate to **Settings** > **Users**.
+#. Click **Invite your team** at the top right of the table.
+
+   |
+
+   .. image:: images/invite_your_team_button_users_page.png
+     :width: 60%
+     :alt: Users page with the Invite your team button highlighted at the top right of the table.
+
+   You can also find and select it from the profile menu.
+
+   .. image:: images/invite_your_team_button_profile_menu.png
+     :width: 60%
+     :alt: Profile menu in the top right of the screen with the Invite your team option highlighted.
+
+   |
 
 #. In the 'Collaborate with your organization' window, enter the **Email address** of the person you want to invite.
-
 #. Select a **Role** to assign to the invited User.
-
 #. Click **Send invite**.
+
+   |
+
+   .. image:: images/invite_your_team.png
+     :width: 60%
+     :alt: Collaborate with your organization window showing the Email address field, the Role selector, and the Send invite button.
+
+   |
+
+.. vale on
 
 Mautic sends an invitation Email to that address with a link to create an account. The link expires after 48 hours. If you invite the same Email address again, any earlier invitation for that address stops working.
 
@@ -74,9 +97,9 @@ Mautic sends an invitation Email to that address with a link to create an accoun
 Completing the invitation
 =========================
 
-.. vale on
-
 When the invited person opens the link in the Email, Mautic shows a registration form where they finish setting up their account. The form pre-fills the Email address and Role from the invitation, and the invitee provides:
+
+.. vale on
 
 * **Username** - The name they use to log in.
 
@@ -86,4 +109,8 @@ When the invited person opens the link in the Email, Mautic shows a registration
 
 * **Language** - The language for their Mautic experience, or the system default.
 
+.. vale off
+
 After the invitee clicks **Create Account**, Mautic creates the User and redirects them to the login page, where they can sign in with their new credentials.
+
+.. vale on
