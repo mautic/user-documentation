@@ -61,13 +61,12 @@ To invite a User:
    |
 
    .. image:: images/invite_your_team_button_users_page.png
-     :width: 60%
      :alt: Users page with the Invite your team button highlighted at the top right of the table.
 
    You can also find and select it from the profile menu.
 
    .. image:: images/invite_your_team_button_profile_menu.png
-     :width: 60%
+     :width: 400
      :alt: Profile menu in the top right of the screen with the Invite your team option highlighted.
 
    |
@@ -79,7 +78,6 @@ To invite a User:
    |
 
    .. image:: images/invite_your_team.png
-     :width: 60%
      :alt: Collaborate with your organization window showing the Email address field, the Role selector, and the Send invite button.
 
    |
