@@ -183,6 +183,8 @@ To add a new field to your Form:
 
    - **Radio group** - This field provides a group of single-select options with a radio button, sometimes referred to as an option button group.
 
+   - **Rating** - This field lets visitors give a rating by selecting from a row of symbols, such as stars. Clicking a symbol fills every symbol up to and including it - for example, clicking the fourth star fills stars one through four. Mautic saves the selected number as the submitted value. It's useful for surveys, product reviews, and satisfaction scores.
+
    - **Select: Single or multiple choices** - This option shows a dropdown list where a visitor may choose one option. This field also allows multiple selections, which changes the display to a box with the options listed. On a mobile device, a single select box shows a dialog box with radio buttons, and with checkboxes for a multi-select field.
 
    - **Slider** - This field provides an interactive slider control that allows visitors to select a numeric value from a predefined range by dragging a handle along a track. The slider displays the minimum and maximum values at each end and shows the current selected value as the visitor moves the handle.
@@ -278,6 +280,18 @@ If you prefer to create your own field options, the ``Optionlist`` allows you to
 The label field controls the display of the field to the visitor completing the Form, and the value field controls the data saved to the database and stored against the Contact record. While they often match this might not always be the case. For example with a GDPR checkbox, the label might be ``Yes I accept that I may receive Email communications from this Company`` whereas the value stored to the database may be ``Yes`` or ``1``.
 
 In select fields, there are two additional settings to allow for setting the Empty Value - which serves the same purpose as the Input Placeholder and isn't saved to the database - and to determine whether to allow multiple values, which changes the field from ``Select`` to ``Select - Multiple``.
+
+Rating
+------
+
+The Rating field shows a row of symbols - stars by default - that visitors click to choose a value. Clicking a symbol fills every symbol up to and including it, and Mautic saves the selected number as the submitted value. Use the properties tab to set how many symbols appear and how they look:
+
+- **Number of stars** - The number of symbols the visitor can choose from, between 1 and 10. The default is 5.
+- **Rating symbol** - The symbol to display. Choose from a star, an alternate star, an asterisk, a square, a sparkle, a heart, a circle, or a diamond. The default is a filled star.
+- **Selected star color** - The color of the symbols up to and including the visitor's selection. The default is ``#f5b301``.
+- **Base star color** - The color of the unselected symbols. The default is ``#cccccc``.
+
+The Rating field doesn't have a 'Default value' setting on the General tab.
 
 Description area
 ----------------
