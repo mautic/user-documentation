@@ -71,6 +71,13 @@ Email overview
 
 The Email overview allows at-a-glance information regarding the success or failure of a particular Email. You can quickly see relevant information in regards to opens, bounces, successful click-throughs and other important statistics.
 
+At the top of the Email details page, a row of stat cards summarizes how the Email is performing. Each card links to a filtered Contact list, so you can see exactly which Contacts it represents:
+
+- **Sent** - the number of Contacts that have received this Email, including both successful and failed sends, for the entire time period.
+- **Read** - the number of Contacts that have read this Email, shown alongside the read percentage.
+- **Queued** - the number of Contacts that have this Email queued to send based on their frequency rules.
+- **Pending** - the number of Contacts that haven't yet received this Email. This card appears only for Segment Emails. Triggered Emails - those used in a Campaign rather than sent to a Segment - don't show the **Pending** card. It always reported zero for them, which falsely suggested that Mautic was sending no Emails.
+
 .. vale off
 
 Email Drafts
