@@ -61,6 +61,17 @@ To build your Campaign, perform the following steps:
 
   For more information about Campaign Actions, Decisions, and Conditions, see the following topics.
 
+.. vale off
+
+Identifying Campaign events
+---------------------------
+
+.. vale on
+
+Every saved Campaign event shows its unique numeric ID before the event name, as in ``(ID: 42)``. Mautic displays this ID on the event cards in the Campaign Builder canvas, in the Campaign Preview, on the **Jump to Event** action, and in the **Redirect Event** drop-down menu when you delete an event. New events that you haven't saved yet don't have an ID.
+
+The ID helps you tell events apart when two or more share the same name. This is especially useful when you delete an event and redirect its scheduled Contacts to another event, since the ID lets you pick the exact event you want to redirect to.
+
 Actions
 -------
 
