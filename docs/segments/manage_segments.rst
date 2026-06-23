@@ -389,7 +389,9 @@ Once you have selected the field you can then choose the type of operation to pe
 Operators for select fields
 ===========================
 
-Single-select fields, such as Country, Timezone, Region, Locale, and custom select fields, offer these operators:
+Select-type fields come in two kinds, each with its own set of operators. Other field types, such as text, number, and date fields, use the operators described earlier.
+
+Single-select fields hold one value at a time. These include the standard Country, Timezone, Region, and Locale fields, along with any Custom Field created with the **Select** field type. They offer these operators:
 
 .. vale off
 
@@ -404,7 +406,7 @@ Single-select fields, such as Country, Timezone, Region, Locale, and custom sele
 
 .. vale on
 
-A multiselect field can hold more than one value at once, so it offers a different set of operators:
+A multiselect field is a Custom Field created with the multiselect field type, which lets a Contact hold more than one value at once. A field is only multiselect if you create it with this field type, not simply any field that isn't one of the single-select fields described earlier. Because these fields can hold several values, they offer a different set of operators:
 
 .. vale off
 
