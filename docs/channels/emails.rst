@@ -130,6 +130,40 @@ From Mautic 5.1 it's possible to preview A/B and Translation variants:
   :width: 400
   :alt: Screenshot showing A/B and Translation preview
 
+.. vale off
+
+Cloning Emails
+==============
+
+.. vale on
+
+To create a copy of a single Email, use the Clone action in the Actions menu on the Email detail view.
+
+Clone with translations and variants
+------------------------------------
+
+If an Email has translations or A/B variants, cloning the entire group in one step is possible using **Clone with translations and variants**. This action is available in the Actions menu on the Email detail view for parent Emails that have at least one translation or variant.
+
+To clone an Email with its translations and variants:
+
+#. Go to the Email detail view of the parent Email.
+#. Open the actions menu.
+#. Select **Clone with translations and variants**.
+#. Confirm the action in the dialog.
+
+Mautic creates new Unavailable or Deactivated copies of:
+
+* The parent Email
+* All translation children
+* All A/B variant children
+* All translations of A/B variants
+
+Each cloned Email has ``(copy)`` appended to its name and you can edit it independently. The cloned group maintains the same translation and variant structure as the original.
+
+.. note::
+
+   The **Clone with translations and variants** action is only available for parent Emails - not for translation children or variant children.
+
 Base64 encoded images
 =====================
 
@@ -139,9 +173,9 @@ It's possible to encode all images in the Email text as base64. It attaches the 
   :width: 400
   :alt: Screenshot showing Base64 settings for images in Emails
 
-- The main idea with this option is that most of the Email clients display the images directly, without the need to allow images.
-- Some Email clients like GMail require the approval to display Base64 encoded images due to the tracking pixel being an image, and won't display the Base64 encoded images as a result. See the next paragraph for possible solution.
-- The Email body increases significantly if the Email contains many and/or large sized images. Some Email clients like GMail "clip" such messages and won't display it directly.
+* The main idea with this option is that most of the Email clients display the images directly, without the need to allow images.
+* Some Email clients like GMail require the approval to display Base64 encoded images due to the tracking pixel being an image, and won't display the Base64 encoded images as a result. See the next paragraph for possible solution.
+* The Email body increases significantly if the Email contains many and/or large sized images. Some Email clients like GMail "clip" such messages and won't display it directly.
 
 Tokens
 ======
