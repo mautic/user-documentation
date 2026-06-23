@@ -17,6 +17,7 @@ blocklist
 boolean
 booleans
 cc
+CASL
 CCPA
 Citrix
 Clearbit
@@ -113,6 +114,7 @@ PUT
 Rackspace
 Remarketing
 REST
+RFC
 Salesforce
 SAML
 Schimpf
@@ -144,6 +146,7 @@ Unpublish
 URL
 URLs
 UTM
+VIP
 Vtiger
 Webmecanik
 www
