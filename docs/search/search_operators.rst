@@ -58,6 +58,8 @@ Contacts search filters
     is:mine
     email:*
     segment:{segment_alias}
+    source:manually_added
+    source:filter_added
     name:*
     company:*
     owner:*
@@ -70,6 +72,10 @@ Contacts search filters
     email_read:EMAIL_ID
     email_queued:EMAIL_ID
     email_pending:EMAIL_ID
+
+.. note::
+
+   Combine the ``source:`` filter with the ``segment:`` filter to break down a Segment's membership by how Contacts joined it. ``source:manually_added`` returns Contacts added manually, including those who subscribed through the Preference Center, and ``source:filter_added`` returns Contacts that Mautic added automatically based on the Segment's filter rules. On its own, without a ``segment:`` filter, ``source:`` returns no results.
 
 Companies search filters
 ------------------------
