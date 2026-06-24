@@ -7,18 +7,14 @@ Using the Campaign Builder
 
 The Campaign Builder provides a blank canvas on which you can build your Campaign workflow. The Campaign Builder allows the use of conditions, decisions, and actions. It enables you to create a simple workflow by dragging and dropping various decisions, actions, and conditions onto a canvas.
 
-.. _navigating-the-canvas:
+.. vale off
 
-Navigating the canvas
----------------------
+Getting started with Campaign Builder
+*************************************
 
-When you open the Campaign Builder, Mautic centers the view on your Campaign. The canvas uses an infinite-canvas design without traditional scroll bars, giving you more space to build complex workflows.
+.. vale on
 
-To pan around the canvas, click, and drag on an empty area. The canvas automatically expands when you move events close to its edges.
-
-You can also pan by holding the spacebar and dragging with your mouse. The cursor changes to a grab icon while panning. Release the spacebar to resume normal editing. This works like common design tools such as Figma or Photoshop, letting you navigate large Campaigns without accidentally selecting or moving individual nodes.
-
-To build your Campaign, perform the following steps:
+To build your Campaign, perform the following steps. To learn how to pan and move around the canvas, see :ref:`Navigating the canvas <navigating-the-canvas>`.
 
 #. Click **Launch the Campaign Builder** on the New Campaigns wizard. The Contact Sources menu appears as shown in the following image.
 
@@ -65,8 +61,19 @@ To build your Campaign, perform the following steps:
 
   For more information about Campaign Actions, Decisions, and Conditions, see the following topics.
 
+.. _navigating-the-canvas:
+
+Navigating the canvas
+=====================
+
+When you open the Campaign Builder, Mautic centers the view on your Campaign. The canvas uses an infinite-canvas design without traditional scroll bars, giving you more space to build complex workflows.
+
+To pan around the canvas, click, and drag on an empty area. The canvas automatically expands when you move events close to its edges.
+
+You can also pan by holding the spacebar and dragging with your mouse. The cursor changes to a grab icon while panning. Release the spacebar to resume normal editing. This works like common design tools such as Figma or Photoshop, letting you navigate large Campaigns without accidentally selecting or moving individual nodes.
+
 Actions
--------
+*******
 
 Campaign actions are events that you initiate on your Contacts or Contact records. These can represent sending communications to the Contact or may automate operational tasks to keep your marketing running. A single Campaign can include more than one action. When you create a Campaign, you select one of these actions to begin the workflow.
 
@@ -129,7 +136,7 @@ The actions that Mautic offers in a Campaign include:
 .. vale off
 
 Notes on Campaign Actions
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=========================
 
 .. vale on
 
@@ -155,21 +162,21 @@ Notes on Campaign Actions
 After adding an action, you can place a decision on the Campaign.
 
 Decisions
----------
+*********
 
 Campaign Decisions are actions that your Contacts initiate. Downloading an Asset, opening an Email, or visiting a Landing Page are examples of Decisions. These Decisions can be either directly initiated or implied based on non-action. The options for Decisions change based on the Campaign Actions that you select.
 
 A decision usually has two paths denoted by the red and green icons on the decision tree.
 
 Green paths
-~~~~~~~~~~~
+===========
 
 Green paths indicate positive or affirmative actions. 
 
 A Contact takes this path if the Contact has made a direct action such as opening an Email or submitting a Form. Execution of Actions that follow the green paths happen immediately - or scheduled immediately in the case of a delay on the following action - at the time the Contact takes the action.
 
 Red paths
-~~~~~~~~~
+=========
 
 Red paths indicate non-action. 
 
@@ -225,7 +232,7 @@ Here are the decisions that are Email-related:
      - Tracks if a Contact has replied to an Email that you sent. For more information, see Contact replies.	
 
 Conditions
-----------
+**********
 
 Campaign conditions execute different actions based on a Contact's data. For example, to execute an action if a Contact has a valid Email address or do something else if they don't.
 
@@ -261,12 +268,12 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
      - Checks if the Contact's Email address has a valid syntax, for example name@example.com without spaces, other invalid characters or formats.	
 	
 Notes on delayed conditions and dates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=====================================
 
 Mautic respects delays set on the condition itself before passing down to a delay on any connected action. For example, if you are coming from a negative path on 'Opens Email', you can set a condition of 'has active notification' with a relative date of 1 day, followed by 'Send Email' on the negative path with a relative date of 2 days. Mautic checks after 1 day if there is an active notification and if there isn't, schedules the Email for two days later.
 
 Using a custom date field to trigger a Campaign
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===============================================
 
 In the condition based on a Contact field value, select the required date field. Then select date as the operator and select the required value from the drop-down list.
 
@@ -286,7 +293,7 @@ This **doesn't work** for the Anniversary option.
 If a Contact appears again at a later date in that Segment because the value of the date has changed, then the Contact passes through the Campaign only once, and hence isn't included in the Campaign again.
 
 Smart event schedule
-~~~~~~~~~~~~~~~~~~~~~
+====================
 
 For the Send Email, Marketing Message, Push Contact to Integration and Send a Webhook actions, Mautic provides a smart event schedule option. This feature dynamically optimizes the timing of event execution based on individual Contact behaviors, increasing the likelihood of engagement.
 
@@ -310,7 +317,7 @@ For the Send Email, Marketing Message, Push Contact to Integration and Send a We
 .. vale off
 
 Triggering Campaign events
---------------------------
+**************************
 
 .. vale on
 
@@ -327,7 +334,7 @@ If you want to ignore specific Campaigns, you can pass the ``--exclude=ID`` opti
 .. vale off
 
 Cloning Campaign events
------------------------
+***********************
 
 .. vale on
 
