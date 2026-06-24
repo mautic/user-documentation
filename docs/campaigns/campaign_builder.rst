@@ -14,27 +14,7 @@ Getting started with Campaign Builder
 
 .. vale on
 
-To learn how to pan and move around the canvas, see :ref:`Navigating the canvas <navigating-the-canvas>`.
-
-.. _navigating-the-canvas:
-
-Navigating the canvas
-=====================
-
-When you open the Campaign Builder, Mautic centers the view on your Campaign. The canvas uses an infinite-canvas design without traditional scroll bars, giving you more space to build complex workflows.
-
-To pan around the canvas, click, and drag on an empty area. The canvas automatically expands when you move events close to its edges.
-
-You can also pan by holding the spacebar and dragging with your mouse. The cursor changes to a grab icon while panning. Release the spacebar to resume normal editing. This works like common design tools such as Figma or Photoshop, letting you navigate large Campaigns without accidentally selecting or moving individual nodes.
-
-.. vale off
-
-Building your Campaign
-======================
-
-.. vale on
-
-To build your Campaign, perform the following steps.
+To build your Campaign, perform the following steps. To learn how to pan and move around the canvas, see :ref:`Navigating the canvas <navigating-the-canvas>`.
 
 #. Click **Launch the Campaign Builder** on the New Campaigns wizard. The Contact Sources menu appears as shown in the following image.
 
@@ -80,6 +60,17 @@ To build your Campaign, perform the following steps.
    |
 
   For more information about Campaign Actions, Decisions, and Conditions, see the following topics.
+
+.. _navigating-the-canvas:
+
+Navigating the canvas
+=====================
+
+When you open the Campaign Builder, Mautic centers the view on your Campaign. The canvas uses an infinite-canvas design without traditional scroll bars, giving you more space to build complex workflows.
+
+To pan around the canvas, click, and drag on an empty area. The canvas automatically expands when you move events close to its edges.
+
+You can also pan by holding the spacebar and dragging with your mouse. The cursor changes to a grab icon while panning. Release the spacebar to resume normal editing. This works like common design tools such as Figma or Photoshop, letting you navigate large Campaigns without accidentally selecting or moving individual nodes.
 
 Actions
 *******
