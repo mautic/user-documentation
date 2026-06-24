@@ -171,6 +171,7 @@ You can import Campaigns programmatically using the Mautic API.
    .. code-block:: python
 
       import requests
+      import json
 
       # API Endpoint
       url = 'https://example.com/api/campaigns/import'
@@ -182,18 +183,15 @@ You can import Campaigns programmatically using the Mautic API.
       }
 
       # Campaign import data
-      payload = {
-          'name': 'Imported Campaign',
-          'description': 'Campaign imported via API',
-          # Add other campaign details as needed
+      with open('entity_data.json') as f:
+          payload = json.load(f)
       }
 
       # Send import request
       response = requests.post(url, headers=headers, json=payload)
 
       # Handle response
-      if response.status_code == 200:
-          imported_campaign = response.json()
+      if response.status_code == 201:
           print("Campaign imported successfully")
 
 API import methods
