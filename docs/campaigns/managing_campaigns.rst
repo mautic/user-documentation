@@ -40,7 +40,11 @@ Viewing the Total contacts card
 
 .. vale on
 
+.. vale off
+
 At the top of the Campaign details page, the **Total contacts** card shows how many Contacts are currently in the Campaign. Click the card to open the Contacts list filtered to that Campaign. The card appears only if you have permission to view Contacts.
+
+.. vale on
 
 .. vale off
 
