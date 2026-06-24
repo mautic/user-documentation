@@ -19,6 +19,12 @@ The following image shows a sample Campaign overview with its highlighted panels
 
 The **Details** drop-down menu gives a quick overview of the most important information about your Campaign. This information includes the name of the User who created the Campaign, Category of the Campaign, creation date and time, activating date and time, Contact Segments in your Campaign and more.
 
+.. vale off
+
+The **Total contacts** card at the top of the page shows how many Contacts are currently in the Campaign. Click the card to open the Contacts list filtered to that Campaign. The card only appears if you have permission to view Contacts.
+
+.. vale on
+
 The **Campaign Statistics** panel shows the number of Contacts added to the Campaign over the specified period of time in graphical format. To specify the time period, use the From and To date selectors, and click Apply.
 
 The **Preview** tab displays a diagrammatic preview of your Campaign.
@@ -32,19 +38,6 @@ The **Conditions** tab displays a tabular list of all he conditions that you hav
 The **Contacts** tab displays a grid view of all the Contacts that you have added to your Campaign.
 
 The **Recent Activity** panel on the right displays the recent activities that have taken place in the Campaign.
-
-.. vale off
-
-Viewing the Total contacts card
-*******************************
-
-.. vale on
-
-.. vale off
-
-At the top of the Campaign details page, the **Total contacts** card shows how many Contacts are currently in the Campaign. Click the card to open the Contacts list filtered to that Campaign. The card appears only if you have permission to view Contacts.
-
-.. vale on
 
 .. vale off
 
