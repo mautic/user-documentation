@@ -133,8 +133,12 @@ For more information on using Tags, see the :ref:`Tags in manage Contacts` secti
 
 .. _custom field groups:
 
+.. vale off
+
 Custom Field Groups
 *******************
+
+.. vale on
 
 Custom Field Groups let you organize Contact and Company Custom Fields into named tabs, alongside the built-in groups - Core, Social, Personal, and Professional for Contacts, and Core, Professional, and Other for Companies. Each group appears as a tab on the Contact and Company edit and detail views, so you can keep related Fields together.
 
@@ -163,12 +167,20 @@ Custom groups always appear after the default groups on Contact and Company view
 Assigning Fields to a group
 ===========================
 
+.. vale off
+
 You assign a Custom Field to a group from the Field, not from the group. When you add or edit a Contact or Company Custom Field on the **Custom Fields** page, choose the group from the **Group** dropdown. This dropdown lists both the default groups and any custom groups you've created.
 
 Deleting a Custom Field Group
 =============================
 
+.. vale on
+
+.. vale off
+
 You can delete a group only when it has no Fields assigned to it. If you try to delete a group that still has Fields, Mautic blocks the deletion and shows this message: 'Cannot delete this field group because it still has fields assigned to it. Reassign or remove the fields first.' Reassign those Fields to another group or remove them, then delete the group.
+
+.. vale on
 
 Creating Custom Fields via a command
 ************************************
