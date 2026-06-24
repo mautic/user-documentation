@@ -14,7 +14,7 @@ Getting started with Campaign Builder
 
 .. vale on
 
-To build your Campaign, perform the following steps. To learn how to pan and move around the canvas, see :ref:`Navigating the canvas <navigating-the-canvas>`.
+To build your Campaign, perform the following steps:
 
 #. Click **Launch the Campaign Builder** on the New Campaigns wizard. The Contact Sources menu appears as shown in the following image.
 
@@ -33,11 +33,15 @@ To build your Campaign, perform the following steps. To learn how to pan and mov
 
    * **Contact Segments**: choose this option if you want to send your Campaign to a specific group of your Contacts that share certain attributes, for example, 'Located in the United States' or 'Visited Product A' and are in an existing Segment based on this criteria.
 
-   Note that the Segment selection shows public Segments only. If you create a Segment marked as private, that Segment won't be available for use in Campaigns.
+     Note that the Segment selection shows public Segments only. If you create a Segment marked as private, that Segment won't be available for use in Campaigns.
 
    * **Contact Forms**: choose this option if you want to start the Campaign when the Contact completes a specified Form. Forms are the primary point of gathering information about a Contact. It's possible to take action in a Campaign based on the values submitted in the Form Field.
 
    You can select a mix of both types of Contact sources for your Campaign. To use both, click the grey selector button on either the left or right side of the **Contact source** box to add whichever source type you didn't originally select.
+
+   .. note::
+
+      To learn how to pan and move around the canvas, see :ref:`Navigating the canvas <navigating-the-canvas>`.
 
    |
 
@@ -58,8 +62,6 @@ To build your Campaign, perform the following steps. To learn how to pan and mov
       :alt: Screenshot of Campaign builder showing the available Campaign events.
 
    |
-
-  For more information about Campaign Actions, Decisions, and Conditions, see the following topics.
 
 .. _navigating-the-canvas:
 
