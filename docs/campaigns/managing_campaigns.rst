@@ -35,6 +35,15 @@ The **Recent Activity** panel on the right displays the recent activities that h
 
 .. vale off
 
+Viewing the Total contacts card
+*******************************
+
+.. vale on
+
+At the top of the Campaign details page, the **Total contacts** card shows how many Contacts are currently in the Campaign. Click the card to open the Contacts list filtered to that Campaign. The card appears only if you have permission to view Contacts.
+
+.. vale off
+
 Campaign reactivation behavior
 ******************************
 
