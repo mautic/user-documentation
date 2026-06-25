@@ -81,9 +81,9 @@ Identifying Campaign events
 
 .. vale on
 
-Every saved Campaign event shows its unique numeric ID before the event name, as in ``(ID: 42)``. Mautic displays this ID on the event cards in the Campaign Builder canvas, in the Campaign Preview, on the **Jump to Event** action, and in the **Redirect Event** drop-down menu when you delete an event. New events that you haven't saved yet don't have an ID.
+Every saved Campaign event shows its unique numeric ID before the event name, as in ``(ID: 42)``. Mautic displays this ID on the event cards in the Campaign Builder canvas, in the Campaign Preview, on the **Jump to Event** action, and in the drop-down you use to redirect scheduled Contacts when you delete an event. New events that you haven't saved yet don't have an ID.
 
-The ID helps you tell events apart when two or more share the same name. This is especially useful when you delete an event and redirect its scheduled Contacts to another event, since the ID lets you pick the exact event you want to redirect to.
+The ID helps you tell events apart when two or more share the same name. This matters most when you delete an event: the delete dialog asks you to redirect any Contacts scheduled for that event to another one, and the ID lets you pick the exact event you want from the drop-down.
 
 Actions
 *******
