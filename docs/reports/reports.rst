@@ -97,26 +97,6 @@ The parent data source provides a high-level summary of the data while the child
   - Opened by default - If you want to ensure that the date filters and filter options for any other Report filters are visible on a Report detail page without needing to open the filters drop-down, select Yes. For example, for an Emails Report, you might want to view dynamic filters for subject or sent date.
   - Hide date range - To hide the date range filter so that Users can't change the dates that the Report displays data for, select to **Yes**.
 
-Quick filters
--------------
-
-.. image:: images/report_quick_filters.png
-   :align: center
-   :alt: Screenshot of a Mautic Report with the Quick filters dropdown expanded near the top of the data table, showing the Today, Yesterday, Last 7 days, Last 30 days, and Last 90 days date-range options next to the date range filter
-
-|
-
-On an individual Report's page, you'll find the **Quick filters** dropdown on the right, at the top of the data table and next to the date range filter. Use it to apply common date ranges with a single click. The available options are:
-
-* **Today** - Shows data from today only
-* **Yesterday** - Shows data from yesterday only
-* **Last 7 days** - Shows data from the past week
-* **Last 30 days** - Shows data from the past month
-* **Last 90 days** - Shows data from the past quarter
-
-Selecting a quick filter automatically updates the date range fields and refreshes the Report.
-
-
 Data
 ====
 
@@ -224,6 +204,25 @@ To view additional options for Report, click the drop-down menu next to the chec
 * **Export & Send** sends a link containing the ``.csv`` file with the Report data to the email address on your User profile.
 
 * **Delete** deletes the Report immediately.
+
+Quick filters
+=============
+
+.. image:: images/report_quick_filters.png
+   :align: center
+   :alt: A Mautic Report with the Quick filters dropdown expanded near the top of the data table, showing the Today, Yesterday, Last 7 days, Last 30 days, and Last 90 days date-range options next to the date range filter.
+
+|
+
+On an individual Report's page, you can find the **Quick filters** dropdown on the right, at the top of the data table and next to the date range filter. Use it to apply common date ranges with a single click. The available options are:
+
+* **Today** - Shows data from today only
+* **Yesterday** - Shows data from yesterday only
+* **Last 7 days** - Shows data from the past week
+* **Last 30 days** - Shows data from the past month
+* **Last 90 days** - Shows data from the past quarter
+
+Selecting a quick filter automatically updates the date range fields and refreshes the Report.
 
 .. vale off
 
