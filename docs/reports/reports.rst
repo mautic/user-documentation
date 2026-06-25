@@ -100,7 +100,7 @@ The parent data source provides a high-level summary of the data while the child
 Quick filters
 -------------
 
-Use the **Quick filters** dropdown next to the date range filter to apply common date ranges with a single click. The available options are:
+On an individual Report's page, you'll find the **Quick filters** dropdown on the right, at the top of the data table and next to the date range filter. Use it to apply common date ranges with a single click. The available options are:
 
 * **Today** - Shows data from today only
 * **Yesterday** - Shows data from yesterday only
