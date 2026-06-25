@@ -791,6 +791,19 @@ Mautic tracking settings
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
   * Landing Pages including 4-byte UTF-8 characters, such as emojis and some Chinese or other non-Latin characters, in the Landing Page title or URL aren't tracked on a Contact's activity history in Mautic. Mautic tracks all Latin characters used in English and other western languages which are of 1-byte.
 
+Automatic tracking filtering
+============================
+
+To keep your analytics focused on real people, Mautic automatically excludes certain requests from tracking. When a request matches any of the conditions below, Mautic doesn't record the page hit, Email open, Asset download, or Contact tracking activity:
+
+* **Bots and crawlers** - Requests Mautic identifies as bots through the IP and User Agent filtering described in :ref:`Miscellaneous Settings<miscellaneous settings>`.
+* **HEAD requests** - Requests that use the ``HTTP HEAD`` method, which monitoring and uptime tools commonly send.
+* **Speculative loading requests** - The prefetch and prerender requests browsers make to load links a visitor hasn't actually opened.
+* **Global Privacy Control signals** - Requests that send a ``Sec-GPC: 1`` header. Honoring this signal is a legal requirement under privacy laws such as the California Consumer Privacy Act.
+* **Do Not Track signals** - Requests that send a ``DNT: 1`` header.
+
+This filtering is always on and can't be turned off. It applies across page hits, Email opens, Asset downloads, and Contact tracking, so your analytics reflect genuine human engagement and respect visitor privacy preferences. Because Mautic doesn't track these visits, it doesn't create anonymous Contacts for them.
+
 Facebook pixel
 ==============
 
