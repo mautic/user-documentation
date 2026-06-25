@@ -39,7 +39,7 @@ To build your Campaign, perform the following steps:
 
    You can select a mix of both types of Contact sources for your Campaign. To use both, click the grey selector button on either the left or right side of the **Contact source** box to add whichever source type you didn't originally select.
 
-   .. note::
+   .. tip::
 
       To learn how to pan and move around the canvas, see :ref:`Navigating the canvas <navigating-the-canvas>`.
 
