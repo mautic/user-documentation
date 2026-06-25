@@ -44,6 +44,7 @@ Dripflow
 DSN
 Dynamic Web Content
 FALSE
+Figma
 Focus Item
 Focus Items
 Froala
@@ -104,6 +105,7 @@ Packagist
 PATCH
 patch
 PHP
+Photoshop
 Pipedrive
 Piwik
 POST
@@ -127,6 +129,7 @@ SMS
 SMTP
 SNS
 SparkPost
+spacebar
 SSO
 sublicense
 SugarCRM
