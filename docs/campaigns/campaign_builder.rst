@@ -363,16 +363,16 @@ To clone an event:
 
    |
 
-#. Click on the anchor of the event after which you want to insert the cloned event. This opens up a modal window.
+#. Click on the anchor of the event after which you want to insert the cloned event. This opens a panel with event type options and a tile showing the cloned event details.
 
-#. In the modal window, click the "Insert" button to paste the stored event.
+#. Click the cloned event tile to paste the stored event into the Campaign.
 
    |
 
    .. image:: images/paste_cloned_event_modal.png
       :width: 600
       :align: center
-      :alt: Screenshot of the modal window with the insert option to paste the cloned event
+      :alt: Screenshot of the Campaign builder panel with the cloned event tile
 
    |
 
