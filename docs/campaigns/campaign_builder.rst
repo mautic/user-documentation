@@ -311,16 +311,16 @@ The Prevent action after date condition routes Contacts based on whether the cur
 
 To configure this condition:
 
-#. **Time Stamp**: Select the reference point for calculating the threshold. Currently, this is the Campaign Start Date - the date and time when the Campaign was first published.
+#. **Time Stamp**: select the reference point for calculating the threshold. Currently, this is the Campaign Start Date - the date and time when you first activated the Campaign.
 
-#. **Operator**: Choose how to compare the current time against the threshold:
+#. **Operator**: choose how to compare the current time against the threshold:
 
-   * **less than**: The Contact takes the green path if the current time is before the threshold. Use this to execute actions only during the initial period after Campaign launch.
-   * **greater than**: The Contact takes the green path if the current time is after the threshold. Use this to execute actions only after a waiting period has passed.
+   * **less than**: the Contact takes the green path if the current time is before the threshold. Use this to execute actions only during the initial period after Campaign launch.
+   * **greater than**: the Contact takes the green path if the current time is after the threshold. Use this to execute actions only after a waiting period has passed.
 
-#. **Interval**: Specify the time duration using a number and unit. Available units are minutes, hours, days, months, and years.
+#. **Interval**: specify the time duration using a number and unit. Available units are minutes, hours, days, months, and years.
 
-**Example**: A flash sale Campaign should only send promotional Emails during the first 48 hours after launch. Configure the condition with Campaign Start Date, 'less than', and '2 days'. Contacts entering the Campaign within 48 hours of launch take the green path and receive the promotional Email. Contacts entering after 48 hours take the red path, where you can send a different message or take no action.
+**Example**: a flash sale Campaign should only send promotional Emails during the first 48 hours after launch. Configure the condition with Campaign Start Date, 'less than', and '2 days'. Contacts entering the Campaign within 48 hours of launch take the green path and receive the promotional Email. Contacts entering after 48 hours take the red path, where you can send a different message or take no action.
 
 Smart event schedule
 ====================
