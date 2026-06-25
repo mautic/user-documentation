@@ -100,6 +100,12 @@ The parent data source provides a high-level summary of the data while the child
 Quick filters
 -------------
 
+.. image:: images/report_quick_filters.png
+   :align: center
+   :alt: Screenshot of a Mautic Report with the Quick filters dropdown expanded near the top of the data table, showing the Today, Yesterday, Last 7 days, Last 30 days, and Last 90 days date-range options next to the date range filter
+
+|
+
 On an individual Report's page, you'll find the **Quick filters** dropdown on the right, at the top of the data table and next to the date range filter. Use it to apply common date ranges with a single click. The available options are:
 
 * **Today** - Shows data from today only
