@@ -88,6 +88,7 @@ Middlewares
 middlewares
 MJML
 MIME
+MMS
 MQL
 MQLs
 Multiselect
