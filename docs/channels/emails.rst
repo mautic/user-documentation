@@ -151,7 +151,7 @@ To clone an Email with its translations and variants:
 #. Select **Clone with translations and variants**.
 #. Confirm the action in the dialog.
 
-Mautic creates new Unavailable or Deactivated copies of:
+Mautic creates new Unavailable copies of:
 
 * The parent Email
 * All translation children
