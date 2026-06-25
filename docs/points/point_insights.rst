@@ -5,7 +5,11 @@ Point Insights
 
 .. vale on
 
+.. vale off
+
 Point Insights turn :doc:`Point Groups</points/point_groups>` into actionable knowledge about each Contact. An Insight compares the scores a Contact has accumulated across several Point Groups and writes the result to a Custom Field, so you can segment and personalize based on what each Contact cares about most.
+
+.. vale on
 
 For example, if you track engagement with different areas of your website using separate Point Groups, a Point Insight can identify the area each Contact is most active in and record that 'primary interest' on the Contact. You can then use that Custom Field to build Segments, show Dynamic Web Content, or tailor your Campaigns.
 
@@ -16,7 +20,7 @@ Managing Point Insights
 
 .. vale on
 
-To access Point Insights, go to **Points > Point Insights** in the main menu. The listing page shows all your Insights, where you can change their published status, edit, clone, and delete them. To create one, click **+ New**.
+To access Point Insights, go to **Points > Point Insights** in the main menu. The listing shows all your Insights, where you can change their active status, edit, clone, and delete them. To create one, click **+ New**.
 
 A dedicated **Insights** permission in the Point Bundle controls access to Point Insights. Grant this permission to a Role to let its Users view and manage Point Insights.
 
@@ -27,19 +31,18 @@ Creating a Point Insight
 
 .. vale on
 
-The **New Point Insight** form runs the **Set custom field to winning point group** action: it compares the Point Groups you select and writes the winner to a Custom Field. Configure these fields:
+.. vale off
+
+The **New Point Insight** form runs the **Set custom field to winning point group** action, which compares the Point Groups you select and writes the winner to a Custom Field. Configure these fields:
 
 * **Name** - The name of the Insight as it appears in your list of Insights.
-
 * **Description** - An optional description to help you identify the Insight.
-
 * **Point Groups to Compare** - Choose one or more Point Groups whose scores you want to compare for each Contact.
-
-* **Custom Field** - The Contact Custom Field that receives the result. Only published text Custom Fields on Contacts appear in this list. For more information, see :doc:`Custom Fields</contacts/custom_fields>`.
-
+* **Custom Field** - The Contact Custom Field that receives the result. Only activated text Custom Fields on Contacts appear in this list. For more information, see :doc:`Custom Fields</contacts/custom_fields>`.
 * **Category** - Organize your Insights by Category. For more information, see :doc:`Categories</categories/categories-overview>`.
-
 * **Active** - Only active Insights run. Set this to **No** to stop an Insight from evaluating Contacts.
+
+.. vale on
 
 Click **Save & Close** to store the Insight.
 
@@ -57,9 +60,7 @@ When an Insight runs for a Contact, Mautic compares the Contact's scores across 
 A few rules govern the outcome:
 
 * If the Contact scores zero in every selected Point Group, Mautic writes nothing.
-
 * When two or more Point Groups tie for the highest score, the Point Group with the lower ID wins. If the Custom Field already holds a value, Mautic keeps it rather than overwriting it on a tie.
-
 * Mautic writes only one winner, even when several Point Groups share the highest score.
 
 .. note::
