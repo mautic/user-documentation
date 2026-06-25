@@ -80,7 +80,7 @@ At the top of the Email details page, a row of stat cards summarizes how the Ema
 * **Sent** - The number of Contacts that have received this Email, including both successful and failed sends, for the entire time period.
 * **Read** - The number of Contacts that have read this Email, shown alongside the read percentage.
 * **Queued** - The number of Contacts that have this Email queued to send based on their frequency rules.
-* **Pending** - The number of Contacts that haven't yet received this Email. This card appears only for Segment Emails. Triggered Emails - those used in a Campaign rather than sent to a Segment - don't show the **Pending** card. It always reported zero for them, which falsely suggested that Mautic was sending no Emails.
+* **Pending** - The number of Contacts that haven't yet received this Email. This card appears only for Segment Emails. Triggered Emails - those used in a Campaign rather than sent to a Segment - don't show the **Pending** card given their send is scheduled differently or immediately sent.
 
 .. vale off
 
