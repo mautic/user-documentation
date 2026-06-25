@@ -269,13 +269,21 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
    * - **Has valid Email address**    
      - Checks if the Contact's Email address has a valid syntax, for example name@example.com without spaces, other invalid characters or formats.	
 	
+.. vale off
+
 Notes on delayed conditions and dates
 =====================================
 
+.. vale on
+
 Mautic respects delays set on the condition itself before passing down to a delay on any connected action. For example, if you are coming from a negative path on 'Opens Email', you can set a condition of 'has active notification' with a relative date of 1 day, followed by 'Send Email' on the negative path with a relative date of 2 days. Mautic checks after 1 day if there is an active notification and if there isn't, schedules the Email for two days later.
+
+.. vale off
 
 Using a custom date field to trigger a Campaign
 ===============================================
+
+.. vale on
 
 In the condition based on a Contact field value, select the required date field. Then select date as the operator and select the required value from the drop-down list.
 
