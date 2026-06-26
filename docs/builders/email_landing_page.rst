@@ -168,7 +168,7 @@ Mautic resolves typography across three levels, where each level overrides the o
 
 #. **Theme defaults** - the base styles defined by the Theme.
 #. **Component typography** - the Style Manager settings listed in this section, which apply to the selected Component.
-#. **Inline editor** - formatting you apply to individual characters or words with the CKEditor inline toolbar when you double click a text Component.
+#. **Inline editor** - the formatting you apply to individual characters or words with the CKEditor inline toolbar when you double click a text Component.
 
 Use the Component typography controls to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
 
