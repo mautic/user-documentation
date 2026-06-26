@@ -328,9 +328,10 @@ Merge two Contacts
 
 .. vale on
 
-If you have 2 Contacts in the Mautic database who are physically one person, you can merge them with the Merge feature.
+If you have two Contacts in the Mautic database who are physically one person, you can merge them with the Merge feature.
 
-#. Click the drop-down box arrow in the top right-hand corner of the Contact detail.
+#. Click on the Contact you want to keep. This Contact remains after merging.
+#. On the Contact detail, click the dropdown arrow in the top right-hand corner.
 #. Select the **Merge** option.
 
    |
@@ -341,8 +342,8 @@ If you have 2 Contacts in the Mautic database who are physically one person, you
 
    |
 
-#. Once the pop-up window appears, search for the Contact you want to merge into the current Contact. The select box updates as you search.
-#. Select the right Contact and click the **Merge** button.
+#. Once the pop-up window appears, type to search for the Contact you want to merge, then open the dropdown menu to select it. Mautic deletes this duplicate Contact after merging.
+#. Click the **Merge** button.
 
    |
 
