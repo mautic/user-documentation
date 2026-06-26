@@ -352,13 +352,13 @@ If you have 2 Contacts in the Mautic database who are physically one person, you
 
    |
 
-When you merge Contacts, the surviving Contact receives the following data:
+When you merge Contacts, the main Contact receives the following data:
 
-* **Field data** - Values from the merged Contact fill empty fields on the surviving Contact.
-* **Owner** - If the surviving Contact doesn't have an owner, it inherits the merged Contact's owner.
+* **Field data** - Values from the merged Contact fill empty fields on the main Contact.
+* **Owner** - If the main Contact doesn't have an owner, it inherits the merged Contact's owner.
 * **Points** - Points from both Contacts combine.
 * **Tags** - Tags from both Contacts combine.
-* **Company associations** - Company associations from the merged Contact transfer to the surviving Contact. If both Contacts have a primary Company, the surviving Contact keeps its primary. If only the merged Contact has a primary Company, the surviving Contact inherits that primary designation.
+* **Company associations** - Company associations from the merged Contact transfer to the main Contact. If both Contacts have a primary Company, the main Contact keeps its primary. If only the merged Contact has a primary Company, the main Contact inherits that primary designation.
 
 .. vale off
 
