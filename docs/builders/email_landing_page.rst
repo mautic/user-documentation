@@ -147,7 +147,7 @@ Themes
 
 If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new Builder.
 
-To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`.
+To learn more about creating Themes, see :doc:`/builders/creating_themes`.
 
 Typography
 **********
