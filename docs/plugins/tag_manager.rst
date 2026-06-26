@@ -64,24 +64,24 @@ Merging Tags
 
 Merge duplicate or similar Tags to consolidate your Tag structure. Merging combines two Tags into one, transferring all Contacts and updating all references throughout Mautic.
 
-#. Click on the Tag you want to merge. Mautic deletes this Tag after merging.
-#. Click the drop-down box arrow in the top right-hand corner of the Tag detail.
+#. Click on the Tag you want to remove. Mautic deletes this Tag after merging.
+#. On the Tag detail, click the dropdown arrow in the top right-hand corner.
 #. Select the **Merge** option.
 
    .. image:: images/tag_merge_option.png
-      :alt: Screenshot of the Merge option in the Tag detail drop-down menu
+      :alt: Merge option in the Tag detail drop-down menu
 
-#. Once the pop-up window appears, select the Tag to merge into. This Tag remains after merging.
-#. Click **Merge** to complete the operation.
+#. Once the pop-up window appears, type to search for the Tag you want to keep, then open the dropdown menu to select it. This Tag remains after merging.
+#. Click the **Merge** button.
 
    .. image:: images/merging_current_tag_modal.png
-      :alt: Screenshot of the Merging current tag pop-up window for choosing the Tag to merge into
+      :alt: Merging current tag pop-up window for choosing the Tag to keep
 
 After merging:
 
-* All Contacts associated with the secondary Tag move to the primary Tag.
+* All Contacts associated with the duplicate Tag move to the primary Tag.
 * References in Campaigns, Segments, Forms, Point Triggers, and Reports update automatically.
-* Mautic deletes the secondary Tag.
+* Mautic deletes the duplicate Tag.
 
 .. note::
 
