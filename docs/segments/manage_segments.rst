@@ -393,6 +393,45 @@ Once you've selected a date field as your filter, such as the default **Date las
 
 Once you have selected the field you can then choose the type of operation to perform. These vary depending on the way you wish to filter your Contacts.
 
+Operators for select fields
+===========================
+
+Select-type fields come in two kinds, each with its own set of operators. Other field types, such as text, number, and date fields, use the operators described earlier.
+
+Single-select fields hold one value at a time. These include the standard Country, Timezone, Region, and Locale fields, along with any Custom Field created with the **Select** field type. They offer these operators:
+
+.. vale off
+
+* **Is equal to** - The Contact's value exactly matches the selected option.
+* **Is not equal to** - The Contact's value doesn't match the selected option.
+* **Is empty** - The Contact has no value for this field.
+* **Is not empty** - The Contact has a value for this field.
+* **Matches pattern** - The Contact's value matches the specified regular expression pattern.
+* **Does not match pattern** - The Contact's value doesn't match the specified regular expression pattern.
+* **Includes any of** - The Contact's value matches at least one of the selected options.
+* **Excludes any of** - The Contact's value matches none of the selected options.
+
+.. vale on
+
+A multiselect field is a Custom Field created with the multiselect field type, which lets a Contact hold more than one value at once. A field is only multiselect if you create it with this field type, not simply any field that isn't one of the single-select fields described earlier. Because these fields can hold several values, they offer a different set of operators:
+
+.. vale off
+
+* **Includes any of** - The Contact's values include at least one of the selected options.
+* **Excludes any of** - The Contact's values include none of the selected options.
+* **Includes all of** - The Contact's values include every selected option.
+* **Excludes all of** - The Contact's values don't include every selected option.
+* **Is empty** - The Contact has no value for this field.
+* **Is not empty** - The Contact has a value for this field.
+
+The two sets aren't identical. A multiselect field doesn't offer **Is equal to**, **Is not equal to**, **Matches pattern**, or **Does not match pattern**, since those compare against a single value. Instead, it adds **Includes all of** and **Excludes all of** to match against every selected value.
+
+.. vale on
+
+.. note::
+
+   The ``Includes all of`` and ``Excludes all of`` operators appear only for multiselect fields, since they require a Contact to hold more than one value. Single-select fields, such as Country, Timezone, Region, and Locale, hold only a single value, so these operators don't apply.
+
 .. vale off
 
 Matching part of a string

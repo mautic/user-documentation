@@ -107,6 +107,12 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - ``mautic:contacts:scheduled_export``
      - Processes exports of Contacts to a CSV file and sends the results via Email.
      -
+   * - ``mautic:company:delete_company_leads``
+     - Reassigns the primary Company and removes Company references on Contacts after a Company is deleted, when the ``update_company_mapping_data_in_background`` config option is set to true.
+     -
+   * - ``mautic:company:update_lead_company``
+     - Updates the Company name on Contacts after a Company is renamed, when the ``update_company_mapping_data_in_background`` config option is set to true.
+     -
    * - ``mautic:custom-field:create-column``
      - Creates the actual column in the table if the `create_custom_field_in_background` config option is set to true.
      - 
