@@ -397,7 +397,7 @@ Once you've selected a date field as your filter, such as the default **Date las
     :alt: Segment filter operator dropdown expanded for a date field, showing the Mautic operator labels such as is equal to, more recent than, contains, and in list.
     :width: 752
 
-Once you have selected the field you can then choose the type of operation to perform. These vary depending on the way you wish to filter your Contacts.
+Once you have selected the field, you can then choose the type of operation to perform. These vary depending on the way you wish to filter your Contacts.
 
 Operators for select fields
 ===========================
