@@ -453,7 +453,7 @@ Tracking links in Emails
 
 .. vale on
 
-Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the ``Click Counts`` tab.  
+Mautic tracks clicks on each link in an Email, with stats displayed at the bottom of each Email detail view under the ``Click Counts`` tab. You can sort tracked links by clicking the ``Click Count`` column header. The first click sorts highest to lowest, and a second click reverses the order. This helps you identify which links get the most engagement.
 
 You can turn off tracking for a certain link by adding the ``data-mautic-disable-tracking="true"`` HTML attribute.
 
