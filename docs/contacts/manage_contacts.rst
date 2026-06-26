@@ -335,14 +335,14 @@ If you have 2 Contacts in the Mautic database who are physically one person, you
 
    .. image:: images/contact-merge-button.png
       :align: center
-      :alt: Merge option highlighted in the Contact actions drop-down menu on the Contact detail page.
+      :alt: Merge option highlighted in the Contact actions drop-down menu on the Contact detail.
 
 #. Search for the Contact you want to merge into the current Contact. The select box updates as you search.
 #. Select the right Contact and click the **Merge** button.
 
    .. image:: images/merge-contacts.png
       :align: center
-      :alt: Merge Contact modal with a search field, a Choose the contact to merge with select box, and the Merge button.
+      :alt: Merge Contact modal with a search field, a Choose the Contact to merge with select box, and the Merge button.
 
 When you merge Contacts, the surviving Contact receives the following data:
 
