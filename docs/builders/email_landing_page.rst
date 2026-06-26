@@ -91,6 +91,18 @@ The functions of the Email Builder are as follows:
 
 #. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
+Restoring unsaved changes
+*************************
+
+As you edit, the Builder keeps a local backup of your content in your browser's local storage. If you close the Builder without saving, for example because the tab crashes or you navigate away, Mautic can recover that work.
+
+The next time you open the same Email or Landing Page in the Builder, Mautic compares the saved content with the local backup. If they differ, Mautic prompts you to restore the backup:
+
+* Select **Restore the backup** to replace the Builder content with the local backup.
+* Select **Dismiss** to discard the backup and keep the saved content.
+
+Mautic only shows this prompt when the backup contains unsaved changes. Once you save and reopen the Builder, the backup matches what you saved, so no prompt appears.
+
 Templates
 *********
 
