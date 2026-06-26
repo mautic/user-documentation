@@ -26,7 +26,7 @@ Navigate to the **Stages** section in the left side menu, and then click **+New*
 
 **Description** - To help you and other Users easily identify what qualifies a Contact for that Stage, it's recommended to add a description.
 
-**Weight** - Used to decide the progression of your Stages. The greater the Stage weight number, the further along in the funnel a Contact is. Contacts can't move backwards to Stages with lower weights.
+**Weight** - Determines the progression of your Stages. The higher the weight number, the further along in the funnel a Contact is. Contacts can't move backwards to Stages with lower weights. Each Stage must have a unique weight. When creating or editing a Stage, a reference table shows existing Stages and their weights to help you choose an available value. If you enter a weight that's already in use, Mautic displays a validation error.
 
 **Category** - Assign a Category to help you organize your Stages. For more information, see :ref:`categories`.
 

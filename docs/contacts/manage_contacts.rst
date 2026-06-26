@@ -203,7 +203,7 @@ To find specific event types, search in the **Include events by source** text bo
 
 **Added through API** - Contact created through API.
 
-**Asset Downloaded** - Lists which Assets a Contact downloaded from your Landing Pages or website. Combining this information with other data can help with analyzing what led a Contact to download the Asset.
+**Asset Downloaded** - Lists which Assets a Contact downloaded from your Landing Pages or website. Combining this information with other data can help with analyzing what led a Contact to download the Asset. If you have deleted the Asset, the timeline displays ``Deleted asset`` without a link or preview.
 
 **Campaign Action Triggered** - Actions within Campaigns which have already happened.
 
@@ -346,6 +346,8 @@ Send Email to Contact
 .. vale on
 
 This option enables Users to send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the individual message.
+
+.. _Contact tracking:
 
 Contact tracking
 ****************

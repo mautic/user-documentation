@@ -17,6 +17,7 @@ blocklist
 boolean
 booleans
 cc
+CASL
 CCPA
 Citrix
 Clearbit
@@ -43,6 +44,7 @@ Dripflow
 DSN
 Dynamic Web Content
 FALSE
+Figma
 Focus Item
 Focus Items
 Froala
@@ -86,6 +88,7 @@ Middlewares
 middlewares
 MJML
 MIME
+MMS
 MQL
 MQLs
 Multiselect
@@ -103,6 +106,7 @@ Packagist
 PATCH
 patch
 PHP
+Photoshop
 Pipedrive
 Piwik
 POST
@@ -111,6 +115,7 @@ PUT
 Rackspace
 Remarketing
 REST
+RFC
 Salesforce
 SAML
 Schimpf
@@ -125,6 +130,7 @@ SMS
 SMTP
 SNS
 SparkPost
+spacebar
 SSO
 sublicense
 SugarCRM
@@ -141,6 +147,7 @@ Unpublish
 URL
 URLs
 UTM
+VIP
 Vtiger
 Webmecanik
 www

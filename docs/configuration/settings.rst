@@ -360,9 +360,9 @@ Mail send settings
   :width: 600
   :alt: Screenshot showing Mail Send Settings Configuration in Mautic
 
-* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``.
-  
-* **Email address to send mail from** - The Email address for the name you're sending mail from. The address displays in the ``From:`` field when your Contacts receive your Emails.
+* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``. You can also use Contact field tokens such as ``{contactfield=companyname|Default Name}`` to personalize the sender name per Contact.
+
+* **Email address to send mail from** - The Email address for the name you're sending mail from. The address displays in the ``From:`` field when your Contacts receive your Emails. You can use Contact field tokens like ``{contactfield=companyemail|info@default.com}`` to send from Contact-specific Email addresses, such as the Contact's assigned Company Email. When using tokens, always provide a default value after the ``|`` character as a fallback.
 
 .. note::
 
@@ -376,10 +376,9 @@ Mail send settings
 
 * **Mailer is owner** - If Contacts in Mautic have owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they're listed as the owner for.
 
-.. note:: 
+  .. note::
 
-    Mailer is owner overrides any other name or Email to send mail from, including the default and individual Emails. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can see this configuration for individual Emails, rather than globally.
-    For more information see :doc:`Mailer is owner</channels/emails>`
+     When enabled, **Mailer is owner** sends Emails from the Contact's owner, overriding system defaults and plain Email From addresses. However, tokenized From addresses on an Email's **Advanced** tab take precedence over the owner sender when the token resolves to a valid value. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can configure this setting for individual Emails, rather than globally. For more information, see :ref:`mailer as owner` and :ref:`sender resolution hierarchy`.
 
 * **Service to send mail through** - Select the Email service provider you use, and enter your credentials.
 
@@ -390,15 +389,23 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
-* **Do Not Contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+.. vale off
+
+* **Do Not Contact more than <number> each <period>** - This limits the number of Emails a Contact receives in a certain period of time: day, week, or month. You can adjust this at the individual Contact level, either manually or via the **Preference Center** setting. Emails with **Send to unsubscribed contacts** enabled don't count towards this limit. You configure **Send to unsubscribed contacts** directly within each Email's settings, not in the **Preference Center**.
+
+.. vale on
 
 .. image:: images/default-frequency-rule.png
-  :width: 600
-  :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
+   :width: 600
+   :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
 
-.. note:: 
+.. note::
 
-  More information is available in the :doc:`Default Frequency Rule documentation</contacts/frequency_rules>`.
+   .. vale off
+
+   More information is available in the :doc:`Default Frequency Rule documentation </contacts/frequency_rules>`.
+
+   .. vale on
 
 Monitored inbox settings
 ========================
@@ -433,7 +440,19 @@ Message settings
 * **Convert embed images to Base64** - Select **Yes** to display embedded images in Emails using embedded base64 code rather than as embedded images.
 
 * **Disable trackable URLs** - Removes tracking from URLs in your Emails. Select Yes to prevent tracking, reporting on, and using decisions based on link clicks. Some Email service providers don't like redirecting URLs. Using trackable URLs in your Emails may impact deliverability.
-  
+
+* **Default UTM source** - Sets a site-wide default ``utm_source`` value that pre-populates the UTM source field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+* **Default UTM medium** - Sets a site-wide default ``utm_medium`` value that pre-populates the UTM medium field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+* **Default UTM Campaign** - Sets a site-wide default ``utm_campaign`` value that pre-populates the UTM Campaign field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+* **Default UTM content** - Sets a site-wide default ``utm_content`` value that pre-populates the UTM content field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+.. note::
+
+  The default UTMs only apply when creating a **new** Email. Editing an existing Email or cloning an Email never overwrites the values already on that Email, even if those fields are blank on the clone source.
+
 Unsubscribe settings
 ====================
 
@@ -441,9 +460,13 @@ Unsubscribe settings
   :width: 600
   :alt: Screenshot showing Unsubscribe Settings Configuration in Mautic
 
-* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link. 
+.. vale off
+
+* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link.
 
   For example - Edit between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the URL as it's tokenized. If you add ``{unsubscribe_url}`` as a token in the Email, you won't see this text.
+
+* **Disable unsubscribe link in header** - Select **Yes** to prevent Mautic from adding unsubscribe headers to Emails. When set to **No** - the default - Mautic automatically includes RFC 8058-compliant ``List-Unsubscribe`` and ``List-Unsubscribe-Post`` headers in Emails where you disable **Send to unsubscribed contacts**. Email clients that support this feature - such as GMail and Apple Mail - use these headers to display one-click unsubscribe capability.
 
 * **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. Don't edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
 
@@ -459,6 +482,9 @@ Unsubscribe settings
 
 * **Show Contact's preferred Channel option** - If you have multiple Channels available within your Mautic instance. For example; Email, ``SMS``, mobile push, web notifications, etc., Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
+* **Default Preference Center Landing Page** - Select a Landing Page to use as the Preference Center for new Emails. When creating a new Email, this Landing Page pre-populates the Preference Center field. Editing an existing Email or cloning an Email doesn't change that Email's Preference Center, even if the clone source has no Preference Center set. Read the :doc:`/contacts/preference_center` section for more information.
+
+.. vale on
 
 .. vale off
 
@@ -559,11 +585,23 @@ Segment settings
 Company settings
 ****************
 
+Company merge settings
+======================
+
 .. image:: images/company-merge-settings.png
   :width: 600
   :alt: Screenshot showing Company Merge Settings Configuration in Mautic
 
 * **Merge by unique fields with operator** - You can determine which operator to use when merging fields if there is more than one unique identifier.
+
+Company list settings
+=====================
+
+.. image:: images/company_list_settings.png
+   :width: 600
+   :alt: Company list settings configuration showing available and selected columns for the Companies overview
+
+* **Columns** - Manage the visible columns for Companies. Move fields from the left list to the right list to display them on the main Companies overview, or remove fields from the right list to hide them.
 
 Queue settings
 **************

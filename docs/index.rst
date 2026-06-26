@@ -78,6 +78,7 @@ There are different types of documentation available to help you navigate your w
    contacts/custom_fields
    contacts/frequency_rules
    contacts/preference_center
+   contacts/tags
 
 .. toctree::
    :maxdepth: 2
@@ -193,6 +194,7 @@ There are different types of documentation available to help you navigate your w
    points/points
    points/points_troubleshooting
    points/point_groups
+   points/point_insights
 
 .. toctree::
    :maxdepth: 2
