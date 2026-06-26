@@ -17,6 +17,7 @@ boolean
 booleans
 cc
 CCPA
+CKEditor
 Citrix
 Clearbit
 CloudAMQP

@@ -63,21 +63,24 @@ With the Asset Manager is easier to organize your media files and it's enough to
 Editing text
 ============
 
-GrapesJS uses inline text editing. Select a text Component and start typing to make changes directly on the canvas.
+GrapesJS uses inline text editing powered by CKEditor. Double click a text Component to open the inline editor and edit directly on the canvas.
 
-The text editor includes standard formatting options:
+The inline editor includes standard formatting options:
 
 * Bold, italic, underline and strikethrough
+* Font family, font color and font background color
 * Text alignment
 * Ordered and unordered lists
+* Headings
 * Links and anchors
+* Tables
 * Tokens for personalization
 
-You can paste content from external sources like Microsoft Word or Google Docs. The editor preserves basic formatting while adapting it for Email and Landing Page layouts.
+You can paste content from external sources like Microsoft Word or Google Docs. The editor keeps basic formatting and adapts it for Email and Landing Page layouts.
 
 .. tip::
 
-   Click outside the text Component or press ``Escape`` to finish editing and return to the canvas.
+   Click outside the text Component to finish editing and return to the canvas.
 
 About the builder
 *****************
@@ -149,18 +152,25 @@ To learn more about creating Themes please :doc:`check the documentation</builde
 Typography
 **********
 
-The Style Manager includes a Typography section for styling text Components. Select any text Component on the canvas, then open the Style panel to access these controls:
+The Style Manager includes a Typography section for styling text Components. Select a text Component on the canvas, then open the Style panel to reach these controls:
 
-* **Font family** - choose from available fonts
+* **Font family** - choose from the available fonts
 * **Font size** - set the text size in pixels
-* **Font weight** - adjust text weight from light to bold
-* **Letter spacing** - control spacing between characters
+* **Font weight** - adjust the weight from light to bold
+* **Letter spacing** - control the spacing between characters
 * **Color** - set the text color
-* **Line height** - adjust vertical spacing between lines
+* **Line height** - adjust the vertical spacing between lines
 * **Text align** - align text left, center, right, or justify
-* **Text shadow** - add shadow effects to text
+* **Text decoration** - apply none, underline, or strikethrough
+* **Font style** - switch between normal and italic
 
-These settings apply to the selected Component and override Theme defaults. Use them to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
+Mautic resolves typography across three levels, where each level overrides the one before it:
+
+#. **Theme defaults** - the base styles defined by the Theme.
+#. **Component typography** - the Style Manager settings listed in this section, which apply to the selected Component.
+#. **Inline editor** - formatting you apply to individual characters or words with the CKEditor inline toolbar when you double click a text Component.
+
+Use the Component typography controls to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
 
 Custom fonts
 ============
