@@ -40,6 +40,10 @@ Theme tags
 
 When you select a Theme in the Email or Landing Page builders, Themes may show tags below their name. These tags help you quickly identify what each Theme is for.
 
+.. image:: images/theme-tags.png
+    :width: 600
+    :alt: Theme tags such as Transactional, Download, and Contact displayed below Theme names in the builder's Theme selection screen
+
 The following tags are available:
 
 .. vale off
