@@ -330,10 +330,19 @@ Merge two Contacts
 
 If you have 2 Contacts in the Mautic database who are physically one person, you can merge them with the Merge feature.
 
-#. Click the drop down box arrow in the top right hand corner of the Contact detail.
-#. Select the Merge item. A modal box shows up.
+#. Click the drop-down box arrow in the top right-hand corner of the Contact detail.
+#. Select the **Merge** item. A modal box shows up.
+
+   .. image:: images/contact-merge-button.png
+      :align: center
+      :alt: Merge option highlighted in the Contact actions drop-down menu on the Contact detail page.
+
 #. Search for the Contact you want to merge into the current Contact. The select box updates as you search.
-#. Select the right Contact and hit the **Merge** button.
+#. Select the right Contact and click the **Merge** button.
+
+   .. image:: images/merge-contacts.png
+      :align: center
+      :alt: Merge Contact modal with a search field, a Choose the contact to merge with select box, and the Merge button.
 
 When you merge Contacts, the surviving Contact receives the following data:
 
