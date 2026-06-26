@@ -63,7 +63,7 @@ With the Asset Manager is easier to organize your media files and it's enough to
 Editing text
 ============
 
-GrapesJS uses inline text editing. Select a text Component and start typing to make changes directly on the canvas - there's no need to open a separate dialog.
+GrapesJS uses inline text editing. Select a text Component and start typing to make changes directly on the canvas.
 
 The text editor includes standard formatting options:
 
