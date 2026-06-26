@@ -191,7 +191,7 @@ While an import runs in the browser, the progress page shows a **Cancel** button
 
 .. vale on
 
-When you cancel an import, Mautic sends a notification to the notification area of the User who created it. If you cancel an import that another User started, that User gets the notification, and the message identifies you as the person who canceled it.
+When you cancel an import, Mautic sends a notification to the User who created it. If you cancel an import that another User started, that User gets the notification, and the message identifies you as the person who canceled it.
 
 When the background job finishes, either successfully or if it fails, you'll get a notification in Mautic's notification area about it.
 
