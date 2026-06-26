@@ -60,6 +60,28 @@ Asset manager
 
 With the Asset Manager is easier to organize your media files and it's enough to double click the image to change it.
 
+Editing text
+============
+
+GrapesJS uses inline text editing powered by CKEditor. Double click a text Component to open the inline editor and edit directly on the canvas.
+
+The inline editor includes standard formatting options:
+
+* Bold, italic, underline and strikethrough
+* Font family, font color and font background color
+* Text alignment
+* Ordered and unordered lists
+* Headings
+* Links and anchors
+* Tables
+* Tokens for personalization
+
+You can paste content from external sources like Microsoft Word or Google Docs. The editor keeps basic formatting and adapts it for Email and Landing Page layouts.
+
+.. tip::
+
+   Click outside the text Component to finish editing and return to the canvas.
+
 About the builder
 *****************
 
@@ -125,12 +147,35 @@ Themes
 
 If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new Builder.
 
-To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`. 
+To learn more about creating Themes, see :doc:`/builders/creating_themes`.
+
+Typography
+**********
+
+The Style Manager includes a Typography section for styling text Components. Select a text Component on the canvas, then open the Style panel to reach these controls:
+
+* **Font family** - choose from the available fonts
+* **Font size** - set the text size in pixels
+* **Font weight** - adjust the weight from light to bold
+* **Letter spacing** - control the spacing between characters
+* **Color** - set the text color
+* **Line height** - adjust the vertical spacing between lines
+* **Text align** - align text left, center, right, or justify
+* **Text decoration** - apply none, underline, or strikethrough
+* **Font style** - switch between normal and italic
+
+Mautic resolves typography across three levels, where each level overrides the one before it:
+
+#. **Theme defaults** - the base styles defined by the Theme.
+#. **Component typography** - the Style Manager settings listed in this section, which apply to the selected Component.
+#. **Inline editor** - the formatting you apply to individual characters or words with the CKEditor inline toolbar when you double click a text Component.
+
+Use the Component typography controls to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
 
 Custom fonts
-************
+============
 
-From Mautic 5.x you can extend the Style Manager > Typography > Fonts list to include custom fonts.
+You can extend the **Typography** > **Fonts** list to include custom fonts.
 
 .. image:: images/editorfonts.jpg
   :width: 280
@@ -155,6 +200,17 @@ You define options as elements of the ``'editor_fonts'`` array in the local conf
         )
     ),
 
+
+Linking an image
+****************
+
+You can turn any image in a Landing Page or Email into a clickable link straight from the Builder, without editing the code. Select the image in the canvas, open the Settings panel on the right, and use the link fields below the **Alt** and **Title** fields.
+
+* The ``href`` field sets the URL the image links to. When you set it, Mautic wraps the image in a link. Leave it empty and the image stays a plain image.
+* The ``target`` field controls where the link opens. Choose **This window** to open the link in the current tab, or select a new window to open it in a new tab.
+* The ``rel`` field sets the value of the link's ``rel`` attribute, such as ``nofollow`` or ``noopener``. This field is optional.
+
+Because Mautic only wraps the image in a link when you set the ``href`` field, an image without a URL renders normally. The link settings persist when you save and reopen the Landing Page or Email.
 
 Reporting bugs
 ***************
