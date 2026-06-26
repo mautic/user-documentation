@@ -585,11 +585,23 @@ Segment settings
 Company settings
 ****************
 
+Company merge settings
+======================
+
 .. image:: images/company-merge-settings.png
   :width: 600
   :alt: Screenshot showing Company Merge Settings Configuration in Mautic
 
 * **Merge by unique fields with operator** - You can determine which operator to use when merging fields if there is more than one unique identifier.
+
+Company list settings
+=====================
+
+.. image:: images/company_list_settings.png
+   :width: 600
+   :alt: Company list settings configuration showing available and selected columns for the Companies overview
+
+* **Columns** - Manage the visible columns for Companies. Move fields from the left list to the right list to display them on the main Companies overview, or remove fields from the right list to hide them.
 
 Queue settings
 **************
