@@ -124,15 +124,23 @@ If a Mautic User has permission to see only their own data from a bundle, they s
 Widget error handling
 *********************
 
+.. vale off
+
 If a Widget encounters an error while loading, Mautic displays an error message on that Widget while the rest of the Dashboard continues to work normally. This prevents a single failing Widget from blocking access to the entire Dashboard.
+
+.. vale on
 
 When you see an error on a Widget:
 
 - The error may be temporary and resolve on its own
 - Other Widgets on your Dashboard aren't affected
-- Administrators can check the server logs for technical details
+- Administrators can review the server logs for technical details
 
 .. note::
 
-  If a Widget consistently shows an error, contact your system administrator. The server logs contain details about what caused the Widget to fail.
+   .. vale off
+
+   If a Widget consistently shows an error, contact your system administrator. The server logs contain details about what caused the Widget to fail.
+
+   .. vale on
 
