@@ -270,9 +270,13 @@ Some Plugins contain specific events. The events display and are searchable afte
 Exporting the change log
 ------------------------
 
-You can export the Contact's change log to CSV for offline analysis or record-keeping. The CSV includes columns for each event's timestamp, action, details, and the user or source that triggered the change.
+You can export the Contact's change log to CSV for offline analysis or record-keeping. The CSV includes columns for each event's timestamp, action, details, and the User or source that triggered the change.
+
+.. vale off
 
 To export the change log, click the dropdown menu in the upper right corner of the Contact detail page and select the export option.
+
+.. vale on
 
 Notes
 =====
