@@ -43,7 +43,7 @@ If you have an IP lookup service :ref:`configured<miscellaneous settings>` in **
 
     * In **Settings > Configuration > Tracking Settings**, you can enable the **Do Not Track 404 error for anonymous Contacts** option to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent tracking pages you're not interested in and filling the Contact logs with bot activity. See :ref:`Tracking settings<tracking settings>`
 
-    * Mautic also filters out bot, monitoring, and privacy opt-out traffic automatically, so it doesn't create anonymous Contacts for those requests. See :ref:`Automatic tracking filtering<automatic tracking filtering>`
+    * Mautic also filters out bot, monitoring, and privacy opt-out traffic automatically, so it doesn't create anonymous Contacts for those requests. See :ref:`Automatic tracking filtering<automatic tracking filtering>`.
 
     * Data for anonymous Contacts isn't available for segmentation or reporting. Once identified, the data is available, which applies to non-Campaign based Dynamic Web Content filters.
 
