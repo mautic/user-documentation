@@ -794,7 +794,13 @@ Mautic tracking settings
 Automatic tracking filtering
 ============================
 
+.. vale off
+
 To keep your analytics focused on real people, Mautic automatically excludes certain requests from tracking. When a request matches any of the conditions below, Mautic doesn't record the page hit, Email open, Asset download, or Contact tracking activity:
+
+.. vale on
+
+.. vale off
 
 * **Bots and crawlers** - Requests Mautic identifies as bots through the IP and User Agent filtering described in :ref:`Miscellaneous Settings<miscellaneous settings>`.
 * **HEAD requests** - Requests that use the ``HTTP HEAD`` method, which monitoring and uptime tools commonly send.
@@ -802,7 +808,9 @@ To keep your analytics focused on real people, Mautic automatically excludes cer
 * **Global Privacy Control signals** - Requests that send a ``Sec-GPC: 1`` header. Honoring this signal is a legal requirement under privacy laws such as the California Consumer Privacy Act.
 * **Do Not Track signals** - Requests that send a ``DNT: 1`` header.
 
-This filtering is always on and can't be turned off. It applies across page hits, Email opens, Asset downloads, and Contact tracking, so your analytics reflect genuine human engagement and respect visitor privacy preferences. Because Mautic doesn't track these visits, it doesn't create anonymous Contacts for them.
+.. vale on
+
+This filtering is always on, and you can't turn it off. Because Mautic doesn't track these requests, it doesn't create anonymous Contacts for them, so your analytics reflect genuine human engagement and respect visitor privacy preferences.
 
 Facebook pixel
 ==============
