@@ -132,6 +132,12 @@ The actions that Mautic offers in a Campaign include:
      - Updates the existing Contact's primary Company fields with the specified value. See :doc:`documentation on Companies </companies/companies_overview>`.
    * - **Update Contact owner**
      - Updates the Contact's owner.
+   * - **Modify Company's Segments**
+     - Adds or removes the Contact's primary Company to or from Company Segments. Use this for Account-Based Marketing workflows targeting Companies.
+
+.. _campaign company segment actions:
+
+.. vale on
 
 .. vale on
 
@@ -258,8 +264,10 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
      - Checks if the selected User is the Contact's owner.
    * - **Contact Segments**    
      - Checks if the Contact is a member of selected Segments.
-   * - **Contact Tags**    
+   * - **Contact Tags**
      - Checks if specified Tags are on the Contact record.
+   * - **Company Segments**
+     - Checks if the Contact's primary Company is a member of selected Company Segments. Use this for Account-Based Marketing workflows.
    * - **Contact Points**
      - Checks if the Contact has a certain number of Points or a Group score.
    * - **Form Field value**    

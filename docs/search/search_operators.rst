@@ -74,7 +74,7 @@ Contacts search filters
 Companies search filters
 ------------------------
 
-.. code-block:: 
+.. code-block::
 
     ids:ID1,ID2 (comma separated IDs, no spaces)
     is:published
@@ -82,6 +82,7 @@ Companies search filters
     is:mine
     is:uncategorized
     category:{category alias}
+    segment:{segment-alias}
 
 Segments search filters
 -----------------------

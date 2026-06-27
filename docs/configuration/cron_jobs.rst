@@ -22,9 +22,10 @@ When setting up cron jobs, you must choose how often you want the cron jobs to r
 
 For instance:
 
-.. code-block:: 
+.. code-block::
 
     - 0,15,30,45 <— mautic:segments:update
+    - 2,17,32,47 <— mautic:company-segments:update
     - 5,20,35,50 <— mautic:campaigns:update
     - 10,25,40,55 <— mautic:campaigns:trigger
 
@@ -45,6 +46,25 @@ Segment cron jobs
 By default, the script processes Contacts in batches of 300. If this is too many for your server's resources, use the option ``--batch-limit=X`` replacing X with the number of Contacts to process each batch.
 
 You can also limit the number of Contacts to process per script execution using ``--max-contacts`` to further limit resources used.
+
+.. vale off
+
+Company Segment Cron jobs
+=========================
+
+.. vale on
+
+**To keep Company Segments current:**
+
+.. code-block:: php
+
+   php /path/to/mautic/bin/console mautic:company-segments:update
+
+By default, the script processes Companies in batches of 300. If this is too many for your server's resources, use the option ``--batch-limit=X`` replacing X with the number of Companies to process each batch.
+
+You can also limit the number of Companies to process per script execution using ``--max-companies`` to further limit resources used.
+
+To update a specific Company Segment, use the ``--segment-id=X`` option.
 
 .. vale off
 
