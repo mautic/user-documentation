@@ -148,9 +148,11 @@ Customizing slot labels
 
 .. vale on
 
-When building custom Themes for Preference Center pages, you can override the default text labels for each slot. This lets you customize wording to match your branding or provide translations for different languages.
+When building custom Themes for Preference Center Landing Pages, you can override the default text labels for each slot. This lets you customize wording to match your branding or provide translations for different languages.
 
 The following parameters are available for customizing slot labels in your Theme's Twig templates:
+
+.. vale off
 
 .. list-table::
    :widths: 30 30 40
@@ -187,10 +189,12 @@ The following parameters are available for customizing slot labels in your Theme
      - ``saveprefsbutton['btnText']``
      - Text displayed on the save button
 
+.. vale on
+
 If you don't provide a custom value for these parameters, Mautic uses the default translated strings.
 
 .. note::
-   These customization parameters are for use in custom Theme development. See the Mautic Developer Documentation for implementation details on creating custom Preference Center Themes.
+   These customization parameters are for use in custom Theme development. See `Getting started with Themes <https://devdocs.mautic.org/en/latest/themes/getting_started.html>`_ in the Mautic Developer Documentation for implementation details on creating custom Themes for Preference Center Landing Pages.
 
 .. vale off
 
