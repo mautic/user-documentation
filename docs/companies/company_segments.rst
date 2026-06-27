@@ -23,11 +23,8 @@ Creating a Company Segment
 #. In the **Details** tab, configure the following:
 
    * **Name** - The internal name for your Company Segment.
-
    * **Public name** - An optional alternate name visible in certain interfaces.
-
    * **Description** - A description of the Segment's purpose.
-
    * **Active** - Toggle to make the Segment available for use. Inactive Segments aren't available as Campaign sources or in other areas of Mautic.
 
 .. vale off
@@ -66,7 +63,7 @@ The available operators depend on the field type:
 
 .. note::
 
-   Companies automatically move into or out of dynamic Segments when their field values change and the Segment cron job runs. See :ref:`Company Segment cron job<company segment cron job>` for configuration details.
+   Companies automatically move into or out of dynamic Segments when their field values change and the Segment Cron job runs. See :ref:`Company Segment Cron job<company Segment Cron job>` for configuration details.
 
 .. vale off
 
@@ -139,7 +136,7 @@ Filter the Company list by Segment membership using the search syntax:
 
    segment:{segment-alias}
 
-Replace ``{segment-alias}`` with the alias of your Company Segment. The alias is automatically generated from the Segment name or can be set manually.
+Replace ``{segment-alias}`` with the alias of your Company Segment. Mautic generates the alias automatically from the Segment name, but you can also set it manually.
 
 .. vale off
 
@@ -164,15 +161,15 @@ Cloning a Company Segment
 
 Mautic creates a copy of the Segment with the same filters and settings.
 
-Publishing and unpublishing
+Activating and deactivating
 ===========================
 
-Control Segment availability by publishing or unpublishing:
+Make a Segment active or inactive to control whether it's available for use:
 
-#. In the Company Segment list, click the colored status indicator - green for published, red for unpublished.
-#. Alternatively, edit the Segment and toggle the **Published** setting.
+#. In the Company Segment list, click the colored status indicator - green when active, red when inactive.
+#. You can also edit the Segment and toggle the **Active** setting.
 
-Unpublished Segments aren't available for use in Campaigns or other features.
+Inactive Segments aren't available in Campaigns or other features.
 
 Deleting Company Segments
 =========================
@@ -195,7 +192,7 @@ Company Segment Cron job
 
 .. vale on
 
-To keep Company Segments current, configure a cron job to run the rebuild command:
+To keep Company Segments current, configure a Cron job to run the rebuild command:
 
 .. code-block:: php
 
@@ -206,12 +203,10 @@ This command evaluates all Companies against Company Segment filters and updates
 **Available options:**
 
 * ``--batch-limit=X`` - Number of Companies to process per batch. Default is 300.
-
 * ``--max-companies=X`` - Maximum number of Companies to process per execution.
-
 * ``--segment-id=X`` - Process only a specific Company Segment.
 
-Run this command regularly, for example every 15 minutes, staggered with other cron jobs to distribute server load.
+Run this command regularly, for example every 15 minutes, staggered with other Cron jobs to distribute server load.
 
 .. code-block::
 
