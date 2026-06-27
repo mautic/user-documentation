@@ -55,10 +55,38 @@ The code is there when you need it
 
 You don't have to care about the code, but it's always there, available for you. When it's done, you can grab it and use it wherever you want. Developers could also implement their own storage interfaces to use inside the editor.
 
-Asset manager
+Asset Manager
 =============
 
-With the Asset Manager is easier to organize your media files and it's enough to double click the image to change it.
+The Asset Manager helps you organize and insert images into your Emails and Landing Pages. Double-click an image element to open the Asset Manager and select or upload a new image.
+
+Supported image formats
+-----------------------
+
+The Asset Manager supports the following image formats:
+
+* PNG
+* JPG/JPEG
+* GIF
+* WebP
+* SVG
+* PDF
+
+.. note::
+
+   Most Email clients don't support SVG files. Use SVG images for Landing Pages only. For Emails, use PNG, JPG, or GIF formats instead.
+
+Uploading images
+----------------
+
+To upload an image:
+
+#. Click an image element in the Builder canvas.
+#. Select **Upload** in the Asset Manager dialog.
+#. Choose an image file from your computer.
+#. The image uploads and appears in your media list.
+
+Uploaded images are stored in the ``media/images/`` directory and are available for reuse across your Emails and Landing Pages.
 
 Editing text
 ============
