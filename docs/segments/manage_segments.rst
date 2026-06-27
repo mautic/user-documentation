@@ -329,6 +329,36 @@ Configuring Segment filters
 
 .. vale off
 
+Filtering by Form submissions
+=============================
+
+.. vale on
+
+You can create dynamic Segments based on which Forms your Contacts have submitted. This filter is available under **Contact behavior and actions** in the filter dropdown.
+
+1. Create or edit a Segment and go to the **Filters** tab.
+
+2. Click the **Choose one**… menu and search for 'Submitted a specific form' under **Contact behavior and actions**.
+
+3. Select an operator:
+
+   * **empty** - includes Contacts who haven't submitted any Forms
+   * **not empty** - includes Contacts who've submitted at least one Form
+   * **including any of** - includes Contacts who've submitted at least one of the selected Forms
+   * **excluding any of** - includes Contacts who haven't submitted any of the selected Forms
+   * **including all of** - includes Contacts who've submitted all of the selected Forms
+   * **excluding all of** - includes Contacts who haven't submitted all of the selected Forms
+
+4. If using an operator other than **empty** or **not empty**, select one or more Forms from the dropdown list.
+
+5. Click **Save and close**.
+
+.. tip::
+
+   Use this filter to target Contacts who've shown interest in specific topics or offers. For example, create a Segment of Contacts who've submitted your 'Free Trial Request' Form to send them follow-up information.
+
+.. vale off
+
 Using Date Filters
 ==================
 
