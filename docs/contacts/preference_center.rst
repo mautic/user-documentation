@@ -194,7 +194,7 @@ The following parameters are available for customizing slot labels in your Theme
 If you don't provide a custom value for these parameters, Mautic uses the default translated strings.
 
 .. note::
-   These customization parameters are for use in custom Theme development. See `Getting started with Themes <https://devdocs.mautic.org/en/latest/themes/getting_started.html>`_ in the Mautic Developer Documentation for implementation details on creating custom Themes for Preference Center Landing Pages.
+   These customization parameters are for use in custom Theme development. See the :xref:`Themes` section of the Developer Documentation for implementation details on creating custom Themes for Preference Center Landing Pages.
 
 .. vale off
 
