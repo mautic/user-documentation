@@ -17,6 +17,7 @@ boolean
 booleans
 cc
 CCPA
+CKEditor
 Citrix
 Clearbit
 CloudAMQP
@@ -106,7 +107,6 @@ POST
 post
 PUT
 Rackspace
-rebase
 Remarketing
 REST
 Salesforce
@@ -124,6 +124,7 @@ SMTP
 SNS
 SparkPost
 SSO
+strikethrough
 sublicense
 SugarCRM
 Suhosin
