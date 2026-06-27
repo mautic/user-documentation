@@ -45,7 +45,7 @@ Configuring filters
 #. Add additional filters using **And** or **Or** logic:
 
    * **And** - Companies must match all connected filters.
-   * **Or** - Creates a new filter group where Companies matching any group are included.
+   * **Or** - Creates a new filter group that includes Companies matching any group.
 
 #. Click **Save and close** to save the Segment.
 
@@ -63,7 +63,7 @@ The available operators depend on the field type:
 
 .. note::
 
-   Companies automatically move into or out of dynamic Segments when their field values change and the Segment Cron job runs. See :ref:`Company Segment Cron job<company Segment Cron job>` for configuration details.
+   Companies automatically move into or out of dynamic Segments when their field values change and the Segment Cron job runs. See :ref:`Company Segment Cron job<Company Segment Cron job>` for configuration details.
 
 .. vale off
 
@@ -103,9 +103,9 @@ From the Company list view
 Using Campaign actions
 ======================
 
-.. vale on
-
 You can add or remove Companies from Company Segments as part of a Campaign workflow using the **Modify Company's Segments** action. For more information, see :ref:`Campaign Company Segment actions<campaign company segment actions>`.
+
+.. vale on
 
 .. vale off
 
@@ -143,17 +143,21 @@ Replace ``{segment-alias}`` with the alias of your Company Segment. Mautic gener
 Managing Company Segments
 *************************
 
-.. vale on
-
 Editing a Company Segment
 =========================
+
+.. vale on
 
 #. Navigate to **Companies > Company Segments**.
 #. Click the Segment name or select **Edit** from the dropdown menu.
 #. Make your changes and click **Save and close**.
 
+.. vale off
+
 Cloning a Company Segment
 =========================
+
+.. vale on
 
 #. Navigate to **Companies > Company Segments**.
 #. Click the dropdown arrow next to the Segment.
@@ -171,8 +175,12 @@ Make a Segment active or inactive to control whether it's available for use:
 
 Inactive Segments aren't available in Campaigns or other features.
 
+.. vale off
+
 Deleting Company Segments
 =========================
+
+.. vale on
 
 #. Navigate to **Companies > Company Segments**.
 #. Select the checkbox next to the Segment or Segments to delete.
@@ -181,7 +189,7 @@ Deleting Company Segments
 
 .. warning::
 
-   Mautic prevents deletion of Company Segments that are referenced by filters in other Segments. Remove the dependency before deleting.
+   Mautic prevents deletion of Company Segments that filters in other Segments reference. Remove the dependency before deleting.
 
 .. _company Segment Cron job:
 
