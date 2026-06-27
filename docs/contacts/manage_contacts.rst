@@ -267,6 +267,13 @@ If the message is ``Pending``, clicking the X button cancels it.
 
 Some Plugins contain specific events. The events display and are searchable after installing and configuring the Plugin.
 
+Exporting the change log
+------------------------
+
+You can export the Contact's change log to CSV for offline analysis or record-keeping. The CSV includes columns for each event's timestamp, action, details, and the user or source that triggered the change.
+
+To export the change log, click the dropdown menu in the upper right corner of the Contact detail page and select the export option.
+
 Notes
 =====
 
