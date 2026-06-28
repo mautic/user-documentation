@@ -345,9 +345,9 @@ You can create dynamic Segments based on which Forms your Contacts have submitte
    * **empty** - includes Contacts who haven't submitted any Forms
    * **not empty** - includes Contacts who've submitted at least one Form
    * **including any of** - includes Contacts who've submitted at least one of the selected Forms
-   * **excluding any of** - includes Contacts who haven't submitted any of the selected Forms
+   * **excluding any of** - includes Contacts who've submitted none of the selected Forms
    * **including all of** - includes Contacts who've submitted all of the selected Forms
-   * **excluding all of** - includes Contacts who haven't submitted all of the selected Forms
+   * **excluding all of** - includes Contacts who haven't submitted the complete set of selected Forms. Contacts are missing at least one, so those who've submitted some but not all are still included
 
 4. If using an operator other than **empty** or **not empty**, select one or more Forms from the dropdown list.
 
