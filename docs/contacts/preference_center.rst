@@ -172,19 +172,19 @@ The following parameters are available for customizing slot labels in your Theme
      - Label for the preferred channel dropdown
    * - Channel Frequency
      - ``channelfrequency['label-text']``
-     - Label for the 'I want to receive' checkbox
+     - Label for the **I want to receive** checkbox
    * - Channel Frequency
      - ``channelfrequency['label-text1']``
-     - Label for the 'Do not contact more than' setting
+     - Label for the **Do not contact more than** setting
    * - Channel Frequency
      - ``channelfrequency['label-text2']``
-     - Label for the 'Messages each' frequency option
+     - Label for the **Messages each** frequency option
    * - Channel Frequency
      - ``channelfrequency['label-text3']``
-     - Label for the 'Pause from' date setting
+     - Label for the **Pause from** date setting
    * - Channel Frequency
      - ``channelfrequency['label-text4']``
-     - Label for the 'Pause to' date setting
+     - Label for the **Pause to** date setting
    * - Save Preferences Button
      - ``saveprefsbutton['btnText']``
      - Text displayed on the save button
@@ -194,6 +194,7 @@ The following parameters are available for customizing slot labels in your Theme
 If you don't provide a custom value for these parameters, Mautic uses the default translated strings.
 
 .. note::
+
    These customization parameters are for use in custom Theme development. See the :xref:`Themes` section of the Developer Documentation for implementation details on creating custom Themes for Preference Center Landing Pages.
 
 .. vale off
