@@ -289,7 +289,7 @@ If you use :ref:`A/B testing for Segment Emails <ab testing for Segment Emails>`
 
     php /path/to/mautic/bin/console mautic:email:sendwinner [--id=ID]
 
-- ``--id=ID`` limits the run to a single parent A/B test Email by ID. If not provided, the command processes all eligible A/B tests.
+The ``--id=ID`` limits the run to a single parent A/B test Email by ID. If not provided, the command processes all eligible A/B tests.
 
 After the wait time you set on the test passes, the command evaluates each variant against your winner criteria - such as read rate or click-through rate - and selects the best performer. Mautic then sends the remaining Emails using the winning variant's content through the standard broadcast command. Schedule this command to run on a regular interval so Mautic picks winners and finishes sending without manual intervention.
 
