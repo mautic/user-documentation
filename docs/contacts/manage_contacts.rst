@@ -201,7 +201,7 @@ Event history tracks any engagements between Mautic and a Contact. To find certa
 
 **Added through API** - Contact created through API.
 
-**Asset Downloaded** - Lists which Assets a Contact downloaded from your Landing Pages or website. Combining this information with other data can help with analyzing what led a Contact to download the Asset.
+**Asset Downloaded** - Lists which Assets a Contact downloaded from your Landing Pages or website. Combining this information with other data can help with analyzing what led a Contact to download the Asset. If you have deleted the Asset, the timeline displays ``Deleted asset`` without a link or preview.
 
 **Campaign Action Triggered** - Actions within Campaigns which have already happened.
 
@@ -350,6 +350,8 @@ This option lets Users send an individual Email, either manually created with th
 Enter a **Subject** when you send the Email. If you leave it empty, Mautic displays the error 'A subject is required.'
 
 .. vale on
+
+.. _Contact tracking:
 
 Contact tracking
 ****************
