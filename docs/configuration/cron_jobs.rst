@@ -283,7 +283,7 @@ Determine A/B test winner cron job
 
 .. vale on
 
-If you use :ref:`A/B testing for Segment Emails <ab testing for segment emails>`, this command picks the winning variant once the test period ends and sends the winning version to your remaining Contacts.
+If you use :ref:`A/B testing for Segment Emails <ab testing for Segment Emails>`, this command picks the winning variant once the test period ends and sends the winning version to your remaining Contacts.
 
 .. code-block:: php
 

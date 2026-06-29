@@ -54,7 +54,7 @@ There is a multi-select field that allows excluding Contacts belonging given Seg
 
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
-.. _ab testing for segment emails:
+.. _ab testing for Segment Emails:
 
 .. vale off
 
@@ -76,12 +76,14 @@ Converting an Email to an A/B test
 
 .. vale on
 
+.. vale off
+
 #. Open a Segment Email that you haven't sent yet.
 #. In the right-hand column of the Email detail view, find the 'Convert to A/B test' card and select it.
 
    .. image:: https://promptless-customer-doc-assets.s3.us-east-2.amazonaws.com/docs-images/org_3A4Y7R0duvqDFH8Goz5djcVpUK3/email-ab-test-convert-card-e873976b.png
      :width: 400
-     :alt: Screenshot showing the 'Convert to A/B test' card in the right-hand column of a Segment Email.
+     :alt: The 'Convert to A/B test' card in the right-hand column of a Segment Email.
 
 #. In the 'Convert to A/B test email' dialog, set the initial test parameters:
 
@@ -91,9 +93,11 @@ Converting an Email to an A/B test
 
    .. image:: https://promptless-customer-doc-assets.s3.us-east-2.amazonaws.com/docs-images/org_3A4Y7R0duvqDFH8Goz5djcVpUK3/email-ab-test-convert-dialog-4677cc37.png
      :width: 400
-     :alt: Screenshot showing the 'Convert to A/B test email' dialog with the winner criteria, wait time, and test audience size fields.
+     :alt: The 'Convert to A/B test email' dialog with the winner criteria, wait time, and test audience size fields.
 
 #. Select 'Save & Close'.
+
+.. vale on
 
 These settings only set up the test - you can change them any time before the test starts sending. After conversion, the right-hand column replaces the card with the 'A/B Test' panel, where you manage variants, settings, and sending from one place.
 
@@ -110,7 +114,7 @@ You manage the whole test from the 'A/B Test' panel in the right-hand column. Th
 * To edit a variant, select its edit icon in the panel.
 * To remove a variant, select its remove icon in the panel.
 
-Mautic divides the test audience evenly between all published variants, including the original Email.
+Mautic divides the test audience evenly between all Active variants, including the original Email.
 
 .. vale off
 
@@ -128,7 +132,7 @@ Scheduling the A/B test
 
 .. vale on
 
-Once you have at least two variants, the panel shows a 'Schedule sending' button along with a summary of the test - for example, '10% of your contacts will receive test variants. The winner will be picked after 24 hours.'
+Once you have at least two variants, the panel shows a 'Schedule sending' button along with a summary of the test - for example, that 10% of your Contacts receive test variants and that Mautic picks the winner after 24 hours.
 
 #. Select 'Schedule sending'.
 #. Choose the date and time to begin sending, then confirm.
