@@ -110,9 +110,9 @@ Managing variants
 
 You manage the whole test from the 'A/B Test' panel in the right-hand column. The original Email counts as the first variant, so you need at least one more - two in total - before you can schedule the test. Until you add one, the panel shows a reminder.
 
-* To add a variant, select 'Add variant +'. Mautic creates a copy that you can edit - change the subject line, content, or design you want to test. Each variant appears in the panel tagged as an 'A/B variant' of the original Email.
-* To edit a variant, select its edit icon in the panel.
-* To remove a variant, select its remove icon in the panel.
+#. To add a variant, select 'Add variant +'. Mautic creates a copy that you can edit - change the subject line, content, or design you want to test. Each variant appears in the panel tagged as an 'A/B variant' of the original Email.
+#. To edit a variant, select its edit icon in the panel.
+#. To remove a variant, select its remove icon in the panel.
 
 Mautic divides the test audience evenly between all Active variants, including the original Email.
 
