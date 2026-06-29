@@ -54,6 +54,102 @@ There is a multi-select field that allows excluding Contacts belonging given Seg
 
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
+.. _ab testing for segment emails:
+
+.. vale off
+
+A/B testing for Segment Emails
+==============================
+
+.. vale on
+
+A/B testing lets you split test a Segment Email against one or more variants to find the version that performs best. Mautic sends each variant to a small slice of your audience, picks a winner based on criteria you choose, then sends the winning version to everyone else.
+
+.. note::
+
+   You can only convert a Segment Email to an A/B test before you send it. The 'Convert to A/B test' card appears only on Segment Emails with zero sends.
+
+.. vale off
+
+Converting an Email to an A/B test
+----------------------------------
+
+.. vale on
+
+#. Open a Segment Email that you haven't sent yet.
+#. In the right-hand column of the Email detail view, find the 'Convert to A/B test' card and select it.
+#. In the 'Convert to A/B test email' dialog, set the initial test parameters:
+
+   * **How to pick the winner** - the criteria Mautic uses to choose the winning variant, such as read - open - rate or click-through rate.
+   * **Wait before picking winner** - how long Mautic waits, in hours, after sending the test Emails before it picks the winner. This gives Contacts time to open and click. The default is 24 hours.
+   * **Test audience size** - the percentage of your Contacts that receive the test Emails, split evenly between variants. The remaining Contacts receive the winning version. The default is 10%.
+
+#. Select 'Save & Close'.
+
+These settings only set up the test - you can change them any time before the test starts sending. After conversion, the right-hand column replaces the card with the 'A/B Test' panel, where you manage variants, settings, and sending from one place.
+
+.. vale off
+
+Managing variants
+-----------------
+
+.. vale on
+
+You manage the whole test from the 'A/B Test' panel in the right-hand column. The original Email counts as the first variant, so you need at least one more - two in total - before you can schedule the test. Until you add one, the panel shows a reminder.
+
+* To add a variant, select 'Add variant +'. Mautic creates a copy that you can edit - change the subject line, content, or design you want to test. Each variant appears in the panel tagged as an 'A/B variant' of the original Email.
+* To edit a variant, select its edit icon in the panel.
+* To remove a variant, select its remove icon in the panel.
+
+Mautic divides the test audience evenly between all published variants, including the original Email.
+
+.. vale off
+
+Adjusting A/B test settings
+---------------------------
+
+.. vale on
+
+To change the winner criteria, wait time, or test audience size after conversion, select the settings icon at the top of the 'A/B Test' panel. You can adjust these values any time before the test starts sending.
+
+.. vale off
+
+Scheduling the A/B test
+-----------------------
+
+.. vale on
+
+Once you have at least two variants, the panel shows a 'Schedule sending' button along with a summary of the test - for example, '10% of your contacts will receive test variants. The winner will be picked after 24 hours.'
+
+#. Select 'Schedule sending'.
+#. Choose the date and time to begin sending, then confirm.
+
+The Email moves to a 'Scheduled for future send' state, and the panel shows when sending starts. To change the timing, use the 'Reschedule sending' button.
+
+.. note::
+
+   For A/B test Emails, Mautic hides the 'Send' button in the header. Schedule and send the test from the 'A/B Test' panel using 'Schedule sending'.
+
+.. vale off
+
+Sending and determining the winner
+-----------------------------------
+
+.. vale on
+
+When sending begins, Mautic sends the test Emails to the test audience and the panel shows that the test is running, along with a countdown to when Mautic picks the winner.
+
+After the wait time passes, the ``mautic:email:sendwinner`` command evaluates each variant against your winner criteria, marks the best performer with a 'Winner' badge in the panel, and sends the remaining Emails using the winning variant's content through the standard broadcast command. For setup details, see the :ref:`Determine A/B test winner <determine ab test winner>` section in :doc:`/configuration/cron_jobs`.
+
+.. vale off
+
+Viewing A/B test results
+------------------------
+
+.. vale on
+
+Once the test is sending, the panel shows an 'A/B Test Stats' button. Select it to compare how each variant is performing and to see which variant Mautic picked as the winner.
+
 Email formats
 *************
 
