@@ -345,7 +345,13 @@ Send Email to Contact
 
 This option lets Users send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the message.
 
-The **Subject** field is required. If you leave it empty, Mautic displays an error: 'A subject is required.'
+Enter a **Subject** when you send the Email.
+
+.. vale off
+
+If you leave it empty, Mautic displays the error 'A subject is required.'
+
+.. vale on
 
 Contact tracking
 ****************
