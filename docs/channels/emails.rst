@@ -71,6 +71,23 @@ Email overview
 
 The Email overview allows at-a-glance information regarding the success or failure of a particular Email. You can quickly see relevant information in regards to opens, bounces, successful click-throughs and other important statistics.
 
+.. _email content preview:
+
+Email content preview
+======================
+
+.. vale off
+
+The Email details page shows a rendered preview of the Email content in the right column, so you can see how an Email looks without opening the Builder or a separate tab. This is handy when you're comparing several Emails to find the one you want.
+
+The 'Preview URL' panel below the preview controls what the preview shows. Select an A/B variant or translation from the 'Show preview for A/B variant' list to preview that version's content, or start typing in the 'Show preview for contact' field to render the Email with a specific Contact's tokens resolved.
+
+Mautic reloads the preview automatically when you switch between A/B test variants or translations, so it always reflects the version you've selected.
+
+.. image:: images/emails/email-details-preview.png
+  :width: 400
+  :alt: Screenshot showing the rendered Email content preview in the right column of the Email details page.
+
 .. vale off
 
 Email Drafts
@@ -129,6 +146,8 @@ From Mautic 5.1 it's possible to preview A/B and Translation variants:
 .. image:: images/emails/ab-translation-preview.png
   :width: 400
   :alt: Screenshot showing A/B and Translation preview
+
+The rendered preview on the Email details page reloads automatically when you switch between variants and translations. For more information, see :ref:`email content preview`.
 
 Base64 encoded images
 =====================
