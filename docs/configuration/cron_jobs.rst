@@ -227,7 +227,7 @@ Use the ``--gdpr`` flag to delete data to fulfill GDPR European regulation. This
 
 .. vale off
 
-Rebuild Campaign summary statistics cron job
+Rebuild Campaign summary statistics Cron job
 ============================================
 
 .. vale on
@@ -241,13 +241,10 @@ The Campaign summary statistics command builds summary data from Campaign event 
 Command parameters
 ------------------
 
-- ``--campaign-id=ID`` - process only a specific Campaign. When provided, the command resumes from that Campaign's own summary history instead of using global dates.
-
-- ``--rebuild`` - rebuild existing summary data from the current hour, walking backward through history. Without this flag, the command continues from where it last stopped.
-
-- ``--batch-limit=X`` - how many hours to process per batch.
-
-- ``--max-hours=X`` - maximum hours to process per execution.
+* ``--campaign-id=ID`` - Process only a specific Campaign. When provided, the command resumes from that Campaign's own summary history instead of using global dates.
+* ``--rebuild`` - Rebuild existing summary data from the current hour, walking backward through history. Without this flag, the command continues from where it last stopped.
+* ``--batch-limit=X`` - How many hours to process per batch.
+* ``--max-hours=X`` - Maximum hours to process per execution.
 
 **Examples:**
 
