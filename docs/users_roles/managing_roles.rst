@@ -3,7 +3,7 @@ Roles
 
 You can control access to Mautic instances by creating accounts for Users and associating them with a Role.
 
-:doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas :ref:`Roles <Roles overview>` allow or deny access to various features within Mautic.
+:doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas Roles allow or deny access to various features within Mautic.
 
 Mautic uses Roles to control which resources and actions Users can access. When team members have different responsibilities, you may not want some team members working in certain parts of Mautic. 
 
@@ -16,9 +16,9 @@ Roles overview
 
 To view Roles, navigate to **Settings** > **Roles**. The Roles listing shows every Role in your Mautic instance, with a short description and the number of Users assigned to each one.
 
-.. image:: images/roles-listing-overview.png
-  :width: 800
-  :alt: Mautic Roles listing
+.. image:: images/roles_listing_overview.png
+   :width: 800
+   :alt: Mautic Roles listing
 
 The listing includes these columns:
 
@@ -34,14 +34,12 @@ Sorting Roles by the number of Users
 
 .. vale on
 
-You can sort the Roles listing by the number of Users assigned to each Role. Select the **User Count** column header to sort in ascending order, then select it again to switch to descending order.
+You can sort the Roles listing by the number of Users assigned to each Role. Click the **User Count** column header to sort in ascending order, then click it again to switch to descending order.
 
-.. image:: images/roles-user-count-sort.png
+.. image:: images/roles_user_count_sort.png
    :alt: The User Count column header with the sort control
 
 This makes it easy to find the Roles that most Users depend on, or to spot Roles that no longer have any Users assigned.
-
-.. _ create a Role:
 
 .. vale off
 
