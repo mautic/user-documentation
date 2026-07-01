@@ -32,7 +32,9 @@ System defaults
   :width: 600
   :alt: Screenshot showing System defaults Settings Configuration in Mautic
 
-* **Default item limit per page** - The number of Contacts, Campaigns, Emails, etc. which display on each page when you go to an item section. The default is ``10``.
+.. vale off
+
+* **Default item limit per page** - The number of Contacts, Campaigns, Emails, Assets, and other items which display on each page when you go to an item section. The default is ``10``.
 
 * **Default timezone** - The User's default time zone, typically set to the time zone of the Company headquarters. Mautic allows the User to set their own time zones via their profile. The default is ``UTC``.
 
@@ -45,6 +47,8 @@ System defaults
 * **Date Range Filter Default** - Sets the default for how far back from the current date Mautic looks for data in Reports including Campaign and Email snapshots charts on the item page. This setting allows you to control the default for how far back from the current date Mautic looks for data. If you've changed the setting on a Report, Mautic uses what you've entered. Mautic's default value is ``1 Month``.
    
 * **Default format for full dates, date only, short dates, and time only** - The default setting uses the standard American time format. The letters in the boxes are PHP code. See the :xref:`PHP manual for date functions`.
+
+.. vale on
 
 CORS settings
 =============
