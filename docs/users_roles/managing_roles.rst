@@ -9,28 +9,23 @@ Mautic uses Roles to control which resources and actions Users can access. When 
 
 By default, Mautic creates new Users with the Administrator Role with full system access. You can change that when manually creating a User, or select a different Role when importing a User by API.
 
-.. _roles:
+.. _Roles overview:
 
-Overview
-********
+Roles overview
+**************
 
-To manage Roles, navigate to **Settings** > **Roles**. The Roles listing shows every Role in your Mautic instance, with a short description and the number of Users assigned to each one.
+To view Roles, navigate to **Settings** > **Roles**. The Roles listing shows every Role in your Mautic instance, with a short description and the number of Users assigned to each one.
 
 .. image:: images/roles-listing-overview.png
   :width: 800
-  :alt: Screenshot showing the Mautic Roles listing
+  :alt: Mautic Roles listing
 
 The listing includes these columns:
 
-* **Name** - the name of the Role. Select a Role name to open and edit it.
-
-* **Description** - the optional description you added when creating the Role.
-
-* **User Count** - a badge showing how many Users have this Role. Select **View X Users** to open a filtered list of the Users assigned to the Role. Roles with no assigned Users show a 'No Users' badge.
-
-* **ID** - the internal identifier Mautic assigns to the Role.
-
-From this listing you can also create a Role with **+New**, search for a Role using the **Filter** box, and select the checkboxes to run bulk actions.
+* **Name** - The name of the Role. Click a Role name to open and edit it.
+* **Description** - The optional description you added when creating the Role.
+* **User Count** - A badge showing how many Users have this Role. Select **View X Users** to open a filtered list of the Users assigned to the Role. Roles with no assigned Users show a 'No Users' badge.
+* **ID** - The internal identifier Mautic assigns to the Role.
 
 .. vale off
 
@@ -42,9 +37,11 @@ Sorting Roles by the number of Users
 You can sort the Roles listing by the number of Users assigned to each Role. Select the **User Count** column header to sort in ascending order, then select it again to switch to descending order.
 
 .. image:: images/roles-user-count-sort.png
-  :alt: Screenshot showing the User Count column header with the sort control
+   :alt: The User Count column header with the sort control
 
 This makes it easy to find the Roles that most Users depend on, or to spot Roles that no longer have any Users assigned.
+
+.. _ create a Role:
 
 .. vale off
 
