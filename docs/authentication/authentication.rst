@@ -38,6 +38,10 @@ The IDP may ask for the following settings:
 
 #. Entity ID - this is site URL, displayed at the top of User/Authentication Settings. Copy this exactly 'as is' to the IDP.
 
+   .. note::
+
+      If you use a custom domain, set the **Site URL** in **Configuration** > **System Settings** to match it. This keeps your SAML setup working correctly.
+
 #. Service Provider Metadata - if the provider requires a URL, use ``https://example.com/saml/metadata.xml``. To use as a file rather than a URL, browse to that URL and save the content as an XML file.
 
 #. Assertion Consumer Service - Use ``https://example.com/s/saml/login_check``.
