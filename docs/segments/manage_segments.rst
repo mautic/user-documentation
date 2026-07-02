@@ -7,6 +7,42 @@ Segments provide ways to easily organize your Contacts. There are a variety of f
 
 .. vale off
 
+Creating a Segment
+******************
+
+.. vale on
+
+#. To create a new Segment, navigate to Segments in the menu, and click the **New** button.
+
+#. In the **Details** tab, add a **Name**, **Public name**, and **Description** to your Segment.
+
+   |
+
+   .. image:: images/create-segment.png
+      :width: 700
+      :alt: Screenshot showing creating a Segment.
+
+   |
+
+#. Fill in other options:
+
+   * **Visible to other Users** - This option determines if the Segment is available for all Users to see and use, or only the User who created the Segment.
+   * **Available in Preference Center** - If set to **Yes**, Contacts can see and opt into or out of the Segment on a **Preference Center** interface. The Segments display if the Preference Center has the **Segment List** slot type.
+   * **Active** - If set to **No**, the Segment won't be available for use in filters for other Segments, as a Contact source in Campaigns, modify Segment actions, etc. You still see the Segment in your Segments list, but it won't exist anywhere else in Mautic.
+
+   * **Public name** - Users can set a different name for the Segment, which is visible to Contacts in the Preference Center options.
+
+     On the **Details** tab, static and dynamic Segments also have the option to display a different public name for a Segment.
+
+.. vale off
+
+Viewing Contact Segments
+************************
+
+.. vale on
+
+.. vale off
+
 When viewing all Segments, the **# contacts** column shows the number of Contacts included in each specific Segment. The **Building** or **Building (X Contacts)** label appears during the creation of a new Segment or when modifying an existing Segment's filter and remains visible until the building process completes.
 
 .. vale on
@@ -17,43 +53,30 @@ When viewing all Segments, the **# contacts** column shows the number of Contact
 
 .. vale off
 
-Creating a Segment
-******************
+Exporting Contacts of a Segment
+*******************************
 
 .. vale on
 
-1. To create a new Segment, navigate to Segments in the menu, and click the **+New** button.
+To export Contacts of a Segment:
 
-2. In the **Details** tab, add a **Name**, **Public name** and **Description** to your Segment.
+#. Click the **View X Contacts** label for the Segment that you want to export. This opens the Contacts interface.
 
-.. image:: images/create-segment.png
-  :width: 700
-  :alt: Screenshot showing creating a Segment.
+   |
 
-* **Visible to other Users** - This option determines if the Segment is available for all Users to see and use, or only the User who created the Segment.
+   .. image:: images/segments_view_contacts_label.png
+      :width: 700
+      :alt: Highlight of view 1 Contact label at Mautic Contact Segments interface.
 
-* **Available in Preference Center** - If set to **Yes**, Contacts can see and opt into or out of the Segment on a **Preference Center** page. The Segments display if the Preference Center has the **Segment List** slot type.
+   |
+#. Click the gear icon next to the search bar to open **Options**.
+#. Click **Export to CSV** or **Export to Excel** to export the Contacts in your preferred format.
 
-* **Active** - If set to **No**, the Segment won't be available for use in filters for other Segments, as a Contact source in Campaigns, modify Segment actions, etc. You'll still see the Segment in your **Segment list**, but it essentially won't exist anywhere else in Mautic.
+   |
 
-On the Details tab, static, and dynamic Segments also have the option to display a different public name for a Segment.
-
-* **Public name** - Users can set a different name for the Segment, which is visible to Contacts in Preference Center options.
-
-.. vale off
-
-Viewing and exporting Contacts in a Segment
-===========================================
-
-.. vale on
-
-When viewing all Segments the **# contacts** column on the right shows the number of Contacts included in that particular Segment.
-
-.. image:: images/contact-segment.png
-  :width: 700
-  :alt: Screenshot showing Contacts matching that particular Segment.
-
-To view Contacts in a specific Segment, click **View X Contacts** from your Segment list or in the Contacts section of Mautic, enter ``segment:segment-alias`` in the search bar.
+   .. image:: images/contacts_export_options.png
+      :width: 700
+      :alt: Screenshot showing Contacts matching that particular Segment.
 
 .. vale off
 
