@@ -80,7 +80,7 @@ Email content preview
 
 The Email details page shows a rendered preview of the Email content in the right column, so you can see how an Email looks without opening the Builder or a separate tab. This is handy when you're comparing several Emails to find the one you want.
 
-The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to resolve that Contact's tokens. Mautic reloads the preview automatically to match the version you've selected.
+The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. When you select a Contact, Mautic fills in the :ref:`tokens <Email tokens>` in the content — placeholders that pull in that Contact's field values, such as their first name — so you can check the personalized version. Mautic reloads the preview automatically to match the version you've selected.
 
 .. image:: images/emails/email_details_preview.png
    :width: 600
@@ -164,6 +164,8 @@ It's possible to encode all images in the Email text as base64. It attaches the 
 - The main idea with this option is that most of the Email clients display the images directly, without the need to allow images.
 - Some Email clients like GMail require the approval to display Base64 encoded images due to the tracking pixel being an image, and won't display the Base64 encoded images as a result. See the next paragraph for possible solution.
 - The Email body increases significantly if the Email contains many and/or large sized images. Some Email clients like GMail "clip" such messages and won't display it directly.
+
+.. _Email tokens:
 
 Tokens
 ======
