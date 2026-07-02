@@ -22,80 +22,115 @@ The **Details** tab on a Report contains the same options across all Reports and
    :align: center
    :alt: Screenshots of Mautic Report Details
 
-* **Name** - Specify a Report name that makes it easy for you and other Users to identify the purpose of the Report.
+|
 
+.. vale off
+
+* **Name** - Specify a Report name that makes it easy for you and other Users to identify the purpose of the Report.
 * **Data source** - Select the data source appropriate to the Report that you are building. Note that each data source has a different set of available columns, filters, and graphs. The available data sources are:
 
-1. :doc:`Assets</components/assets>`
+  #. :doc:`Assets</components/assets>`
 
-   * Assets
-   * Asset Downloads
+     * Assets
+     * Asset Downloads
 
-2. :doc:`Campaigns</campaigns/campaigns_overview>`
-   
-   * Campaign Events
+  #. :doc:`Campaigns</campaigns/campaigns_overview>`
 
-3. :doc:`Channels Messages</queue/message_queue>`
-   
-   * Message Queue
+     * Campaign Events
 
-4. :doc:`Emails</channels/emails>`
-    
-   * Emails
-   * Emails Sent
+  #. :doc:`Channels Messages</queue/message_queue>`
 
-5. :doc:`Forms</components/forms>`
-   
-   * Forms
-   * Form Submissions
+     * Message Queue
 
-6. :doc:`Contacts</contacts/manage_contacts>`
-   
-   * Contacts
-   * Multi Touch Attributions
-   * First Touch Attributions
-   * Last Touch Attributions
-   * Contact Point Log
-   * Frequency Rules
-   * Segment Membership
-   * Do Not Contact
-   * UTM Codes
-   * Group score
+  #. :doc:`Emails</channels/emails>`
 
-7. :doc:`Companies</companies/companies_overview>`
-   
-   * Companies
+     * Emails
+     * Emails Sent
 
-8. :doc:`Mobile Notifications</channels/marketing_messages>`
-   
-   * Mobile Notifications
-   * Mobile Notifications Sent
+  #. :doc:`Forms</components/forms>`
 
-9. :doc:`Pages</components/landing_pages>`
-    
-   * Landing Pages
-   * Page hits
+     * Forms
+     * Form Submissions
 
-10. Videos
+  #. :doc:`Contacts</contacts/manage_contacts>`
 
-    * Video hits
+     * Contacts
+     * Multi Touch Attributions
+     * First Touch Attributions
+     * Last Touch Attributions
+     * Contact Point Log
+     * Frequency Rules
+     * Segment Membership
+     * Do Not Contact
+     * UTM Codes
+     * Group score
 
-As demonstrated, Mautic displays the data sources in the format: ``<Parent data source> <Child data source>``
+  #. :doc:`Companies</companies/companies_overview>`
 
-The parent data source provides a high-level summary of the data while the child data source provides a more granular view of Contact behavior that includes your Custom Fields and values.
+     * Companies
+
+  #. :doc:`Mobile Notifications</channels/marketing_messages>`
+
+     * Mobile Notifications
+     * Mobile Notifications Sent
+
+  #. :doc:`Pages</components/landing_pages>`
+
+     * Landing Pages
+     * Page hits
+
+  #. Videos
+
+     * Video hits
+
+  As demonstrated, Mautic displays the data sources in the format: ``<Parent data source> <Child data source>``
+
+  The parent data source provides a high-level summary of the data while the child data source provides a more granular view of Contact behavior that includes your Custom Fields and values.
 
 * **Description - optional** - Add detailed information about the Report, helping you and other Users better understand what the Report is for. You may want to include more information about filters, people, or departments.
-  
 * **Published** - Select **Yes** to ensure that the Report is active, ready to send when scheduled in the Report options.
-
-* **Visible for all logged-in Users** - Select **Yes** so that all Users can access the Report. If set to No, only the owner of the Report and Users with permission to view others' Reports can see the Report.
-
-* **Owner** - Select the owner of the Report to determine who can see the Report if the 'Visible for all logged-in Users' setting is No.
-
+* **Visible for all logged-in users** - Select **Yes** so that all Users can access the Report. If set to **No**, only the owner of the Report and Users with permission to view others' Reports can see the Report.
+* **Owner** - Select the owner of the Report to determine who can see the Report if the **Visible for all logged-in users** setting is **No**.
 * **Dynamic filters settings**
 
-  - Opened by default - If you want to ensure that the date filters and filter options for any other Report filters are visible on a Report detail page without needing to open the filters drop-down, select Yes. For example, for an Emails Report, you might want to view dynamic filters for subject or sent date.
-  - Hide date range - To hide the date range filter so that Users can't change the dates that the Report displays data for, select to **Yes**.
+  * Opened by default - Select **Yes** to display dynamic filter options on the Report detail page without requiring Users to open the Filters panel. For example, in an Emails Report, you might want quick access to filters for subject or sent date. The Filters panel only appears when the Report has dynamic filters configured.
+  * Hide date range - Select **Yes** to hide the date range filter, preventing Users from changing the dates for the Report data. When visible, the date range filter appears at the top of the Report table.
+
+.. vale on
+
+.. vale off
+
+Email Report columns
+--------------------
+
+.. vale on
+
+When using 'Emails' as the data source, you can add the following columns to measure Email engagement:
+
+.. vale off
+
+* **Sent count:** the number of Emails sent to Contacts.
+* **Read count:** the number of Emails that Contacts opened.
+* **Read ratio:** the percentage of sent Emails that Contacts opened.
+* **Click-through count:** the number of unique Contacts who clicked any link in the Email.
+* **Click-through rate:** the percentage of sent Emails that resulted in at least one click.
+* **Click-to-open rate:** the percentage of opened Emails that resulted in at least one click. This helps you understand how engaging the Email content is to recipients who already opened it.
+* **Unsubscribed:** the number of Contacts who unsubscribed after receiving the Email.
+* **Unsubscribed ratio:** the percentage of sent Emails that resulted in an unsubscribe.
+* **Unsubscribe-to-Open Ratio:** the percentage of unsubscribed Contacts relative to those who opened the Email. This helps you understand how Email content affects unsubscribe rates among engaged recipients.
+* **Bounced:** the number of Emails that bounced.
+* **Bounced ratio:** the percentage of sent Emails that bounced.
+* **Clicks:** the total number of link clicks across all recipients - non-unique.
+* **Clicks ratio:** the percentage of sent Emails that resulted in a click, based on total clicks rather than unique Contacts.
+* **Unique clicks:** the total number of unique clicks across all trackable links. Each link counts separately, so a Contact clicking multiple different links adds multiple unique clicks. If you need the number of unique Contacts who clicked any link, use **Click-through count** instead.
+* **Unique clicks ratio:** the percentage of sent Emails that resulted in a unique click, based on summed per-link unique hits.
+* **DNC Preferences:** summary of all Do Not Contact preferences for the Contact across all Channels and Emails.
+
+.. vale on
+
+.. tip::
+
+   Use the Unsubscribe-to-Open Ratio to compare the unsubscribe impact of different Emails. A high ratio may indicate that the Email content didn't meet recipient expectations, while a low ratio suggests it resonated with those who read it.
 
 
 Data
@@ -107,22 +142,28 @@ You can customize each Report to include the columns of choice, filter data base
    :align: center
    :alt: Screenshots of Mautic Report Data
 
+|
+
 * **Columns** - Select the columns of data that you want to appear in the table of data in the Report. Click the column name in the left column to have it show in the Report. You can remove a column from the Report by clicking on its right column. The column returns to its original position on the left side. For example, if you select ID, it refers to the **ID** for the parent data source Category that you selected earlier Contact ID, Email ID, Asset ID, etc. It's recommended that you include **ID** in all Reports.
 * **Order** - For sorting the data in the Report, select data Points. The available sort options are **Ascending** and **Descending**. To add multiple columns, click **Add Order**. For fields that use text, an **Ascending** order lists values starting with B after values starting with A and so on. For number or date fields, the higher the number or later the date, the lower on the list the row is. Descending order is the opposite.
 
-.. note:: 
+  .. note::
 
-   Adding multiple fields to order by uses the last one in the Order list first. Ordering by **First Name Ascending** and adding **Email Ascending**, for instance, sorts the Email column first and duplicate rows are then sorted by first name ascending.
+     Adding multiple fields to order by uses the last one in the Order list first. Ordering by **First Name Ascending** and adding **Email Ascending**, for instance, sorts the Email column first and duplicate rows are then sorted by first name ascending.
 
 * **Filters** -  Filter the data using conditions and values. This allows the generation of very granular Reports. This option helps you to narrow down the data included in the Report. The data Points used for filters don’t have to be columns that appear in the Report table. A commonly used filter for any Reports that include Contact record data is Email Not Empty, which displays only identified Contacts in the Report. Additional use cases can include Contacts or items that match a certain value, events happening within a certain date range, etc.
 
-.. note:: 
+  .. note::
 
-   Setting the **Dynamic** option to **Yes** makes it easier for Users viewing the Report to change the data they see without actually editing the Report. Users can see the filter by opening the **Filters** drop-down from the top of the Report page.
+     .. vale off
 
-* **Group by** - Select the columns for which you want to group data. By default, Reports show all items individually. In many Reports, you may see the same Contact, Company, or item appear multiple times. To only see each record listed once, you can add a grouping based on some attribute for the record. 
+     Setting **Dynamic** to **Yes** allows Users to change the data they see in a Report without editing it. They can access the filter from the **Filters** panel at the top of the Report page. The Filters panel only appears when a Report has at least one dynamic filter configured.
 
-You can use Email or Contact ID to display a single row per Contact record. For example, you can group by **Contact ID** to view the unique number of Asset Downloads or Form Submissions for a single Form, instead of total Asset Downloads or Form Submissions, which could include duplicates.
+     .. vale on
+
+* **Group by** - Select the columns for which you want to group data. By default, Reports show all items individually. In many Reports, you may see the same Contact, Company, or item appear multiple times. To only see each record listed once, you can add a grouping based on some attribute for the record.
+
+  You can use Email or Contact ID to display a single row per Contact record. For example, you can group by **Contact ID** to view the unique number of Asset Downloads or Form Submissions for a single Form, instead of total Asset Downloads or Form Submissions, which could include duplicates.
 
 * **Calculated columns** - Select the function that you want to apply to individual columns. Calculated columns display count, average, sum, or the minimum or maximum values from a selected field. They're only available when using a grouping to show a calculation for that grouping. Continuing with the previous example of grouping by a Contact ID number or Email address, a ``COUNT`` calculation displays how many times that Contact record appears on the Report if not for the grouping.
   
@@ -175,7 +216,7 @@ Cron job to schedule Reports
 
 .. vale on
 
-Mautic requires the following cron command to be able to send scheduled Reports:
+Mautic requires the following Cron command to be able to send scheduled Reports:
 
 .. code-block:: php
 
