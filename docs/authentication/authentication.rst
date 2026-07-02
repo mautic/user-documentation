@@ -88,7 +88,11 @@ Mautic hides the password fields on the Account page and User edit form for SAML
 Recovering from a login error
 =============================
 
+.. vale off
+
 A SAML login can fail if the session expires or if Mautic receives an unexpected response from the IDP, such as the intermittent 'Unknown Response' error. When this happens, Mautic clears the session and shows a retry screen. Select the login button to try again. If the error keeps happening, contact your administrator.
+
+.. vale on
 
 Turning off SAML
 ================
