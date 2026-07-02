@@ -83,9 +83,11 @@ The Email details page shows a rendered preview of the Email content in the righ
 The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to resolve that Contact's tokens. Mautic reloads the preview automatically to match the version you've selected.
 
 .. image:: images/emails/email_details_preview.png
-  :width: 600
-  :align: center
-  :alt: Rendered Email content preview in the right column of the Email details page.
+   :width: 600
+   :align: center
+   :alt: Rendered Email content preview in the right column of the Email details page.
+
+|
 
 .. vale on
 
