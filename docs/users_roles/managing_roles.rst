@@ -16,16 +16,16 @@ Roles overview
 
 To view Roles, navigate to **Settings** > **Roles**. The Roles listing shows every Role in your Mautic instance, along with a short description and the number of Users assigned to each one.
 
+.. image:: images/roles_listing_overview.png
+  :width: 800
+  :alt: Mautic Roles listing showing the Name, Description, User Count, and ID columns, with a 'View 1 User' badge on the Administrator Role.
+
 The listing includes these columns:
 
 * **Name** - The name of the Role. Click a Role name to open and edit it.
 * **Description** - The optional description you added when creating the Role.
 * **User Count** - A badge showing how many Users have this Role. Click **View X Users** to open a filtered list of the Users assigned to the Role. Roles with no assigned Users show a 'No Users' badge.
 * **ID** - The internal identifier Mautic assigns to the Role.
-
-.. image:: images/roles_listing_overview.png
-  :width: 800
-  :alt: Mautic Roles listing showing the Name, Description, User Count, and ID columns, with a 'View 1 User' badge on the Administrator Role.
 
 .. vale off
 
