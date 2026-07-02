@@ -84,6 +84,7 @@ The preview reflects your selection in the **Preview URL** panel below it. Choos
 
 .. image:: images/emails/email_details_preview.png
   :width: 600
+  :align: center
   :alt: Rendered Email content preview in the right column of the Email details page.
 
 .. vale on
