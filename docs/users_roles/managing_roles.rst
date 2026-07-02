@@ -3,11 +3,29 @@ Roles
 
 You can control access to Mautic instances by creating accounts for Users and associating them with a Role.
 
-:doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas :ref:`Roles<roles>` allow or deny access to various features within Mautic.
+:doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas Roles allow or deny access to various features within Mautic.
 
-Mautic uses Roles to control which resources and actions Users can access. When team members have different responsibilities, you may not want some team members working in certain parts of Mautic. 
+Mautic uses Roles to control which resources and actions Users can access. When team members have different responsibilities, you may not want some team members working in certain parts of Mautic.
 
 By default, Mautic creates new Users with the Administrator Role with full system access. You can change that when manually creating a User, or select a different Role when importing a User by API.
+
+.. _Roles overview:
+
+Roles overview
+**************
+
+To view Roles, navigate to **Settings** > **Roles**. The Roles listing shows every Role in your Mautic instance, along with a short description and the number of Users assigned to each one.
+
+.. image:: images/roles_listing_overview.png
+  :width: 800
+  :alt: Mautic Roles listing showing the Name, Description, User Count, and ID columns, with View Users and No Users badges in the User Count column.
+
+The listing includes these columns:
+
+* **Name** - The name of the Role. Click a Role name to open and edit it.
+* **Description** - The optional description you added when creating the Role.
+* **User Count** - A badge showing how many Users have this Role. Click **View X Users** to open a filtered list of the Users assigned to the Role. Roles with no assigned Users show a 'No Users' badge.
+* **ID** - The internal identifier Mautic assigns to the Role.
 
 .. vale off
 
