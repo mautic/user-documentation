@@ -37,6 +37,7 @@ Sorting Roles by the number of Users
 You can sort the Roles listing by the number of Users assigned to each Role. Click the **User Count** column header to sort in ascending order, then click it again to switch to descending order.
 
 .. image:: images/roles_user_count_sort.png
+   :width: 400
    :alt: The User Count column header with the sort control
 
 This makes it easy to find the Roles that most Users depend on, or to spot Roles that no longer have any Users assigned.
