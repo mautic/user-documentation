@@ -16,6 +16,9 @@ Roles overview
 
 To view Roles, navigate to **Settings** > **Roles**. The Roles listing shows every Role in your Mautic instance, along with a short description and the number of Users assigned to each one.
 
+.. image:: images/roles_listing_overview.png
+  :alt: Screenshot of the Roles listing showing the Name, Description, User Count, and ID columns
+
 The listing includes these columns:
 
 * **Name** - The name of the Role. Click a Role name to open and edit it.
