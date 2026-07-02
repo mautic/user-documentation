@@ -72,6 +72,20 @@ Once configured with the IDP and the IDP with Mautic, Mautic redirects all login
 
 Login to the IDP, which then redirects you back to Mautic. If the exchange is successful Mautic creates a User if it doesn't already exist, and logs the User into the system.
 
+Managing passwords for SAML Users
+=================================
+
+When you log in through SAML, Mautic hides the password fields on your Account page and on the User add and edit forms. SAML Users authenticate through the identity provider, so they manage their passwords in the IDP rather than in Mautic.
+
+Recovering from a login error
+=============================
+
+A SAML login can fail if the session expires or if Mautic receives an unexpected response from the IDP, such as the intermittent 'Unknown Response' error. When this happens, Mautic clears the session and shows a retry screen with this message:
+
+'An authentication error occurred, please try logging in again. If the issue persists, contact your Campaign Studio Administrator.'
+
+Select the login button on the retry screen to start a new SAML login. If the error keeps happening, contact your Administrator.
+
 Turning off SAML
 ================
 
