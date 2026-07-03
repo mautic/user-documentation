@@ -178,7 +178,7 @@ To clone an Email with its translations and variants:
 
 #. Click **Clone with translations and variants** in the confirmation dialog.
 
-Mautic creates new Unavailable copies of:
+After confirmation, Mautic creates new Unavailable copies of:
 
 * The parent Email
 * All translation children
