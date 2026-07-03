@@ -157,7 +157,7 @@ There are two ways to clone an Email:
 
 * **From the Email detail view**:
 
-  #. Click the down arrow button next to **Schedule** to open the **Options** menu.
+  #. Click the down arrow button next to **Send** to open the **Options** menu.
   #. Select **Clone**.
 
      |
@@ -165,7 +165,7 @@ There are two ways to clone an Email:
      .. image:: images/emails/email_clone.png
         :width: 800
         :align: center
-        :alt: Expanded menu next to the Schedule button on the Email detail view, with Clone highlighted.
+        :alt: Expanded menu next to the Send button on the Email detail view, with Clone highlighted.
 
      |
 
