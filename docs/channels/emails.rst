@@ -152,6 +152,23 @@ From Mautic 5.1 it's possible to preview A/B and Translation variants:
 
 The rendered preview on the Email details page reloads automatically when you switch between variants and translations. For more information, see :ref:`Email content preview`.
 
+Cloning Emails
+==============
+
+Cloning an Email creates an editable copy that you can adjust and save as a new Email. This is useful when you want to reuse the content and settings of an existing Email as a starting point.
+
+To clone an Email:
+
+#. Open the Email you want to copy to view its details.
+#. Click the down arrow button next to **Schedule** on the Email detail view.
+#. Select **Clone**.
+
+Mautic opens the copy in the Email editor with the original content and settings prefilled. Adjust the copy as needed, then save it to create the new Email.
+
+.. note::
+
+   Cloning requires permission to create Emails. If you can't create Emails, the **Clone** action doesn't appear.
+
 Base64 encoded images
 =====================
 
