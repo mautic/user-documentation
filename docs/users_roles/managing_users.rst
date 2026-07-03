@@ -34,16 +34,22 @@ To set up a User manually:
 
      Passwords must be **at least six characters** in length. Ensure that you use a combination of upper and lower case alphabets, special characters, and numbers.
 
-  .. note::
+     .. note::
 
-     .. vale off
+        .. vale off
 
-     When you log in through SAML, Mautic hides the password fields on the User add and edit forms. SAML Users manage their passwords in the identity provider, not in Mautic. For more information, see :doc:`SAML Single Sign On </authentication/authentication>`.
+        When you log in through SAML, Mautic hides the password fields on the User add and edit forms. SAML Users manage their passwords in the identity provider, not in Mautic. For more information, see :doc:`SAML Single Sign On </authentication/authentication>`.
 
-     .. vale on
+        .. vale on
 
    * **Time zone** - Set the User's time zone, or use the default. Adding the User's time zone enables them to account for time zone differences for Email scheduling and other features.
 
    * **Language** - Select a language for each User, to improve their experience in Mautic.
 
-When creating your Users, inform them of the credentials. Mautic doesn't send an Email notifying Users of their login information. Manually informing them is necessary.
+.. important::
+
+   .. vale off
+
+   Once you create Users, give them their credentials directly because Mautic doesn't send emails with their login information.
+
+   .. vale on
