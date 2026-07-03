@@ -179,7 +179,7 @@ There are two ways to clone an Email:
 
 * **From the Email detail view**:
 
-  #. Click the down arrow button next to **Schedule**.
+  #. Click the down arrow button next to **Schedule** to open the **Options** menu.
   #. Select **Clone**.
 
      |
@@ -209,7 +209,7 @@ If an Email has translations or A/B variants, cloning the entire group in one st
 To clone an Email with its translations and variants:
 
 #. Click the parent Email to view the details.
-#. Click the down arrow button next to **Schedule**.
+#. Click the down arrow button next to **Schedule** to open the **Options** menu.
 #. Select **Clone with translations and variants**.
 
    |
