@@ -31,13 +31,11 @@ To set up a User manually:
    * **Position - optional** - Your User's job title.
   
    * **Username, Email, Password** are the login credentials. If a User forgets their password, they can use the Forgot password link, but you can manually change their password here.
-  
-.. note:: 
 
-    Passwords must be at least six characters in length. Ensure that you use a combination of upper and lower case alphabets, special characters, and numbers.
+     Passwords must be **at least six characters** in length. Ensure that you use a combination of upper and lower case alphabets, special characters, and numbers.
 
-* **Time zone** - Set the User's time zone, or use the default. Adding the User's time zone enables them to account for time zone differences for Email scheduling and other features.
+   * **Time zone** - Set the User's time zone, or use the default. Adding the User's time zone enables them to account for time zone differences for Email scheduling and other features.
 
-* **Language** - Select a language for each User, to improve their experience in Mautic. 
+   * **Language** - Select a language for each User, to improve their experience in Mautic.
 
 When creating your Users, inform them of the credentials. Mautic doesn't send an Email notifying Users of their login information. Manually informing them is necessary.
