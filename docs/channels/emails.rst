@@ -159,12 +159,12 @@ Cloning Emails
 
 .. vale on
 
-To create a copy of a single Email, use the Clone action in the Actions menu on the Email detail view.
+To create a copy of a single Email, click the down arrow button next to **Schedule** on the Email detail view, then select **Clone**.
 
 Clone with translations and variants
 ------------------------------------
 
-If an Email has translations or A/B variants, cloning the entire group in one step is possible using **Clone with translations and variants**. This action is available in the Actions menu on the Email detail view for parent Emails that have at least one translation or variant.
+If an Email has translations or A/B variants, cloning the entire group in one step is possible using **Clone with translations and variants**. This action is available from the down arrow button next to **Schedule** on the Email detail view, for parent Emails that have at least one translation or variant.
 
 To clone an Email with its translations and variants:
 
@@ -177,7 +177,7 @@ To clone an Email with its translations and variants:
    .. image:: images/emails/email_clone_translations_variants.png
       :width: 800
       :align: center
-      :alt: Expanded Actions dropdown on the Email detail view with the Clone with translations and variants option highlighted.
+      :alt: Expanded dropdown next to the Schedule button on the Email detail view with the Clone with translations and variants option highlighted.
 
    |
 
