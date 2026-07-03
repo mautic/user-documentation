@@ -154,8 +154,53 @@ The rendered preview on the Email details page reloads automatically when you sw
 
 .. vale off
 
+Cloning Emails
+==============
+
+.. vale on
+
+Cloning an Email creates an editable copy that you can adjust and save as a new Email. This is useful when you want to reuse the content and settings of an existing Email as a starting point.
+
+There are two ways to clone an Email:
+
+* **From the Email listing**:
+
+  #. In the Email row, click the three-dots icon next to the checkbox to open the **Options** menu.
+  #. Select **Clone**.
+
+     |
+
+     .. image:: images/emails/email_overview_clone.png
+        :width: 800
+        :align: center
+        :alt: Options menu open on an Email row in the Email listing, with Clone highlighted.
+
+     |
+
+* **From the Email detail view**:
+
+  #. Click the down arrow button next to **Schedule** to open the **Options** menu.
+  #. Select **Clone**.
+
+     |
+
+     .. image:: images/emails/email_clone.png
+        :width: 800
+        :align: center
+        :alt: Expanded menu next to the Schedule button on the Email detail view, with Clone highlighted.
+
+     |
+
+Either way, Mautic opens the copy in the Email editor with the original content and settings pre-populated. Adjust the copy as needed, then save it to create the new Email.
+
+.. note::
+
+   Cloning requires permission to create Emails. If you don't have the permission, the **Clone** option doesn't appear.
+
+.. vale off
+
 Clone with translations and variants
-====================================
+------------------------------------
 
 .. vale on
 
@@ -164,7 +209,7 @@ If an Email has translations or A/B variants, cloning the entire group in one st
 To clone an Email with its translations and variants:
 
 #. Click the parent Email to view the details.
-#. Click the down arrow button next to **Schedule**.
+#. Click the down arrow button next to **Schedule** to open the **Options** menu.
 #. Select **Clone with translations and variants**.
 
    |
