@@ -175,7 +175,7 @@ To clone an Email with its translations and variants:
    |
 
    .. image:: images/emails/email_clone_translations_variants.png
-      :width: 600
+      :width: 400
       :align: center
       :alt: Expanded Actions dropdown on the Email detail view with the Clone with translations and variants option highlighted.
 
