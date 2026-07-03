@@ -169,6 +169,45 @@ Mautic opens the copy in the Email editor with the original content and settings
 
    Cloning requires permission to create Emails. If you can't create Emails, the **Clone** action doesn't appear.
 
+.. vale off
+
+Clone with translations and variants
+====================================
+
+.. vale on
+
+If an Email has translations or A/B variants, cloning the entire group in one step is possible using **Clone with translations and variants**.
+
+To clone an Email with its translations and variants:
+
+#. Click the parent Email to view the details.
+#. Click the down arrow button next to **Schedule**.
+#. Select **Clone with translations and variants**.
+
+   |
+
+   .. image:: images/emails/email_clone_translations_variants.png
+      :width: 800
+      :align: center
+      :alt: Expanded dropdown next to the Schedule button on the Email detail view with the Clone with translations and variants option highlighted.
+
+   |
+
+#. Click **Clone with translations and variants** in the confirmation dialog.
+
+After confirmation, Mautic creates new Unavailable copies of:
+
+* The parent Email
+* All translation children
+* All A/B variant children
+* All translations of A/B variants
+
+Each cloned Email has ``(copy)`` appended to its name and you can edit it independently. The cloned group maintains the same translation and variant structure as the original.
+
+.. note::
+
+   The **Clone with translations and variants** option is only available for parent Emails - not for translation children or variant children.
+
 Base64 encoded images
 =====================
 
