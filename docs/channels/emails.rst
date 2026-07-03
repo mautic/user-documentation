@@ -168,10 +168,20 @@ If an Email has translations or A/B variants, cloning the entire group in one st
 
 To clone an Email with its translations and variants:
 
-#. Go to the Email detail view of the parent Email.
-#. Open the actions menu.
+#. Click the parent Email to view the details.
+#. Click the down arrow button next to **Schedule**.
 #. Select **Clone with translations and variants**.
-#. Confirm the action in the dialog.
+
+   |
+
+   .. image:: images/emails/email_clone_translations_variants.png
+      :width: 600
+      :align: center
+      :alt: Expanded Actions dropdown on the Email detail view with the Clone with translations and variants option highlighted.
+
+   |
+
+#. Click **Clone with translations and variants** in the confirmation dialog.
 
 Mautic creates new Unavailable copies of:
 
