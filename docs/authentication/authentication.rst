@@ -32,42 +32,50 @@ To turn on SAML support in Mautic, you first need the IDP's metadata XML which t
   :width: 800
   :alt: Screenshot of the User Role Permission
 
+.. vale off
+
 Configuring the IDP
 ===================
+
+.. vale on
+
 The IDP may ask for the following settings:
 
-#. Entity ID - this is site URL, displayed at the top of User/Authentication Settings. Copy this exactly 'as is' to the IDP.
+.. vale off
+
+#. **Entity ID** - This is the site URL, displayed at the top of **User/Authentication Settings**. Copy this exactly as is to the IDP.
 
    .. note::
 
-      If you use a custom domain, set the **Site URL** in **Configuration** > **System Settings** to match it. This keeps your SAML setup working correctly.
+      If you use a custom domain, set the site URL in **Configuration** > **System Settings** to match it. This keeps your SAML setup working correctly.
 
-#. Service Provider Metadata - if the provider requires a URL, use ``https://example.com/saml/metadata.xml``. To use as a file rather than a URL, browse to that URL and save the content as an XML file.
+#. **Service Provider Metadata** - If the provider requires a URL, use ``https://example.com/saml/metadata.xml``. If you need a file instead of a URL, open the URL in a browser and save the content as an XML file.
+#. **Assertion Consumer Service** - Use ``https://example.com/s/saml/login_check``.
+#. **Issuer** - It should come from the IDP but is often configurable. If it's a URL, be sure that the scheme - ``http://`` or ``https://`` - isn't part of it.
+#. **Verify request signatures or an SSL certificate** - If the IDP supports encrypting and validating request signatures from Mautic to the IDP, generate a self-signed SSL certificate. Upload the certificate and private key through Mautic's **Configuration** > **User/Authentication Settings** under the "**Use a custom X.509 certificate and private key to secure communication between Mautic and the IDP**" section. Then upload the certificate to the IDP.
+#. **Custom attributes** - Mautic requires three custom attributes in the IDP responses - email, first name, and last name - and can optionally include a username. Configure the attribute names used by the IDP in Mautic's **Configuration** > **User/Authentication Settings** under the "**Enter the names of the attributes the configured IDP uses for the following Mautic User fields**" section.
 
-#. Assertion Consumer Service - Use ``https://example.com/s/saml/login_check``.
+.. vale on
 
-#. Issuer - this should come from the IDP but is often configurable. If it's a URL, be sure that the scheme - ``http://`` and ``https://`` - aren't part of it.
-
-#. Verify request signatures or a SSL certificate - If the IDP supports encrypting and validating request signatures from Mautic to the IDP, generate a self signed SSL certificate. Upload the certificate and private key through Mautic's Configuration > User/Authentication Settings under the 'Use a custom X.509 certificate and private key to secure communication between Mautic and the IDP' section. Then upload the certificate to the IDP.
-
-#. Custom attributes - Mautic requires three custom attributes in the IDP responses for the User Email, first name and last name. Username is also supported but is optional. Configure the attribute names used by the IDP in Mautic's Configuration > User/Authentication Settings under the 'Enter the names of the attributes the configured IDP uses for the following Mautic User fields' section.
+.. vale off
 
 Example - Azure SAML SSO
 ========================
 
-1) Register new Enterprise applications by navigating to ``Create your own Application`` and then ``Integrate any other application you don't find in the gallery (Non-gallery)``
-2) Go to Single Sign-On
-3) ``Identifier (Entity ID)`` - this is the site URL located at the top of User/Authentication Settings. Copy this exactly as is to the IDP.
-4) ``Reply URL (Assertion Consumer Service URL)`` - Use ``https://example.com/s/saml/login_check``
-5) Download Federation Metadata XML from 3. SAML Certificates
-6) Upload the downloaded Federation Metadata XML to Mautic
-7) X.509-Certificate isn't required
-8) Use the following for the custom attributes fields:
+#. Register a new application by going to **Enterprise Applications**, clicking **Create your own application**, and selecting **Integrate any other application you don't find in the gallery (Non-gallery)**.
+#. Go to the **Single sign-on** menu.
+#. **Entity ID** - This is the site URL, displayed at the top of **User/Authentication Settings**. Copy this exactly as is to the IDP.
+#. **Reply URL (Assertion Consumer Service URL)** - Use ``https://example.com/s/saml/login_check``.
+#. In the **SAML Certificates** section, download the **Federation Metadata XML**.
+#. Upload the downloaded **Federation Metadata XML** file to the **Identity provider metadata file** field in Mautic, and leave the **X.509 Certificate** field blank.
+#. Use the following for the custom attributes fields:
 
-E-Mail: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
-First Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname``
-Last Name: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname``
-Username (optional): ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
+   * **E-Mail**: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
+   * **First Name**: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname``
+   * **Last Name**: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname``
+   * **Username (optional)**: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress``
+
+.. vale on
 
 Logging in
 ==========
