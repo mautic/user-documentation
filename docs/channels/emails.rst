@@ -189,7 +189,7 @@ Each cloned Email has ``(copy)`` appended to its name and you can edit it indepe
 
 .. note::
 
-   The **Clone with translations and variants** action is only available for parent Emails - not for translation children or variant children.
+   The **Clone with translations and variants** option is only available for parent Emails - not for translation children or variant children.
 
 Base64 encoded images
 =====================
