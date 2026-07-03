@@ -154,15 +154,10 @@ The rendered preview on the Email details page reloads automatically when you sw
 
 .. vale off
 
-Cloning Emails
-==============
+Clone with translations and variants
+====================================
 
 .. vale on
-
-To create a copy of a single Email, click the down arrow button next to **Schedule** on the Email detail view, then select **Clone**.
-
-Clone with translations and variants
-------------------------------------
 
 If an Email has translations or A/B variants, cloning the entire group in one step is possible using **Clone with translations and variants**. This action is available from the down arrow button next to **Schedule** on the Email detail view, for parent Emails that have at least one translation or variant.
 
@@ -205,9 +200,9 @@ It's possible to encode all images in the Email text as base64. It attaches the 
   :width: 400
   :alt: Screenshot showing Base64 settings for images in Emails
 
-* The main idea with this option is that most of the Email clients display the images directly, without the need to allow images.
-* Some Email clients like GMail require the approval to display Base64 encoded images due to the tracking pixel being an image, and won't display the Base64 encoded images as a result. See the next paragraph for possible solution.
-* The Email body increases significantly if the Email contains many and/or large sized images. Some Email clients like GMail "clip" such messages and won't display it directly.
+- The main idea with this option is that most of the Email clients display the images directly, without the need to allow images.
+- Some Email clients like GMail require the approval to display Base64 encoded images due to the tracking pixel being an image, and won't display the Base64 encoded images as a result. See the next paragraph for possible solution.
+- The Email body increases significantly if the Email contains many and/or large sized images. Some Email clients like GMail "clip" such messages and won't display it directly.
 
 .. _Email tokens:
 
