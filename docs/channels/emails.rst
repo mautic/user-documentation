@@ -564,6 +564,15 @@ For example:
 
    Use ``data-mautic-disable-tracking="true"`` for all new Emails and templates, as Mautic has deprecated the ``mautic:disable:tracking`` attribute.
 
+Link validation
+***************
+
+.. vale off
+
+When you save an Email, Mautic checks every link it contains. If a link contains a malformed ``href``, such as ``://example.com``, Mautic blocks the save and shows an error such as 'The email contains an invalid URL: ://example.com'. This stops broken links from going out and disrupting email delivery. To save the Email, fix the link so its ``href`` is a valid, absolute URL that starts with ``http://`` or ``https://``, a ``mailto:`` link, or a Mautic token such as ``{unsubscribe_url}``.
+
+.. vale on
+
 Unsubscribing
 *************
 
