@@ -71,6 +71,26 @@ Email overview
 
 The Email overview allows at-a-glance information regarding the success or failure of a particular Email. You can quickly see relevant information in regards to opens, bounces, successful click-throughs and other important statistics.
 
+.. _Email content preview:
+
+Email content preview
+======================
+
+.. vale off
+
+The Email details page shows a rendered preview of the Email content in the right column, so you can see how an Email looks without opening the Builder or a separate tab. This is handy when you're comparing several Emails to find the one you want.
+
+The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Mautic reloads the preview automatically to match the version you've selected.
+
+.. image:: images/emails/email_details_preview.png
+   :width: 600
+   :align: center
+   :alt: Rendered Email content preview in the right column of the Email details page.
+
+|
+
+.. vale on
+
 .. vale off
 
 Email Drafts
@@ -130,6 +150,92 @@ From Mautic 5.1 it's possible to preview A/B and Translation variants:
   :width: 400
   :alt: Screenshot showing A/B and Translation preview
 
+The rendered preview on the Email details page reloads automatically when you switch between variants and translations. For more information, see :ref:`Email content preview`.
+
+.. vale off
+
+Cloning Emails
+==============
+
+.. vale on
+
+Cloning an Email creates an editable copy that you can adjust and save as a new Email. This is useful when you want to reuse the content and settings of an existing Email as a starting point.
+
+There are two ways to clone an Email:
+
+* **From the Email listing**:
+
+  #. In the Email row, click the three-dots icon next to the checkbox to open the **Options** menu.
+  #. Select **Clone**.
+
+     |
+
+     .. image:: images/emails/email_overview_clone.png
+        :width: 800
+        :align: center
+        :alt: Options menu open on an Email row in the Email listing, with Clone highlighted.
+
+     |
+
+* **From the Email detail view**:
+
+  #. Click the down arrow button next to **Schedule** to open the **Options** menu.
+  #. Select **Clone**.
+
+     |
+
+     .. image:: images/emails/email_clone.png
+        :width: 800
+        :align: center
+        :alt: Expanded menu next to the Schedule button on the Email detail view, with Clone highlighted.
+
+     |
+
+Either way, Mautic opens the copy in the Email editor with the original content and settings pre-populated. Adjust the copy as needed, then save it to create the new Email.
+
+.. note::
+
+   Cloning requires permission to create Emails. If you don't have the permission, the **Clone** option doesn't appear.
+
+.. vale off
+
+Clone with translations and variants
+------------------------------------
+
+.. vale on
+
+If an Email has translations or A/B variants, cloning the entire group in one step is possible using **Clone with translations and variants**.
+
+To clone an Email with its translations and variants:
+
+#. Click the parent Email to view the details.
+#. Click the down arrow button next to **Schedule** to open the **Options** menu.
+#. Select **Clone with translations and variants**.
+
+   |
+
+   .. image:: images/emails/email_clone_translations_variants.png
+      :width: 800
+      :align: center
+      :alt: Expanded dropdown next to the Schedule button on the Email detail view with the Clone with translations and variants option highlighted.
+
+   |
+
+#. Click **Clone with translations and variants** in the confirmation dialog.
+
+After confirmation, Mautic creates new Unavailable copies of:
+
+* The parent Email
+* All translation children
+* All A/B variant children
+* All translations of A/B variants
+
+Each cloned Email has ``(copy)`` appended to its name and you can edit it independently. The cloned group maintains the same translation and variant structure as the original.
+
+.. note::
+
+   The **Clone with translations and variants** option is only available for parent Emails - not for translation children or variant children.
+
 Base64 encoded images
 =====================
 
@@ -142,6 +248,8 @@ It's possible to encode all images in the Email text as base64. It attaches the 
 - The main idea with this option is that most of the Email clients display the images directly, without the need to allow images.
 - Some Email clients like GMail require the approval to display Base64 encoded images due to the tracking pixel being an image, and won't display the Base64 encoded images as a result. See the next paragraph for possible solution.
 - The Email body increases significantly if the Email contains many and/or large sized images. Some Email clients like GMail "clip" such messages and won't display it directly.
+
+.. _Email tokens:
 
 Tokens
 ======
