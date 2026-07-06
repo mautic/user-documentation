@@ -224,6 +224,13 @@ You can turn any image in a Landing Page or Email into a clickable link straight
 
 Because Mautic only wraps the image in a link when you set the ``href`` field, an image without a URL renders normally. The link settings persist when you save and reopen the Landing Page or Email.
 
+If you enter a bare domain such as ``example.com`` in the ``href`` field, Mautic automatically adds ``https://`` to the front so the image links to a valid absolute URL such as ``https://example.com`` rather than a relative path. Mautic leaves the value unchanged in a few cases:
+
+* It already includes a scheme such as ``https://`` or ``mailto:``.
+* It's a relative path or anchor that starts with ``//``, ``/``, ``#``, or ``.``.
+* It's a single word with no domain extension such as ``page``.
+* It's a Mautic token that starts with ``{``.
+
 Reporting bugs
 ***************
 
