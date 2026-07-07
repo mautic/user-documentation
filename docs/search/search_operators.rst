@@ -26,6 +26,33 @@ Mautic also has a 'global search' feature. In the top left-hand corner, click th
 
 |
 
+Filter dropdown on list views
+=============================
+
+Most list views, including Contacts, Emails, Companies, and Segments, show a dropdown to the left of the filter input. Use it to scope a search to a single field without knowing the underlying query syntax.
+
+.. image:: images/contacts-filter-scope-dropdown.png
+   :align: center
+   :alt: Filter scope dropdown on the Contacts list view
+
+|
+
+'Standard' is the default option and keeps the usual free-text search behavior. To search within one field, pick it from the dropdown and type your term in the filter box. Mautic combines the two into the matching search filter. For example, selecting 'First Name' on Contacts and typing ``John`` runs the ``firstname:John`` search.
+
+The available options are specific to each entity. On Contacts you can scope to fields such as 'First Name', 'Last Name', 'Email', 'Country', and 'ID', along with any Custom Fields you've created. On Emails you can scope to 'Subject', 'Internal Name', 'Language', 'Category', and more. The last entry in the list shows that more options are available than the ones pinned to the top.
+
+Choosing a field only changes which field your next term searches. It doesn't change how the search runs. The scoped search still appears in full in the URL, for example ``?search=subject:foo``, so you can bookmark or share a filtered view.
+
+On many list views, the dropdown also reminds you that you can type a filter directly. Start typing in the filter box to see query suggestions. For example, type ``zip`` to find the ``zipcode:`` filter. This is handy when the field you want isn't listed in the dropdown.
+
+.. image:: images/contacts-filter-scope-hint.png
+   :align: center
+   :alt: Filter dropdown hint prompting you to type a query in the filter box
+
+|
+
+The fields you select in the dropdown map to the same search filters and operators described in the following sections, so you can always type them directly instead.
+
 Search operators
 ================
 
