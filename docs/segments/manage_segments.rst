@@ -62,7 +62,7 @@ When you open a Segment, the detail view shows a row of stat cards that summariz
 
 .. image:: images/segment_contacts_stat_cards.png
    :width: 700
-   :alt: Segment detail view showing four stat cards - Total contacts, Active contacts, Manually added contacts, and Filter added contacts - each with a count.
+   :alt: Segment detail view showing four stat cards - Total, Active, Manually added, and Filter added - each with a count of Contacts.
 
 .. vale off
 
