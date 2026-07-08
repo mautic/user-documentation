@@ -194,11 +194,13 @@ This hierarchy ensures Emails always have a valid sender while allowing personal
 Inserting tokens
 ----------------
 
+.. vale off
+
 When editing Email content in the builder's text editor, use the **Insert token** dropdown to add tokens. The dropdown groups tokens by category, with prefixes that help you find the right field:
 
 - **Contact** - Contact fields such as First Name, Last Name, Email
 - **Company** - Company fields associated with the Contact
-- **Owner** - Fields from the Contact's assigned owner (Mautic User)
+- **Owner** - Fields from the Mautic User assigned to the Contact as its owner
 - **Page** - Landing Page links
 - **DWC** - Dynamic Web Content slots
 - **Focus** - Focus Item links
@@ -206,6 +208,8 @@ When editing Email content in the builder's text editor, use the **Insert token*
 - **Email** - Email links
 
 Each token displays with its category prefix, for example ``Contact: First Name`` or ``Owner: Email``, so you can identify the data source at a glance.
+
+.. vale on
 
 Default value
 -------------
