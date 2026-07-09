@@ -37,7 +37,7 @@ These settings allow  Mautic to find and merge duplicate Companies during the im
 Batch actions
 *************
 
-To update several Companies at once, select them using the checkboxes. A toolbar appears above the table with a three-dot menu listing the available batch actions.
+To update several Companies at once, select them using the checkboxes. A toolbar appears at the top of the table with a three-dot menu listing the available batch actions.
 
 The following batch actions are available:
 

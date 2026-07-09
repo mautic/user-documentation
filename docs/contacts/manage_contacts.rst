@@ -132,7 +132,7 @@ So, Mautic takes care of duplicate Contacts created by the event tracking. You c
 Batch actions
 =============
 
-To update several Contacts at once, select them using the checkboxes. A toolbar appears above the table with a three-dot menu listing the available batch actions.
+To update several Contacts at once, select them using the checkboxes. A toolbar appears at the top of the table with a three-dot menu listing the available batch actions.
 
 A modal window displays when you click one of the actions, with more configuration details. 
 
