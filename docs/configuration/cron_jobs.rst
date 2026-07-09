@@ -255,7 +255,7 @@ Send scheduled broadcasts (Segment Emails) cron job
 
 Starting with Mautic 2.2.0, it's now possible to use cron to send scheduled broadcasts for Channel communications. The current only implementation of this is for Segment Emails. Instead of requiring a manual send and wait with the browser window open while AJAX batches over the send, it's possible to use a command to initiate the process.
 
-The caveat for this is that the Email must have a published up date and be currently published - this is to help prevent any unintentional Email broadcasts. Just as it was with the manual/AJAX process the message is only sent to Contacts who haven't already received the specific communication. This command sends messages to Contacts added to the source Segments later, so if you don't want this to happen, set an unpublish date.
+The Email must be active for Mautic to broadcast it. The 'Publish at (date/time)' field is optional and acts as a scheduled start date. If you leave it empty, Mautic broadcasts the Email as soon as you turn it on. If you set a future date, Mautic holds the Email back until that date and time. Mautic never broadcasts inactive Emails, which helps prevent unintentional Email broadcasts. Just as with the manual or AJAX process, Mautic only sends the message to Contacts who haven't already received the specific communication. This command sends messages to Contacts added to the source Segments later, so if you don't want this to happen, set an 'Unpublish at (date/time)' date.
 
 .. code-block:: php
 
