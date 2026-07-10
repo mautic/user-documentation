@@ -569,7 +569,7 @@ Link validation
 
 .. vale off
 
-When you save an Email, Mautic checks every link it contains. If a link contains a malformed ``href``, such as ``://example.com``, Mautic blocks the save and shows an error such as 'The email contains an invalid URL: ://example.com'. This stops broken links from going out and disrupting email delivery. To save the Email, fix the link so its ``href`` is a valid, absolute URL that starts with ``http://`` or ``https://``, a ``mailto:`` link, or a Mautic token such as ``{unsubscribe_url}``.
+When you save an Email, Mautic checks every link it contains. If a link's ``href`` is malformed - for example ``://example.com``, which has no scheme - Mautic blocks the save and shows an error beneath the editor, such as 'The email contains an invalid URL: ://example.com'. This prevents broken links from going out and disrupting email delivery. A link is valid when its ``href`` uses a scheme such as ``http://``, ``https://``, ``mailto:``, or ``tel:``, is an anchor link that starts with ``#``, or is a Mautic token such as ``{unsubscribe_url}``. Fix any flagged link, then save the Email again.
 
 .. vale on
 
