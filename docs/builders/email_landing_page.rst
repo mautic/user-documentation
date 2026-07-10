@@ -125,12 +125,14 @@ The functions of the Email Builder are as follows:
 
 #. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
+.. vale off
+
 Typography blocks
 *****************
 
 When you edit an MJML Email in the GrapesJS Builder, the blocks sidebar includes a dedicated Typography category. It groups ready-made text blocks so you can add headings and body text without styling each element by hand. The Typography category sits between the Sections and Blocks categories in the sidebar. It's collapsed by default, so select it to expand the blocks.
 
-.. image:: images/PLACEHOLDER_TYPOGRAPHY
+.. image:: images/editor_typography_blocks.png
   :width: 280
   :alt: Screenshot of the Typography block category in the GrapesJS Builder blocks sidebar
 
@@ -149,6 +151,8 @@ Each heading and Subtitle block comes with default sizing and styling, such as a
 .. note::
 
    The Typography category is only available when you edit MJML-based Emails in the GrapesJS Builder.
+
+.. vale on
 
 Templates
 *********
