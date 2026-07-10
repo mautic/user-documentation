@@ -7,10 +7,6 @@ Projects
 
 Projects give you one place to group everything that belongs to a single marketing initiative. Instead of hunting for the Campaigns, Emails, Segments, and other items behind a launch, you assign them all to a Project and manage them together. A Project works like a folder that spans item types, so you can see how the pieces of an initiative fit together and find related items quickly.
 
-.. image:: images/projects_list_view.png
-   :align: center
-   :alt: Projects list showing the New button and the Projects item in the left menu
-
 You can assign many item types to a Project, including Asset, Campaign, Company, Dynamic Content, Email, Focus Item, Form, Landing Page, Marketing Message, Point, Point Trigger, Segment, Stage, and Text message.
 
 .. vale off
@@ -21,6 +17,12 @@ Managing Projects
 .. vale on
 
 To open the Projects list, select Projects in the left main menu. From here, you can create a new Project, open an existing one, and delete Projects you no longer need. The list shows each Project along with the number of items assigned to it.
+
+.. image:: images/projects_list_view.png
+   :align: center
+   :alt: Projects list showing the New button and the Projects item in the left menu
+
+|
 
 .. vale off
 
@@ -38,6 +40,8 @@ To create a Project:
    :align: center
    :alt: Create new Project screen with Name and Description fields
 
+|
+
 Each Project name must be unique. If you enter a name that's already in use, Mautic displays 'A project with this name already exists.' and asks you to choose another.
 
 .. vale off
@@ -52,6 +56,12 @@ To delete one or more Projects:
 * Select the checkbox of the Projects you want to delete. Selecting a checkbox automatically opens a blue banner on top of the table.
 * Click **Delete selected**.
 
+.. image:: images/delete_selected_projects.png
+   :align: center
+   :alt: Projects list with two Projects selected and the Delete selected banner
+
+|
+
 Deleting a Project removes the references to it from every assigned item, but it doesn't delete the items themselves.
 
 .. vale off
@@ -65,9 +75,11 @@ There are two ways to assign items to a Project.
 
 * **From the item** - When you create or edit a supported item, such as an Email or a Campaign, use the Projects field to assign it to one or more Projects. If you have permission to create Projects, you can also type a new name in this field and select **Hit enter to create** to make a new Project on the spot.
 
-.. image:: images/assign_project_from_email.png
-   :align: center
-   :alt: Email edit view with the Projects field used to assign the Email to a Project
+  .. image:: images/assign_project_from_email.png
+     :align: center
+     :alt: Email edit view with the Projects field used to assign the Email to a Project
+
+  |
 
 * **From the Project**:
 
@@ -96,6 +108,8 @@ To delete an item from a Project:
 .. image:: images/remove_item_from_project.png
    :align: center
    :alt: Options menu on a Project item showing the Remove from project action
+
+|
 
 .. vale off
 
