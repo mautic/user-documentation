@@ -5,14 +5,11 @@ Projects
 
 .. vale on
 
-.. vale off
-
-Projects overview
-*****************
-
-.. vale on
-
 Projects give you one place to group everything that belongs to a single marketing initiative. Instead of hunting for the Campaigns, Emails, Segments, and other items behind a launch, you assign them all to a Project and manage them together. A Project works like a folder that spans item types, so you can see how the pieces of an initiative fit together and find related items quickly.
+
+.. image:: images/projects_list_view.png
+   :align: center
+   :alt: Projects list showing the New button and the Projects item in the left menu
 
 You can assign many item types to a Project, including Asset, Campaign, Company, Dynamic Content, Email, Focus Item, Form, Landing Page, Marketing Message, Point, Point Trigger, Segment, Stage, and Text message.
 
@@ -32,10 +29,14 @@ Creating Projects
 
 .. vale on
 
-**To create a Project:**
+To create a Project:
 
 * Select **New**.
 * Give it a name and an optional description.
+
+.. image:: images/create_new_project_form.png
+   :align: center
+   :alt: Create new Project screen with Name and Description fields
 
 Each Project name must be unique. If you enter a name that's already in use, Mautic displays 'A project with this name already exists.' and asks you to choose another.
 
@@ -46,7 +47,7 @@ Deleting Projects
 
 .. vale on
 
-**To delete one or more Projects:**
+To delete one or more Projects:
 
 * Select the checkbox of the Projects you want to delete. Selecting a checkbox automatically opens a blue banner on top of the table.
 * Click **Delete selected**.
@@ -64,9 +65,18 @@ There are two ways to assign items to a Project.
 
 * **From the item** - When you create or edit a supported item, such as an Email or a Campaign, use the Projects field to assign it to one or more Projects. If you have permission to create Projects, you can also type a new name in this field and select **Hit enter to create** to make a new Project on the spot.
 
+.. image:: images/assign_project_from_email.png
+   :align: center
+   :alt: Email edit view with the Projects field used to assign the Email to a Project
+
 * **From the Project**:
 
   #. Open a Project and select **Add Entities to Project**.
+
+     .. image:: images/add_entities_to_project_button.png
+        :align: center
+        :alt: Project detail view highlighting the Add Entities to Project button
+
   #. Choose the type of item you want to add.
   #. Select the item you want to add to the Project.
 
@@ -82,6 +92,10 @@ To delete an item from a Project:
 * Click the three-dots icon next to the entity you want to remove to open the Options menu.
 * Click the **Remove from project** button.
 * Confirm the removal.
+
+.. image:: images/remove_item_from_project.png
+   :align: center
+   :alt: Options menu on a Project item showing the Remove from project action
 
 .. vale off
 
