@@ -55,8 +55,12 @@ The code is there when you need it
 
 You don't have to care about the code, but it's always there, available for you. When it's done, you can grab it and use it wherever you want. Developers could also implement their own storage interfaces to use inside the editor.
 
+.. vale off
+
 Asset Manager
 =============
+
+.. vale on
 
 The Asset Manager helps you organize and insert images into your Emails and Landing Pages. Double-click an image element to open the Asset Manager and select or upload a new image.
 
@@ -86,7 +90,7 @@ To upload an image:
 #. Choose an image file from your computer.
 #. The image uploads and appears in your media list.
 
-Uploaded images are stored in the ``media/images/`` directory and are available for reuse across your Emails and Landing Pages.
+Mautic stores uploaded images in the ``media/images/`` directory, so you can reuse them across your Emails and Landing Pages.
 
 Editing text
 ============

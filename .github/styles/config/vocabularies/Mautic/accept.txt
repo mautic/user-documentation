@@ -74,6 +74,8 @@ IMAP
 IPs
 infographics
 JavaScript
+JPEG
+JPG
 Joomla
 Joomla!
 Libre
@@ -110,6 +112,7 @@ PHP
 Photoshop
 Pipedrive
 Piwik
+PNG
 POST
 post
 PUT
