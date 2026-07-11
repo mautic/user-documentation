@@ -7,7 +7,22 @@ Projects
 
 Projects give you one place to group everything that belongs to a single marketing initiative. Instead of hunting for the Campaigns, Emails, Segments, and other entities behind a launch, you assign them all to a Project and manage them together. A Project works like a folder that spans entity types, so you can see how the pieces of an initiative fit together and find related entities quickly.
 
-You can assign many entity types to a Project, including Asset, Campaign, Company, Dynamic Content, Email, Focus Item, Form, Landing Page, Marketing Message, Point, Point Trigger, Segment, Stage, and Text message.
+You can assign many entity types to a Project, including:
+
+* Asset
+* Campaign
+* Company
+* Dynamic Content
+* Email
+* Focus Item
+* Form
+* Landing Page
+* Marketing Message
+* Point
+* Point Trigger
+* Segment
+* Stage
+* Text message
 
 .. vale off
 
@@ -100,7 +115,7 @@ There are two ways to delete Projects.
 
 #. **To delete a single Project:**
 
-   #. Click the three-dots icon next to the Project you want to delete to open the Options menu.
+   #. Click the three-dots icon next to the Project you want to delete.
    #. Select **Delete**.
    #. Confirm the deletion.
 
