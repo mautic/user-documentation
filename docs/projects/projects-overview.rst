@@ -53,29 +53,29 @@ Editing Projects
 
 You can edit a Project's name and description at any time. There are two ways to do this.
 
-From the Projects list:
+#. **From the Projects list:**
 
-#. Click the three-dots icon next to the Project you want to edit to open the Options menu.
-#. Click **Edit** to open the Edit Project screen.
-#. Edit the Project and click **Save** or **Save & Close** to save it.
+   #. Click the three-dots icon next to the Project you want to edit.
+   #. Click **Edit** to open the Edit Project screen.
+   #. Edit the Project and click **Save** or **Save & Close** to save it.
 
-.. image:: images/edit_project_from_dashboard.png
-   :align: center
-   :alt: Projects list with the Options menu open and the Edit action highlighted
+   .. image:: images/edit_project_from_dashboard.png
+      :align: center
+      :alt: Projects list with the Options menu open and the Edit action highlighted
 
-|
+   |
 
-From the Project's detail view:
+#. **From the Project's detail view:**
 
-#. Click the Project name to open its detail view.
-#. Click **Edit** at the top to open the Edit Project screen.
-#. Edit the Project and click **Save** or **Save & Close** to save it.
+   #. Click the Project name to open its detail view.
+   #. Click **Edit** at the top to open the Edit Project screen.
+   #. Edit the Project and click **Save** or **Save & Close** to save it.
 
-.. image:: images/edit_project_from_detail.png
-   :align: center
-   :alt: Project detail view with the Edit button highlighted at the top
+   .. image:: images/edit_project_from_detail.png
+      :align: center
+      :alt: Project detail view with the Edit button highlighted at the top
 
-|
+   |
 
 .. vale off
 
@@ -86,29 +86,29 @@ Deleting Projects
 
 There are two ways to delete Projects.
 
-To delete one or more Projects at once:
+#. **To delete one or more Projects at once:**
 
-#. Select the checkbox of the Projects you want to delete. Selecting a checkbox automatically opens a blue banner on top of the table.
-#. Click **Delete selected**.
-#. Confirm the deletion.
+   #. Select the checkbox of the Projects you want to delete. Selecting a checkbox automatically opens a blue banner on top of the table.
+   #. Click **Delete selected**.
+   #. Confirm the deletion.
 
-.. image:: images/delete_selected_projects.png
-   :align: center
-   :alt: Projects list with two Projects selected and the Delete selected banner
+   .. image:: images/delete_selected_projects.png
+      :align: center
+      :alt: Projects list with two Projects selected and the Delete selected banner
 
-|
+   |
 
-To delete a single Project:
+#. **To delete a single Project:**
 
-#. Click the three-dots icon next to the Project you want to delete to open the Options menu.
-#. Select **Delete**.
-#. Confirm the deletion.
+   #. Click the three-dots icon next to the Project you want to delete to open the Options menu.
+   #. Select **Delete**.
+   #. Confirm the deletion.
 
-.. image:: images/delete_single_project.png
-   :align: center
-   :alt: Projects list with the Options menu open and the Delete action highlighted
+   .. image:: images/delete_single_project.png
+      :align: center
+      :alt: Projects list with the Options menu open and the Delete action highlighted
 
-|
+   |
 
 Deleting a Project removes the references to it from every assigned entity, but it doesn't delete the entities themselves.
 
@@ -172,11 +172,11 @@ Finding entities by Project
 
 .. vale on
 
-To see entities assigned to a Project, open it. From the Projects list, select the Project's name or the entities label in the **# Entities** column. Both open the Project's detail view, where Mautic lists every assigned entity grouped by type. From here, you can also remove entities or add new ones.
+To see entities assigned to a Project, go to the Project dashboard. From the Projects list, select the Project's name or the entities label in the **# Entities** column. Both open the Project's detail view, where Mautic lists every assigned entity grouped by type. From here, you can also remove entities or add new ones.
 
 If you have many Projects, use the search bar at the top of the Projects list to find one quickly:
 
-#. Type the Project's name. The search isn't case sensitive.
+#. Type the Project's name.
 #. Press **Enter**.
 #. Select the Project's name or its entities label to open it.
 
@@ -193,6 +193,12 @@ Permissions
 
 .. vale on
 
-Projects use their own permission set, which you can grant per Role. To configure these permissions, go to **Settings** > **Roles**, open or create a Role, and find the **Project permissions** section. Alongside the standard View, Edit, Create, Delete, and Full permissions, there's a separate **Associate with other entities** permission that controls whether a User can attach entities to and detach entities from Projects. A User needs this permission to use the Projects field on an entity or the add and remove actions on a Project.
+Projects use their own permission set, which you can grant per Role. To configure these permissions:
+
+#. Go to **Settings** > **Roles**
+#. Open or create a Role
+#. Find the **Project permissions** section.
+
+Alongside the standard **View**, **Edit**, **Create**, **Delete**, and **Full permissions**, there's a separate **Associate with other entities** permission that controls whether a User can attach entities to and detach entities from Projects. A User needs this permission to use the Projects field on an entity or the add and remove actions on a Project.
 
 For more information on creating Roles and configuring their permissions, see :ref:`Roles overview` and :ref:`Setting Role permissions <setting granular permissions>`.
