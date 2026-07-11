@@ -267,9 +267,9 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
    * - **Has active notification**    
      - Checks if the Contact has an active web notification.	
    * - **Has valid Email address**
-     - Checks if the Contact's Email address has a valid syntax, for example, `name@example.com` without spaces, other invalid characters or formats.
+     - Checks if the Contact's Email address has a valid syntax. For example, ``name@example.com`` without spaces, or other invalid characters or formats.
    * - **Prevent action after date**
-     - Routes Contacts based on how much time has elapsed since the Campaign started. Use this condition to stop sending Campaign actions after a deadline, such as limiting a promotional offer to the first week after Campaign launch.
+     - Routes Contacts based on how much time has elapsed since the Campaign started. Use this condition to stop sending Campaign activities after a deadline, such as limiting a promotional offer to the first week after Campaign launch.
 
 .. vale off
 
