@@ -217,6 +217,6 @@ Projects use their own permission set, which you can grant per Role. To configur
 #. Open or create a Role
 #. Find the **Project permissions** section.
 
-Alongside the standard **View**, **Edit**, **Create**, **Delete**, and **Full permissions**, there's a separate **Associate with other entities** permission that controls whether a User can attach entities to and detach entities from Projects. A User needs this permission to use the Projects field on an entity or the add and remove actions on a Project.
+Alongside the standard **View**, **Edit**, **Create**, **Delete**, and **Full** permissions, there's a separate **Associate with other entities** permission that controls whether a User can attach entities to and detach entities from Projects. A User needs this permission to use the Projects field on an entity or the add and remove actions on a Project.
 
 For more information on creating Roles and configuring their permissions, see :ref:`Roles overview` and :ref:`Setting Role permissions <setting granular permissions>`.
