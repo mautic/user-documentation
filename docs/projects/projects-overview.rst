@@ -33,8 +33,8 @@ Creating Projects
 
 To create a Project:
 
-* Select **New**.
-* Give it a name and an optional description.
+#. Select **New**.
+#. Give it a name and an optional description.
 
 .. image:: images/create_new_project_form.png
    :align: center
@@ -46,19 +46,67 @@ Each Project name must be unique. If you enter a name that's already in use, Mau
 
 .. vale off
 
+Editing Projects
+================
+
+.. vale on
+
+You can edit a Project's name and description at any time. There are two ways to do this.
+
+From the Projects list:
+
+#. Click the three-dots icon next to the Project you want to edit to open the Options menu.
+#. Click **Edit** to open the Edit Project screen.
+#. Edit the Project and click **Save** or **Save & Close** to save it.
+
+.. image:: images/edit_project_from_dashboard.png
+   :align: center
+   :alt: Projects list with the Options menu open and the Edit action highlighted
+
+|
+
+From the Project's detail view:
+
+#. Click the Project name to open its detail view.
+#. Click **Edit** at the top to open the Edit Project screen.
+#. Edit the Project and click **Save** or **Save & Close** to save it.
+
+.. image:: images/edit_project_from_detail.png
+   :align: center
+   :alt: Project detail view with the Edit button highlighted at the top
+
+|
+
+.. vale off
+
 Deleting Projects
 =================
 
 .. vale on
 
-To delete one or more Projects:
+There are two ways to delete Projects.
 
-* Select the checkbox of the Projects you want to delete. Selecting a checkbox automatically opens a blue banner on top of the table.
-* Click **Delete selected**.
+To delete one or more Projects at once:
+
+#. Select the checkbox of the Projects you want to delete. Selecting a checkbox automatically opens a blue banner on top of the table.
+#. Click **Delete selected**.
+#. Confirm the deletion.
 
 .. image:: images/delete_selected_projects.png
    :align: center
    :alt: Projects list with two Projects selected and the Delete selected banner
+
+|
+
+To delete a single Project:
+
+#. Click the three-dots icon next to the Project you want to delete to open the Options menu.
+#. Select **Delete**.
+#. Confirm the deletion.
+
+.. image:: images/delete_single_project.png
+   :align: center
+   :alt: Projects list with the Options menu open and the Delete action highlighted
 
 |
 
@@ -73,30 +121,30 @@ Assigning entities to a Project
 
 There are two ways to assign entities to a Project.
 
-* **From the entity** - When you create or edit a supported entity, such as an Email or a Campaign, use the Projects field to assign it to one or more Projects. If you have permission to create Projects, you can also type a new name in this field and select **Hit enter to create** to make a new Project on the spot.
+#. **From the entity** - When you create or edit a supported entity, such as an Email or a Campaign, use the Projects field to assign it to one or more Projects. If you have permission to create Projects, you can also type a new name in this field and select **Hit enter to create** to make a new Project on the spot.
 
-  |
+   |
 
-  .. image:: images/assign_project_from_email.png
-     :align: center
-     :alt: Email edit view with the Projects field used to assign the Email to a Project
+   .. image:: images/assign_project_from_email.png
+      :align: center
+      :alt: Email edit view with the Projects field used to assign the Email to a Project
 
-  |
+   |
 
-* **From the Project**:
+#. **From the Project**:
 
-  * Open a Project and select **Add Entities to Project**.
+   #. Open a Project and select **Add Entities to Project**.
 
-    |
+      |
 
-    .. image:: images/add_entities_to_project_button.png
-       :align: center
-       :alt: Project detail view highlighting the Add Entities to Project button
+      .. image:: images/add_entities_to_project_button.png
+         :align: center
+         :alt: Project detail view highlighting the Add Entities to Project button
 
-    |
+      |
 
-  * Choose the type of entity you want to add.
-  * Select the entity you want to add to the Project.
+   #. Choose the type of entity you want to add.
+   #. Select the entity you want to add to the Project.
 
 .. vale off
 
@@ -107,9 +155,9 @@ Deleting entities from Projects
 
 To delete an entity from a Project:
 
-* Click the three-dots icon next to the entity you want to remove to open the Options menu.
-* Click the **Remove from project** button.
-* Confirm the removal.
+#. Click the three-dots icon next to the entity you want to remove.
+#. Click the **Remove from project** button.
+#. Confirm the removal.
 
 .. image:: images/remove_item_from_project.png
    :align: center
@@ -124,13 +172,13 @@ Finding entities by Project
 
 .. vale on
 
-To see everything assigned to a Project, open it. From the Projects list, select the Project's name or the entities label in the '# Entities' column. Both open the Project's detail view, where Mautic lists every assigned entity grouped by type. From here, you can also remove entities or add new ones.
+To see entities assigned to a Project, open it. From the Projects list, select the Project's name or the entities label in the **# Entities** column. Both open the Project's detail view, where Mautic lists every assigned entity grouped by type. From here, you can also remove entities or add new ones.
 
 If you have many Projects, use the search bar at the top of the Projects list to find one quickly:
 
-* Type the Project's name. The search isn't case sensitive.
-* Press Enter.
-* Select the Project's name or its entities label to open it.
+#. Type the Project's name. The search isn't case sensitive.
+#. Press **Enter**.
+#. Select the Project's name or its entities label to open it.
 
 .. image:: images/search_projects_list.png
    :align: center
