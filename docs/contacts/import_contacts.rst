@@ -182,6 +182,17 @@ How to stop a background import
 
 |
 
+How to cancel an import
+=======================
+
+.. vale off
+
+While an import runs in the browser, the progress page shows a **Cancel** button next to the option to continue importing in the background. Click **Cancel** to stop the import. Mautic stops the import, cleans up the import process, and removes the uploaded CSV file.
+
+.. vale on
+
+When you cancel an import, Mautic sends a notification to the User who created it. If you cancel an import that another User started, that User gets the notification, and the message identifies you as the person who canceled it.
+
 When the background job finishes, either successfully or if it fails, you'll get a notification in Mautic's notification area about it.
 
 .. image:: images/notifications.png

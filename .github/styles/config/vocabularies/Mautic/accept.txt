@@ -19,6 +19,7 @@ booleans
 cc
 CASL
 CCPA
+CKEditor
 Citrix
 Clearbit
 CloudAMQP
@@ -132,6 +133,7 @@ SNS
 SparkPost
 spacebar
 SSO
+strikethrough
 sublicense
 SugarCRM
 Suhosin

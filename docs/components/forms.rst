@@ -482,6 +482,8 @@ Enter the URL where the Form should post to, and Email address/s for anyone who 
 
 If you have Contact Owners set in Mautic, you can also send the notification directly to the Contact's owner. It's also possible to send a copy of the Email to the Contact.
 
+Use the 'to', 'cc', and 'bcc' fields to set who receives the notification. To send to more than one address in any of these fields, separate the Email addresses with a comma.
+
 You can style the message itself as you like, and you can click to insert the submitted values from the Form using tokens. You must add the fields to the Form before creating the action. If adding new fields after creating the Form action, edit the Form action and add the new tokens to the Email.
 
 .. image:: images/forms/send_form_results.png
