@@ -9,20 +9,23 @@ Projects give you one place to group everything that belongs to a single marketi
 
 You can assign many entity types to a Project, including:
 
-* Asset
-* Campaign
-* Company
-* Dynamic Content
-* Email
-* Focus Item
-* Form
-* Landing Page
-* Marketing Message
-* Point
-* Point Trigger
-* Segment
-* Stage
-* Text message
+.. vale off
+
+* :doc:`Assets </components/assets>`
+* :doc:`Campaigns </campaigns/campaigns_overview>`
+* :doc:`Companies </companies/companies_overview>`
+* :doc:`Dynamic Web Content </components/dynamic_web_content>`
+* :doc:`Emails </channels/emails>`
+* :doc:`Focus Items </channels/focus_items>`
+* :doc:`Forms </components/forms>`
+* :doc:`Landing Pages </components/landing_pages>`
+* :doc:`Marketing Messages </channels/marketing_messages>`
+* :doc:`Points </points/points>`
+* :doc:`Segments </segments/manage_segments>`
+* :doc:`Stages </stages/stages>`
+* :doc:`Text messages </channels/sms>`
+
+.. vale on
 
 .. vale off
 
