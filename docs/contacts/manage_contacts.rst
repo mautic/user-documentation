@@ -363,7 +363,13 @@ Send Email to Contact
 
 .. vale on
 
-This option enables Users to send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the individual message.
+This option lets Users send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the message.
+
+.. vale off
+
+Enter a **Subject** when you send the Email. If you leave it empty, Mautic displays the error 'A subject is required.'
+
+.. vale on
 
 .. _Contact tracking:
 
