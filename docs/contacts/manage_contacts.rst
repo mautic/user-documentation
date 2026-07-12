@@ -281,6 +281,12 @@ To export the change log:
 
 .. vale on
 
+.. image:: images/contact_change_log_export_menu.png
+    :align: center
+    :alt: Contact detail view with the Options dropdown open, showing the Export item
+
+|
+
 Notes
 =====
 
