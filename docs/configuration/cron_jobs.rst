@@ -195,7 +195,7 @@ To use this mode, you can specify the ``--min-id`` and ``--max-id`` options. For
 
 .. note::
 
-    The command returns a success exit code (0) when there are no published Webhooks to process. This behavior allows the command to run in automated workflows without triggering false failure alerts when no Webhooks require processing.
+    The command returns a success exit code — ``0`` — when there are no Active Webhooks to process. This lets you run it in automated workflows without triggering failure alerts when no Webhooks need processing.
 
 .. _cron jobs:
 
