@@ -55,10 +55,46 @@ The code is there when you need it
 
 You don't have to care about the code, but it's always there, available for you. When it's done, you can grab it and use it wherever you want. Developers could also implement their own storage interfaces to use inside the editor.
 
-Asset manager
+.. vale off
+
+Asset Manager
 =============
 
-With the Asset Manager is easier to organize your media files and it's enough to double click the image to change it.
+.. vale on
+
+The Asset Manager helps you organize and insert images into your Emails and Landing Pages.
+
+Supported image formats
+-----------------------
+
+The Asset Manager supports the following image formats:
+
+* PNG
+* JPG/JPEG
+* GIF
+* WebP
+* SVG
+* PDF
+
+.. note::
+
+   Most Email clients don't support SVG files. Use SVG images for Landing Pages only. For Emails, use PNG, JPG, or GIF formats instead.
+
+Uploading images
+----------------
+
+To upload an image:
+
+#. Double-click an image element in the Builder canvas.
+#. Click 'Drop files here or click to upload' in the Asset Manager dialog.
+#. Choose one or more image files from your computer.
+#. The images upload and appear in your media list.
+
+.. image:: images/asset_manager_select_image.png
+  :width: 800
+  :alt: The 'Select Image' dialog in the Asset Manager with a 'Drop files here or click to upload' drop zone and a list of uploaded images
+
+Mautic stores uploaded images in the ``media/images/`` directory, so you can reuse them across your Emails and Landing Pages.
 
 Editing text
 ============
