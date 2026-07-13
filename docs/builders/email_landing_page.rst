@@ -133,20 +133,20 @@ Typography blocks
 When you edit an MJML Email in the GrapesJS Builder, the blocks sidebar includes a dedicated Typography category. It groups ready-made text blocks so you can add headings and body text without styling each element by hand. The Typography category sits between the Sections and Blocks categories in the sidebar. It's collapsed by default, so select it to expand the blocks.
 
 .. image:: images/editor_typography_blocks.png
-  :width: 280
-  :alt: Screenshot of the Typography block category in the GrapesJS Builder blocks sidebar
+   :width: 280
+   :alt: The Typography category in the GrapesJS Builder blocks sidebar
 
 The Typography category contains these blocks:
 
-* Text - a plain text block for body copy
-* H1, H2, H3, H4 - heading blocks in decreasing size
-* Subtitle - a smaller, italic block for supporting text
+* **Text** - a plain text block for body copy
+* **H1**, **H2**, **H3**, **H4** - heading levels
+* **Subtitle** - a smaller, italic block for supporting text
 
-The Text block now lives in the Typography category instead of its previous location, but it works exactly as before.
+Since version 7.2, the Text block lives in the Typography category, but it works the same.
 
 When you drag an H1, H2, H3, H4, or Subtitle block onto the canvas, Mautic opens the inline text editor and selects the placeholder text right away, so you can type over it immediately.
 
-Each heading and Subtitle block comes with default sizing and styling, such as a bold 32px H1 or an italic Subtitle. If your Theme defines its own typography tokens, the blocks use the Theme's styles instead of these defaults, so the same block can look different across Themes.
+Each heading and Subtitle block comes with default sizing and styling, such as a bold 32px for H1 or an italic Subtitle. If your Theme defines its own typography tokens, the blocks use the Theme's styles instead of these defaults. Since each Theme can define its own tokens, the same block can render with different sizes, weights, or colors depending on which Theme you apply.
 
 .. note::
 
