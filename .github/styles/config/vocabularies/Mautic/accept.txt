@@ -19,6 +19,7 @@ booleans
 cc
 CASL
 CCPA
+CKEditor
 Citrix
 Clearbit
 CloudAMQP
@@ -88,6 +89,7 @@ Middlewares
 middlewares
 MJML
 MIME
+MMS
 MQL
 MQLs
 Multiselect
@@ -133,6 +135,7 @@ SNS
 SparkPost
 spacebar
 SSO
+strikethrough
 sublicense
 SugarCRM
 Suhosin
