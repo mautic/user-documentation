@@ -62,7 +62,7 @@ Asset Manager
 
 .. vale on
 
-The Asset Manager helps you organize and insert images into your Emails and Landing Pages. Double-click an image element to open the Asset Manager and select or upload a new image.
+The Asset Manager helps you organize and insert images into your Emails and Landing Pages.
 
 Supported image formats
 -----------------------
