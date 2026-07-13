@@ -115,6 +115,8 @@ Piwik
 PNG
 POST
 post
+prefetch
+prerender
 PUT
 Rackspace
 Remarketing
