@@ -85,10 +85,14 @@ Uploading images
 
 To upload an image:
 
-#. Click an image element in the Builder canvas.
-#. Select **Upload** in the Asset Manager dialog.
-#. Choose an image file from your computer.
-#. The image uploads and appears in your media list.
+#. Double-click an image element in the Builder canvas.
+#. Click 'Drop files here or click to upload' in the Asset Manager dialog.
+#. Choose one or more image files from your computer.
+#. The images upload and appear in your media list.
+
+.. image:: images/asset_manager_select_image.png
+  :width: 800
+  :alt: The 'Select Image' dialog in the Asset Manager with a 'Drop files here or click to upload' drop zone and a list of uploaded images
 
 Mautic stores uploaded images in the ``media/images/`` directory, so you can reuse them across your Emails and Landing Pages.
 
