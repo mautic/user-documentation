@@ -82,6 +82,18 @@ You can paste content from external sources like Microsoft Word or Google Docs. 
 
    Click outside the text Component to finish editing and return to the canvas.
 
+Restoring unsaved changes
+=========================
+
+As you edit, the Builder keeps a local backup of your content in your browser's local storage. If you close the Builder without saving, for example because the tab crashes or you navigate away, Mautic can recover that work.
+
+The next time you open the same Email or Landing Page in the Builder, Mautic compares the saved content with the local backup. If they differ, Mautic prompts you to restore the backup:
+
+* Select **Restore the backup** to replace the Builder content with the local backup.
+* Select **Dismiss** to discard the backup and keep the saved content.
+
+Mautic only shows this prompt when the backup contains unsaved changes. Once you save and reopen the Builder, the backup matches what you saved, so no prompt appears.
+
 About the builder
 *****************
 
@@ -211,6 +223,13 @@ You can turn any image in a Landing Page or Email into a clickable link straight
 * The ``rel`` field sets the value of the link's ``rel`` attribute, such as ``nofollow`` or ``noopener``. This field is optional.
 
 Because Mautic only wraps the image in a link when you set the ``href`` field, an image without a URL renders normally. The link settings persist when you save and reopen the Landing Page or Email.
+
+If you enter a bare domain such as ``example.com`` in the ``href`` field, Mautic automatically adds ``https://`` to the front so the image links to a valid absolute URL such as ``https://example.com`` rather than a relative path. Mautic leaves the value unchanged in a few cases:
+
+* It already includes a scheme such as ``https://`` or ``mailto:``.
+* It's a relative path or anchor that starts with ``//``, ``/``, ``#``, or ``.``.
+* It's a single word with no domain extension such as ``page``.
+* It's a Mautic token that starts with ``{``.
 
 Reporting bugs
 ***************
