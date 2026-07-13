@@ -112,6 +112,8 @@ Pipedrive
 Piwik
 POST
 post
+prefetch
+prerender
 PUT
 Rackspace
 Remarketing
