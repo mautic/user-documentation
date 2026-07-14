@@ -19,6 +19,7 @@ cc
 CCPA
 Citrix
 Clearbit
+CLI
 CloudAMQP
 CMS
 config
