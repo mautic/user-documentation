@@ -161,12 +161,16 @@ The functions of the Email Builder are as follows:
 
 #. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
-Typography blocks
-*****************
+Typography
+**********
 
 .. note::
 
+   .. vale off
+
    Since Mautic 7.2, the GrapesJS Builder includes the Typography category.
+
+   .. vale on
 
 .. vale off
 
@@ -174,6 +178,7 @@ The Typography category is **only available** when you edit MJML-based Emails in
 
 .. image:: images/editor_typography_blocks.png
    :width: 280
+   :align: center
    :alt: The Typography category in the GrapesJS Builder blocks sidebar
 
 The Typography category contains these blocks:
@@ -217,8 +222,9 @@ Custom fonts
 You can extend the **Typography** > **Fonts** list to include custom fonts.
 
 .. image:: images/editorfonts.jpg
-  :width: 280
-  :alt: Screenshot of the Fonts in Style Manager > Typography
+   :width: 280
+   :align: center
+   :alt: The Fonts in Style Manager of Typography
 
 You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:
 
