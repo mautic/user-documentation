@@ -181,6 +181,8 @@ The Typography category is **only available** when you edit MJML-based Emails in
    :align: center
    :alt: The Typography category in the GrapesJS Builder blocks sidebar
 
+|
+
 The Typography category contains these blocks:
 
 .. vale on
@@ -225,6 +227,8 @@ You can extend the **Typography** > **Fonts** list to include custom fonts.
    :width: 280
    :align: center
    :alt: The Fonts in Style Manager of Typography
+
+|
 
 You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:
 
