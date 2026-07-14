@@ -81,9 +81,13 @@ Converting an Email to an A/B test
 #. Open a Segment Email that you haven't sent yet.
 #. In the right-hand column of the Email detail view, find the **Convert to A/B test** card and select it.
 
+   |
+
    .. image:: https://promptless-customer-doc-assets.s3.us-east-2.amazonaws.com/docs-images/org_3A4Y7R0duvqDFH8Goz5djcVpUK3/email-ab-test-convert-card-e873976b.png
-     :width: 400
-     :alt: The 'Convert to A/B test' card in the right-hand column of a Segment Email.
+      :width: 400
+      :alt: The 'Convert to A/B test' card in the right-hand column of a Segment Email.
+
+   |
 
 #. In the **Convert to A/B test email** dialog, set the initial test parameters:
 
@@ -91,9 +95,13 @@ Converting an Email to an A/B test
    * **Wait before picking winner** - how long Mautic waits - in hours - after sending the test Emails before it picks the winner. This gives Contacts time to open and click. The default is 24 hours.
    * **Test audience size** - the percentage of your Contacts that receive the test Emails, split evenly between variants. The remaining Contacts receive the winning version. The default is 10%.
 
-   .. image:: https://promptless-customer-doc-assets.s3.us-east-2.amazonaws.com/docs-images/org_3A4Y7R0duvqDFH8Goz5djcVpUK3/email-ab-test-convert-dialog-4677cc37.png
-     :width: 400
-     :alt: The 'Convert to A/B test email' dialog with the winner criteria, wait time, and test audience size fields.
+     |
+
+     .. image:: https://promptless-customer-doc-assets.s3.us-east-2.amazonaws.com/docs-images/org_3A4Y7R0duvqDFH8Goz5djcVpUK3/email-ab-test-convert-dialog-4677cc37.png
+        :width: 400
+        :alt: The 'Convert to A/B test email' dialog with the winner criteria, wait time, and test audience size fields.
+
+     |
 
 #. Select **Save & Close**.
 
