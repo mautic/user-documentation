@@ -67,7 +67,7 @@ A/B testing lets you split test a Segment Email against one or more variants to 
 
 .. note::
 
-   You can only convert a Segment Email to an A/B test before you send it. The 'Convert to A/B test' card appears only on Segment Emails with zero sends.
+   You can only convert a Segment Email to an A/B test before you send it. The **Convert to A/B test** card appears only on Segment Emails with zero sends.
 
 .. vale off
 
@@ -79,27 +79,27 @@ Converting an Email to an A/B test
 .. vale off
 
 #. Open a Segment Email that you haven't sent yet.
-#. In the right-hand column of the Email detail view, find the 'Convert to A/B test' card and select it.
+#. In the right-hand column of the Email detail view, find the **Convert to A/B test** card and select it.
 
    .. image:: https://promptless-customer-doc-assets.s3.us-east-2.amazonaws.com/docs-images/org_3A4Y7R0duvqDFH8Goz5djcVpUK3/email-ab-test-convert-card-e873976b.png
      :width: 400
      :alt: The 'Convert to A/B test' card in the right-hand column of a Segment Email.
 
-#. In the 'Convert to A/B test email' dialog, set the initial test parameters:
+#. In the **Convert to A/B test email** dialog, set the initial test parameters:
 
-   * **How to pick the winner** - the criteria Mautic uses to choose the winning variant, such as read - open - rate or click-through rate.
-   * **Wait before picking winner** - how long Mautic waits, in hours, after sending the test Emails before it picks the winner. This gives Contacts time to open and click. The default is 24 hours.
+   * **How to pick the winner** - the criteria Mautic uses to choose the winning variant, such as **Read rate** or **Clickthrough rate**.
+   * **Wait before picking winner** - how long Mautic waits - in hours - after sending the test Emails before it picks the winner. This gives Contacts time to open and click. The default is 24 hours.
    * **Test audience size** - the percentage of your Contacts that receive the test Emails, split evenly between variants. The remaining Contacts receive the winning version. The default is 10%.
 
    .. image:: https://promptless-customer-doc-assets.s3.us-east-2.amazonaws.com/docs-images/org_3A4Y7R0duvqDFH8Goz5djcVpUK3/email-ab-test-convert-dialog-4677cc37.png
      :width: 400
      :alt: The 'Convert to A/B test email' dialog with the winner criteria, wait time, and test audience size fields.
 
-#. Select 'Save & Close'.
+#. Select **Save & Close**.
 
 .. vale on
 
-These settings only set up the test - you can change them any time before the test starts sending. After conversion, the right-hand column replaces the card with the 'A/B Test' panel, where you manage variants, settings, and sending from one place.
+These settings only set up the test. You can change them any time before the test starts sending. After conversion, the right-hand column replaces the card with the **A/B Test** panel, where you manage variants, settings, and sending from one place.
 
 .. vale off
 
@@ -108,7 +108,7 @@ Managing variants
 
 .. vale on
 
-You manage the whole test from the 'A/B Test' panel in the right-hand column. The original Email counts as the first variant, so you need at least one more - two in total - before you can schedule the test. Until you add one, the panel shows a reminder.
+You manage the whole test from the **A/B Test** panel in the right-hand column. The original Email counts as the first variant, so you need at least one more - two in total - before you can schedule the test. Until you add one, the panel shows a reminder.
 
 * To add a variant:
 
@@ -127,7 +127,7 @@ Adjusting A/B test settings
 
 .. vale on
 
-To change the winner criteria, wait time, or test audience size after conversion, select the settings icon at the top of the 'A/B Test' panel. You can adjust these values any time before the test starts sending.
+To change the winner criteria, wait time, or test audience size after conversion, select the settings icon at the top of the **A/B Test** panel. You can adjust these values any time before the test starts sending.
 
 .. vale off
 
@@ -156,7 +156,7 @@ Sending and determining the winner
 
 When sending begins, Mautic sends the test Emails to the test audience and the panel shows that the test is running, along with a countdown to when Mautic picks the winner.
 
-After the wait time passes, the ``mautic:email:sendwinner`` command evaluates each variant against your winner criteria, marks the best performer with a 'Winner' badge in the panel, and sends the remaining Emails using the winning variant's content through the standard broadcast command. For setup details, see the :ref:`Determine A/B test winner <determine ab test winner>` section in :doc:`/configuration/cron_jobs`.
+After the wait time passes, the ``mautic:email:sendwinner`` command evaluates each variant against your winner criteria, marks the best performer with a **Winner** badge in the panel, and sends the remaining Emails using the winning variant's content through the standard broadcast command. For setup details, see the :ref:`Determine A/B test winner <determine ab test winner>` section in :doc:`/configuration/cron_jobs`.
 
 .. vale off
 
@@ -165,7 +165,7 @@ Viewing A/B test results
 
 .. vale on
 
-Once the test is sending, the panel shows an 'A/B Test Stats' button. Select it to compare how each variant is performing and to see which variant Mautic picked as the winner.
+Once the test is sending, the panel shows an **A/B Test Stats** button. Select it to compare how each variant is performing and to see which variant Mautic picked as the winner.
 
 Email formats
 *************
