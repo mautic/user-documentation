@@ -621,7 +621,7 @@ Form data maintenance commands
 
 .. vale on
 
-Mautic provides CLI commands to clean up orphan Form data. These commands are useful for database maintenance when Form submissions or Forms have been deleted but related data remains.
+Mautic provides CLI commands to clean up orphan Form data. These commands are useful for database maintenance when you delete Forms or Form submissions but related data remains.
 
 Deleting orphan Form results tables
 ===================================
@@ -637,7 +637,7 @@ This command identifies Form results tables that no longer have an associated Fo
 Deleting orphan Form submission records
 =======================================
 
-When Form submissions are deleted, the corresponding records in the Form results table may not always be removed. To clean up these orphan records:
+When you delete Form submissions, Mautic may not always remove the corresponding records in the Form results table. To clean up these orphan records:
 
 .. code-block:: shell
 
@@ -647,4 +647,4 @@ This command scans all Form results tables and removes records where the associa
 
 .. note::
 
-   These commands are intended for one-time cleanup or periodic maintenance. Starting from the version where these commands were introduced, Mautic automatically deletes Form results table records when submissions are deleted through the UI.
+   Mautic intends these commands for one-time cleanup or periodic maintenance. Starting from the version that introduced these commands, Mautic automatically deletes Form results table records when you delete submissions through the UI.
