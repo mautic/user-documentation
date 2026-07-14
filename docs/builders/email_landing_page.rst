@@ -161,22 +161,20 @@ The functions of the Email Builder are as follows:
 
 #. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
-.. _typography blocks section:
-
 Typography blocks
 *****************
 
-.. note::
+.. vale off
 
-   Since version 7.2, the Text block lives in the Typography category, but it works the same.
-
-The Typography category is **only available** when you edit MJML-based Emails in the GrapesJS Builder. It groups ready-made text blocks so you can add headings and body text without styling each element by hand. The Typography category sits between the Sections and Blocks categories in the sidebar. It collapses by default, so click it to expand the blocks.
+The Typography category is **only available** when you edit MJML-based Emails in the GrapesJS Builder. It groups ready-made text blocks so you can add headings and body text without styling each element by hand. You can find it between the Sections and Blocks categories in the sidebar. It starts closed by default, so click it to expand the category.
 
 .. image:: images/editor_typography_blocks.png
    :width: 280
    :alt: The Typography category in the GrapesJS Builder blocks sidebar
 
 The Typography category contains these blocks:
+
+.. vale on
 
 * **Text** - a plain text block for body copy
 * **H1**, **H2**, **H3**, **H4** - heading levels
@@ -186,7 +184,56 @@ When you drag an H1, H2, H3, H4, or Subtitle block onto the canvas, Mautic opens
 
 Each heading and Subtitle block comes with default sizing and styling, such as a bold 32px for H1 or an italic Subtitle. If your Theme defines its own typography tokens, the blocks use the Theme's styles instead of these defaults. Since each Theme can define its own tokens, the same block can render with different sizes, weights, or colors depending on which Theme you apply.
 
-To restyle a text Component after you add it to the canvas, use the Style Manager's :ref:`Typography styling <typography styling section>` controls.
+Typography styling
+==================
+
+The Style Manager's Typography section restyles text Components that are already on the canvas. Select a text Component, then open the Style panel to reach these controls:
+
+* **Font family** - choose from the available fonts
+* **Font size** - set the text size in pixels
+* **Font weight** - adjust the weight from light to bold
+* **Letter spacing** - control the spacing between characters
+* **Color** - set the text color
+* **Line height** - adjust the vertical spacing between lines
+* **Text align** - align text left, center, right, or justify
+* **Text decoration** - apply none, underline, or strikethrough
+* **Font style** - switch between normal and italic
+
+Mautic resolves typography across three levels, where each level overrides the one before it:
+
+#. **Theme defaults** - the base styles defined by the Theme.
+#. **Component typography** - the Style Manager settings listed in this section, which apply to the selected Component.
+#. **Inline editor** - the formatting you apply to individual characters or words with the CKEditor inline toolbar when you double click a text Component.
+
+Use the Component typography controls to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
+
+Custom fonts
+------------
+
+You can extend the **Typography** > **Fonts** list to include custom fonts.
+
+.. image:: images/editorfonts.jpg
+  :width: 280
+  :alt: Screenshot of the Fonts in Style Manager > Typography
+
+You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:
+
+.. code-block:: php
+
+    <?php
+    // Example local.php
+    'editor_fonts' => array(
+        '0' => array(
+            'name' => 'Smokum',
+            'font' => 'Smokum, cursive',
+            'url' => 'https://fonts.googleapis.com/css2?family=Smokum&display=swap'
+        ),
+        '1' => array(
+            'name' => 'Sofia',
+            'font' => 'Sofia, sans-serif',
+            'url' => 'https://fonts.googleapis.com/css?family=Sofia'
+        )
+    ),
 
 Templates
 *********
@@ -223,60 +270,6 @@ Themes
 If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new Builder.
 
 To learn more about creating Themes, see :doc:`/builders/creating_themes`.
-
-.. _typography styling section:
-
-Typography styling
-******************
-
-The Style Manager's Typography section styles text Components that are already on the canvas. Unlike the :ref:`Typography blocks <typography blocks section>` category, which adds new text blocks to your design, this section restyles existing ones. Select a text Component on the canvas, then open the Style panel to reach these controls:
-
-* **Font family** - choose from the available fonts
-* **Font size** - set the text size in pixels
-* **Font weight** - adjust the weight from light to bold
-* **Letter spacing** - control the spacing between characters
-* **Color** - set the text color
-* **Line height** - adjust the vertical spacing between lines
-* **Text align** - align text left, center, right, or justify
-* **Text decoration** - apply none, underline, or strikethrough
-* **Font style** - switch between normal and italic
-
-Mautic resolves typography across three levels, where each level overrides the one before it:
-
-#. **Theme defaults** - the base styles defined by the Theme.
-#. **Component typography** - the Style Manager settings listed in this section, which apply to the selected Component.
-#. **Inline editor** - the formatting you apply to individual characters or words with the CKEditor inline toolbar when you double click a text Component.
-
-Use the Component typography controls to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
-
-Custom fonts
-============
-
-You can extend the **Typography** > **Fonts** list to include custom fonts.
-
-.. image:: images/editorfonts.jpg
-  :width: 280
-  :alt: Screenshot of the Fonts in Style Manager > Typography
-
-You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:
-
-.. code-block:: php
-
-    <?php
-    // Example local.php
-    'editor_fonts' => array(
-        '0' => array(
-            'name' => 'Smokum',
-            'font' => 'Smokum, cursive',
-            'url' => 'https://fonts.googleapis.com/css2?family=Smokum&display=swap'
-        ),
-        '1' => array(
-            'name' => 'Sofia',
-            'font' => 'Sofia, sans-serif',
-            'url' => 'https://fonts.googleapis.com/css?family=Sofia'
-        )
-    ),
-
 
 Linking an image
 ****************
