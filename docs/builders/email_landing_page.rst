@@ -161,6 +161,8 @@ The functions of the Email Builder are as follows:
 
 #. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
+.. _typography blocks section:
+
 Typography blocks
 *****************
 
@@ -183,6 +185,8 @@ The Typography category contains these blocks:
 When you drag an H1, H2, H3, H4, or Subtitle block onto the canvas, Mautic opens the inline text editor and selects the placeholder text right away, so you can type over it immediately.
 
 Each heading and Subtitle block comes with default sizing and styling, such as a bold 32px for H1 or an italic Subtitle. If your Theme defines its own typography tokens, the blocks use the Theme's styles instead of these defaults. Since each Theme can define its own tokens, the same block can render with different sizes, weights, or colors depending on which Theme you apply.
+
+To restyle a text Component after you add it to the canvas, use the Style Manager's :ref:`Typography styling <typography styling section>` controls.
 
 Templates
 *********
@@ -220,10 +224,12 @@ If you search through the list of available Themes, the new MJML Themes ``Brienz
 
 To learn more about creating Themes, see :doc:`/builders/creating_themes`.
 
-Typography
-**********
+.. _typography styling section:
 
-The Style Manager includes a Typography section for styling text Components. Select a text Component on the canvas, then open the Style panel to reach these controls:
+Typography styling
+******************
+
+The Style Manager's Typography section styles text Components that are already on the canvas. Unlike the :ref:`Typography blocks <typography blocks section>` category, which adds new text blocks to your design, this section restyles existing ones. Select a text Component on the canvas, then open the Style panel to reach these controls:
 
 * **Font family** - choose from the available fonts
 * **Font size** - set the text size in pixels
