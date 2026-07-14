@@ -198,10 +198,10 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - Searches for mentioned tweets
      -
    * - ``mautic:forms:delete-results-table``
-     - Deletes orphan form results tables for Forms that have been deleted. Use this to clean up database tables that were left behind when Forms were removed.
+     - Deletes orphan results tables for deleted Forms.
      -
    * - ``mautic:forms:delete-orphan-form-submission-records-from-form-results-table``
-     - Deletes orphan records from form results tables where the associated Form submission has been deleted. Use this to clean up stale data from Form results tables.
+     - Deletes orphan records from results tables for deleted Form submissions.
      -
 
 .. vale on
