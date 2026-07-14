@@ -3,6 +3,17 @@
     white-space: normal;
 }
 
+.wy-table-responsive table {
+    table-layout: fixed;
+}
+
+.wy-table-responsive table td code,
+.wy-table-responsive table th code {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 .wy-table-responsive {
     margin-bottom: 24px;
     max-width: 100%;
