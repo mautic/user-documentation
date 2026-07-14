@@ -164,6 +164,10 @@ The functions of the Email Builder are as follows:
 Typography blocks
 *****************
 
+.. note::
+
+   Since Mautic 7.2, the GrapesJS Builder includes the Typography category.
+
 .. vale off
 
 The Typography category is **only available** when you edit MJML-based Emails in the GrapesJS Builder. It groups ready-made text blocks so you can add headings and body text without styling each element by hand. You can find it between the Sections and Blocks categories in the sidebar. It starts closed by default, so click it to expand the category.
