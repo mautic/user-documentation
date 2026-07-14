@@ -71,7 +71,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
 .. vale off
 
 .. list-table:: 
-   :widths: 25 50 25
+   :widths: 35 40 25
    :header-rows: 1
 
    * - Command
