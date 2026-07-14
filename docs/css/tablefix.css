@@ -10,9 +10,8 @@
 .wy-table-responsive table td code,
 .wy-table-responsive table th code {
     white-space: normal;
-    word-break: break-word;
     overflow-wrap: break-word;
-}
+    overflow-wrap: anywhere;
 
 .wy-table-responsive {
     margin-bottom: 24px;
