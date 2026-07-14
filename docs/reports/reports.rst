@@ -214,7 +214,11 @@ Quick filters
 
 |
 
-On an individual Report's page, you can find the **Quick filters** dropdown on the right, at the top of the data table and next to the date range filter. Use it to apply common date ranges with a single click. The available options are:
+.. vale off
+
+On an individual Report's page, you can find the **Quick filters** dropdown located on the right, at the top of the data table and next to the date range filter. Use it to apply common date ranges with a single click. The available options are:
+
+.. vale on
 
 * **Today** - Shows data from today only
 * **Yesterday** - Shows data from yesterday only
