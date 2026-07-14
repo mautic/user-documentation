@@ -19,8 +19,11 @@ echo "${bold}${green}🔧 Building user documentation...${reset}"
 cd /var/www/html/docs
 echo
 
-# Run the build
-make html
+# Run a clean build so changes to static assets (CSS, JS, images) are
+# always picked up. Sphinx's incremental build only recopies files under
+# html_static_path when it detects .rst source changes, so a plain
+# `make html` can silently serve stale CSS/JS after a static-only edit.
+make clean html
 
 # Success message
 echo
