@@ -61,8 +61,12 @@ Using the tracking script
 
 You can also add or remove Tags from Contacts using the tracking script or tracking pixel. For more information, see :ref:`Contact tracking` section.
 
+.. vale off
+
 Viewing and removing Tags on a Contact
 **************************************
+
+.. vale on
 
 .. vale off
 
