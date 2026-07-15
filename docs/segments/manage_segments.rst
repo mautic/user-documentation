@@ -399,6 +399,22 @@ Once you've selected a date field as your filter, such as the default **Date las
 
 Once you have selected the field, you can then choose the type of operation to perform. These vary depending on the way you wish to filter your Contacts.
 
+.. vale off
+
+In the last and In the next
+===========================
+
+.. vale on
+
+The **In the last** and **In the next** operators let you build rolling date filters that never need manual updates. Instead of an absolute date, you enter a whole number for the interval and choose a unit of **days**, **months**, or **years**.
+
+* **In the last** matches Contacts whose date value falls within the interval leading up to today. For example, ``In the last`` ``7`` ``days`` keeps the Segment scoped to Contacts whose date value is within the past week every time the Segment rebuilds.
+* **In the next** matches Contacts whose date value falls between today and the end of the interval. For example, ``In the next`` ``2`` ``months`` includes Contacts whose date value falls within the coming two months.
+
+These operators work with date and date/time fields. This includes the standard **Date added**, **Date identified**, **Date modified**, and **Date last active** fields, any Custom Field of type date or date/time on a Contact or Company, and behavioral date fields such as **Read any email (date)**.
+
+The interval must be a whole number greater than zero. If you leave it blank or enter zero, a negative number, or a value that isn't a whole number, Mautic shows a validation error and won't save the Segment.
+
 Operators for select fields
 ===========================
 
