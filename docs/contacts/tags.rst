@@ -61,16 +61,16 @@ Using the tracking script
 
 You can also add or remove Tags from Contacts using the tracking script or tracking pixel. For more information, see :ref:`Contact tracking` section.
 
-.. vale off
-
 Viewing and removing Tags on a Contact
 **************************************
 
-.. vale on
+.. vale off
 
 A Contact's Tags appear on the Contact's detail page in a dedicated Tags tile. If a Contact has 8 or fewer Tags, the tile shows all of them. If a Contact has more than 8, the tile shows the first 8 and becomes expandable - use the control on the tile to view the remaining Tags.
 
 To remove a Tag from the Contact's detail page, click the **x** icon on the Tag. Mautic displays a confirmation dialog asking 'Are you sure you want to remove this tag from the contact?'. Click **Confirm** to remove the Tag, or **Cancel** to keep it. This confirmation step prevents you from accidentally removing a Tag with a single click.
+
+.. vale on
 
 .. vale off
 
