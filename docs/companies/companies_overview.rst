@@ -51,15 +51,23 @@ The following batch actions are available:
 
    Only Companies that match the **Find value** get updated.
 
+|
+
 .. image:: images/companies_batch_selection_bar.png
   :width: 600
   :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace
 
+|
+
 You can also use **Find and Replace** without selecting any rows, from the list view, by clicking the gear icon to open the options. This applies the replacement to all Companies matching your current search.
+
+|
 
 .. image:: images/companies_find_and_replace_list_view.png
   :width: 600
   :alt: Companies list view with the gear icon menu open, showing the Find and Replace option
+
+|
 
 .. note::
 

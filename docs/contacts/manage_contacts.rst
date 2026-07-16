@@ -170,9 +170,13 @@ You can use this feature to quickly update large volumes of Contacts, but if you
 
    You can also use this option without selecting any rows. Click the gear icon at the top of the table, then select **Find and Replace**. This applies the replacement to all Contacts matching your current search.
 
+   |
+
    .. image:: images/contacts_find_and_replace_list_view.png
       :width: 600
       :alt: Contacts list view with the gear icon menu open, showing the Find and Replace option
+
+   |
 
    .. note::
 
