@@ -65,6 +65,29 @@ For more information on setting up Campaigns, see :ref:`triggering campaign even
 
 .. vale off
 
+Merging Stages
+**************
+
+.. vale on
+
+If two Stages serve the same purpose, you can merge one into the other. Merging moves every Contact from the merged Stage into the Stage you choose, transfers the related Stage history, and then permanently deletes the merged Stage.
+
+To merge a Stage, you need both edit and delete permissions for Stages. If you're missing either one, the merge action doesn't appear.
+
+#. Navigate to the **Stages** section in the left side menu.
+#. Find the Stage you want to merge into another, and then open its actions menu.
+#. Select **Merge Stage**.
+#. In the 'Merging current stage' window, use the 'Choose a stage to merge into' dropdown to select the target Stage.
+#. Select **Merge** to complete the merge, or **Cancel** to close the window without making any changes.
+
+Mautic confirms the merge with the message 'Stage 'name' was successfully merged into 'target''.
+
+.. warning::
+
+   Merging a Stage can't be undone. Mautic reassigns every Contact from the merged Stage to the target Stage, moves the related Stage change history, and then permanently deletes the merged Stage.
+
+.. vale off
+
 Visualizing Stage movement
 **************************
 
