@@ -34,22 +34,36 @@ In *Configuration > Company Settings* you can choose the operator used when merg
 
 These settings allow  Mautic to find and merge duplicate Companies during the import, using the Integrations Framework and in other parts of Mautic.
 
-Batch actions
+Batch changes
 *************
 
-To update several Companies at once, select them using the checkboxes. A toolbar appears at the top of the table with a three-dot menu listing the available batch actions.
+To apply changes to several Companies at once, select the checkboxes next to the Company names. A selection bar appears at the top of the table, showing **Delete selected** and a three-dot icon for more options.
 
 The following batch actions are available:
 
-* **Find and Replace** - Updates field values across selected Companies by finding a specific value and replacing it with a new one. Select a Company field, enter the value to find, and specify the replacement value. Only Companies with the matching field value receive the update.
-
 * **Delete Selected** - Deletes the selected Companies.
+* **Find and Replace** - Replaces a value in a chosen field across all selected Companies.
 
-You can also access **Find and Replace** from the list view actions without selecting any rows. This applies the replacement to all Companies matching your current search.
+   #. Click the three-dot icon to open this option.
+   #. Choose the Company field to update. Search or scroll to find it in the list.
+   #. Enter the value to find in **Find value**.
+   #. Enter the new value in **Replace with**.
+
+   Only Companies that match the **Find value** get updated.
+
+.. image:: images/companies_batch_selection_bar.png
+  :width: 600
+  :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace
+
+You can also use **Find and Replace** without selecting any rows, from the list view, by clicking the gear icon to open the options. This applies the replacement to all Companies matching your current search.
+
+.. image:: images/companies_find_and_replace_list_view.png
+  :width: 600
+  :alt: Companies list view with the gear icon menu open, showing the Find and Replace option
 
 .. note::
 
-  You need edit permissions to use **Find and Replace**. Users with ``lead:leads:editown`` can update Companies they own, while Users with ``lead:leads:editother`` can update any Company.
+   You need edit permissions to use Find and Replace. Users with the **Edit Own** permission under **Contacts** can update Companies they own. Users with **Edit Others** can update any Company.
 
 Company actions
 ***************

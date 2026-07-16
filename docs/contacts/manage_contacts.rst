@@ -129,25 +129,21 @@ So, Mautic takes care of duplicate Contacts created by the event tracking. You c
 
 |
 
-Batch actions
+Batch changes
 =============
 
-To update several Contacts at once, select them using the checkboxes. A toolbar appears at the top of the table with a three-dot menu listing the available batch actions.
+To apply changes to several Contacts at once, select the checkboxes next to the Contact names. A selection bar appears at the top of the table, showing **Delete selected**, **Export to CSV**, and a three-dot icon for more options.
 
-A modal window displays when you click one of the actions, with more configuration details. 
-
-
-
-You can use this feature to quickly update large volumes of Contacts, but it might be better to use a Campaign action - for example add all the Contacts you need to update into a Segment and use a Campaign to trigger the change - if you need to change more than a few hundred Contacts at a time.
-
-.. image:: images/batch-actions.png
-    :width: 200
-    :align: center
-    :alt: Screenshot of Contact Batch actions
+You can use this feature to quickly update large volumes of Contacts, but if you need to change more than a few hundred Contacts at a time, it's better to use a Campaign - for example, add the Contacts to a Segment, then run a Campaign to trigger the change.
 
 |
 
-The following batch actions are currently available:
+.. image:: images/batch-actions.png
+   :width: 200
+   :align: center
+   :alt: Contacts list with two Contacts selected and the three-dot batch actions menu open, listing options such as Change Campaigns, Export to Excel, and Find and Replace
+
+|
 
 * **Change Campaigns** - Allows you to add/remove the selected Contacts to/from Campaigns.
 
@@ -163,19 +159,26 @@ The following batch actions are currently available:
 
 * **Export** - Allows you to export selected Contacts to CSV.
 
-* **Find and Replace** - Updates field values across selected Contacts by finding a specific value and replacing it with a new one. Select a Contact field, enter the value to find, and specify the replacement value. Only Contacts with the matching field value receive the update.
+* **Find and Replace** - Replaces a value in a chosen field across all selected Contacts.
+
+   #. Click the three-dot icon to open this option.
+   #. Choose the Contact field to update. Search or scroll to find it in the list.
+   #. Enter the value to find in **Find value**.
+   #. Enter the new value in **Replace with**.
+
+   Only Contacts that match the **Find value** get updated.
+
+   You can also use this option without selecting any rows. Click the gear icon at the top of the table, then select **Find and Replace**. This applies the replacement to all Contacts matching your current search.
+
+   .. note::
+
+      You need edit permissions to use Find and Replace. Users with the **Edit Own** permission under **Contacts** can update Contacts they own. Users with **Edit Others** can update any Contact.
 
 * **Set Do Not Contact (DNC)** - This action sets all selected Contacts as DNC for the Email Channel, and it allows you to provide a custom message as "reason" for why the Contacts were manually unsubscribed by a Mautic User.
 
 * **Delete Selected (batch delete)** - The batch delete action in the Contact table allows the deletion of up to 100 Contacts at a time. This limit is there as a performance precaution, since deleting more Contacts at a time could cause performance degradation issues.
 
 If you need to delete large numbers of Contacts, visit the :doc:`segment docs</segments/manage_segments>` which explains how to delete thousands of Contacts easily.
-
-You can also access **Find and Replace** from the list view actions without selecting any rows. This applies the replacement to all Contacts matching your current search.
-
-.. note::
-
-  You need edit permissions to use **Find and Replace**. Users with ``lead:leads:editown`` can update Contacts they own, while Users with ``lead:leads:editother`` can update any Contact.
 
 .. vale off
 
