@@ -170,9 +170,13 @@ You can use this feature to quickly update large volumes of Contacts, but if you
 
    You can also use this option without selecting any rows. Click the gear icon at the top of the table, then select **Find and Replace**. This applies the replacement to all Contacts matching your current search.
 
+   .. image:: images/contacts_find_and_replace_list_view.png
+      :width: 600
+      :alt: Contacts list view with the gear icon menu open, showing the Find and Replace option
+
    .. note::
 
-      You need edit permissions to use Find and Replace. Users with the **Edit Own** permission under **Contacts** can update Contacts they own. Users with **Edit Others** can update any Contact.
+      To use **Find and Replace**, Users need a View permission - **View Own** or **View Others** - and an Edit permission - **Edit Own** or **Edit Others** - under **Contacts**. Users with only **Edit Own** can update Contacts they own. Users with **Edit Others** can update any Contact.
 
 * **Set Do Not Contact (DNC)** - This action sets all selected Contacts as DNC for the Email Channel, and it allows you to provide a custom message as "reason" for why the Contacts were manually unsubscribed by a Mautic User.
 

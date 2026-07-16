@@ -63,7 +63,7 @@ You can also use **Find and Replace** without selecting any rows, from the list 
 
 .. note::
 
-   You need edit permissions to use Find and Replace. Users with the **Edit Own** permission under **Contacts** can update Companies they own. Users with **Edit Others** can update any Company.
+   To use **Find and Replace**, Users need a View permission - **View Own** or **View Others** - and an Edit permission - **Edit Own** or **Edit Others** - under **Contacts**. Users with only **Edit Own** can update Companies they own. Users with **Edit Others** can update any Company.
 
 Company actions
 ***************
