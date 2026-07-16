@@ -356,6 +356,29 @@ The modifier also works with Company fields:
    {contactfield=company_select_alias|label}
    {contactfield=company_bool_alias|label}
 
+Tokens in link URLs
+-------------------
+
+You can place Contact field and Owner field tokens inside a link's URL in your Email, not just in the body text. Mautic resolves the token to the Contact's value when they click the link, so each recipient goes to a personalized destination.
+
+For example, if you add this link to an Email:
+
+.. code-block:: html
+
+   <a href="https://blog.example.com/author/{ownerfield=firstname}/">Read more</a>
+
+Mautic redirects a Contact whose Owner's first name is 'Alex' to ``https://blog.example.com/author/Alex/``.
+
+Owner field tokens resolve to the field value of the Contact's assigned Owner, who is a Mautic User. The available Owner field tokens are ``{ownerfield=firstname}``, ``{ownerfield=lastname}``, ``{ownerfield=email}``, ``{ownerfield=position}``, and ``{ownerfield=signature}``. See :doc:`/configuration/variables` for the full list of tokens.
+
+.. note::
+
+   Mautic resolves link URL tokens when the Contact clicks the link, so this only applies to tracked links. If you turn off tracking for a link, Mautic doesn't resolve the tokens in its URL.
+
+.. note::
+
+   If the Contact has no Owner, or the Owner field is empty, Mautic replaces the token with an empty string. This can produce a malformed URL, such as ``https://blog.example.com/author//``. Account for missing Owner values when you build link URLs with Owner field tokens.
+
 Contact replies
 ===============
 
