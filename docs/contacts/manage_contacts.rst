@@ -139,7 +139,6 @@ You can use this feature to quickly update large volumes of Contacts, but if you
 |
 
 .. image:: images/batch-actions.png
-   :width: 600
    :align: center
    :alt: Contacts list with two Contacts selected and the three-dot batch actions menu open, listing options such as Change Campaigns, Export to Excel, and Find and Replace
 
@@ -173,7 +172,6 @@ You can use this feature to quickly update large volumes of Contacts, but if you
   |
 
   .. image:: images/contacts_find_and_replace_list_view.png
-     :width: 600
      :alt: Contacts list view with the gear icon menu open, showing the Find and Replace option
 
   |
