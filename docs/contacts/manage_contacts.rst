@@ -139,7 +139,7 @@ You can use this feature to quickly update large volumes of Contacts, but if you
 |
 
 .. image:: images/batch-actions.png
-   :width: 200
+   :width: 600
    :align: center
    :alt: Contacts list with two Contacts selected and the three-dot batch actions menu open, listing options such as Change Campaigns, Export to Excel, and Find and Replace
 
@@ -166,21 +166,26 @@ You can use this feature to quickly update large volumes of Contacts, but if you
    #. Enter the value to find in **Find value**.
    #. Enter the new value in **Replace with**.
 
-   Only Contacts that match the **Find value** get updated.
+  Only Contacts that match the **Find value** get updated.
 
-   You can also use this option without selecting any rows. Click the gear icon at the top of the table, then select **Find and Replace**. This applies the replacement to all Contacts matching your current search.
+  You can also use this option without selecting any rows. Click the gear icon at the top of the table, then select **Find and Replace**. This applies the replacement to all Contacts matching your current search.
 
-   |
+  |
 
-   .. image:: images/contacts_find_and_replace_list_view.png
-      :width: 600
-      :alt: Contacts list view with the gear icon menu open, showing the Find and Replace option
+  .. image:: images/contacts_find_and_replace_list_view.png
+     :width: 600
+     :alt: Contacts list view with the gear icon menu open, showing the Find and Replace option
 
-   |
+  |
 
-   .. note::
+  .. note::
 
-      To use **Find and Replace**, Users need a View permission - **View Own** or **View Others** - and an Edit permission - **Edit Own** or **Edit Others** - under **Contacts**. Users with only **Edit Own** can update Contacts they own. Users with **Edit Others** can update any Contact.
+     To use **Find and Replace**, Users need these Role permissions under **Contacts**:
+
+     * View permission - **View Own** or **View Others**
+     * Edit permission - **Edit Own** or **Edit Others**
+
+       Users with only **Edit Own** can update Contacts they own, and those with **Edit Others** can update any Contact.
 
 * **Set Do Not Contact (DNC)** - This action sets all selected Contacts as DNC for the Email Channel, and it allows you to provide a custom message as "reason" for why the Contacts were manually unsubscribed by a Mautic User.
 

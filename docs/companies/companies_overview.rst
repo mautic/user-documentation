@@ -44,34 +44,39 @@ The following batch actions are available:
 * **Delete Selected** - Deletes the selected Companies.
 * **Find and Replace** - Replaces a value in a chosen field across all selected Companies.
 
-   #. Click the three-dot icon to open this option.
+   #. Click the three-dot icon to open this option and select **Find and Replace**. This opens a dialog.
    #. Choose the Company field to update. Search or scroll to find it in the list.
    #. Enter the value to find in **Find value**.
    #. Enter the new value in **Replace with**.
 
-   Only Companies that match the **Find value** get updated.
+  Only Companies that match the **Find value** get updated.
 
-|
+  |
 
-.. image:: images/companies_batch_selection_bar.png
-  :width: 600
-  :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace
+  .. image:: images/companies_batch_selection_bar.png
+     :width: 600
+     :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace
 
-|
+  |
 
-You can also use **Find and Replace** without selecting any rows, from the list view, by clicking the gear icon to open the options. This applies the replacement to all Companies matching your current search.
+  You can also use this option without selecting any rows. Click the gear icon at the top of the table, then select **Find and Replace**. This applies the replacement to all Companies matching your current search.
 
-|
+  |
 
-.. image:: images/companies_find_and_replace_list_view.png
-  :width: 600
-  :alt: Companies list view with the gear icon menu open, showing the Find and Replace option
+  .. image:: images/companies_find_and_replace_list_view.png
+     :width: 600
+     :alt: Companies list view with the gear icon menu open, showing the Find and Replace option
 
-|
+  |
 
-.. note::
+  .. note::
 
-   To use **Find and Replace**, Users need a View permission - **View Own** or **View Others** - and an Edit permission - **Edit Own** or **Edit Others** - under **Contacts**. Users with only **Edit Own** can update Companies they own. Users with **Edit Others** can update any Company.
+     To use **Find and Replace**, Users need these Role permissions under **Contacts**:
+
+     * View permission - **View Own** or **View Others**
+     * Edit permission - **Edit Own** or **Edit Others**
+
+       Users with only **Edit Own** can update Companies they own, and those with **Edit Others** can update any Company.
 
 Company actions
 ***************
