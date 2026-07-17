@@ -163,4 +163,8 @@ The Contact Permissions section includes several permission categories:
 
      For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
 
+.. note::
+
+   When you upgrade from an earlier version, Mautic grants each non-administrator Role the same Notes access it already had for Contacts. Existing Roles keep working as before, so anyone who could view or edit a Contact's Notes still can. From there, you can refine each Role's Notes permissions independently of its Contact permissions.
+
 You can also create :xref:`Roles using the API`.
