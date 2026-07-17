@@ -576,6 +576,7 @@ Export settings
   :alt: Screenshot showing Export Settings Configuration in Mautic
 
 * **Automatically export Contacts to CSV in the background** - If set to Yes, Mautic processes CSV exports of Contacts in the background and Mautic sends an Email with a link to download the file when it's processed.
+* **Notify admins about contact exports** - When set to Yes, the default, admins get an in-app notification whenever any User requests a Contact export, plus a separate completion Email - without the download link - once the export finishes. When set to No, admins receive neither. This setting doesn't affect what the requesting User gets: they always receive the completion Email with the download link. It also doesn't change the export's audit log. Since it applies to background Contact exports, it only takes effect when you turn on 'Automatically export Contacts to CSV in the background'.
 
 Segment settings
 ****************
