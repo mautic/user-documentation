@@ -156,7 +156,9 @@ You can use this feature to quickly update large volumes of Contacts, but if you
 
 * **Change Stages** - Allows you to add/remove the selected Contacts to/from a specified Stage.
 
-* **Export** - Allows you to export selected Contacts to CSV.
+* **Change Tags** - Allows you to add or remove multiple Tags across the selected Contacts in a single action. Selecting this option opens a modal with 'Add tags' and 'Remove tags' fields, where you can select existing Tags or type a new one to create it inline. You see this action only when an administrator turns on the Tag Manager Plugin and grants your User the Contacts **Edit Own** or **Edit Others** permission together with the Tag Manager **View** permission.
+
+* **Export to Excel** - Allows you to export selected Contacts to Excel.
 
 * **Find and Replace** - Replaces a value in a chosen field across all selected Contacts.
 
