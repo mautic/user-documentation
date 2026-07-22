@@ -60,6 +60,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/simachines"><img src="https://avatars.githubusercontent.com/u/70729135?v=4?s=100" width="100px;" alt="ErnestB"/><br /><sub><b>ErnestB</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/commits?author=simachines" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/msoukhomlinov"><img src="https://avatars.githubusercontent.com/u/12015350?v=4?s=100" width="100px;" alt="Max Soukhomlinov"/><br /><sub><b>Max Soukhomlinov</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/commits?author=msoukhomlinov" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/stefan-franz"><img src="https://avatars.githubusercontent.com/u/96744684?v=4?s=100" width="100px;" alt="Stefan Franz"/><br /><sub><b>Stefan Franz</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/commits?author=stefan-franz" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rohitpavaskar"><img src="https://avatars.githubusercontent.com/u/15215575?v=4?s=100" width="100px;" alt="Rohit Pavaskar"/><br /><sub><b>Rohit Pavaskar</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/commits?author=rohitpavaskar" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
