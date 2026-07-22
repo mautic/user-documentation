@@ -53,6 +53,10 @@ Consent-managed tracking
 
 The 'Consent-managed' tab gives you two snippets that you use together, and the loading order matters. The essential script loads first and runs safely before the visitor consents. The tracking add-on runs later, only after the visitor grants consent.
 
+.. note::
+
+   Separately embedded Focus Items track views and interactions independently of Mautic website tracking. Loading only the essential script doesn't turn off Focus Item tracking, so you still need to manage consent separately for those Focus Items. See :doc:`/channels/focus_items` for how to embed a Focus Item on your website.
+
 Essential script
 ================
 
