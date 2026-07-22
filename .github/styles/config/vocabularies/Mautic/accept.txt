@@ -22,6 +22,7 @@ CCPA
 CKEditor
 Citrix
 Clearbit
+CLI
 Clickthrough
 CloudAMQP
 CMS
@@ -75,6 +76,8 @@ IMAP
 IPs
 infographics
 JavaScript
+JPEG
+JPG
 Joomla
 Joomla!
 Libre
@@ -111,8 +114,11 @@ PHP
 Photoshop
 Pipedrive
 Piwik
+PNG
 POST
 post
+prefetch
+prerender
 PUT
 Rackspace
 Remarketing
