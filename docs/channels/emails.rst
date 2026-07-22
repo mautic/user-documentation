@@ -569,7 +569,7 @@ Link validation
 
 .. vale off
 
-When you save an Email, Mautic validates every link it contains. If a link's ``href`` uses an invalid format - for example ``://example.com``, which has no scheme - Mautic blocks the save and shows an error beneath the editor, such as 'The email contains an invalid URL: ://example.com'. This prevents broken links from going out and disrupting email delivery. A link is valid when its ``href`` uses a scheme such as ``http://``, ``https://``, ``mailto:``, or ``tel:``, is an anchor link that starts with ``#``, or is a Mautic token such as ``{unsubscribe_url}``. Fix any flagged link, then save the Email again.
+When you save an Email, Mautic validates every link it contains. If a link's ``href`` uses an invalid format - for example ``://example.com``, which has no scheme - Mautic blocks the save and shows an error beneath the editor, such as 'The email contains an invalid URL: ://example.com'. This prevents broken links from going out and disrupting email delivery. A link is valid when its ``href`` uses one of these seven schemes (``http``, ``https``, ``ftp``, ``ftps``, ``mailto``, ``tel``, or ``sms``); is an anchor link that starts with ``#``; or is a Mautic token such as ``{unsubscribe_url}``. Links using ``http``, ``https``, ``ftp``, or ``ftps`` must also be structurally valid URLs, while ``mailto``, ``tel``, and ``sms`` only need the scheme. Fix any flagged link, then save the Email again.
 
 .. vale on
 
