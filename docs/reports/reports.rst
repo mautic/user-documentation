@@ -132,7 +132,6 @@ When using 'Emails' as the data source, you can add the following columns to mea
 
    Use the Unsubscribe-to-Open Ratio to compare the unsubscribe impact of different Emails. A high ratio may indicate that the Email content didn't meet recipient expectations, while a low ratio suggests it resonated with those who read it.
 
-
 Data
 ====
 
@@ -246,6 +245,29 @@ To view additional options for Report, click the drop-down menu next to the chec
 * **Export & Send** sends a link containing the ``.csv`` file with the Report data to the email address on your User profile.
 
 * **Delete** deletes the Report immediately.
+
+Quick filters
+=============
+
+.. image:: images/report_quick_filters.png
+   :align: center
+   :alt: A Mautic Report with the Quick filters dropdown expanded near the top of the data table, showing the Today, Yesterday, Last 7 days, Last 30 days, and Last 90 days date-range options next to the date range filter.
+
+|
+
+.. vale off
+
+On an individual Report's page, you can find the **Quick filters** dropdown located on the right, at the top of the data table and next to the date range filter. Use it to apply common date ranges with a single click. The available options are:
+
+.. vale on
+
+* **Today** - Shows data from today only
+* **Yesterday** - Shows data from yesterday only
+* **Last 7 days** - Shows data from the past week
+* **Last 30 days** - Shows data from the past month
+* **Last 90 days** - Shows data from the past quarter
+
+Selecting a quick filter automatically updates the date range fields and refreshes the Report.
 
 .. vale off
 
