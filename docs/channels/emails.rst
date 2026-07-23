@@ -83,8 +83,8 @@ Converting an Email to an A/B test
 
    |
 
-   .. image:: https://promptless-customer-doc-assets.s3.us-east-2.amazonaws.com/docs-images/org_3A4Y7R0duvqDFH8Goz5djcVpUK3/email-ab-test-convert-card-e873976b.png
-      :width: 400
+   .. image:: images/emails/email_ab_test_convert_card.png
+      :width: 800
       :alt: The 'Convert to A/B test' card in the right-hand column of a Segment Email.
 
    |
@@ -97,8 +97,7 @@ Converting an Email to an A/B test
 
      |
 
-     .. image:: https://promptless-customer-doc-assets.s3.us-east-2.amazonaws.com/docs-images/org_3A4Y7R0duvqDFH8Goz5djcVpUK3/email-ab-test-convert-dialog-4677cc37.png
-        :width: 400
+     .. image:: images/emails/email_ab_test_convert_dialog.png
         :alt: The 'Convert to A/B test email' dialog with the winner criteria, wait time, and test audience size fields.
 
      |
@@ -121,10 +120,18 @@ You manage the whole test from the **A/B Test** panel in the right-hand column. 
 * To add a variant:
 
   #. Select **Add variant +**. Mautic creates a copy that you can edit.
-  #. Change the subject line, content, or design you want to test. Each variant appears in the panel tagged as an 'A/B variant' of the original Email.
+  #. Change the subject line, content, or design you want to test. Each variant appears in the panel tagged as an 'A/B variant' of the original Email. In the list of Emails, a variant has a symbol. When you hover over the symbol, it shows 'Is A/B variant'.
+
+     |
+
+     .. image:: images/emails/is_ab_variant_symbol.png
+        :alt: The A/B variant symbol beside an Email in the Emails list, showing the 'Is A/B variant' label on hover.
+
+     |
 
 * To edit a variant, select its edit icon in the panel.
 * To remove a variant, select its remove icon in the panel.
+* Alternatively, edit or remove a variant from the list of Emails: select the three dots next to the Email variant you want to modify, then select 'Edit' to edit the variant or 'Delete' to delete it.
 
 Mautic divides the test audience evenly between all Active variants, including the original Email.
 
@@ -135,7 +142,7 @@ Adjusting A/B test settings
 
 .. vale on
 
-To change the winner criteria, wait time, or test audience size after conversion, select the settings icon at the top of the **A/B Test** panel. You can adjust these values any time before the test starts sending.
+To change the winner criteria, wait time, or test audience size after conversion, select the settings - gear icon - at the top of the **A/B Test** panel. You can adjust these values any time before the test starts sending.
 
 .. vale off
 
@@ -145,6 +152,14 @@ Scheduling the A/B test
 .. vale on
 
 Once you have at least two variants, the panel shows a **Schedule sending** button along with a summary of the test - for example, that 10% of your Contacts receive test variants and that Mautic picks the winner after 24 hours.
+
+|
+
+.. image:: images/emails/ab_test_schedule_panel.png
+   :height: 600
+   :alt: The A/B Test panel showing the 'Schedule sending' button and a summary of the test audience percentage and winner wait time.
+
+|
 
 #. Select **Schedule sending**.
 #. Choose the date and time to begin sending, then confirm.
@@ -158,7 +173,7 @@ The Email moves to a **Scheduled for future send** state, and the panel shows wh
 .. vale off
 
 Sending and determining the winner
------------------------------------
+----------------------------------
 
 .. vale on
 
