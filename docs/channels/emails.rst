@@ -120,18 +120,30 @@ You manage the whole test from the **A/B Test** panel in the right-hand column. 
 * To add a variant:
 
   #. Select **Add variant +**. Mautic creates a copy that you can edit.
-  #. Change the subject line, content, or design you want to test. Each variant appears in the panel tagged as an 'A/B variant' of the original Email. In the list of Emails, a variant has a symbol. When you hover over the symbol, it shows 'Is A/B variant'.
+  #. Change the subject line, content, or design you want to test.
+  #. Click **Save & Close**.
 
-     |
+  Each variant appears in the panel tagged as an 'A/B variant' of the original Email. In the list of Emails, a variant has a symbol. When you hover over the symbol, it shows 'Is A/B variant'.
 
-     .. image:: images/emails/is_ab_variant_symbol.png
-        :alt: The A/B variant symbol beside an Email in the Emails list, showing the 'Is A/B variant' label on hover.
+  |
 
-     |
+  .. image:: images/emails/is_ab_variant_symbol.png
+     :alt: The A/B variant symbol beside an Email in the Emails list, showing the 'Is A/B variant' label on hover.
 
-* To edit a variant, select its edit icon in the panel.
-* To remove a variant, select its remove icon in the panel.
-* Alternatively, edit or remove a variant from the list of Emails: select the three dots next to the Email variant you want to modify, then select 'Edit' to edit the variant or 'Delete' to delete it.
+  |
+
+* There are two ways to edit and remove a variant:
+
+  #. From individual variant:
+
+     #. Open the Email variant you want to modify.
+     #. To edit a variant, click the **Edit** button at the top right.
+     #. To remove a variant, click the down arrow button to open the **Options**, then select **Delete**.
+
+  #. From the list of Emails:
+
+     #. Select the three dots icon next to the Email variant you want to modify.
+     #. Select **Edit** to edit the variant or **Delete** to remove it.
 
 Mautic divides the test audience evenly between all Active variants, including the original Email.
 
@@ -179,7 +191,7 @@ Sending and determining the winner
 
 When sending begins, Mautic sends the test Emails to the test audience and the panel shows that the test is running, along with a countdown to when Mautic picks the winner.
 
-After the wait time passes, the ``mautic:email:sendwinner`` command evaluates each variant against your winner criteria, marks the best performer with a **Winner** badge in the panel, and sends the remaining Emails using the winning variant's content through the standard broadcast command. For setup details, see the :ref:`Determine A/B test winner <determine ab test winner>` section in :doc:`/configuration/cron_jobs`.
+After the wait time passes, Mautic evaluates each variant against your chosen winner criteria, marks the best performer with a **Winner** badge in the panel, and sends the winning version to the remaining Contacts.
 
 .. vale off
 
@@ -189,6 +201,14 @@ Viewing A/B test results
 .. vale on
 
 Once the test is sending, the panel shows an **A/B Test Stats** button. Select it to compare how each variant is performing and to see which variant Mautic picked as the winner.
+
+|
+
+.. image:: images/emails/ab_test_stats.png
+   :width: 800
+   :alt: The A/B Test Stats view comparing the performance of each variant and highlighting the variant Mautic selected as the winner.
+
+|
 
 Email formats
 *************
