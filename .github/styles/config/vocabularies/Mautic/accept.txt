@@ -22,6 +22,7 @@ CCPA
 CKEditor
 Citrix
 Clearbit
+CLI
 CloudAMQP
 CMS
 config
