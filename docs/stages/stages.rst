@@ -74,11 +74,15 @@ If two Stages serve the same purpose, you can merge one into the other. Merging 
 
 Merging a Stage requires both edit and delete permissions for Stages. Without both, the **Merge Stage** doesn't appear in the **Options** menu.
 
+To merge Stages:
+
 .. vale off
 
 #. Navigate to the **Stages** section in the left side menu.
 #. Find the Stage you want to merge into another, and then click the three-dots icon to open the **Options** menu.
 #. Select **Merge Stage**.
+
+   |
 
    .. image:: images/merge_stage_option.png
       :align: center
@@ -89,13 +93,15 @@ Merging a Stage requires both edit and delete permissions for Stages. Without bo
 #. In the **Merging current stage** window, use the **Choose a stage to merge into** dropdown to select the target Stage.
 #. Select **Merge** to complete the merge, or **Cancel** to close the window without making any changes.
 
+   |
+
+   .. image:: images/merge_stage.png
+      :align: center
+      :alt: Merge Stage window with a target Stage selected
+
+   |
+
 .. vale on
-
-.. image:: images/merge-stage.png
-   :align: center
-   :alt: Merge Stage window with a target Stage selected
-
-|
 
 Mautic confirms the merge with the message **Stage 'name' was successfully merged into 'target'**.
 
