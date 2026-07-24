@@ -112,7 +112,7 @@ Command parameters:
 
 - ``--dry-run``: Find stuck Contacts and their next Events without actually executing them. Useful for previewing what the command would do.
 
-- ``--batch-limit=X`` or ``-l X``: Set the batch size of Contacts to process per round. Defaults to 1000.
+- ``--batch-limit=X`` or ``-l X``: Set the batch size of Contacts to process per round. Defaults to 100.
 
 - ``--min-contact-id=X``: Process only Contacts with ID greater than or equal to this value.
 
@@ -133,7 +133,7 @@ Example usage:
 
 .. note::
 
-    This command only works with published Campaigns that aren't deleted. It processes a maximum of 5000 records in a single execution to prevent performance issues.
+    This command only works with published Campaigns that aren't deleted. It processes a maximum of 500 records in a single execution to prevent performance issues.
 
 .. vale off
 
