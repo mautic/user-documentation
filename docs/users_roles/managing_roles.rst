@@ -142,4 +142,31 @@ There are additional permissions for specific features:
   
   For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
 
+.. _cloning a role:
+
+.. vale off
+
+Cloning a Role
+**************
+
+.. vale on
+
+Cloning lets you create a new Role based on an existing one, copying its settings so you can reuse a configuration instead of building a Role from scratch. The clone icon - which looks like a file-copy icon - appears on each Role's row in the Roles listing at **Settings** > **Roles**.
+
+Clicking the clone icon opens a new Role form pre-filled from the source Role. Mautic pre-fills the **Title** as 'Clone of [Original Role Name]' and copies the **Description**, the **Full System Access** setting, and all **Permissions** from the source Role. Clicking the clone icon doesn't create anything yet. Mautic creates the new Role only when you save the form, so you can edit any field first.
+
+#. Navigate to **Settings** > **Roles**.
+
+#. In the Roles listing, find the Role you want to clone and click the clone icon on its row.
+
+#. Mautic opens a new Role form pre-filled with the source Role's settings. The **Title** shows 'Clone of [Original Role Name]'.
+
+#. Edit the **Title**, **Description**, **Full System Access** setting, or **Permissions** as needed. For details on adjusting permissions, see :ref:`Setting granular permissions <setting granular permissions>`.
+
+#. Click **Save & Close** to create the cloned Role.
+
+.. note::
+
+   The clone icon only appears for Users whose Role has the Roles **Create** permission.
+
 You can also create :xref:`Roles using the API`.
