@@ -102,7 +102,7 @@ Converting an Email to an A/B test
 
      |
 
-#. Select **Save & Close**.
+#. Click **Save & Close**.
 
 .. vale on
 
@@ -117,35 +117,48 @@ Managing variants
 
 You manage the whole test from the **A/B Test** panel in the right-hand column. The original Email counts as the first variant, so you need at least one more - two in total - before you can schedule the test. Until you add one, the panel shows a reminder.
 
-* To add a variant:
-
-  #. Select **Add variant +**. Mautic creates a copy that you can edit.
-  #. Change the subject line, content, or design you want to test.
-  #. Click **Save & Close**.
-
-  Each variant appears in the panel tagged as an 'A/B variant' of the original Email. In the list of Emails, a variant has a symbol. When you hover over the symbol, it shows 'Is A/B variant'.
-
-  |
-
-  .. image:: images/emails/is_ab_variant_symbol.png
-     :alt: The A/B variant symbol beside an Email in the Emails list, showing the 'Is A/B variant' label on hover.
-
-  |
-
-* There are two ways to edit and remove a variant:
-
-  #. From individual variant:
-
-     #. Open the Email variant you want to modify.
-     #. To edit a variant, click the **Edit** button at the top right.
-     #. To remove a variant, click the down arrow button to open the **Options**, then select **Delete**.
-
-  #. From the list of Emails:
-
-     #. Select the three dots icon next to the Email variant you want to modify.
-     #. Select **Edit** to edit the variant or **Delete** to remove it.
-
 Mautic divides the test audience evenly between all Active variants, including the original Email.
+
+.. vale off
+
+Adding a variant
+~~~~~~~~~~~~~~~~
+
+.. vale on
+
+To add a variant:
+
+#. Select **Add variant +**. Mautic creates a copy that you can edit.
+#. Change the subject line, content, or design you want to test.
+#. Click **Save & Close**.
+
+Each variant appears in the panel tagged as an 'A/B variant' of the original Email. In the list of Emails, a variant has a symbol. When you hover over the symbol, it shows 'Is A/B variant'.
+
+|
+
+.. image:: images/emails/is_ab_variant_symbol.png
+   :alt: The A/B variant symbol beside an Email in the Emails list, showing the 'Is A/B variant' label on hover.
+
+|
+
+.. vale off
+
+Editing and deleting a variant
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. vale on
+
+There are two ways to edit and delete a variant:
+
+#. From individual Email variant:
+
+   #. To edit, click the **Edit** button at the top right.
+   #. To remove, click the down arrow button to open the **Options**, then select **Delete**.
+
+#. From the list of Emails:
+
+   #. Select the three dots icon next to the Email variant you want to modify.
+   #. Select **Edit** to edit the variant or **Delete** to remove it.
 
 .. vale off
 
