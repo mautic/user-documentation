@@ -42,7 +42,6 @@ To apply changes to several Companies at once, select the checkboxes next to the
 |
 
 .. image:: images/companies_batch_selection_bar.png
-  :width: 600
   :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace
 
 |
@@ -64,7 +63,6 @@ The following batch actions are available:
   |
 
   .. image:: images/companies_find_and_replace_list_view.png
-     :width: 600
      :alt: Companies list view with the gear icon menu open, showing the Find and Replace option
 
   |

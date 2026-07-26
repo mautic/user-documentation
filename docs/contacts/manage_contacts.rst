@@ -146,15 +146,17 @@ To apply changes to several Contacts at once, select the checkboxes next to the 
 
 You can find the following options:
 
+.. vale off
+
 * **Change Campaigns** - Allows you to add/remove the selected Contacts to/from Campaigns.
 
 * **Change Categories** - Allows you to add/remove the selected Contacts to/from global Categories.
 
-* **Change Channels** - Allows you to subscribe/unsubscribe the selected Contacts to/from communication Channels (Email, SMS, etc.) and also define frequency rules.
+* **Change Channels** - Allows you to subscribe/unsubscribe the selected Contacts to/from communication Channels, such as Email and SMS, and also define frequency rules.
 
-* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner (a Mautic User).
+* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner.
 
-* **Change Segments** - Allows you to add/remove the selected Contacts to/from Segments. Note that if you add or remove a Contact to or from Segment manually, then Segment filters won't apply for them in that particular Segment.
+* **Change Segments** - Allows you to add/remove the selected Contacts to/from Segments. Note that if you add/remove a Contact to/from Segment manually, then Segment filters won't apply for them in that particular Segment.
 
 * **Change Stages** - Allows you to add/remove the selected Contacts to/from a specified Stage.
 
@@ -189,7 +191,9 @@ You can find the following options:
 
        Users with only **Edit Own** can update Contacts they own, and those with **Edit Others** can update any Contact.
 
-* **Set Do Not Contact (DNC)** - This action sets all selected Contacts as DNC for the Email Channel, and it allows you to provide a custom message as "reason" for why the Contacts were manually unsubscribed by a Mautic User.
+* **Set Do Not Contact (DNC)** - Sets all selected Contacts as DNC for the Email Channel and allows you to enter a custom reason explaining why you unsubscribed them.
+
+.. vale on
 
 If you need to delete large numbers of Contacts, visit the :doc:`segment docs</segments/manage_segments>` which explains how to delete thousands of Contacts easily.
 
