@@ -193,6 +193,10 @@ To use this mode, you can specify the ``--min-id`` and ``--max-id`` options. For
 
     bin/console mautic:webhooks:process --webhook-id=5 --min-id=1000 --max-id=2000
 
+.. note::
+
+    The command returns a success exit code - ``0`` - when there are no Active Webhooks to process. This lets you run it in automated workflows without triggering failure alerts when no Webhooks need processing.
+
 .. _cron jobs:
 
 .. vale off
@@ -273,6 +277,25 @@ Command parameters:
 - ``--batch=X`` controls how many Emails processed in each batch. This can be different for every provider. For example, Mautic has API connection to SparkPost. Their API can send - at present - 1000 Emails per call. Therefore the batch should be 1000 for the fastest sending speed with this provider. Many SMTP providers can't handle 1000 emails in one batch, so this would need to be lower.
 
 - ``--min-contact-id`` and ``--max-contact-id`` allows the separation of Email sending by smaller chunks, by specifying contact ID ranges. If those ranges won't overlap, this allows you to run several broadcast commands in parallel.
+
+.. _determine ab test winner:
+
+.. vale off
+
+Determine A/B test winner Cron job
+==================================
+
+.. vale on
+
+If you use :ref:`A/B testing for Segment Emails <ab testing for Segment Emails>`, this command picks the winning variant once the test period ends and sends the winning version to your remaining Contacts.
+
+.. code-block:: php
+
+    php /path/to/mautic/bin/console mautic:email:sendwinner [--id=ID]
+
+The ``--id=ID`` limits the run to a single parent A/B test Email by ID. If not provided, the command processes all eligible A/B tests.
+
+After the wait time you set on the test passes, the command evaluates each variant against your winner criteria - such as **Read rate** or **Clickthrough rate** - and selects the best performer. Mautic then sends the remaining Emails using the winning variant's content through the standard broadcast command. Schedule this command to run on a regular interval so Mautic picks winners and finishes sending without manual intervention.
 
 .. _send scheduled Reports Cron job:
 

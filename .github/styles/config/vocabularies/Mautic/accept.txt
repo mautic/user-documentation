@@ -19,8 +19,11 @@ booleans
 cc
 CASL
 CCPA
+CKEditor
 Citrix
 Clearbit
+CLI
+Clickthrough
 CloudAMQP
 CMS
 config
@@ -44,6 +47,7 @@ Dripflow
 DSN
 Dynamic Web Content
 FALSE
+Figma
 Focus Item
 Focus Items
 Froala
@@ -72,6 +76,8 @@ IMAP
 IPs
 infographics
 JavaScript
+JPEG
+JPG
 Joomla
 Joomla!
 Libre
@@ -87,6 +93,7 @@ Middlewares
 middlewares
 MJML
 MIME
+MMS
 MQL
 MQLs
 Multiselect
@@ -104,10 +111,14 @@ Packagist
 PATCH
 patch
 PHP
+Photoshop
 Pipedrive
 Piwik
+PNG
 POST
 post
+prefetch
+prerender
 PUT
 Rackspace
 Remarketing
@@ -127,7 +138,9 @@ SMS
 SMTP
 SNS
 SparkPost
+spacebar
 SSO
+strikethrough
 sublicense
 SugarCRM
 Suhosin
@@ -143,6 +156,7 @@ Unpublish
 URL
 URLs
 UTM
+VIP
 Vtiger
 Webmecanik
 www

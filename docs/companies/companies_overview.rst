@@ -147,6 +147,51 @@ To create or manage Companies, go to the Companies menu identified by the buildi
 
 .. vale off
 
+Deleting Companies
+==================
+
+.. vale on
+
+Deleting a Company updates the Contact-Company relationships for all Contacts associated with that Company:
+
+* If a Contact has multiple Companies, Mautic assigns the most recently attached Company as the new primary Company.
+* If a Contact has only that Company, the Contact no longer has any Company association.
+
+A confirmation dialog explains this behavior before you delete a Company or multiple Companies.
+
+.. vale off
+
+Renaming a Company
+==================
+
+.. vale on
+
+When you rename a Company, Mautic updates the displayed Company name on every Contact that has it as their primary Company. Contacts that have the Company assigned but not as their primary Company keep their existing displayed Company name, since that name comes from their own primary Company.
+
+.. vale off
+
+Processing Company updates in the background
+============================================
+
+.. vale on
+
+By default, Mautic applies Company renames and deletions to the related Contacts immediately, within the same request. On instances with a large number of Contact-Company relationships, this can slow down editing or deleting a Company.
+
+To run this work in the background instead, add the following option to your ``config/local.php`` file:
+
+.. code-block:: php
+
+    'update_company_mapping_data_in_background' => true,
+
+When you turn on this option, Mautic no longer updates the related Contacts during the request. Instead, you run two commands - typically as Cron jobs - to apply the changes:
+
+* ``mautic:company:update_lead_company`` updates the Company name on Contacts after you rename a Company.
+* ``mautic:company:delete_company_leads`` reassigns the primary Company and removes the Company references on Contacts after you delete a Company.
+
+Each command processes all pending Companies by default. To limit a run to a single Company, pass its ID with the ``--company-id`` option.
+
+.. vale off
+
 Assigning Companies to Contacts
 *******************************
 

@@ -33,6 +33,35 @@ With the Email and Landing Page builders, you can start from a template and buil
 
 .. vale off
 
+Theme tags
+**********
+
+.. vale on
+
+When you select a Theme in the Email or Landing Page builders, Themes may show tags below their name. These tags help you quickly identify what each Theme is for.
+
+.. image:: images/theme-tags.png
+    :width: 600
+    :alt: Theme tags such as Transactional, Download, and Contact displayed below Theme names in the builder's Theme selection screen
+
+The following tags are available:
+
+.. vale off
+
+* **Newsletter** - For regular newsletter communications.
+* **Promotion** - For promotional and marketing Campaigns.
+* **Transactional** - For transactional messages like order confirmations or receipts.
+* **Registration** - For registration and sign-up flows.
+* **Contact** - For Contact forms and inquiries.
+* **Thank you** - For thank you and confirmation pages.
+* **Download** - For download and resource pages.
+* **Coming soon** - For pre-launch or coming soon pages.
+* **Adaptative** - Themes with this tag respond to your brand configuration in system settings, automatically applying your brand colors and styles.
+
+.. vale on
+
+.. vale off
+
 Installing a Theme
 ******************
 

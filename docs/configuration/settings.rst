@@ -32,7 +32,9 @@ System defaults
   :width: 600
   :alt: Screenshot showing System defaults Settings Configuration in Mautic
 
-* **Default item limit per page** - The number of Contacts, Campaigns, Emails, etc. which display on each page when you go to an item section. The default is ``10``.
+.. vale off
+
+* **Default item limit per page** - The number of Contacts, Campaigns, Emails, Assets, and other items which display on each page when you go to an item section. The default is ``10``.
 
 * **Default timezone** - The User's default time zone, typically set to the time zone of the Company headquarters. Mautic allows the User to set their own time zones via their profile. The default is ``UTC``.
 
@@ -45,6 +47,8 @@ System defaults
 * **Date Range Filter Default** - Sets the default for how far back from the current date Mautic looks for data in Reports including Campaign and Email snapshots charts on the item page. This setting allows you to control the default for how far back from the current date Mautic looks for data. If you've changed the setting on a Report, Mautic uses what you've entered. Mautic's default value is ``1 Month``.
    
 * **Default format for full dates, date only, short dates, and time only** - The default setting uses the standard American time format. The letters in the boxes are PHP code. See the :xref:`PHP manual for date functions`.
+
+.. vale on
 
 CORS settings
 =============
@@ -360,9 +364,9 @@ Mail send settings
   :width: 600
   :alt: Screenshot showing Mail Send Settings Configuration in Mautic
 
-* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``.
-  
-* **Email address to send mail from** - The Email address for the name you're sending mail from. The address displays in the ``From:`` field when your Contacts receive your Emails.
+* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``. You can also use Contact field tokens such as ``{contactfield=companyname|Default Name}`` to personalize the sender name per Contact.
+
+* **Email address to send mail from** - The Email address for the name you're sending mail from. The address displays in the ``From:`` field when your Contacts receive your Emails. You can use Contact field tokens like ``{contactfield=companyemail|info@default.com}`` to send from Contact-specific Email addresses, such as the Contact's assigned Company Email. When using tokens, always provide a default value after the ``|`` character as a fallback.
 
 .. note::
 
@@ -376,10 +380,9 @@ Mail send settings
 
 * **Mailer is owner** - If Contacts in Mautic have owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they're listed as the owner for.
 
-.. note:: 
+  .. note::
 
-    Mailer is owner overrides any other name or Email to send mail from, including the default and individual Emails. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can see this configuration for individual Emails, rather than globally.
-    For more information see :doc:`Mailer is owner</channels/emails>`
+     When enabled, **Mailer is owner** sends Emails from the Contact's owner, overriding system defaults and plain Email From addresses. However, tokenized From addresses on an Email's **Advanced** tab take precedence over the owner sender when the token resolves to a valid value. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can configure this setting for individual Emails, rather than globally. For more information, see :ref:`mailer as owner` and :ref:`sender resolution hierarchy`.
 
 * **Service to send mail through** - Select the Email service provider you use, and enter your credentials.
 
@@ -586,11 +589,23 @@ Segment settings
 Company settings
 ****************
 
+Company merge settings
+======================
+
 .. image:: images/company-merge-settings.png
   :width: 600
   :alt: Screenshot showing Company Merge Settings Configuration in Mautic
 
 * **Merge by unique fields with operator** - You can determine which operator to use when merging fields if there is more than one unique identifier.
+
+Company list settings
+=====================
+
+.. image:: images/company_list_settings.png
+   :width: 600
+   :alt: Company list settings configuration showing available and selected columns for the Companies overview
+
+* **Columns** - Manage the visible columns for Companies. Move fields from the left list to the right list to display them on the main Companies overview, or remove fields from the right list to hide them.
 
 Queue settings
 **************
@@ -699,7 +714,7 @@ Advanced setting
 Retry strategy
 --------------
 
-When the processing of a message fails, Mautic sends the message back to the queue for another try. You can adjust this behaviour in this section.
+When the processing of a message fails, Mautic sends the message back to the queue for another try. You can adjust this behavior in this section.
 See :xref:`queue-retries-failures` for more details.
 
 The screenshot below shows the default values.
@@ -707,6 +722,14 @@ The screenshot below shows the default values.
 .. image:: images/queue-retry-strategy.png
   :width: 600
   :alt: Retry strategy defaults
+
+* **Max retries** - The maximum number of times Mautic retries a failed message before giving up. Set to ``0`` to turn off retries. Negative values aren't allowed. The default is ``3``.
+
+* **Delay** - The initial delay in milliseconds before the first retry attempt. Negative values aren't allowed. The default is ``1000``, which is 1 second.
+
+* **Multiplier** - The factor by which the delay increases after each retry attempt. For example, with a delay of 1000 ms and a multiplier of 2, the delays are 1000 ms, 2000 ms, 4000 ms, and so on. Values less than 1 aren't allowed. The default is ``2``.
+
+* **Max delay** - The maximum delay in milliseconds between retry attempts. Set to ``0`` for no limit. Negative values aren't allowed. The default is ``0``.
 
 Queue for failures
 ------------------
@@ -779,6 +802,27 @@ Mautic tracking settings
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
   * Landing Pages including 4-byte UTF-8 characters, such as emojis and some Chinese or other non-Latin characters, in the Landing Page title or URL aren't tracked on a Contact's activity history in Mautic. Mautic tracks all Latin characters used in English and other western languages which are of 1-byte.
+
+Automatic tracking filtering
+============================
+
+.. vale off
+
+To keep your analytics focused on real people, Mautic automatically excludes certain requests from tracking. When a request matches any of the conditions below, Mautic doesn't record the page hit, Email open, Asset download, or Contact tracking activity:
+
+.. vale on
+
+.. vale off
+
+* **Bots and crawlers** - Requests Mautic identifies as bots through the IP and User Agent filtering described in :ref:`Miscellaneous Settings<miscellaneous settings>`.
+* **HEAD requests** - Requests that use the ``HTTP HEAD`` method, which monitoring and uptime tools commonly send.
+* **Speculative loading requests** - The prefetch and prerender requests browsers make to load links a visitor hasn't actually opened.
+* **Global Privacy Control signals** - Requests that send a ``Sec-GPC: 1`` header. Honoring this signal is a legal requirement under privacy laws such as the California Consumer Privacy Act.
+* **Do Not Track signals** - Requests that send a ``DNT: 1`` header.
+
+.. vale on
+
+This filtering is always on, and you can't turn it off. Because Mautic doesn't track these requests, it doesn't create anonymous Contacts for them, so your analytics reflect genuine human engagement and respect visitor privacy preferences.
 
 Facebook pixel
 ==============
