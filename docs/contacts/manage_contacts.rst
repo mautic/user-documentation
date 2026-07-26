@@ -269,6 +269,26 @@ If the message is ``Pending``, clicking the X button cancels it.
 
 Some Plugins contain specific events. The events display and are searchable after installing and configuring the Plugin.
 
+Exporting the change log
+------------------------
+
+You can export the Contact's change log to CSV for offline analysis or record-keeping. The CSV includes columns for each event's timestamp, action, details, and the User or source that triggered the change.
+
+To export the change log:
+
+.. vale off
+
+#. Click the down arrow icon to open dropdown menu in the upper right corner of the Contact detail page.
+#. Select the export option.
+
+.. vale on
+
+.. image:: images/contact_change_log_export_menu.png
+    :align: center
+    :alt: Contact detail view with the Options dropdown open, showing the Export item
+
+|
+
 Notes
 =====
 
@@ -328,24 +348,53 @@ Merge two Contacts
 
 .. vale on
 
-If you have 2 Contacts in the Mautic database who are physically one person, you can merge them with the Merge feature. 
+If you have two Contacts in the Mautic database who are physically one person, you can merge them with the Merge feature.
 
-1. Click the drop down box arrow in the top right hand corner of the Contact detail, 
+#. Click on the Contact you want to keep. This Contact remains after merging.
+#. On the Contact detail, click the dropdown arrow in the top right-hand corner.
+#. Select the **Merge** option.
 
-2. Select the Merge item, a modal box shows up. 
+   |
 
-3. Search for the Contact you want to merge into the current Contact. The select box updates as you search. 
+   .. image:: images/contact_merge_option.png
+      :align: center
+      :alt: Merge option highlighted in the Contact actions drop-down menu on the Contact detail.
 
-4. Select the right Contact and hit the **Merge** button.
+   |
 
-.. vale off 
+#. Once the pop-up window appears, type to search for the Contact you want to merge, then open the dropdown menu to select it. Mautic deletes this duplicate Contact after merging.
+#. Click the **Merge** button.
+
+   |
+
+   .. image:: images/merge_contacts.png
+      :align: center
+      :alt: Merge Contact pop-up window with a search field, a Choose the Contact to merge with select box, and the Merge button.
+
+   |
+
+When you merge Contacts, the main Contact receives the following data:
+
+* **Field data** - Values from the merged Contact fill empty fields on the main Contact.
+* **Owner** - If the main Contact doesn't have an owner, it inherits the merged Contact's owner.
+* **Points** - Points from both Contacts combine.
+* **Tags** - Tags from both Contacts combine.
+* **Company associations** - Company associations from the merged Contact transfer to the main Contact. If both Contacts have a primary Company, the main Contact keeps its primary. If only the merged Contact has a primary Company, the main Contact inherits that primary designation.
+
+.. vale off
 
 Send Email to Contact
 =====================
 
 .. vale on
 
-This option enables Users to send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the individual message.
+This option lets Users send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the message.
+
+.. vale off
+
+Enter a **Subject** when you send the Email. If you leave it empty, Mautic displays the error 'A subject is required.'
+
+.. vale on
 
 .. _Contact tracking:
 

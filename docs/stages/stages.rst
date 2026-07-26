@@ -61,7 +61,7 @@ For more information on setting up Campaigns, see :ref:`triggering campaign even
 
 .. note:: 
 
-    You can have multiple funnels with different Stages, and multiple Stages across those funnels with the same weight. A Contact can only ever be in one Stage at a time. It's not possible to move a Contact to a Stage which has a lesser weight than their current Stage. For example if they're currently in Stage B which has a weight of 50, you can't move them to Stage A which has a weight of 25. 
+    You can have multiple funnels with different Stages, but each Stage must have a unique weight across all funnels. A Contact can only ever be in one Stage at a time. It's not possible to move a Contact to a Stage which has a lesser weight than their current Stage. For example, if they're currently in Stage B which has a weight of 50, you can't move them to Stage A which has a weight of 25.
 
 .. vale off
 
