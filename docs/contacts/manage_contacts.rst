@@ -132,17 +132,19 @@ So, Mautic takes care of duplicate Contacts created by the event tracking. You c
 Batch changes
 =============
 
-To apply changes to several Contacts at once, select the checkboxes next to the Contact names. A selection bar appears at the top of the table, showing **Delete selected**, **Export to CSV**, and a three-dot icon for more options.
-
 You can use this feature to quickly update large volumes of Contacts, but if you need to change more than a few hundred Contacts at a time, it's better to use a Campaign - for example, add the Contacts to a Segment, then run a Campaign to trigger the change.
+
+To apply changes to several Contacts at once, select the checkboxes next to the Contact names. A selection bar appears at the top of the table, showing **Delete selected**, **Export to CSV**, and a three-dot icon for more options.
 
 |
 
-.. image:: images/batch-actions.png
+.. image:: images/batch_actions.png
    :align: center
    :alt: Contacts list with two Contacts selected and the three-dot batch actions menu open, listing options such as Change Campaigns, Export to Excel, and Find and Replace
 
 |
+
+You can find the following options:
 
 * **Change Campaigns** - Allows you to add/remove the selected Contacts to/from Campaigns.
 
@@ -169,7 +171,7 @@ You can use this feature to quickly update large volumes of Contacts, but if you
 
   Only Contacts that match the **Find value** get updated.
 
-  You can also use this option without selecting any rows. Click the gear icon at the top of the table, then select **Find and Replace**. This applies the replacement to all Contacts matching your current search.
+  You can also use this option without selecting any rows. Click the gear icon at the top of the table to open the **Options**, then select **Find and Replace**. This applies the replacement to all Contacts matching your current search.
 
   |
 

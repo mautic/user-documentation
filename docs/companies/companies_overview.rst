@@ -39,6 +39,14 @@ Batch changes
 
 To apply changes to several Companies at once, select the checkboxes next to the Company names. A selection bar appears at the top of the table, showing **Delete selected** and a three-dot icon for more options.
 
+|
+
+.. image:: images/companies_batch_selection_bar.png
+  :width: 600
+  :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace
+
+|
+
 The following batch actions are available:
 
 * **Delete Selected** - Deletes the selected Companies.
@@ -51,15 +59,7 @@ The following batch actions are available:
 
   Only Companies that match the **Find value** get updated.
 
-  |
-
-  .. image:: images/companies_batch_selection_bar.png
-     :width: 600
-     :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace
-
-  |
-
-  You can also use this option without selecting any rows. Click the gear icon at the top of the table, then select **Find and Replace**. This applies the replacement to all Companies matching your current search.
+  You can also use this option without selecting any rows. Click the gear icon at the top of the table to open the **Options**, then select **Find and Replace**. This applies the replacement to all Companies matching your current search.
 
   |
 
