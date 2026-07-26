@@ -104,6 +104,17 @@ At the top of the Email details page, a row of stat cards summarizes how the Ema
 
 .. vale off
 
+.. image:: images/emails/email_stat_cards.png
+   :width: 600
+   :align: center
+   :alt: Row of four stat cards - Sent, Read, Queued, and Pending - at the top of the Email details page for a Segment Email, with the Pending card showing the count of Contacts still to receive the Email.
+
+|
+
+.. vale on
+
+.. vale off
+
 Email Drafts
 ============
 
