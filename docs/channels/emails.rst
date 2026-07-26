@@ -93,6 +93,22 @@ The preview reflects your selection in the **Preview URL** panel below it. Choos
 
 .. vale off
 
+At the top of the Email details page, a row of stat cards summarizes how the Email is performing. Each card links to a filtered Contact list, so you can see exactly which Contacts it represents.
+
+.. image:: images/emails/email_stat_cards.png
+   :alt: Row of four stat cards - Sent, Read, Queued, and Pending - at the top of the Email details page for a Segment Email, with the Pending card showing the count of Contacts still to receive the Email.
+
+|
+
+.. vale on
+
+* **Sent** - The number of Contacts that have received this Email, including both successful and failed sends, for the entire time period.
+* **Read** - The number of Contacts that have read this Email, shown alongside the read percentage.
+* **Queued** - The number of Contacts that have this Email queued to send based on their frequency rules.
+* **Pending** - The number of Contacts that haven't yet received this Email. This card appears only for Segment Emails. Triggered Emails - those used in a Campaign rather than sent to a Segment - don't show the **Pending** card because Mautic schedules them differently or sends them immediately.
+
+.. vale off
+
 Email Drafts
 ============
 
