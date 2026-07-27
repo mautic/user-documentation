@@ -245,7 +245,7 @@ Now when sending the Email, all recipients can click the Unsubscribe link provid
 
 |
 
-If you don't select a Preference Center in an Email, Mautic uses the default Preference Center styled with the default Theme.
+If you don't select a Preference Center in an Email, Mautic uses the global default Preference Center set in **Configuration > Email Settings**, resolved at the time a Contact unsubscribes. If you change the global default later, any Email without its own Preference Center, including Emails you've already sent, automatically uses the new default. If there's no valid global default, Mautic falls back to a default Preference Center styled with the default Theme.
 
 .. image:: images/unsubscribe.png
     :align: center
