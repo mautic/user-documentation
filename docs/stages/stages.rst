@@ -90,7 +90,7 @@ To merge Stages:
 
    |
 
-#. In the **Merging current stage** window, use the **Choose a stage to merge into** dropdown to select the target Stage.
+#. In the **Merging current stage** dialog, use the **Choose a stage to merge into** dropdown to select the target Stage.
 #. Select **Merge** to complete the merge, or **Cancel** to close the window without making any changes.
 
    |
