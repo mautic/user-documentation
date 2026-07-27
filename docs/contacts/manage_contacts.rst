@@ -321,10 +321,28 @@ To export the change log:
 
 |
 
+.. _notes:
+
 Notes
 =====
 
-It's possible to use Mautic as a basic Customer Relationship Management system (CRM). You or your teammates can write notes for a specific Contact. It's possible to mark a note with a specific purpose; General, Email, Call, Meeting. It's also possible to define a date of a meeting or a call.
+You can use Mautic as a basic Customer Relationship Management - CRM - system. You or your teammates can write Notes for a specific Contact. Mark a Note with a specific purpose, such as General, Email, Call, or Meeting. You can also define a date for a meeting or a call.
+
+Note permissions
+----------------
+
+Mautic has dedicated permissions for Notes, separate from Contact permissions. This allows administrators to control who can create, view, edit, and delete Notes independently of Contact access.
+
+The edit and delete buttons for Notes appear based on your Notes permissions and Note ownership:
+
+* **Edit own** - You can edit Notes you created, regardless of which User owns the Contact.
+* **Edit others** - You can edit Notes created by other Users.
+* **Delete own** - You can delete Notes you created.
+* **Delete others** - You can delete Notes created by other Users.
+
+For example, if you have ``Edit own`` Notes permission, you can edit your own Notes on any Contact you can view - even Contacts owned by other Users. However, you can't edit Notes that other Users created unless you also have ``Edit others`` permission.
+
+See :doc:`/users_roles/managing_roles` for details on configuring permissions.
 
 Social
 ======
