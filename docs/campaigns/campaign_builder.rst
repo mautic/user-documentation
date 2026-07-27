@@ -277,9 +277,11 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
      - Checks if values submitted for a selected field on a selected Form matches specified criteria.
    * - **Has active notification**    
      - Checks if the Contact has an active web notification.	
-   * - **Has valid Email address**    
-     - Checks if the Contact's Email address has a valid syntax, for example name@example.com without spaces, other invalid characters or formats.	
-	
+   * - **Has valid Email address**
+     - Checks if the Contact's Email address has a valid syntax. For example, ``name@example.com`` without spaces, or other invalid characters or formats.
+   * - **Prevent action after date**
+     - Routes Contacts based on how much time has elapsed since the Campaign started. Use this condition to stop sending Campaign activities after a deadline, such as limiting a promotional offer to the first week after Campaign launch.
+
 .. vale off
 
 Notes on delayed conditions and dates
@@ -312,6 +314,24 @@ In order to run Campaigns based on a particular date where a Contact may or may 
 This **doesn't work** for the Anniversary option.
 
 If a Contact appears again at a later date in that Segment because the value of the date has changed, then the Contact passes through the Campaign only once, and hence isn't included in the Campaign again.
+
+Prevent action after date condition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Prevent action after date condition routes Contacts based on whether the current time is before or after a threshold relative to the Campaign start date. Use this condition when Campaign actions should only execute within a specific time window after launch.
+
+To configure this condition:
+
+#. **Time Stamp**: select the reference point for calculating the threshold. Currently, this is the Campaign Start Date - the date and time when you first activated the Campaign.
+
+#. **Operator**: choose how to compare the current time against the threshold:
+
+   * **less than**: the Contact takes the green path if the current time is before the threshold. Use this to execute actions only during the initial period after Campaign launch.
+   * **greater than**: the Contact takes the green path if the current time is after the threshold. Use this to execute actions only after a waiting period has passed.
+
+#. **Interval**: specify the time duration using a number and unit. Available units are minutes, hours, days, months, and years.
+
+**Example**: a flash sale Campaign should only send promotional Emails during the first 48 hours after launch. Configure the condition with Campaign Start Date, 'less than', and '2 days'. Contacts entering the Campaign within 48 hours of launch take the green path and receive the promotional Email. Contacts entering after 48 hours take the red path, where you can send a different message or take no action.
 
 Smart event schedule
 ====================

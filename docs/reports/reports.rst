@@ -98,6 +98,39 @@ The **Details** tab on a Report contains the same options across all Reports and
 
 .. vale on
 
+.. vale off
+
+Email Report columns
+--------------------
+
+.. vale on
+
+When using 'Emails' as the data source, you can add the following columns to measure Email engagement:
+
+.. vale off
+
+* **Sent count:** the number of Emails sent to Contacts.
+* **Read count:** the number of Emails that Contacts opened.
+* **Read ratio:** the percentage of sent Emails that Contacts opened.
+* **Click-through count:** the number of unique Contacts who clicked any link in the Email.
+* **Click-through rate:** the percentage of sent Emails that resulted in at least one click.
+* **Click-to-open rate:** the percentage of opened Emails that resulted in at least one click. This helps you understand how engaging the Email content is to recipients who already opened it.
+* **Unsubscribed:** the number of Contacts who unsubscribed after receiving the Email.
+* **Unsubscribed ratio:** the percentage of sent Emails that resulted in an unsubscribe.
+* **Unsubscribe-to-Open Ratio:** the percentage of unsubscribed Contacts relative to those who opened the Email. This helps you understand how Email content affects unsubscribe rates among engaged recipients.
+* **Bounced:** the number of Emails that bounced.
+* **Bounced ratio:** the percentage of sent Emails that bounced.
+* **Clicks:** the total number of link clicks across all recipients - non-unique.
+* **Clicks ratio:** the percentage of sent Emails that resulted in a click, based on total clicks rather than unique Contacts.
+* **Unique clicks:** the total number of unique clicks across all trackable links. Each link counts separately, so a Contact clicking multiple different links adds multiple unique clicks. If you need the number of unique Contacts who clicked any link, use **Click-through count** instead.
+* **Unique clicks ratio:** the percentage of sent Emails that resulted in a unique click, based on summed per-link unique hits.
+* **DNC Preferences:** summary of all Do Not Contact preferences for the Contact across all Channels and Emails.
+
+.. vale on
+
+.. tip::
+
+   Use the Unsubscribe-to-Open Ratio to compare the unsubscribe impact of different Emails. A high ratio may indicate that the Email content didn't meet recipient expectations, while a low ratio suggests it resonated with those who read it.
 
 Data
 ====
@@ -212,6 +245,29 @@ To view additional options for Report, click the drop-down menu next to the chec
 * **Export & Send** sends a link containing the ``.csv`` file with the Report data to the email address on your User profile.
 
 * **Delete** deletes the Report immediately.
+
+Quick filters
+=============
+
+.. image:: images/report_quick_filters.png
+   :align: center
+   :alt: A Mautic Report with the Quick filters dropdown expanded near the top of the data table, showing the Today, Yesterday, Last 7 days, Last 30 days, and Last 90 days date-range options next to the date range filter.
+
+|
+
+.. vale off
+
+On an individual Report's page, you can find the **Quick filters** dropdown located on the right, at the top of the data table and next to the date range filter. Use it to apply common date ranges with a single click. The available options are:
+
+.. vale on
+
+* **Today** - Shows data from today only
+* **Yesterday** - Shows data from yesterday only
+* **Last 7 days** - Shows data from the past week
+* **Last 30 days** - Shows data from the past month
+* **Last 90 days** - Shows data from the past quarter
+
+Selecting a quick filter automatically updates the date range fields and refreshes the Report.
 
 .. vale off
 
