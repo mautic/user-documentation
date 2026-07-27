@@ -198,11 +198,7 @@ You can find the following options:
 
 * **Set Do Not Contact (DNC)** - Sets all selected Contacts as DNC for the Email Channel and allows you to enter a custom reason explaining why you unsubscribed them.
 
-.. vale on
-
-If you need to delete large numbers of Contacts, visit the :doc:`segment docs</segments/manage_segments>` which explains how to delete thousands of Contacts easily.
-
-.. vale off
+If you need to delete large numbers of Contacts, visit the :doc:`Segments</segments/manage_segments>` page, which explains how to delete thousands of Contacts.
 
 Individual Contact details
 **************************

@@ -46,10 +46,10 @@ To apply changes to several Companies at once, select the checkboxes next to the
 
 |
 
-The following batch actions are available:
+The following batch options are available:
 
 * **Delete Selected** - Deletes the selected Companies.
-* **Find and Replace** - Replaces a value in a chosen field across all selected Companies. Selecting this action opens a dialog.
+* **Find and Replace** - Replaces a value in a chosen field across all selected Companies. Selecting this option opens a dialog.
 
    #. Choose the **Company field** to update. Search or scroll to find it in the list.
    #. Enter the value to find in **Find value**.
