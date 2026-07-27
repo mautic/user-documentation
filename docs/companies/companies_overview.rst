@@ -69,7 +69,7 @@ Find and Replace for all Companies
 
 .. vale on
 
-To update all Companies with a specific find and replace value, you don't need to select any checkboxes. In the Companies list table:
+To update every Company that matches a specific Find and Replace value, you don't need to select any checkboxes. In the Companies list table:
 
 #. Click the gear icon at the top of the table to open **Options**.
 #. Select **Find and Replace**.

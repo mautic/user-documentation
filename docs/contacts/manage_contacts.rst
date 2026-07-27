@@ -188,7 +188,7 @@ Find and Replace for all Contacts
 
 .. vale on
 
-To update all Contacts with a specific find and replace value, you don't need to select any checkboxes. In the Contacts list table:
+To update every Contact that matches a specific Find and Replace value, you don't need to select any checkboxes. In the Contacts list table:
 
 #. Click the gear icon at the top of the table to open **Options**.
 #. Select **Find and Replace**.
