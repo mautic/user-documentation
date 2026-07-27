@@ -140,7 +140,7 @@ To apply changes to several Contacts at once, select the checkboxes next to the 
 
 .. image:: images/batch_actions.png
    :align: center
-   :alt: Contacts list with two Contacts selected and the three-dot batch actions menu open, listing options such as Change Campaigns, Export to Excel, and Find and Replace
+   :alt: Contacts list with two Contacts selected and the three-dot batch actions menu open, listing options such as Change Campaigns, Export to Excel, and Find and Replace.
 
 |
 
@@ -172,21 +172,6 @@ You can find the following options:
 
   Find and Replace updates only Contacts that match the **Find value**. Both **Find value** and **Replace with** are case sensitive, so the value you enter must match the stored value exactly. For example, if you find and replace on the Country field, entering 'United states' or 'united states' changes nothing - you must enter 'United States'.
 
-  To update all Contacts with a specific find and replace value, you don't need to select any checkboxes. In the Contacts list table:
-
-   #. Click the gear icon at the top of the table to open **Options**.
-   #. Select **Find and Replace**.
-   #. Choose the **Contact field** to update. Search or scroll to find it in the list.
-   #. Enter the value to find in **Find value**.
-   #. Enter the new value in **Replace with**.
-
-  |
-
-  .. image:: images/contacts_find_and_replace_list_view.png
-     :alt: Contacts list view with the gear icon menu open, showing the Find and Replace option
-
-  |
-
   .. note::
 
      To use **Find and Replace**, Users need these Role permissions under **Contacts**:
@@ -199,6 +184,22 @@ You can find the following options:
 * **Set Do Not Contact (DNC)** - Sets all selected Contacts as DNC for the Email Channel and allows you to enter a custom reason explaining why you unsubscribed them.
 
 If you need to delete large numbers of Contacts, visit the :doc:`Segments</segments/manage_segments>` page, which explains how to delete thousands of Contacts.
+
+Find and Replace for all Contacts
+---------------------------------
+
+To update all Contacts with a specific find and replace value, you don't need to select any checkboxes. In the Contacts list table:
+
+#. Click the gear icon at the top of the table to open **Options**.
+#. Select **Find and Replace**.
+#. Choose the **Contact field** to update. Search or scroll to find it in the list.
+#. Enter the value to find in **Find value**.
+#. Enter the new value in **Replace with**.
+
+.. image:: images/contacts_find_and_replace_list_view.png
+   :alt: Contacts list view with the gear icon menu open, showing the Find and Replace option
+
+Case sensitivity and Role permission requirements are the same as for selected Contacts.
 
 Individual Contact details
 **************************

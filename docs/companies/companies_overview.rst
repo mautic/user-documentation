@@ -42,7 +42,7 @@ To apply changes to several Companies at once, select the checkboxes next to the
 |
 
 .. image:: images/companies_batch_selection_bar.png
-  :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace
+   :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace.
 
 |
 
@@ -57,21 +57,6 @@ The following batch options are available:
 
   Find and Replace updates only Companies that match the **Find value**. Both **Find value** and **Replace with** are case sensitive, so the value you enter must match the stored value exactly. For example, if you find and replace on the Country field, entering 'United states' or 'united states' changes nothing - you must enter 'United States'.
 
-  To update all Companies with a specific find and replace value, you don't need to select any checkboxes. In the Companies list table:
-
-   #. Click the gear icon at the top of the table to open **Options**.
-   #. Select **Find and Replace**.
-   #. Choose the **Company field** to update. Search or scroll to find it in the list.
-   #. Enter the value to find in **Find value**.
-   #. Enter the new value in **Replace with**.
-
-  |
-
-  .. image:: images/companies_find_and_replace_list_view.png
-     :alt: Companies list view with the gear icon menu open, showing the Find and Replace option
-
-  |
-
   .. note::
 
      To use **Find and Replace**, Users need these Role permissions under **Contacts**:
@@ -80,6 +65,22 @@ The following batch options are available:
      * Edit permission - **Edit Own** or **Edit Others**
 
        Users with only **Edit Own** can update Companies they own, and those with **Edit Others** can update any Company.
+
+Find and Replace for all Companies
+==================================
+
+To update all Companies with a specific find and replace value, you don't need to select any checkboxes. In the Companies list table:
+
+#. Click the gear icon at the top of the table to open **Options**.
+#. Select **Find and Replace**.
+#. Choose the **Company field** to update. Search or scroll to find it in the list.
+#. Enter the value to find in **Find value**.
+#. Enter the new value in **Replace with**.
+
+.. image:: images/companies_find_and_replace_list_view.png
+   :alt: Companies list view with the gear icon menu open, showing the Find and Replace option
+
+Case sensitivity and Role permission requirements are the same as for selected Companies.
 
 Company actions
 ***************
