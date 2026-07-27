@@ -136,13 +136,9 @@ You can use this feature to quickly update large volumes of Contacts, but if you
 
 To apply changes to several Contacts at once, select the checkboxes next to the Contact names. A selection bar appears at the top of the table, showing **Delete selected**, **Export to CSV**, and a three-dot icon for more options.
 
-|
-
 .. image:: images/batch_actions.png
    :align: center
    :alt: Contacts list with two Contacts selected and the three-dot batch actions menu open, listing options such as Change Campaigns, Export to Excel, and Find and Replace.
-
-|
 
 You can find the following options:
 
@@ -183,10 +179,14 @@ You can find the following options:
 
 * **Set Do Not Contact (DNC)** - Sets all selected Contacts as DNC for the Email Channel and allows you to enter a custom reason explaining why you unsubscribed them.
 
-If you need to delete large numbers of Contacts, visit the :doc:`Segments</segments/manage_segments>` page, which explains how to delete thousands of Contacts.
+If you need to delete large numbers of Contacts, visit the :doc:`Segments</segments/manage_segments>` page.
+
+.. vale off
 
 Find and Replace for all Contacts
 ---------------------------------
+
+.. vale on
 
 To update all Contacts with a specific find and replace value, you don't need to select any checkboxes. In the Contacts list table:
 
@@ -200,6 +200,8 @@ To update all Contacts with a specific find and replace value, you don't need to
    :alt: Contacts list view with the gear icon menu open, showing the Find and Replace option
 
 Case sensitivity and Role permission requirements are the same as for selected Contacts.
+
+.. vale off
 
 Individual Contact details
 **************************
