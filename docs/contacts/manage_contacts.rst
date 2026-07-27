@@ -160,7 +160,7 @@ You can find the following options:
 
 * **Change Stages** - Allows you to add/remove the selected Contacts to/from a specified Stage.
 
-* **Change Tags** - Allows you to add or remove multiple Tags across the selected Contacts in a single action. Selecting this option opens a modal with 'Add tags' and 'Remove tags' fields, where you can select existing Tags or type a new one to create it inline. You see this action only when an administrator turns on the Tag Manager Plugin and grants your User the Contacts **Edit Own** or **Edit Others** permission together with the Tag Manager **View** permission.
+* **Change Tags** - Allows you to add or remove multiple Tags across the selected Contacts in a single action. Selecting this option opens a dialog with 'Add tags' and 'Remove tags' fields, where you can select existing Tags or type a new one to create it inline. You see this option only when an administrator turns on the Tag Manager Plugin and grants your User the Contacts **Edit Own** or **Edit Others** permission together with the Tag Manager **View** permission.
 
 * **Export to Excel** - Allows you to export selected Contacts to Excel.
 
