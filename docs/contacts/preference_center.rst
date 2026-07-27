@@ -141,7 +141,63 @@ In addition, add a **Save preferences** button if you wish to save the preferenc
 
 Save your changes, and the Preference Center Landing Page is ready.
 
-.. vale off 
+.. vale off
+
+Customizing slot labels
+=======================
+
+.. vale on
+
+When building custom Themes for Preference Center Landing Pages, you can override the default text labels for each slot. This lets you customize wording to match your branding or provide translations for different languages.
+
+The following parameters are available for customizing slot labels in your Theme's Twig templates:
+
+.. vale off
+
+.. list-table::
+   :widths: 30 30 40
+   :header-rows: 1
+
+   * - Slot
+     - Parameter
+     - Description
+   * - Category List
+     - ``categorylist['label-text']``
+     - Label for the category list section heading
+   * - Segment List
+     - ``segmentlist['label-text']``
+     - Label for the Segment list section heading
+   * - Preferred Channel
+     - ``preferredchannel['label-text']``
+     - Label for the preferred channel dropdown
+   * - Channel Frequency
+     - ``channelfrequency['label-text']``
+     - Label for the **I want to receive** checkbox
+   * - Channel Frequency
+     - ``channelfrequency['label-text1']``
+     - Label for the **Do not contact more than** setting
+   * - Channel Frequency
+     - ``channelfrequency['label-text2']``
+     - Label for the **Messages each** frequency option
+   * - Channel Frequency
+     - ``channelfrequency['label-text3']``
+     - Label for the **Pause from** date setting
+   * - Channel Frequency
+     - ``channelfrequency['label-text4']``
+     - Label for the **Pause to** date setting
+   * - Save Preferences Button
+     - ``saveprefsbutton['btnText']``
+     - Text displayed on the save button
+
+.. vale on
+
+If you don't provide a custom value for these parameters, Mautic uses the default translated strings.
+
+.. note::
+
+   These customization parameters are for use in custom Theme development. See the :xref:`Themes` section of the Developer Documentation for implementation details on creating custom Themes for Preference Center Landing Pages.
+
+.. vale off
 
 Accessing Preference Center Pages
 *********************************

@@ -482,6 +482,8 @@ Enter the URL where the Form should post to, and Email address/s for anyone who 
 
 If you have Contact Owners set in Mautic, you can also send the notification directly to the Contact's owner. It's also possible to send a copy of the Email to the Contact.
 
+Use the 'to', 'cc', and 'bcc' fields to set who receives the notification. To send to more than one address in any of these fields, separate the Email addresses with a comma.
+
 You can style the message itself as you like, and you can click to insert the submitted values from the Form using tokens. You must add the fields to the Form before creating the action. If adding new fields after creating the Form action, edit the Form action and add the new tokens to the Email.
 
 .. image:: images/forms/send_form_results.png
@@ -654,3 +656,38 @@ To apply domain name filtering on a Mautic Form, add an Email field to the Form 
   :alt: Screenshot showing domain blocking used in a Mautic Form
 
 It's advised to provide a helpful message to display if the visitor tries to use an Email address from a blocked domain, to help them understand what the problem is.
+
+.. vale off
+
+Form data maintenance commands
+******************************
+
+.. vale on
+
+Mautic provides CLI commands to clean up orphan Form data. These commands are useful for database maintenance when you delete Forms or Form submissions but related data remains.
+
+Deleting orphan Form results tables
+===================================
+
+When you delete a Form in Mautic, the associated ``form_results_<form_id>_<form_alias>`` table may remain in the database. To remove these orphan tables:
+
+.. code-block:: shell
+
+   bin/console mautic:forms:delete-results-table
+
+This command identifies Form results tables that no longer have an associated Form and removes them from the database. This helps reduce database size and keeps your database clean.
+
+Deleting orphan Form submission records
+=======================================
+
+When you delete Form submissions, Mautic may not always remove the corresponding records in the Form results table. To clean up these orphan records:
+
+.. code-block:: shell
+
+   bin/console mautic:forms:delete-orphan-form-submission-records-from-form-results-table
+
+This command scans all Form results tables and removes records where the associated Form submission no longer exists. It processes records in batches of 5,000 to prevent performance issues on large databases.
+
+.. note::
+
+   Mautic intends these commands for one-time cleanup or periodic maintenance. Starting from the version that introduced these commands, Mautic automatically deletes Form results table records when you delete submissions through the UI.
