@@ -166,13 +166,19 @@ You can find the following options:
 
 * **Find and Replace** - Replaces a value in a chosen field across all selected Contacts.
 
-   #. Choose the Contact field to update. Search or scroll to find it in the list.
+   #. Choose the **Contact field** to update. Search or scroll to find it in the list.
    #. Enter the value to find in **Find value**.
    #. Enter the new value in **Replace with**.
 
   Find and Replace updates only Contacts that match the **Find value**. Both **Find value** and **Replace with** are case sensitive, so the value you enter must match the stored value exactly. For example, if you find and replace on the Country field, entering 'United states' or 'united states' changes nothing - you must enter 'United States'.
 
-  Find and Replace updates all Contacts that match your current search when you don't select any checkboxes. To limit the change to specific Contacts, select their checkboxes first. You can also run Find and Replace without selecting any rows from the list view: click the gear icon at the top of the table to open the **Options**, then select **Find and Replace**.
+  To update all Contacts with a specific find and replace value, you don't need to select any checkboxes. In the Contacts list table:
+
+   #. Click the gear icon at the top of the table to open **Options**.
+   #. Select **Find and Replace**.
+   #. Choose the **Contact field** to update. Search or scroll to find it in the list.
+   #. Enter the value to find in **Find value**.
+   #. Enter the new value in **Replace with**.
 
   |
 
