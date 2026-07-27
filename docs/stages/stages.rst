@@ -91,13 +91,13 @@ To merge Stages:
    |
 
 #. In the **Merging current stage** dialog, use the **Choose a stage to merge into** dropdown to select the target Stage.
-#. Select **Merge** to complete the merge, or **Cancel** to close the window without making any changes.
+#. Select **Merge** to complete the merge, or **Cancel** to close the dialog without making any changes.
 
    |
 
    .. image:: images/merge_stage.png
       :align: center
-      :alt: Merge Stage window with a target Stage selected
+      :alt: Merge Stage dialog with a target Stage selected
 
    |
 
