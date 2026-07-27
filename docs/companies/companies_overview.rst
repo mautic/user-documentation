@@ -49,16 +49,15 @@ To apply changes to several Companies at once, select the checkboxes next to the
 The following batch actions are available:
 
 * **Delete Selected** - Deletes the selected Companies.
-* **Find and Replace** - Replaces a value in a chosen field across all selected Companies.
+* **Find and Replace** - Replaces a value in a chosen field across all selected Companies. Selecting this action opens a dialog.
 
-   #. Click the three-dot icon to open this option and select **Find and Replace**. This opens a dialog.
    #. Choose the Company field to update. Search or scroll to find it in the list.
    #. Enter the value to find in **Find value**.
    #. Enter the new value in **Replace with**.
 
-  Only Companies that match the **Find value** get updated.
+  Find and Replace updates only Companies that match the **Find value**. Both **Find value** and **Replace with** are case sensitive, so the value you enter must match the stored value exactly. For example, if you find and replace on the Country field, entering 'United states' or 'united states' changes nothing - you must enter 'United States'.
 
-  You can also use this option without selecting any rows. Click the gear icon at the top of the table to open the **Options**, then select **Find and Replace**. This applies the replacement to all Companies matching your current search.
+  Find and Replace updates all Companies that match your current search when you don't select any checkboxes. To limit the change to specific Companies, select their checkboxes first. You can also run Find and Replace without selecting any rows from the list view: click the gear icon at the top of the table to open the **Options**, then select **Find and Replace**.
 
   |
 
