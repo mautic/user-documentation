@@ -182,7 +182,7 @@ You can import Campaigns programmatically using the Mautic API.
           'Content-Type': 'application/json'
       }
 
-      # Campaign import data
+      # Body must be the full campaign export structure (same as entity_data.json)
       with open('entity_data.json') as f:
           payload = json.load(f)
       }
