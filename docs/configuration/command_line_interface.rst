@@ -71,7 +71,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
 .. vale off
 
 .. list-table:: 
-   :widths: 25 50 25
+   :widths: 35 40 25
    :header-rows: 1
 
    * - Command
@@ -196,7 +196,13 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``social:monitor:twitter:mentions``
      - Searches for mentioned tweets
-     - 
+     -
+   * - ``mautic:forms:delete-results-table``
+     - Deletes orphan results tables for deleted Forms.
+     -
+   * - ``mautic:forms:delete-orphan-form-submission-records-from-form-results-table``
+     - Deletes orphan records from results tables for deleted Form submissions.
+     -
 
 .. vale on
 
