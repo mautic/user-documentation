@@ -129,45 +129,77 @@ So, Mautic takes care of duplicate Contacts created by the event tracking. You c
 
 |
 
-Batch actions
+Batch changes
 =============
 
-To make updates to several Contacts at once, select those Contacts then click the green arrow at the top of the checkbox column. 
+You can use this feature to quickly update large volumes of Contacts, but if you need to change more than a few hundred Contacts at a time, it's better to use a Campaign - for example, add the Contacts to a Segment, then run a Campaign to trigger the change.
 
-A modal window displays when you click one of the actions, with more configuration details. 
+To apply changes to several Contacts at once, select the checkboxes next to the Contact names. A selection bar appears at the top of the table, showing **Delete selected**, **Export to CSV**, and a three-dot icon for more options.
 
+.. image:: images/batch_actions.png
+   :align: center
+   :alt: Contacts list with two Contacts selected and the three-dot batch actions menu open, listing options such as Change Campaigns, Export to Excel, and Find and Replace.
 
+You can find the following options:
 
-You can use this feature to quickly update large volumes of Contacts, but it might be better to use a Campaign action - for example add all the Contacts you need to update into a Segment and use a Campaign to trigger the change - if you need to change more than a few hundred Contacts at a time.
-
-.. image:: images/batch-actions.png
-    :width: 200
-    :align: center
-    :alt: Screenshot of Contact Batch actions
-
-|
-
-The following batch actions are currently available:
+.. vale off
 
 * **Change Campaigns** - Allows you to add/remove the selected Contacts to/from Campaigns.
 
 * **Change Categories** - Allows you to add/remove the selected Contacts to/from global Categories.
 
-* **Change Channels** - Allows you to subscribe/unsubscribe the selected Contacts to/from communication Channels (Email, SMS, etc.) and also define frequency rules.
+* **Change Channels** - Allows you to subscribe/unsubscribe the selected Contacts to/from communication Channels, such as Email and SMS, and also define frequency rules.
 
-* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner (a Mautic User).
+* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner.
 
-* **Change Segments** - Allows you to add/remove the selected Contacts to/from Segments. Note that if you add or remove a Contact to or from Segment manually, then Segment filters won't apply for them in that particular Segment.
+* **Change Segments** - Allows you to add/remove the selected Contacts to/from Segments. Note that if you add/remove a Contact to/from Segment manually, then Segment filters won't apply for them in that particular Segment.
 
 * **Change Stages** - Allows you to add/remove the selected Contacts to/from a specified Stage.
 
-* **Export** - Allows you to export selected Contacts to CSV.
+* **Change Tags** - Allows you to add or remove multiple Tags across the selected Contacts in a single action. Selecting this option opens a dialog with 'Add tags' and 'Remove tags' fields, where you can select existing Tags or type a new one to create it inline. You see this option only when an administrator turns on the Tag Manager Plugin and grants your User the Contacts **Edit Own** or **Edit Others** permission together with the Tag Manager **View** permission.
 
-* **Set Do Not Contact (DNC)** - This action sets all selected Contacts as DNC for the Email Channel, and it allows you to provide a custom message as "reason" for why the Contacts were manually unsubscribed by a Mautic User.
+* **Export to Excel** - Allows you to export selected Contacts to Excel.
 
-* **Delete Selected (batch delete)** - The batch delete action in the Contact table allows the deletion of up to 100 Contacts at a time. This limit is there as a performance precaution, since deleting more Contacts at a time could cause performance degradation issues.
+* **Find and Replace** - Replaces a value in a chosen field across all selected Contacts.
 
-If you need to delete large numbers of Contacts, visit the :doc:`segment docs</segments/manage_segments>` which explains how to delete thousands of Contacts easily.
+   #. Choose the **Contact field** to update. Search or scroll to find it in the list.
+   #. Enter the value to find in **Find value**.
+   #. Enter the new value in **Replace with**.
+
+  Find and Replace updates only Contacts that match the **Find value**. Both **Find value** and **Replace with** are case sensitive, so the value you enter must match the stored value exactly. For example, if you find and replace on the Country field, entering 'United states' or 'united states' changes nothing - you must enter 'United States'.
+
+  .. note::
+
+     To use **Find and Replace**, Users need these Role permissions under **Contacts**:
+
+     * View permission - **View Own** or **View Others**
+     * Edit permission - **Edit Own** or **Edit Others**
+
+       Users with only **Edit Own** can update Contacts they own, and those with **Edit Others** can update any Contact.
+
+* **Set Do Not Contact (DNC)** - Sets all selected Contacts as DNC for the Email Channel and allows you to enter a custom reason explaining why you unsubscribed them.
+
+If you need to delete large numbers of Contacts, visit the :doc:`Segments</segments/manage_segments>` page.
+
+.. vale off
+
+Find and Replace for all Contacts
+---------------------------------
+
+.. vale on
+
+To update every Contact that matches a specific Find and Replace value, you don't need to select any checkboxes. In the Contacts list table:
+
+#. Click the gear icon at the top of the table to open **Options**.
+#. Select **Find and Replace**.
+#. Choose the **Contact field** to update. Search or scroll to find it in the list.
+#. Enter the value to find in **Find value**.
+#. Enter the new value in **Replace with**.
+
+.. image:: images/contacts_find_and_replace_list_view.png
+   :alt: Contacts list view with the gear icon menu open, showing the Find and Replace option
+
+Case sensitivity and Role permission requirements are the same as for selected Contacts.
 
 .. vale off
 
@@ -269,10 +301,48 @@ If the message is ``Pending``, clicking the X button cancels it.
 
 Some Plugins contain specific events. The events display and are searchable after installing and configuring the Plugin.
 
+Exporting the change log
+------------------------
+
+You can export the Contact's change log to CSV for offline analysis or record-keeping. The CSV includes columns for each event's timestamp, action, details, and the User or source that triggered the change.
+
+To export the change log:
+
+.. vale off
+
+#. Click the down arrow icon to open dropdown menu in the upper right corner of the Contact detail page.
+#. Select the export option.
+
+.. vale on
+
+.. image:: images/contact_change_log_export_menu.png
+    :align: center
+    :alt: Contact detail view with the Options dropdown open, showing the Export item
+
+|
+
+.. _notes:
+
 Notes
 =====
 
-It's possible to use Mautic as a basic Customer Relationship Management system (CRM). You or your teammates can write notes for a specific Contact. It's possible to mark a note with a specific purpose; General, Email, Call, Meeting. It's also possible to define a date of a meeting or a call.
+You can use Mautic as a basic Customer Relationship Management - CRM - system. You or your teammates can write Notes for a specific Contact. Mark a Note with a specific purpose, such as General, Email, Call, or Meeting. You can also define a date for a meeting or a call.
+
+Note permissions
+----------------
+
+Mautic has dedicated permissions for Notes, separate from Contact permissions. This allows administrators to control who can create, view, edit, and delete Notes independently of Contact access.
+
+The edit and delete buttons for Notes appear based on your Notes permissions and Note ownership:
+
+* **Edit own** - You can edit Notes you created, regardless of which User owns the Contact.
+* **Edit others** - You can edit Notes created by other Users.
+* **Delete own** - You can delete Notes you created.
+* **Delete others** - You can delete Notes created by other Users.
+
+For example, if you have ``Edit own`` Notes permission, you can edit your own Notes on any Contact you can view - even Contacts owned by other Users. However, you can't edit Notes that other Users created unless you also have ``Edit others`` permission.
+
+See :doc:`/users_roles/managing_roles` for details on configuring permissions.
 
 Social
 ======
