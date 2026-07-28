@@ -260,6 +260,27 @@ The preview reflects your selection in the **Preview URL** panel below it. Choos
 
 .. vale on
 
+Segments used
+=============
+
+.. vale off
+
+On a Segment Email's detail page, Mautic lists the Segments the Email targets in a **Segments used** section below the content preview. Each Segment appears as a colored tag, so you can see at a glance which audiences receive the Email. This section only appears for Segment - broadcast - Emails, not template Emails.
+
+.. image:: images/emails/segment_used.png
+   :align: center
+   :alt: A Segment Email detail page showing the Segments used panel with each targeted Segment as a colored tag.
+
+|
+
+The tag colors are decorative and carry no meaning. Mautic assigns them in order from a fixed palette.
+
+Each tag links to the Segment's detail page when you have permission to view that Segment. Mautic checks this permission for each Segment separately, so if you can view some of the targeted Segments but not others, only the ones you can view appear as links - the others still show their names as plain tags. A User who can view Emails but not Segments sees every Segment name without a link.
+
+For more information on Segments, see :doc:`/segments/manage_segments`.
+
+.. vale on
+
 .. vale off
 
 At the top of the Email details page, a row of stat cards summarizes how the Email is performing. Each card links to a filtered Contact list, so you can see exactly which Contacts it represents.
