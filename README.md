@@ -63,6 +63,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/rohitpavaskar"><img src="https://avatars.githubusercontent.com/u/15215575?v=4?s=100" width="100px;" alt="Rohit Pavaskar"/><br /><sub><b>Rohit Pavaskar</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/commits?author=rohitpavaskar" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JonasLudwig1998"><img src="https://avatars.githubusercontent.com/u/146742086?v=4?s=100" width="100px;" alt="JonasLudwig1998"/><br /><sub><b>JonasLudwig1998</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/pulls?q=is%3Apr+reviewed-by%3AJonasLudwig1998" title="Reviewed Pull Requests">👀</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://andersonjeccel.com.br"><img src="https://avatars.githubusercontent.com/u/116097999?v=4?s=100" width="100px;" alt="Anderson J. Eccel"/><br /><sub><b>Anderson J. Eccel</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/pulls?q=is%3Apr+reviewed-by%3Aandersonjeccel" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
   </tbody>
 </table>
 
