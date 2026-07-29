@@ -150,7 +150,7 @@ You can find the following options:
 
 * **Change Channels** - Allows you to subscribe/unsubscribe the selected Contacts to/from communication Channels, such as Email and SMS, and also define frequency rules.
 
-* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner.
+* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner. To remove the owner, choose 'No owner' in the **Change Owner** form and save.
 
 * **Change Segments** - Allows you to add/remove the selected Contacts to/from Segments. Note that if you add/remove a Contact to/from Segment manually, then Segment filters won't apply for them in that particular Segment.
 
