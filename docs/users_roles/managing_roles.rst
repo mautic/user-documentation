@@ -136,11 +136,36 @@ There are additional permissions for specific features:
 
 .. vale on
 
-.. note:: 
+Contact permissions
+~~~~~~~~~~~~~~~~~~~
 
-  User permissions restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see. 
-  
-  For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
+.. vale off
+
+The Contact Permissions section includes several permission categories:
+
+.. vale on
+
+* **Contacts - User has access to** - determines which Contact records a User can view, edit, create, and delete.
+
+* **Notes - User has access to** - determines which Notes attached to Contacts a User can access. This is separate from Contact permissions, giving you fine-grained control over note management. For example, a User might view all Contacts but only edit their own Notes on those Contacts.
+
+* **Segments - User has access to** - determines which Segments a User can access.
+
+* **Custom Fields - User has access to** - determines whether a User can manage Custom Fields.
+
+* **Import - User has access to** - determines whether a User can import Contacts.
+
+.. note::
+
+   * **Notes permissions** determine which Notes a User can view, edit, and delete based on Note ownership - not Contact ownership. A User with ``Edit own`` Notes permission can edit Notes they created, even on Contacts owned by other Users. See :ref:`Notes<notes>` for more details.
+
+   * **User permissions** restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see.
+
+     For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
+
+.. note::
+
+   When you upgrade from an earlier version, Mautic grants each non-administrator Role the same Notes access it already had for Contacts. Existing Roles keep working as before, so anyone who could view or edit a Contact's Notes still can. From there, you can refine each Role's Notes permissions independently of its Contact permissions.
 
 .. _cloning a role:
 
