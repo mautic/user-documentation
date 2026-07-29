@@ -442,6 +442,46 @@ Each cloned Email has ``(copy)`` appended to its name and you can edit it indepe
 
    The **Clone with translations and variants** option is only available for parent Emails - not for translation children or variant children.
 
+.. vale off
+
+Sending test Emails to yourself
+===============================
+
+.. vale on
+
+From the Email listing you can send yourself one test copy of each selected Email at once. This lets you review several Emails without opening each one. As with cloning an Email, this action uses the **Options** menu in the Email listing. Unlike cloning, this action is available only from the Email listing, not from the Email detail view. The tests go only to your own logged-in User Email address - never to Contacts - and Mautic records no send statistics for them.
+
+To send test Emails to yourself:
+
+#. Select one or more Emails in the listing using the row checkboxes.
+#. Open the **Options** menu and choose **Send tests to me**.
+#. In the confirmation dialog, select **Send tests to me** to confirm. The dialog shows the destination address.
+
+.. vale off
+
+The confirmation dialog reads 'Send one test of each selected email to admin@example.com?', and the confirm button is also labeled **Send tests to me**.
+
+.. vale on
+
+Mautic sends one test copy of each selected Email to your address, and prefixes each test subject line with ``[TEST]``.
+
+Mautic shows the result in a success notice, for example:
+
+.. vale off
+
+* One Email: 'One test email was sent to admin@example.com.'
+* Multiple Emails: '2 test emails were sent to admin@example.com.'
+
+If Mautic can't send an individual Email, it shows a message naming the Email, for example ``A test of "Welcome Email" could not be sent.``
+
+.. vale on
+
+Because Mautic sends these tests to a User rather than a Contact, the unsubscribe link in a test Email doesn't work.
+
+.. note::
+
+   This action respects your per-Email view permissions, so you can only send tests for Emails you're allowed to view.
+
 Base64 encoded images
 =====================
 
