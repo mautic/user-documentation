@@ -1,16 +1,32 @@
 .. vale off
 
 UTM tags as Segment filters
-############################
+###########################
 
 .. vale on
 
-Segments can include or exclude Contacts based on UTM values recorded on their profile. All five standard UTM fields are available as filter conditions: ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, and ``utm_term``. This lets you build Segments like "all Contacts who came from the spring sale Email Campaign" or "all Contacts whose source was Google," and use those Segments for targeted sends, Reporting, or Campaign entry Points.
+Segments can include or exclude Contacts based on UTM values recorded on their profile. All five standard UTM fields are available as filter conditions:
 
-The UTM data queried here comes from the **Record UTM Tags** Form action and from Landing Page visits and tracked website pages where UTM parameters exist in the URL. UTM data from Asset downloads stores separately and isn't available in Segment filters. To follow the steps below, Contacts must have UTM data on their profile and you need permission to create or edit Segments in Mautic.
+* ``utm_source``
+* ``utm_medium``
+* ``utm_campaign``
+* ``utm_content``
+* ``utm_term``
 
-Create segment filters
+These UTM fields let you build Segments - for example, "all Contacts who came from the spring sale Email Campaign" or "all Contacts whose source was Google" - and use those Segments for targeted sends, Reporting, or Campaign entry Points.
+
+.. vale off
+
+The UTM data queried here comes from the **Record UTM Tags** Form action and from Landing Page visits and tracked website pages where UTM parameters exist in the URL. Mautic stores UTM data from Asset downloads separately, and it isn't available in Segment filters. To follow the steps below, Contacts must have UTM data on their profile and you need permission to create or edit Segments in Mautic.
+
+.. vale on
+
+.. vale off
+
+Create Segment filters
 **********************
+
+.. vale on
 
 #. Go to **Segments** and open an existing Segment or create a new one.
 
@@ -18,13 +34,13 @@ Create segment filters
 
 #. Click **Add filter** and search for the UTM field you want to filter on. All five are available under their corresponding labels:
 
-   - ``utm_source``
-   - ``utm_medium``
-   - ``utm_campaign``
-   - ``utm_content``
-   - ``utm_term``
+   * ``utm_source``
+   * ``utm_medium``
+   * ``utm_campaign``
+   * ``utm_content`*
+   * ``utm_term``
 
-#. Select the operator and enter the value to match, ``newsletter``, ``email``, or ``spring_sale_2026``.
+#. Select the operator and enter the value to match, for example, ``newsletter``, ``email``, or ``spring_sale_2026``.
 
 #. Save the Segment.
 
@@ -34,7 +50,7 @@ Combine filters this way to reflect how UTM parameters work together. Filtering 
 
 .. note::
 
-   Segment UTM filters match against values **ever recorded** on the Contact, not just the most recent visit. If a Contact has tag with multiple Campaigns over time, they may match a filter for an older Campaign even if their latest activity was from a different one.
+   Segment UTM filters match against values **ever recorded** on the Contact, not just the most recent visit. If a Contact has UTM tags from multiple Campaigns over time, they may match a filter for an older Campaign even if their latest activity was from a different one.
 
 .. tip::
 
@@ -44,7 +60,7 @@ After the Segment updates, it should show Contacts whose recorded UTM values mat
 
 .. seealso::
 
-   - :doc:`utm_tags_overview`
-   - :doc:`utm_tags_forms`
-   - :doc:`utm_tags_campaign_conditions`
-   - :doc:`/segments/manage_segments`
+   * :doc:`utm_tags_overview`
+   * :doc:`utm_tags_forms`
+   * :doc:`utm_tags_campaign_conditions`
+   * :doc:`/segments/manage_segments`
