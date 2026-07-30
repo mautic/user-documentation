@@ -3,11 +3,44 @@ Roles
 
 You can control access to Mautic instances by creating accounts for Users and associating them with a Role.
 
-:doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas :ref:`Roles<roles>` allow or deny access to various features within Mautic.
+:doc:`Users</users_roles/managing_users>` are the accounts an individual uses to access Mautic, whereas Roles allow or deny access to various features within Mautic.
 
-Mautic uses Roles to control which resources and actions Users can access. When team members have different responsibilities, you may not want some team members working in certain parts of Mautic. 
+Mautic uses Roles to control which resources and actions Users can access. When team members have different responsibilities, you may not want some team members working in certain parts of Mautic.
 
 By default, Mautic creates new Users with the Administrator Role with full system access. You can change that when manually creating a User, or select a different Role when importing a User by API.
+
+.. _Roles overview:
+
+Roles overview
+**************
+
+To view Roles, navigate to **Settings** > **Roles**. The Roles listing shows every Role in your Mautic instance, with a short description and the number of Users assigned to each one.
+
+.. image:: images/roles_listing_overview.png
+   :width: 800
+   :alt: Mautic Roles listing
+
+The listing includes these columns:
+
+* **Name** - The name of the Role. Click a Role name to open and edit it.
+* **Description** - The optional description you added when creating the Role.
+* **User Count** - A badge showing how many Users have this Role. Select **View X Users** to open a filtered list of the Users assigned to the Role. Roles with no assigned Users show a 'No Users' badge.
+* **ID** - The internal identifier Mautic assigns to the Role.
+
+.. vale off
+
+Sorting Roles by the number of Users
+====================================
+
+.. vale on
+
+You can sort the Roles listing by the number of Users assigned to each Role. Click the **User Count** column header to sort in ascending order, then click it again to switch to descending order.
+
+.. image:: images/roles_user_count_sort.png
+   :width: 400
+   :alt: The User Count column header with the sort control
+
+This makes it easy to find the Roles that most Users depend on, or to spot Roles that no longer have any Users assigned.
 
 .. vale off
 
@@ -103,10 +136,35 @@ There are additional permissions for specific features:
 
 .. vale on
 
-.. note:: 
+Contact permissions
+~~~~~~~~~~~~~~~~~~~
 
-  User permissions restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see. 
-  
-  For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
+.. vale off
+
+The Contact Permissions section includes several permission categories:
+
+.. vale on
+
+* **Contacts - User has access to** - determines which Contact records a User can view, edit, create, and delete.
+
+* **Notes - User has access to** - determines which Notes attached to Contacts a User can access. This is separate from Contact permissions, giving you fine-grained control over note management. For example, a User might view all Contacts but only edit their own Notes on those Contacts.
+
+* **Segments - User has access to** - determines which Segments a User can access.
+
+* **Custom Fields - User has access to** - determines whether a User can manage Custom Fields.
+
+* **Import - User has access to** - determines whether a User can import Contacts.
+
+.. note::
+
+   * **Notes permissions** determine which Notes a User can view, edit, and delete based on Note ownership - not Contact ownership. A User with ``Edit own`` Notes permission can edit Notes they created, even on Contacts owned by other Users. See :ref:`Notes<notes>` for more details.
+
+   * **User permissions** restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see.
+
+     For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
+
+.. note::
+
+   When you upgrade from an earlier version, Mautic grants each non-administrator Role the same Notes access it already had for Contacts. Existing Roles keep working as before, so anyone who could view or edit a Contact's Notes still can. From there, you can refine each Role's Notes permissions independently of its Contact permissions.
 
 You can also create :xref:`Roles using the API`.
