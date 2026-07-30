@@ -54,6 +54,175 @@ There is a multi-select field that allows excluding Contacts belonging given Seg
 
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
+.. _ab testing for Segment Emails:
+
+.. vale off
+
+A/B testing for Segment Emails
+==============================
+
+.. vale on
+
+A/B testing lets you split test a Segment Email against one or more variants to find the version that performs best. Mautic sends each variant to a small slice of your audience, picks a winner based on criteria you choose, then sends the winning version to everyone else.
+
+.. note::
+
+   You can only convert a Segment Email to an A/B test before you send it. The **Convert to A/B test** card appears only on Segment Emails with zero sends.
+
+.. vale off
+
+Converting an Email to an A/B test
+----------------------------------
+
+.. vale on
+
+.. vale off
+
+#. Open a Segment Email that you haven't sent yet.
+#. In the right-hand column of the Email detail view, find the **Convert to A/B test** card and select it.
+
+   |
+
+   .. image:: images/emails/email_ab_test_convert_card.png
+      :width: 800
+      :alt: The 'Convert to A/B test' card in the right-hand column of a Segment Email.
+
+   |
+
+#. In the **Convert to A/B test email** dialog, set the initial test parameters:
+
+   * **How to pick the winner** - the criteria Mautic uses to choose the winning variant, such as **Read rate** or **Clickthrough rate**.
+   * **Wait before picking winner** - how long Mautic waits - in hours - after sending the test Emails before it picks the winner. This gives Contacts time to open and click. The default is 24 hours.
+   * **Test audience size** - the percentage of your Contacts that receive the test Emails, split evenly between variants. The remaining Contacts receive the winning version. The default is 10%.
+
+     |
+
+     .. image:: images/emails/email_ab_test_convert_dialog.png
+        :alt: The 'Convert to A/B test email' dialog with the winner criteria, wait time, and test audience size fields.
+
+     |
+
+#. Click **Save & Close**.
+
+.. vale on
+
+These settings only set up the test. You can change them any time before the test starts sending. After conversion, the right-hand column replaces the card with the **A/B Test** panel, where you manage variants, settings, and sending from one place.
+
+.. vale off
+
+Managing variants
+-----------------
+
+.. vale on
+
+You manage the whole test from the **A/B Test** panel in the right-hand column. The original Email counts as the first variant, so you need at least one more - two in total - before you can schedule the test. Until you add one, the panel shows a reminder.
+
+Mautic divides the test audience evenly between all Active variants, including the original Email.
+
+.. vale off
+
+Adding a variant
+~~~~~~~~~~~~~~~~
+
+.. vale on
+
+To add a variant:
+
+#. Select **Add variant +**. Mautic creates a copy that you can edit.
+#. Change the subject line, content, or design you want to test.
+#. Click **Save & Close**.
+
+Each variant appears in the panel tagged as an 'A/B variant' of the original Email. In the list of Emails, a variant has a symbol. When you hover over the symbol, it shows 'Is A/B variant'.
+
+|
+
+.. image:: images/emails/is_ab_variant_symbol.png
+   :alt: The A/B variant symbol beside an Email in the Emails list, showing the 'Is A/B variant' label on hover.
+
+|
+
+.. vale off
+
+Editing and deleting a variant
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. vale on
+
+There are two ways to edit and delete a variant:
+
+#. From individual Email variant:
+
+   #. To edit, click the **Edit** button at the top right.
+   #. To remove, click the down arrow button to open the **Options**, then select **Delete**.
+
+#. From the list of Emails:
+
+   #. Select the three dots icon next to the Email variant you want to modify.
+   #. Select **Edit** to edit the variant or **Delete** to remove it.
+
+.. vale off
+
+Adjusting A/B test settings
+---------------------------
+
+.. vale on
+
+To change the winner criteria, wait time, or test audience size after conversion, select the settings - gear icon - at the top of the **A/B Test** panel. You can adjust these values any time before the test starts sending.
+
+.. vale off
+
+Scheduling the A/B test
+-----------------------
+
+.. vale on
+
+Once you have at least two variants, the panel shows a **Schedule sending** button along with a summary of the test - for example, that 10% of your Contacts receive test variants and that Mautic picks the winner after 24 hours.
+
+|
+
+.. image:: images/emails/ab_test_schedule_panel.png
+   :height: 600
+   :alt: The A/B Test panel showing the 'Schedule sending' button and a summary of the test audience percentage and winner wait time.
+
+|
+
+#. Select **Schedule sending**.
+#. Choose the date and time to begin sending, then confirm.
+
+The Email moves to a **Scheduled for future send** state, and the panel shows when sending starts. To change the timing, use the **Reschedule sending** button.
+
+.. note::
+
+   For A/B test Emails, Mautic hides the **Send** button in the header. Schedule and send the test from the 'A/B Test' panel using **Schedule sending**.
+
+.. vale off
+
+Sending and determining the winner
+----------------------------------
+
+.. vale on
+
+When sending begins, Mautic sends the test Emails to the test audience and the panel shows that the test is running, along with a countdown to when Mautic picks the winner.
+
+After the wait time passes, Mautic evaluates each variant against your chosen winner criteria, marks the best performer with a **Winner** badge in the panel, and sends the winning version to the remaining Contacts.
+
+.. vale off
+
+Viewing A/B test results
+------------------------
+
+.. vale on
+
+Once the test is sending, the panel shows an **A/B Test Stats** button. Select it to compare how each variant is performing and to see which variant Mautic picked as the winner.
+
+|
+
+.. image:: images/emails/ab_test_stats.png
+   :width: 800
+   :alt: The A/B Test Stats view comparing the performance of each variant and highlighting the variant Mautic selected as the winner.
+
+|
+
 Email formats
 *************
 
@@ -70,6 +239,63 @@ Email overview
 ==============
 
 The Email overview allows at-a-glance information regarding the success or failure of a particular Email. You can quickly see relevant information in regards to opens, bounces, successful click-throughs and other important statistics.
+
+.. _Email content preview:
+
+Email content preview
+======================
+
+.. vale off
+
+The Email details page shows a rendered preview of the Email content in the right column, so you can see how an Email looks without opening the Builder or a separate tab. This is handy when you're comparing several Emails to find the one you want.
+
+The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Mautic reloads the preview automatically to match the version you've selected.
+
+.. image:: images/emails/email_details_preview.png
+   :width: 600
+   :align: center
+   :alt: Rendered Email content preview in the right column of the Email details page.
+
+|
+
+.. vale on
+
+Segments used
+=============
+
+.. vale off
+
+On a Segment Email's detail page, Mautic lists the Segments the Email targets in a **Segments used** section below the content preview. Each Segment appears as a colored tag, so you can see at a glance which audiences receive the Email. This section only appears for Segment - broadcast - Emails, not template Emails.
+
+.. image:: images/emails/segment_used.png
+   :align: center
+   :alt: A Segment Email detail page showing the Segments used panel with each targeted Segment as a colored tag.
+
+|
+
+The tag colors are decorative and carry no meaning. Mautic assigns them in order from a fixed palette.
+
+Each tag links to the Segment's detail page when you have permission to view that Segment. Mautic checks this permission for each Segment separately, so if you can view some of the targeted Segments but not others, only the ones you can view appear as links - the others still show their names as plain tags. A User who can view Emails but not Segments sees every Segment name without a link.
+
+For more information on Segments, see :doc:`/segments/manage_segments`.
+
+.. vale on
+
+.. vale off
+
+At the top of the Email details page, a row of stat cards summarizes how the Email is performing. Each card links to a filtered Contact list, so you can see exactly which Contacts it represents.
+
+.. image:: images/emails/email_stat_cards.png
+   :alt: Row of four stat cards - Sent, Read, Queued, and Pending - at the top of the Email details page for a Segment Email, with the Pending card showing the count of Contacts still to receive the Email.
+
+|
+
+.. vale on
+
+* **Sent** - The number of Contacts that have received this Email, including both successful and failed sends, for the entire time period.
+* **Read** - The number of Contacts that have read this Email, shown alongside the read percentage.
+* **Queued** - The number of Contacts that have this Email queued to send based on their frequency rules.
+* **Pending** - The number of Contacts that haven't yet received this Email. This card appears only for Segment Emails. Triggered Emails - those used in a Campaign rather than sent to a Segment - don't show the **Pending** card because Mautic schedules them differently or sends them immediately.
 
 .. vale off
 
@@ -130,6 +356,92 @@ From Mautic 5.1 it's possible to preview A/B and Translation variants:
   :width: 400
   :alt: Screenshot showing A/B and Translation preview
 
+The rendered preview on the Email details page reloads automatically when you switch between variants and translations. For more information, see :ref:`Email content preview`.
+
+.. vale off
+
+Cloning Emails
+==============
+
+.. vale on
+
+Cloning an Email creates an editable copy that you can adjust and save as a new Email. This is useful when you want to reuse the content and settings of an existing Email as a starting point.
+
+There are two ways to clone an Email:
+
+* **From the Email listing**:
+
+  #. In the Email row, click the three-dots icon next to the checkbox to open the **Options** menu.
+  #. Select **Clone**.
+
+     |
+
+     .. image:: images/emails/email_overview_clone.png
+        :width: 800
+        :align: center
+        :alt: Options menu open on an Email row in the Email listing, with Clone highlighted.
+
+     |
+
+* **From the Email detail view**:
+
+  #. Click the down arrow button next to **Schedule** to open the **Options** menu.
+  #. Select **Clone**.
+
+     |
+
+     .. image:: images/emails/email_clone.png
+        :width: 800
+        :align: center
+        :alt: Expanded menu next to the Schedule button on the Email detail view, with Clone highlighted.
+
+     |
+
+Either way, Mautic opens the copy in the Email editor with the original content and settings pre-populated. Adjust the copy as needed, then save it to create the new Email.
+
+.. note::
+
+   Cloning requires permission to create Emails. If you don't have the permission, the **Clone** option doesn't appear.
+
+.. vale off
+
+Clone with translations and variants
+------------------------------------
+
+.. vale on
+
+If an Email has translations or A/B variants, cloning the entire group in one step is possible using **Clone with translations and variants**.
+
+To clone an Email with its translations and variants:
+
+#. Click the parent Email to view the details.
+#. Click the down arrow button next to **Schedule** to open the **Options** menu.
+#. Select **Clone with translations and variants**.
+
+   |
+
+   .. image:: images/emails/email_clone_translations_variants.png
+      :width: 800
+      :align: center
+      :alt: Expanded dropdown next to the Schedule button on the Email detail view with the Clone with translations and variants option highlighted.
+
+   |
+
+#. Click **Clone with translations and variants** in the confirmation dialog.
+
+After confirmation, Mautic creates new Unavailable copies of:
+
+* The parent Email
+* All translation children
+* All A/B variant children
+* All translations of A/B variants
+
+Each cloned Email has ``(copy)`` appended to its name and you can edit it independently. The cloned group maintains the same translation and variant structure as the original.
+
+.. note::
+
+   The **Clone with translations and variants** option is only available for parent Emails - not for translation children or variant children.
+
 Base64 encoded images
 =====================
 
@@ -142,6 +454,8 @@ It's possible to encode all images in the Email text as base64. It attaches the 
 - The main idea with this option is that most of the Email clients display the images directly, without the need to allow images.
 - Some Email clients like GMail require the approval to display Base64 encoded images due to the tracking pixel being an image, and won't display the Base64 encoded images as a result. See the next paragraph for possible solution.
 - The Email body increases significantly if the Email contains many and/or large sized images. Some Email clients like GMail "clip" such messages and won't display it directly.
+
+.. _Email tokens:
 
 Tokens
 ======
@@ -442,7 +756,7 @@ Tracking links in Emails
 
 .. vale on
 
-Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the ``Click Counts`` tab.  
+Mautic tracks clicks on each link in an Email, with stats displayed at the bottom of each Email detail view under the ``Click Counts`` tab. You can sort tracked links by clicking the ``Click Count`` column header. The first click sorts highest to lowest, and a second click reverses the order. This helps you identify which links get the most engagement.
 
 You can turn off tracking for a certain link by adding the ``data-mautic-disable-tracking="true"`` HTML attribute.
 
@@ -455,6 +769,21 @@ For example:
 .. note::
 
    Use ``data-mautic-disable-tracking="true"`` for all new Emails and templates, as Mautic has deprecated the ``mautic:disable:tracking`` attribute.
+
+Link validation
+***************
+
+.. vale off
+
+When you save an Email, Mautic validates every link it contains. If a link's ``href`` uses an invalid format - for example ``://example.com``, which has no scheme - Mautic blocks the save and shows an error such as 'The email contains an invalid URL: ://example.com'.
+
+A link is valid when its ``href``:
+
+* Uses one of these seven schemes: ``http``, ``https``, ``ftp``, ``ftps``, ``mailto``, ``tel``, or ``sms``
+* Is an anchor link that starts with ``#``
+* Is a Mautic token such as ``{unsubscribe_url}``
+
+.. vale on
 
 Unsubscribing
 *************

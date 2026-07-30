@@ -71,7 +71,7 @@ These are the commands you may need to use in relation to your Mautic instance. 
 .. vale off
 
 .. list-table:: 
-   :widths: 25 50 25
+   :widths: 35 40 25
    :header-rows: 1
 
    * - Command
@@ -106,6 +106,12 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``mautic:contacts:scheduled_export``
      - Processes exports of Contacts to a CSV file and sends the results via Email.
+     -
+   * - ``mautic:company:delete_company_leads``
+     - Reassigns the primary Company and removes Company references on Contacts after a Company is deleted, when the ``update_company_mapping_data_in_background`` config option is set to true.
+     -
+   * - ``mautic:company:update_lead_company``
+     - Updates the Company name on Contacts after a Company is renamed, when the ``update_company_mapping_data_in_background`` config option is set to true.
      -
    * - ``mautic:custom-field:create-column``
      - Creates the actual column in the table if the `create_custom_field_in_background` config option is set to true.
@@ -190,7 +196,13 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``social:monitor:twitter:mentions``
      - Searches for mentioned tweets
-     - 
+     -
+   * - ``mautic:forms:delete-results-table``
+     - Deletes orphan results tables for deleted Forms.
+     -
+   * - ``mautic:forms:delete-orphan-form-submission-records-from-form-results-table``
+     - Deletes orphan records from results tables for deleted Form submissions.
+     -
 
 .. vale on
 

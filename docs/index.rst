@@ -106,6 +106,13 @@ There are different types of documentation available to help you navigate your w
    categories/categories-overview
 
 .. toctree::
+   :maxdepth: 2
+   :caption: Projects
+   :hidden:
+
+   projects/projects-overview
+
+.. toctree::
    :caption: Channels
    :maxdepth: 2
    :hidden:
@@ -194,6 +201,7 @@ There are different types of documentation available to help you navigate your w
    points/points
    points/points_troubleshooting
    points/point_groups
+   points/point_insights
 
 .. toctree::
    :maxdepth: 2
