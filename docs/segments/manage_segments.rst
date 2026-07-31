@@ -408,10 +408,15 @@ In the last and In the next
 
 The **In the last** and **In the next** operators let you build rolling date filters that never need manual updates. Instead of an absolute date, you enter a whole number for the interval and choose a unit of **days**, **months**, or **years**.
 
-* **In the last** matches Contacts whose date value falls within the interval leading up to today. For example, ``In the last`` ``7`` ``days`` keeps the Segment scoped to Contacts whose date value is within the past week every time the Segment rebuilds.
-* **In the next** matches Contacts whose date value falls between today and the end of the interval. For example, ``In the next`` ``2`` ``months`` includes Contacts whose date value falls within the coming two months.
+* **In the last** - Matches Contacts whose date value falls within the last X days, months, or years before the current date, where X is the number in the filter value. The current date is the moment Mautic builds or rebuilds the Segment.
 
-These operators work with date and date/time fields. This includes the standard **Date added**, **Date identified**, **Date modified**, and **Date last active** fields, any Custom Field of type date or date/time on a Contact or Company, and behavioral date fields such as **Read any email (date)**.
+  For example, with a value of 10 days, if Mautic builds or rebuilds the Segment on June 12, 2024, it includes Contacts whose field value is between June 02, 2024 00:00:00 and June 12, 2024 23:59:59.
+
+* **In the next** - Matches Contacts whose date value falls within the next X days, months, or years after the current date, where X is the number in the filter value. The current date is the moment Mautic builds or rebuilds the Segment.
+
+  For example, with a value of 10 days, if Mautic builds or rebuilds the Segment on June 12, 2024, it includes Contacts whose field value is between June 12, 2024 00:00:00 and June 22, 2024 23:59:59.
+
+These operators work with date and date-time fields. This includes the standard **Date added**, **Date identified**, **Date modified**, and **Date last active** fields, any Custom Field of type date or date-time on a Contact or Company, and behavioral date fields such as **Read any email (date)**.
 
 The interval must be a whole number greater than zero. If you leave it blank or enter zero, a negative number, or a value that isn't a whole number, Mautic shows a validation error and won't save the Segment.
 
