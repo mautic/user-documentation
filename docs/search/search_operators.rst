@@ -66,6 +66,7 @@ Contacts search filters
     common:{segment_alias} + {segment_alias} + ...
     tag:*
     stage:*
+    form:{form_alias} (Contacts who submitted the Form with this alias)
     email_sent:EMAIL_ID
     email_read:EMAIL_ID
     email_queued:EMAIL_ID
