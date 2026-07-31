@@ -11,7 +11,9 @@ There is nothing to configure on the Landing Page or website itself. The UTM par
 
 .. note::
 
-   There is no action, no field, and no toggle to enable inside the Landing Page itself. If a colleague asks "where do you set up UTM tags on this Landing Page?" the answer is: you set them in the link that brings people there.
+   .. note::
+
+   Landing Pages have no settings, fields, or toggles for UTM parameters. If asked where to configure UTM tags for a Landing Page, the answer is always in the link that brings visitors to the Landing Page.
 
 Examples
 ********
@@ -28,7 +30,7 @@ The following URLs show how UTM parameters appear on both external websites and 
 
 The first URL contains three UTM parameters:
 
-* ``utm_source``: identifies the traffic origin as a newsletter
+* ``utm_source``: identifies the traffic source as a newsletter
 * ``utm_medium``: identifies the delivery Channel as Email
 * ``utm_campaign``: groups the traffic under the ``spring_sale_2026`` Campaign name.
 

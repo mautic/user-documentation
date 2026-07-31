@@ -12,11 +12,16 @@ For this to work, Contacts must already have UTM data on their profile, captured
 Configure conditions
 ********************
 
-#. Open the Campaign you want to configure by going to **Campaigns** and clicking the Campaign name, then opening the Campaign builder.
+#. Open the Campaign and launch the Campaign Builder:
+
+   #. Go to **Campaigns**.
+   #. Click the name of the Campaign to modify.
+   #. Click **Edit**.
+   #. Click **Launch Campaign Builder**.
 
 #. Add a condition node by clicking the **+** on your Campaign flow and selecting **Condition** > **Contact field value**.
 
-#. In the condition editor, scroll down to the **UTM tags** section. You see all five UTM fields listed:
+#. In the condition editor, scroll down to the **UTM tags** section to view all five available UTM fields:
 
    * ``Source``
    * ``Medium``
@@ -24,21 +29,19 @@ Configure conditions
    * ``Content``
    * ``Term``
 
-#. Select the field you want to evaluate and enter the value to match, for example, set ``Medium`` to ``email``, or ``Campaign`` to ``spring_sale_2026``.
+#. Select the field you want to evaluate and enter the value to match. For example, set ``Medium`` to ``email``, or ``Campaign`` to ``spring_sale_2026``.
 
 #. Connect the condition node's **Yes** and **No** paths to the appropriate next steps in the Campaign flow.
 
-#. Save the Campaign and activate it.
+#. Save and activate the Campaign.
 
 The preceding example uses ``Medium`` checked against ``email`` as the evaluated field, which correctly identifies Contacts who arrived through an Email Channel before entering this Campaign. Alternatively, checking ``Campaign`` against ``spring_sale_2026`` lets you deliver Campaign-specific messaging to Contacts acquired through that Campaign while routing Contacts from other Campaigns to a different path.
 
-Branching on ``utm_medium`` rather than ``utm_campaign`` is useful when you want to unify follow-up logic across several Campaigns that all used the same Channel. Branching on ``utm_campaign`` is better when you need Campaign-specific personalization in your messaging. Both approaches are valid. The right choice depends on how granular your segmentation needs to be.
+Branching on ``utm_medium`` rather than ``utm_campaign`` is useful when unifying follow-up logic across several Campaigns that all used the same Channel. Branching on ``utm_campaign`` works better when requiring Campaign-specific personalization in messaging. Both approaches are valid depending on how granular your segmentation needs to be.
 
 .. warning::
 
-   The UTM condition evaluates the values **currently recorded** on the Contact's profile at the moment the Campaign processes them. If Mautic hasn't captured UTM data yet when the Contact enters the Campaign, because they entered before submitting the Form that records UTM tags, the condition evaluates against empty values and routes them to the 'No' path. Order matters.
-
-Contacts with matching UTM values should route to the 'Yes' path once the Campaign processes them.
+   The UTM condition evaluates the values **currently recorded** on the Contact profile at the moment the Campaign processes them. If Mautic hasn't captured UTM data when the Contact enters the Campaign - for example, if they entered before submitting the Form that records UTM tags - the condition evaluates against empty values and routes the Contact to the 'No' path. Order matters.
 
 .. seealso::
 

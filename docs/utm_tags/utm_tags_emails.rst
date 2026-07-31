@@ -20,16 +20,20 @@ Configure Email UTM tags
 
 .. vale on
 
-#. Open the Email you want to configure by going to **Channels** > **Emails** and clicking the Email name.
+#. Open the Email and the edit details:
 
-#. Locate the UTM fields in the Email settings. These are separate from the Email body content.
+   #. Go to **Channels** > **Emails**.
+   #. Click the name of the Email you want to modify.
+   #. Click **Edit**.
 
-#. Fill in the four available UTM fields:
+#. Locate the **UTM tags** dropdown menu in the right-hand panel at the bottom. Expanding this section exposes the UTM parameter fields, which sit separately from the Email body content.
 
-   * ``Source``, where the Email is coming from - ``newsletter`` or ``mautic``
-   * ``Medium``, the Channel - for example, ``email``
-   * ``Campaign``, the Campaign name - for example ``spring_sale_2026``
-   * ``Content``, it's optional. Useful for distinguishing between multiple Emails in the same Campaign, for instance, ``welcome_email_1``
+#. Fill in the UTM fields you want to apply to links inside this block:
+
+   * **Campaign source**: where the Email originates, for example, ``newsletter`` or ``mautic``
+   * **Campaign medium**: the Channel type, for example, ``email``
+   * **Campaign name**: the Campaign name, for example, ``spring_sale_2026``
+   * **Campaign content**: optional field for distinguishing between multiple Emails in the same Campaign, for example, ``welcome_email_1``
 
 #. Save the Email.
 

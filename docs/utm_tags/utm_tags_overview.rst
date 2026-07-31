@@ -3,7 +3,7 @@ UTM tags overview
 
 .. vale off
 
-UTM - Urchin Tracking Module - parameters are short tags appended to URLs that tell analytics tools where a visitor came from, which Campaign, Channel, source, and so on. Mautic has native support for UTM tags across a wide range of its features, but how UTM data flows through the system isn't uniform. Different features capture, generate, store, and use UTM data in different ways, and confusing them leads to gaps in tracking, empty fields, or misplaced expectations.
+UTM - Urchin Tracking Module - are short tags added to URLs that tell analytics tools where traffic comes from, including the specific Campaign, Channel, or source. Mautic supports UTM tags across many features, though each feature handles UTM data differently. Features capture, generate, store, and use UTM data in distinct ways. Confusing how these features handle the data causes gaps in tracking, empty fields, or incorrect expectations.
 
 .. vale on
 
@@ -25,7 +25,7 @@ The five standard UTM parameters are:
    * - **utm_medium**
      - The Channel or method of delivery. Examples: ``email``, ``cpc``, ``organic_social``, ``organic``, ``social``
    * - **utm_campaign**
-     - The specific promotion or marketing initiative title that you want to track. Examples: ``summer_sale``, ``free_trial``, ``spring_sale_2026``
+     - The specific promotion or marketing initiative title to track. Examples: ``summer_sale``, ``free_trial``, ``spring_sale_2026``
    * - **utm_content**
      - Optional, used to distinguish between multiple versions of the same message or content variant within a Campaign. Examples: ``welcome_email_1``, ``banner_version_a``
    * - **utm_term**
@@ -40,7 +40,7 @@ Using UTM tags in Mautic
 
 To use UTM tags with Google Analytics where they appear in your Google Analytics dashboard, you must install your Google Analytics tracking code on the resource you are linking to. This synchronizes with your Google Analytics dashboard and records the UTM tags.
 
-If you use a Mautic Landing Page, you must go to **Settings** > **Configuration** > **Tracking Settings**, and add your **Google Analytics ID**.
+If you use a Mautic Landing Page, go to **Settings** > **Configuration** > **Tracking Settings**, and add your **Google Analytics ID**.
 
 .. image:: ../channels/images/utm_tags/add_google_analytics_id.png
    :alt: Screenshot showing the option to add your Google Analytics ID
@@ -114,7 +114,7 @@ Once Mautic captures UTM data on Contact profiles, you can use it to control who
      - How it triggers
    * - **Segment filters**
      - Includes or excludes Contacts from a Segment based on UTM values ever recorded on them.
-     - When Mautic evaluates a Segment. All five UTM fields - ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, ``utm_term`` - are available as filter conditions.
+     - When Mautic evaluates a Segment. All five UTM Contact fields - ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, ``utm_term`` - are available as filter conditions.
    * - **Campaign conditions**
      - Branches Campaign flow based on UTM field values on the Contact.
      - When a Campaign evaluates a "Contact field value" condition node that references a UTM field.
@@ -122,7 +122,7 @@ Once Mautic captures UTM data on Contact profiles, you can use it to control who
 Displaying UTM data
 ===================
 
-Captured UTM data surfaces in several places for visibility and Reporting.
+Captured UTM data surfaces in several places for visibility and Reports.
 
 .. list-table::
    :header-rows: 1
@@ -135,7 +135,7 @@ Captured UTM data surfaces in several places for visibility and Reporting.
    * - **Reports**
      - A dedicated Report source joins the UTM tags table with Contacts, letting you build Reports filtered or grouped by any UTM field.
    * - **Asset Reports**
-     - Asset download Reports expose all five UTM fields.
+     - Asset download Reports include data for all five UTM parameters - ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, and ``utm_term``.
 
 REST API
 ========

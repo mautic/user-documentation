@@ -16,21 +16,25 @@ Add UTM recording
 
 .. vale on
 
-#. Open the Mautic Form you want to configure by going to **Components** > **Forms** and clicking the Form name.
+#. Open the Form and the edit details:
+
+   #. Go to **Components** > **Forms**.
+   #. Click the name of the Form you want to modify.
+   #. Click **Edit**.
 
 #. Go to the **Actions** tab inside the Form editor.
 
 #. Click **Add action**.
 
-#. Select **Record UTM tags** from the action type dropdown.
+#. Select **Record UTM Tags** from the dropdown menu.
 
-#. Fill in the **Name** field with a label for your own reference, ``Record UTM tags on submit``. The description is optional.
+#. Fill in the **Name** field with a label for your reference, for example, ``Record UTM tags on submit``. The description is optional.
 
-   .. warning::
+   .. attention::
 
-      The **Name** and **Description** fields in the action dialog confuse almost everyone the first time. They look like configuration, but they aren't. The action is entirely automatic once added. There is nothing to configure beyond adding it.
+      The **Name** and **Description** fields in the action dialog represent organizational labels, **not** configuration settings. The action operates automatically once added, and requires no further parameter configuration.
 
-#. Save the action and then save the Form.
+#. Save the action and save the Form.
 
 #. Confirm with the website team that Campaign URLs pointing to Landing Pages with this Form include UTM parameters in the query string, for example:
 
@@ -38,7 +42,7 @@ Add UTM recording
 
       https://yoursite.com/landing-Page?utm_source=newsletter&utm_medium=Email&utm_campaign=spring_sale_2026
 
-#. Test the setup by visiting the Landing Page using a URL with UTM parameters, submitting the Form, then checking the Contact's profile.
+#. Test the setup by visiting the Landing Page using a URL with UTM parameters, submitting the Form, and checking the Contact profile.
 
 This URL uses ``utm_source=newsletter`` to identify the sending newsletter, ``utm_medium=email`` to identify the delivery Channel, and ``utm_campaign=spring_sale_2026`` to group the submission under the active Campaign. Mautic writes all three values to the Contact profile once the Contact submits the Form, making them available for Segment filters and Campaign conditions. Using real, meaningful values during testing rather than placeholder strings ensures the timeline entry looks exactly as it does in production.
 
@@ -50,9 +54,9 @@ The choice to use three parameters rather than all five reflects a practical min
 
 .. tip::
 
-   If a visitor arrives without UTM parameters in the URL but the Landing Page referrer URL does contain them, meaning they clicked through from a Landing Page that had UTM parameters, Mautic falls back to reading those from the Landing Page referrer. Don't rely on this as a primary strategy, but it prevents the data from always being empty in this scenario.
+   If a visitor arrives without UTM parameters in the URL but the Landing Page referrer URL contains them, meaning they clicked through from a Landing Page that had UTM parameters, Mautic falls back to reading parameters from the Landing Page referrer. Don't rely on this as a primary strategy, but it prevents UTM fields from remaining empty in this scenario.
 
-After saving, the **Record UTM tags** action should appear in the Form's action list. When a Contact submits the Form from a UTM-tagged URL, their profile shows a **UTM tags recorded** timeline entry, separate from the Form submission entry, with the associated Form ID and the captured field values. If UTM fields are empty after a test submission, the URL used during the test didn't contain UTM parameters. That's a website-side issue, not a Mautic configuration issue.
+After saving, the **Record UTM tags** action appears in the Form's action list. When a Contact submits the Form from a UTM-tagged URL, their profile displays a **UTM tags recorded** timeline entry, separate from the Form submission entry, displaying the associated Form ID and captured field values. If UTM fields remain empty after a test submission, the URL used during testing didn't contain UTM parameters. This indicates a website-side link configuration issue rather than a Mautic configuration issue.
 
 .. TODO: add screenshot - Contact timeline showing a "UTM tags recorded" entry with populated UTM fields and a FORMID reference
 
