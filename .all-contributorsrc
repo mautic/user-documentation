@@ -267,6 +267,24 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "adiux",
+      "name": "Adrian Schimpf",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13075514?v=4",
+      "profile": "http://aivie.ch",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "dcjarvis",
+      "name": "David Jarvis aka DJ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8997755?v=4",
+      "profile": "https://github.com/dcjarvis",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
