@@ -136,10 +136,62 @@ There are additional permissions for specific features:
 
 .. vale on
 
-.. note:: 
+Contact permissions
+~~~~~~~~~~~~~~~~~~~
 
-  User permissions restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see. 
-  
-  For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
+.. vale off
+
+The Contact Permissions section includes several permission categories:
+
+.. vale on
+
+* **Contacts - User has access to** - determines which Contact records a User can view, edit, create, and delete.
+
+* **Notes - User has access to** - determines which Notes attached to Contacts a User can access. This is separate from Contact permissions, giving you fine-grained control over note management. For example, a User might view all Contacts but only edit their own Notes on those Contacts.
+
+* **Segments - User has access to** - determines which Segments a User can access.
+
+* **Custom Fields - User has access to** - determines whether a User can manage Custom Fields.
+
+* **Import - User has access to** - determines whether a User can import Contacts.
+
+.. note::
+
+   * **Notes permissions** determine which Notes a User can view, edit, and delete based on Note ownership - not Contact ownership. A User with ``Edit own`` Notes permission can edit Notes they created, even on Contacts owned by other Users. See :ref:`Notes<notes>` for more details.
+
+   * **User permissions** restrict their view of dashboard widgets, resulting in them only seeing widgets for items or feature bundles they have permission to see.
+
+     For example, if a User's Role doesn't have Asset permissions, they can't create or view widgets on the dashboard for Asset data.
+
+.. note::
+
+   When you upgrade from an earlier version, Mautic grants each non-administrator Role the same Notes access it already had for Contacts. Existing Roles keep working as before, so anyone who could view or edit a Contact's Notes still can. From there, you can refine each Role's Notes permissions independently of its Contact permissions.
+
+.. _cloning a role:
+
+.. vale off
+
+Cloning a Role
+**************
+
+.. vale on
+
+Cloning lets you create a new Role based on an existing one, copying its settings so you can reuse a configuration instead of building a Role from scratch. The clone icon - which looks like a file-copy icon - appears on each Role's row in the Roles listing at **Settings** > **Roles**.
+
+Clicking the clone icon opens the new Role's edit screen, pre-filled with the source Role's settings. Mautic pre-fills the **Title** as 'Clone of [Original Role Name]' and copies the **Description**, the **Full System Access** setting, and all **Permissions** from the source Role. Clicking the clone icon doesn't create anything yet. Mautic creates the new Role only when you save it, so you can edit any field first.
+
+#. Navigate to **Settings** > **Roles**.
+
+#. In the Roles listing, find the Role you want to clone and click the clone icon on its row.
+
+#. Mautic opens the new Role's edit screen, pre-filled with the source Role's settings. The **Title** shows 'Clone of [Original Role Name]'.
+
+#. Edit the **Title**, **Description**, **Full System Access** setting, or **Permissions** as needed. For details on adjusting permissions, see :ref:`Setting granular permissions <setting granular permissions>`.
+
+#. Click **Save & Close** to create the cloned Role.
+
+.. note::
+
+   The clone icon only appears for Users whose Role has the Roles **Create** permission.
 
 You can also create :xref:`Roles using the API`.
