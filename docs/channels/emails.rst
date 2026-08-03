@@ -790,8 +790,8 @@ Unsubscribing
 
 Mautic has a built in means of allowing a Contact to unsubscribe from Email communication. You can insert various tokens into your Email to provide unsubscribe options at your desired location:
 - ``{unsubscribe_text}``: inserts a sentence with a link instructing the Contact to click to unsubscribe.
-- ``{unsubscribe_url}``: inserts the URL to the preferences center when it's activated, or to the unsubscribe page if not.
-- ``{resubscribe_url}``: inserts the URL to the resubscribe page regardless of whether there's a preference centre in use. It resubscribes the Contact. Useful for double opt out Campaigns.
+- ``{unsubscribe_url}``: inserts the URL to the preferences center when it's activated, or to the unsubscribe page if not. The Contact confirms their Email address on a validation page first - see below.
+- ``{resubscribe_url}``: inserts the URL to the resubscribe page regardless of whether there's a preference centre in use. It resubscribes the Contact. Useful for double opt out Campaigns. As with unsubscribe links, the Contact confirms their Email address on a validation page first - see below.
 - ``{dnc_url}``: inserts the URL to unsubscribe from all Marketing Messages when you activate the preference center.
 
 The unsubscribe URL token inserts the URL into your custom written instructions. 
@@ -804,6 +804,12 @@ For example:
         <a href="{dnc_url}" target="_blank">Unsubscribe from all emails</a>
 
 You can find the configuration of the unsubscribe text in the global settings.
+
+Mautic resolves the ``{unsubscribe_url}``, ``{unsubscribe_text}``, and ``{resubscribe_url}`` tokens to a validation page rather than executing the action immediately. When a Contact clicks the link they first land on a 'Confirm your email address' page and must type the Email address the message was sent to. Mautic completes the unsubscribe or resubscribe only if the entered Email address matches. The Contact's Email address is no longer embedded in the link itself, which protects against leaked or forwarded links. If the entered address doesn't match, Mautic shows the error 'This email address does not match the email address that was used to generate this link.' and makes no change.
+
+.. note::
+
+   Links in Emails sent by older versions of Mautic no longer unsubscribe or resubscribe automatically on click. If Mautic still has a record of that send, it redirects the Contact to the same confirmation page. If it doesn't, an unsubscribe link shows a 'Record not found.' message, and a resubscribe link shows a page-not-found (``404``) error.
 
 Online version
 **************
