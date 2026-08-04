@@ -521,6 +521,7 @@ Form settings
   :alt: Screenshot showing Form Settings Configuration in Mautic
 
 * **Do not accept submission from these domain names** - To block Contacts with specific Email domains from submitting your Forms, enter those domains in the dialog box. Select an option on each Form you want to apply this block to. You can restrict either specific Email aliases that belong to a domain or an entire domain. To block the entire domain, you can use wildcards (*).
+* **Enable form field auto-fill from contact data** - off by default. Keep this setting off unless your organization needs auto-fill and accepts the risk of exposing personally identifiable information (PII) in Forms. When it's off, Mautic hides the field-level 'Auto-fill data' option in the Form builder's :ref:`Behavior` tab, doesn't pre-fill Form Fields with a known Contact's data, and doesn't hide fields based on auto-fill data. When it's on, the field-level 'Auto-fill data' option appears and works as normal. When you upgrade, if at least one Form Field already uses auto-fill, Mautic turns this setting on automatically to preserve existing behavior; otherwise it stays off.
 
 Contact settings
 ****************
