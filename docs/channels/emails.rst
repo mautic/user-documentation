@@ -768,7 +768,7 @@ For example:
 
 .. note::
 
-   Use ``data-mautic-disable-tracking="true"`` for all new Emails and templates, as Mautic has deprecated the ``mautic:disable:tracking`` attribute.
+   Use ``data-mautic-disable-tracking="true"`` for both Segment and Template Emails. Mautic deprecated the legacy ``mautic:disable-tracking`` attribute and removes it in Mautic 8.0. Once removed, the legacy attribute no longer disables link tracking, so update any Segment or Template Emails that still use it to ``data-mautic-disable-tracking="true"``.
 
 Link validation
 ***************
