@@ -95,7 +95,7 @@ The following values are available:
 
 .. vale on
 
-**UTM tags** - Mautic can append UTM tags to any links and Form submissions. See :doc:`/channels/utm_tags` for more information.
+**UTM tags** - Mautic can append UTM tags to any links and Form submissions. See :doc:`/utm_tags/utm_tags_overview` for more information.
 
 .. vale off
 
