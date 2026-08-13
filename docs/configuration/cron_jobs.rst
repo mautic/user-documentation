@@ -87,38 +87,38 @@ Since Mautic 5.1, Mautic triggers Campaigns in order from newest to oldest. This
 
     that these messages are only added to the queue when frequency rules apply either system wide or per Contact.
 
-Resume stuck Campaign Contacts cron job
+.. vale off
+
+Resume stuck Campaign Contacts Cron job
 =======================================
 
-Sometimes Contacts can get stuck in Campaign workflows due to exceptions, server issues, or Events being added after the Contact has already progressed past that point in the Campaign. The ``mautic:campaigns:resume-stuck`` command identifies and processes these stuck Contacts.
+.. vale on
+
+Sometimes Contacts get stuck in Campaign workflows due to exceptions, server issues, or Events added after the Contact already progressed past that point in the Campaign. The ``mautic:campaigns:resume-stuck`` command identifies and processes these stuck Contacts. Run this command manually as a one-off command for troubleshooting.
 
 .. code-block:: php
 
     php /path/to/mautic/bin/console mautic:campaigns:resume-stuck <campaign-id>
 
-This command:
+The ``mautic:campaigns:resume-stuck`` command performs the following actions:
 
-- Finds Contacts that are stuck at specific points in a Campaign due to previous exceptions or errors
-- Identifies Contacts where new Events were added after they had already executed parent Events
-- Resumes execution for these Contacts so they can continue through the Campaign workflow
-- Ignores Contacts that were manually removed from the Campaign
-- Skips scheduled Events that haven't been executed yet
-- Doesn't process decision Events as they require Contact interaction
+* Finds Contacts stuck at specific points in a Campaign due to previous exceptions or errors
+* Identifies Contacts with new Events added after execution of parent Events
+* Resumes execution for these Contacts to allow continuation through the Campaign workflow
+* Ignores Contacts manually removed from the Campaign
+* Skips pending scheduled Events
+* Excludes decision Events because decision Events require Contact interaction
 
-Command parameters:
-~~~~~~~~~~~~~~~~~~~
+Command parameters
+~~~~~~~~~~~~~~~~~~
 
-- ``<campaign-id>`` (required): The ID of the Campaign to process.
+* ``<campaign-id>`` - **required**: the ID of the Campaign to process.
+* ``--dry-run``: finds stuck Contacts and next Events without actual execution. Useful for previewing command results.
+* ``--batch-limit=X`` or ``-l X``: sets the batch size of Contacts to process per round. Defaults to 100.
+* ``--min-contact-id=X``: processes only Contacts with ID greater than or equal to this value.
+* ``--max-contact-id=X``: processes only Contacts with ID less than or equal to this value.
 
-- ``--dry-run``: Find stuck Contacts and their next Events without actually executing them. Useful for previewing what the command would do.
-
-- ``--batch-limit=X`` or ``-l X``: Set the batch size of Contacts to process per round. Defaults to 100.
-
-- ``--min-contact-id=X``: Process only Contacts with ID greater than or equal to this value.
-
-- ``--max-contact-id=X``: Process only Contacts with ID less than or equal to this value.
-
-Example usage:
+**Example usage:**
 
 .. code-block:: php
 
@@ -133,7 +133,7 @@ Example usage:
 
 .. note::
 
-    This command only works with published Campaigns that aren't deleted. It processes a maximum of 500 records in a single execution to prevent performance issues.
+   This command only works with Active Campaigns and excludes deleted Campaigns. It processes a maximum of 500 records in a single execution to prevent performance issues.
 
 .. vale off
 
