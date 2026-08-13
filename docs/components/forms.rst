@@ -36,6 +36,46 @@ The following fields are available:
 .. note::
     Not all Themes include Form styling. Check the Features column on your Themes listing in the Theme Manager to see which Themes include styling for Forms.
 
+Advanced options
+****************
+
+.. vale off
+
+The 'New Form' or 'Edit Form' page includes an **Advanced options** section where you can configure additional settings.
+
+.. vale on
+
+Submission limits
+=================
+
+Submission limits let you restrict how many submissions a Form can accept. This is useful for event registrations with limited capacity, contests with a fixed number of entries, or promotional offers with restricted availability.
+
+To configure a submission limit:
+
+.. vale off
+
+#. On the 'New Form' or 'Edit Form' page, expand the **Advanced options** section at the bottom right.
+#. In the **Submissions limit** section, set the following fields:
+
+   * **Maximum submissions** - Enter the maximum number of submissions the Form accepts. Leave blank for unlimited submissions.
+   * **Limit reached message** - Enter a custom message to display when the Form reaches its submission limit. If left blank, Mautic displays a default message.
+
+.. image:: images/forms/form_advanced_options.png
+   :width: 300
+   :alt: Advanced options section in the Form editor showing the Submissions limit settings with Maximum submissions and Limit reached message fields
+
+.. vale on
+
+When a Form reaches its submission limit:
+
+* The Form stops accepting new submissions and displays the configured message.
+* The Form owner receives a notification that the Form has reached its limit.
+* If you delete submissions - individually or in bulk - and the count drops below the limit, the Form automatically reopens to accept new submissions.
+
+.. note::
+
+   The submission count updates in real time. Deleting submissions reduces the count, potentially reopening a Form that was previously at its limit.
+
 .. vale off
 
 Configuring Forms
@@ -143,6 +183,8 @@ To add a new field to your Form:
 
    - **Radio group** - This field provides a group of single-select options with a radio button, sometimes referred to as an option button group.
 
+   - **Rating** - This field lets visitors give a rating by selecting from a row of symbols, such as stars. Clicking a symbol fills every symbol up to and including it - for example, clicking the fourth star fills stars one through four. Mautic saves the selected number as the submitted value. It's useful for surveys, product reviews, and satisfaction scores.
+
    - **Select: Single or multiple choices** - This option shows a dropdown list where a visitor may choose one option. This field also allows multiple selections, which changes the display to a box with the options listed. On a mobile device, a single select box shows a dialog box with radio buttons, and with checkboxes for a multi-select field.
 
    - **Slider** - This field provides an interactive slider control that allows visitors to select a numeric value from a predefined range by dragging a handle along a track. The slider displays the minimum and maximum values at each end and shows the current selected value as the visitor moves the handle.
@@ -238,6 +280,18 @@ If you prefer to create your own field options, the ``Optionlist`` allows you to
 The label field controls the display of the field to the visitor completing the Form, and the value field controls the data saved to the database and stored against the Contact record. While they often match this might not always be the case. For example with a GDPR checkbox, the label might be ``Yes I accept that I may receive Email communications from this Company`` whereas the value stored to the database may be ``Yes`` or ``1``.
 
 In select fields, there are two additional settings to allow for setting the Empty Value - which serves the same purpose as the Input Placeholder and isn't saved to the database - and to determine whether to allow multiple values, which changes the field from ``Select`` to ``Select - Multiple``.
+
+Rating
+------
+
+The Rating field shows a row of symbols - stars by default - that visitors click to choose a value. Clicking a symbol fills every symbol up to and including it, and Mautic saves the selected number as the submitted value. Use the properties tab to set how many symbols appear and how they look:
+
+- **Number of stars** - The number of symbols the visitor can choose from, between 1 and 10. The default is 5.
+- **Rating symbol** - The symbol to display. Choose from a star, an alternate star, an asterisk, a square, a sparkle, a heart, a circle, or a diamond. The default is a filled star.
+- **Selected star color** - The color of the symbols up to and including the visitor's selection. The default is ``#f5b301``.
+- **Base star color** - The color of the unselected symbols. The default is ``#cccccc``.
+
+The Rating field doesn't have a 'Default value' setting on the General tab.
 
 Description area
 ----------------
@@ -428,6 +482,8 @@ Enter the URL where the Form should post to, and Email address/s for anyone who 
 
 If you have Contact Owners set in Mautic, you can also send the notification directly to the Contact's owner. It's also possible to send a copy of the Email to the Contact.
 
+Use the 'to', 'cc', and 'bcc' fields to set who receives the notification. To send to more than one address in any of these fields, separate the Email addresses with a comma.
+
 You can style the message itself as you like, and you can click to insert the submitted values from the Form using tokens. You must add the fields to the Form before creating the action. If adding new fields after creating the Form action, edit the Form action and add the new tokens to the Email.
 
 .. image:: images/forms/send_form_results.png
@@ -600,3 +656,38 @@ To apply domain name filtering on a Mautic Form, add an Email field to the Form 
   :alt: Screenshot showing domain blocking used in a Mautic Form
 
 It's advised to provide a helpful message to display if the visitor tries to use an Email address from a blocked domain, to help them understand what the problem is.
+
+.. vale off
+
+Form data maintenance commands
+******************************
+
+.. vale on
+
+Mautic provides CLI commands to clean up orphan Form data. These commands are useful for database maintenance when you delete Forms or Form submissions but related data remains.
+
+Deleting orphan Form results tables
+===================================
+
+When you delete a Form in Mautic, the associated ``form_results_<form_id>_<form_alias>`` table may remain in the database. To remove these orphan tables:
+
+.. code-block:: shell
+
+   bin/console mautic:forms:delete-results-table
+
+This command identifies Form results tables that no longer have an associated Form and removes them from the database. This helps reduce database size and keeps your database clean.
+
+Deleting orphan Form submission records
+=======================================
+
+When you delete Form submissions, Mautic may not always remove the corresponding records in the Form results table. To clean up these orphan records:
+
+.. code-block:: shell
+
+   bin/console mautic:forms:delete-orphan-form-submission-records-from-form-results-table
+
+This command scans all Form results tables and removes records where the associated Form submission no longer exists. It processes records in batches of 5,000 to prevent performance issues on large databases.
+
+.. note::
+
+   Mautic intends these commands for one-time cleanup or periodic maintenance. Starting from the version that introduced these commands, Mautic automatically deletes Form results table records when you delete submissions through the UI.
