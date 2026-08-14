@@ -62,10 +62,10 @@ The following batch options are available:
 
        Users with only **Edit Own** can update Companies they own, and those with **Edit Others** can update any Company.
 
-* **Change Owner** - Assigns a User as Owner of all selected Companies you can edit. Selecting this option opens the 'Change Owner' dialog.
+* **Change Owner** - Assigns a User as owner of all selected Companies you can edit. Selecting this option opens the **Change Owner** dialog.
 
-   #. In the 'Add to the following:' dropdown, select the User to set as Owner.
-   #. Select **Save**. Mautic assigns that User as Owner to every selected Company you can edit. It then shows how many Companies it changed.
+   #. In the **Add to the following:** dropdown, select the User to set as owner.
+   #. Select **Save**. Mautic assigns that User as owner to every selected Company you can edit. It then shows how many Companies it changed.
 
   Selecting **Cancel** closes the dialog without making any changes.
 
