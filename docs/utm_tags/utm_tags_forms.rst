@@ -40,7 +40,7 @@ Add UTM recording
 
    .. code-block:: text
 
-      https://yoursite.com/landing-Page?utm_source=newsletter&utm_medium=Email&utm_campaign=spring_sale_2026
+      https://example.com/landing-Page?utm_source=newsletter&utm_medium=Email&utm_campaign=spring_sale_2026
 
 #. Test the setup by visiting the Landing Page using a URL with UTM parameters, submitting the Form, and checking the Contact profile.
 

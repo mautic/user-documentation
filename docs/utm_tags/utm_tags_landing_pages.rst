@@ -22,11 +22,11 @@ The following URLs show how UTM parameters appear on both external websites and 
 
 .. code-block:: text
 
-   https://yoursite.com/promo-Page?utm_source=newsletter&utm_medium=Email&utm_campaign=spring_sale_2026
+   https://example.com/promo-Page?utm_source=newsletter&utm_medium=Email&utm_campaign=spring_sale_2026
 
 .. code-block:: text
 
-   https://your-mautic.com/Page/landing-slug?utm_source=google&utm_medium=cpc&utm_campaign=spring_sale_2026
+   https://example.com/Page/landing-slug?utm_source=google&utm_medium=cpc&utm_campaign=spring_sale_2026
 
 The first URL contains three UTM parameters:
 

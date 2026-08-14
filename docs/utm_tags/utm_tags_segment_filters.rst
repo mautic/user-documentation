@@ -37,7 +37,7 @@ Create Segment filters
    * ``utm_source``
    * ``utm_medium``
    * ``utm_campaign``
-   * ``utm_content`*
+   * ``utm_content`
    * ``utm_term``
 
 #. Select the operator and enter the value to match, for example, ``newsletter``, ``email``, or ``spring_sale_2026``.
