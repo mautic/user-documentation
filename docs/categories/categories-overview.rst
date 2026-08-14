@@ -27,10 +27,6 @@ To create new Categories, go to settings menu in the top right corner of Mautic.
 
 When creating a new Category you can select type, title, description, alias, color and availability status. The color will be helpful to quickly find Mautic elements by their appropriate Category when viewing other areas within Mautic.
 
-.. vale on
-
-.. vale off
-
 Deleting Categories
 *******************
 
@@ -42,11 +38,7 @@ Deleting a Category doesn't delete the items assigned to it. Those associated it
 
 .. note::
 
-   Mautic asks you to confirm before deleting. The confirmation message states: 'Delete the category, [name]? Associated items will not be deleted; they will be assigned as uncategorized.'
-
-.. vale on
-
-.. vale off
+   Mautic asks you to confirm before deleting. The confirmation message states: 'Delete the category, {name}? Associated items will not be deleted; they will be assigned as uncategorized.'
 
 Using Categories for Contacts
 ******************************
