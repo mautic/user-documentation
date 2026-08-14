@@ -71,6 +71,8 @@ Contact Segments
 
 Use the Segments tab to add or remove a Contact from a Segment. Segments are a source for both starting Campaigns and sending Emails. Any Contact in a particular Segment is automatically part of a Campaign that has that Segment as the source. You can also use a standalone Email to manually send an Email to a Segment. If a User has opted out of a Segment they no longer receive Campaign actions or messages sent to that Segment.
 
+Segments appear in the Preference Center in alphabetical order by **Public name**. If two Segments share the same **Public name**, Mautic orders them by their internal ID. Since Contacts see this order, set a clear **Public name** on each Segment to control how it appears.
+
 .. vale off
 
 Contact's unsubscribe Email preferences
@@ -245,7 +247,7 @@ Now when sending the Email, all recipients can click the Unsubscribe link provid
 
 |
 
-If you don't select a Preference Center in an Email, Mautic uses the default Preference Center styled with the default Theme.
+If you don't select a Preference Center in an Email, Mautic uses the global default Preference Center set in **Configuration > Email Settings**, resolved at the time a Contact unsubscribes. If you change the global default later, any Email without its own Preference Center, including Emails you've already sent, automatically uses the new default. If there's no valid global default, Mautic falls back to a default Preference Center styled with the default Theme.
 
 .. image:: images/unsubscribe.png
     :align: center
