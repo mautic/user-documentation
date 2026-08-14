@@ -408,11 +408,11 @@ In the last and In the next
 
 The **In the last** and **In the next** operators let you build rolling date filters that never need manual updates. Instead of an absolute date, you enter a whole number for the interval and choose a unit of **days**, **months**, or **years**.
 
-* **In the last** - Matches Contacts whose date value falls within the last X days, months, or years before the current date, where X is the number in the filter value. The current date is the moment Mautic builds or rebuilds the Segment.
+* **In the last** - Matches Contacts whose date value falls on or after the date X days, months, or years before the day Mautic builds or rebuilds the Segment, and on or before that build or rebuild day. X is the number you enter in the filter value. Mautic treats both boundary days as whole calendar days.
 
-  For example, with a value of 10 days, if Mautic builds or rebuilds the Segment on June 12, 2024, it includes Contacts whose field value is between June 02, 2024 00:00:00 and June 12, 2024 23:59:59.
+  For example, with a value of 10 days, if Mautic builds or rebuilds the Segment on June 12, 2024, it includes Contacts whose field value is between June 2, 2024 00:00:00 and June 12, 2024 23:59:59.
 
-* **In the next** - Matches Contacts whose date value falls within the next X days, months, or years after the current date, where X is the number in the filter value. The current date is the moment Mautic builds or rebuilds the Segment.
+* **In the next** - Matches Contacts whose date value falls on or after the day Mautic builds or rebuilds the Segment, and on or before the date X days, months, or years after that build or rebuild day. X is the number you enter in the filter value. Mautic treats both boundary days as whole calendar days.
 
   For example, with a value of 10 days, if Mautic builds or rebuilds the Segment on June 12, 2024, it includes Contacts whose field value is between June 12, 2024 00:00:00 and June 22, 2024 23:59:59.
 
