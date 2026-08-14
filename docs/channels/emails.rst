@@ -442,6 +442,23 @@ Each cloned Email has ``(copy)`` appended to its name and you can edit it indepe
 
    The **Clone with translations and variants** option is only available for parent Emails - not for translation children or variant children.
 
+.. vale off
+
+Sending an example Email
+========================
+
+.. vale on
+
+The **Send example** action sends a test copy of the Email to a recipient you choose, directly from the Email listing. The same action is also available from the Email detail view.
+
+#. In the Email row, click the three-dots icon next to the checkbox to open the **Options** menu.
+#. Select **Send example**.
+#. In the modal, review or enter the recipient Email addresses and optionally choose a Contact, then confirm to send the example Email. Selecting **Cancel** closes the modal without sending anything.
+
+.. note::
+
+   Example Emails go to a Mautic User rather than a Contact, so trackable links and the unsubscribe link behave differently. See :ref:`Email link tracking` and :ref:`Unsubscribe link doesn't work` for details.
+
 Base64 encoded images
 =====================
 
