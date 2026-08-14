@@ -95,6 +95,8 @@ There are different types of documentation available to help you navigate your w
    campaigns/creating_campaigns
    campaigns/campaign_builder
    campaigns/managing_campaigns
+   campaigns/exporting_campaigns
+   campaigns/importing_campaigns
    campaigns/troubleshooting_campaigns
 
 .. toctree::
@@ -103,6 +105,13 @@ There are different types of documentation available to help you navigate your w
    :hidden:
 
    categories/categories-overview
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Projects
+   :hidden:
+
+   projects/projects-overview
 
 .. toctree::
    :caption: Channels
