@@ -39,7 +39,7 @@ Configure DWC blocks
 
    .. code-block:: text
 
-      https://yoursite.com/landing?utm_campaign=spring_sale_2026&utm_medium=website&utm_source=dwc
+      https://example.com/landing?utm_campaign=spring_sale_2026&utm_medium=website&utm_source=dwc
 
 A DWC block configured with ``utm_campaign=spring_sale_2026``, ``utm_medium=website``, and ``utm_source=dwc`` produces this URL. The ``utm_source`` value ``dwc`` is a short, descriptive token that makes it immediately clear in analytics Reports that traffic originated from a DWC block rather than an Email, paid ad, or other Channel.
 
@@ -53,7 +53,7 @@ The ``utm_medium=website`` value reflects that the block renders on a website La
 
    Use consistent naming across blocks. If one block uses ``source=dwc`` and another uses ``source=dynamic-web-content``, your analytics data splits across two rows, making comparison difficult.
 
-When the setup is working correctly, links inside the DWC block include UTM parameters when rendered on the Landing Page. Clicking through and checking the destination URL in the browser address bar shows the correct parameters. Traffic from that block appears as a distinct source or medium combination in Google Analytics.
+When the setup is working correctly, links inside the DWC block include UTM parameters when rendered on the Landing Page. Clicking through and checking the destination URL in the browser address bar shows the correct parameters. Traffic from that block appears as a distinct source or medium combination in your analytics platform
 
 .. seealso::
 
