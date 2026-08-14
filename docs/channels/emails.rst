@@ -522,6 +522,20 @@ When sending Emails, Mautic determines the **From address** using the following 
 
 This hierarchy ensures Emails always have a valid sender while allowing personalization when Contact data is available.
 
+.. _reply-to resolution hierarchy:
+
+``Reply-To`` resolution hierarchy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Just as it resolves the From address, Mautic determines the ``Reply-To`` header for queued and batch Email sends - such as Campaign Emails and Segment broadcasts - using the following priority order:
+
+#. **Email Reply to address** - If the Email's **Advanced** tab has a **Reply to address**, Mautic uses that address.
+#. **Contact Owner address** - If you enable **Use owner as mailer**, Mautic uses the Contact Owner's Email address for each owner group in the batch.
+#. **Email From address** - If you haven't configured a global ``reply-to`` in **Email Settings**, Mautic uses the Email's **From address**.
+#. **System fallback** - Mautic falls back to the global **Reply to address** in **Email Settings**, or the system From address when that's blank.
+
+This means replies to queued Emails route back to the Contact Owner when you send as the Owner, matching how Mautic already resolves the From address.
+
 Default value
 -------------
 
