@@ -187,10 +187,10 @@ You can delete a single Campaign or several Campaigns at once from the Campaigns
 To delete a single Campaign:
 
 #. Go to the Campaigns list.
-#. Open the Campaign's Options menu and select 'Delete'.
+#. Open the Campaign's **Options** menu and select **Delete**.
 #. Confirm the deletion in the dialog that appears.
 
 To delete multiple Campaigns at once:
 
 #. Select the checkbox next to each Campaign you want to delete.
-#. Select 'Delete selected' and confirm.
+#. Select **Delete selected** and confirm.
