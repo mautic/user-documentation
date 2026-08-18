@@ -15,7 +15,7 @@ Point Actions are those times when a Contact receives a change in their Point to
 
 To add a new action:
 
-1. Click **Points > Point Actions > + New**  - located in the top right corner.
+1. Click **Points > Manage Actions > New**  - located in the top right corner.
 
 .. image:: images/new_points_action.png
     :alt: Screenshot of New Points action
@@ -28,7 +28,7 @@ To add a new action:
 
    * **Change Points (+/-)** - The value change to set for the action. The ``+`` isn't necessary when adding Points. When subtracting Points, add the ``-`` symbol.
 
-   * **Actions taken by User** - This is the behavior or action the Contact must complete to trigger the action.
+   * **Actions taken by Contact** - This is the behavior or action the Contact must complete to trigger the action.
 
 3. On the right side is more information:
 
