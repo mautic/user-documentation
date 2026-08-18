@@ -15,7 +15,7 @@ Point Actions are those times when a Contact receives a change in their Point to
 
 To add a new action:
 
-1. Click **Points > Manage Actions > New**  - located in the top right corner.
+1. Click **Points > Manage Actions > New** - located in the top right corner.
 
 .. image:: images/new_points_action.png
     :alt: Screenshot of New Points action
