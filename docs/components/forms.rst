@@ -480,9 +480,9 @@ Enter the URL where the Form should post to, and Email address/s for anyone who 
 
 - **Send Form results**: this feature is commonly used for the purposes of a notification when a Contact submits a Form. It can also send a notification to the Contact of the data provided. Be sure to customize the subject line to state which Form the submission relates to. The Reply to Contact option sets the ``reply-to`` address to the Contact's address, so that if the notification is sent to your team, replying will go to the Contact automatically.
 
-The **Send to owner** option sends the submission notification to the Contact's owner whenever the submitting Contact has one. If the Contact has no owner, Mautic sends the notification to the Form's creator, the User who created the Form. The Contact's owner always takes precedence, and the Form's creator is only the fallback. This fallback happens automatically whenever you enable **Send to owner**. There's no separate setting to turn on. You can also send a copy of the Email to the Contact.
+If you have Contact owners set in Mautic, the **Send to owner** option sends the notification directly to the Contact's owner. You can also turn on **Send to contact** to send a copy of the Email to the Contact.
 
-Use the 'to', 'cc', and 'bcc' fields to set who receives the notification. To send to more than one address in any of these fields, separate the Email addresses with a comma.
+The **To** field is required, so you can't save the action without an address in it. Use the **To**, **cc**, and **bcc** fields to set who receives the notification. To send to more than one address in any of these fields, separate the Email addresses with a comma.
 
 You can style the message itself as you like, and you can click to insert the submitted values from the Form using tokens. You must add the fields to the Form before creating the action. If adding new fields after creating the Form action, edit the Form action and add the new tokens to the Email.
 
