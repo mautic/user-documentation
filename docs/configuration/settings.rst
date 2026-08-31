@@ -575,7 +575,12 @@ Export settings
   :width: 600
   :alt: Screenshot showing Export Settings Configuration in Mautic
 
+.. vale off
+
 * **Automatically export Contacts to CSV in the background** - If set to Yes, Mautic processes CSV exports of Contacts in the background and Mautic sends an Email with a link to download the file when it's processed.
+* **Notify admins about contact exports** - When set to **Yes**, the default, admins get an in-app notification whenever any User requests a Contact export, plus a separate completion Email - without the download link - once the export finishes. When set to **No**, admins receive neither. This setting doesn't affect what the requesting User gets. They always receive the completion Email with the download link. It also doesn't change the export's audit log. Since it applies to background Contact exports, it only takes effect when you turn on **Automatically export Contacts to CSV in the background**.
+
+.. vale on
 
 Segment settings
 ****************
@@ -920,3 +925,16 @@ Social settings
   :alt: Screenshot showing Social Settings Configuration in Mautic
 
 * **Twitter Handle Field** - This field stores the Twitter username for Users added to Mautic through Social Monitoring.
+
+Support Mautic menu item
+************************
+
+Mautic shows a 'Support Mautic' item in the main navigation menu. Selecting it opens ``https://mau.tc/support`` in a new browser tab, where you can learn how to support the project. Mautic enables this item by default.
+
+To hide the 'Support Mautic' menu item—for example, if you run Mautic for clients and prefer not to show it—add the following line to your ``config/local.php`` file:
+
+.. code-block:: php
+
+  'support_mautic_enabled' => false,
+
+To show the item again, set this value back to ``true`` or remove the line.
