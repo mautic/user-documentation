@@ -54,8 +54,12 @@ You can export a Campaign in three ways.
 
    The **Share** form offers two actions:
 
+   .. vale off
+
    * **Download ZIP** downloads the Campaign export ZIP file, now including a package manifest and any images you added in the form, to your computer, instead of sharing the Campaign publicly. Use **Download ZIP** to get the export file, for example to move the Campaign to another Mautic instance.
-   * **Publish** shares the Campaign to the public Mautic Marketplace as a resource package. It requires a **Title**, **Vendor**, **Version**, and **Description**, and lets you add **Images**. Use **Publish** only to share the Campaign with the wider Mautic community, since anyone can then access it on the Mautic Marketplace.
+   * **Publish to Marketplace** shares the Campaign publicly as a resource package on the Mautic Marketplace. It requires a **Title**, **Vendor**, **Version**, and **Description**, and lets you add **Images**. Use **Publish to Marketplace** only to share the Campaign with the wider Mautic community, since anyone can then access it there.
+
+   .. vale on
 
 .. vale off
 
