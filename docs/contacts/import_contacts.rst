@@ -161,18 +161,24 @@ How to start an import
 
 5. Upload your CSV file.
 
-6. The field mapping page should show up. The first set of options lets you select owner, Segment and tags to assign globally to all imported Contacts. It also includes the **Create new Contacts?** toggle, which controls whether the import :ref:`creates new Contacts or updates existing ones only<create new contacts or update only>`. The second set of options lets you map the columns from your CSV file to Mautic Contact :ref:`Custom Fields<manage custom fields>`. The third set of options lets you map columns from your CSV file to special Contact attributes like *Date Created* and so on.
+6. The field mapping page should show up. The first set of options lets you select owner, Segment and tags to assign globally to all imported Contacts. It also includes the **Create new Contacts?** toggle, which controls whether the import :ref:`creates new Contacts or updates existing ones only<create new contacts or update only>`. The second set of options lets you map the columns from your CSV file to Mautic Contact :ref:`Custom Fields<manage custom fields>` and to special Contact attributes like 'Date created' and so on.
 
 7. When your field mapping is ready, click one of the Import buttons described previously.
+
+.. image:: images/import_contact_field_mapping.png
+    :align: center
+    :alt: Screenshot of the Contact import field mapping page showing the two sets of options
+
+|
 
 Create new Contacts or update only
 ==================================
 
-The **Create new Contacts?** toggle defaults to Yes. With Yes, the import keeps its usual behavior: any CSV row that doesn't match an existing Contact creates a new Contact.
+The **Create new Contacts?** toggle defaults to 'Yes'. With 'Yes', the import keeps its usual behavior: any CSV row that doesn't match an existing Contact creates a new Contact.
 
-Toggle **Create new Contacts?** to No to update only. Mautic then updates the records it matches and doesn't create any new Contacts.
+Toggle **Create new Contacts?** to 'No' to update only. Mautic then updates the records it matches and doesn't create any new Contacts.
 
-Mautic matches each CSV row against your existing records using the fields you've set as :ref:`unique identifiers<manage custom fields>`. When a row doesn't match an existing Contact, Mautic skips it, counts it as an ignored row, and logs it in the ignored rows list on the :ref:`import job detail<import job detail>` page.
+Mautic matches each CSV row against your existing records using the fields you've set as :ref:`unique identifiers<manage custom fields>`. When you've turned off **Create new Contacts?** and a row doesn't match an existing Contact, Mautic skips it, counts it as an ignored row, and logs it in the ignored rows list on the :ref:`import job detail<import job detail>` page.
 
 The Companies import offers the same option, named **Create new Companies?**, which works the same way for Companies.
 
