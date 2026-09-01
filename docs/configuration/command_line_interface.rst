@@ -60,18 +60,21 @@ Options
 
 Mautic commands
 ===============
-These are the commands you may need to use in relation to your Mautic instance. Add a ``bin/console`` before Mautic command.
 
-**Example**
+These are the commands you may need to use in relation to your Mautic instance.
 
-.. code-block:: shell
+.. important::
 
-  bin/console mautic:segments:update
+   You need to add a ``bin/console`` before the Mautic command, as shown in the example below:
+
+   .. code-block:: shell
+
+      bin/console mautic:segments:update
 
 .. vale off
 
 .. list-table:: 
-   :widths: 25 50 25
+   :widths: 35 40 25
    :header-rows: 1
 
    * - Command
@@ -89,6 +92,9 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - ``mautic:campaigns:rebuild``
      - Rebuild Campaigns based on Contact Segments.
      - ``mautic:campaigns:update``
+   * - ``mautic:campaigns:resume-stuck``
+     - Resume execution for Contacts stuck in Campaign workflows.
+     -
    * - ``mautic:campaigns:trigger``
      - Trigger timed events for active Campaigns.
      - 
@@ -107,6 +113,12 @@ These are the commands you may need to use in relation to your Mautic instance. 
    * - ``mautic:contacts:scheduled_export``
      - Processes exports of Contacts to a CSV file and sends the results via Email.
      -
+   * - ``mautic:company:delete_company_leads``
+     - Reassigns the primary Company and removes Company references on Contacts after a Company is deleted, when the ``update_company_mapping_data_in_background`` config option is set to true.
+     -
+   * - ``mautic:company:update_lead_company``
+     - Updates the Company name on Contacts after a Company is renamed, when the ``update_company_mapping_data_in_background`` config option is set to true.
+     -
    * - ``mautic:custom-field:create-column``
      - Creates the actual column in the table if the `create_custom_field_in_background` config option is set to true.
      - 
@@ -115,15 +127,22 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``mautic:email:fetch``
      - Fetch and process monitored Email.
-     - 
+     -
+   * - ``mautic:entity:import --entity=campaign --file=path-to-file/entity_data.zip --user=1``
+     - Imports Campaign and dependent entities to Mautic from a ZIP file. See :doc:`/campaigns/importing_campaigns`.
+     -
+   * - ``mautic:entity:export --entity=campaign --id=1 --zip-file --path=path/to-file``
+     - Exports Campaign and dependent entities from Mautic to a ZIP file. See :doc:`/campaigns/exporting_campaigns`.
+     -
    * - ``messenger:consume email``
      - Processes mail queue
      - 
-   * - ``mautic:fields:analse``
+   * - ``mautic:fields:analyse``
      - Analyze Custom Fields table and return table or file with results. See :doc:`/contacts/custom_fields`.
      - 
    * - ``mautic:import``
-     - If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
+     - | Imports Contacts from a CSV file
+       | If the CSV import is configured to run in background then this command will pick up the pending import jobs and imports the data from CSV files to Mautic.
      - 
    * - ``mautic:integration:fetchleads``
      - Fetch Contacts from Integration.
@@ -190,7 +209,13 @@ These are the commands you may need to use in relation to your Mautic instance. 
      - 
    * - ``social:monitor:twitter:mentions``
      - Searches for mentioned tweets
-     - 
+     -
+   * - ``mautic:forms:delete-results-table``
+     - Deletes orphan results tables for deleted Forms.
+     -
+   * - ``mautic:forms:delete-orphan-form-submission-records-from-form-results-table``
+     - Deletes orphan records from results tables for deleted Form submissions.
+     -
 
 .. vale on
 

@@ -32,7 +32,9 @@ System defaults
   :width: 600
   :alt: Screenshot showing System defaults Settings Configuration in Mautic
 
-* **Default item limit per page** - The number of Contacts, Campaigns, Emails, etc. which display on each page when you go to an item section. The default is ``10``.
+.. vale off
+
+* **Default item limit per page** - The number of Contacts, Campaigns, Emails, Assets, and other items which display on each page when you go to an item section. The default is ``10``.
 
 * **Default timezone** - The User's default time zone, typically set to the time zone of the Company headquarters. Mautic allows the User to set their own time zones via their profile. The default is ``UTC``.
 
@@ -45,6 +47,8 @@ System defaults
 * **Date Range Filter Default** - Sets the default for how far back from the current date Mautic looks for data in Reports including Campaign and Email snapshots charts on the item page. This setting allows you to control the default for how far back from the current date Mautic looks for data. If you've changed the setting on a Report, Mautic uses what you've entered. Mautic's default value is ``1 Month``.
    
 * **Default format for full dates, date only, short dates, and time only** - The default setting uses the standard American time format. The letters in the boxes are PHP code. See the :xref:`PHP manual for date functions`.
+
+.. vale on
 
 CORS settings
 =============
@@ -87,6 +91,14 @@ Miscellaneous settings
 * **List of IPs not to track Contacts with** - To turn off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn't recommend adding your office IP address. If you list your internal IP address, Mautic won't track clicks, page hits, etc., from that IP, **including when you are testing** which can cause difficulties.
 
 * **List of known Bots** - Mautic has the feature to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here - one per line.
+
+  .. note::
+
+     .. vale off
+
+     In addition to this configurable list, Mautic automatically detects common bots using the Matomo device-detector library. This includes well-known bots like Googlebot, Bingbot, and social media crawlers, which improves the accuracy of your Email open and page visit statistics without any additional setup.
+
+     .. vale on
   
 * **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here.
 
@@ -189,6 +201,33 @@ The optimal for Contact event scheduler settings allow you to configure the defa
 * **Interaction Data Cache Timeout** - Choose how long to cache the interaction data for.
 * **Fetch Interactions From** - Select the time frame for fetching interaction data. This determines how far back to look for interactions.
 * **Interaction Fetch Limit** - Set the maximum number of interactions of each type - for example: Page hits, Email reads, Form submits - to retrieve for timing optimization.
+
+.. vale off
+
+Advanced Campaign performance settings
+======================================
+
+.. vale on
+
+Mautic provides additional performance-related configuration parameters for Campaigns that you must configure by editing the ``config/local.php`` file directly. These settings help you balance UI responsiveness against database load on high-volume instances.
+
+* ``campaign_event_cache_ttl`` - Controls how long Mautic caches Campaign event statistics - such as execution counts shown in the Campaign builder - before refreshing them from the database. The default is ``600`` seconds, which is 10 minutes. Lower values provide fresher statistics in the UI but increase the number of database queries. Higher values reduce database load but delay the appearance of new executions in the UI. Set to ``0`` to turn off caching entirely.
+
+  To configure this setting, you can add or modify the parameter in your ``config/local.php`` file:
+
+  .. code-block:: php
+
+     'campaign_event_cache_ttl' => 600, // seconds
+
+  .. note::
+
+     To use this setting, you must enable Doctrine result caching in your Mautic instance.
+
+* ``campaign_contact_count_cache_ttl`` - Controls how long Mautic caches Campaign Contact counts before refreshing them from the database. The default is ``43200`` seconds, which is 12 hours. Adjust this value if you need Campaign Contact counts to update more frequently.
+
+  .. code-block:: php
+
+     'campaign_contact_count_cache_ttl' => 43200, // seconds
 
 Email settings
 **************
@@ -325,9 +364,9 @@ Mail send settings
   :width: 600
   :alt: Screenshot showing Mail Send Settings Configuration in Mautic
 
-* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``.
-  
-* **Email address to send mail from** - The Email address for the name you're sending mail from. The address displays in the ``From:`` field when your Contacts receive your Emails.
+* **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``. You can also use Contact field tokens such as ``{contactfield=companyname|Default Name}`` to personalize the sender name per Contact.
+
+* **Email address to send mail from** - The Email address for the name you're sending mail from. The address displays in the ``From:`` field when your Contacts receive your Emails. You can use Contact field tokens like ``{contactfield=companyemail|info@default.com}`` to send from Contact-specific Email addresses, such as the Contact's assigned Company Email. When using tokens, always provide a default value after the ``|`` character as a fallback.
 
 .. note::
 
@@ -341,10 +380,9 @@ Mail send settings
 
 * **Mailer is owner** - If Contacts in Mautic have owners, select Yes to use the Contact owner as the sender of Emails to any Contacts they're listed as the owner for.
 
-.. note:: 
+  .. note::
 
-    Mailer is owner overrides any other name or Email to send mail from, including the default and individual Emails. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can see this configuration for individual Emails, rather than globally.
-    For more information see :doc:`Mailer is owner</channels/emails>`
+     When enabled, **Mailer is owner** sends Emails from the Contact's owner, overriding system defaults and plain Email From addresses. However, tokenized From addresses on an Email's **Advanced** tab take precedence over the owner sender when the token resolves to a valid value. Every Contact owner's domain must have ``SPF`` and ``DKIM`` records. You can configure this setting for individual Emails, rather than globally. For more information, see :ref:`mailer as owner` and :ref:`sender resolution hierarchy`.
 
 * **Service to send mail through** - Select the Email service provider you use, and enter your credentials.
 
@@ -355,15 +393,23 @@ See :ref:`here<contact's unsubscribe email preferences>` to set the Contact's Em
 Default frequency rule
 ======================
 
-* **Do Not Contact more than <number> each <period>** - This limits the number of Marketing Messages a Contact receives in a certain period of time day, week, month. Transactional messages don't count towards this limit. You can adjust this at the individual Contact level, either manually or by Preference Center setting.
+.. vale off
+
+* **Do Not Contact more than <number> each <period>** - This limits the number of Emails a Contact receives in a certain period of time: day, week, or month. You can adjust this at the individual Contact level, either manually or via the **Preference Center** setting. Emails with **Send to unsubscribed contacts** enabled don't count towards this limit. You configure **Send to unsubscribed contacts** directly within each Email's settings, not in the **Preference Center**.
+
+.. vale on
 
 .. image:: images/default-frequency-rule.png
-  :width: 600
-  :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
+   :width: 600
+   :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
 
-.. note:: 
+.. note::
 
-  More information is available in the :doc:`Default Frequency Rule documentation</contacts/frequency_rules>`.
+   .. vale off
+
+   More information is available in the :doc:`Default Frequency Rule documentation </contacts/frequency_rules>`.
+
+   .. vale on
 
 Monitored inbox settings
 ========================
@@ -398,7 +444,19 @@ Message settings
 * **Convert embed images to Base64** - Select **Yes** to display embedded images in Emails using embedded base64 code rather than as embedded images.
 
 * **Disable trackable URLs** - Removes tracking from URLs in your Emails. Select Yes to prevent tracking, reporting on, and using decisions based on link clicks. Some Email service providers don't like redirecting URLs. Using trackable URLs in your Emails may impact deliverability.
-  
+
+* **Default UTM source** - Sets a site-wide default ``utm_source`` value that pre-populates the UTM source field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+* **Default UTM medium** - Sets a site-wide default ``utm_medium`` value that pre-populates the UTM medium field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+* **Default UTM Campaign** - Sets a site-wide default ``utm_campaign`` value that pre-populates the UTM Campaign field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+* **Default UTM content** - Sets a site-wide default ``utm_content`` value that pre-populates the UTM content field when creating a new Email. Existing Emails and cloned Emails retain their own values. Leave blank to use no default.
+
+.. note::
+
+  The default UTMs only apply when creating a **new** Email. Editing an existing Email or cloning an Email never overwrites the values already on that Email, even if those fields are blank on the clone source.
+
 Unsubscribe settings
 ====================
 
@@ -406,9 +464,13 @@ Unsubscribe settings
   :width: 600
   :alt: Screenshot showing Unsubscribe Settings Configuration in Mautic
 
-* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link. 
+.. vale off
+
+* **Text for the {unsubscribe_text} token** -  Like the ``{webview_text}`` token,  this allows you to customize the **Unsubscribe** link.
 
   For example - Edit between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the URL as it's tokenized. If you add ``{unsubscribe_url}`` as a token in the Email, you won't see this text.
+
+* **Disable unsubscribe link in header** - Select **Yes** to prevent Mautic from adding unsubscribe headers to Emails. When set to **No** - the default - Mautic automatically includes RFC 8058-compliant ``List-Unsubscribe`` and ``List-Unsubscribe-Post`` headers in Emails where you disable **Send to unsubscribed contacts**. Email clients that support this feature - such as GMail and Apple Mail - use these headers to display one-click unsubscribe capability.
 
 * **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. Don't edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
 
@@ -424,6 +486,9 @@ Unsubscribe settings
 
 * **Show Contact's preferred Channel option** - If you have multiple Channels available within your Mautic instance. For example; Email, ``SMS``, mobile push, web notifications, etc., Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
+* **Default Preference Center Landing Page** - Select a Landing Page to use as the global default Preference Center. When a Contact unsubscribes, Mautic applies this default to any Email that doesn't have its own Preference Center, including Emails you created before setting the default and Emails you've already sent. Mautic resolves the default at unsubscribe time rather than copying it onto each Email when you create it, so changing this setting immediately updates the Preference Center for every Email without its own selection. Emails that have a Preference Center selected always use that Page. If the default Landing Page is missing, unpublished, or no longer marked as a Preference Center, Mautic falls back to its standard unsubscribe behavior. Read the :doc:`/contacts/preference_center` section for more information.
+
+.. vale on
 
 .. vale off
 
@@ -510,7 +575,12 @@ Export settings
   :width: 600
   :alt: Screenshot showing Export Settings Configuration in Mautic
 
+.. vale off
+
 * **Automatically export Contacts to CSV in the background** - If set to Yes, Mautic processes CSV exports of Contacts in the background and Mautic sends an Email with a link to download the file when it's processed.
+* **Notify admins about contact exports** - When set to **Yes**, the default, admins get an in-app notification whenever any User requests a Contact export, plus a separate completion Email - without the download link - once the export finishes. When set to **No**, admins receive neither. This setting doesn't affect what the requesting User gets. They always receive the completion Email with the download link. It also doesn't change the export's audit log. Since it applies to background Contact exports, it only takes effect when you turn on **Automatically export Contacts to CSV in the background**.
+
+.. vale on
 
 Segment settings
 ****************
@@ -524,11 +594,23 @@ Segment settings
 Company settings
 ****************
 
+Company merge settings
+======================
+
 .. image:: images/company-merge-settings.png
   :width: 600
   :alt: Screenshot showing Company Merge Settings Configuration in Mautic
 
 * **Merge by unique fields with operator** - You can determine which operator to use when merging fields if there is more than one unique identifier.
+
+Company list settings
+=====================
+
+.. image:: images/company_list_settings.png
+   :width: 600
+   :alt: Company list settings configuration showing available and selected columns for the Companies overview
+
+* **Columns** - Manage the visible columns for Companies. Move fields from the left list to the right list to display them on the main Companies overview, or remove fields from the right list to hide them.
 
 Queue settings
 **************
@@ -637,7 +719,7 @@ Advanced setting
 Retry strategy
 --------------
 
-When the processing of a message fails, Mautic sends the message back to the queue for another try. You can adjust this behaviour in this section.
+When the processing of a message fails, Mautic sends the message back to the queue for another try. You can adjust this behavior in this section.
 See :xref:`queue-retries-failures` for more details.
 
 The screenshot below shows the default values.
@@ -645,6 +727,14 @@ The screenshot below shows the default values.
 .. image:: images/queue-retry-strategy.png
   :width: 600
   :alt: Retry strategy defaults
+
+* **Max retries** - The maximum number of times Mautic retries a failed message before giving up. Set to ``0`` to turn off retries. Negative values aren't allowed. The default is ``3``.
+
+* **Delay** - The initial delay in milliseconds before the first retry attempt. Negative values aren't allowed. The default is ``1000``, which is 1 second.
+
+* **Multiplier** - The factor by which the delay increases after each retry attempt. For example, with a delay of 1000 ms and a multiplier of 2, the delays are 1000 ms, 2000 ms, 4000 ms, and so on. Values less than 1 aren't allowed. The default is ``2``.
+
+* **Max delay** - The maximum delay in milliseconds between retry attempts. Set to ``0`` for no limit. Negative values aren't allowed. The default is ``0``.
 
 Queue for failures
 ------------------
@@ -717,6 +807,27 @@ Mautic tracking settings
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
   * Landing Pages including 4-byte UTF-8 characters, such as emojis and some Chinese or other non-Latin characters, in the Landing Page title or URL aren't tracked on a Contact's activity history in Mautic. Mautic tracks all Latin characters used in English and other western languages which are of 1-byte.
+
+Automatic tracking filtering
+============================
+
+.. vale off
+
+To keep your analytics focused on real people, Mautic automatically excludes certain requests from tracking. When a request matches any of the conditions below, Mautic doesn't record the page hit, Email open, Asset download, or Contact tracking activity:
+
+.. vale on
+
+.. vale off
+
+* **Bots and crawlers** - Requests Mautic identifies as bots through the IP and User Agent filtering described in :ref:`Miscellaneous Settings<miscellaneous settings>`.
+* **HEAD requests** - Requests that use the ``HTTP HEAD`` method, which monitoring and uptime tools commonly send.
+* **Speculative loading requests** - The prefetch and prerender requests browsers make to load links a visitor hasn't actually opened.
+* **Global Privacy Control signals** - Requests that send a ``Sec-GPC: 1`` header. Honoring this signal is a legal requirement under privacy laws such as the California Consumer Privacy Act.
+* **Do Not Track signals** - Requests that send a ``DNT: 1`` header.
+
+.. vale on
+
+This filtering is always on, and you can't turn it off. Because Mautic doesn't track these requests, it doesn't create anonymous Contacts for them, so your analytics reflect genuine human engagement and respect visitor privacy preferences.
 
 Facebook pixel
 ==============
@@ -814,3 +925,16 @@ Social settings
   :alt: Screenshot showing Social Settings Configuration in Mautic
 
 * **Twitter Handle Field** - This field stores the Twitter username for Users added to Mautic through Social Monitoring.
+
+Support Mautic menu item
+************************
+
+Mautic shows a 'Support Mautic' item in the main navigation menu. Selecting it opens ``https://mau.tc/support`` in a new browser tab, where you can learn how to support the project. Mautic enables this item by default.
+
+To hide the 'Support Mautic' menu item—for example, if you run Mautic for clients and prefer not to show it—add the following line to your ``config/local.php`` file:
+
+.. code-block:: php
+
+  'support_mautic_enabled' => false,
+
+To show the item again, set this value back to ``true`` or remove the line.

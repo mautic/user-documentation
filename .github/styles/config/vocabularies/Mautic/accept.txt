@@ -11,15 +11,19 @@ Azure
 bcc
 Beanstalkd
 Bing
+Bingbot
 bitwise
 blocklist
 boolean
 booleans
 cc
+CASL
 CCPA
 CKEditor
 Citrix
 Clearbit
+CLI
+Clickthrough
 CloudAMQP
 CMS
 config
@@ -43,6 +47,7 @@ Dripflow
 DSN
 Dynamic Web Content
 FALSE
+Figma
 Focus Item
 Focus Items
 Froala
@@ -55,6 +60,7 @@ GitBook
 GitHub
 Gitpod
 GMail
+Googlebot
 Grav
 Gravatar
 Hammerschmied
@@ -70,6 +76,8 @@ IMAP
 IPs
 infographics
 JavaScript
+JPEG
+JPG
 Joomla
 Joomla!
 Libre
@@ -79,11 +87,13 @@ MailChimp
 Mailjet
 Marketing Messages
 Mautic
+Matomo
 MaxMind
 Middlewares
 middlewares
 MJML
 MIME
+MMS
 MQL
 MQLs
 Multiselect
@@ -101,14 +111,19 @@ Packagist
 PATCH
 patch
 PHP
+Photoshop
 Pipedrive
 Piwik
+PNG
 POST
 post
+prefetch
+prerender
 PUT
 Rackspace
 Remarketing
 REST
+RFC
 Salesforce
 SAML
 Schimpf
@@ -123,6 +138,7 @@ SMS
 SMTP
 SNS
 SparkPost
+spacebar
 SSO
 strikethrough
 sublicense
@@ -135,11 +151,13 @@ Transifex
 TRUE
 Twilio
 unassign
+uncategorized
 unpublish
 Unpublish
 URL
 URLs
 UTM
+VIP
 Vtiger
 Webmecanik
 www
