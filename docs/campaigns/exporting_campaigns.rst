@@ -42,8 +42,8 @@ You can export a Campaign in three ways.
 =========================
 
 #. Go to the **Campaigns** menu.
-#. Open the options for the Campaign you want to export. These are available from the three-dot icon on the Campaign list row and from the Campaign detail page.
-#. Select the **Export** option. Instead of downloading immediately, Mautic opens a **Share** form.
+#. Open the options for the Campaign you want to export. These are available from the three-dot icon on the Campaign list row and from the Campaign detail view.
+#. Select the **Export** option. Instead of downloading immediately, Mautic opens the **Share** form.
 
    |
 
@@ -54,8 +54,8 @@ You can export a Campaign in three ways.
 
    The **Share** form offers two actions:
 
-   * **Download ZIP** downloads the Campaign export ZIP file, now including a package manifest and any images you added in the form, to your computer, rather than publishing it. Use **Download ZIP** to get the export file, for example to move the Campaign to another Mautic instance.
-   * **Publish** shares the Campaign to the public Mautic Marketplace as a resource package. Publishing requires a **Title**, **Vendor**, **Version**, and **Description**, and lets you add **Images**. Use **Publish** only to share the Campaign with the wider Mautic community, since publishing makes the Campaign publicly available on the Mautic Marketplace.
+   * **Download ZIP** downloads the Campaign export ZIP file, now including a package manifest and any images you added in the form, to your computer, instead of sharing the Campaign publicly. Use **Download ZIP** to get the export file, for example to move the Campaign to another Mautic instance.
+   * **Publish** shares the Campaign to the public Mautic Marketplace as a resource package. It requires a **Title**, **Vendor**, **Version**, and **Description**, and lets you add **Images**. Use **Publish** only to share the Campaign with the wider Mautic community, since anyone can then access it on the Mautic Marketplace.
 
 .. vale off
 
