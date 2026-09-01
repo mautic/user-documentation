@@ -338,10 +338,14 @@ Text
 
 The Behavior tab helps marketers to improve the experience for the visitor completing the Form. It also helps marketers implement progressive profiling, to gather more data from the Contact which helps in optimized personalization.
 
+.. vale off
+
 - **Show when value exists**: if Mautic knows the Contact and they're tracked, when a value exists for a field Mautic hides the field when this setting is No. This prevents the Contact answering the same question multiple times. You may want to display the field even if it's already known when you want to ensure you have the most up to date information about the Contact.
 - **Show after X submissions**: this allows the marketer to show certain fields only when the Contact has submitted the Form a specified number of times. Enter a value between ``1`` and ``200``.  When left undefined, the field shows every time the Contact views the Form. The goal is to minimize the number of fields shown to the Contact, so it's recommended to hide fields if it's not necessary to verify the values.
-- **Auto-fill data**: this allows you to pre-populate Contact data with known Contacts where the information exists in the Contact profile. Auto-fill works with Mautic Landing Pages, and data won't pre-populate when placing the Form anywhere else. Even if you're hiding this field, you may wish to turn on auto-fill to ensure saving of the information with the Form submission.
+- **Auto-fill data**: this allows you to pre-populate Contact data with known Contacts where the information exists in the Contact profile. Auto-fill works with Mautic Landing Pages, and data won't pre-populate when placing the Form anywhere else. Even if you're hiding this field, you may wish to turn on auto-fill to ensure saving of the information with the Form submission. This per-field option appears in the Behavior tab, and takes effect, only when you turn on the global 'Enable form field auto-fill from contact data' setting in :ref:`Form settings`. When that global setting is off, Mautic hides this option and doesn't auto-fill the field.
 - **Read only**: activate this setting to lock auto-filled fields with existing Contact information, preventing any edits by Contacts. This ensures that the data submitted with the Form remains accurate and consistent, especially for critical details like Email addresses. Enable this option together with Auto-fill data to stop Contacts from changing essential information during Form submission.
+
+.. vale on
 
 Field order
 -----------
@@ -480,9 +484,17 @@ Enter the URL where the Form should post to, and Email address/s for anyone who 
 
 - **Send Form results**: this feature is commonly used for the purposes of a notification when a Contact submits a Form. It can also send a notification to the Contact of the data provided. Be sure to customize the subject line to state which Form the submission relates to. The Reply to Contact option sets the ``reply-to`` address to the Contact's address, so that if the notification is sent to your team, replying will go to the Contact automatically.
 
-If you have Contact Owners set in Mautic, you can also send the notification directly to the Contact's owner. It's also possible to send a copy of the Email to the Contact.
+.. vale off
 
-Use the 'to', 'cc', and 'bcc' fields to set who receives the notification. To send to more than one address in any of these fields, separate the Email addresses with a comma.
+If you have Contact owners set in Mautic, the **Send to owner** option sends the notification directly to the Contact's owner. You can also turn on **Send to contact** to send a copy of the Email to the Contact.
+
+.. vale on
+
+.. vale off
+
+Mautic requires the **To** field, so you can't save the action without an address in it. Use the **To**, **CC**, and **BCC** fields to set who receives the notification. To send to more than one address in any of these fields, separate the Email addresses with a comma.
+
+.. vale on
 
 You can style the message itself as you like, and you can click to insert the submitted values from the Form using tokens. You must add the fields to the Form before creating the action. If adding new fields after creating the Form action, edit the Form action and add the new tokens to the Email.
 
@@ -656,3 +668,38 @@ To apply domain name filtering on a Mautic Form, add an Email field to the Form 
   :alt: Screenshot showing domain blocking used in a Mautic Form
 
 It's advised to provide a helpful message to display if the visitor tries to use an Email address from a blocked domain, to help them understand what the problem is.
+
+.. vale off
+
+Form data maintenance commands
+******************************
+
+.. vale on
+
+Mautic provides CLI commands to clean up orphan Form data. These commands are useful for database maintenance when you delete Forms or Form submissions but related data remains.
+
+Deleting orphan Form results tables
+===================================
+
+When you delete a Form in Mautic, the associated ``form_results_<form_id>_<form_alias>`` table may remain in the database. To remove these orphan tables:
+
+.. code-block:: shell
+
+   bin/console mautic:forms:delete-results-table
+
+This command identifies Form results tables that no longer have an associated Form and removes them from the database. This helps reduce database size and keeps your database clean.
+
+Deleting orphan Form submission records
+=======================================
+
+When you delete Form submissions, Mautic may not always remove the corresponding records in the Form results table. To clean up these orphan records:
+
+.. code-block:: shell
+
+   bin/console mautic:forms:delete-orphan-form-submission-records-from-form-results-table
+
+This command scans all Form results tables and removes records where the associated Form submission no longer exists. It processes records in batches of 5,000 to prevent performance issues on large databases.
+
+.. note::
+
+   Mautic intends these commands for one-time cleanup or periodic maintenance. Starting from the version that introduced these commands, Mautic automatically deletes Form results table records when you delete submissions through the UI.

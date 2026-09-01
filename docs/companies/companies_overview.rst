@@ -34,10 +34,74 @@ In *Configuration > Company Settings* you can choose the operator used when merg
 
 These settings allow  Mautic to find and merge duplicate Companies during the import, using the Integrations Framework and in other parts of Mautic.
 
+Batch changes
+*************
+
+To apply changes to several Companies at once, select the checkboxes next to the Company names. A selection bar appears at the top of the table, showing **Delete selected** and a three-dot icon for more options.
+
+.. image:: images/companies_batch_selection_bar.png
+   :alt: Two selected Companies in the list with the selection bar showing Delete selected and the three-dot menu open on Find and Replace.
+
+The following batch options are available:
+
+* **Delete Selected** - Deletes the selected Companies.
+* **Find and Replace** - Replaces a value in a chosen field across all selected Companies. Selecting this option opens a dialog.
+
+   #. Choose the **Company field** to update. Search or scroll to find it in the list.
+   #. Enter the value to find in **Find value**.
+   #. Enter the new value in **Replace with**.
+
+  Find and Replace updates only Companies that match the **Find value**. Both **Find value** and **Replace with** are case sensitive, so the value you enter must match the stored value exactly. For example, if you find and replace on the Country field, entering 'United states' or 'united states' changes nothing - you must enter 'United States'.
+
+  .. note::
+
+     To use **Find and Replace**, Users need these Role permissions under **Contacts**:
+
+     * View permission - **View Own** or **View Others**
+     * Edit permission - **Edit Own** or **Edit Others**
+
+       Users with only **Edit Own** can update Companies they own, and those with **Edit Others** can update any Company.
+
+* **Change Owner** - Assigns a User as owner of all selected Companies you can edit. Selecting this option opens the **Change Owner** dialog.
+
+   #. In the **Add to the following:** dropdown, select the User to set as owner.
+   #. Select **Save**. Mautic assigns that User as owner to every selected Company you can edit. It then shows how many Companies it changed.
+
+  Selecting **Cancel** closes the dialog without making any changes.
+
+  .. note::
+
+     To use **Change Owner**, Users need these Role permissions:
+
+     * View permission under **Users** to open the action.
+     * Edit permission under **Contacts** - **Edit Own** or **Edit Others** - so the action appears.
+
+       Mautic changes and counts only the Companies the User can edit. Users with only **Edit Own** can update Companies they own, and those with **Edit Others** can update any Company.
+
+.. vale off
+
+Find and Replace for all Companies
+==================================
+
+.. vale on
+
+To update every Company that matches a specific Find and Replace value, you don't need to select any checkboxes. In the Companies list table:
+
+#. Click the gear icon at the top of the table to open **Options**.
+#. Select **Find and Replace**.
+#. Choose the **Company field** to update. Search or scroll to find it in the list.
+#. Enter the value to find in **Find value**.
+#. Enter the new value in **Replace with**.
+
+.. image:: images/companies_find_and_replace_list_view.png
+   :alt: Companies list view with the gear icon menu open, showing the Find and Replace option
+
+Case sensitivity and Role permission requirements are the same as for selected Companies.
+
 Company actions
 ***************
 
-.. vale off 
+.. vale off
 
 Merging Companies
 =================
