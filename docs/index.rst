@@ -134,6 +134,7 @@ There are different types of documentation available to help you navigate your w
    :hidden:
 
    companies/companies_overview
+   companies/company_segments
 
 .. toctree::
    :maxdepth: 2

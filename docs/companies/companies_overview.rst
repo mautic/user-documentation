@@ -136,7 +136,18 @@ Company Segments
 
 .. vale on
 
-You can create a Segment based on a Company record. Select any Company field to filter with and the matching criteria for it, and Mautic lists any Contacts that match the selected fields in the Segment.
+Company Segments let you group Companies based on shared attributes or criteria for targeted Account-Based Marketing - ABM. Use Company Segments to organize Companies for Campaign targeting, reporting, and bulk operations.
+
+For detailed information on creating and managing Company Segments, see :doc:`Company Segments</companies/company_segments>`.
+
+.. vale off
+
+Contact Segments based on Company fields
+========================================
+
+.. vale on
+
+You can also create Contact Segments based on Company data. Select any Company field to filter with and the matching criteria for it, and Mautic lists any Contacts that match the selected fields in the Segment. This groups Contacts by their associated Company attributes.
 
 .. vale off
 
