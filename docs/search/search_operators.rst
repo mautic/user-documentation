@@ -34,6 +34,7 @@ Most list views, including Contacts, Emails, Companies, and Segments, show a dro
 .. image:: images/contacts-filter-scope-dropdown.png
    :align: center
    :alt: Filter scope dropdown on the Contacts list view
+   :width: 600
 
 |
 
@@ -48,6 +49,7 @@ On the Contacts list, the dropdown also reminds you that you can type a filter d
 .. image:: images/contacts-filter-scope-hint.png
    :align: center
    :alt: Filter dropdown hint prompting you to type a query in the filter box
+   :width: 600
 
 |
 
