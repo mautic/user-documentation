@@ -106,8 +106,6 @@ The context menu shows actions you can take.
 
 * Install installs the Plugin
 
-* **Rate & Review** redirects you to the public Mautic Marketplace website where you can submit a review for the Plugin
-
 * Issue tracker opens a new window with the issue tracker for the Plugin. It shows only if the Plugin has this information available. Use this option to search for issues with the Plugin and to report new issues to the maintainers.
 
 Ratings and reviews
@@ -125,7 +123,7 @@ When you open a Plugin, a Reviews panel lists individual reviews from other comm
 Submitting a review
 ===================
 
-To submit a review for a Plugin, click **Rate & Review** in the context menu. This takes you to the public Mautic Marketplace website at :xref:`Mautic Marketplace website` where you can sign in and leave your review.
+To submit a review for a Plugin, click the **Rate & Review** button on the Plugin detail page. **Rate & Review** is a separate button, marked with a star icon. It isn't in the context menu. Clicking it opens that Plugin's own page on the public Mautic Marketplace website at :xref:`Mautic Marketplace website` in a new browser tab, where you can sign in and leave your review.
 
 .. note::
 

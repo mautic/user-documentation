@@ -57,7 +57,15 @@ You can export a Campaign in three ways.
    .. vale off
 
    * **Download ZIP** downloads the Campaign export ZIP file, now including a package manifest and any images you added in the form, to your computer, instead of sharing the Campaign publicly. Use **Download ZIP** to get the export file, for example to move the Campaign to another Mautic instance.
-   * **Publish to Marketplace** shares the Campaign publicly as a resource package on the Mautic Marketplace. It requires a **Title**, **Vendor**, **Version**, and **Description**, and lets you add **Images**. Use **Publish to Marketplace** only to share the Campaign with the wider Mautic community, since anyone can then access it there.
+   * **Publish to Marketplace** shares the Campaign publicly as a resource package on the Mautic Marketplace. Use it only to share the Campaign with the wider Mautic community, since anyone can then access it. It requires five fields:
+
+     * **Name**
+     * **Vendor Name**, which must use lowercase letters, numbers, and hyphens. The name 'mautic' is reserved.
+     * **Package Version**, which must follow :xref:`semantic versioning`, formatted as major.minor.patch (for example, ``1.2.0``).
+     * **Headline**, which is limited to 60 characters.
+     * **Description**, which must be at least 100 characters.
+
+     You can also add optional fields: **Keywords**, **Works with**, and **Languages**. Select at least one Mautic version under **Works with** before publishing. To include images, add a **Banner Image** and a gallery of additional images, each with its own alt text description.
 
    .. vale on
 
