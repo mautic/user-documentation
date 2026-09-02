@@ -39,7 +39,11 @@ Moving Contacts between Stages
 
 .. vale on
 
+.. vale off
+
 You can move Contacts between Stages with a Campaign action or with a Point Trigger. A Point Trigger's **Change contact's stage** event moves a Contact to the Stage you choose once they reach the trigger's minimum Point total. For more information, see :ref:`contact triggers`. To move Contacts with a Campaign action:
+
+.. vale on
 
 Depending on how you define your Contact lifecycle and Stages, there may be different triggers for a Contact to move between Stages. Examples include behaviors within a Campaign, or moving between Segments which have criteria set up for each Stage. 
 
