@@ -542,7 +542,7 @@ The Embedded option for embedding Mautic Forms uses JavaScript and ensures that 
 
 .. note::
 
-   The Embedded snippets — both the JavaScript ``<script>`` snippet and the IFrame snippet — use your configured **Site URL**. This includes its scheme, host, and base path, not just the domain you're currently viewing Mautic on. To control where the embedded code points, set the :ref:`Site URL <site-url>` under **Configuration** > **System Settings** > **General Settings**. If **Site URL** isn't set, the snippets fall back to the current request host.
+   The Embedded snippets - both the JavaScript ``<script>`` snippet and the IFrame snippet - use your configured **Site URL**. This includes its scheme, host, and base path, not just the domain you're currently viewing Mautic on. To control where the embedded code points, set the :ref:`Site URL <site-url>` under **Configuration** > **System Settings** > **General Settings**. If you haven't set the **Site URL**, the snippets fall back to the current request host.
 
 .. vale on
 
