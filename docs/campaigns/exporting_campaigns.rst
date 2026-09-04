@@ -43,7 +43,7 @@ You can export a Campaign in three ways.
 
 #. Go to the **Campaigns** menu.
 #. Open the options for the Campaign you want to export. These are available from the three-dot icon on the Campaign list row and from the Campaign detail view.
-#. Select the **Export** option. Instead of downloading immediately, Mautic opens the **Share** form.
+#. Select the **Export** option. Instead of downloading immediately, Mautic opens the **Share** screen.
 
    |
 
@@ -52,11 +52,11 @@ You can export a Campaign in three ways.
 
    |
 
-   The **Share** form offers two actions:
+   The **Share** screen offers two actions:
 
    .. vale off
 
-   * **Download ZIP** downloads the Campaign export ZIP file, now including a package manifest and any images you added in the form, to your computer, instead of sharing the Campaign publicly. Use **Download ZIP** to get the export file, for example to move the Campaign to another Mautic instance.
+   * **Download ZIP** downloads the Campaign export ZIP file, now including a package manifest and any images you added on the **Share** screen, to your computer, instead of sharing the Campaign publicly. Use **Download ZIP** to get the export file, for example to move the Campaign to another Mautic instance.
    * **Publish to Marketplace** shares the Campaign publicly as a resource package on the Mautic Marketplace. Use it only to share the Campaign with the wider Mautic community, since anyone can then access it. It requires five fields:
 
      * **Name**

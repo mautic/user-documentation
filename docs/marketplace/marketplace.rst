@@ -123,7 +123,7 @@ When you open a Plugin, a Reviews panel lists individual reviews from other comm
 Submitting a review
 ===================
 
-To submit a review for a Plugin, click the **Rate & Review** button on the Plugin detail page. **Rate & Review** is a separate button, marked with a star icon. It isn't in the context menu. Clicking it opens that Plugin's own page on the public Mautic Marketplace website at :xref:`Mautic Marketplace website` in a new browser tab, where you can sign in and leave your review.
+To submit a review for a Plugin, click the **Rate & Review** button on the Plugin's detail view. **Rate & Review** is a separate button, marked with a star icon. It isn't in the context menu. Clicking it opens that Plugin's own listing on the public Mautic Marketplace website at :xref:`Mautic Marketplace website` in a new browser tab, where you can sign in and leave your review.
 
 .. note::
 
