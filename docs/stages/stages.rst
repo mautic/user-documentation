@@ -16,7 +16,7 @@ Creating Stages
 
 Navigate to the **Stages** section in the left side menu, and then click **+New**.
 
-.. image:: images/Stages.png
+.. image:: images/stages.png
    :align: center
    :alt: Mautic Stages
    
@@ -45,7 +45,8 @@ Depending on how you define your Contact lifecycle and Stages, there may be diff
 
 In any Campaign where you want to have Contacts move between new Stages:
 
-.. image:: images/switch-stage.png
+.. image:: images/switch_stage.png
+   :width: 600
    :align: center
    :alt: Moving Contacts between Stages
    
@@ -72,7 +73,7 @@ Visualizing Stage movement
 
 The Mautic dashboard features two widgets to help Users see how Contacts are moving between Stages.
 
-.. image:: images/stage-dashboard.png
+.. image:: images/stage_dashboard.png
    :align: center
    :alt: Visualizing Stage movement
    
@@ -84,3 +85,9 @@ Lifecycle
 *********
 
 The lifecycle widget enables marketers to see the number of Contacts within a specified Segment in each Stage. You may include multiple Segments on the widget. It's possible to have more than one lifecycle widget to break down the information into separate graphs, but still display the data on the dashboard for multiple Segments.
+
+.. image:: images/lifecycle.png
+   :align: center
+   :alt: Visualizing Stage lifecycle
+
+|
