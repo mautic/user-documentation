@@ -834,6 +834,16 @@ To keep your analytics focused on real people, Mautic automatically excludes cer
 
 This filtering is always on, and you can't turn it off. Because Mautic doesn't track these requests, it doesn't create anonymous Contacts for them, so your analytics reflect genuine human engagement and respect visitor privacy preferences.
 
+.. vale off
+
+.. note::
+
+   This always-on filtering covers passive and background tracking, not a Contact's own explicit actions. When a Contact clicks a tracked link in an Email, Mautic records that click even if the request carries a ``Sec-GPC: 1`` or ``DNT: 1`` header, because clicking a link is an explicit, intentional action. As a result, Mautic records the page hit with its Email association, marks the Email as read, and evaluates the **Clicks Email** Campaign decision as met. The visitor still reaches the link's destination exactly as before.
+
+   This exception applies only to an explicit click on a tracked link in an Email. Passive Landing Page visits, Email opens, Asset downloads, and background Contact tracking under a Global Privacy Control or Do Not Track signal are still not recorded. The Bots and crawlers, HEAD requests, and Speculative loading requests conditions still block tracking, even for a click on a link in an Email.
+
+.. vale on
+
 Facebook pixel
 ==============
 
