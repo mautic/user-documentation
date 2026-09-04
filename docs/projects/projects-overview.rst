@@ -161,8 +161,8 @@ There are two ways to assign entities to a Project.
 
       |
 
-   #. If you can edit more than one entity type, choose the entity type you want to add.
-   #. Select the entity you want to add to the Project.
+   #. If you can edit more than one entity type, choose the entity type you want to add, such as Email, Form, or Campaign.
+   #. Select the specific entity of that type to add to the Project.
 
    .. note::
 
