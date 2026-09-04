@@ -61,8 +61,8 @@ You can export a Campaign in three ways.
 
      * **Name**
      * **Vendor Name**, which must use lowercase letters, numbers, and hyphens. The name 'mautic' is reserved.
-     * **Package Version**, which must follow :xref:`semantic versioning`, formatted as major.minor.patch (for example, ``1.2.0``).
-     * **Headline**, which is limited to 60 characters.
+     * **Package Version**, which must follow :xref:`semantic versioning`, formatted as major.minor.patch - for example, ``1.2.0``.
+     * **Headline**, which must be 60 characters or fewer.
      * **Description**, which must be at least 100 characters.
 
      You can also add optional fields: **Keywords**, **Works with**, and **Languages**. Select at least one Mautic version under **Works with** before publishing. To include images, add a **Banner Image** and a gallery of additional images, each with its own alt text description.
