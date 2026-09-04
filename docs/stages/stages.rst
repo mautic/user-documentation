@@ -84,3 +84,7 @@ Lifecycle
 *********
 
 The lifecycle widget enables marketers to see the number of Contacts within a specified Segment in each Stage. You may include multiple Segments on the widget. It's possible to have more than one lifecycle widget to break down the information into separate graphs, but still display the data on the dashboard for multiple Segments.
+
+.. image:: images/Lifecycle.png
+   :align: center
+   :alt: Visualizing Stage lifecycle
