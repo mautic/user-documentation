@@ -67,11 +67,11 @@ Installing a Theme
 
 .. vale on
 
-It's necessary to install a new or edited Theme as a zip package. The zip package must have the same structure as the preinstalled Themes. The ``config.json`` file must be present at the top level of the Theme's files: either at the root of the zip or inside the single top-level folder. The :xref:`Themes directory structure` section in the Developer Documentation contains more information about that.
+It's necessary to install a new or edited Theme as a ZIP package. The ZIP package must have the same structure as the preinstalled Themes. The ``config.json`` file must be present at the top level of the Theme's files: either at the root of the ZIP or inside the single top-level folder. The :xref:`Themes directory structure` section in the Developer Documentation contains more information about that.
 
 .. note::
 
-   Both zip layouts install correctly: the Theme files at the root of the zip, or all the Theme files wrapped inside a single top-level folder. This second layout is what you get when you compress the Theme's folder directly. Mautic detects the single top-level folder and installs its contents without keeping that folder. However, the archive must contain only that one top-level folder. If it also contains stray root-level files or folders, such as a ``__MACOSX`` directory that some tools add, the detection fails and the installation can't complete.
+   Both ZIP layouts install correctly: the Theme files at the root of the ZIP, or all the Theme files wrapped inside a single top-level folder. This second layout is what you get when you compress the Theme's folder directly. Mautic detects the single top-level folder and installs its contents without keeping that folder. However, the archive must contain only that one top-level folder. If it also contains stray root-level files or folders, such as a ``__MACOSX`` directory that some tools add, the detection fails and the installation can't complete.
 
 You can build and install your own Forms Theme using Twig, and you can also install BeeFree templates as Themes.
 
