@@ -42,8 +42,8 @@ You can export a Campaign in three ways.
 =========================
 
 #. Go to the **Campaigns** menu.
-#. Click the three-dot icon next to the Campaign's name that you want to export to open the options.
-#. Select the **Export** option from the dropdown menu. It automatically downloads the ZIP file.
+#. Open the options for the Campaign you want to export. These are available from the three-dot icon on the Campaign list row and from the Campaign detail view.
+#. Select the **Export** option. Instead of downloading immediately, Mautic opens the **Share** screen.
 
    |
 
@@ -51,6 +51,23 @@ You can export a Campaign in three ways.
       :alt: Highlight of Campaign menu, Options three-dot button, and Export option in the Mautic Campaigns section
 
    |
+
+   The **Share** screen offers two actions:
+
+   .. vale off
+
+   * **Download ZIP** downloads the Campaign export ZIP file, now including a package manifest and any images you added on the **Share** screen, to your computer, instead of sharing the Campaign publicly. Use **Download ZIP** to get the export file, for example to move the Campaign to another Mautic instance.
+   * **Publish to Marketplace** shares the Campaign publicly as a resource package on the Mautic Marketplace. Use it only to share the Campaign with the wider Mautic community, since anyone can then access it. It requires five fields:
+
+     * **Name**
+     * **Vendor Name**, which must use lowercase letters, numbers, and hyphens. The name 'mautic' is reserved.
+     * **Package Version**, which must follow :xref:`semantic versioning`, formatted as major.minor.patch - for example, ``1.2.0``.
+     * **Headline**, which must be 60 characters or fewer.
+     * **Description**, which must be at least 100 characters.
+
+     You can also add optional fields: **Keywords**, **Works with**, and **Languages**. Select at least one Mautic version under **Works with** before publishing. To include images, add a **Banner Image** and a gallery of additional images, each with its own alt text description.
+
+   .. vale on
 
 .. vale off
 
