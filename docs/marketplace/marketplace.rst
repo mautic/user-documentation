@@ -102,12 +102,32 @@ Context menu
 ============
 The context menu shows actions you can take.
 
-* Close takes you to the List View
+* Close takes you to the list view
 
 * Install installs the Plugin
 
 * Issue tracker opens a new window with the issue tracker for the Plugin. It shows only if the Plugin has this information available. Use this option to search for issues with the Plugin and to report new issues to the maintainers.
 
+Ratings and reviews
+*******************
+
+The Mautic Marketplace shows community ratings and reviews for Plugins. This helps you decide which Plugins to install. These community ratings and reviews reflect other people's opinions, not a Mautic-verified guarantee of version compatibility or security, so always verify that a Plugin supports your Mautic version before installing.
+
+Viewing ratings
+===============
+
+Each Plugin in the list view shows its average Mautic Marketplace community rating, as a number rather than star icons, and its total review count. This community rating is separate from the Packagist stars shown in the same list, and gives you a quick sense of community feedback before viewing full details.
+
+When you open a Plugin, a Reviews panel lists individual reviews from other community members. Each review has a 1 to 5 star rating, the review text, and the reviewer's username.
+
+Submitting a review
+===================
+
+To submit a review for a Plugin, click the **Rate & Review** button on the Plugin's detail view. **Rate & Review** is a separate button, marked with a star icon. It isn't in the context menu. Clicking it opens that Plugin's own listing on the public Mautic Marketplace website at :xref:`Mautic Marketplace website` in a new browser tab, where you can sign in and leave your review.
+
+.. note::
+
+    The public Mautic Marketplace website manages reviews, not your Mautic instance. This lets the community share feedback across all Mautic installations.
 
 Command line (CLI) command
 **************************
