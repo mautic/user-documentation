@@ -161,8 +161,12 @@ There are two ways to assign entities to a Project.
 
       |
 
-   #. Choose the type of entity you want to add.
-   #. Select the entity you want to add to the Project.
+   #. If you can edit more than one entity type, choose the entity type you want to add, such as Email, Form, or Campaign.
+   #. Select the specific entity of that type to add to the Project.
+
+   .. note::
+
+      When you can edit only one entity type, Mautic skips the type-selection step and opens the picker for that entity type directly. In this case, the button names the entity type. For example, it reads **Add new to project Email** instead of **Add Entities to Project**. This happens automatically based on the entity types you can edit and requires no configuration.
 
 .. vale off
 
