@@ -52,6 +52,7 @@ In any Campaign where you want to have Contacts move between new Stages:
 3. Select the Stage you want to move the Contacts to. You can base this on a prior event, or on a Segment that Contacts are in based on filters matching your requirements for a Stage.
 
 .. image:: images/switch_stage.png
+   :width: 600
    :align: center
    :alt: Moving Contacts between Stages
 
