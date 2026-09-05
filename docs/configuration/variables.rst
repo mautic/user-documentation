@@ -193,7 +193,7 @@ See :doc:`Components</components/assets>` and :doc:`Manage Pages</components/lan
    * - Asset link for Asset id#
      - ``{assetlink=25}``
    * - Focus Item id#
-     - ``{focus=4}``
+     - ``{focus=4}`` loads the display script and activates tracking together (same as ``{focus=4|tracking}``); use ``{focus=4|display}`` for display only
    * - Form id#
      - ``{form=83}``
    * - Landing Page link for page id#
@@ -385,9 +385,9 @@ Alphabetical list
    * - Fax
      - ``{contactfield=fax}``
    * - Focus Item id#
-     - ``{focus=4}``
+     - ``{focus=4}`` loads the display script and activates tracking together (same as ``{focus=4|tracking}``); use ``{focus=4|display}`` for display only
    * - Form id#
-     - ``{form=83}`` 
+     - ``{form=83}``
    * - Fax (Company)
      - ``{contactfield=companyfax}`` 
    * - First Name
