@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+## Description: Build Mautic community handbook using the Sphinx HTML builder.
+## Usage: build-docs
+## Example: ddev build-docs
+
+# Ensure we fail on error
+set -e
+
+# Initialize terminal colors/styles
+bold=$(tput bold)
+green=$(tput setaf 2)
+reset=$(tput sgr0)
+underline=$(tput smul)
+
+echo "${bold}${green}🔧 Building Mautic community handbook documentation...${reset}"
+
+# Ensure we're in the right directory
+cd /var/www/html/docs
+echo
+
+# Run the build
+make html
+
+# Success message
+echo
+echo "${green}✅ Documentation build completed successfully!${reset}"
+echo "${green}📁 The HTML pages are in: ${bold}/var/www/html/docs/build/html${reset}"
+
+# Friendly access hint
+echo "${green}🌐 View the documentation at: ${bold}${underline}https://${DDEV_HOSTNAME}${reset}"
+echo
