@@ -51,9 +51,7 @@ Point Triggers
 
 Once a Contact has accumulated a Point total, you may want to trigger an action with the Contact. You may create multiple triggers for different Point values.
 
-To add a new trigger:
-
-1. Click **Points > Manage Triggers > New** - located in the top right corner.
+To add a new trigger, click **Points > Manage Triggers > New** - located in the top right corner.
 
 .. image:: images/new_points_trigger.png
     :alt: Screenshot of New Points trigger
@@ -61,10 +59,8 @@ To add a new trigger:
 Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Category**, and **Active** options are all the same. Point Triggers also include the following options:
 
 * **Minimum number of Points** - The minimum number of Points a Contact must reach for this Point Trigger to fire.
-
 * **Contact color** - This sets a highlight color for Contacts who earn at least the minimum number of Points.
-
-* **Trigger for existing applicable Contacts upon saving** - Select **Yes** to apply this trigger to Contacts who already have the minimum number of Points.
+* **Trigger for existing applicable Contacts upon saving** - Select 'Yes' to apply this trigger to Contacts who already have the minimum number of Points.
 
 Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point Triggers and associated events are also fully customizable.
 
