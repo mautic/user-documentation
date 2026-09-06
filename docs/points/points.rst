@@ -20,7 +20,7 @@ To add a new action:
 .. image:: images/new_points_action.png
     :alt: Screenshot of New Points action
 
-2. In the main panel, there are four boxes for key information. Enter the appropriate information.
+2. In the main panel, there are five boxes for key information. Enter the appropriate information.
 
    * **Name** - The name of your action. This is how the action displays in your list of actions, so choose an identifiable name.
 
@@ -28,7 +28,9 @@ To add a new action:
 
    * **Change Points (+/-)** - The value change to set for the action. The ``+`` isn't necessary when adding Points. When subtracting Points, add the ``-`` symbol.
 
-   * **Actions taken by Contact** - This is the behavior or action the Contact must complete to trigger the action.
+   * **Action taken by Contact** - This is the behavior or action the Contact must complete to trigger the action.
+
+   * **Point Group** - Identify the target group for the action. If you leave this empty, the action applies to the Contact's overall Point total instead of a specific group.
 
 3. On the right side is more information:
 
@@ -49,10 +51,20 @@ Point Triggers
 
 Once a Contact has accumulated a Point total, you may want to trigger an action with the Contact. You may create multiple triggers for different Point values.
 
+To add a new trigger:
+
+1. Click **Points > Manage Triggers > New** - located in the top right corner.
+
 .. image:: images/new_points_trigger.png
     :alt: Screenshot of New Points trigger
 
-Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Category**, and **Active** options are all the same. The trigger fires based on the minimum number of Points. Set a number and decide if you want to **Trigger for existing applicable Contacts upon saving - if activated**. 
+Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Category**, and **Active** options are all the same. Point Triggers also include the following options:
+
+* **Minimum number of Points** - The minimum number of Points a Contact must reach for this Point Trigger to fire.
+
+* **Contact color** - This sets a highlight color for Contacts who earn at least the minimum number of Points.
+
+* **Trigger for existing applicable Contacts upon saving** - Select **Yes** to apply this trigger to Contacts who already have the minimum number of Points.
 
 Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point Triggers and associated events are also fully customizable.
 
