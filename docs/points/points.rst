@@ -20,7 +20,7 @@ To add a new action:
 .. image:: images/new_points_action.png
     :alt: Screenshot of New Points action
 
-2. In the main panel, there are five boxes for key information. Enter the appropriate information.
+2. In the main panel, fill in the following fields:
 
    * **Name** - The name of your action. This is how the action displays in your list of actions, so choose an identifiable name.
 
