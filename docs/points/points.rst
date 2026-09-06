@@ -15,7 +15,7 @@ Point Actions are those times when a Contact receives a change in their Point to
 
 To add a new action:
 
-1. Click **Points > Manage Actions > New** - located in the top right corner.
+1. On the left side, navigate to **Points > Manage Actions** and click the **New** button located in the top right corner to open the **New Point Action** window.
 
 .. image:: images/new_points_action.png
     :alt: Screenshot of New Points action
@@ -51,7 +51,7 @@ Point Triggers
 
 Once a Contact has accumulated a Point total, you may want to trigger an action with the Contact. You may create multiple triggers for different Point values.
 
-To add a new trigger, click **Points > Manage Triggers > New** - located in the top right corner.
+To add a new trigger, on the left side, navigate to **Points > Manage Triggers** and click the **New** button located in the top right corner to create a new Point Trigger.
 
 .. image:: images/new_points_trigger.png
     :alt: Screenshot of New Points trigger
