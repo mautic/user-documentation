@@ -61,10 +61,8 @@ To add a new trigger:
 2. Complete the main panel information. Use the **Name**, **Description**, **Point Group**, and **Category** fields as you do for Point Actions. The **Active and Activate/Deactivate at date/time** settings also work the same way. Then, fill in these extra fields:
 
    * **Minimum number of Points** - The minimum number of Points a Contact must reach for this Point Trigger to fire.
-
    * **Contact color** - This sets a highlight color for Contacts who earn at least the minimum number of Points.
-
-   * **Trigger for existing applicable Contacts upon saving** - Select **Yes** to apply this trigger to Contacts who already have the minimum number of Points.
+   * **Trigger for existing applicable Contacts upon saving** - Select 'Yes' to apply this trigger to Contacts who already have the minimum number of Points.
 
 Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point Triggers and associated events are also fully customizable.
 
