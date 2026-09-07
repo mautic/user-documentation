@@ -18,7 +18,7 @@ Mautic only populates UTM values on Asset downloads when you share the Asset URL
 
 .. code-block:: text
 
-   https://example.com/Asset/your-file?utm_source=newsletter&utm_medium=Email&utm_campaign=spring_sale_2026
+   https://example.com/Asset/your-file?utm_source=newsletter&utm_medium=email&utm_campaign=spring_sale_2026
 
 In this URL, ``utm_source=newsletter`` identifies the sending newsletter as the origin, ``utm_medium=email`` identifies the Channel, and ``utm_campaign=spring_sale_2026`` groups the download under a named Campaign. You construct this URL manually and place it directly in your content rather than relying on a Form submit action.
 

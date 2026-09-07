@@ -20,7 +20,7 @@ Configure Email UTM tags
 
 .. vale on
 
-#. Open the Email and the edit its details:
+#. Open the Email and edit its details:
 
    #. Go to **Channels** > **Emails**.
    #. Click the name of the Email you want to modify.
@@ -41,7 +41,7 @@ Configure Email UTM tags
 
    .. code-block:: text
 
-      https://example.com/promo?utm_source=newsletter&utm_medium=Email&utm_campaign=spring_sale_2026
+      https://example.com/promo?utm_source=newsletter&utm_medium=email&utm_campaign=spring_sale_2026
 
 This URL results from an Email configured with ``utm_source=newsletter``, ``utm_medium=email``, and ``utm_campaign=spring_sale_2026``. The ``utm_source`` value ``newsletter`` clearly identifies the sending list or newsletter program as the origin. The ``utm_medium`` value ``email`` tells analytics tools to classify this traffic in the Email Channel grouping. The ``utm_campaign`` value ties the click to the named marketing initiative.
 

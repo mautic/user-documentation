@@ -16,7 +16,7 @@ Configure DWC blocks
 
 .. vale on
 
-#. Open the DWC block and the edit its details:
+#. Open the DWC block and edit its details:
 
    #. Go to **Components** > **Dynamic Content**.
    #. Click the name of the DWC block you want to modify.
@@ -53,7 +53,7 @@ The ``utm_medium=website`` value reflects that the block renders on a website La
 
    Use consistent naming across blocks. If one block uses ``source=dwc`` and another uses ``source=dynamic-web-content``, your analytics data splits across two rows, making comparison difficult.
 
-When the setup is working correctly, links inside the DWC block include UTM parameters when rendered on the Landing Page. Clicking through and checking the destination URL in the browser address bar shows the correct parameters. Traffic from that block appears as a distinct source or medium combination in your analytics platform
+When the setup is working correctly, links inside the DWC block include UTM parameters when rendered on the Landing Page. Clicking through and checking the destination URL in the browser address bar shows the correct parameters. Traffic from that block appears as a distinct source or medium combination in your analytics platform.
 
 .. seealso::
 

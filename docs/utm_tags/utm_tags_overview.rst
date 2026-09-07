@@ -62,7 +62,7 @@ These features read UTM parameters from URLs and save them to a Contact's record
    * - Feature
      - How it triggers
      - Notes
-   * - **Form action "Record UTM tags"**
+   * - **Form action "Record UTM Tags"**
      - Visitor submits a Mautic Form that has this action configured. It reads UTM parameters from the query string of the Landing Page the Form is on, with Landing Page referrer as fallback.
      - See :doc:`utm_tags_forms`
    * - **Tracking script / pixel on external site**
