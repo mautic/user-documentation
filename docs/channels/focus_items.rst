@@ -164,7 +164,7 @@ When creating a new Focus Item, you can set the following fields:
 
 .. vale on
 
-**Google Analytics UTM tags** - Mautic supports UTM tagging in Emails, Focus Items, and Landing Pages. Any UTM tags with values populated are automatically appended to the end of any links used in the Focus Item. See :doc:`/channels/utm_tags` for more information.
+**Google Analytics UTM tags** - Mautic supports UTM tagging in Emails, Focus Items, and Landing Pages. Any UTM tags with values populated are automatically appended to the end of any links used in the Focus Item. See :doc:`/utm_tags/utm_tags_overview` for more information.
 
   .. image:: images/focus_items/focus_item_create.png
     :width: 400
