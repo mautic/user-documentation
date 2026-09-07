@@ -11,8 +11,6 @@ There is nothing to configure on the Landing Page or website itself. The UTM par
 
 .. note::
 
-   .. note::
-
    Landing Pages have no settings, fields, or toggles for UTM parameters. If asked where to configure UTM tags for a Landing Page, the answer is always in the link that brings visitors to the Landing Page.
 
 Examples

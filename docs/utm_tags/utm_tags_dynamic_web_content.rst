@@ -16,7 +16,7 @@ Configure DWC blocks
 
 .. vale on
 
-#. Open the DWC block and the edit details:
+#. Open the DWC block and the edit its details:
 
    #. Go to **Components** > **Dynamic Content**.
    #. Click the name of the DWC block you want to modify.
