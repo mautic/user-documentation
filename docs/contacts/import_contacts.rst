@@ -1,7 +1,7 @@
 Import Contacts
 ###############
 
-Contact importing is possible through the User Interface in Mautic. For larger imports it's recommended to complete the import in the background via a cron job.
+Contact importing is possible through the User Interface in Mautic. For larger imports it's recommended to complete the import in the background via a Cron job.
 
 Since Mautic 2.9, Mautic shows in a Contact's event history when an import job creates or updates a Contact.
 
@@ -50,12 +50,12 @@ Use the browser import method only if you don't have any other choice. You shoul
 Background import
 =================
 
-Background import jobs - triggered manually or via a cron job - have the advantage of benevolent time limits. A CSV background import isn't restarted every batch - 1 batch = 100 rows by default - Mautic saves the last row imported, and the next batch continues from that point. Background imports are always faster and more reliable than browser imports.
+Background import jobs - triggered manually or via a Cron job - have the advantage of benevolent time limits. A CSV background import isn't restarted every batch - 1 batch = 100 rows by default - Mautic saves the last row imported, and the next batch continues from that point. Background imports are always faster and more reliable than browser imports.
 
 
 .. warning:: 
 
-  Background import requires the command ``php /path/to/mautic/bin/console mautic:import`` to run periodically. Add it to your :doc:`cron jobs</configuration/cron_jobs>`.
+  Background import requires the command ``php /path/to/mautic/bin/console mautic:import`` to run periodically. Add it to your :doc:`Cron jobs</configuration/cron_jobs>`.
 
 Successful results of the :doc:`background job</configuration/cron_jobs>` look like this:
 
@@ -72,7 +72,7 @@ Automatic import type configuration
 
 There is an option in the Global Mautic Configuration > Contact settings to define the optimal limit of browser import vs background import. 
 
-If you enter 500, that means that if there's less than ``500`` rows, the browser imports it. If there's more than 500 rows, Mautic queues it for processing when the background import cron job next runs.
+If you enter 500, that means that if there's less than ``500`` rows, the browser imports it. If there's more than 500 rows, Mautic queues it for processing when the background import Cron job next runs.
 
  The default value is zero, which means it shows two import buttons instead of one, and you have to decide what import option to use during every import.
 
@@ -161,9 +161,28 @@ How to start an import
 
 5. Upload your CSV file.
 
-6. The field mapping page should show up. The first set of options lets you select owner, Segment and tags to assign globally to all imported Contacts. The second set of options lets you map the columns from your CSV file to Mautic Contact :ref:`Custom Fields<manage custom fields>`. The third set of options lets you map columns from your CSV file to special Contact attributes like *Date Created* and so on.
+6. The field mapping page should show up. The first set of options lets you select owner, Segment and tags to assign globally to all imported Contacts. It also includes the **Create new Contacts?** toggle, which controls whether the import :ref:`creates new Contacts or updates existing ones only<create new contacts or update only>`. The second set of options lets you map the columns from your CSV file to Mautic Contact :ref:`Custom Fields<manage Custom Fields>` and to special Contact attributes like 'Date created' and so on.
 
 7. When your field mapping is ready, click one of the Import buttons described previously.
+
+   .. image:: images/import_contact_field_mapping.png
+      :align: center
+      :alt: Contact import field mapping page showing the two sets of options
+
+|
+
+Create new Contacts or update only
+==================================
+
+The **Create new Contacts?** toggle defaults to 'Yes'. With 'Yes', the import keeps its usual behavior: any CSV row that doesn't match an existing Contact creates a new Contact.
+
+Toggle **Create new Contacts?** to 'No' to update only. Mautic then updates the records it matches and doesn't create any new Contacts.
+
+Mautic matches each CSV row against your existing records using the fields you've set as :ref:`unique identifiers<manage Custom Fields>`. When you've turned off **Create new Contacts?** and a row doesn't match an existing Contact, Mautic skips it, counts it as an ignored row, and logs it in the ignored rows list on the :ref:`import job detail<import job detail>` page.
+
+The Companies import offers the same option, named **Create new Companies?**, which works the same way for Companies.
+
+Mautic stores this choice on the import itself, so it applies whether the import runs in the browser or in the background through ``mautic:import``. A queued import that a scheduled job later processes honors the setting too.
 
 How to stop a background import
 ===============================
@@ -174,7 +193,7 @@ How to stop a background import
 
 3. Deactivate the import job you want to stop. The import changes :ref:`status<import job status>` to Stopped. It finishes importing the current batch and then stops.
 
-4. To start the import again, activate it, and the background job continues with the next :doc:`cron job execution</configuration/cron_jobs>`.
+4. To start the import again, activate it, and the background job continues with the next :doc:`Cron job execution</configuration/cron_jobs>`.
 
 .. image:: images/import-publish.png
     :align: center

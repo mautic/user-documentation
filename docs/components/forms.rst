@@ -538,8 +538,13 @@ Embedded
 
 The Embedded option for embedding Mautic Forms uses JavaScript and ensures that the Forms on your website are always up to date with what you have set in Mautic. If you make changes to the Form in Mautic, you don't have to worry about re-copying the Form code everywhere you use the Form. Features including auto-fill and progressive profiling **only** works with the Embedded option.
 
+.. vale off
+
 .. note::
-  Before copying the code to embed your Mautic Forms, ensure that you are on the correct domain name - not a staging area or internal reference for example - as the Form embed code references the URL.
+
+   The Embedded snippets - both the JavaScript ``<script>`` snippet and the IFrame snippet - use your configured **Site URL**. This includes its scheme, host, and base path, not just the domain you're currently viewing Mautic on. To control where the embedded code points, set the :ref:`Site URL <site-url>` under **Configuration** > **System Settings** > **General Settings**. If you haven't set the **Site URL**, the snippets fall back to the current request host.
+
+.. vale on
 
 Via JavaScript
 ~~~~~~~~~~~~~~
