@@ -5,9 +5,9 @@ UTM tags as Campaign conditions
 
 .. vale on
 
-Inside a Mautic Campaign, you can branch the flow based on the UTM values recorded on a Contact's profile. You complete this through a **Contact field value** condition node, which has a dedicated UTM Tags section that exposes all five standard UTM fields. Depending on whether the Contact's UTM data matches your condition, the Campaign routes them down the 'yes' or 'no' path, letting you deliver different follow-up actions, Emails, or wait steps based on where the Contact originally came from.
+Inside a Mautic Campaign, you can branch the flow based on the UTM values recorded on a Contact's profile. You complete this through a **Contact field value** condition node, which has a dedicated UTM Tags section that exposes all five standard UTM fields. Depending on whether the Contact's UTM data matches your condition, the Campaign routes them down the **Yes** or **No** path, letting you deliver different follow-up actions, Emails, or wait steps based on where the Contact originally came from.
 
-For this to work, Contacts must already have UTM data on their profile, captured via a Form submission with the **Record UTM tags** action or via a Landing Page visit with UTM parameters in the URL. The Campaign must also have a trigger - Segment membership, Form submission, or similar - configured before adding condition nodes.
+For this to work, Contacts must already have UTM data on their profile, captured via a Form submission with the **Record UTM Tags** action or via a Landing Page visit with UTM parameters in the URL. The Campaign must also have a trigger - Segment membership, Form submission, or similar - configured before adding condition nodes.
 
 Configure conditions
 ********************
@@ -41,7 +41,7 @@ Branching on ``utm_medium`` rather than ``utm_campaign`` is useful when unifying
 
 .. warning::
 
-   The UTM condition evaluates the values **currently recorded** on the Contact profile at the moment the Campaign processes them. If Mautic hasn't captured UTM data when the Contact enters the Campaign - for example, if they entered before submitting the Form that records UTM tags - the condition evaluates against empty values and routes the Contact to the 'No' path. Order matters.
+   The UTM condition evaluates the values **currently recorded** on the Contact profile at the moment the Campaign processes them. If Mautic hasn't captured UTM data when the Contact enters the Campaign - for example, if they entered before submitting the Form that records UTM tags - the condition evaluates against empty values and routes the Contact to the **No** path. Order matters.
 
 .. seealso::
 

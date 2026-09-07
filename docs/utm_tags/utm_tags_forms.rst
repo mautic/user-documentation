@@ -5,7 +5,7 @@ Recording UTM tags in Forms
 
 .. vale on
 
-When a Contact submits a Mautic Form, you can automatically capture the UTM parameters from the Landing Page URL and store them on their profile. A built-in Mautic action called **Record UTM tags** handles this, but the action itself doesn't define which UTM values to capture. It reads whatever UTM parameters are already present in the URL of the Landing Page where the Form lives.
+When a Contact submits a Mautic Form, you can automatically capture the UTM parameters from the Landing Page URL and store them on their profile. A built-in Mautic action called **Record UTM Tags** handles this, but the action itself doesn't define which UTM values to capture. It reads whatever UTM parameters are already present in the URL of the Landing Page where the Form lives.
 
 That means the website is responsible for including UTM parameters in the Landing Page URL. The Form action picks them up at submission time. The five standard parameters it captures are ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, and ``utm_term``. To follow the steps below, you need permission to edit Forms in Mautic and a Form already embedded on a website Landing Page where the site sends UTM-tagged traffic.
 
@@ -16,7 +16,7 @@ Add UTM recording
 
 .. vale on
 
-#. Open the Form and the edit details:
+#. Open the Form and edit its details:
 
    #. Go to **Components** > **Forms**.
    #. Click the name of the Form you want to modify.
@@ -56,9 +56,10 @@ The choice to use three parameters rather than all five reflects a practical min
 
    If a visitor arrives without UTM parameters in the URL but the Landing Page referrer URL contains them, meaning they clicked through from a Landing Page that had UTM parameters, Mautic falls back to reading parameters from the Landing Page referrer. Don't rely on this as a primary strategy, but it prevents UTM fields from remaining empty in this scenario.
 
-After saving, the **Record UTM tags** action appears in the Form's action list. When a Contact submits the Form from a UTM-tagged URL, their profile displays a **UTM tags recorded** timeline entry, separate from the Form submission entry, displaying the associated Form ID and captured field values. If UTM fields remain empty after a test submission, the URL used during testing didn't contain UTM parameters. This indicates a website-side link configuration issue rather than a Mautic configuration issue.
+After saving, the **Record UTM Tags** action appears in the Form's action list. When a Contact submits the Form from a UTM-tagged URL, their profile displays a **UTM tags recorded** timeline entry, separate from the Form submission entry, displaying the associated Form ID and captured field values. If UTM fields remain empty after a test submission, the URL used during testing didn't contain UTM parameters. This indicates a website-side link configuration issue rather than a Mautic configuration issue.
 
-.. TODO: add screenshot - Contact timeline showing a "UTM tags recorded" entry with populated UTM fields and a FORMID reference
+.. image:: ../channels/images/utm_tags/utm_tags_recorded_timeline.png
+   :alt: Contact activity timeline showing a 'UTM tags recorded' entry with populated UTM fields and a Form ID reference
 
 .. seealso::
 

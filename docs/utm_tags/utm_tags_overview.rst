@@ -3,7 +3,7 @@ UTM tags overview
 
 .. vale off
 
-UTM - Urchin Tracking Module - are short tags added to URLs that tell analytics tools where traffic comes from, including the specific Campaign, Channel, or source. Mautic supports UTM tags across many features, though each feature handles UTM data differently. Features capture, generate, store, and use UTM data in distinct ways. Confusing how these features handle the data causes gaps in tracking, empty fields, or incorrect expectations.
+UTM tags - Urchin Tracking Module - are short tags added to URLs that tell analytics tools where traffic comes from, including the specific Campaign, Channel, or source. Mautic supports UTM tags across many features, though each feature handles UTM data differently. Features capture, generate, store, and use UTM data in distinct ways. Confusing how these features handle the data causes gaps in tracking, empty fields, or incorrect expectations.
 
 .. vale on
 
@@ -62,7 +62,7 @@ These features read UTM parameters from URLs and save them to a Contact's record
    * - Feature
      - How it triggers
      - Notes
-   * - **Form action "Record UTM tags"**
+   * - **Form action "Record UTM Tags"**
      - Visitor submits a Mautic Form that has this action configured. It reads UTM parameters from the query string of the Landing Page the Form is on, with Landing Page referrer as fallback.
      - See :doc:`utm_tags_forms`
    * - **Tracking script / pixel on external site**
@@ -142,7 +142,7 @@ REST API
 
 Two REST endpoints manage UTM data directly on Contacts:
 
-* ``POST /contacts/{id}/utm/add``: accepts the full UTM payload - all five tags, plus ``url``, ``referrer``, and ``User_agent``
+* ``POST /contacts/{id}/utm/add``: accepts the full UTM payload - all five tags, plus ``url``, ``referer``, and ``user_agent``
 * ``POST /contacts/{id}/utm/{utmid}/remove``: removes existing UTM tags from a Contact record
 
 How to understand each group
