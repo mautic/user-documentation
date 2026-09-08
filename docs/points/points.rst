@@ -90,7 +90,7 @@ Contact triggers
 
 .. vale off
 
-**Change contact's stage** - Move the Contact to a Stage you select when the trigger fires. Choose an activated Stage to move the Contact into, or choose **Remove existing stage** to clear the Contact's current Stage. A Contact can only move forward. Mautic won't move a Contact to a Stage with a lower weight than their current Stage, and if the Contact is already in the selected Stage, nothing changes. Mautic records a 'Stage changed' entry on the Contact's timeline. For more information on Stages and weights, see :ref:`moving contacts between stages`.
+**Change contact's stage** - Move the Contact to a Stage you select when the trigger fires. Choose an activated Stage to move the Contact into, or choose **Remove existing stage** to clear the Contact's current Stage. When moving between Stages, a Contact can only move forward. Mautic won't move a Contact to a Stage with a lower weight than their current Stage. If the Contact is already in the selected Stage, nothing changes. When Mautic changes or removes a Stage, it records a 'Stage changed' entry on the Contact's timeline. For more information on Stages and weights, see :ref:`moving contacts between stages`.
 
 .. vale on
 
