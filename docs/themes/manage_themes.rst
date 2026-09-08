@@ -71,7 +71,7 @@ It's necessary to install a new or edited Theme as a ZIP package. The ZIP packag
 
 .. note::
 
-   Both ZIP layouts described earlier install correctly. The second layout—wrapping the Theme files inside a single top-level folder—is what you get when you compress the Theme's folder directly. Mautic detects the single top-level folder and installs its contents without keeping that folder. However, the archive must contain only that one top-level folder. If it also contains stray root-level files or folders, such as a ``__MACOSX`` directory that some tools add, the detection fails and the installation can't complete.
+   Both ZIP layouts described earlier install correctly. The second layout - wrapping the Theme files inside a single top-level folder - is what you get when you compress the Theme's folder directly. Mautic detects the single top-level folder and installs its contents without keeping that folder. However, the archive must contain only that one top-level folder. If it also contains stray root-level files or folders, such as a ``__MACOSX`` directory that some tools add, the detection fails and the installation can't complete.
 
 You can build and install your own Forms Theme using Twig, and you can also install BeeFree templates as Themes.
 
