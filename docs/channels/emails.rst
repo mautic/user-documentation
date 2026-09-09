@@ -807,6 +807,8 @@ You can find the configuration of the unsubscribe text in the global settings.
 
 Mautic resolves the ``{unsubscribe_url}``, ``{unsubscribe_text}``, and ``{resubscribe_url}`` tokens to a validation page rather than executing the action immediately. When a Contact clicks the link they first land on a 'Confirm your email address' page and must type the Email address the message was sent to. Mautic completes the unsubscribe or resubscribe only if the entered Email address matches. The Contact's Email address is no longer embedded in the link itself, which protects against leaked or forwarded links. If the entered address doesn't match, Mautic shows the error 'This email address does not match the email address that was used to generate this link.' and makes no change.
 
+This validation step is on by default and you can turn it off with the **Require email validation for unsubscribe** setting in **Email Settings**, documented in :doc:`/configuration/settings`.
+
 .. note::
 
    Links in Emails sent by older versions of Mautic no longer unsubscribe or resubscribe automatically on click. If Mautic still has a record of that send, it redirects the Contact to the same confirmation page. If it doesn't, an unsubscribe link shows a 'Record not found.' message, and a resubscribe link shows a page-not-found (``404``) error.
