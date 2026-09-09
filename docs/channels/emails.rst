@@ -833,6 +833,12 @@ A link is valid when its ``href``:
 * Uses one of these seven schemes: ``http``, ``https``, ``ftp``, ``ftps``, ``mailto``, ``tel``, or ``sms``
 * Is an anchor link that starts with ``#``
 * Is a Mautic token such as ``{unsubscribe_url}``
+* Is a path-relative link that starts with ``/``, such as ``/pricing``
+* Is a query-only link that starts with ``?``, such as ``?ref=email``
+* Omits the scheme but includes a domain and path, such as ``example.com/path``
+* Is an otherwise valid ``http``, ``https``, ``ftp``, or ``ftps`` URL that contains spaces or angle brackets, such as ``https://example.com/?tags=Tag Name -> Stage`` produced by the Email builder or by token replacement
+
+A save fails when a link uses ``javascript:`` or another pseudo-scheme, points to a bare filename with no host such as ``file.pdf``, or can't be parsed at all, like the ``://example.com`` in the earlier example.
 
 .. vale on
 
