@@ -150,7 +150,7 @@ You can customize each Report to include the columns of choice, filter data base
 
      Adding multiple fields to order by uses the last one in the Order list first. Ordering by **First Name Ascending** and adding **Email Ascending**, for instance, sorts the Email column first and duplicate rows are then sorted by first name ascending.
 
-* **Filters** -  Filter the data using conditions and values. This allows the generation of very granular Reports. This option helps you to narrow down the data included in the Report. The data Points used for filters don’t have to be columns that appear in the Report table. A commonly used filter for any Reports that include Contact record data is Email Not Empty, which displays only identified Contacts in the Report. Additional use cases can include Contacts or items that match a certain value, events happening within a certain date range, etc.
+* **Filters** -  Filter the data using conditions and values. This allows the generation of very granular Reports. This option helps you to narrow down the data included in the Report. The data Points used for filters don’t have to be columns that appear in the Report table. A commonly used filter for any Reports that include Contact record data is Email Not Empty, which displays only identified Contacts in the Report. Additional use cases can include Contacts or items that match a certain value, events happening within a certain date range, and so on. On ``date`` and ``datetime`` columns, a filter value can be a relative date expression that Mautic re-evaluates on every run, regardless of the **Dynamic** filter setting - see :ref:`relative date filters`.
 
   .. note::
 
@@ -165,7 +165,76 @@ You can customize each Report to include the columns of choice, filter data base
   You can use Email or Contact ID to display a single row per Contact record. For example, you can group by **Contact ID** to view the unique number of Asset Downloads or Form Submissions for a single Form, instead of total Asset Downloads or Form Submissions, which could include duplicates.
 
 * **Calculated columns** - Select the function that you want to apply to individual columns. Calculated columns display count, average, sum, or the minimum or maximum values from a selected field. They're only available when using a grouping to show a calculation for that grouping. Continuing with the previous example of grouping by a Contact ID number or Email address, a ``COUNT`` calculation displays how many times that Contact record appears on the Report if not for the grouping.
-  
+
+Relative date filters
+---------------------
+
+In a filter on a ``date`` or ``datetime`` column, you can enter a relative date expression in the value field instead of a fixed calendar date. Mautic re-evaluates the expression against the current date each time the Report runs, so a Report you build once stays current on every run and schedule instead of freezing to the date when you saved it. The Report runs whenever Mautic generates it - when you view it, when you export it, and when Mautic sends it on a schedule - and each of those re-evaluates the expression. For scheduled sends, see the Cron job to schedule Reports section below.
+
+The value field shows no hint, autocomplete, or dropdown for these expressions, so use this reference when you build or troubleshoot such a filter.
+
+Relative date expressions apply only to filters on ``date`` and ``datetime`` columns. They don't apply when the operator is a string comparison. The **Like**, **Not like**, **Starts with**, **Ends with**, and **Contains** operators all treat the value as literal text. Fixed calendar dates, and text that Mautic can't parse, keep their existing literal behavior. Mautic uses an expression it doesn't recognize as literal text against the ``date`` or ``datetime`` column, which typically matches no rows and shows no validation error. If a Report that uses one of these filters comes back empty, compare the value against the syntax below.
+
+The value field accepts these expressions:
+
+.. vale off
+
+.. list-table::
+   :header-rows: 1
+
+   * - Expression type
+     - Examples
+     - How it resolves
+   * - Keywords
+     - ``today``, ``tomorrow``, ``yesterday``
+     - The named day.
+   * - Relative periods
+     - ``this week``, ``last month``, ``next year`` (``this`` / ``last`` / ``next`` with ``week``, ``month``, or ``year``)
+     - The whole named period.
+   * - Signed intervals
+     - ``+1 week``, ``-2 days``, ``-3 months 2 days``, and ``datetime`` forms such as ``-2 days 12:34:56``
+     - The current date and time shifted by the interval.
+   * - "N ago"
+     - ``5 days ago`` (generic form ``{n} {unit} ago``)
+     - The current date shifted back by the interval.
+   * - First or last day of a period
+     - ``first day of next month``, ``last day of this year``
+     - The first or last day of the named period.
+   * - Anniversary or birthday, with optional offset
+     - ``birthday``, ``anniversary``, ``birthday +2 days``
+     - The matching month and day, in any year.
+
+.. vale on
+
+How an expression resolves depends on the operator and on whether the expression names a calendar period:
+
+* Calendar periods - ``today``, and ``this``, ``last``, or ``next`` combined with ``week``, ``month``, or ``year`` - resolve to a whole-period range.
+* Any filter on a ``date`` column also resolves to a whole-period range, regardless of expression type, because a ``date`` column has no time component.
+* With **Is equal to**, any relative value resolves to a whole-period range - a day for a ``datetime`` interval such as ``-2 days 12:34:56`` - and the column value must fall within that period.
+* With **Not equal**, the value resolves to the same whole-period range as **Is equal to**, and the column value must fall outside the period, or be empty.
+* With **Greater than**, **Greater than or equal**, **Less than**, or **Less than or equal**, a ``datetime`` interval that isn't a calendar period, such as ``-2 days 12:34:56``, resolves to a single exact moment. When the value resolves to a whole-period range:
+
+  * **Greater than** and **Less than or equal** use the end of the period.
+  * **Greater than or equal** and **Less than** use the start of the period.
+
+* ``N ago`` expressions, such as ``5 days ago``, resolve the same way as signed intervals: the same granularity, and the same per-operator rules - a whole-period range with **Is equal to** and **Not equal**, and a single exact moment on a ``datetime`` column with **Greater than**, **Greater than or equal**, **Less than**, or **Less than or equal**.
+* ``birthday`` and ``anniversary`` match the month and day regardless of year, under any operator.
+
+.. tip::
+
+   On a ``date`` or ``datetime`` column, use a comparison operator to build a rolling window that stays current:
+
+   * For everything from the start of the current month onward, set the operator to **Greater than or equal** and the value to ``first day of this month``.
+   * For the last seven days, set the operator to **Greater than or equal** and the value to ``-7 days`` (equivalently ``7 days ago``).
+
+   Don't use **Is equal to** for a rolling window: it resolves to a single whole period - for ``7 days ago``, just that one day - not a range up to now.
+
+Mautic interprets relative date values in the User's local time zone.
+
+Relative date filters differ from the **Quick filters** section below. Quick filters is a preset dropdown that sets the Report's date-range fields, while a relative date value is an expression you enter in a filter's value field that re-evaluates each time the Report runs.
+
+To confirm that a relative date filter is active, reopen the filter and verify that it still shows the expression text, such as ``first day of this month``, rather than a fixed date. Mautic stores the expression exactly as you typed it.
+
 Graphs
 ======
 
