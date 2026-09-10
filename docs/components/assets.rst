@@ -117,9 +117,9 @@ Viewing an Asset
 
 .. vale on
 
-Once you've uploaded an Asset, you'll want to make it available for your Contacts to access it. Using the Download URL from the Asset section in Mautic, you can track which Contacts are downloading or viewing the Assets.
+Once you've uploaded an Asset, you'll want to make it available for your Contacts. The Asset details page shows the download link in the 'Asset URL' field. Select the 'Copy download link' button next to the field to copy the URL, so you can track which Contacts download or view the Asset.
 
-Copy and paste the link into your website, on a Landing Page, or as a link in an Email. 
+Paste the link into your website, on a Landing Page, or as a link in an Email.
 
 .. note:: 
     In a Mautic Email or Landing Page, append ``?stream=1`` to the end of the URL to open the Asset in a new tab.
