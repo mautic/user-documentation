@@ -35,6 +35,7 @@ CSR
 Contribution(s)
 CORS
 cPanel
+CPC
 CRM
 cron
 Cron
@@ -45,6 +46,7 @@ Do Not Contact
 DNC
 Dripflow
 DSN
+DWC
 Dynamic Web Content
 FALSE
 Figma
