@@ -15,12 +15,12 @@ Point Actions are those times when a Contact receives a change in their Point to
 
 To add a new action:
 
-1. Click **Points > Point Actions > + New**  - located in the top right corner.
+1. On the left side, navigate to **Points > Manage Actions** and click the **New** button located in the top right corner to open the **New Point Action** window.
 
 .. image:: images/new_points_action.png
     :alt: Screenshot of New Points action
 
-2. In the main panel, there are four boxes for key information. Enter the appropriate information.
+2. In the main panel, fill in the following fields:
 
    * **Name** - The name of your action. This is how the action displays in your list of actions, so choose an identifiable name.
 
@@ -28,7 +28,9 @@ To add a new action:
 
    * **Change Points (+/-)** - The value change to set for the action. The ``+`` isn't necessary when adding Points. When subtracting Points, add the ``-`` symbol.
 
-   * **Actions taken by User** - This is the behavior or action the Contact must complete to trigger the action.
+   * **Action taken by Contact** - This is the behavior or action the Contact must complete to trigger the action.
+
+   * **Point Group** - Identify the target group for the action. If you leave this empty, the action applies to the Contact's overall Point total instead of a specific group.
 
 3. On the right side is more information:
 
@@ -49,10 +51,16 @@ Point Triggers
 
 Once a Contact has accumulated a Point total, you may want to trigger an action with the Contact. You may create multiple triggers for different Point values.
 
+To add a new trigger, on the left side, navigate to **Points > Manage Triggers** and click the **New** button located in the top right corner to create a new Point Trigger.
+
 .. image:: images/new_points_trigger.png
     :alt: Screenshot of New Points trigger
 
-Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Category**, and **Active** options are all the same. The trigger fires based on the minimum number of Points. Set a number and decide if you want to **Trigger for existing applicable Contacts upon saving - if activated**. 
+Creating Point Triggers is like creating Point Actions. The **Name**, **Description**, **Category**, and **Active** options are all the same. Point Triggers also include the following options:
+
+* **Minimum number of Points** - The minimum number of Points a Contact must reach for this Point Trigger to fire.
+* **Contact color** - This sets a highlight color for Contacts who earn at least the minimum number of Points.
+* **Trigger for existing applicable Contacts upon saving** - Select 'Yes' to apply this trigger to Contacts who already have the minimum number of Points.
 
 Once you have decided and entered those options, go to the **Events** tab. Here, you can trigger one or more events once a Contact has reached your predetermined Point total. These Point Triggers and associated events are also fully customizable.
 
@@ -79,6 +87,12 @@ Contact triggers
 
 .. image:: images/modify_contacts_tags.png
     :alt: Screenshot of Modify Contact's Tags
+
+.. vale off
+
+**Change contact's stage** - Move the Contact to a Stage you select when the trigger fires. Choose an activated Stage to move the Contact into, or choose **Remove existing stage** to clear the Contact's current Stage. When moving between Stages, a Contact can only move forward. Mautic won't move a Contact to a Stage with a lower weight than their current Stage. If the Contact is already in the selected Stage, nothing changes. When Mautic changes or removes a Stage, it records a 'Stage changed' entry on the Contact's timeline. For more information on Stages and weights, see :ref:`moving contacts between stages`.
+
+.. vale on
 
 Add-on triggers
 ===============
