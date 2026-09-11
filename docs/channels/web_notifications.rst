@@ -32,6 +32,17 @@ Configuration
 #. Get the keys from OneSignal under the Settings > Keys & IDs tab.
 #. Enable the features you wish to use - for example, whether to enable notifications on mobile apps, Landing Pages, tracked resources on your website, and whether to show a welcome notification after they subscribe. You can also specify a subdomain name, and if you're using iOS and Android notifications you can also enable these options - see :doc:`/channels/push_notifications`.
 
+.. vale off
+
+Editing a Notification
+======================
+
+.. vale on
+
+When you open or create a Notification under Web Notifications, the editor shows a live preview panel beside the **Heading**, **Message**, and **Action Button Text** fields. As you enter text in them, Mautic updates the matching elements in the preview, so you can see how the Notification looks without saving and reopening it.
+
+When a field is empty, the preview shows default text instead. An empty **Heading** shows 'Notification' and an empty **Message** shows 'You have a new message'. When **Action Button Text** is empty, the action button doesn't appear in the preview.
+
 Sending notifications
 =====================
 There are two ways to send website notifications to the Contact:
