@@ -71,6 +71,8 @@ Contact Segments
 
 Use the Segments tab to add or remove a Contact from a Segment. Segments are a source for both starting Campaigns and sending Emails. Any Contact in a particular Segment is automatically part of a Campaign that has that Segment as the source. You can also use a standalone Email to manually send an Email to a Segment. If a User has opted out of a Segment they no longer receive Campaign actions or messages sent to that Segment.
 
+Segments appear in the Preference Center in alphabetical order by **Public name**. If two Segments share the same **Public name**, Mautic orders them by their internal ID. Since Contacts see this order, set a clear **Public name** on each Segment to control how it appears.
+
 .. vale off
 
 Contact's unsubscribe Email preferences
@@ -141,7 +143,63 @@ In addition, add a **Save preferences** button if you wish to save the preferenc
 
 Save your changes, and the Preference Center Landing Page is ready.
 
-.. vale off 
+.. vale off
+
+Customizing slot labels
+=======================
+
+.. vale on
+
+When building custom Themes for Preference Center Landing Pages, you can override the default text labels for each slot. This lets you customize wording to match your branding or provide translations for different languages.
+
+The following parameters are available for customizing slot labels in your Theme's Twig templates:
+
+.. vale off
+
+.. list-table::
+   :widths: 30 30 40
+   :header-rows: 1
+
+   * - Slot
+     - Parameter
+     - Description
+   * - Category List
+     - ``categorylist['label-text']``
+     - Label for the category list section heading
+   * - Segment List
+     - ``segmentlist['label-text']``
+     - Label for the Segment list section heading
+   * - Preferred Channel
+     - ``preferredchannel['label-text']``
+     - Label for the preferred channel dropdown
+   * - Channel Frequency
+     - ``channelfrequency['label-text']``
+     - Label for the **I want to receive** checkbox
+   * - Channel Frequency
+     - ``channelfrequency['label-text1']``
+     - Label for the **Do not contact more than** setting
+   * - Channel Frequency
+     - ``channelfrequency['label-text2']``
+     - Label for the **Messages each** frequency option
+   * - Channel Frequency
+     - ``channelfrequency['label-text3']``
+     - Label for the **Pause from** date setting
+   * - Channel Frequency
+     - ``channelfrequency['label-text4']``
+     - Label for the **Pause to** date setting
+   * - Save Preferences Button
+     - ``saveprefsbutton['btnText']``
+     - Text displayed on the save button
+
+.. vale on
+
+If you don't provide a custom value for these parameters, Mautic uses the default translated strings.
+
+.. note::
+
+   These customization parameters are for use in custom Theme development. See the :xref:`Themes` section of the Developer Documentation for implementation details on creating custom Themes for Preference Center Landing Pages.
+
+.. vale off
 
 Accessing Preference Center Pages
 *********************************
@@ -189,7 +247,7 @@ Now when sending the Email, all recipients can click the Unsubscribe link provid
 
 |
 
-If you don't select a Preference Center in an Email, Mautic uses the default Preference Center styled with the default Theme.
+If you don't select a Preference Center in an Email, Mautic uses the global default Preference Center set in **Configuration > Email Settings**, resolved at the time a Contact unsubscribes. If you change the global default later, any Email without its own Preference Center, including Emails you've already sent, automatically uses the new default. If there's no valid global default, Mautic falls back to a default Preference Center styled with the default Theme.
 
 .. image:: images/unsubscribe.png
     :align: center

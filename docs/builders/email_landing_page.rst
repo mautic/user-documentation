@@ -55,10 +55,80 @@ The code is there when you need it
 
 You don't have to care about the code, but it's always there, available for you. When it's done, you can grab it and use it wherever you want. Developers could also implement their own storage interfaces to use inside the editor.
 
-Asset manager
+.. vale off
+
+Asset Manager
 =============
 
-With the Asset Manager is easier to organize your media files and it's enough to double click the image to change it.
+.. vale on
+
+The Asset Manager helps you organize and insert images into your Emails and Landing Pages.
+
+Supported image formats
+-----------------------
+
+The Asset Manager supports the following image formats:
+
+* PNG
+* JPG/JPEG
+* GIF
+* WebP
+* SVG
+* PDF
+
+.. note::
+
+   Most Email clients don't support SVG files. Use SVG images for Landing Pages only. For Emails, use PNG, JPG, or GIF formats instead.
+
+Uploading images
+----------------
+
+To upload an image:
+
+#. Double-click an image element in the Builder canvas.
+#. Click 'Drop files here or click to upload' in the Asset Manager dialog.
+#. Choose one or more image files from your computer.
+#. The images upload and appear in your media list.
+
+.. image:: images/asset_manager_select_image.png
+  :width: 800
+  :alt: The 'Select Image' dialog in the Asset Manager with a 'Drop files here or click to upload' drop zone and a list of uploaded images
+
+Mautic stores uploaded images in the ``media/images/`` directory, so you can reuse them across your Emails and Landing Pages.
+
+Editing text
+============
+
+GrapesJS uses inline text editing powered by CKEditor. Double click a text Component to open the inline editor and edit directly on the canvas.
+
+The inline editor includes standard formatting options:
+
+* Bold, italic, underline and strikethrough
+* Font family, font color and font background color
+* Text alignment
+* Ordered and unordered lists
+* Headings
+* Links and anchors
+* Tables
+* Tokens for personalization
+
+You can paste content from external sources like Microsoft Word or Google Docs. The editor keeps basic formatting and adapts it for Email and Landing Page layouts.
+
+.. tip::
+
+   Click outside the text Component to finish editing and return to the canvas.
+
+Restoring unsaved changes
+=========================
+
+As you edit, the Builder keeps a local backup of your content in your browser's local storage. If you close the Builder without saving, for example because the tab crashes or you navigate away, Mautic can recover that work.
+
+The next time you open the same Email or Landing Page in the Builder, Mautic compares the saved content with the local backup. If they differ, Mautic prompts you to restore the backup:
+
+* Select **Restore the backup** to replace the Builder content with the local backup.
+* Select **Dismiss** to discard the backup and keep the saved content.
+
+Mautic only shows this prompt when the backup contains unsaved changes. Once you save and reopen the Builder, the backup matches what you saved, so no prompt appears.
 
 About the builder
 *****************
@@ -90,6 +160,94 @@ The functions of the Email Builder are as follows:
 #. Layout sections. These objects function as the basic structure of your design. Create your Email structure from sections, and pull in the different blocks you want to use.
 
 #. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
+
+Typography
+**********
+
+.. note::
+
+   .. vale off
+
+   Since Mautic 7.2, the GrapesJS Builder includes the Typography category.
+
+   .. vale on
+
+.. vale off
+
+The Typography category is **only available** when you edit MJML-based Emails in the GrapesJS Builder. It groups ready-made text blocks so you can add headings and body text without styling each element by hand. You can find it between the Sections and Blocks categories in the sidebar. It starts closed by default, so click it to expand the category.
+
+.. image:: images/editor_typography_blocks.png
+   :width: 280
+   :align: center
+   :alt: The Typography category in the GrapesJS Builder blocks sidebar
+
+|
+
+The Typography category contains these blocks:
+
+.. vale on
+
+* **Text** - a plain text block for body copy
+* **H1**, **H2**, **H3**, **H4** - heading levels
+* **Subtitle** - a smaller, italic block for supporting text
+
+When you drag an H1, H2, H3, H4, or Subtitle block onto the canvas, Mautic opens the inline text editor and selects the placeholder text right away, so you can type over it immediately.
+
+Each heading and Subtitle block comes with default sizing and styling, such as a bold 32px for H1 or an italic Subtitle. If your Theme defines its own typography tokens, the blocks use the Theme's styles instead of these defaults. Since each Theme can define its own tokens, the same block can render with different sizes, weights, or colors depending on which Theme you apply.
+
+Typography styling
+==================
+
+The Style Manager's Typography section restyles text Components that are already on the canvas. Select a text Component, then open the Style panel to reach these controls:
+
+* **Font family** - choose from the available fonts
+* **Font size** - set the text size in pixels
+* **Font weight** - adjust the weight from light to bold
+* **Letter spacing** - control the spacing between characters
+* **Color** - set the text color
+* **Line height** - adjust the vertical spacing between lines
+* **Text align** - align text left, center, right, or justify
+* **Text decoration** - apply none, underline, or strikethrough
+* **Font style** - switch between normal and italic
+
+Mautic resolves typography across three levels, where each level overrides the one before it:
+
+#. **Theme defaults** - the base styles defined by the Theme.
+#. **Component typography** - the Style Manager settings listed in this section, which apply to the selected Component.
+#. **Inline editor** - the formatting you apply to individual characters or words with the CKEditor inline toolbar when you double click a text Component.
+
+Use the Component typography controls to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
+
+Custom fonts
+------------
+
+You can extend the **Typography** > **Fonts** list to include custom fonts.
+
+.. image:: images/editorfonts.jpg
+   :width: 280
+   :align: center
+   :alt: The Fonts in Style Manager of Typography
+
+|
+
+You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:
+
+.. code-block:: php
+
+    <?php
+    // Example local.php
+    'editor_fonts' => array(
+        '0' => array(
+            'name' => 'Smokum',
+            'font' => 'Smokum, cursive',
+            'url' => 'https://fonts.googleapis.com/css2?family=Smokum&display=swap'
+        ),
+        '1' => array(
+            'name' => 'Sofia',
+            'font' => 'Sofia, sans-serif',
+            'url' => 'https://fonts.googleapis.com/css?family=Sofia'
+        )
+    ),
 
 Templates
 *********
@@ -125,36 +283,7 @@ Themes
 
 If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new Builder.
 
-To learn more about creating Themes please :doc:`check the documentation</builders/creating_themes>`. 
-
-Custom fonts
-************
-
-From Mautic 5.x you can extend the Style Manager > Typography > Fonts list to include custom fonts.
-
-.. image:: images/editorfonts.jpg
-  :width: 280
-  :alt: Screenshot of the Fonts in Style Manager > Typography
-
-You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:
-
-.. code-block:: php
-
-    <?php
-    // Example local.php
-    'editor_fonts' => array(
-        '0' => array(
-            'name' => 'Smokum',
-            'font' => 'Smokum, cursive',
-            'url' => 'https://fonts.googleapis.com/css2?family=Smokum&display=swap'
-        ),
-        '1' => array(
-            'name' => 'Sofia',
-            'font' => 'Sofia, sans-serif',
-            'url' => 'https://fonts.googleapis.com/css?family=Sofia'
-        )
-    ),
-
+To learn more about creating Themes, see :doc:`/builders/creating_themes`.
 
 Linking an image
 ****************
@@ -166,6 +295,13 @@ You can turn any image in a Landing Page or Email into a clickable link straight
 * The ``rel`` field sets the value of the link's ``rel`` attribute, such as ``nofollow`` or ``noopener``. This field is optional.
 
 Because Mautic only wraps the image in a link when you set the ``href`` field, an image without a URL renders normally. The link settings persist when you save and reopen the Landing Page or Email.
+
+If you enter a bare domain such as ``example.com`` in the ``href`` field, Mautic automatically adds ``https://`` to the front so the image links to a valid absolute URL such as ``https://example.com`` rather than a relative path. Mautic leaves the value unchanged in a few cases:
+
+* It already includes a scheme such as ``https://`` or ``mailto:``.
+* It's a relative path or anchor that starts with ``//``, ``/``, ``#``, or ``.``.
+* It's a single word with no domain extension such as ``page``.
+* It's a Mautic token that starts with ``{``.
 
 Reporting bugs
 ***************

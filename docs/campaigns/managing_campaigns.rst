@@ -19,6 +19,12 @@ The following image shows a sample Campaign overview with its highlighted panels
 
 The **Details** drop-down menu gives a quick overview of the most important information about your Campaign. This information includes the name of the User who created the Campaign, Category of the Campaign, creation date and time, activating date and time, Contact Segments in your Campaign and more.
 
+.. vale off
+
+The **Total contacts** card at the top of the page shows how many Contacts are currently in the Campaign. Click the card to open the Contacts list filtered to that Campaign. The card only appears if you have permission to view Contacts.
+
+.. vale on
+
 The **Campaign Statistics** panel shows the number of Contacts added to the Campaign over the specified period of time in graphical format. To specify the time period, use the From and To date selectors, and click Apply.
 
 The **Preview** tab displays a diagrammatic preview of your Campaign.
@@ -160,3 +166,31 @@ Tracking rescheduled events
 Mautic records all changes to scheduled event trigger dates in the ``campaign_lead_event_log.metadata`` column. This audit trail allows you to investigate when and why the system rescheduled events, providing transparency and helping with troubleshooting.
 
 You can view this information in the Contact's timeline under **Campaign Event Scheduled** entries, where rescheduled events show the updated trigger date and the reason for the change.
+
+.. vale off
+
+Deleting a Campaign
+*******************
+
+.. vale on
+
+You can delete a single Campaign or several Campaigns at once from the Campaigns list.
+
+.. warning::
+
+   Deleting a Campaign permanently deletes its events, scheduled actions, and execution history. You can't undo this action.
+
+.. note::
+
+   Deleting a Campaign doesn't remove independent Contact activity such as sent Emails, page hits, and Form submissions, because Mautic doesn't tie that activity to the Campaign.
+
+To delete a single Campaign:
+
+#. Go to the Campaigns list.
+#. Open the Campaign's **Options** menu and select **Delete**.
+#. Confirm the deletion in the dialog that appears.
+
+To delete multiple Campaigns at once:
+
+#. Select the checkbox next to each Campaign you want to delete.
+#. Select **Delete selected** and confirm.
