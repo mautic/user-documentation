@@ -490,6 +490,8 @@ Unsubscribe settings
 
 * **Default Preference Center Landing Page** - Select a Landing Page to use as the global default Preference Center. When a Contact unsubscribes, Mautic applies this default to any Email that doesn't have its own Preference Center, including Emails you created before setting the default and Emails you've already sent. Mautic resolves the default at unsubscribe time rather than copying it onto each Email when you create it, so changing this setting immediately updates the Preference Center for every Email without its own selection. Emails that have a Preference Center selected always use that Page. If the default Landing Page is missing, unpublished, or no longer marked as a Preference Center, Mautic falls back to its standard unsubscribe behavior. Read the :doc:`/contacts/preference_center` section for more information.
 
+* **Require email validation for unsubscribe** - Select **Yes** - the default - to route unsubscribe and resubscribe links through a confirmation page where the Contact must confirm their Email address before the action completes. This protects against abuse of leaked or forwarded links. Select **No** to let unsubscribe and resubscribe links complete directly on click. This is the behavior prior to Mautic 7.3: the link embeds the Contact's Email address and a hash. You might choose **No** if the extra confirmation step affects deliverability or increases spam complaints for the Emails you send. See the Unsubscribing section of the :doc:`/channels/emails` documentation for what the validation page does.
+
 .. vale on
 
 .. vale off
