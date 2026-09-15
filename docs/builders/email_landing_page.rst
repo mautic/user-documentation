@@ -55,10 +55,46 @@ The code is there when you need it
 
 You don't have to care about the code, but it's always there, available for you. When it's done, you can grab it and use it wherever you want. Developers could also implement their own storage interfaces to use inside the editor.
 
-Asset manager
+.. vale off
+
+Asset Manager
 =============
 
-With the Asset Manager is easier to organize your media files and it's enough to double click the image to change it.
+.. vale on
+
+The Asset Manager helps you organize and insert images into your Emails and Landing Pages.
+
+Supported image formats
+-----------------------
+
+The Asset Manager supports the following image formats:
+
+* PNG
+* JPG/JPEG
+* GIF
+* WebP
+* SVG
+* PDF
+
+.. note::
+
+   Most Email clients don't support SVG files. Use SVG images for Landing Pages only. For Emails, use PNG, JPG, or GIF formats instead.
+
+Uploading images
+----------------
+
+To upload an image:
+
+#. Double-click an image element in the Builder canvas.
+#. Click 'Drop files here or click to upload' in the Asset Manager dialog.
+#. Choose one or more image files from your computer.
+#. The images upload and appear in your media list.
+
+.. image:: images/asset_manager_select_image.png
+  :width: 800
+  :alt: The 'Select Image' dialog in the Asset Manager with a 'Drop files here or click to upload' drop zone and a list of uploaded images
+
+Mautic stores uploaded images in the ``media/images/`` directory, so you can reuse them across your Emails and Landing Pages.
 
 Editing text
 ============
@@ -125,6 +161,94 @@ The functions of the Email Builder are as follows:
 
 #. Content blocks. You can populate your newsletter with these content blocks. Each block has specific layout, settings and design.
 
+Typography
+**********
+
+.. note::
+
+   .. vale off
+
+   Since Mautic 7.2, the GrapesJS Builder includes the Typography category.
+
+   .. vale on
+
+.. vale off
+
+The Typography category is **only available** when you edit MJML-based Emails in the GrapesJS Builder. It groups ready-made text blocks so you can add headings and body text without styling each element by hand. You can find it between the Sections and Blocks categories in the sidebar. It starts closed by default, so click it to expand the category.
+
+.. image:: images/editor_typography_blocks.png
+   :width: 280
+   :align: center
+   :alt: The Typography category in the GrapesJS Builder blocks sidebar
+
+|
+
+The Typography category contains these blocks:
+
+.. vale on
+
+* **Text** - a plain text block for body copy
+* **H1**, **H2**, **H3**, **H4** - heading levels
+* **Subtitle** - a smaller, italic block for supporting text
+
+When you drag an H1, H2, H3, H4, or Subtitle block onto the canvas, Mautic opens the inline text editor and selects the placeholder text right away, so you can type over it immediately.
+
+Each heading and Subtitle block comes with default sizing and styling, such as a bold 32px for H1 or an italic Subtitle. If your Theme defines its own typography tokens, the blocks use the Theme's styles instead of these defaults. Since each Theme can define its own tokens, the same block can render with different sizes, weights, or colors depending on which Theme you apply.
+
+Typography styling
+==================
+
+The Style Manager's Typography section restyles text Components that are already on the canvas. Select a text Component, then open the Style panel to reach these controls:
+
+* **Font family** - choose from the available fonts
+* **Font size** - set the text size in pixels
+* **Font weight** - adjust the weight from light to bold
+* **Letter spacing** - control the spacing between characters
+* **Color** - set the text color
+* **Line height** - adjust the vertical spacing between lines
+* **Text align** - align text left, center, right, or justify
+* **Text decoration** - apply none, underline, or strikethrough
+* **Font style** - switch between normal and italic
+
+Mautic resolves typography across three levels, where each level overrides the one before it:
+
+#. **Theme defaults** - the base styles defined by the Theme.
+#. **Component typography** - the Style Manager settings listed in this section, which apply to the selected Component.
+#. **Inline editor** - the formatting you apply to individual characters or words with the CKEditor inline toolbar when you double click a text Component.
+
+Use the Component typography controls to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
+
+Custom fonts
+------------
+
+You can extend the **Typography** > **Fonts** list to include custom fonts.
+
+.. image:: images/editorfonts.jpg
+   :width: 280
+   :align: center
+   :alt: The Fonts in Style Manager of Typography
+
+|
+
+You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:
+
+.. code-block:: php
+
+    <?php
+    // Example local.php
+    'editor_fonts' => array(
+        '0' => array(
+            'name' => 'Smokum',
+            'font' => 'Smokum, cursive',
+            'url' => 'https://fonts.googleapis.com/css2?family=Smokum&display=swap'
+        ),
+        '1' => array(
+            'name' => 'Sofia',
+            'font' => 'Sofia, sans-serif',
+            'url' => 'https://fonts.googleapis.com/css?family=Sofia'
+        )
+    ),
+
 Templates
 *********
 
@@ -160,58 +284,6 @@ Themes
 If you search through the list of available Themes, the new MJML Themes ``Brienz``, ``Paprika`` and ``Confirm Me`` display only with the new Builder.
 
 To learn more about creating Themes, see :doc:`/builders/creating_themes`.
-
-Typography
-**********
-
-The Style Manager includes a Typography section for styling text Components. Select a text Component on the canvas, then open the Style panel to reach these controls:
-
-* **Font family** - choose from the available fonts
-* **Font size** - set the text size in pixels
-* **Font weight** - adjust the weight from light to bold
-* **Letter spacing** - control the spacing between characters
-* **Color** - set the text color
-* **Line height** - adjust the vertical spacing between lines
-* **Text align** - align text left, center, right, or justify
-* **Text decoration** - apply none, underline, or strikethrough
-* **Font style** - switch between normal and italic
-
-Mautic resolves typography across three levels, where each level overrides the one before it:
-
-#. **Theme defaults** - the base styles defined by the Theme.
-#. **Component typography** - the Style Manager settings listed in this section, which apply to the selected Component.
-#. **Inline editor** - the formatting you apply to individual characters or words with the CKEditor inline toolbar when you double click a text Component.
-
-Use the Component typography controls to fine-tune headings, paragraphs, and other text elements in legacy Themes that lack modern styling flexibility.
-
-Custom fonts
-============
-
-You can extend the **Typography** > **Fonts** list to include custom fonts.
-
-.. image:: images/editorfonts.jpg
-  :width: 280
-  :alt: Screenshot of the Fonts in Style Manager > Typography
-
-You define options as elements of the ``'editor_fonts'`` array in the local configuration file - in most cases located in ``app/config/local.php``. The font should have a unique name and a valid CSS style URL. See example below:
-
-.. code-block:: php
-
-    <?php
-    // Example local.php
-    'editor_fonts' => array(
-        '0' => array(
-            'name' => 'Smokum',
-            'font' => 'Smokum, cursive',
-            'url' => 'https://fonts.googleapis.com/css2?family=Smokum&display=swap'
-        ),
-        '1' => array(
-            'name' => 'Sofia',
-            'font' => 'Sofia, sans-serif',
-            'url' => 'https://fonts.googleapis.com/css?family=Sofia'
-        )
-    ),
-
 
 Linking an image
 ****************
