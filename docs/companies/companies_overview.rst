@@ -29,7 +29,7 @@ Removing Contacts from a Company
 
 .. vale on
 
-When you view a Company, the assigned Contacts table lists the Contacts in that Company. You can remove one or more of them from the Company. This removes only the Company association. The Contacts stay in Mautic and aren't deleted.
+When you view a Company, the assigned Contacts table lists the Contacts in that Company. You can remove one or more of them from the Company. This removes only the Company association. Mautic keeps the Contacts and doesn't delete them.
 
 #. In the assigned Contacts table, select one or more Contacts.
 #. Open the **Options** menu and choose **Remove from Company**.
