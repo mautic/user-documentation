@@ -117,7 +117,7 @@ Viewing an Asset
 
 .. vale on
 
-Once you've uploaded an Asset, you'll want to make it available for your Contacts. The Asset details page shows the download link in the 'Asset URL' field. Select the 'Copy download link' button next to the field to copy the URL, so you can track which Contacts download or view the Asset.
+Once you've uploaded an Asset, you'll want to make it available for your Contacts. The Asset detail view shows the download link in the **Asset URL** field. Select the **Copy download link** button next to the field to copy the URL, so you can track which Contacts download or view the Asset.
 
 Paste the link into your website, on a Landing Page, or as a link in an Email.
 
