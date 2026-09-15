@@ -38,3 +38,20 @@ Provide a name and description for the Marketing Message, then choose the Channe
 
 To enable a Channel, click Yes on the slider, and select - or create - the message.
 
+.. vale off
+
+Send to unsubscribed contacts indicator
+****************************************
+
+.. vale on
+
+When you add an Email Channel to a Marketing Message and select an Email, Mautic displays a **Yes** or **No** indicator showing whether that Email sends to unsubscribed Contacts.
+
+.. vale off
+
+The indicator reflects the Email's **Send to unsubscribed contacts** setting on the **Advanced** tab, so you can see at a glance whether the chosen Email reaches Contacts who have unsubscribed.
+
+See :ref:`Send to unsubscribed contacts setting <send to unsubscribed Contacts>` for what the setting means and its legal implications.
+
+.. vale on
+
