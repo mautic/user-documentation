@@ -31,7 +31,7 @@ Segment Text Messages
 
 .. vale on 
 
-A Segment Text Message can be manually sent to Contact lists - Segments - in Mautic. Once sent, you can't edit the Text Message. Whether the send continues to Contacts who join the associated Segment later is controlled by the **Continue sending** option when you schedule the send - see :ref:`schedule segment text message`.
+A Segment Text Message can be manually sent to Contact lists - Segments - in Mautic. Once sent, you can't edit the Text Message. The **Continue sending** option you set when scheduling the send controls whether it continues to Contacts who join the associated Segment later - see :ref:`Scheduling a Segment Text Message <Schedule Segment Text Message>`.
 
 Note that these are marketing Text Messages by default, and each Contact can only receive the Text Message once - it's the same principle as a mailing list.
 
@@ -110,7 +110,7 @@ The following fields are available:
 
 .. note::
 
-   For a Segment Text Message, you set the sending times with the **Schedule** button on the Text Message details page, not from the editor. See :ref:`schedule segment text message`.
+   For a Segment Text Message, you set the sending times with the **Schedule** button on the Text Message detail view, not from the editor. See :ref:`Scheduling a Segment Text Message <Schedule Segment Text Message>`.
 
 .. vale off
 
@@ -121,13 +121,13 @@ Scheduling a Segment Text Message
 
 .. vale on
 
-For a Segment Text Message, you control when the message goes out from its details page rather than from the message editor.
+For a Segment Text Message, you control when the message goes out from its detail view rather than from the message editor.
 
-The **Schedule** button appears on the details page of a Segment Text Message only - not on template or triggered Text Messages - and only for a User who has permission to publish the Text Message. If you don't see the button, ask an administrator for permission to publish Text Messages. It doesn't appear in embedded views. Once a schedule exists, the button label changes to **Update schedule**.
+The **Schedule** button appears on the detail view of a Segment Text Message only - not on template or triggered Text Messages - and only for a User who has permission to publish the Text Message. If you don't see the button, ask an administrator for permission to publish Text Messages. It doesn't appear in embedded views. Once a schedule exists, the button label changes to **Update schedule**.
 
 To schedule the send:
 
-#. Open the details page of the Segment Text Message by selecting its name from the Channels > Text Messages list.
+#. Open the detail view of the Segment Text Message by selecting its name from the Channels > Text Messages list.
 #. Click **Schedule** to open the scheduling modal.
 #. Set the following controls:
 
@@ -141,11 +141,11 @@ When **Continue sending** is Yes, Mautic sends to the Contacts who are Segment m
 
 To change the scheduled times, reopen the modal with **Update schedule**. To clear the schedule, click **Cancel schedule** - cancelling clears the schedule so the Text Message won't send on that schedule. To dismiss the modal without saving changes, click **Close**.
 
-The publish-status badge on the details page reflects progress: it shows a sending state while Contacts are still pending, and a sent state once a one-time schedule has finished. A continuing send - where **Continue sending** is Yes - keeps showing the sending state until it reaches the optional **Stop sending** time, so a long-running sending state on a continuing send is expected rather than a fault.
+The status badge on the detail view reflects progress: it shows a sending state while Contacts are still pending, and a sent state once a one-time schedule has finished. A continuing send - where **Continue sending** is Yes - keeps showing the sending state until it reaches the optional **Stop sending** time, so a long-running sending state on a continuing send is normal, not a fault.
 
 Cloning a scheduled Segment Text Message produces an unpublished copy with the schedule cleared.
 
-Scheduled sends run through the same ``Send Scheduled Broadcast`` Cron job that already sends Segment Text Messages. See :doc:`Cron jobs documentation </configuration/cron_jobs>` for more information. As with any Text Message send, you must first set up an SMS transport, as noted at the top of this page.
+Scheduled sends run through the same ``Send Scheduled Broadcast`` Cron job that already sends Segment Text Messages. See :doc:`Cron jobs documentation </configuration/cron_jobs>` for more information. As with any Text Message send, you must first set up an SMS transport.
 
 .. vale off
 
