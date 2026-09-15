@@ -16,7 +16,7 @@ Creating Stages
 
 Navigate to the **Stages** section in the left side menu, and then click **+New**.
 
-.. image:: images/Stages.png
+.. image:: images/stages.png
    :align: center
    :alt: Mautic Stages
    
@@ -39,17 +39,15 @@ Moving Contacts between Stages
 
 .. vale on
 
-Moving Contacts between Stages requires a Campaign action. 
+.. vale off
+
+You can move Contacts between Stages with a Campaign action or with a Point Trigger. A Point Trigger's **Change contact's stage** event moves a Contact to the Stage you choose once they reach the trigger's minimum Point total. For more information, see :ref:`contact triggers`.
+
+.. vale on
 
 Depending on how you define your Contact lifecycle and Stages, there may be different triggers for a Contact to move between Stages. Examples include behaviors within a Campaign, or moving between Segments which have criteria set up for each Stage. 
 
 In any Campaign where you want to have Contacts move between new Stages:
-
-.. image:: images/switch-stage.png
-   :align: center
-   :alt: Moving Contacts between Stages
-   
-|
 
 1. Add a new **Action**.
 
@@ -57,11 +55,64 @@ In any Campaign where you want to have Contacts move between new Stages:
 
 3. Select the Stage you want to move the Contacts to. You can base this on a prior event, or on a Segment that Contacts are in based on filters matching your requirements for a Stage.
 
+.. image:: images/switch_stage.png
+   :width: 600
+   :align: center
+   :alt: Moving Contacts between Stages
+
+|
+
 For more information on setting up Campaigns, see :ref:`triggering campaign events`
 
 .. note:: 
 
-    You can have multiple funnels with different Stages, and multiple Stages across those funnels with the same weight. A Contact can only ever be in one Stage at a time. It's not possible to move a Contact to a Stage which has a lesser weight than their current Stage. For example if they're currently in Stage B which has a weight of 50, you can't move them to Stage A which has a weight of 25. 
+    You can have multiple funnels with different Stages, but each Stage must have a unique weight across all funnels. A Contact can only ever be in one Stage at a time. It's not possible to move a Contact to a Stage which has a lesser weight than their current Stage. For example, if they're currently in Stage B which has a weight of 50, you can't move them to Stage A which has a weight of 25.
+
+.. vale off
+
+Merging Stages
+**************
+
+.. vale on
+
+If two Stages serve the same purpose, you can merge one into the other. Merging moves every Contact from the merged Stage into the Stage you choose, transfers the related Stage history, and then permanently deletes the merged Stage.
+
+Merging a Stage requires both edit and delete permissions for Stages. Without both, the **Merge Stage** doesn't appear in the **Options** menu.
+
+To merge Stages:
+
+.. vale off
+
+#. Navigate to the **Stages** section in the left side menu.
+#. Find the Stage you want to merge into another, and then click the three-dots icon to open the **Options** menu.
+#. Select **Merge Stage**.
+
+   |
+
+   .. image:: images/merge_stage_option.png
+      :align: center
+      :alt: Options menu open on a Stage row showing Edit, Clone, Merge Stage, and Delete, with Merge Stage highlighted
+
+   |
+
+#. In the **Merging current stage** dialog, use the **Choose a stage to merge into** dropdown to select the target Stage.
+#. Select **Merge** to complete the merge, or **Cancel** to close the dialog without making any changes.
+
+   |
+
+   .. image:: images/merge_stage.png
+      :align: center
+      :alt: Merge Stage dialog with a target Stage selected
+
+   |
+
+.. vale on
+
+Mautic confirms the merge with the message **Stage 'name' was successfully merged into 'target'**.
+
+.. warning::
+
+   Merging a Stage can't be undone. Mautic reassigns every Contact from the merged Stage to the target Stage, moves the related Stage change history, and then permanently deletes the merged Stage.
 
 .. vale off
 
@@ -72,7 +123,7 @@ Visualizing Stage movement
 
 The Mautic dashboard features two widgets to help Users see how Contacts are moving between Stages.
 
-.. image:: images/stage-dashboard.png
+.. image:: images/stage_dashboard.png
    :align: center
    :alt: Visualizing Stage movement
    
@@ -84,3 +135,9 @@ Lifecycle
 *********
 
 The lifecycle widget enables marketers to see the number of Contacts within a specified Segment in each Stage. You may include multiple Segments on the widget. It's possible to have more than one lifecycle widget to break down the information into separate graphs, but still display the data on the dashboard for multiple Segments.
+
+.. image:: images/lifecycle.png
+   :align: center
+   :alt: Visualizing Stage lifecycle
+
+|
