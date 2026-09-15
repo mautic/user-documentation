@@ -33,16 +33,45 @@ With the Email and Landing Page builders, you can start from a template and buil
 
 .. vale off
 
+Theme tags
+**********
+
+.. vale on
+
+When you select a Theme in the Email or Landing Page builders, Themes may show tags below their name. These tags help you quickly identify what each Theme is for.
+
+.. image:: images/theme-tags.png
+    :width: 600
+    :alt: Theme tags such as Transactional, Download, and Contact displayed below Theme names in the builder's Theme selection screen
+
+The following tags are available:
+
+.. vale off
+
+* **Newsletter** - For regular newsletter communications.
+* **Promotion** - For promotional and marketing Campaigns.
+* **Transactional** - For transactional messages like order confirmations or receipts.
+* **Registration** - For registration and sign-up flows.
+* **Contact** - For Contact forms and inquiries.
+* **Thank you** - For thank you and confirmation pages.
+* **Download** - For download and resource pages.
+* **Coming soon** - For pre-launch or coming soon pages.
+* **Adaptative** - Themes with this tag respond to your brand configuration in system settings, automatically applying your brand colors and styles.
+
+.. vale on
+
+.. vale off
+
 Installing a Theme
 ******************
 
 .. vale on
 
-It's necessary to install a new or edited Theme as a zip package. The zip package must have the same structure as the preinstalled Themes and the ``config.json`` file must be present in the root folder of the zip package. The :xref:`Themes directory structure` section in the Developer Documentation contains more information about that.
+It's necessary to install a new or edited Theme as a ZIP package. The ZIP package must have the same structure as the preinstalled Themes. The ``config.json`` file must be present at the top level of the Theme's files, either at the root of the ZIP or inside the single top-level folder. The :xref:`Themes directory structure` section in the Developer Documentation contains more information about that.
 
-.. note:: 
+.. note::
 
-    You must select and zip all the files when creating the zip package. Ensure that you don't zip the files within a folder, otherwise the Theme won't install.
+   Both ZIP layouts described earlier install correctly. The second layout - wrapping the Theme files inside a single top-level folder - is what you get when you compress the Theme's folder directly. Mautic detects the single top-level folder and installs its contents without keeping that folder. However, the archive must contain only that one top-level folder. If it also contains stray root-level files or folders, such as a ``__MACOSX`` directory that some tools add, the detection fails and the installation can't complete.
 
 You can build and install your own Forms Theme using Twig, and you can also install BeeFree templates as Themes.
 

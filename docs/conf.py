@@ -99,4 +99,6 @@ linkcheck_ignore = [
     r"https://developers.facebook.com/products/facebook-login/",
     # 403 client error from this domain
     r"https://www.vtiger.com/",
+    # 403 client error from this domain (anti-bot block; URL works in a browser)
+    r"https://www.howtoforge.com/a-short-introduction-to-cron-jobs",
 ]

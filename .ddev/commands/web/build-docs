@@ -19,8 +19,11 @@ echo "${bold}${green}🔧 Building user documentation...${reset}"
 cd /var/www/html/docs
 echo
 
-# Run the build
-make html
+# Run a clean build so changes to static assets (CSS, JS, images) are
+# always picked up. In some incremental rebuild scenarios (e.g. timestamp
+# sync issues on shared volumes), Sphinx can otherwise serve stale files
+# from build/html/_static after a static-only edit.
+make clean html
 
 # Success message
 echo
