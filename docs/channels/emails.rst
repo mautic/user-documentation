@@ -836,9 +836,9 @@ A link is valid when its ``href``:
 * Is a path-relative link that starts with ``/``, such as ``/pricing``
 * Is a query-only link that starts with ``?``, such as ``?ref=email``
 * Omits the scheme but includes a domain and path, such as ``example.com/path``
-* Is an otherwise valid ``http``, ``https``, ``ftp``, or ``ftps`` URL that contains spaces or angle brackets, such as ``https://example.com/?tags=Tag Name -> Stage`` produced by the Email builder or by token replacement
+* Is an otherwise valid ``http``, ``https``, ``ftp``, or ``ftps`` URL that contains spaces or angle brackets, such as ``https://example.com/?tags=Tag Name -> Stage``, which the Email builder or token replacement can produce
 
-A save fails when a link uses ``javascript:`` or another pseudo-scheme, points to a bare filename with no host such as ``file.pdf``, or can't be parsed at all, like the ``://example.com`` in the earlier example.
+A save fails when a link uses ``javascript:`` or another pseudo-scheme, points to a bare filename with no host such as ``file.pdf``, or takes a form Mautic can't parse at all, like the ``://example.com`` in the earlier example.
 
 .. vale on
 
