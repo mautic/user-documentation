@@ -14,6 +14,8 @@ General settings
   :width: 600
   :alt: Screenshot showing General Settings Configuration in Mautic
 
+.. _site-url:
+
 * **Site URL** - This is where Mautic is physically installed. Set the URL for this site here. Cron jobs needs this to correctly determine absolute URLs when generating links for Emails, etc. It 's also called Mautic's 'base URL'.
 
 * **Mautic's root URL** - When a User signs in to their Mautic instance, they go to ``mautic.example.com``. However, that Landing Page is also accessible to the public. If a Contact visits that address, they see the Mautic login page for that instance.
@@ -486,7 +488,7 @@ Unsubscribe settings
 
 * **Show Contact's preferred Channel option** - If you have multiple Channels available within your Mautic instance. For example; Email, ``SMS``, mobile push, web notifications, etc., Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
-* **Default Preference Center Landing Page** - Select a Landing Page to use as the Preference Center for new Emails. When creating a new Email, this Landing Page pre-populates the Preference Center field. Editing an existing Email or cloning an Email doesn't change that Email's Preference Center, even if the clone source has no Preference Center set. Read the :doc:`/contacts/preference_center` section for more information.
+* **Default Preference Center Landing Page** - Select a Landing Page to use as the global default Preference Center. When a Contact unsubscribes, Mautic applies this default to any Email that doesn't have its own Preference Center, including Emails you created before setting the default and Emails you've already sent. Mautic resolves the default at unsubscribe time rather than copying it onto each Email when you create it, so changing this setting immediately updates the Preference Center for every Email without its own selection. Emails that have a Preference Center selected always use that Page. If the default Landing Page is missing, unpublished, or no longer marked as a Preference Center, Mautic falls back to its standard unsubscribe behavior. Read the :doc:`/contacts/preference_center` section for more information.
 
 .. vale on
 
@@ -520,7 +522,12 @@ Form settings
   :width: 600
   :alt: Screenshot showing Form Settings Configuration in Mautic
 
+.. vale off
+
 * **Do not accept submission from these domain names** - To block Contacts with specific Email domains from submitting your Forms, enter those domains in the dialog box. Select an option on each Form you want to apply this block to. You can restrict either specific Email aliases that belong to a domain or an entire domain. To block the entire domain, you can use wildcards (*).
+* **Enable form field auto-fill from contact data** - off by default. Keep this setting off unless your organization needs auto-fill and accepts the risk of exposing personally identifiable information in Forms. When it's off, Mautic hides the field-level 'Auto-fill data' option in the Form builder's :ref:`Behavior` tab, doesn't pre-fill Form Fields with a known Contact's data, and doesn't hide fields based on auto-fill data. When it's on, the field-level 'Auto-fill data' option appears and works as normal. When you upgrade, if at least one Form Field already uses auto-fill, Mautic turns this setting on automatically to preserve existing behavior; otherwise it stays off.
+
+.. vale on
 
 Contact settings
 ****************
@@ -575,7 +582,12 @@ Export settings
   :width: 600
   :alt: Screenshot showing Export Settings Configuration in Mautic
 
+.. vale off
+
 * **Automatically export Contacts to CSV in the background** - If set to Yes, Mautic processes CSV exports of Contacts in the background and Mautic sends an Email with a link to download the file when it's processed.
+* **Notify admins about contact exports** - When set to **Yes**, the default, admins get an in-app notification whenever any User requests a Contact export, plus a separate completion Email - without the download link - once the export finishes. When set to **No**, admins receive neither. This setting doesn't affect what the requesting User gets. They always receive the completion Email with the download link. It also doesn't change the export's audit log. Since it applies to background Contact exports, it only takes effect when you turn on **Automatically export Contacts to CSV in the background**.
+
+.. vale on
 
 Segment settings
 ****************
@@ -920,3 +932,16 @@ Social settings
   :alt: Screenshot showing Social Settings Configuration in Mautic
 
 * **Twitter Handle Field** - This field stores the Twitter username for Users added to Mautic through Social Monitoring.
+
+Support Mautic menu item
+************************
+
+Mautic shows a 'Support Mautic' item in the main navigation menu. Selecting it opens ``https://mau.tc/support`` in a new browser tab, where you can learn how to support the project. Mautic enables this item by default.
+
+To hide the 'Support Mautic' menu item—for example, if you run Mautic for clients and prefer not to show it—add the following line to your ``config/local.php`` file:
+
+.. code-block:: php
+
+  'support_mautic_enabled' => false,
+
+To show the item again, set this value back to ``true`` or remove the line.

@@ -74,6 +74,17 @@ To pan around the canvas, click, and drag on an empty area. The canvas automatic
 
 You can also pan by holding the spacebar and dragging with your mouse. The cursor changes to a grab icon while panning. Release the spacebar to resume normal editing. This works like common design tools such as Figma or Photoshop, letting you navigate large Campaigns without accidentally selecting or moving individual nodes.
 
+.. vale off
+
+Identifying Campaign events
+---------------------------
+
+.. vale on
+
+Every saved Campaign event shows its unique numeric ID before the event name, as in ``(ID: 42)``. Mautic displays this ID on the event cards in the Campaign Builder canvas, in the Campaign Preview, on the **Jump to Event** action, and in the drop-down you use to redirect scheduled Contacts when you delete an event. New events that you haven't saved yet don't have an ID.
+
+The ID helps you tell events apart when two or more share the same name. This matters most when you delete an event, because the delete dialog asks you to redirect any Contacts scheduled for that event to another one, and the ID lets you pick the exact event you want from the drop-down.
+
 Actions
 *******
 

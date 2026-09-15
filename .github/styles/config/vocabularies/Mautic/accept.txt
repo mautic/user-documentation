@@ -22,6 +22,8 @@ CCPA
 CKEditor
 Citrix
 Clearbit
+CLI
+Clickthrough
 CloudAMQP
 CMS
 config
@@ -149,6 +151,7 @@ Transifex
 TRUE
 Twilio
 unassign
+uncategorized
 unpublish
 Unpublish
 URL
