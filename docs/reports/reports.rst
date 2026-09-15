@@ -189,13 +189,13 @@ The value field accepts these expressions:
      - ``today``, ``tomorrow``, ``yesterday``
      - The named day.
    * - Relative periods
-     - ``this week``, ``last month``, ``next year`` (``this`` / ``last`` / ``next`` with ``week``, ``month``, or ``year``)
+     - ``this week``, ``last month``, ``next year`` - ``this`` / ``last`` / ``next`` with ``week``, ``month``, or ``year``
      - The whole named period.
    * - Signed intervals
      - ``+1 week``, ``-2 days``, ``-3 months 2 days``, and ``datetime`` forms such as ``-2 days 12:34:56``
      - The current date and time shifted by the interval.
    * - "N ago"
-     - ``5 days ago`` (generic form ``{n} {unit} ago``)
+     - ``5 days ago`` - generic form ``{n} {unit} ago``
      - The current date shifted back by the interval.
    * - First or last day of a period
      - ``first day of next month``, ``last day of this year``
@@ -209,7 +209,7 @@ The value field accepts these expressions:
 How an expression resolves depends on the operator and on whether the expression names a calendar period:
 
 * Calendar periods - ``today``, and ``this``, ``last``, or ``next`` combined with ``week``, ``month``, or ``year`` - resolve to a whole-period range.
-* Any filter on a ``date`` column also resolves to a whole-period range, regardless of expression type, because a ``date`` column has no time component.
+* Any filter on a ``date`` column also resolves to a whole-period range, regardless of expression type, because a ``date`` column stores no time of day.
 * With **Is equal to**, any relative value resolves to a whole-period range - a day for a ``datetime`` interval such as ``-2 days 12:34:56`` - and the column value must fall within that period.
 * With **Not equal**, the value resolves to the same whole-period range as **Is equal to**, and the column value must fall outside the period, or be empty.
 * With **Greater than**, **Greater than or equal**, **Less than**, or **Less than or equal**, a ``datetime`` interval that isn't a calendar period, such as ``-2 days 12:34:56``, resolves to a single exact moment. When the value resolves to a whole-period range:
@@ -225,9 +225,9 @@ How an expression resolves depends on the operator and on whether the expression
    On a ``date`` or ``datetime`` column, use a comparison operator to build a rolling window that stays current:
 
    * For everything from the start of the current month onward, set the operator to **Greater than or equal** and the value to ``first day of this month``.
-   * For the last seven days, set the operator to **Greater than or equal** and the value to ``-7 days`` (equivalently ``7 days ago``).
+   * For the last seven days, set the operator to **Greater than or equal** and the value to ``-7 days`` - equivalently ``7 days ago``.
 
-   Don't use **Is equal to** for a rolling window: it resolves to a single whole period - for ``7 days ago``, just that one day - not a range up to now.
+   Don't use **Is equal to** for a rolling window because it resolves to a single whole period - for ``7 days ago``, just that one day - not a range up to now.
 
 Mautic interprets relative date values in the User's local time zone.
 
