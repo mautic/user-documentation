@@ -173,7 +173,7 @@ In a filter on a ``date`` or ``datetime`` column, you can enter a relative date 
 
 The value field shows no hint, autocomplete, or dropdown for these expressions, so use this reference when you build or troubleshoot such a filter.
 
-Relative date expressions apply only to filters on ``date`` and ``datetime`` columns. They don't apply when the operator is a string comparison. The **Like**, **Not like**, **Starts with**, **Ends with**, and **Contains** operators all treat the value as literal text. Fixed calendar dates, and text that Mautic can't parse, keep their existing literal behavior. Mautic uses an expression it doesn't recognize as literal text against the ``date`` or ``datetime`` column, which typically matches no rows and shows no validation error. If a Report that uses one of these filters comes back empty, compare the value against the syntax below.
+Relative date expressions apply only to filters on ``date`` and ``datetime`` columns. They don't apply when the operator is a string comparison. The **Contains**, **Doesn't contain**, **Starts with**, **Ends with**, and **In list** operators all treat the value as literal text. The value field supports only the relative date expressions documented below and valid fixed calendar dates. Mautic passes any other text to its date parser, which can raise an error when you save the Report.
 
 The value field accepts these expressions:
 
@@ -208,17 +208,17 @@ The value field accepts these expressions:
 
 How an expression resolves depends on the operator and on whether the expression names a calendar period:
 
-* Calendar periods - ``today``, and ``this``, ``last``, or ``next`` combined with ``week``, ``month``, or ``year`` - resolve to a whole-period range.
+* Calendar periods - ``today``, ``tomorrow``, ``yesterday``, and ``this``, ``last``, or ``next`` combined with ``week``, ``month``, or ``year`` - resolve to a whole-period range.
 * Any filter on a ``date`` column also resolves to a whole-period range, regardless of expression type, because a ``date`` column stores no time of day.
 * With **Is equal to**, any relative value resolves to a whole-period range - a day for a ``datetime`` interval such as ``-2 days 12:34:56`` - and the column value must fall within that period.
-* With **Not equal**, the value resolves to the same whole-period range as **Is equal to**, and the column value must fall outside the period, or be empty.
+* With **Is not equal to**, the value resolves to the same whole-period range as **Is equal to**, and the column value must fall outside the period, or be empty.
 * With **Greater than**, **Greater than or equal**, **Less than**, or **Less than or equal**, a ``datetime`` interval that isn't a calendar period, such as ``-2 days 12:34:56``, resolves to a single exact moment. When the value resolves to a whole-period range:
 
   * **Greater than** and **Less than or equal** use the end of the period.
   * **Greater than or equal** and **Less than** use the start of the period.
 
-* ``N ago`` expressions, such as ``5 days ago``, resolve the same way as signed intervals: the same granularity, and the same per-operator rules - a whole-period range with **Is equal to** and **Not equal**, and a single exact moment on a ``datetime`` column with **Greater than**, **Greater than or equal**, **Less than**, or **Less than or equal**.
-* ``birthday`` and ``anniversary`` match the month and day regardless of year, under any operator.
+* ``N ago`` expressions, such as ``5 days ago``, resolve the same way as signed intervals: the same granularity, and the same per-operator rules - a whole-period range with **Is equal to** and **Is not equal to**, and a single exact moment on a ``datetime`` column with **Greater than**, **Greater than or equal**, **Less than**, or **Less than or equal**.
+* ``birthday`` and ``anniversary`` match the month and day regardless of year under the comparison operators (such as **Is equal to**, **Is not equal to**, and the range operators). **Is empty** and **Is not empty** ignore the month-and-day match and instead test whether the column has a value.
 
 .. tip::
 
@@ -229,7 +229,7 @@ How an expression resolves depends on the operator and on whether the expression
 
    Don't use **Is equal to** for a rolling window because it resolves to a single whole period - for ``7 days ago``, just that one day - not a range up to now.
 
-Mautic interprets relative date values in the User's local time zone.
+Mautic interprets relative date values in its configured default time zone (the ``default_timezone`` setting), not each User's own time zone. This matters for scheduled Reports, which run without a User's context.
 
 Relative date filters differ from the **Quick filters** section below. Quick filters is a preset dropdown that sets the Report's date-range fields, while a relative date value is an expression you enter in a filter's value field that re-evaluates each time the Report runs.
 
