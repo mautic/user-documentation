@@ -69,17 +69,17 @@ It's important to note that from Mautic 5, you won't be able to edit the default
 Filtering Custom Fields with Quick filters
 ******************************************
 
-The Custom Fields list has a 'Quick filters' popover you can use to filter the list without typing search commands manually.
+The Custom Fields list has a **Quick filters** popover you can use to filter the list without typing search commands manually.
 
-#. Go to Settings > Custom Fields.
+#. Go to **Settings** > **Custom Fields**.
 
-#. Open 'Quick filters'. Under the 'Others' group, you'll see 'Indexed' and 'Unique'.
+#. Open **Quick filters**. Under the **Others** group, you'll see **Indexed** and **Unique**.
 
-#. Select 'Indexed' or 'Unique', then click 'Apply selected'.
+#. Select **Indexed** or **Unique**, then click **Apply selected**.
 
-Selecting 'Indexed' shows the fields included in database indexes and adds the ``is:indexed`` command to the search box. Selecting 'Unique' shows the unique identifier fields and adds the ``is:unique`` command. To switch to a different option, first click 'Reset'.
+Selecting **Indexed** shows the fields included in database indexes and adds the ``is:indexed`` command to the search box. Selecting **Unique** shows the unique identifier fields and adds the ``is:unique`` command. To switch to a different option, first click **Reset**.
 
-Because 'Quick filters' just adds a command to the search box, you can edit or extend that command—the full search still works for combined or more detailed queries.
+Because **Quick filters** just adds a command to the search box, you can edit or extend that command - the full search still works for combined or more detailed queries.
 
 For the full list of search commands and other filters, see the :doc:`Searching Mautic </search/search_operators>` page.
 
