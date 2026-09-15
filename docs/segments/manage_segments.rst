@@ -399,6 +399,27 @@ Once you've selected a date field as your filter, such as the default **Date las
 
 Once you have selected the field, you can then choose the type of operation to perform. These vary depending on the way you wish to filter your Contacts.
 
+.. vale off
+
+In the last and In the next
+===========================
+
+.. vale on
+
+The **In the last** and **In the next** operators let you build rolling date filters that never need manual updates. Instead of an absolute date, you enter a whole number for the interval and choose a unit of **days**, **months**, or **years**.
+
+* **In the last** - Matches Contacts whose date value falls on or after the date X days, months, or years before the day Mautic builds or rebuilds the Segment, and on or before that build or rebuild day. X is the number you enter in the filter value. Mautic treats both boundary days as whole calendar days.
+
+  For example, with a value of 10 days, if Mautic builds or rebuilds the Segment on June 12, 2024, it includes Contacts whose field value is between June 2, 2024 00:00:00 and June 12, 2024 23:59:59.
+
+* **In the next** - Matches Contacts whose date value falls on or after the day Mautic builds or rebuilds the Segment, and on or before the date X days, months, or years after that build or rebuild day. X is the number you enter in the filter value. Mautic treats both boundary days as whole calendar days.
+
+  For example, with a value of 10 days, if Mautic builds or rebuilds the Segment on June 12, 2024, it includes Contacts whose field value is between June 12, 2024 00:00:00 and June 22, 2024 23:59:59.
+
+These operators work with date and date-time fields. This includes the standard **Date added**, **Date identified**, **Date modified**, and **Date last active** fields, any Custom Field of type date or date-time on a Contact or Company, and behavioral date fields such as **Read any email (date)**.
+
+The interval must be a whole number greater than zero. If you leave it blank or enter zero, a negative number, or a value that isn't a whole number, Mautic shows a validation error and won't save the Segment.
+
 Operators for select fields
 ===========================
 
