@@ -206,9 +206,9 @@ When sending begins, Mautic sends the test Emails to the test audience and the p
 
 After the wait time passes, Mautic evaluates each variant against your chosen winner criteria, marks the best performer with a **Winner** badge in the panel, and sends the winning version to the remaining Contacts.
 
-While the test is running, you don't have to wait for the automatic pick. In the **A/B Test** panel, select the **Make winner** trophy action on a published variant's row to override Mautic's statistical recommendation and end the test on the variant you choose. The action appears on each published variant's row once the test has started sending.
+While the test is running, you don't have to wait for the automatic pick. In the **A/B Test** panel, select the **Make winner** trophy action on an Active variant's row to override Mautic's statistical recommendation and end the test on the variant you choose. The action appears on each Active variant's row once the test has started sending.
 
-The variant the statistics currently favor shows a filled trophy, and the other published variants show an outline trophy. The trophy state is only a cue - you can promote any published variant, whichever trophy it shows.
+The variant the statistics currently favor shows a filled trophy, and the other Active variants show an outline trophy. The trophy state is only a cue - you can promote any Active variant, whichever trophy it shows.
 
 .. note::
 
