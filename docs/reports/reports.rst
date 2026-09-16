@@ -218,7 +218,7 @@ How an expression resolves depends on the operator and on whether the expression
   * **Greater than or equal** and **Less than** use the start of the period.
 
 * ``N ago`` expressions, such as ``5 days ago``, resolve the same way as signed intervals: the same granularity, and the same per-operator rules - a whole-period range with **Is equal to** and **Is not equal to**, and a single exact moment on a ``datetime`` column with **Greater than**, **Greater than or equal**, **Less than**, or **Less than or equal**.
-* ``birthday`` and ``anniversary`` match the month and day regardless of year under the comparison operators (such as **Is equal to**, **Is not equal to**, and the range operators). **Is empty** and **Is not empty** ignore the month-and-day match and instead test whether the column has a value.
+* ``birthday`` and ``anniversary`` match the month and day regardless of year under the comparison operators - such as **Is equal to**, **Is not equal to**, and the range operators. **Is empty** and **Is not empty** ignore the month-and-day match and instead test whether the column has a value.
 
 .. tip::
 
@@ -229,7 +229,7 @@ How an expression resolves depends on the operator and on whether the expression
 
    Don't use **Is equal to** for a rolling window because it resolves to a single whole period - for ``7 days ago``, just that one day - not a range up to now.
 
-Mautic interprets relative date values in its configured default time zone (the ``default_timezone`` setting), not each User's own time zone. This matters for scheduled Reports, which run without a User's context.
+Mautic interprets relative date values in its configured default time zone - the ``default_timezone`` setting - not each User's own time zone. This matters for scheduled Reports, which run without a User's context.
 
 Relative date filters differ from the **Quick filters** section below. Quick filters is a preset dropdown that sets the Report's date-range fields, while a relative date value is an expression you enter in a filter's value field that re-evaluates each time the Report runs.
 
