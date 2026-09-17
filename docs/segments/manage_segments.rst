@@ -616,6 +616,10 @@ Deleting or deactivating a Segment
 
 .. vale on
 
+.. note::
+
+   Deleting a Segment doesn't delete its Contacts. It only removes them from the Segment, and the Contacts remain in Mautic.
+
 Since :xref:`Mautic 4` there is a step when deleting or deactivating a Segment to ensure that it's not required as a filter by an existing Segment.
 
 .. image:: images/deleting-used-segment.png
