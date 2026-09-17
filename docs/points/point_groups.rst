@@ -22,6 +22,10 @@ To access the currently defined Point Groups in Mautic, navigate to the Points M
 
 Enter a name and a description for the Group and click the "Save & Close" button to create the Group.
 
+.. warning::
+
+   Deleting a Point Group permanently deletes the Contact scores in that group. You can't undo this action.
+
 .. vale off
 
 Point Groups usage
