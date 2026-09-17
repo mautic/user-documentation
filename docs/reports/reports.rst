@@ -277,6 +277,8 @@ You can identify scheduled Reports in the list of Reports from Mautic 5.1 and la
    :align: center
    :alt: Screenshot of Mautic Scheduled Report showing a paper aeroplane icon
 
+You can also filter the Reports list to show only scheduled Reports by selecting the **Has scheduled reports** filter, or by typing ``is:scheduled`` in the search box. Mautic then shows only the Reports set up for scheduled Email delivery - see :ref:`Reports search filters` for the related search commands.
+
 .. vale off
 
 Cron job to schedule Reports
