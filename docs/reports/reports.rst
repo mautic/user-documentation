@@ -315,6 +315,8 @@ To view additional options for Report, click the drop-down menu next to the chec
 
 * **Delete** deletes the Report immediately.
 
+You can also clone a Report while viewing it: open the actions menu at the top right of the view page and select **Clone**, which appears when you have permission to create Reports. As with the Reports list, this creates a copy and leaves the original Report intact.
+
 Quick filters
 =============
 
