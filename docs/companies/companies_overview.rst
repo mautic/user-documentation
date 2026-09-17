@@ -34,6 +34,25 @@ In *Configuration > Company Settings* you can choose the operator used when merg
 
 These settings allow  Mautic to find and merge duplicate Companies during the import, using the Integrations Framework and in other parts of Mautic.
 
+Filtering the Companies list with Quick filters
+***********************************************
+
+The Companies list has a **Quick filters** popover you can use to filter the list without typing search commands manually.
+
+#. Go to **Companies**.
+
+#. Next to the search box, open **Quick filters**.
+
+#. Under the **Ownership** group, select **Unowned companies**.
+
+#. Click **Apply selected**.
+
+Selecting **Unowned companies** shows the Companies that aren't assigned to any User and adds the ``is:unowned`` command to the search box. To clear the filter and return to the full list, click **Reset**. To assign an owner to the Companies this filter surfaces, select them and use the **Change Owner** batch action described under Batch changes below.
+
+Because **Quick filters** adds a command to the search box, you can edit or extend it. The full search syntax still works for more detailed or combined queries.
+
+For the full list of search commands and other filters, see the :doc:`Searching Mautic </search/search_operators>` page.
+
 Batch changes
 *************
 
