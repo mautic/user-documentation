@@ -268,6 +268,7 @@ Users search filters
     is:admin
     is:active
     is:inactive
+    is:never_logged_in
     email:*
     name:*
     position:*
