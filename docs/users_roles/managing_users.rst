@@ -122,3 +122,25 @@ When the invited person opens the link in the Email, Mautic shows a registration
 After the invitee clicks **Create Account**, Mautic creates the User and redirects them to the login page, where they can sign in with their new credentials.
 
 .. vale on
+
+.. vale off
+
+Deleting a User
+***************
+
+.. vale on
+
+An Administrator with the **Delete** permission for Users can delete a User from **Settings** > **Users**:
+
+* To delete one User, select **Delete** for the User in the list.
+* To delete several at once, select the checkboxes next to the Users you want to delete, then select **Delete selected**.
+
+.. warning::
+
+   Before you confirm, be aware of what happens when you delete a User:
+
+   * Mautic leaves the User's Contacts and Companies unassigned.
+   * Mautic removes the User's API access tokens.
+   * Mautic removes the User's scheduled Contact exports.
+
+   This action can't be undone.
