@@ -76,16 +76,19 @@ Mautic assumes that the database is on the same server as Mautic.
 
 For setting the database server on the **Mautic Installation-Database Setup** window:
 
-* Select **Database Driver**.
-  
+* Select **Database Driver**:
+
+  * ``MySQL PDO`` - for MySQL and MariaDB databases
+  * ``PostgreSQL PDO`` - for PostgreSQL databases
+
 * Enter **Database Host**.
-  
+
 * Enter **Database Name**.
-  
+
 * Enter **Database Username**.
-  
-* If desired, you can also enter values for **Database Port**, **Database Table Prefix**, **Database Password**, and **Prefix for backup tables**.
-  
+
+* If desired, you can also enter values for **Database Port** - ``3306`` for MySQL/MariaDB, ``5432`` for PostgreSQL, **Database Table Prefix**, **Database Password**, and **Prefix for backup tables**.
+
 * **Backup existing tables?** is on by default, but you should turn it off for a new installation.
 
 .. image:: images/mautic-database-configuration.png
@@ -152,9 +155,9 @@ Use the command ``path/to/php bin/console mautic:install --help`` for the list o
 
 .. code-block:: php
 
-     --db_driver=DB_DRIVER                    Database driver. [default: "pdo_mysql"]
+     --db_driver=DB_DRIVER                    Database driver - "pdo_mysql" or "pdo_pgsql". [default: "pdo_mysql"]
       --db_host=DB_HOST                        Database host.
-      --db_port=DB_PORT                        Database port.
+      --db_port=DB_PORT                        Database port - 3306 for MySQL/MariaDB, 5432 for PostgreSQL.
       --db_name=DB_NAME                        Database name.
       --db_user=DB_USER                        Database user.
       --db_password=DB_PASSWORD                Database password.
@@ -178,17 +181,47 @@ Use the command ``path/to/php bin/console mautic:install --help`` for the list o
       --mailer_spool_type=MAILER_SPOOL_TYPE    Spool mode (file|memory).
       --mailer_spool_path=MAILER_SPOOL_PATH    Spool path.
 
-Use the syntax below within a ``local.php`` file:
+Use the syntax below within a ``local.php`` file.
+
+MySQL/MariaDB example:
 
 .. code-block:: php
 
   <?php
-  // Example local.php to test install (to adapt of course)
+  // Example local.php for MySQL/MariaDB (to adapt of course)
   $parameters = array(
     // Do not set db_driver and mailer_from_name as they are used to assume Mautic is installed
     'db_host' => 'localhost',
     'db_table_prefix' => null,
     'db_port' => 3306,
+    'db_name' => 'mautic',
+    'db_user' => 'mautic',
+    'db_password' => 'mautic',
+    'db_backup_tables' => false,
+    'db_backup_prefix' => 'bak_',
+    'admin_email' => 'admin@example.com',
+    'admin_password' => 'Maut1cR0cks!',
+    'mailer_transport' => null,
+    'mailer_host' => null,
+    'mailer_port' => null,
+    'mailer_user' => null,
+    'mailer_password' => null,
+    'mailer_api_key' => null,
+    'mailer_encryption' => null,
+    'mailer_auth_mode' => null,
+  );
+
+PostgreSQL example:
+
+.. code-block:: php
+
+  <?php
+  // Example local.php for PostgreSQL (to adapt of course)
+  $parameters = array(
+    // Do not set db_driver and mailer_from_name as they are used to assume Mautic is installed
+    'db_host' => 'localhost',
+    'db_table_prefix' => null,
+    'db_port' => 5432,
     'db_name' => 'mautic',
     'db_user' => 'mautic',
     'db_password' => 'mautic',
@@ -213,14 +246,26 @@ Run the following command after replacing the path to PHP bin and Mautic instanc
 
 ``path/to/php bin/console mautic:install https://m.example.com``
 
-If desired, you can also add parameters in the install command:
+If desired, you can also add parameters in the install command.
 
-.. code-block:: php
+MySQL/MariaDB example:
 
-  path/to/php bin/console mautic:install https://m.example.com
-  --mailer_from_name="Example From Name" --mailer_from_email="mautic@localhost"
-  --mailer_transport="smtp" --mailer_host="localhost" --mailer_port="1025"
-  --db_driver="pdo_mysql" --db_host="db" --db_port="3306" --db_name="db" --db_user="db" --db_password="db" 
+.. code-block:: shell
+
+  path/to/php bin/console mautic:install https://m.example.com \
+  --mailer_from_name="Example From Name" --mailer_from_email="mautic@localhost" \
+  --mailer_transport="smtp" --mailer_host="localhost" --mailer_port="1025" \
+  --db_driver="pdo_mysql" --db_host="db" --db_port="3306" --db_name="db" --db_user="db" --db_password="db" \
+  --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="Maut1cR0cks!"
+
+PostgreSQL example:
+
+.. code-block:: shell
+
+  path/to/php bin/console mautic:install https://m.example.com \
+  --mailer_from_name="Example From Name" --mailer_from_email="mautic@localhost" \
+  --mailer_transport="smtp" --mailer_host="localhost" --mailer_port="1025" \
+  --db_driver="pdo_pgsql" --db_host="db" --db_port="5432" --db_name="db" --db_user="db" --db_password="db" \
   --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="Maut1cR0cks!"
 
 As the installation process begins, it flags up warnings and aborts if there are any critical errors.
