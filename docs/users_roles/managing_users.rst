@@ -143,4 +143,4 @@ An Administrator with the **Delete** permission for Users can delete a User from
    * Mautic removes the User's API access tokens.
    * Mautic removes the User's scheduled Contact exports.
 
-   This action can't be undone.
+   You can't undo this action.
