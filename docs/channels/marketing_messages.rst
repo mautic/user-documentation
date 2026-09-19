@@ -41,7 +41,7 @@ To enable a Channel, click Yes on the slider, and select - or create - the messa
 .. vale off
 
 Send to unsubscribed contacts indicator
-****************************************
+***************************************
 
 .. vale on
 
