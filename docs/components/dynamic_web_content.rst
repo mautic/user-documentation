@@ -285,11 +285,11 @@ Managing Dynamic Web Content via API
 
 .. vale on
 
-You can manage Dynamic Web Content display order programmatically via the Mautic API. To update the slot name and display order of a Dynamic Web Content item:
+You can manage Dynamic Web Content display order programmatically via the Mautic API. Replace ``example.com`` with your Mautic instance domain and include the required authentication headers (see :doc:`/authentication/authentication`). To update the slot name and display order of a Dynamic Web Content item:
 
 .. code-block::
 
-    PUT api/dynamiccontents/{id}/edit
+    PUT https://example.com/api/dynamiccontents/{id}/edit
 
     {
         "isCampaignBased": false,
