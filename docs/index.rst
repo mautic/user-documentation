@@ -123,7 +123,6 @@ There are different types of documentation available to help you navigate your w
    channels/emails
    channels/sms
    channels/focus_items
-   channels/social_monitoring
    channels/web_notifications
    channels/push_notifications
    channels/utm_tags
@@ -185,11 +184,9 @@ There are different types of documentation available to help you navigate your w
    plugins/microsoft_outlook
    plugins/pipedrive
    plugins/salesforce
-   plugins/social_login
    plugins/sugar_crm
    plugins/tag_manager
    plugins/twilio
-   plugins/twitter
    plugins/vtiger
    plugins/wordpress
    plugins/zapier
