@@ -646,6 +646,22 @@ Once saved, the Form displays the conditional field nested underneath the parent
   :width: 600
   :alt: Screenshot showing child field nested underneath the parent field
 
+.. vale off
+
+Configuring Behavior options for conditional fields
+===================================================
+
+When a conditional field's type supports Behavior settings, its editor shows the **Behavior** tab with the same **Auto fill data** and **Read only** options that top-level fields offer. Mautic doesn't offer these settings for some field types, including the button, CAPTCHA, page break, file, Description area, and HTML area types.
+
+- **Auto fill data**: pre-populates the conditional field from the stored profile value of a known, returning Contact, so a Contact who already gave the information doesn't re-enter it when the conditional field appears. As with top-level fields, auto-fill only takes effect on Mautic Landing Pages, needs the field mapped to a Contact field, and respects the global 'Enable form field auto-fill from contact data' setting in :ref:`Form settings`. See :ref:`Behavior` for the full option descriptions.
+- **Read only**: locks the auto-filled conditional field so the Contact can't edit it. Use it together with **Auto fill data** to keep critical values such as Email accurate.
+
+.. vale on
+
+.. note::
+
+   Progressive profiling stays top-level only. Conditional fields don't offer **Show when value exists** or **Show after X submissions**.
+
 Blocking Form submissions from specified domains
 ************************************************
 
