@@ -101,6 +101,4 @@ linkcheck_ignore = [
     r"https://www.vtiger.com/",
     # 403 client error from this domain (anti-bot block; URL works in a browser)
     r"https://www.howtoforge.com/a-short-introduction-to-cron-jobs",
-    # Redirects to developers.hubspot.com and hangs past the checker timeout (URL works in a browser)
-    r"https://legacydocs.hubspot.com/*",
 ]
