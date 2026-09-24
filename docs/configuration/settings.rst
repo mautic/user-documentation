@@ -926,15 +926,6 @@ Webhook settings
 
 * **Order of the queued events** - Process the events in chronological or reverse chronological order if a Webhook has a queue of multiple events.
   
-Social settings
-***************
-
-.. image:: images/social-settings.png
-  :width: 600
-  :alt: Screenshot showing Social Settings Configuration in Mautic
-
-* **Twitter Handle Field** - This field stores the Twitter username for Users added to Mautic through Social Monitoring.
-
 Support Mautic menu item
 ************************
 
