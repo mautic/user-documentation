@@ -78,10 +78,6 @@ See :doc:`managing custom fields </contacts/custom_fields>` for more information
      - ``{contactfield=fax}``
    * - First Name
      - ``{contactfield=firstname}``
-   * - Foursquare
-     - ``{contactfield=foursquare}``
-   * - Google+
-     - ``{contactfield=googleplus}``
    * - Instagram
      - ``{contactfield=instagram}``
    * - IP Address
@@ -96,19 +92,21 @@ See :doc:`managing custom fields </contacts/custom_fields>` for more information
      - ``{contactfield=phone}``
    * - Position
      - ``{contactfield=position}``
-   * - Skype
-     - ``{contactfield=skype}``
    * - State
      - ``{contactfield=state}``
-   * - Twitter
+   * - TikTok
+     - ``{contactfield=tiktok}``
+   * - X
      - ``{contactfield=twitter}``
    * - Title
      - ``{contactfield=title}``
    * - Website
      - ``{contactfield=website}``
+   * - YouTube
+     - ``{contactfield=youtube}``
    * - Zip Code
      - ``{contactfield=zipcode}``
-  
+
 Contact Owner fields
 *********************
   
@@ -392,10 +390,6 @@ Alphabetical list
      - ``{contactfield=companyfax}`` 
    * - First Name
      - ``{contactfield=firstname}``
-   * - Foursquare
-     - ``{contactfield=foursquare}``
-   * - Google+
-     - ``{contactfield=googleplus}``
    * - Instagram
      - ``{contactfield=instagram}``
    * - IP Address
@@ -429,17 +423,19 @@ Alphabetical list
    * - Segment List (Preference Center)
      - ``{segmentlist}`` 
    * - Signature
-     - ``{signature}`` 
-   * - Skype
-     - ``{contactfield=skype}``
+     - ``{signature}``
    * - State
      - ``{contactfield=state}``
    * - State (Company)
      - ``{contactfield=companystate}``
    * - Subject
-     - ``{subject}`` 
-   * - Twitter
+     - ``{subject}``
+   * - TikTok
+     - ``{contactfield=tiktok}``
+   * - X
      - ``{contactfield=twitter}``
+   * - YouTube
+     - ``{contactfield=youtube}``
    * - Preferred Channel (Preference Center)
      - ``{preferredchannel}``
    * - Resubscribe URL
