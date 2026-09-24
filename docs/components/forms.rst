@@ -342,7 +342,7 @@ The Behavior tab helps marketers to improve the experience for the visitor compl
 
 - **Show when value exists**: if Mautic knows the Contact and they're tracked, when a value exists for a field Mautic hides the field when this setting is No. This prevents the Contact answering the same question multiple times. You may want to display the field even if it's already known when you want to ensure you have the most up to date information about the Contact.
 - **Show after X submissions**: this allows the marketer to show certain fields only when the Contact has submitted the Form a specified number of times. Enter a value between ``1`` and ``200``.  When left undefined, the field shows every time the Contact views the Form. The goal is to minimize the number of fields shown to the Contact, so it's recommended to hide fields if it's not necessary to verify the values.
-- **Auto-fill data**: this allows you to pre-populate Contact data with known Contacts where the information exists in the Contact profile. Auto-fill works with Mautic Landing Pages, and data won't pre-populate when placing the Form anywhere else. Even if you're hiding this field, you may wish to turn on auto-fill to ensure saving of the information with the Form submission. This per-field option appears in the Behavior tab, and takes effect, only when you turn on the global 'Enable form field auto-fill from contact data' setting in :ref:`Form settings`. When that global setting is off, Mautic hides this option and doesn't auto-fill the field.
+- **Auto-fill data**: this allows you to pre-populate Contact data with known Contacts where the information exists in the Contact profile. Auto-fill works when the Contact opens the Form on a Mautic Landing Page or through the Form's public URL. Even if you're hiding this field, you may wish to turn on auto-fill to ensure saving of the information with the Form submission. This per-field option appears in the Behavior tab, and takes effect, only when you turn on the global 'Enable form field auto-fill from contact data' setting in :ref:`Form settings`. When that global setting is off, Mautic hides this option and doesn't auto-fill the field.
 - **Read only**: activate this setting to lock auto-filled fields with existing Contact information, preventing any edits by Contacts. This ensures that the data submitted with the Form remains accurate and consistent, especially for critical details like Email addresses. Enable this option together with Auto-fill data to stop Contacts from changing essential information during Form submission.
 
 .. vale on
@@ -645,6 +645,22 @@ Once saved, the Form displays the conditional field nested underneath the parent
 .. image:: images/forms/conditional_fields_5.png
   :width: 600
   :alt: Screenshot showing child field nested underneath the parent field
+
+.. vale off
+
+Configuring Behavior options for conditional fields
+===================================================
+
+When a conditional field's type supports Behavior settings, its editor shows the **Behavior** tab with the same **Auto fill data** and **Read only** options that top-level fields offer. Mautic doesn't offer these settings for some field types, including the button, CAPTCHA, page break, file, Description area, and HTML area types.
+
+- **Auto fill data**: pre-populates the conditional field with information already stored for a known Contact, so returning Contacts don't need to enter the same information again when the field appears. Auto-fill works when the Contact opens the Form on a Mautic Landing Page or through the Form's public URL. The field must be mapped to a Contact field, and the global 'Enable form field auto-fill from contact data' setting must be enabled in :ref:`Form settings`. See :ref:`Behavior` for more information.
+- **Read only**: prevents Contacts from changing a value that Mautic has auto-filled into the conditional field. Enable this together with **Auto fill data** when you want to show the stored value without letting the Contact edit it in the Form.
+
+.. vale on
+
+.. note::
+
+   Progressive profiling stays top-level only. Conditional fields don't offer **Show when value exists** or **Show after X submissions**.
 
 Blocking Form submissions from specified domains
 ************************************************
