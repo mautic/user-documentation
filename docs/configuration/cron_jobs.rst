@@ -266,7 +266,7 @@ It's possible to download the database manually through Mautic's Configuration o
 Clean up old data cron job
 ==========================
 
-Clean up a Mautic installation by purging old data. Note that you can't purge some types of data within Mautic. 
+Clean up a Mautic installation by purging old data. Note that you can't purge some types of data within Mautic.
 Currently supported are audit log entries, visitors - anonymous Contacts - and visitor Landing Page hits. Use ``--dry-run`` to view the number of records impacted before making any changes.
 
 Use the ``--gdpr`` flag to delete data to fulfill GDPR European regulation. This deletes Contacts that have been inactive for 3 years.
@@ -276,6 +276,41 @@ Use the ``--gdpr`` flag to delete data to fulfill GDPR European regulation. This
 .. code-block:: php
 
     php /path/to/mautic/bin/console mautic:maintenance:cleanup --days-old=365 --dry-run
+
+.. vale off
+
+Rebuild Campaign summary statistics Cron job
+============================================
+
+.. vale on
+
+The Campaign summary statistics command builds summary data from Campaign event logs. This is useful for fixing incorrect Campaign statistics in the UI without recalculating all Campaigns.
+
+.. code-block:: php
+
+    php /path/to/mautic/bin/console mautic:campaigns:summarize
+
+Command parameters
+------------------
+
+* ``--campaign-id=ID`` - Process only a specific Campaign. When provided, the command resumes from that Campaign's own summary history instead of using global dates.
+* ``--rebuild`` - Rebuild existing summary data from the current hour, walking backward through history. Without this flag, the command continues from where it last stopped.
+* ``--batch-limit=X`` - How many hours to process per batch.
+* ``--max-hours=X`` - Maximum hours to process per execution.
+
+**Examples:**
+
+To rebuild summary statistics for a single Campaign:
+
+.. code-block:: bash
+
+    php /path/to/mautic/bin/console mautic:campaigns:summarize --campaign-id=434
+
+To fully rebuild a Campaign's statistics from scratch:
+
+.. code-block:: bash
+
+    php /path/to/mautic/bin/console mautic:campaigns:summarize --campaign-id=434 --rebuild
 
 MaxMind CCPA compliance cron job
 ================================
