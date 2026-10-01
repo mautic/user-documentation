@@ -1,7 +1,7 @@
 .. vale off
 
 Capturing UTM tags from Landing Pages
-######################################
+#####################################
 
 .. vale on
 
@@ -20,11 +20,11 @@ The following URLs show how UTM parameters appear on both external websites and 
 
 .. code-block:: text
 
-   https://example.com/promo-Page?utm_source=newsletter&utm_medium=email&utm_campaign=spring_sale_2026
+   https://example.com/promo-page?utm_source=newsletter&utm_medium=email&utm_campaign=spring_sale_2026
 
 .. code-block:: text
 
-   https://example.com/Page/landing-slug?utm_source=google&utm_medium=cpc&utm_campaign=spring_sale_2026
+   https://your-mautic.com/landing-slug?utm_source=google&utm_medium=cpc&utm_campaign=spring_sale_2026
 
 The first URL contains three UTM parameters:
 
@@ -32,7 +32,7 @@ The first URL contains three UTM parameters:
 * ``utm_medium``: identifies the delivery Channel as Email
 * ``utm_campaign``: groups the traffic under the ``spring_sale_2026`` Campaign name.
 
-The second URL shows the same pattern applied to a Mautic-hosted Landing Page: the slug ``/Page/landing-slug`` is the Mautic Landing Page path, and the query string carries the same UTM data.
+The second URL shows the same pattern applied to a Mautic-hosted Landing Page: ``landing-slug`` is the Mautic Landing Page alias, and the query string carries the same UTM data.
 
 Choose parameters to reflect the realistic distribution Channel for each URL. The external website URL uses ``utm_medium=email`` because a newsletter link drove the visit, while the Mautic Landing Page URL uses ``utm_medium=cpc`` because a paid search ad drove it. Using accurate medium values ensures your analytics tool groups traffic into the correct Channels and your Reporting reflects the actual performance of each Channel.
 
