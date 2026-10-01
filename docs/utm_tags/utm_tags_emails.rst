@@ -11,7 +11,7 @@ To use this, you need permission to edit Emails in Mautic, at least one outbound
 
 .. tip::
 
-   Use the same ``Campaign`` value across your Email, Dynamic Web Content - DWC - blocks, and any paid ads running at the same time. All traffic from a single Campaign then rolls up cleanly under one Campaign name in Analytics, regardless of which Channel drove the click.
+   Use the same **Campaign name** value across your Email, Dynamic Web Content - DWC - blocks, and any paid ads running at the same time. All traffic from a single Campaign then rolls up cleanly under one Campaign name in Analytics, regardless of which Channel drove the click.
 
 .. vale off
 
