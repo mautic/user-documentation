@@ -34,7 +34,7 @@ Create Segment filters
 
 #. Go to the **Filters** tab.
 
-#. Click the **Choose one...** menu and search for ``utm`` to find the five UTM fields in the **Contact** group. Select the field you want to filter on.
+#. Click the **Choose one...** menu and search for ``utm``. The **Contact** group lists the five UTM filters: **UTM Campaign**, **UTM Content**, **UTM Medium**, **UTM Source**, and **UTM Term**. Select the filter you want to use.
 
 #. Select the operator and enter the value to match, for example, ``newsletter``, ``email``, or ``spring_sale_2026``.
 

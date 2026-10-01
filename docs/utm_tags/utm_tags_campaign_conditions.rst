@@ -41,7 +41,7 @@ Branching on ``utm_medium`` rather than ``utm_campaign`` is useful when unifying
 
 .. warning::
 
-   The UTM condition evaluates the values **currently recorded** on the Contact profile at the moment the Campaign processes them. If Mautic hasn't captured UTM data when the Contact enters the Campaign - for example, if they entered before submitting the Form that records UTM tags - the condition evaluates against empty values and routes the Contact to the 'no' path. Order matters.
+   The UTM condition evaluates the values **currently recorded** on the Contact profile at the moment the Campaign processes them. If Mautic hasn't captured UTM data when the Contact enters the Campaign - for example, if they entered before submitting the Form that records UTM tags - the condition evaluates against empty values and routes the Contact to the red 'no' path. Order matters.
 
 .. seealso::
 
