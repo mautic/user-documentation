@@ -27,9 +27,9 @@ The five standard UTM parameters are:
    * - **utm_campaign**
      - The specific promotion or marketing initiative title to track. Examples: ``summer_sale``, ``free_trial``, ``spring_sale_2026``
    * - **utm_content**
-     - Optional, used to distinguish between multiple versions of the same message or content variant within a Campaign. Examples: ``welcome_email_1``, ``banner_version_a``
+     - **Optional**. Use this to distinguish between multiple versions of the same message or content variant within a Campaign. Examples: ``welcome_email_1``, ``banner_version_a``
    * - **utm_term**
-     - Optional, used to track search keywords or content categories. Auto-populated in some contexts.
+     - **Optional**. Use this to track search keywords or content categories. Auto-populated in some contexts.
 
 .. vale on
 
@@ -43,7 +43,7 @@ To use UTM tags with Google Analytics where they appear in your Google Analytics
 If you use a Mautic Landing Page, go to **Settings** > **Configuration** > **Tracking Settings**, and add your **Google Analytics ID**.
 
 .. image:: ../channels/images/utm_tags/add_google_analytics_id.png
-   :alt: Screenshot showing the option to add your Google Analytics ID
+   :alt: Google Analytics ID field in Mautic's Tracking Settings
 
 If you use a non-Mautic Landing Page, you must manually embed the Google Analytics tracking script on the third-party Landing Page.
 
@@ -62,14 +62,14 @@ These features read UTM parameters from URLs and save them to a Contact's record
    * - Feature
      - How it triggers
      - Notes
-   * - **Form action "Record UTM Tags"**
+   * - **Record UTM Tags** Form action
      - Visitor submits a Mautic Form that has this action configured. It reads UTM parameters from the query string of the Landing Page the Form is on, with Landing Page referrer as fallback.
      - See :doc:`utm_tags_forms`
    * - **Tracking script / pixel on external site**
      - The tracking script fires on an external Landing Page. The browser call carries the full Landing Page URL. If it contains UTM parameters, Mautic captures them.
      - See :doc:`utm_tags_landing_pages`
    * - **Mautic Landing Page visit**
-     - Someone visits a Landing Page built inside Mautic - ``/Page/slug``. Mautic reads UTM parameters from the URL query string.
+     - Someone visits a Landing Page built inside Mautic, for example ``https://your-mautic.com/{alias}``. Mautic reads UTM parameters from the URL query string.
      - See :doc:`utm_tags_landing_pages`
    * - **Asset download**
      - On direct Asset download via a UTM-tagged URL, Mautic stores UTM parameters on the download record only, not on the Contact profile. Mautic doesn't capture UTM data when a Form action triggers the download.
@@ -117,7 +117,7 @@ Once Mautic captures UTM data on Contact profiles, you can use it to control who
      - When Mautic evaluates a Segment. All five UTM Contact fields - ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, ``utm_term`` - are available as filter conditions.
    * - **Campaign conditions**
      - Branches Campaign flow based on UTM field values on the Contact.
-     - When a Campaign evaluates a "Contact field value" condition node that references a UTM field.
+     - When a Campaign evaluates a **Contact field value** condition that references a UTM field.
 
 Displaying UTM data
 ===================
