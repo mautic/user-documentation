@@ -11,7 +11,7 @@ To use this, you need permission to edit Emails in Mautic, at least one outbound
 
 .. tip::
 
-   Use the same ``Campaign`` value across your Email, Dynamic Web Content - DWC - blocks, and any paid ads running at the same time. All traffic from a single Campaign then rolls up cleanly under one Campaign name in Analytics, regardless of which Channel drove the click.
+   Use the same **Campaign name** value across your Email, Dynamic Web Content - DWC - blocks, and any paid ads running at the same time. All traffic from a single Campaign then rolls up cleanly under one Campaign name in Analytics, regardless of which Channel drove the click.
 
 .. vale off
 
@@ -20,7 +20,7 @@ Configure Email UTM tags
 
 .. vale on
 
-#. Open the Email and the edit its details:
+#. Open the Email and edit its details:
 
    #. Go to **Channels** > **Emails**.
    #. Click the name of the Email you want to modify.
@@ -35,13 +35,17 @@ Configure Email UTM tags
    * **Campaign name**: the Campaign name, for example, ``spring_sale_2026``
    * **Campaign content**: optional field for distinguishing between multiple Emails in the same Campaign, for example, ``welcome_email_1``
 
+   .. note::
+
+      A new Email starts with the default UTM values from the **Message Settings** section of **Settings** > **Configuration** > **Email Settings**, if your administrator set any. You can change them on each Email. Existing and cloned Emails keep their own values. See :doc:`/configuration/settings` for details.
+
 #. Save the Email.
 
 #. Test by using the Email preview or sending a test to yourself, then hovering over a link in the Email and confirming the destination URL includes your UTM parameters, for example:
 
    .. code-block:: text
 
-      https://example.com/promo?utm_source=newsletter&utm_medium=Email&utm_campaign=spring_sale_2026
+      https://example.com/promo?utm_source=newsletter&utm_medium=email&utm_campaign=spring_sale_2026
 
 This URL results from an Email configured with ``utm_source=newsletter``, ``utm_medium=email``, and ``utm_campaign=spring_sale_2026``. The ``utm_source`` value ``newsletter`` clearly identifies the sending list or newsletter program as the origin. The ``utm_medium`` value ``email`` tells analytics tools to classify this traffic in the Email Channel grouping. The ``utm_campaign`` value ties the click to the named marketing initiative.
 

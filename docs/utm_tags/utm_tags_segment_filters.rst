@@ -13,7 +13,7 @@ Segments can include or exclude Contacts based on UTM values recorded on their p
 * ``utm_content``
 * ``utm_term``
 
-These UTM fields let you build Segments - for example, "all Contacts who came from the spring sale Email Campaign" or "all Contacts whose source was Google" - and use those Segments for targeted sends, Reporting, or Campaign entry Points.
+These UTM fields let you build Segments - for example, 'all Contacts who came from the spring sale Email Campaign' or 'all Contacts whose source was Google' - and use those Segments for targeted sends, Reports, or as a Campaign's Contact source.
 
 .. vale off
 
@@ -28,21 +28,19 @@ Create Segment filters
 
 .. vale on
 
+.. vale off
+
 #. Go to **Segments** and open an existing Segment or create a new one.
 
 #. Go to the **Filters** tab.
 
-#. Click **Add filter** and search for the UTM field you want to filter on. All five are available under their corresponding labels:
-
-   * ``utm_source``
-   * ``utm_medium``
-   * ``utm_campaign``
-   * ``utm_content``
-   * ``utm_term``
+#. Click the **Choose one...** menu and search for ``utm``. The **Contact** group lists the five UTM filters: **UTM Campaign**, **UTM Content**, **UTM Medium**, **UTM Source**, and **UTM Term**. Select the filter you want to use.
 
 #. Select the operator and enter the value to match, for example, ``newsletter``, ``email``, or ``spring_sale_2026``.
 
 #. Save the Segment.
+
+.. vale on
 
 The preceding example applies the operator and value ``newsletter`` to ``utm_source``, which selects all Contacts who recorded ``newsletter`` as their source at any point in their history. You could equally filter on ``utm_medium = email`` to target all Email-acquired Contacts, or combine both filters with and logic to narrow the audience to Contacts acquired specifically via the newsletter Channel using Email delivery.
 
@@ -54,7 +52,7 @@ Combine filters this way to reflect how UTM parameters work together. Filtering 
 
 .. tip::
 
-   Combining UTM filters with other Segment conditions, for example, "came from Campaign X and submitted Form Y," is a powerful way to build high-intent audiences. UTM filters alone tell you the source. Pairing them with behavioral filters tells you the source and what the Contact did.
+   Combining UTM filters with other Segment conditions, for example, 'came from Campaign X and submitted Form Y', is a powerful way to build high-intent audiences. UTM filters alone tell you the source. Pairing them with behavioral filters tells you the source and what the Contact did.
 
 After the Segment updates, it should show Contacts whose recorded UTM values match your filter conditions, with Contacts that have no UTM data or non-matching values correctly excluded.
 
