@@ -427,6 +427,7 @@ When you merge Contacts, the main Contact receives the following data:
 
 * **Field data** - Values from the merged Contact fill empty fields on the main Contact.
 * **Owner** - If the main Contact doesn't have an owner, it inherits the merged Contact's owner.
+* **Stage** - If the main Contact doesn't have a Stage, it inherits the merged Contact's Stage. If it already has a Stage, it keeps its own.
 * **Points** - Points from both Contacts combine.
 * **Tags** - Tags from both Contacts combine.
 * **Company associations** - Company associations from the merged Contact transfer to the main Contact. If both Contacts have a primary Company, the main Contact keeps its primary. If only the merged Contact has a primary Company, the main Contact inherits that primary designation.
