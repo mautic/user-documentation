@@ -211,13 +211,13 @@ When you save the Focus Item, Mautic shows the code required to display it on yo
 
     You must also ensure that you have specified your website's domain where you expect to use the Focus Item in the CORS settings for your Mautic instance, otherwise it won't appear. To verify this, go to Settings > Configuration > System Settings > CORS Settings and set Restricted Domains to Yes. Ensure that you specify your domain in the relevant field. Alternatively (but not recommended, as this would allow other websites to display your Focus Items), set Restrict Domains to No and don't specify your domains.
 
-Consent-managed
-~~~~~~~~~~~~~~~
+Consent-managed embed
+~~~~~~~~~~~~~~~~~~~~~
 
 The 'Consent-managed' option gives you two pieces that you use together:
 
 * A *display* script that loads and shows the Focus Item without any Mautic tracking.
-* A *tracking activation* snippet that calls Mautic's public ``window.MauticFocus.enableTracking(<id>)`` API, where ``<id>`` is the Focus Item's numeric ID. Calling it activates tracking for that Focus Item. Your site's developer runs this snippet from your consent-management platform (CMP) so Focus tracking starts only after the visitor grants consent. See the :xref:`Focus Item scripts docs` page in the Mautic Developer Documentation for the JavaScript API.
+* A *tracking activation* snippet that calls Mautic's public ``window.MauticFocus.enableTracking(<id>)`` API, where ``<id>`` is the Focus Item's numeric ID. Calling it activates tracking for that Focus Item. Your site's developer runs this snippet from your consent-management platform (CMP) so Focus tracking starts only after the visitor grants consent.
 
 .. code-block:: js
 
@@ -232,8 +232,8 @@ Mautic doesn't record or verify consent - it only separates displaying the Focus
 
 If your Mautic administrator has turned on 'Use Mautic consent for Focus tracking' (see 'Bridging Mautic website-tracking consent' below), you don't need to call ``window.MauticFocus.enableTracking(<id>)`` separately - the two approaches are alternatives.
 
-Full tracking
-~~~~~~~~~~~~~
+Full tracking embed
+~~~~~~~~~~~~~~~~~~~
 
 The 'Full tracking' option is a single snippet that loads the display script and then immediately activates tracking. This is equivalent to the legacy embed behavior. Use it only when consent already exists at page load, or when you handle consent through another mechanism outside of Mautic. As with the 'Consent-managed' option, your web development team places this snippet on the page.
 
@@ -254,7 +254,7 @@ Turning this setting on or off only changes the snippets Mautic shows for copyin
 
 It's safe to leave a manual ``window.MauticFocus.enableTracking(<id>)`` call in place when this setting is on - you don't need both, but keeping it does no harm.
 
-When it's off, you manage Focus tracking consent independently by calling ``window.MauticFocus.enableTracking(<id>)`` as described in the 'Consent-managed' section.
+When it's off, you manage Focus tracking consent independently by calling ``window.MauticFocus.enableTracking(<id>)`` as described in the 'Consent-managed embed' section.
 
 .. vale off
 
@@ -268,7 +268,7 @@ You can also embed a Focus Item in a Landing Page or Email using a page-builder 
 * ``{focus=ID}`` and ``{focus=ID|tracking}`` - load the display script and activate tracking together, matching the legacy behavior.
 * ``{focus=ID|display}`` - load the display script only, with no tracking.
 
-The ``{focus=ID|display}`` variant renders the Focus Item without tracking; the consent-managed activation flow described above applies to the website script embed, not to tokens. Use ``{focus=ID}`` or ``{focus=ID|tracking}`` when you want tracking with the token embed.
+The ``{focus=ID|display}`` variant renders the Focus Item without tracking; the consent-managed activation flow in the preceding sections applies to the website script embed, not to tokens. Use ``{focus=ID}`` or ``{focus=ID|tracking}`` when you want tracking with the token embed.
 
 See :doc:`/configuration/variables` for the full list of tokens.
 
