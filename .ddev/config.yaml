@@ -1,0 +1,8 @@
+type: generic
+docroot: "docs/build/html"
+working_dir:
+  web: /var/www/html/docs
+omit_containers: [db]
+hooks:
+  post-start:
+    - exec: "make html"

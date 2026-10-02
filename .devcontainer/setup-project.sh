@@ -4,10 +4,10 @@ set -ex
 VALE_VERSION=3.7.1
 
 # Install required packages
-pip install -r docs/requirements.txt
+/usr/local/bin/python -m pip install -r docs/requirements.txt
 
 # Required for Vale
-pip install rst2html rstcheck
+/usr/local/bin/python -m pip install rst2html rstcheck  
 
 # Install Vale
 mkdir -p /tmp/vale
