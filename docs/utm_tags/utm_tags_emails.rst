@@ -20,7 +20,7 @@ Configure Email UTM tags
 
 .. vale on
 
-#. Open the Email and edit its details:
+#. Open the Email to start editing:
 
    #. Go to **Channels** > **Emails**.
    #. Click the name of the Email you want to modify.
