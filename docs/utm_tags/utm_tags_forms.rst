@@ -16,7 +16,7 @@ Add UTM recording
 
 .. vale on
 
-#. Open the Form and edit its details:
+#. Open the Form to start editing:
 
    #. Go to **Components** > **Forms**.
    #. Click the name of the Form you want to modify.
