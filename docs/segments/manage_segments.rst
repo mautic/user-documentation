@@ -106,13 +106,12 @@ Batch updating Contacts
 
 2. Select the checkboxes next to those Contacts.
 
-3. Click the green arrow which appears at the top of the column.
+3. In the purple action toolbar that appears at the top, open the three-dot **Options** menu.
 
-4. Select **Change Segments** from the list.
+4. Select **Change Segments** from the **Options** menu.
 
 .. image:: images/batch-update-segment.png
   :width: 500
-  :height: 500
   :alt: Screenshot showing batch change Segment.
 
 5. Choose the **Segments** to add or remove Contacts from.
@@ -132,13 +131,12 @@ Adding individual Contacts
 
 1. Navigate to the Contact record you want to change.
 
-2. Click the arrow in the top right, next to **Edit/Send Email/Close**.
+2. Click the dropdown arrow in the top right, next to the **Edit** and **Send email** buttons.
 
-3. Select **Preference**.
+3. Select **Preferences**.
 
 .. image:: images/individual-contact-preference.png
  :width: 500
- :height: 300
  :alt: Screenshot showing individual change Segment.
 
 4. Click **Segments**.
@@ -488,15 +486,12 @@ This is a performance precaution since deleting more Contacts at one time could 
 
 1. Select the checkboxes next to those Contacts.
 
-2. Click the green arrow which appears at the top of the column.
+2. In the purple action toolbar that appears at the top, click **Delete selected**.
 
-3. Select **Delete Selected** from the list.
-
-
-4. Click **Delete**.
+3. Click **Delete**.
 
 .. image:: images/select-delete.png
-    :width: 200
+    :width: 600
     :alt: Screenshot showing Deleting all Contacts in a Segment.
 
 Deleting thousands of Contacts this way in one Segment becomes a tedious task. Luckily, there is a trick how to let the background workers do the job for you.
