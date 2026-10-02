@@ -75,6 +75,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://tommairs.github.io/"><img src="https://avatars.githubusercontent.com/u/13574506?v=4?s=100" width="100px;" alt="Tom Mairs"/><br /><sub><b>Tom Mairs</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/commits?author=tommairs" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://johnlinhart.com"><img src="https://avatars.githubusercontent.com/u/1235442?v=4?s=100" width="100px;" alt="John Linhart"/><br /><sub><b>John Linhart</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/pulls?q=is%3Apr+reviewed-by%3Aescopecz" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.ruthcheesley.co.uk"><img src="https://avatars.githubusercontent.com/u/2930593?v=4?s=100" width="100px;" alt="Sīlavāpi Cheesley"/><br /><sub><b>Sīlavāpi Cheesley</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/pulls?q=is%3Apr+reviewed-by%3ARCheesley" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
 </table>
