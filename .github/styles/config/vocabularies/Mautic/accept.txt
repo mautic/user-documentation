@@ -153,6 +153,7 @@ Transifex
 TRUE
 Twilio
 unassign
+uncategorized
 unpublish
 Unpublish
 URL

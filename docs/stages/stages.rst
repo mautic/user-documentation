@@ -16,7 +16,7 @@ Creating Stages
 
 Navigate to the **Stages** section in the left side menu, and then click **+New**.
 
-.. image:: images/Stages.png
+.. image:: images/stages.png
    :align: center
    :alt: Mautic Stages
    
@@ -39,23 +39,28 @@ Moving Contacts between Stages
 
 .. vale on
 
-Moving Contacts between Stages requires a Campaign action. 
+.. vale off
+
+You can move Contacts between Stages with a Campaign action or with a Point Trigger. A Point Trigger's **Change contact's stage** event moves a Contact to the Stage you choose once they reach the trigger's minimum Point total. For more information, see :ref:`contact triggers`.
+
+.. vale on
 
 Depending on how you define your Contact lifecycle and Stages, there may be different triggers for a Contact to move between Stages. Examples include behaviors within a Campaign, or moving between Segments which have criteria set up for each Stage. 
 
 In any Campaign where you want to have Contacts move between new Stages:
-
-.. image:: images/switch-stage.png
-   :align: center
-   :alt: Moving Contacts between Stages
-   
-|
 
 1. Add a new **Action**.
 
 2. Select **Change Contact's Stage** as the action type.
 
 3. Select the Stage you want to move the Contacts to. You can base this on a prior event, or on a Segment that Contacts are in based on filters matching your requirements for a Stage.
+
+.. image:: images/switch_stage.png
+   :width: 600
+   :align: center
+   :alt: Moving Contacts between Stages
+
+|
 
 For more information on setting up Campaigns, see :ref:`triggering campaign events`
 
@@ -118,7 +123,7 @@ Visualizing Stage movement
 
 The Mautic dashboard features two widgets to help Users see how Contacts are moving between Stages.
 
-.. image:: images/stage-dashboard.png
+.. image:: images/stage_dashboard.png
    :align: center
    :alt: Visualizing Stage movement
    
@@ -130,3 +135,9 @@ Lifecycle
 *********
 
 The lifecycle widget enables marketers to see the number of Contacts within a specified Segment in each Stage. You may include multiple Segments on the widget. It's possible to have more than one lifecycle widget to break down the information into separate graphs, but still display the data on the dashboard for multiple Segments.
+
+.. image:: images/lifecycle.png
+   :align: center
+   :alt: Visualizing Stage lifecycle
+
+|

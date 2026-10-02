@@ -115,6 +115,8 @@ There are permission levels relating to resources the User has created themselve
 
 * **Own** - this allows the Users with this Role to ``view/edit/delete/activate`` their own resources in this part of Mautic, but not those created by others
 
+* **Same Role** - this allows the Users with this Role to ``view/edit/delete/activate`` resources created by themselves and by other Users who share the same Role, but not those created by Users with different Roles
+
 * **Others** - this allows the Users with this Role to ``view/edit/delete/activate`` their own resources in this part of Mautic, and those created by others
 
 There are permission levels relating to being able to manage resources:
@@ -195,3 +197,75 @@ Clicking the clone icon opens the new Role's edit screen, pre-filled with the so
    The clone icon only appears for Users whose Role has the Roles **Create** permission.
 
 You can also create :xref:`Roles using the API`.
+
+.. vale off
+
+Using 'Same Role' permissions
+=============================
+
+.. vale on
+
+Same Role permissions provide an intermediate access level between **Own** and **Others**. This allows team-based collaboration where Users can share resources within their team without granting access to resources from other teams.
+
+.. vale off
+
+Where 'Same Role' permissions apply
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. vale on
+
+Same Role permissions apply to the following areas of Mautic:
+
+* Assets
+* Campaigns
+* Channels - Marketing Messages
+* Dynamic Content
+* Emails
+* Focus Items
+* Forms
+* Landing Pages
+* Reports
+* Segments
+
+.. vale off
+
+For each area, you can set **View Same Role**, **Edit Same Role**, **Delete Same Role**, and **Publish Same Role** permissions.
+
+.. vale on
+
+Example: regional teams sharing content
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. vale off
+
+A company has marketing teams in multiple countries. Each team needs to collaborate on shared content, but shouldn't access other teams' work.
+
+.. vale on
+
+.. vale off
+
+#. Create a Role called ``Italy`` and assign all Italian team members to it.
+#. Create a Role called ``Germany`` and assign all German team members to it.
+#. For each Role, enable the Same Role permissions. For example, select **View Same Role**, **Edit Same Role**, and **Publish Same Role** for Emails and Campaigns.
+
+.. vale on
+
+With this setup:
+
+* Italian Users can view, edit, and send Emails created by other Italian Users.
+* Italian Users can't see or modify Emails created by German Users.
+* German Users can view, edit, and send Emails created by other German Users.
+* German Users can't see or modify Emails created by Italian Users.
+
+This pattern works for any scenario where groups need internal collaboration with isolation from other groups, such as regional offices, product lines, client accounts, or business units.
+
+Combining permission levels
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Same Role permissions work alongside **Own** and **Others** permissions. Mautic checks permissions in this order:
+
+#. If a User has **Others** permission, they can access all resources regardless of who created them.
+#. If a User has **Same Role** permission, they can access resources created by themselves and by other Users sharing the same Role.
+#. If a User has only **Own** permission, they can access only resources they created themselves.
+
+You can grant broader access to specific Users by assigning them to a Role with **Others** permissions, such as a manager or administrator Role that can oversee all teams.
