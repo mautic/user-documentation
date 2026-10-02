@@ -1,11 +1,11 @@
 .. vale off
 
 Recording UTM tags in Forms
-############################
+###########################
 
 .. vale on
 
-When a Contact submits a Mautic Form, you can automatically capture the UTM parameters from the Landing Page URL and store them on their profile. A built-in Mautic action called **Record UTM Tags** handles this, but the action itself doesn't define which UTM values to capture. It reads whatever UTM parameters are already present in the URL of the Landing Page where the Form lives.
+When a Contact submits a Mautic Form, you can automatically capture the UTM parameters from the Landing Page URL and store them on their profile. A built-in Mautic Form action called **Record UTM Tags** handles this, but the action itself doesn't define which UTM values to capture. It reads whatever UTM parameters are already present in the URL of the Landing Page where the Form lives.
 
 That means the website is responsible for including UTM parameters in the Landing Page URL. The Form action picks them up at submission time. The five standard parameters it captures are ``utm_source``, ``utm_medium``, ``utm_campaign``, ``utm_content``, and ``utm_term``. To follow the steps below, you need permission to edit Forms in Mautic and a Form already embedded on a website Landing Page where the site sends UTM-tagged traffic.
 
@@ -16,7 +16,7 @@ Add UTM recording
 
 .. vale on
 
-#. Open the Form and edit its details:
+#. Open the Form to start editing:
 
    #. Go to **Components** > **Forms**.
    #. Click the name of the Form you want to modify.
@@ -24,11 +24,9 @@ Add UTM recording
 
 #. Go to the **Actions** tab inside the Form editor.
 
-#. Click **Add action**.
+#. Open the **Add a new submit action** dropdown menu and select **Record UTM Tags**.
 
-#. Select **Record UTM Tags** from the dropdown menu.
-
-#. Fill in the **Name** field with a label for your reference, for example, ``Record UTM tags on submit``. The description is optional.
+#. Fill in the **Name** field with a label for your reference, for example, ``Record UTM Tags on submit``. The description is optional.
 
    .. attention::
 
@@ -40,7 +38,7 @@ Add UTM recording
 
    .. code-block:: text
 
-      https://example.com/landing-Page?utm_source=newsletter&utm_medium=email&utm_campaign=spring_sale_2026
+      https://example.com/landing-page?utm_source=newsletter&utm_medium=email&utm_campaign=spring_sale_2026
 
 #. Test the setup by visiting the Landing Page using a URL with UTM parameters, submitting the Form, and checking the Contact profile.
 
@@ -50,7 +48,7 @@ The choice to use three parameters rather than all five reflects a practical min
 
 .. note::
 
-   Forms capture the full Landing Page URL, Landing Page referrer, User agent, and all raw query parameters, not just UTM fields.
+   Forms capture the full Landing Page URL, Landing Page referrer, the browser's ``User-Agent`` string, and all raw query parameters, not just UTM fields.
 
 .. tip::
 
