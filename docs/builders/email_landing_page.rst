@@ -118,6 +118,28 @@ You can paste content from external sources like Microsoft Word or Google Docs. 
 
    Click outside the text Component to finish editing and return to the canvas.
 
+Copying and pasting sections
+============================
+
+When you edit an MJML-based Email, you can copy one or more sections and paste them into the same Email or into another Email. This saves you from rebuilding larger parts of a design, such as a header and a footer, in every Email.
+
+To copy and paste sections:
+
+#. In the canvas, select the first section you want to copy.
+#. Hold :kbd:`CTRL` - :kbd:`Cmd` on macOS - and click each additional section you want to copy.
+#. Press :kbd:`CTRL+C` - :kbd:`Cmd+C` on macOS - to copy the selected sections.
+#. Open the Email where you want to paste the sections. This can be the same Email.
+#. Select the section you want the pasted sections to follow.
+#. Press :kbd:`CTRL+V` - :kbd:`Cmd+V` on macOS - to paste the sections.
+
+Mautic inserts the copied sections directly after the section you selected. The sections keep the order they have in the original Email, whatever order you selected them in. If you don't select a section before you paste, Mautic adds the copied sections to the end of the Email.
+
+Keep in mind how copying and pasting behaves:
+
+* Mautic copies section, wrapper, and hero Components only. If your selection includes other Components, such as a text or image block, Mautic leaves them out of the copy.
+* Mautic doesn't paste anything while you have more than one Component selected. Select a single section, then paste again.
+* Mautic stores the copied sections in your browser's local storage, so you can paste them into an Email in another browser tab. The copy isn't available in a different browser.
+
 Restoring unsaved changes
 =========================
 
