@@ -313,7 +313,7 @@ To view additional options for Report, click the drop-down menu next to the chec
 
 * **Export & Send** sends a link containing the ``.csv`` file with the Report data to the email address on your User profile.
 
-* **Delete** deletes the Report immediately.
+* **Delete** deletes the Report immediately. If the Report has scheduled Emails, deleting it also stops those sends.
 
 Quick filters
 =============
