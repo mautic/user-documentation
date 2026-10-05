@@ -249,7 +249,7 @@ Email content preview
 
 The Email details page shows a rendered preview of the Email content in the right column, so you can see how an Email looks without opening the Builder or a separate tab. This is handy when you're comparing several Emails to find the one you want.
 
-The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Mautic reloads the preview automatically to match the version you've selected.
+The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Enter a Company in **Show preview for company** to fill Company field tokens, such as ``{companyfield=companyname}``, with that Company's values. If you don't select a Company, Mautic uses the selected Contact's Companies, or sample Company data when there's no Contact. Mautic reloads the preview automatically to match the version you've selected.
 
 .. image:: images/emails/email_details_preview.png
    :width: 600
@@ -259,6 +259,24 @@ The preview reflects your selection in the **Preview URL** panel below it. Choos
 |
 
 .. vale on
+
+.. vale off
+
+Opening and downloading the Email preview
+-----------------------------------------
+
+.. vale on
+
+To review the Email at full size, or to hand its rendered HTML to someone else, open it in its own tab:
+
+#. On the Email details page, select a Contact, a Company, or both in the **Preview URL** panel if you want the preview to use their data.
+#. Select the open link icon beside the Preview URL. The Email Preview opens in a new tab.
+#. To switch the data the preview uses, enter a different Contact in **Contact** or a different Company in **Company** at the top of the Email Preview. Mautic reloads the preview with your selection.
+#. To save the rendered Email, select **Download HTML**. Mautic downloads an HTML file with all tokens replaced. The filename starts with the selected Company's name, or the Contact's first name when you haven't selected a Company, followed by the Email name - for example, ``Acme-Welcome Email.html``.
+
+You can only preview a Contact's data if you have permission to view that Contact. Otherwise, Mautic shows the preview with sample Contact data and a message that you don't have access to the Contact.
+
+People who aren't logged in to Mautic can open the Preview URL only when the Email is Active and public preview is on. Use the toggle beside the Preview URL to turn public preview on or off.
 
 Segments used
 =============
