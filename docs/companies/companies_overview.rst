@@ -138,6 +138,13 @@ Company Segments
 
 You can create a Segment based on a Company record. Select any Company field to filter with and the matching criteria for it, and Mautic lists any Contacts that match the selected fields in the Segment.
 
+Segment filters list each Company field in two groups:
+
+* **Contact's primary company** - matches Contacts based on their primary Company only.
+* **Any associated company** - matches Contacts when at least one primary or secondary Company meets the filter.
+
+For more information, see :doc:`Segments </segments/manage_segments>`.
+
 .. vale off
 
 Identifying Companies
