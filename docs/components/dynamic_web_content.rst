@@ -110,9 +110,9 @@ When you have multiple Dynamic Web Content items sharing the same slot name, you
 
 #. Navigate to the Components > Dynamic Content section
 #. Click on any Dynamic Web Content item that uses a shared slot name
-#. Click the **Variations** tab to see all other Dynamic Web Content items with the same slot name
+#. Click the **Variations** tab to see all Dynamic Web Content items with the same slot name, including the current item
 
-The Variations tab displays items in descending order of their display order value, helping you understand the priority in which Mautic evaluates filters.
+The Variations tab displays items in ascending order of their display order value, helping you understand the priority in which Mautic evaluates filters.
 
 .. vale off
 
