@@ -39,7 +39,7 @@ Editing a Notification
 
 .. vale on
 
-When you open or create a Notification under Web Notifications, the editor shows a live preview panel beside the **Heading**, **Message**, and **Action Button Text** fields. As you enter text in them, Mautic updates the matching elements in the preview, so you can see how the Notification looks without saving and reopening it.
+When you create or open a Notification under **Channels > Web Notifications**, the editor shows a live preview panel beside the **Heading**, **Message**, and **Action Button Text** fields. As you enter text in them, Mautic updates the matching elements in the preview, so you can see how the Notification looks without saving and reopening it.
 
 When a field is empty, the preview shows default text instead. An empty **Heading** shows 'Notification' and an empty **Message** shows 'You have a new message'. When **Action Button Text** is empty, the action button doesn't appear in the preview.
 
