@@ -63,19 +63,15 @@ The following values are available:
 
 - **Internal name** - This is how the slot displays in your list of Dynamic Web Content slots. You should include information on what you're personalizing - for example, country - and the content in the slot - for example, United States. If you're creating a personalized slot for people in the United States, you can name the slot Country - United States. If you plan to have more than one personalized content slot for the same audience across your website, include the page title or other identifying information for the particular slot.
 
-.. vale off
+- **Content** - Use the WYSIWYG editor to create the Dynamic Web Content slot. You may include images and videos. If you prefer HTML, click the ``</> Source`` icon in the toolbar to switch to the code view. Mautic's Dynamic Web Content supports tokens in the same way as Landing Pages or Emails. To add a token, start typing with the ``{`` character and Mautic displays the available tokens. These include:
 
-#. **Content** - Use the WYSIWYG editor to create the Dynamic Web Content slot. You may include images and videos. If you prefer HTML, click the ``</> Source`` icon in the toolbar to switch to the code view. Mautic's Dynamic Web Content supports tokens in the same way as Landing Pages or Emails. To add a token, start typing with the ``{`` character and available tokens are displayed. These include:
+  * Contact field - ``{contactfield=fieldalias}``
+  * Landing Page link - ``{pagelink=ID#}``
+  * Asset link - ``{assetlink=ID#}``
+  * Form - ``{form=ID#}``
+  * Focus Item - ``{focus=ID#}``
 
-   *  Contact field: {contactfield=fieldalias}
-   *  Landing page link: {pagelink=ID#}
-   *  Asset link: {assetlink=ID#}
-   *  Form: {form=ID#}
-   *  Focus item: {focus=ID#}
-
-.. vale on
-
-**Category** - Assign a Category to help you organize your Dynamic Web Content items. See :doc:`/categories/categories-overview` for more information.
+- **Category** - Assign a Category to help you organize your Dynamic Web Content items. See :doc:`/categories/categories-overview` for more information.
 
 - **Language** - the language of this Dynamic Web Content - can be helpful in multilingual marketing Campaigns and for reporting purposes
 
@@ -83,21 +79,29 @@ The following values are available:
 
 - **Published** - Whether the Dynamic Web Content item is available for use - published - or not available - unpublished
 
-- **Is Campaign based** - if set to Yes, Mautic pushes this Dynamic Web Content to Contacts through a Campaign. When set to No, you can specify filters for visitors to see the content, and additional fields for Slot Name and Order/Priority become available.
+- **Is Campaign based** - if set to Yes, Mautic pushes this Dynamic Web Content to Contacts through a Campaign. When set to No, you can specify filters for visitors to see the content, and the **Requested slot name** and **Order/Priority** fields become available.
 
-- **Requested slot name** - shown if using non-Campaign based Dynamic Web Content, this allows you to specify the slot name on your website in which the Contact sees the content. You can search for an existing slot name or type a new one.
+- **Requested slot name** - shown if using non-Campaign based Dynamic Web Content, this allows you to specify the slot name on your website in which the Contact sees the content. Search for an existing slot name or enter a new one.
 
-- **Order/Priority** - shown if using non-Campaign based Dynamic Web Content, this allows you to specify the display order when multiple Dynamic Web Content items share the same slot name. Select an order to place your new Dynamic Content right after it in the list. To set it as the first item, choose 'Put at beginning'. Mautic evaluates the filters of Dynamic Web Content items in the specified order until it finds a match.
+- **Order/Priority** - shown if using non-Campaign based Dynamic Web Content. When several Dynamic Web Content items share the same slot name, this sets the order in which Mautic evaluates their filters. Select an existing item to place this item right after it.
 
-.. vale off
+  .. vale off
 
-**Publish at (date/time)** - This allows you to define the date and time at which this Dynamic Web Content item is available for displaying to Contacts
+  To place this item first, select **Put at Beginning**.
 
-**Unpublish at (date/time)** - This allows you to define the date and time at which this Dynamic Web Content item ceases to be available for displaying to Contacts.
+  .. vale on
 
-.. vale on
+  Mautic evaluates the filters of each item in the slot in ascending order - lowest first - and displays the first item whose filters match the Contact.
 
-**UTM tags** - Mautic can append UTM tags to tracked links in Dynamic Web Content. See :doc:`/utm_tags/utm_tags_overview` for more information.
+  .. vale off
+
+- **Publish at (date/time)** - This allows you to define the date and time at which this Dynamic Web Content item is available for displaying to Contacts.
+
+- **Unpublish at (date/time)** - This allows you to define the date and time at which this Dynamic Web Content item ceases to be available for displaying to Contacts.
+
+  .. vale on
+
+- **UTM tags** - Mautic can append UTM tags to tracked links in Dynamic Web Content. See :doc:`/utm_tags/utm_tags_overview` for more information.
 
 .. vale off
 
@@ -106,13 +110,13 @@ Viewing Dynamic Web Content variations
 
 .. vale on
 
-When you have multiple Dynamic Web Content items sharing the same slot name, you can view all variations from the detail page of any item in that slot:
+When more than one filter-based Dynamic Web Content item shares the same slot name, the detail page of each of those items includes a **Variations** tab. To view all items in a slot:
 
-#. Navigate to the Components > Dynamic Content section
-#. Click on any Dynamic Web Content item that uses a shared slot name
-#. Click the **Variations** tab to see all Dynamic Web Content items with the same slot name, including the current item
+#. Navigate to **Components > Dynamic Content**.
+#. Select a Dynamic Web Content item that shares its slot name with other items.
+#. Select the **Variations** tab.
 
-The Variations tab displays items in ascending order of their display order value, helping you understand the priority in which Mautic evaluates filters.
+The tab lists every item with that slot name, including the item you're viewing, which Mautic highlights. The **Internal Order Number** column shows each item's Order/Priority value. The tab sorts items from the highest number to the lowest, which is the reverse of the order in which Mautic evaluates filters - lowest first.
 
 .. vale off
 
@@ -121,12 +125,12 @@ Using Dynamic Web Content tokens in Emails
 
 .. vale on
 
-Non-Campaign based Dynamic Web Content items can also be used as tokens in Emails. This allows you to personalize Email content based on Contact filters, similar to how Dynamic Web Content works on web pages.
+You can add filter-based Dynamic Web Content to Emails as a token, so each Contact sees content that matches their data in the Email subject line or body - the same way Dynamic Web Content personalizes a webpage.
 
 Token format
 ------------
 
-The Dynamic Web Content token format for Emails is:
+A Dynamic Web Content token for Emails has this format:
 
 .. code-block::
 
@@ -134,36 +138,34 @@ The Dynamic Web Content token format for Emails is:
 
 The token consists of three parts:
 
-- **Opening tag**: ``{dwc=slot-name}`` where ``slot-name`` is your Dynamic Web Content slot name
-- **Default content**: The fallback text displayed when no filters match - this is **required** and cannot be empty
-- **Closing tag**: ``{/dwc}``
+* ``{dwc=slot-name}`` - the opening tag, where ``slot-name`` is your Dynamic Web Content slot name.
+* Default content - the fallback text that Mautic displays when no filters match. You can't leave it empty.
+* ``{/dwc}`` - the closing tag.
 
 .. warning::
-    The default content between the opening and closing tags is mandatory. Tokens without default content - such as ``{dwc=slot-name}{/dwc}`` or ``{dwc=slot-name}`` - are invalid and will cause a validation error when saving the Email.
 
-Adding tokens to Emails
------------------------
+   Mautic only accepts a token that has default content between the opening and closing tags. If you save an Email that contains a token without default content - such as ``{dwc=slot-name}{/dwc}`` or ``{dwc=slot-name}`` - Mautic displays a validation error.
 
-To use Dynamic Web Content tokens in Emails:
+Inserting a token
+-----------------
 
-#. Create a Dynamic Web Content item with **Is Campaign based** set to **No** and content type set to **Text**
-#. In the Email builder, place your cursor where you want to insert the Dynamic Content
-#. Type ``{`` to open the token picker, or use the **Insert token** dropdown
-#. Select the Dynamic Web Content token from the list - it displays as ``DWC:slot-name``
-#. The token is inserted as ``{dwc=slot-name}Default content goes here{/dwc}``
-#. Edit the default content between the tags to specify your fallback text
-#. The token can be used in both the Email subject line and the Email body
+To use Dynamic Web Content in an Email:
 
-When Mautic sends the Email, it evaluates the Contact against the filters of each Dynamic Web Content item in the specified slot - in display order - and replaces the token with the content of the first matching item. If no filters match, the default content you specified between the tags is displayed.
+#. Create a Dynamic Web Content item with **Is Campaign based** set to **No** and **Type** set to **Text**.
+#. In the Email builder, place your cursor in the subject line or body where you want the Dynamic Web Content to appear.
+#. Enter ``{`` to open the token list, or use the **Insert token** menu.
+#. Select the Dynamic Web Content token, which displays as ``DWC:slot-name``. Mautic inserts ``{dwc=slot-name}Default content goes here{/dwc}``.
+#. Replace ``Default content goes here`` with your fallback text.
 
-.. note::
-    Only Dynamic Web Content items with content type **Text** are available as Email tokens. Items with content type **HTML** cannot be used in Emails.
+When Mautic sends the Email, it evaluates the Contact against the filters of each Dynamic Web Content item in the slot, lowest Order/Priority first, and replaces the token with the content of the first matching item. If no filters match, Mautic displays the default content between the tags.
 
 .. note::
-    Only published Dynamic Web Content items are evaluated. Unpublished items are skipped even if their filters would match the Contact.
 
-.. note::
-    Dynamic Web Content token statistics - such as how many times a token was replaced - are tracked and available in the Dynamic Web Content reports.
+   * Only Dynamic Web Content items with the **Text** type are available as Email tokens. You can't use **HTML** items in Emails.
+   * Mautic only evaluates Dynamic Web Content items that are available for use. It skips unavailable items even if their filters match the Contact.
+   * Mautic tracks Dynamic Web Content token usage and makes it available in Dynamic Web Content Reports.
+
+.. vale off
 
 Campaign-based Dynamic Web Content
 **********************************
@@ -181,7 +183,7 @@ The following fields are available:
 
 - **Requested Slot Name** - Mautic checks for the slot name. You can see how many Contacts got to the Campaign event where you're checking if their visits request the slot.
 
-As an example, these two fields might look like: ``Req-DWC: Country-Header`` in the Contact history. The requested slot name is the slot Mautic looks for on the page. If it's on a 3rd-party page, it'll be in the code you use to add the Dynamic Content slot to your page. If it's on a Mautic Landing Page, define the slot name on the Landing Page.
+As an example, these two fields might look like: ``Req-DWC: Country-Header`` in the Contact history. The requested slot name is the slot Mautic looks for on the page. If it's on a third-party page, it'll be in the code you use to add the Dynamic Content slot to your page. If it's on a Mautic Landing Page, define the slot name on the Landing Page.
 
 - **Select Default Content** - choose the content which displays to visitors who don't meet the conditions set at the next step of the Campaign. Users may see the default content first, before Mautic pushes the Dynamic Content.
 
@@ -219,7 +221,7 @@ Filter-based Dynamic Web Content
 
 .. vale on
 
-Filters are often easier to work with and can be more reliable, as they don't rely on the triggering of a Campaign cron job.
+Filters are often easier to work with and can be more reliable, as they don't rely on the triggering of a Campaign Cron job.
 
 Creating filters
 ================
@@ -233,13 +235,12 @@ Creating filters
 Managing multiple variations
 ============================
 
-When you have multiple filter-based Dynamic Web Content items for the same slot:
+To show different content to different audiences in the same slot, create several filter-based Dynamic Web Content items:
 
-#. Create each variation with the same **Requested slot name**
-#. Set the **Order/Priority** to control the evaluation sequence
-#. Mautic checks filters in display order and uses the first matching content
+#. Create each item with the same **Requested slot name**.
+#. Set each item's **Order/Priority** to control the order in which Mautic evaluates the filters.
 
-This is useful for creating content hierarchies - for example, showing specific content to VIP customers first, then falling back to content for regular customers, and finally showing default content for everyone else.
+Mautic checks each item's filters, lowest Order/Priority first, and displays the content of the first item that matches. Use this to build a content hierarchy - for example, show specific content to VIP customers first, then fall back to content for regular customers, and finally show default content to everyone else.
 
 .. vale off
 
@@ -265,18 +266,16 @@ Dynamic Web Content reports
 
 .. vale on
 
-Mautic includes a built-in report type for Dynamic Web Content that allows you to analyze performance and usage:
+To see where and when Mautic used your Dynamic Web Content items, create a Report with the Dynamic Web Content data source:
 
-#. Navigate to Reports and click New
-#. Select **Dynamic Web Content** as the report data source
-#. Choose from available columns including:
+#. Navigate to **Reports** and select **New**.
+#. In **Data Source**, select **Dynamic Web Content**.
+#. Choose from the available columns, which include:
 
-   * Dynamic Content name, slot name, and display order
-   * Statistics such as sent count and date sent
+   * Dynamic Web Content name, Slot Name, and Order/Priority
+   * Date Sent and Target Location - Subject Line or Body
    * Contact information for tracking individual interactions
-   * Filter and Category information
-
-Use these reports to track which Dynamic Web Content items are being displayed most frequently and which filters are matching Contacts.
+   * Category information
 
 .. vale off
 
@@ -285,19 +284,20 @@ Managing Dynamic Web Content via API
 
 .. vale on
 
-You can manage Dynamic Web Content display order programmatically via the Mautic API. To update the slot name and display order of a Dynamic Web Content item:
+You can update a Dynamic Web Content item's slot name and Order/Priority through the Mautic API - for example, to adjust content priority from an automated workflow. Replace ``example.com`` with your Mautic instance domain and include the required authentication headers - see :doc:`/authentication/authentication`.
 
-.. code-block::
+Use ``PATCH`` so Mautic only changes the fields you send. A ``PUT`` request replaces the whole item and resets any field you leave out.
 
-    PUT api/dynamiccontents/{id}/edit
+.. code-block:: bash
 
-    {
+    curl -X PATCH 'https://example.com/api/dynamiccontents/{id}/edit' \
+    -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
+    -H 'Content-Type: application/json' \
+    -d '{
         "isCampaignBased": false,
         "slotName": "header-slot",
         "displayOrder": 1
-    }
-
-This is useful for automated workflows where you need to adjust content priority based on external factors.
+    }'
 
 .. vale off
 
