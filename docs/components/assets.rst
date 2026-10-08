@@ -146,10 +146,14 @@ Downloading multiple Assets
 
 To get copies of several Asset files at once, for example to back them up or reuse them elsewhere, download them from the Assets list as a single ZIP file.
 
+.. vale Mautic.FeatureList = NO
+
 #. Go to **Components > Assets**.
 #. Select the checkbox next to each Asset you want to download.
 #. In the selection bar at the top of the table, select the three-dot icon.
 #. Select **Download selected assets**.
+
+.. vale Mautic.FeatureList = YES
 
 Your browser downloads a ZIP file named ``assets-batch-{date}-{time}.zip``. Each file in the ZIP file keeps its original filename. If two selected Assets share a filename, Mautic adds a number to the later one, such as ``brochure (1).pdf``.
 
@@ -157,7 +161,7 @@ A batch download has these limits:
 
 * You can select up to 100 Assets at a time.
 * The combined size of the selected files can't exceed 500 MB.
-* You can only include Assets stored in Mautic. Remote Assets, such as files hosted on Amazon S3, aren't supported.
+* You can include only Assets that you uploaded to Mautic. Mautic can't add remote Assets, such as files on Amazon S3, to the ZIP file.
 * You need permission to view each selected Asset.
 
 If any selected Asset breaks one of these limits, or its file isn't available, Mautic shows an error message and doesn't download any files. Clear the Assets that cause the problem from your selection and try again.
