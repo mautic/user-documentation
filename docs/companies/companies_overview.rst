@@ -140,10 +140,14 @@ You can create a Segment based on a Company record. Select any Company field to 
 
 Segment filters list each Company field in two groups:
 
+.. vale off
+
 * **Contact's primary company** - matches Contacts based on their primary Company only.
 * **Any associated company** - matches Contacts when at least one primary or secondary Company meets the filter.
 
-For more information, see :doc:`Segments </segments/manage_segments>`.
+.. vale on
+
+For more information, see :ref:`Configuring Segment filters`.
 
 .. vale off
 
