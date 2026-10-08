@@ -41,8 +41,10 @@ The **Recent Activity** panel on the right displays the recent activities that h
 
 .. vale off
 
-Campaign reactivation behavior
-******************************
+.. _Campaign reactivation behavior:
+
+Campaign republish behavior
+***************************
 
 .. vale on
 
@@ -52,29 +54,43 @@ When you deactivate and then reactivate a Campaign, Mautic provides control over
 
    This setting only affects events that use relative delays - interval-based scheduling. Events with absolute dates aren't affected by this setting.
 
-Configuring reactivation behaviour
-==================================
+Configure republish behavior
+============================
 
-You can configure the reactivation behaviour at two levels:
+The UI uses the label **Campaign Republish Behaviour** for this setting, even though Campaign status uses **Active** and **Inactive**. You can configure it at two levels:
 
-1. **Global default** - Set in **Configuration** > **Campaign Settings** > **Campaign Reactivation Behaviour**. This applies to all Campaigns unless overridden.
-2. **Per Campaign** - Set when creating or editing a Campaign. This overrides the global default for that specific Campaign.
+#. **Global default** - Open **Configuration**, select **Campaign Settings**, and choose a **Campaign Republish Behaviour** option. Click **Save & Close** to save the default.
+#. **Per Campaign** - Create or edit a Campaign and choose a **Campaign Republish Behaviour** option. Select **Use global setting** to follow the global default, or select another option to override it for that Campaign. Click **Save & Close** to save the Campaign.
 
-Reactivation behaviour options
-==============================
+.. vale Mautic.FeatureList = NO
+
+The global default is **Count delay regardless of publish state**. The **Use global setting** option is available only when creating or editing a Campaign.
+
+.. note::
+
+   **Restart on republish** restarts the delay for pending events. It doesn't restart the entire Campaign or repeat events that have already executed. To allow Contacts to re-enter a Campaign after exiting, use **Allow contacts to restart the campaign** instead. See :doc:`Creating Campaigns</campaigns/creating_campaigns>`.
+
+.. vale Mautic.FeatureList = YES
+
+Republish behavior options
+==========================
 
 There are three options available for how scheduled events should behave after reactivation:
 
-Count delay regardless of activation state
-------------------------------------------
+.. vale Mautic.FeatureList = NO
 
-This is the default behaviour. Mautic uses the original trigger date, and inactive time doesn't affect scheduling.
+Count delay regardless of publish state
+---------------------------------------
+
+.. vale Mautic.FeatureList = YES
+
+This is the default behavior. Mautic uses the original trigger date, and inactive time doesn't affect scheduling.
 
 **Example scenario:**
 
 .. vale off
 
-* Campaign trigger date: January 1
+* Event scheduled: January 1
 * Event delay: 10 days
 * Calculated event date: January 11
 * Campaign deactivated: January 5
@@ -82,12 +98,12 @@ This is the default behaviour. Mautic uses the original trigger date, and inacti
 
 .. vale on
 
-**Result:** the event still executes on January 11, as originally scheduled.
+**Result:** the event remains scheduled for January 11. It executes when the Campaign event Cron job processes it on or after that date. If the Campaign remains inactive past January 11, the event is overdue and can execute on the next Cron job run after reactivation.
 
 **When to use:** this option maintains the original scheduled timing, treating the Campaign's activation state as irrelevant to the delay calculation. Use this when you want consistency with the original schedule, or when temporarily deactivating a Campaign shouldn't affect when events execute.
 
-Restart on reactivation
------------------------
+Restart on republish
+--------------------
 
 The delay counter resets completely when you reactivate the Campaign.
 
@@ -95,20 +111,24 @@ The delay counter resets completely when you reactivate the Campaign.
 
 .. vale off
 
-* Campaign trigger date: January 1
+* Event scheduled: January 1
 * Event delay: 10 days
 * Original calculated event date: January 11
 * Campaign deactivated: January 5
 * Campaign reactivated: January 7
 
-**Result:** Mautic reschedules the event to execute 10 days after reactivation, on January 17.
+**Result:** Mautic recalculates the event date as January 17, 10 days after reactivation. The event executes when the Campaign event Cron job processes it on or after that date.
 
 .. vale on
 
 **When to use:** this option is useful when you want to ensure all Contacts receive the full intended delay after any Campaign changes. For example, if you deactivate a Campaign to make significant updates and want everyone to experience the complete updated workflow timing.
 
-Count delay only while active
------------------------------
+.. vale Mautic.FeatureList = NO
+
+Count delay only while published
+--------------------------------
+
+.. vale Mautic.FeatureList = YES
 
 Events only count days when the Campaign is active. Inactive periods don't count toward the delay.
 
@@ -116,7 +136,7 @@ Events only count days when the Campaign is active. Inactive periods don't count
 
 .. vale off
 
-* Campaign trigger date: January 1
+* Event scheduled: January 1
 * Event delay: 10 days
 * Original calculated event date: January 11
 * Campaign deactivated: January 5 - after 4 days active
@@ -144,11 +164,11 @@ Activate and deactivate Campaigns
 
 .. vale on
 
-When you activate or deactivate a Campaign, Mautic displays a confirmation message that shows the current reactivation behaviour setting. This helps you understand what happens to scheduled events before you confirm the action.
+When you activate a Campaign using its status toggle on the Campaigns list, Mautic displays a confirmation message with the effective republish behavior. If the Campaign uses **Use global setting**, the message shows the global option. Review the message before confirming activation.
 
 .. vale off
 
-For example: 'All scheduled events execute according to the reactivation behaviour setting. Currently set to: Count delay regardless of activation state'.
+For the default option, the message reads: "All scheduled events will execute according to the Republish Behavior setting. Currently set to: Count delay regardless of publish state."
 
 .. vale on
 
@@ -158,14 +178,12 @@ For example: 'All scheduled events execute according to the reactivation behavio
 
 .. note::
 
-   The Cron job recalculates scheduled events when it evaluates the Campaign event log, rather than at the moment you reactivate the Campaign. If a recalculated trigger date remains in the past during evaluation, the event executes immediately. If the date falls in the future, the Cron job reschedules the event accordingly.
+   The :ref:`Campaign event Cron job<Campaign Cron jobs>` recalculates a pending event when it processes that event, rather than at the moment you reactivate the Campaign. If the recalculated date is in the future, Mautic reschedules the event. If the date has already passed, the event can execute during that Cron job run. Ensure that your Campaign Cron jobs are running before expecting events to execute.
 
 Tracking rescheduled events
 ===========================
 
-Mautic records all changes to scheduled event trigger dates in the ``campaign_lead_event_log.metadata`` column. This audit trail allows you to investigate when and why the system rescheduled events, providing transparency and helping with troubleshooting.
-
-You can view this information in the Contact's timeline under **Campaign Event Scheduled** entries, where rescheduled events show the updated trigger date and the reason for the change.
+To view the current scheduled date, open the Contact's **History** tab. Expand the **Campaign event scheduled** entry for the event. The details show the date and time when Mautic plans to execute the event. After the Campaign event Cron job reschedules an event, this date reflects the updated schedule.
 
 .. vale off
 
