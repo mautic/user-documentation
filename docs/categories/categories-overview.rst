@@ -27,6 +27,8 @@ To create new Categories, go to settings menu in the top right corner of Mautic.
 
 When creating a new Category you can select type, title, description, alias, color and availability status. The color will be helpful to quickly find Mautic elements by their appropriate Category when viewing other areas within Mautic.
 
+To show only the items in specific Categories on a list view, such as Segments or Emails, use the Category filter. For more information, see :ref:`Filter list views by Category`.
+
 Deleting Categories
 *******************
 
