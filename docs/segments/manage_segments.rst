@@ -310,6 +310,8 @@ Configuring Segment filters
 
     .. vale on
 
+  .. vale off
+
   * **Contact's primary company** fields
 
     * Set Fields to **Available for Segments = Yes** in your Custom Field manager to appear here.
@@ -327,6 +329,8 @@ Configuring Segment filters
     * Negative operators also need only one matching Company. **Country** **is not equal to** 'Belgium' matches a Contact with a Company in France, even if another of its Companies is in Belgium.
 
     * Contacts without any associated Company never match these filters, including negative operators.
+
+  .. vale on
 
 5. Add more filters, using the **And** and **Or** operators. An **Or** operator creates a new group of filters which can include And operators.
 
