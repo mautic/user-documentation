@@ -61,7 +61,7 @@ Mautic provides both Campaign-based and filter-based Dynamic Web Content. To cre
 
 The following values are available:
 
-- **Internal name** - This is how the slot displays in your list of Dynamic Web Content slots. You should include information on what you're personalizing - for example, country - and the content in the slot - for example, United States. If you're creating a personalized slot for people in the United States, you can name the slot Country - United States. If you plan to have more than one personalized content slot for the same audience across your website, include the page title or other identifying information for the particular slot.
+- **Internal name** - This is how the slot displays in your list of Dynamic Web Content slots. You should include information on what you're personalizing - for example, country - and the content in the slot - for example, United States. If you're creating a personalized slot for people in the United States, you can name the slot Country - United States. If you plan to have more than one personalized content slot for the same audience across your website, include the website section or other identifying information for the particular slot.
 
 - **Content** - Use the WYSIWYG editor to create the Dynamic Web Content slot. You may include images and videos. If you prefer HTML, click the ``</> Source`` icon in the toolbar to switch to the code view. Mautic's Dynamic Web Content supports tokens in the same way as Landing Pages or Emails. To add a token, start typing with the ``{`` character and Mautic displays the available tokens. These include:
 
@@ -75,9 +75,9 @@ The following values are available:
 
 - **Language** - the language of this Dynamic Web Content - can be helpful in multilingual marketing Campaigns and for reporting purposes
 
-- **Is a translation of** - If you're creating a slot in a second language translation - for example to use on a multilingual website - select the original base language Dynamic Web Content item which you're translating. The same slot displays the appropriate language based on the Campaign or filters set, but Mautic shows the translated content if a visitor is viewing the page in a different browser language.
+- **Is a translation of** - If you're creating a slot in a second language translation - for example to use on a multilingual website - select the original base language Dynamic Web Content item which you're translating. The same slot displays the appropriate language based on the Campaign or filters set, but Mautic shows the translated content if a visitor views the website in a different browser language.
 
-- **Published** - Whether the Dynamic Web Content item is available for use - published - or not available - unpublished
+- **Available for use** - Whether the Dynamic Web Content item is available for use. Set this to **No** to make the item unavailable.
 
 - **Is Campaign based** - if set to Yes, Mautic pushes this Dynamic Web Content to Contacts through a Campaign. When set to No, you can specify filters for visitors to see the content, and the **Requested slot name** and **Order/Priority** fields become available.
 
@@ -110,7 +110,7 @@ Viewing Dynamic Web Content variations
 
 .. vale on
 
-When more than one filter-based Dynamic Web Content item shares the same slot name, the detail page of each of those items includes a **Variations** tab. To view all items in a slot:
+When more than one filter-based Dynamic Web Content item shares the same slot name, the detail view of each of those items includes a **Variations** tab. To view all items in a slot:
 
 #. Navigate to **Components > Dynamic Content**.
 #. Select a Dynamic Web Content item that shares its slot name with other items.
@@ -175,7 +175,7 @@ Campaign-based Dynamic Web Content
 Creating the request
 ====================
 
-Use a Campaign Decision for ``Request Dynamic Content`` to use Campaign-based Dynamic Web Content. The Campaign Decision checks if a Campaign member visits a page where a Dynamic Content slot is. Visitors to a page with a Dynamic Content slot receive the Dynamic Content.
+Use a Campaign Decision for ``Request Dynamic Content`` to use Campaign-based Dynamic Web Content. The Campaign Decision checks if a Campaign member visits a part of your website that contains a Dynamic Content slot. Visitors who reach that slot receive the Dynamic Content.
 
 The following fields are available:
 
@@ -183,7 +183,7 @@ The following fields are available:
 
 - **Requested Slot Name** - Mautic checks for the slot name. You can see how many Contacts got to the Campaign event where you're checking if their visits request the slot.
 
-As an example, these two fields might look like: ``Req-DWC: Country-Header`` in the Contact history. The requested slot name is the slot Mautic looks for on the page. If it's on a third-party page, it'll be in the code you use to add the Dynamic Content slot to your page. If it's on a Mautic Landing Page, define the slot name on the Landing Page.
+As an example, these two fields might look like: ``Req-DWC: Country-Header`` in the Contact history. The requested slot name is the slot Mautic looks for on your website. If it's on a third-party website, it's in the code you use to add the Dynamic Content slot to your website. If it's on a Mautic Landing Page, define the slot name on the Landing Page.
 
 - **Select Default Content** - choose the content which displays to visitors who don't meet the conditions set at the next step of the Campaign. Users may see the default content first, before Mautic pushes the Dynamic Content.
 
@@ -254,10 +254,10 @@ Default content
 
 Mautic displays the default content when the visitor doesn't match any of the filter criteria, or the visitor isn't a tracked/identified Contact. It's important to have something in the default content, rather than an empty space.
 
-For Campaign-based Dynamic Web Content, you specify the default content when you configure the Request Dynamic Content decision. In filter-based Dynamic Web Content, you create the default content on the page where you are inserting the slot, and Mautic replaces it with the Dynamic Content if the filter match.
+For Campaign-based Dynamic Web Content, you specify the default content when you configure the Request Dynamic Content decision. In filter-based Dynamic Web Content, you create the default content in the website content where you're inserting the slot, and Mautic replaces it with the Dynamic Content if the filter match.
 
 .. note::
-    If you're using Focus Items as your Dynamic Web Content and only showing specific Focus Items to specific audiences, you don't need to have any default content, as Focus Items don't physically take up space on your page.
+    If you're using Focus Items as your Dynamic Web Content and only showing specific Focus Items to specific audiences, you don't need to have any default content, as Focus Items don't physically take up space on your website.
 
 .. vale off
 
