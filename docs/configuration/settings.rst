@@ -178,7 +178,7 @@ Campaign settings
 
 * **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<Campaign Cron jobs>` to summarize existing data.
 
-* **Campaign Republish Behaviour** - Set the global default for scheduled events with relative delays when you reactivate a Campaign. You can override this setting for an individual Campaign. See :ref:`Campaign republish behavior` for the available options and examples.
+* **Campaign Reactivation Behaviour** - Set the global default for scheduled events with relative delays when you reactivate a Campaign. You can override this setting for an individual Campaign. See :ref:`Campaign reactivation behavior` for the available options and examples.
 
 Optimal for Contact event scheduler
 ===================================
