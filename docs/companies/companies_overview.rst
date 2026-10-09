@@ -33,7 +33,7 @@ When you view a Company, the assigned Contacts table lists the Contacts in that 
 
 #. In the assigned Contacts table, select one or more Contacts.
 #. Open the **Options** menu and choose **Remove from Company**.
-#. In the confirmation dialog, confirm the removal.
+#. In the confirmation dialog, select **Remove from Company** to confirm. Select **Cancel** to keep the Contacts in the Company.
 
 .. vale off
 
@@ -42,6 +42,8 @@ The confirmation dialog reads: 'Remove the selected contacts from this company? 
 .. vale on
 
 After you confirm, Mautic removes only the selected Contacts from this Company and shows a notice with the number of Contacts it removed.
+
+You can remove up to 1,000 Contacts at a time. If you select more, Mautic removes none of them and shows an error with this limit.
 
 If a removed Contact had this Company as their primary Company, Mautic assigns another Company as primary, or the Contact ends up with no Company. This works the same way as deleting a Company. For more information, see :ref:`Deleting Companies`.
 
