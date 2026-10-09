@@ -73,7 +73,7 @@ The Custom Fields list has a **Quick filters** popover you can use to filter the
 
 #. Go to **Settings** > **Custom Fields**.
 
-#. Open **Quick filters**. Under the **Others** group, you'll see **Indexed** and **Unique**.
+#. Open **Quick filters**. The **Others** group contains **Indexed** and **Unique**.
 
 #. Select **Indexed** or **Unique**, then click **Apply selected**.
 
@@ -81,7 +81,7 @@ Selecting **Indexed** shows the fields included in database indexes and adds the
 
 Because **Quick filters** just adds a command to the search box, you can edit or extend that command - the full search still works for combined or more detailed queries.
 
-For the full list of search commands and other filters, see the :doc:`Searching Mautic </search/search_operators>` page.
+For the full list of search commands and other filters, see :doc:`Searching Mautic </search/search_operators>`.
 
 Published fields
 *****************
