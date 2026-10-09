@@ -272,7 +272,7 @@ To review the Email at full size, or to hand its rendered HTML to someone else, 
 #. On the Email details page, select a Contact, a Company, or both in the **Preview URL** panel if you want the preview to use their data.
 #. Select the open link icon beside the Preview URL. The Email Preview opens in a new tab.
 #. To switch the data the preview uses, enter a different Contact in **Contact** or a different Company in **Company** at the top of the Email Preview. Mautic reloads the preview with your selection.
-#. To save the rendered Email, select **Download HTML**. Mautic downloads an HTML file with all tokens replaced. The filename starts with the selected Company's name, or the Contact's first name when you haven't selected a Company, followed by the Email name - for example, ``Acme-Welcome Email.html``.
+#. To save the rendered Email, select **Download HTML**. Mautic downloads an HTML file with all tokens replaced. The filename combines the selected Company's name, or the Contact's first name when you haven't selected a Company, with the Email name. Mautic writes it in lowercase with hyphens between words - for example, ``acme-welcome-email.html``.
 
 You can only preview a Contact's data if you have permission to view that Contact. Otherwise, Mautic shows the preview with sample Contact data and a message that you don't have access to the Contact.
 
