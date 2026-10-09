@@ -153,6 +153,10 @@ To get copies of several Asset files at once, for example to back them up or reu
 #. In the selection bar at the top of the table, select the three-dot icon.
 #. Select **Download selected assets**.
 
+.. image:: images/assets/assets_download_selected.png
+  :width: 600
+  :alt: Three selected Assets in the Assets list, with the three-dot menu in the selection bar open on Download selected assets.
+
 .. vale Mautic.FeatureList = YES
 
 Your browser downloads a ZIP file named ``assets-batch-{date}-{time}.zip``. Each file in the ZIP file keeps its original filename. If two selected Assets share a filename, Mautic adds a number to the later one, such as ``brochure (1).pdf``.
