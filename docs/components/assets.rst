@@ -154,7 +154,7 @@ To get copies of several Asset files at once, for example to back them up or reu
 #. Select **Download selected assets**.
 
 .. image:: images/assets/assets_download_selected.png
-  :width: 600
+  :width: 800
   :alt: Three selected Assets in the Assets list, with red boxes highlighting the selected checkboxes, the three-dot icon in the selection bar, and the Download selected assets option.
 
 .. vale Mautic.FeatureList = YES
