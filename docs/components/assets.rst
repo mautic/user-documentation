@@ -150,8 +150,8 @@ To get copies of several Asset files at once, for example to back them up or reu
 
 #. Go to **Components > Assets**.
 #. Select the checkbox next to each Asset you want to download.
-#. In the selection bar at the top of the table, select the three-dot icon.
-#. Select **Download selected assets**.
+#. In the selection bar at the top of the table, click the three-dot icon.
+#. Click **Download selected assets**.
 
 .. image:: images/assets/assets_download_selected.png
   :width: 800
