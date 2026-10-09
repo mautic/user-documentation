@@ -264,6 +264,7 @@ Reports search filters
     is:published
     is:unpublished
     is:mine
+    is:scheduled
     Categories
     ids:ID1,ID2 (comma separated IDs, no spaces) is:published is:unpublished
 
@@ -276,6 +277,7 @@ Users search filters
     is:admin
     is:active
     is:inactive
+    is:never_logged_in
     email:*
     name:*
     position:*
