@@ -249,7 +249,7 @@ Email content preview
 
 The Email details page shows a rendered preview of the Email content in the right column, so you can see how an Email looks without opening the Builder or a separate tab. This is handy when you're comparing several Emails to find the one you want.
 
-The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Mautic reloads the preview automatically to match the version you've selected.
+The preview reflects your selection in the **Preview** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Mautic reloads the preview automatically to match the version you've selected.
 
 .. image:: images/emails/email_details_preview.png
    :width: 600
@@ -493,7 +493,7 @@ Mautic allows you to use Contact field tokens in the **From address** and **From
 You can use tokens in:
 
 * The **Name to send mail as** and **Email address to send mail from** fields in the system-wide **Email Settings**
-* The **From Name** and **From Address** fields on an individual Email's **Advanced** tab
+* The **From name** and **From address** fields on an individual Email's **Advanced** tab
 
 For example, to send Emails from the Contact's Company:
 
@@ -530,7 +530,7 @@ This hierarchy ensures Emails always have a valid sender while allowing personal
 Just as it resolves the From address, Mautic determines the ``Reply-To`` header for queued and batch Email sends - such as Campaign Emails and Segment broadcasts - using the following priority order:
 
 #. **Email Reply to address** - If the Email's **Advanced** tab has a **Reply to address**, Mautic uses that address.
-#. **Contact Owner address** - If you enable **Use owner as mailer**, Mautic uses the Contact Owner's Email address for each owner group in the batch.
+#. **Contact Owner address** - If you enable **Use Contact owner as mailer**, Mautic uses the Contact Owner's Email address for each owner group in the batch.
 #. **Email From address** - If you haven't configured a global ``reply-to`` in **Email Settings**, Mautic uses the Email's **From address**.
 #. **System fallback** - Mautic falls back to the global **Reply to address** in **Email Settings**, or the system From address when that's blank.
 
@@ -757,13 +757,13 @@ Setting a signature happens in two places:
 
    Mautic replaces the ``|FROM_NAME|`` token with the name defined in the Email Settings tab.
 
-   Mautic uses this signature when the Email doesn't have **Use owner as mailer** enabled.
+   Mautic uses this signature when the Email doesn't have **Use Contact owner as mailer** enabled.
 
-#. Each Mautic User can configure their own signature in their account settings. Mautic uses this signature when the Email has **Use owner as mailer** enabled and the Contact has an owner assigned.
+#. Each Mautic User can configure their own signature in their account settings. Mautic uses this signature when the Email has **Use Contact owner as mailer** enabled and the Contact has an owner assigned.
 
    .. important::
 
-     For the ``{signature}`` token to use the owner's signature, you must enable **Use owner as mailer** in the Email's advanced settings. Enabling only the global **Mailer is owner** setting in Configuration isn't sufficient.
+     For the ``{signature}`` token to use the owner's signature, you must enable **Use Contact owner as mailer** in the Email's advanced settings. Enabling only the global **Mailer is owner** setting in Configuration isn't sufficient.
 
      If the owner hasn't configured a signature, the ``{signature}`` token resolves to empty when you enable owner-as-mailer.
 
@@ -819,7 +819,7 @@ For example:
 
 .. note::
 
-   Use ``data-mautic-disable-tracking="true"`` for both Segment and Template Emails. Mautic deprecated the legacy ``mautic:disable-tracking`` attribute and removes it in Mautic 8.0. Once removed, the legacy attribute no longer disables link tracking, so update any Segment or Template Emails that still use it to ``data-mautic-disable-tracking="true"``.
+   Use ``data-mautic-disable-tracking="true"`` for both Segment and Template Emails. Mautic 8.0 removed support for the legacy ``mautic:disable-tracking`` attribute, so it no longer turns off link tracking. Update any Segment or Template Emails that still use it to ``data-mautic-disable-tracking="true"``.
 
 Link validation
 ***************
@@ -940,7 +940,7 @@ This isn't required, but if you want to be able to select the Contacts with boun
 1. Go to Segments > New.
 2. Type in the Segment name. For example Bounced Emails.
 3. Select the Filters tab.
-4. Create new Bounced Email equals Yes filter.
+4. Create a new **Bounced - Email** equals Yes filter.
 5. Wait for the ``bin/console mautic:segments:update`` command to be automatically triggered by a Cron job or execute it manually.
 6. All Contacts with bounced Emails should appear in this Segment.
 
