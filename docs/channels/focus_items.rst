@@ -170,6 +170,43 @@ When creating a new Focus Item, you can set the following fields:
     :width: 400
     :alt: Screenshot showing the creation of a Focus Item.
 
+Filters
+=======
+
+The Filters tab lets you define Contact filters for the Focus Item. When you add filters, the Mautic tracking script automatically displays the Focus Item to visitors whose Contact profile matches the specified criteria. You don't need to manually embed the Focus Item code or use a Campaign to show it to specific audiences.
+
+.. vale off
+
+Filters use the same filter interface as :doc:`/components/dynamic_web_content` and Segments, including:
+
+* Contact field values such as email, name, or Custom Fields
+* Segment membership
+* Tags
+* Device information including type, brand, and operating system
+* Location data such as country, region, or timezone
+
+.. vale on
+
+To configure filters:
+
+#. Edit the Focus Item and select the Filters tab
+#. Use the dropdown to select a filter field
+#. Configure the filter operator and value
+#. Add additional filters as needed - all filters must match for the Focus Item to display
+
+When a Focus Item has filters configured:
+
+* The Mautic tracking script checks whether visiting Contacts match the filters
+* Matching Contacts see the Focus Item automatically - no additional embed code required beyond the standard Mautic tracking script
+* Non-matching Contacts and anonymous visitors don't see the Focus Item
+* Mautic records a view stat when the Focus Item displays
+
+Focus Items without filters continue to work as before, requiring manual embedding or Campaign delivery.
+
+.. note::
+
+   Filter-based Focus Items require you to install the Mautic tracking script on your website. Ensure your CORS settings include your website domain.
+
 .. vale off
 
 Using the Focus Item builder
@@ -197,8 +234,43 @@ Using Focus Items
 
 Once you have created your Focus Item, you're ready to activate it to your website. If you're not quite ready for the Focus Item to go live but you need to get it set up on your website, set the Focus Item to inactive.
 
-Deploying to a website
-======================
+There are three ways to deploy a Focus Item:
+
+.. vale off
+
+* **Filter-based delivery** - Automatically displays to visitors matching Contact filters via the tracking script
+* **Direct embedding** - Manually embed the Focus Item code on specific pages
+* **Campaign delivery** - Trigger the Focus Item as part of a Campaign workflow
+
+.. vale on
+
+.. vale off
+
+Filter-based delivery
+=====================
+
+.. vale on
+
+When you configure filters on a Focus Item, Mautic automatically delivers it through the tracking script to Contacts matching the filter criteria. This is the simplest method because it doesn't require any additional code beyond the standard Mautic tracking script already on your website.
+
+.. vale off
+
+The tracking script calls Mautic to determine whether the visiting Contact matches any active Focus Items with filters. If there's a match, the Focus Item displays automatically according to its engagement settings - appearing as a modal, bar, notification, or full page overlay depending on the style you've configured.
+
+.. vale on
+
+This method works well when you want to:
+
+* Show specific Focus Items to Contacts based on their profile data
+* Target Segment members with personalized messages
+* Display different content to visitors based on their Tags or device type
+
+.. note::
+
+   Filter-based delivery only works for tracked Contacts. Anonymous visitors that Mautic hasn't yet identified don't see filter-based Focus Items.
+
+Direct embedding
+================
 
 When you save the Focus Item, Mautic shows the code snippet required to display it on your website in a green box on the Focus Item overview.
 
@@ -211,19 +283,16 @@ When you save the Focus Item, Mautic shows the code snippet required to display 
 
     You must also ensure that you have specified your website's domain where you expect to use the Focus Item in the CORS settings for your Mautic instance, otherwise it won't appear. To verify this, go to Settings > Configuration > System Settings > CORS Settings and set Restricted Domains to Yes. Ensure that you specify your domain in the relevant field. Alternatively (but not recommended, as this would allow other websites to display your Focus Items), set Restrict Domains to No and don't specify your domains.
 
-.. vale off
+Campaign delivery
+=================
 
-Deploying through a Campaign
-============================
-
-.. vale on
-
-It's possible to trigger a Focus Item to appear as part of a Campaign workflow. This doesn't require you to paste the Focus Item code onto your website as it's delivered through the existing Mautic Tracking Code.
+You can trigger a Focus Item to appear as part of a Campaign workflow. This doesn't require you to paste the Focus Item code onto your website as it's delivered through the existing Mautic tracking script.
 
 Within the Campaign, add a decision for ``Visits a Page``, and then select the Action of ``Show Focus Item``. Note that you must precede it by ``Visits a Page`` to trigger the Focus Item.
 
-.. warning:: 
-    Sometimes the Campaign Action can be unreliable and it's dependent on your Campaign steps, so it's recommended to use the direct embedding method in most cases.
+.. warning::
+
+   Campaign-based delivery can be less reliable than filter-based or direct embedding methods because it depends on the Campaign Cron job timing. Consider using filter-based delivery for targeting specific Contact profiles, or direct embedding for guaranteed display.
 
 Measuring success
 *****************
