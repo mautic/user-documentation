@@ -90,7 +90,7 @@ Dashboard import
 
 If you export a dashboard, you can then upload it and import it again in the Dashboard Import page.
 
-Mautic installations come pre-loaded with 6 pre-defined dashboards. Mautic imports the one called default.json automatically, when your dashboard doesn't contain any widgets. The other 5 predefined dashboards provide examples of alternate layouts, such as overviews of Emails or Landing Pages. You can export and import any other dashboards and switch between them. 
+Mautic installations come pre-loaded with 6 pre-defined dashboards. Mautic imports the one called ``default.json`` automatically, when your dashboard doesn't contain any widgets. The other 5 predefined dashboards provide examples of alternate layouts, such as overviews of Emails or Landing Pages. You can export and import any other dashboards and switch between them. 
 
 Pre-defined dashboards can be:
 
