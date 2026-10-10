@@ -77,7 +77,7 @@ The following fields are available:
 
 **Language** - This allows you to set the language of this Text Message.
 
-**Published** - This allows you to set the published status of the Text Message. Unpublished Text Messages aren't sent.
+**Available for use** - This allows you to set the published status of the Text Message. Unpublished Text Messages aren't sent.
 
 .. vale off
 
@@ -104,15 +104,15 @@ The following fields are available:
 
 **Language** - This allows you to set the language of this Text Message.
 
-**Published** - This allows you to set the published status of the Text Message. Unpublished Text Messages aren't sent.
+**Available for use** - This allows you to set the published status of the Text Message. Unpublished Text Messages aren't sent.
 
-**Contact Segment** - This allows you to define the Segment/s who should receive the Text Message.
+**Contact segment** - This allows you to define the Segment/s who should receive the Text Message.
 
 .. vale off
 
-**Publish at (date/time)** - This allows you to define the date and time at which this Text Message is available for sending to Contacts
+**Start sending at (date/time)** - This allows you to define the date and time at which this Text Message is available for sending to Contacts.
 
-**Unpublish at (date/time)** - This allows you to define the date and time at which this Text Message ceases to be available for sending to Contacts.
+**Stop sending at (date/time)** - This allows you to define the date and time at which this Text Message ceases to be available for sending to Contacts.
 
 .. vale off
 
@@ -196,7 +196,7 @@ Managing unsubscribes
 .. note::
     In order for Mautic to process Text Message replies for unsubscribes and replies to messages, you must first configure the Webhook. For more information review the :doc:`/plugins/twilio` documentation.
 
-Contacts can unsubscribe from your Text Messages by replying with the word ``STOP``, or any of the accepted phrases (``STOP``, ``STOPALL``, ``UNSUBSCRIBE``, ``CANCEL``, ``END``, and ``QUIT``), to your SMS.  Once Mautic receives this SMS, Mautic flags the specific Contact as 'Do Not Contact' (DNC) for the SMS Channel, and won't allow messages again via this Channel unless the Contact manually re-subscribes at a later date.
+Contacts can unsubscribe from your Text Messages by replying with the word ``STOP``. The reply must contain only that word, but letter case doesn't matter. Once Mautic receives this reply, it flags the Contact as 'Do Not Contact' (DNC) for the SMS Channel, and doesn't send messages through this Channel again unless the Contact manually re-subscribes at a later date. Mautic doesn't create a DNC record for other opt-out keywords, such as ``STOPALL`` or ``UNSUBSCRIBE``, although your SMS provider might act on them.
 
 You can also view SMS replies in the Contact timeline:
 
@@ -211,11 +211,11 @@ Working with replies to Text Messages
 
 .. vale on
 
-In a Mautic Campaign, where Mautic has an active Text Message provider, there is a Campaign Action called 'Sends a Text Message' which allows you to monitor incoming replies for specific patterns and take action accordingly.
+In a Mautic Campaign, where Mautic has an active Text Message provider, there is a Campaign Decision called 'Sends a text message' which allows you to monitor incoming replies for specific patterns and take action accordingly.
 
   .. image:: images/sms/sms-reply-campaigns.png
     :width: 400
-    :alt: Screenshot showing the Campaign action 'Sends a Text Message'
+    :alt: Screenshot showing the Campaign Decision 'Sends a text message'
 
 This decision tracks replies to your messages and looks for specified patterns within a message. This isn't dependent on you first sending the Contact a message.
 
