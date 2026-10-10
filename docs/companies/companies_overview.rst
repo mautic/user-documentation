@@ -108,7 +108,7 @@ Merging Companies
 
 .. vale on
 
-When editing a Company, you can merge this Company into another existing Company by using the **Merge** button.
+When viewing a Company, you can merge this Company into another existing Company by using the **Merge** button.
 
 Search for the Company you wish to merge into, then click to start the merge. Contacts associated with the merged Companies now become associated with the remaining Company.
 
@@ -234,11 +234,6 @@ Contact profile
 ===============
 
 You can assign a Contact to Companies in the Contact's profile, while creating or editing an existing Contact. Mautic considers the latest Company assigned as the primary Company for the Contact.
-
-Contacts list view
-==================
-
-You can batch assign Companies to selected Contacts in the Contact's list view.
 
 .. vale off
 

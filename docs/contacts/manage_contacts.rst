@@ -123,7 +123,7 @@ If a Contact sends a Form with an Email address, it merges the submission with t
 
 So, Mautic takes care of duplicate Contacts created by the event tracking. You can, however, still potentially create a duplicate Contact via the Mautic administration. As of Mautic 2.1.0, Mautic notifies you if there's already a Contact with the same unique identifier.
 
-``AND`` is the default operator to find duplicates by unique identifiers. You can choose to use the ``OR`` operator in the Contact Merge :doc:`Settings configuration</configuration/settings>`.
+``OR`` is the default operator to find duplicates by unique identifiers, so Mautic treats Contacts as duplicates if any of the unique fields match. To require all unique fields to match, set **Merge by unique fields with operator** to **If all of the unique fields match** in the Contact Merge :doc:`Settings configuration</configuration/settings>`.
 
 .. image:: images/contact-duplicates-operator-configuration.png
     :align: center
@@ -368,17 +368,21 @@ Change Contact Segments
 
 .. vale on
 
-.. image:: images/change-segments.jpeg
+.. image:: images/contact-actions-preferences.png
+    :width: 360
     :align: center
-    :alt: Screenshot of change Segment
+    :alt: Screenshot of the open Options drop-down on the Contact detail, listing Campaigns, Export, Merge, Preferences, and Delete.
 
 |
 
-1. Click the **drop down box arrow** in the top right hand corner of the Contact detail. 
+#. Click the **drop down box arrow** in the top right hand corner of the Contact detail.
+#. Select **Preferences**, then select the **Segments** tab.
+#. Add or remove Segments, then select **Save**.
 
-2. Select **Segments**. A modal box shows up where you'll see all the Segments. The green switch means that the Contact belongs to the Segment, the orange switch means the opposite. 
-
-3. Click the **switch** to add/remove the Contact to/from the Segment.
+.. image:: images/contact-preferences-segments.png
+    :width: 620
+    :align: center
+    :alt: Screenshot of the Contact Preference Center with the Segments tab open, showing the My segments field and the Save button.
 
 .. vale off
 
@@ -427,7 +431,7 @@ If you have two Contacts in the Mautic database who are physically one person, y
 
 When you merge Contacts, the main Contact receives the following data:
 
-* **Field data** - Values from the merged Contact fill empty fields on the main Contact.
+* **Field data** - For each field, Mautic keeps the value from the Contact that changed most recently. If that value is empty, Mautic uses the value from the other Contact.
 * **Owner** - If the main Contact doesn't have an owner, it inherits the merged Contact's owner.
 * **Points** - Points from both Contacts combine.
 * **Tags** - Tags from both Contacts combine.
