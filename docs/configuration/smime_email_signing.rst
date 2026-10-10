@@ -45,7 +45,7 @@ Turn on S/MIME signing through your Mautic configuration file. It isn't availabl
 Configuration
 =============
 
-Add the following configuration parameters to your ``app/config/local.php`` file:
+Add the following configuration parameters to your ``config/local.php`` file:
 
 .. code-block:: php
 
@@ -170,21 +170,21 @@ Encrypting private keys adds an extra layer of security:
 - Mautic automatically decrypts the keys when needed to sign Emails
 
 .. important::
-    Make sure you have a ``secret_key`` configured in your ``app/config/local.php`` file. Mautic creates this automatically during installation.
+    Make sure you have a ``secret_key`` configured in your ``config/local.php`` file. Mautic creates this automatically during installation.
 
 Creating encrypted keys
 =======================
 
 To encrypt an existing private key:
 
-1. Ensure your ``secret_key`` configures in ``app/config/local.php``
+1. Ensure that ``config/local.php`` contains a ``secret_key`` value
 2. Use Mautic's encryption helper or the command line:
 
 .. code-block:: bash
 
     # Using PHP to encrypt the key
     php -r "
-    require 'app/config/local.php';
+    require 'config/local.php';
     require 'app/bundles/CoreBundle/Helper/EncryptionHelper.php';
     \$helper = new \Mautic\CoreBundle\Helper\EncryptionHelper(
         new \Mautic\CoreBundle\Helper\CoreParametersHelper(new \Symfony\Component\DependencyInjection\ParameterBag\ParameterBag(\$parameters))
