@@ -27,7 +27,12 @@ In order to configure the text messages correctly, follow these steps:
     :alt: Screenshot of the SID and Auth Token fields
 
 
-5. Copy the **Account SID** from your Twilio account and paste it into the **Account SID** field in the Twilio Plugin configuration.
+.. vale Google.Parens = NO
+
+5. Copy the **Account SID** from your Twilio account and paste it into the **Account SID** field in the Twilio Plugin configuration. Twilio uses a String Identifier (SID) to identify your account and its resources.
+
+.. vale Google.Parens = YES
+
 
 6. Unlock and copy the *Auth Token* and paste it to *Auth Token* field in the Twilio Plugin configuration.
 

@@ -38,7 +38,7 @@ Configure the Plugin
 
 .. vale on
 
-Navigate to the *Features* tab in the Plugin configuration modal box. The fields on the **Contact Mapping** tab depend on the list you select.
+Navigate to the **Features** tab in the Plugin configuration modal box. The fields on the **Contact Mapping** tab depend on the list you select.
 
 .. image:: images/plugins-mailchimp-configure.png
    :alt: MailChimp Plugin configuration
@@ -58,7 +58,11 @@ Navigate to the *Features* tab in the Plugin configuration modal box. The fields
 Other configuration options
 ===========================
 
+.. vale off
+
 - **Triggered action push contacts to integration**
+
+.. vale on
 
 Mautic enables this option by default. If you turn it off, the Plugin doesn't push Contacts to MailChimp.
 

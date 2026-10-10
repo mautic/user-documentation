@@ -30,7 +30,13 @@ Once configured, you can search the Marketplace using the filter, and install Pl
   :width: 800
   :alt: Screenshot of Composer enabled
 
-If you haven't enabled the **Update Mautic through Composer [BETA]** setting, Mautic displays the warning 'Technical setup required to install or update plugins'. The warning links to instructions you can send to a developer for switching to a :doc:`Composer-managed</getting_started/switching_composer>` installation. Until then, you can browse the Marketplace, but you can't install or update Plugins or Themes from it. Campaign packages don't need Composer.
+.. vale off
+
+If you haven't enabled the **Update Mautic through Composer [BETA]** setting, Mautic displays the warning 'Technical setup required to install or update plugins'.
+
+.. vale on
+
+The warning links to instructions you can send to a developer for switching to a :doc:`Composer-managed</getting_started/switching_composer>` installation. Until then, you can browse the Marketplace, but you can't install or update Plugins or Themes from it. Campaign packages don't need Composer.
 
 .. image:: images/need-to-enable-composer.png
   :width: 800
@@ -45,7 +51,7 @@ List of Plugins
 
 The list of Plugins available in the Marketplace is accessible from your Mautic administration menu. Click the **cog icon** in the top right hand corner to display the menu.
 
-The Marketplace lists Plugin, Theme, and Campaign packages. A package's detail page shows its type.
+The Marketplace lists Plugin, Theme, and Campaign packages. A package's detail view shows its type.
 
 The list view allows you to search for specific keywords. It displays quick stats including Plugin downloads and how many stars it has in :xref:`Packagist`. It also shows the vendor who has developed the Plugin. Sadly, the sorting by columns isn't available at the moment because it's not supported by the Packagist API. It's planned to add this in a future release.
 
@@ -102,7 +108,7 @@ All the PHP packages listed in Packagist are installable by Composer which is a 
 
 Context menu
 ============
-The detail page shows these actions, depending on the package and your permissions:
+The detail view shows these actions, depending on the package and your permissions:
 
 * **Back to Marketplace** takes you to the list view.
 
@@ -112,7 +118,7 @@ The detail page shows these actions, depending on the package and your permissio
 
 * **Documentation** opens the package's documentation. It shows only if the package provides a documentation link.
 
-* **Issue tracker** opens a new window with the issue tracker for the Plugin. It shows only if the Plugin has this information available. Use this option to search for issues with the Plugin and to report new issues to the maintainers.
+* **Issue tracker** opens a new window with the issue tracker for the Plugin. It shows only if the Plugin has this information available. Use this option to search for issues with the Plugin and to open new issues for the maintainers.
 
 Ratings and reviews
 *******************
@@ -210,7 +216,7 @@ Add ``--dry-run`` to simulate the installation without installing anything.
 
 A Campaign package needs an administrator User to own the Campaign it installs. When you run the command interactively, Mautic asks you to choose that User. In a non-interactive run, such as a script, pass the administrator User's ID with ``--user-id=ID``.
 
-To remove an installed Plugin or Campaign package, run this command.
+To remove an installed Plugin or Campaign package, run this command:
 
 .. code:: shell
 

@@ -62,11 +62,11 @@ Troubleshooting Plugins
 
 If the ``firstname`` value wasn't saved to the Integration:
 
-1. Edit the Form field and confirm that **Save result?** shows **Yes** on its **General** tab.
+1. Edit the Form Field and confirm that **Save result?** shows **Yes** on its **General** tab.
 
 2. On the field's **Mapped Field** tab, confirm the field maps to the Contact field **First Name**.
 
-3. Double-check the Integration field mappings.
+3. Verify the Integration field mappings.
 
 .. vale off
 
