@@ -16,7 +16,7 @@ General settings
 
 .. _site-url:
 
-* **Site URL** - This is where Mautic is physically installed. Set the URL for this site here. Cron jobs need this to correctly determine absolute URLs when generating links, such as the links in Emails. It's also called Mautic's 'base URL'.
+* **Site URL** - Enter the URL where you installed Mautic, which is Mautic's 'base URL'. Cron jobs use this URL to build absolute links, such as the links in Emails.
 
 * **Mautic's root URL** - When a User signs in to their Mautic instance, they go to ``mautic.example.com``. However, that Landing Page is also accessible to the public. If a Contact visits that address, they see the Mautic login page for that instance.
 
