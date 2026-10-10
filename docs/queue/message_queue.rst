@@ -24,7 +24,7 @@ Processing a message queue
 
 This command processes all pending messages that haven't reached their maximum number of attempts and are in the pending queue.
 
-Setup your :ref:`cron<Campaign cron jobs>` as followed: ``php bin/console mautic:messages:send``
+Set up your :ref:`Cron job<Campaign Cron jobs>` as follows: ``php bin/console mautic:messages:send``
 
 
 
