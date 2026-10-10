@@ -81,15 +81,19 @@ The following values are available:
 
 - **Is a translation of** - If you're creating a slot in a second language translation - for example to use on a multilingual website - select the original base language Dynamic Web Content item which you're translating. The same slot displays the appropriate language based on the Campaign or filters set, but Mautic shows the translated content if a visitor is viewing the page in a different browser language.
 
-- **Available for use** - Whether the Dynamic Web Content item is available for use - published - or not available - unpublished
+- **Available for use** - Whether Mautic can display the Dynamic Web Content item to Contacts. When set to 'No', the item is unavailable.
 
-- **Is Campaign based** - if set to Yes, Mautic pushes this Dynamic Web Content to Contacts through a Campaign. When set to No, you can specify filters for visitors to see the content.
+- **Is Campaign based** - if set to 'Yes', Mautic pushes this Dynamic Web Content to Contacts through a Campaign. When set to 'No', you can specify filters for visitors to see the content.
 
 - **Requested slot name** - shown if using non-Campaign based Dynamic Web Content, this allows you to specify the slot name on your website in which the Contact sees the content.
+
+.. vale off
 
 **Activate at (date/time)** - The date and time at which Mautic starts displaying this Dynamic Web Content item to Contacts.
 
 **Deactivate at (date/time)** - The date and time at which Mautic stops displaying this Dynamic Web Content item to Contacts.
+
+.. vale on
 
 **UTM tags** - Mautic can append UTM tags to tracked links in Dynamic Web Content. See :doc:`/utm_tags/utm_tags_overview` for more information.
 

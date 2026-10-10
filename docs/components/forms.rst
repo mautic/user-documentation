@@ -19,19 +19,23 @@ The following fields are available:
 
 - **Category** - Assign a Category to help you organize your Forms.
 
-- **Available for use** - Whether the Form is available for use - published - or not available - unpublished. Unpublished Forms aren't visible when you've added the Form using JavaScript. If you used the manual method to copy and paste the Form HTML, the Form remains visible but visitors **can't** submit it - an error message prevents them from submitting an unpublished Form.
+- **Available for use** - Whether visitors can view and submit the Form. When set to 'No', the Form is unavailable: it isn't visible when you've added it using JavaScript. If you used the manual method to copy and paste the Form HTML, the Form remains visible but visitors **can't** submit it - an error message prevents them from submitting an unavailable Form.
+
+.. vale off
 
 - **Activate at (date/time)** - The date and time at which the Form becomes available for submissions.
 
 - **Deactivate at (date/time)** - The date and time at which the Form stops accepting submissions.
 
-- **Disable search indexing** - If Yes, Mautic prevents search engines from finding and displaying the Form in search results by sending the ``noindex`` http header.
+.. vale on
 
-- **Kiosk mode** - If Yes, Mautic turns off tracking of Contacts created through the Form, so that the Form doesn't generate cookies or associate any IP address with the Contact record. Marketers may refer to this as 'data entry mode'. It's ideal for using at conferences or events where several Contacts may enter their information using the same device, as it prevents associating the activity on the device to Contacts.
+- **Disable search indexing** - If set to 'Yes', Mautic prevents search engines from finding and displaying the Form in search results by sending the ``noindex`` http header.
 
-- **Use theme style** - If Yes, the Form displays with the styling from either the selected Mautic Theme or the Attributes tab of the Form Fields. When No, the Form adopts the styling of where it's embedded.
+- **Kiosk mode** - If set to 'Yes', Mautic turns off tracking of Contacts created through the Form, so that the Form doesn't generate cookies or associate any IP address with the Contact record. Marketers may refer to this as 'data entry mode'. It's ideal for using at conferences or events where several Contacts may enter their information using the same device, as it prevents associating the activity on the device to Contacts.
 
-- **Theme** - Select a Mautic Theme which has styling for a Form. This dictates the styling of the Form when added to an external website or Application if **Use theme style** is Yes.
+- **Use Theme style** - If set to 'Yes', the Form displays with the styling from either the selected Mautic Theme or the Attributes tab of the Form Fields. If set to 'No', the Form adopts the styling of where it's embedded.
+
+- **Theme** - Select a Mautic Theme which has styling for a Form. When you set **Use Theme style** to 'Yes', this Theme dictates the styling of the Form on an external website or Application.
 
 .. note::
     Not all Themes include Form styling. Check the Features column on your Themes listing in the Theme Manager to see which Themes include styling for Forms.
@@ -103,14 +107,14 @@ The available details fields are:
    * **Remain at Form** - the Contact stays on the same page and the Form resets, allowing for another submission or continued browsing
    * **Redirect URL** - sends the Contact to a different website or a specific Mautic Landing Page after they click submit
    * **Display message** - shows a confirmation or thank you message on the screen after the Contact submits the Form
-   * **Hide form (+ display message)** - hides the Form after the Contact submits it and shows a confirmation or thank you message in its place
-
-   .. vale on
+   * **Hide Form (+ display message)** - hides the Form after the Contact submits it and shows a confirmation or thank you message in its place
 
 * **Redirect URL/Message** - If you decide to use the **Successful Submit Action** of:
 
    * **Redirect URL** - paste the URL where you'd like to direct submitters
-   * **Display message** or **Hide form (+ display message)** - enter the message to display
+   * **Display message** or **Hide Form (+ display message)** - enter the message to display
+
+   .. vale on
 
   For these options, you can use placeholders to personalize the experience for your Contacts. Mautic automatically replaces these placeholders with specific details when the Contact submits the Form:
 
@@ -319,7 +323,7 @@ Attributes
    Attributes are CSS tags which change the styling of a particular Form.
 
 .. note::
-   Setting **Use theme style** to No on the Form means that Mautic ignores the styling in these fields.
+   Setting **Use Theme style** to 'No' on the Form means that Mautic ignores the styling in these fields.
 
 .. image:: images/forms/checkbox_group_attributes.png
   :width: 600
@@ -575,7 +579,7 @@ The Self-hosted option does provide more flexibility to extend Forms with JavaSc
 
 #. Copy the JavaScript code in the first box, and paste it into the head or body of your page. If you have multiple Mautic Forms on the same page, add this once only.
 #. Copy the HTML code in the second box, and paste it where you wish to display the Form.
-#. If you have **Use theme style** set to Yes in the Form, the code includes the styling. If you have **Use theme style** set to No, the code includes no styling, and the Form styling comes from the CSS from your website.
+#. If you have **Use Theme style** set to 'Yes' in the Form, the code includes the styling. If you have **Use Theme style** set to 'No', the code includes no styling, and the Form styling comes from the CSS from your website.
 
 .. vale off
 
