@@ -177,7 +177,7 @@ Creating encrypted keys
 
 To encrypt an existing private key:
 
-1. Ensure your ``secret_key`` configures in ``config/local.php``
+1. Ensure that ``config/local.php`` contains a ``secret_key`` value
 2. Use Mautic's encryption helper or the command line:
 
 .. code-block:: bash
