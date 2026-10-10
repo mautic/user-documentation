@@ -38,7 +38,7 @@ File name: config.json
         "name": "Great Theme",
         "author": "Mr. Robot",
         "authorUrl": "https://mautic.org",
-        "builder": "grapesjsbuilder",
+        "builder": ["grapesjsbuilder"],
         "features": [
             "email"
         ]
@@ -46,7 +46,7 @@ File name: config.json
 
 With the builder/s defined, the Theme shows in the Theme selection page.
 
-If you wish to support more than one Builder, specify them in an array: ``"builder": ["legacy", "grapesjsbuilder"],``
+The ``builder`` value must be an array, even for a single Builder. To support more than one Builder, add each one to the array: ``"builder": ["legacy", "grapesjsbuilder"],``
 
 .. vale off
 
