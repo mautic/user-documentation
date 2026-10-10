@@ -77,7 +77,7 @@ The following fields are available:
 
 **Language** - This allows you to set the language of this Text Message.
 
-**Available for use** - This allows you to set the published status of the Text Message. Unpublished Text Messages aren't sent.
+**Available for use** - Turn this on to make the Text Message available for sending. Mautic doesn't send Text Messages that aren't available for use.
 
 .. vale off
 
@@ -104,9 +104,9 @@ The following fields are available:
 
 **Language** - This allows you to set the language of this Text Message.
 
-**Available for use** - This allows you to set the published status of the Text Message. Unpublished Text Messages aren't sent.
+**Available for use** - Turn this on to make the Text Message available for sending. Mautic doesn't send Text Messages that aren't available for use.
 
-**Contact segment** - This allows you to define the Segment/s who should receive the Text Message.
+**Contact Segment** - This allows you to define the Segment/s who should receive the Text Message.
 
 .. vale off
 
@@ -196,7 +196,7 @@ Managing unsubscribes
 .. note::
     In order for Mautic to process Text Message replies for unsubscribes and replies to messages, you must first configure the Webhook. For more information review the :doc:`/plugins/twilio` documentation.
 
-Contacts can unsubscribe from your Text Messages by replying with the word ``STOP``. The reply must contain only that word, but letter case doesn't matter. Once Mautic receives this reply, it flags the Contact as 'Do Not Contact' (DNC) for the SMS Channel, and doesn't send messages through this Channel again unless the Contact manually re-subscribes at a later date. Mautic doesn't create a DNC record for other opt-out keywords, such as ``STOPALL`` or ``UNSUBSCRIBE``, although your SMS provider might act on them.
+Contacts can unsubscribe from your Text Messages by replying with the word ``STOP``. The reply must contain only that word, but letter case doesn't matter. Once Mautic receives this reply, it unsubscribes the Contact from the SMS Channel and doesn't send messages through this Channel again unless the Contact manually re-subscribes at a later date. Mautic doesn't unsubscribe Contacts who reply with other opt-out keywords, such as ``STOPALL`` or ``UNSUBSCRIBE``, although your SMS provider might act on them.
 
 You can also view SMS replies in the Contact timeline:
 

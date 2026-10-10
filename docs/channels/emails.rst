@@ -530,7 +530,7 @@ This hierarchy ensures Emails always have a valid sender while allowing personal
 Just as it resolves the From address, Mautic determines the ``Reply-To`` header for queued and batch Email sends - such as Campaign Emails and Segment broadcasts - using the following priority order:
 
 #. **Email Reply to address** - If the Email's **Advanced** tab has a **Reply to address**, Mautic uses that address.
-#. **Contact Owner address** - If you enable **Use contact owner as mailer**, Mautic uses the Contact Owner's Email address for each owner group in the batch.
+#. **Contact Owner address** - If you enable **Use Contact owner as mailer**, Mautic uses the Contact Owner's Email address for each owner group in the batch.
 #. **Email From address** - If you haven't configured a global ``reply-to`` in **Email Settings**, Mautic uses the Email's **From address**.
 #. **System fallback** - Mautic falls back to the global **Reply to address** in **Email Settings**, or the system From address when that's blank.
 
@@ -757,13 +757,13 @@ Setting a signature happens in two places:
 
    Mautic replaces the ``|FROM_NAME|`` token with the name defined in the Email Settings tab.
 
-   Mautic uses this signature when the Email doesn't have **Use contact owner as mailer** enabled.
+   Mautic uses this signature when the Email doesn't have **Use Contact owner as mailer** enabled.
 
-#. Each Mautic User can configure their own signature in their account settings. Mautic uses this signature when the Email has **Use contact owner as mailer** enabled and the Contact has an owner assigned.
+#. Each Mautic User can configure their own signature in their account settings. Mautic uses this signature when the Email has **Use Contact owner as mailer** enabled and the Contact has an owner assigned.
 
    .. important::
 
-     For the ``{signature}`` token to use the owner's signature, you must enable **Use contact owner as mailer** in the Email's advanced settings. Enabling only the global **Mailer is owner** setting in Configuration isn't sufficient.
+     For the ``{signature}`` token to use the owner's signature, you must enable **Use Contact owner as mailer** in the Email's advanced settings. Enabling only the global **Mailer is owner** setting in Configuration isn't sufficient.
 
      If the owner hasn't configured a signature, the ``{signature}`` token resolves to empty when you enable owner-as-mailer.
 
