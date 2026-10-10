@@ -53,7 +53,7 @@ If you want to use the Plugin, you have to activate it.
 
 1. Set the *Active* switch to **Yes**.
 
-2. In the **Features tab** is Push Contacts to this Integration checkbox and it's checked by default.
+2. In the **Features** tab, Mautic selects the **Triggered action push contacts to integration** checkbox by default.
 
 .. image:: images/vtiger-mautic-features.png
   :alt: Screenshot of Vtiger Mautic Integration

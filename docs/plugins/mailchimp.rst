@@ -38,36 +38,29 @@ Configure the Plugin
 
 .. vale on
 
-Navigate to the *Features* tab in the Plugin configuration modal box. You should see this note:
-
-.. vale off
-
-.. note::
-   The Contact Field Mapping tab will appear after selecting a segment and will update after changing the selected segment.
-   
-   .. vale on
+Navigate to the *Features* tab in the Plugin configuration modal box. The fields on the **Contact Mapping** tab depend on the list you select.
 
 .. image:: images/plugins-mailchimp-configure.png
    :alt: MailChimp Plugin configuration
    :align: center
 
-1. Select the Segment.
+1. Select the **List** - your MailChimp Audience - to add Contacts to.
 
-   If you don't have a Segment in MailChimp created yet, go to *MailChimp dashboard* / *Segments* / *Create List* and create one.
+   If you don't have an Audience yet, create one in the MailChimp dashboard.
 
 2. Save the Plugin configuration
 3. Open it again.
 
-   The *Contact Field Mapping* tab should appear now.
+   The **Contact Mapping** tab now appears.
 
 4. Configure the field mapping.
 
 Other configuration options
 ===========================
 
-- **Push Contacts to this Integration**
+- **Triggered action push contacts to integration**
 
-Mautic enables these options by default. If you leave them off, the Plugin won't push Contacts to MailChimp.
+Mautic enables this option by default. If you turn it off, the Plugin doesn't push Contacts to MailChimp.
 
-- **Enable double opt in** - If MailChimp should send a confirmation Email to the Contacts added by this Plugin. The Contacts must confirm that they really want to join the Segment.
+- **Enable double opt in** - If MailChimp should send a confirmation Email to the Contacts added by this Plugin. The Contacts must confirm that they really want to join the list.
 - **Send welcome Email** - Whether MailChimp should send the welcome Email.

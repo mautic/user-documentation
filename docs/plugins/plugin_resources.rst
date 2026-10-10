@@ -62,9 +62,9 @@ Troubleshooting Plugins
 
 If the ``firstname`` value wasn't saved to the Integration:
 
-1. Confirm that the Form General configuration tab enables the ``Save result`` option.
+1. Edit the Form field and confirm that **Save result?** shows **Yes** on its **General** tab.
 
-2. In the Form Contact Field configuration tab, confirm the field is: ``ContactFirst Name``.
+2. On the field's **Mapped Field** tab, confirm the field maps to the Contact field **First Name**.
 
 3. Double select the Integration field mappings.
 
@@ -75,7 +75,7 @@ Field mapping
 
 .. vale on
 
-At the *Contact Field Mapping* tab is the list of available fields from an Integration.
+The **Contact Mapping** tab lists the available fields from an Integration. Integrations that sync Companies also show a **Company Mapping** tab.
 
 You have to select the Mautic Contact Field equivalent so each field gets the right value.
 

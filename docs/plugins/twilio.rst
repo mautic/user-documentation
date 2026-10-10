@@ -27,7 +27,7 @@ In order to configure the text messages correctly, follow these steps:
     :alt: Screenshot of the SID and Auth Token fields
 
 
-5. Copy the *Account Sender ID (SID)* from Twilio account and paste it to *Account Sender ID* field in the Twilio Plugin configuration.
+5. Copy the **Account SID** from your Twilio account and paste it into the **Account SID** field in the Twilio Plugin configuration.
 
 6. Unlock and copy the *Auth Token* and paste it to *Auth Token* field in the Twilio Plugin configuration.
 
@@ -55,15 +55,15 @@ In order to configure the text messages correctly, follow these steps:
     :width: 400
     :alt: Screenshot of the Messaging Services ID field on Twilio.
 
-13. Copy the Messaging Service ID and paste this into the 'Features' tab of your Mautic Twilio Plugin settings
+13. Copy the Messaging Service SID and paste it into the **Messaging Service SID** field on the **Features** tab of your Mautic Twilio Plugin settings.
 
  .. image:: images/twilio-messaging-service-id-mautic.png
     :width: 400
-    :alt: Screenshot of the Messaging Services ID field in Mautic.
+    :alt: Screenshot of the Messaging Service SID field on the Features tab of the Twilio Plugin in Mautic.
 
 14. Configure the global frequency rules for the SMS Channel as appropriate for your business.
 
-15. Select the *Published*? switch to *Yes* in the Enabled/Auth tab in Mautic and save the Plugin configuration.
+15. Set the **Active** switch to **Yes** on the **Enabled/Auth** tab in Mautic and save the Plugin configuration.
 
 .. vale off
 
