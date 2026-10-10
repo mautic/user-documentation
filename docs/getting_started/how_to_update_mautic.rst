@@ -5,12 +5,12 @@ How to update Mautic
 
 .. vale on
 
-You can update Mautic at the command line, or with Composer for Composer-based installations. Mautic 5.0 and later don't support updating in the browser.
+You can update Mautic at the command line, or with Composer for Composer-based installations. Mautic doesn't support updating in the browser.
 
 .. note::
     If you installed Mautic using Composer or switched to a Composer-based install, jump straight to the :ref:`Updating Mautic (Composer based installs)` section below.
 
-Mautic 8 requires PHP 8.4 or later. If your server runs an earlier PHP version, upgrade PHP before you update to Mautic 8.
+Before you update, make sure your server meets the requirements for the version you're updating to. Read more in :xref:`Mautic's Requirements`.
 
 Updating at the command line (non-Composer based installations)
 ***************************************************************

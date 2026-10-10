@@ -17,9 +17,7 @@ You can install the Mautic production package either by uploading the zipped ins
 The Mautic installation is a three-step process:
 
 #. Check that the server environment meets Mautic's requirements.
-
 #. Integrate the database server with the Mautic server.
-
 #. Create an administrator account to access the Mautic server.
 
 Preparing for installation
@@ -27,13 +25,11 @@ Preparing for installation
 
 Before installing a package, ensure that:
 
-* Your server runs PHP 8.4 or 8.5 and meets the other minimum requirements for the version you are installing. Read more in :xref:`Mautic's Requirements`.
+* Your server environment meets the minimum requirements for the version you are installing. Read more in :xref:`Mautic's Requirements`.
   
 * Your server directory is writable by the Mautic web server.
   
-* Your database server runs MySQL 8.4 or later, or MariaDB 10.11 or later. Mautic doesn't support other database servers.
-
-* The database account Mautic uses has valid permissions to access the database. Read more in :xref:`Mautic's Requirements`.
+* Your database meets the minimum requirements for the supported databases and valid User permissions to access to the database. Read more in :xref:`Mautic's Requirements`.
   
 * Your server has enough free disk space to run the installation. Consider the database size as well.
   
@@ -381,7 +377,7 @@ How can you specify a PHP version?
 
 .. vale on
 
-Mautic requires PHP 8.4 or later - review :xref:`Mautic's Requirements`. A Composer update could upgrade a package to a version that requires a newer PHP release than the one on your server.
+Review :xref:`Mautic's Requirements` for the PHP versions your Mautic version supports. A Composer update could upgrade a package to a version that requires a newer PHP release than the one on your server.
 
 To prevent this, specify the PHP version you want to use in the config section of ``composer.json``, as in this example.
 
