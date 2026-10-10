@@ -10,16 +10,16 @@ Mautic - HubSpot CRM Plugin
 
 Mautic can push Contacts to :xref:`HubSpot CRM` based on :ref:`Contact actions<testing integrations>` or :doc:`Point Triggers</points/points>`.
 
-HubSpot API key
-===============
+HubSpot access token
+====================
 
-Getting Mautic connected to HubSpot requires integrating and configuring the HubSpot API key with the right credentials.
+To connect Mautic to HubSpot, you need an access token from a HubSpot private app with the right permissions.
 
 1. Sign in to your HubSpot CRM account or create an account if you don't already have one.
 
 2. Create a private app to :xref:`HubSpot Credentials`. You need to give to your private app the adapted rights for Mautic to handle Contacts, Companies, etc.
 
-3. Copy your generated HubSpot Key and save it somewhere safe.
+3. Copy your generated private app access token and save it somewhere safe.
 
 .. vale off
 
@@ -49,7 +49,11 @@ Configure the HubSpot CRM Plugin
   :width: 800
   :alt: Screenshot of HubSpot Plugin
 
-5. In the configuration box, paste your **API key** in the HubSpot API key input field.
+.. vale off
+
+5. In the configuration box, paste your private app's access token into the **Hubspot Access token from private app** field. The **Hubspot API Key (deprecated)** field is read-only.
+
+.. vale on
 
 6. Configure the **Feature Specific Settings** to synchronize Contacts, Companies, or both  from HubSpot.
 
@@ -93,7 +97,7 @@ Note, despite ``--fetch-all`` flag, the HubSpot API endpoints used in Mautic pri
 
 * ``/companies/v2/companies/recent/modified/``
 
-* ``/contactslistseg/v1/lists/recently_updated/contacts/recent``
+* ``/contacts/v1/lists/recently_updated/contacts/recent``
 
 If you intend to do a full sync of your HubSpot Contacts, you need to modify an attribute of each so that they appear in HubSpot's recent/modified endpoints.
 When connecting to a long-lived HubSpot instance, these endpoints pull only Contacts modified in the last 30 days, resulting in an incomplete sync. :xref:`Source`.

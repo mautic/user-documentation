@@ -51,22 +51,24 @@ Configure the Vtiger CRM Plugin
 
 If you want to use the Plugin, you have to activate it. 
 
-1. Set the *Active* switch to **Yes**.
+.. vale off
 
-2. In the **Features tab** is Push Contacts to this Integration checkbox and it's checked by default.
+#. Set the **Active** switch to **Yes**.
 
-.. image:: images/vtiger-mautic-features.png
-  :alt: Screenshot of Vtiger Mautic Integration
-  :width: 500
-  :align: center
+#. In the **Features** tab, Mautic selects the **Triggered action push contacts to integration** checkbox by default.
 
-|
+   .. image:: images/vtiger-mautic-features.png
+     :alt: Screenshot of Vtiger Mautic Integration
+     :width: 500
+     :align: center
 
-3. You can also configure whether you want to map Vtiger's Leads to Mautic's Contacts and/or Vtiger's Organizations to Mautic's Companies.
+#. You can also configure whether you want to map Vtiger's Leads to Mautic's Contacts and Vtiger's Organizations to Mautic's Companies.
 
-4. Configure the :ref:`field mapping<field mapping>`.
+#. Configure the :ref:`field mapping<field mapping>`.
 
-5. Click **Save & Close**.
+#. Click **Save & Close**.
+
+.. vale on
 
 .. vale off
 
