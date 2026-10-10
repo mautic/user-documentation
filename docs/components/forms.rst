@@ -19,7 +19,7 @@ The following fields are available:
 
 - **Category** - Assign a Category to help you organize your Forms.
 
-- **Available for use** - Whether visitors can view and submit the Form. When set to 'No', the Form is unavailable: it isn't visible when you've added it using JavaScript. If you used the manual method to copy and paste the Form HTML, the Form remains visible but visitors **can't** submit it - an error message prevents them from submitting an unavailable Form.
+- **Available for use** - Whether visitors can view and submit the Form. When set to **No**, the Form is unavailable: it isn't visible when you've added it using JavaScript. If you used the manual method to copy and paste the Form HTML, the Form remains visible but visitors **can't** submit it - an error message prevents them from submitting an unavailable Form.
 
 .. vale off
 
@@ -29,13 +29,13 @@ The following fields are available:
 
 .. vale on
 
-- **Disable search indexing** - If set to 'Yes', Mautic prevents search engines from finding and displaying the Form in search results by sending the ``noindex`` http header.
+- **Disable search indexing** - If set to **Yes**, Mautic prevents search engines from finding and displaying the Form in search results by sending the ``noindex`` http header.
 
-- **Kiosk mode** - If set to 'Yes', Mautic turns off tracking of Contacts created through the Form, so that the Form doesn't generate cookies or associate any IP address with the Contact record. Marketers may refer to this as 'data entry mode'. It's ideal for using at conferences or events where several Contacts may enter their information using the same device, as it prevents associating the activity on the device to Contacts.
+- **Kiosk mode** - If set to **Yes**, Mautic turns off tracking of Contacts created through the Form, so that the Form doesn't generate cookies or associate any IP address with the Contact record. Marketers may refer to this as 'data entry mode'. It's ideal for using at conferences or events where several Contacts may enter their information using the same device, as it prevents associating the activity on the device to Contacts.
 
-- **Use Theme style** - If set to 'Yes', the Form displays with the styling from either the selected Mautic Theme or the Attributes tab of the Form Fields. If set to 'No', the Form adopts the styling of where it's embedded.
+- **Use Theme style** - If set to **Yes**, the Form displays with the styling from either the selected Mautic Theme or the Attributes tab of the Form Fields. If set to **No**, the Form adopts the styling of where it's embedded.
 
-- **Theme** - Select a Mautic Theme which has styling for a Form. When you set **Use Theme style** to 'Yes', this Theme dictates the styling of the Form on an external website or Application.
+- **Theme** - Select a Mautic Theme which has styling for a Form. When you set **Use Theme style** to **Yes**, this Theme dictates the styling of the Form on an external website or Application.
 
 .. note::
     Not all Themes include Form styling. Check the Features column on your Themes listing in the Theme Manager to see which Themes include styling for Forms.
@@ -323,7 +323,7 @@ Attributes
    Attributes are CSS tags which change the styling of a particular Form.
 
 .. note::
-   Setting **Use Theme style** to 'No' on the Form means that Mautic ignores the styling in these fields.
+   Setting **Use Theme style** to **No** on the Form means that Mautic ignores the styling in these fields.
 
 .. image:: images/forms/checkbox_group_attributes.png
   :width: 600
@@ -579,7 +579,7 @@ The Self-hosted option does provide more flexibility to extend Forms with JavaSc
 
 #. Copy the JavaScript code in the first box, and paste it into the head or body of your page. If you have multiple Mautic Forms on the same page, add this once only.
 #. Copy the HTML code in the second box, and paste it where you wish to display the Form.
-#. If you have **Use Theme style** set to 'Yes' in the Form, the code includes the styling. If you have **Use Theme style** set to 'No', the code includes no styling, and the Form styling comes from the CSS from your website.
+#. If you have **Use Theme style** set to **Yes** in the Form, the code includes the styling. If you have **Use Theme style** set to **No**, the code includes no styling, and the Form styling comes from the CSS from your website.
 
 .. vale off
 
