@@ -16,11 +16,9 @@ You can install the Mautic production package either by uploading the zipped ins
 
 The Mautic installation is a three-step process:
 
-1. Integrate the database server with the Mautic server.
-   
-2. Create an administrator account to access the Mautic server.
-   
-3. Set up the Email server for Email marketing automation.
+#. Check that the server environment meets Mautic's requirements.
+#. Integrate the database server with the Mautic server.
+#. Create an administrator account to access the Mautic server.
 
 Preparing for installation
 ==========================
@@ -103,34 +101,7 @@ To create an Administrator account for your Mautic instance, enter values for th
   :width: 600
   :alt: Screenshot showing the create User screen
 
-Click **Next Step**.
-
-.. vale off
-
-Configuring Email settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. vale on 
-
-To configure your Email settings for your Mautic instance, enter details of your Email provider on the **Mautic Installation - Email Configuration** window. You can use a tool such as :xref:`Mailhog` to configure a local instance for testing. 
-
-.. image:: images/mautic-email-configuration.png
-  :width: 600
-  :alt: Screenshot showing the Email configuration screen
-
-For configuring your Email sender settings:
-
-* Enter the name and Email address to use with all outgoing Email communications by default. Verify that the provided Email address has been successfully authorized by your Email provider.
-  
-* **Queue** Emails and send them through a cron job - to trigger the queue processing - instead of sending them immediately for larger instances of Email handling.
-  
-* Select **Mailer transport**. If your provider isn't listed, select **Other SMTP Server** and provide the SMTP credentials. API-based sending is significantly faster than SMTP. Depending on the provider you select, additional fields appear to allow you to enter API keys and select regions.
-  
-* Enter **Server** and **Port** for your Email provider.
-  
-* Select **Encryption** and **Authentication mode** for your Email provider.
-
-Click **Next Step** to log into the Mautic server.
+Select **Next Step**. Mautic finishes the installation and displays the **Mautic Installation - Final Steps** window. Select **Proceed to Mautic** to open the login window.
 
 Logging into Mautic
 ~~~~~~~~~~~~~~~~~~~
@@ -143,6 +114,8 @@ On the Mautic login window, enter your Mautic administrator credentials to log i
 
 Click **login** to continue working on your Mautic instance.
 
+After installation, configure your Email transport in **Settings** > **Configuration** > **Email Settings**. See :ref:`Email settings`.
+
 Installing with command line
 ============================
 
@@ -150,33 +123,28 @@ You can also install Mautic using the command line. You can either pass the sett
 
 Use the command ``path/to/php bin/console mautic:install --help`` for the list of options and flags available.
 
-.. code-block:: php
+.. code-block:: text
 
-     --db_driver=DB_DRIVER                    Database driver. [default: "pdo_mysql"]
-      --db_host=DB_HOST                        Database host.
-      --db_port=DB_PORT                        Database port.
-      --db_name=DB_NAME                        Database name.
-      --db_user=DB_USER                        Database user.
-      --db_password=DB_PASSWORD                Database password.
-      --db_table_prefix=DB_TABLE_PREFIX        Database tables prefix.
-      --db_backup_tables=DB_BACKUP_TABLES      Backup database tables if they exist; otherwise drop them. [default: true]
-      --db_backup_prefix=DB_BACKUP_PREFIX      Database backup tables prefix. [default: "bak_"]
-      --admin_firstname=ADMIN_FIRSTNAME        Admin first name.
-      --admin_lastname=ADMIN_LASTNAME          Admin last name.
-      --admin_username=ADMIN_USERNAME          Admin username.
-      --admin_email=ADMIN_EMAIL                Admin email.
-      --admin_password=ADMIN_PASSWORD          Admin user.
-      --mailer_from_name[=MAILER_FROM_NAME]    From name for email sent from Mautic.
-      --mailer_from_email[=MAILER_FROM_EMAIL]  From email sent from Mautic.
-      --mailer_transport[=MAILER_TRANSPORT]    Mail transport.
-      --mailer_host=MAILER_HOST                SMTP host.
-      --mailer_port=MAILER_PORT                SMTP port.
-      --mailer_user=MAILER_USER                SMTP username.
-      --mailer_password[=MAILER_PASSWORD]      SMTP password.
-      --mailer_encryption[=MAILER_ENCRYPTION]  SMTP encryption (null|tls|ssl).
-      --mailer_auth_mode[=MAILER_AUTH_MODE]    SMTP auth mode (null|plain|login|cram-md5).
-      --mailer_spool_type=MAILER_SPOOL_TYPE    Spool mode (file|memory).
-      --mailer_spool_path=MAILER_SPOOL_PATH    Spool path.
+  Arguments:
+    site_url                                 Site URL.
+    step                                     Install process start index. 0 for requirements check, 1 for database, 2 for admin, 3 for configuration, 4 for final step. Each successful step will trigger the next until completion. [default: "0"]
+
+  Options:
+    -f, --force                              Do not ask confirmation if recommendations triggered.
+        --db_driver=DB_DRIVER                Database driver.
+        --db_host=DB_HOST                    Database host.
+        --db_port=DB_PORT                    Database port.
+        --db_name=DB_NAME                    Database name.
+        --db_user=DB_USER                    Database user.
+        --db_password=DB_PASSWORD            Database password.
+        --db_table_prefix=DB_TABLE_PREFIX    Database tables prefix.
+        --db_backup_tables=DB_BACKUP_TABLES  Backup database tables if they exist; otherwise drop them. (true|false)
+        --db_backup_prefix=DB_BACKUP_PREFIX  Database backup tables prefix.
+        --admin_firstname=ADMIN_FIRSTNAME    Admin first name.
+        --admin_lastname=ADMIN_LASTNAME      Admin last name.
+        --admin_username=ADMIN_USERNAME      Admin username.
+        --admin_email=ADMIN_EMAIL            Admin email.
+        --admin_password=ADMIN_PASSWORD      Admin user.
 
 Use the syntax below within a ``local.php`` file:
 
@@ -185,7 +153,7 @@ Use the syntax below within a ``local.php`` file:
   <?php
   // Example local.php to test install (to adapt of course)
   $parameters = array(
-    // Do not set db_driver and mailer_from_name as they are used to assume Mautic is installed
+    // Do not set db_driver and site_url as they are used to assume Mautic is installed
     'db_host' => 'localhost',
     'db_table_prefix' => null,
     'db_port' => 3306,
@@ -196,14 +164,6 @@ Use the syntax below within a ``local.php`` file:
     'db_backup_prefix' => 'bak_',
     'admin_email' => 'admin@example.com',
     'admin_password' => 'Maut1cR0cks!',
-    'mailer_transport' => null,
-    'mailer_host' => null,
-    'mailer_port' => null,
-    'mailer_user' => null,
-    'mailer_password' => null,
-    'mailer_api_key' => null,
-    'mailer_encryption' => null,
-    'mailer_auth_mode' => null,
   );
 
 Installing with a local PHP file
@@ -215,13 +175,11 @@ Run the following command after replacing the path to PHP bin and Mautic instanc
 
 If desired, you can also add parameters in the install command:
 
-.. code-block:: php
+.. code-block:: shell
 
-  path/to/php bin/console mautic:install https://m.example.com
-  --mailer_from_name="Example From Name" --mailer_from_email="mautic@localhost"
-  --mailer_transport="smtp" --mailer_host="localhost" --mailer_port="1025"
-  --db_driver="pdo_mysql" --db_host="db" --db_port="3306" --db_name="db" --db_user="db" --db_password="db" 
-  --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="Maut1cR0cks!"
+  path/to/php bin/console mautic:install https://m.example.com \
+    --db_driver="pdo_mysql" --db_host="db" --db_port="3306" --db_name="db" --db_user="db" --db_password="db" \
+    --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="Maut1cR0cks!"
 
 As the installation process begins, it flags up warnings and aborts if there are any critical errors.
 
@@ -239,13 +197,13 @@ As the installation process begins, it flags up warnings and aborts if there are
   1.1 - Creating schema...
   1.2 - Loading fixtures...
   2 - Creating admin user...
-  3 - Email configuration and final steps...
+  3 - Final steps...
 
   ================
   Install complete
   ================
 
-You can now login to your Mautic instance with your Mautic Admin credentials.
+You can now log in to your Mautic instance with your Mautic Admin credentials. Then configure your Email transport - see :ref:`Email settings`.
 
 Installing from GitHub
 **********************
@@ -419,16 +377,16 @@ How can you specify a PHP version?
 
 .. vale on
 
-This project supports PHP 7.4 as the minimum version currently - review :xref:`Mautic's Requirements` however, it's possible that a Composer update may upgrade some package that could then require PHP 7+ or 8+.
+Review :xref:`Mautic's Requirements` for the PHP versions your Mautic version supports. A Composer update could upgrade a package to a version that requires a newer PHP release than the one on your server.
 
-To prevent this you can add this code to specify the PHP version you want to use in the config section of ``composer.json``:
+To prevent this, specify the PHP version you want to use in the config section of ``composer.json``, as in this example.
 
 .. code-block:: json
 
   "config": {
       "sort-packages": true,
       "platform": {
-          "php": "7.4"
+          "php": "8.4"
       }
   },
 
