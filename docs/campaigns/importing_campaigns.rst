@@ -94,7 +94,7 @@ Follow the steps below to activate an imported Campaign:
    .. warning::
 
       Activating a Campaign allows its events to execute on the next Campaign event Cron job run. Review all Campaign steps, configurations, and associated Assets thoroughly before turning on a Campaign to prevent unintended execution of events.
-          
+
    Scheduled events with relative delays follow the **Campaign Reactivation Behaviour** setting. See :ref:`Campaign reactivation behavior` for the available options and how reactivation affects pending events.
 
    |

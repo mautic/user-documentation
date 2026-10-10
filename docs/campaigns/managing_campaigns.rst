@@ -41,8 +41,6 @@ The **Recent Activity** panel on the right displays the recent activities that h
 
 .. vale off
 
-.. _Campaign republish behavior:
-
 Campaign reactivation behavior
 ******************************
 
@@ -54,12 +52,10 @@ When you deactivate and then reactivate a Campaign, Mautic provides control over
 
    This setting only affects events that use relative delays - interval-based scheduling. Events with absolute dates aren't affected by this setting.
 
-Scheduled activation and deactivation dates follow the same policy. **Count delay only while active** excludes time before the scheduled activation date and after the scheduled deactivation date. **Restart on reactivation** starts the full delay from the scheduled activation date.
+Configuring reactivation behavior
+=================================
 
-Configure reactivation behavior
-===============================
-
-In the UI, this setting appears as **Campaign Reactivation Behaviour**. You can set it in two places:
+You can set **Campaign Reactivation Behaviour** in two places:
 
 * **Global default** - Open **Configuration**, select **Campaign Settings**, and choose a **Campaign Reactivation Behaviour** option. Click **Save & Close** to save the default.
 * **Per Campaign** - Create or edit a Campaign and choose a **Campaign Reactivation Behaviour** option. Select **Use global setting** to follow the global default, or select another option to override it for that Campaign. Click **Save & Close** to save the Campaign.
@@ -82,7 +78,7 @@ There are three options available for how scheduled events should behave after r
 Count delay regardless of activation state
 ------------------------------------------
 
-This is the default behavior. Mautic uses the original trigger date, and inactive time doesn't affect scheduling.
+This is the default behavior. Mautic keeps the originally calculated event date, and inactive time doesn't affect scheduling.
 
 **Example scenario:**
 
@@ -142,18 +138,23 @@ Events only count days when the Campaign is active. Inactive periods don't count
 
 **When to use:** this option is ideal when you want precise control over the actual time Contacts spend in an active Campaign state. Use this for compliance scenarios, trial periods, or when you need to pause Campaigns without affecting the intended engagement timeline.
 
+Scheduling activation and deactivation
+======================================
+
+Scheduled activation and deactivation dates follow the same policy. **Count delay only while active** excludes time before the scheduled activation date and after the scheduled deactivation date. **Restart on reactivation** starts the full delay from the scheduled activation date.
+
 Viewing reactivation details
 ============================
 
-Open the Campaign's **Details** dropdown menu to view these settings:
+On the Campaign overview, expand **Details** to view these settings:
 
 .. vale off
 
 * **Campaign Reactivation Behaviour** - Shows the Campaign's selected option. If it inherits the global default, this row displays **Use global setting**.
-* **Last Activation Date** - Shows when you most recently activated the Campaign, or its scheduled activation date. Mautic uses this date to calculate pending event delays for **Restart on reactivation**.
+* **Last Activation Date** - Shows when you most recently activated the Campaign, or its scheduled activation date. Mautic uses this date to calculate pending event delays for **Restart on reactivation**. If the Campaign has never been active, this row shows 'N/A'.
 
-Activate and deactivate Campaigns
-=================================
+Activating and deactivating Campaigns
+=====================================
 
 .. vale on
 
