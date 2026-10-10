@@ -5,127 +5,57 @@ Queue
 
 .. vale on
 
-You can improved scalability by activating the queuing mechanism for Email and Page opens. Use this if you are getting too much traffic at once from people opening Pages or opening Emails.
+With a queue, Mautic stores work such as sending an Email or recording a page hit, and processes it later instead of during the request that triggers it. Use queues if you send large volumes of Emails, or if many Contacts visit pages or open Emails at the same time.
 
-.. note:: 
-    
-    Mautic 3.x Users who are implementing RabbitMQ or Beanstalkd need to configure the settings directly in their local configuration file. If you are using the legacy Mautic 2.x series the steps below remains the same.
+Mautic uses Symfony Messenger and has two queues:
 
-Activating
-**********
+* **Queue for email (SMS and push messages)** - the ``email`` queue, for sending messages.
+* **Queue for hits (page and email)** - the ``hit`` queue, for recording page hits and Email opens.
 
-You can activate and configure the queuing mechanism by going to configuration:
+By default, both queues use the ``sync://`` DSN, so Mautic processes this work immediately without a queue.
 
-* Open the administrator menu by clicking the cog icon in the top right corner.
-* Select the *Configuration* menu item.
-* Select the *Queue Settings* tab.
-* Switch the *Queue Protocol* to either *RabbitMQ* or *Beanstalkd*.
-* Save the configuration.
+Configure the queues
+********************
 
-.. vale off
+Configure a queue when you want Mautic to process its messages in the background.
 
-Using RabbitMQ
-**************
+#. Open the Admin menu by selecting the cog icon in the top right corner.
+#. Select **Configuration**.
+#. Select the **Queue Settings** tab.
+#. Under **Queue for email (SMS and push messages)**, **Queue for hits (page and email)**, or both, enter the **Scheme** of your queue transport and its connection details.
+#. Select **Save**.
 
-.. vale on
+For the available transports and the connection details each one needs, see :ref:`queue transports<How to enable the queuing>`.
 
-:xref:`RabbitMQ` is one of the available queue protocols that Mautic supports. To use it, you must have a RabbitMQ server running. On :xref:`RabbitMQ`, you can obtain instructions on how to install RabbitMQ. For testing purposes, you can use :xref:`cloudamqp` which offers a RabbitMQ as a service.
+Process the queues
+******************
 
-Having set up a RabbitMQ server, you can configure Mautic to use it by setting the appropriate parameters ``mautic.rabbitmq_*`` in your installation's configuration file.
+After you configure a queue, Mautic adds messages to it and doesn't process them until a consumer runs. Run a consumer for each queue you configure.
 
-.. list-table:: RabbitMQ
-   :header-rows: 1
-   :widths: 40, 40, 60
+To process the ``email`` queue, run this command.
 
-   * - Parameter
-     - Default	
-     - Description
-   * - ``rabbitmq_host``	
-     - ``'localhost'``	
-     - The ``hostname`` of the RabbitMQ server
-   * - ``rabbitmq_port``	
-     - ``'5672'``
-     - The port that the RabbitMQ server is listening on
-   * - ``rabbitmq_vhost``	
-     - ``'/'``
-     - The virtual host to use for this RabbitMQ server
-   * - ``rabbitmq_user``	
-     - ``'guest'``
-     - The username for the RabbitMQ server
-   * - ``rabbitmq_password``	
-     - ``'guest'``	
-     - The password for the RabbitMQ server
-   * - ``rabbitmq_idle_timeout``	
-     - ``0``	
-     - 	The number of seconds after which the queue consumer should timeout when idle
-   * - ``rabbitmq_idle_timeout_exit_code``	
-     - ``0``	
-     - 	The exit code returned when the consumer exits due to idle timeout
+.. code-block:: shell
 
-Example: 
+    php /path/to/mautic/bin/console messenger:consume email
 
-.. code-block::
+To process the ``hit`` queue, run this command.
 
-    'queue_protocol' => 'rabbitmq',
-    'rabbitmq_host' => 'b-180b97c2-6b05-4b10-80ed-09182eac3a02.mq.us-west-1.amazonaws.com',
-    'rabbitmq_port' => '5671',
-    'rabbitmq_vhost' => '/',
-    'rabbitmq_user' => 'some_user',
-    'rabbitmq_password' => 'some_password',
-    'rabbitmq_idle_timeout' => 0,
-    'rabbitmq_idle_timeout_exit_code' => 0,
-      
+.. code-block:: shell
 
-Using Beanstalkd
-****************
+    php /path/to/mautic/bin/console messenger:consume hit
 
-:xref:`Beanstalkd` is another available queue protocol that Mautic supports. To use it, you must have a Beanstalkd server running. On :xref:`Beanstalkd website`, you can obtain instructions on how to install Beanstalkd.
-   
-Once you have setup a Beanstalkd server, you can configure Mautic to use it by setting the appropriate parameters ``mautic.beanstalkd_*`` in your installation's configuration file.   
+A consumer keeps running until you stop it. Keep consumers running with a process manager such as ``Supervisor`` or ``systemd``.
 
-.. list-table:: RabbitMQ
-   :header-rows: 1
-   :widths: 40, 40, 60
+If you run a consumer from a cron job instead, add at least one of these options so that each run stops:
 
-   * - Parameter
-     - Default	
-     - Description
-   * - ``beanstalkd_host``	
-     - ``'localhost'``	
-     - The ``hostname`` of the Beanstalkd server
-   * - ``beanstalkd_port``	
-     - ``'11300'``
-     - The port that the Beanstalkd server is listening on
-   * - ``beanstalkd_timeout``	
-     - ``'60'``
-     - The default Time To Run - TTR - for Beanstalkd jobs
+* ``--time-limit=X`` - stops the consumer after X seconds.
+* ``--limit=X`` - stops the consumer after it processes X messages.
+* ``--memory-limit=X`` - stops the consumer when it uses more than X memory, for example ``128M``.
 
-Processing
-**********
+For example, this command processes page hits and Email opens for up to 160 seconds.
 
-Activating the queuing mechanism queues up all Page hits and Email opens for later processing. You need to run some console commands on a regular basis to be able to process them.
+.. code-block:: shell
 
-To process the hits from a Page, use the following command:
+    php /path/to/mautic/bin/console messenger:consume hit --time-limit=160
 
-``php /path/to/mautic/bin/console mautic:queue:process --env=prod -i page_hit``
-
-To process the hits from an Email, use the following command:
-
-``php /path/to/mautic/bin/console mautic:queue:process --env=prod -i email_hit``
-
-When these commands run, they continue to run until you stop the program by using the keyboard combination ``Control + C``. If you want to run them to process only, say, 50 Page hits or Email hits, you can run the command like this instead:
-
-``php /path/to/mautic/bin/console mautic:queue:process --env=prod -i page_hit -m 50``
-
-or
-
-``php /path/to/mautic/bin/console mautic:queue:process --env=prod -i email_hit -m 50``
-
-Cron to push the jobs
-*********************
-
-You need to run the following cron to keep pushing the jobs:
-
-``php /path/to/mautic/bin/console mautic:email:send``
-
-See the documentation on :ref:`cron jobs<process email queue cron job>` for further information.
+See :ref:`Process Email queue cron job` for more information on scheduling the ``email`` consumer.

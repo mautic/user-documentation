@@ -25,7 +25,7 @@ General settings
 * **404 page** - Select the Landing Page that you want to use as the 404 Landing Page. If you don't want to use Mautic's default 404 error page, create a custom Landing Page and select that Landing Page here. If you don't select any page, Mautic uses the default error page.
 
 
-* **Path to the cache, log, and images directory** - These are the file system paths where Mautic saves the cache, logs, and images.
+* **Path to the cache directory**, **Path to the log directory**, and **Relative path to the images directory** - These are the file system paths where Mautic saves the cache, logs, and images.
 
 System defaults
 ===============
@@ -36,7 +36,7 @@ System defaults
 
 .. vale off
 
-* **Default item limit per page** - The number of Contacts, Campaigns, Emails, Assets, and other items which display on each page when you go to an item section. The default is ``10``.
+* **Default item limit per page** - The number of Contacts, Campaigns, Emails, Assets, and other items which display on each page when you go to an item section. The default is ``30``.
 
 * **Default timezone** - The User's default time zone, typically set to the time zone of the Company headquarters. Mautic allows the User to set their own time zones via their profile. The default is ``UTC``.
 
@@ -44,7 +44,7 @@ System defaults
 
 * **Default language** - The initial language assigned to Users. Individual Users may select their own settings. Mautic uses ``English - United States`` by default.
 
-* **Cached data timeout (minutes)** - Mautic caches data to speed up page loads. Update this setting to change how long Mautic caches the data for. Mautic uses ``10 minutes`` as the default.
+* **Cached data timeout** - Mautic caches data to speed up page loads. Update this setting to change how long Mautic caches the data for. Mautic uses ``10 minutes`` as the default.
 
 * **Date Range Filter Default** - Sets the default for how far back from the current date Mautic looks for data in Reports including Campaign and Email snapshots charts on the item page. This setting allows you to control the default for how far back from the current date Mautic looks for data. If you've changed the setting on a Report, Mautic uses what you've entered. Mautic's default value is ``1 Month``.
    
@@ -90,9 +90,9 @@ Miscellaneous settings
 
 * **IP lookup service authentication** - To use any IP lookup service which requires authentication, enter your credentials.
   
-* **List of IPs not to track Contacts with** - To turn off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn't recommend adding your office IP address. If you list your internal IP address, Mautic won't track clicks, page hits, etc., from that IP, **including when you are testing** which can cause difficulties.
+* **List of IPs to not track Contacts with (one per line)** - To turn off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn't recommend adding your office IP address. If you list your internal IP address, Mautic won't track clicks, page hits, etc., from that IP, **including when you are testing** which can cause difficulties.
 
-* **List of known Bots** - Mautic has the feature to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here - one per line.
+* **Additional custom bots (optional - advanced only)** - Mautic has the feature to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here - one per line.
 
   .. note::
 
@@ -102,15 +102,11 @@ Miscellaneous settings
 
      .. vale on
   
-* **URL Shortener** - If you use a URL shortening service like bit.ly for links in SMS messages, enter your access token here.
-
-.. note:: 
-
-    For bit.ly, use the following URL structure: ``https://api-ssl.bitly.com/v3/shorten?access_token=[ACCESS_TOKEN]&format=txt&longUrl``
+* **Shortener service** - Select the URL shortener Plugin to use, and choose whether to shorten links in **Email** and **SMS** messages. Install and configure a shortener Plugin first. See :doc:`/configuration/shortener`.
 
 * **Item max lock time** - When a User edits a Campaign, Email, Landing Page, etc., Mautic locks the item to prevent simultaneous edits by other Users. When the initial User saves and closes or cancels out, the item may remain locked for this period of time. The default is ``0 seconds``.
 
-* **Translate page titles** - To translate page titles in the Contact activity history from non-Latin characters to Latin - English - characters.
+* **Transliterate page titles** - To transliterate page titles in the Contact activity history from non-Latin characters to Latin - English - characters.
 
 
 Update settings
@@ -120,7 +116,7 @@ Update settings
   :width: 600
   :alt: Screenshot showing Update Settings Configuration in Mautic
 
-* **Set the minimum stability level required for updates** - This allows you to receive notifications for early access releases. Always read the release notes before updating to an early access release. Set the minimum stability level required for updates. 
+* **Update stability level** - This allows you to receive notifications for early access releases. Always read the release notes before updating to an early access release. Set the minimum stability level required for updates. 
 
 * **Update Mautic through Composer [beta]**  - Set to 'Yes' if you update Mautic through Composer. This is a prerequisite if you want to install and update Plugins through the Marketplace. This becomes the default installation and update method in Mautic 5.
 
@@ -131,7 +127,7 @@ Theme settings
   :width: 600
   :alt: Screenshot showing Theme Settings Configuration in Mautic
 
-* **Default Theme** - Applies a Theme to any Form which doesn't have a Theme already applied. If you don't have a Landing Page for your Preference Center, but have preference settings turned on in Email settings, Mautic creates a default Preference Center page using the Form styling from the Theme selected here.
+* **Default Landing Page and Form Theme** - Applies a Theme to any Form which doesn't have a Theme already applied. If you don't have a Landing Page for your Preference Center, but have preference settings turned on in Email settings, Mautic creates a default Preference Center page using the Form styling from the Theme selected here.
 
 API settings
 ************
@@ -161,7 +157,7 @@ Asset settings
 
 * **Path to the Asset directory** - Set the absolute path to the Assets upload folder. In order to prevent the public from accessing Assets, use a directory outside of the public web root.
 
-* **Maximum size Megabytes** - Set the maximum size of uploaded Assets in Megabytes.
+* **Maximum size (MB)** - Set the maximum size of uploaded Assets in Megabytes.
 
 * **Allowed file extensions** - Extensions of files separated by commas. You can only upload files with the specified file extensions.
 
@@ -474,7 +470,7 @@ Unsubscribe settings
 
 * **Disable unsubscribe link in header** - Select **Yes** to prevent Mautic from adding unsubscribe headers to Emails. When set to **No** - the default - Mautic automatically includes RFC 8058-compliant ``List-Unsubscribe`` and ``List-Unsubscribe-Post`` headers in Emails where you disable **Send to unsubscribed contacts**. Email clients that support this feature - such as GMail and Apple Mail - use these headers to display one-click unsubscribe capability.
 
-* **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. Don't edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
+* **Unsubscribed confirmation message** and **Resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, the respective message displays on the page after the action. Don't edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
 
 * **Show Contact preference settings** - Select **Yes** to direct the unsubscribe link to your configured Preference enter. If you haven't created a Preference Center, Mautic creates a default page based on the next 5 settings. The created page uses the default Theme for styling.
 
@@ -586,8 +582,8 @@ Export settings
 
 .. vale off
 
-* **Automatically export Contacts to CSV in the background** - If set to Yes, Mautic processes CSV exports of Contacts in the background and Mautic sends an Email with a link to download the file when it's processed.
-* **Notify admins about contact exports** - When set to **Yes**, the default, admins get an in-app notification whenever any User requests a Contact export, plus a separate completion Email - without the download link - once the export finishes. When set to **No**, admins receive neither. This setting doesn't affect what the requesting User gets. They always receive the completion Email with the download link. It also doesn't change the export's audit log. Since it applies to background Contact exports, it only takes effect when you turn on **Automatically export Contacts to CSV in the background**.
+* **Export Contacts in the background in CSV** - If set to Yes, Mautic processes CSV exports of Contacts in the background and Mautic sends an Email with a link to download the file when it's processed.
+* **Notify admins about contact exports** - When set to **Yes**, the default, admins get an in-app notification whenever any User requests a Contact export, plus a separate completion Email - without the download link - once the export finishes. When set to **No**, admins receive neither. This setting doesn't affect what the requesting User gets. They always receive the completion Email with the download link. It also doesn't change the export's audit log. Since it applies to background Contact exports, it only takes effect when you turn on **Export Contacts in the background in CSV**.
 
 .. vale on
 
@@ -634,7 +630,7 @@ When you enable queuing, Emails are no longer sent immediately - for example, wi
 Mautic doesn't use queues by default
 ====================================
 
-A fresh instance of Mautic has **the queuing feature turned off** (the queue DSN configuration is ``"sync://"``) as shown in the following screenshot.
+A fresh instance of Mautic has **the queuing feature turned off** - both queues use the ``sync://`` DSN - as shown in the following screenshot.
 
 .. image:: images/queue-disabled.png
   :width: 600
@@ -714,11 +710,17 @@ See :xref:`queue-amazon-sqs` for the complete list of configuration options.
 How to consume messages from the Queue
 ======================================
 
-To start consuming the messages from the Queue, you need to run the following Symfony command.
+To consume the messages in **Queue for email (SMS and push messages)**, run the following Symfony command.
 
-.. code-block::
+.. code-block:: shell
 
     php bin/console messenger:consume email
+
+If you configure **Queue for hits (page and email)**, also run the following command to process page hits and Email opens.
+
+.. code-block:: shell
+
+    php bin/console messenger:consume hit
 
 If you don't use Kubernetes in your environment, use a process manager like ``Supervisor`` or ``systemd`` to keep your worker/s running. More on this at :xref:`queue-consuming-messages`
 
@@ -911,7 +913,7 @@ Use a custom X.509 certificate and private key to secure communication between M
 Upload your:
 
 * **X.509 certificate**
-* **Private key file**
+* **Private key**
 
 Enter your **Private key encryption password**
 

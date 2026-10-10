@@ -101,9 +101,6 @@ These are the commands you may need to use in relation to your Mautic instance.
    * - ``mautic:campaigns:validate``
      - Validate if a Contact has been inactive for a decision and execute events if so.
      - 
-   * - ``mautic:citrix:sync``
-     - Synchronizes registrant information from Citrix products
-     - 
    * - ``mautic:cache:clear``
      - Clears Mautic cache, by using this command, you will erase the 10-minute Mautic cache, which contains things like segment counts and data for dashboard widgets.
      - 
@@ -147,12 +144,6 @@ These are the commands you may need to use in relation to your Mautic instance.
    * - ``mautic:integration:fetchleads``
      - Fetch Contacts from Integration.
      - ``mautic:integration:synccontacts``
-   * - ``mautic:integration:pipedrive:fetch``
-     - Pulls the data from Pipedrive and sends it to Mautic
-     - 
-   * - ``mautic:integration:pipedrive:push``
-     - 	Pushes the data from Mautic to Pipedrive
-     - 
    * - ``mautic:integration:pushleadactivity``
      - Push Contact activity to Integration. 
      - ``mautic:integration:pushactivity``
@@ -177,9 +168,6 @@ These are the commands you may need to use in relation to your Mautic instance.
    * - ``mautic:plugins:reload``
      - Install, reloads or updates Plugins.
      - ``mautic:plugins:install``, ``mautic:plugins:update``
-   * - ``mautic:queue:process``
-     - Process queues
-     - 
    * - ``mautic:reports:scheduler``
      - Processes scheduler for Report's export
      - 
