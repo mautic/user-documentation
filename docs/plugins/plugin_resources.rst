@@ -66,7 +66,7 @@ If the ``firstname`` value wasn't saved to the Integration:
 
 2. On the field's **Mapped Field** tab, confirm the field maps to the Contact field **First Name**.
 
-3. Double select the Integration field mappings.
+3. Double-check the Integration field mappings.
 
 .. vale off
 
