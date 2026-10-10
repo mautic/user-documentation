@@ -134,7 +134,7 @@ Adding individual Contacts
 
 2. Click the arrow in the top right, next to **Edit/Send Email/Close**.
 
-3. Select **Preference**.
+3. Select **Preferences**.
 
 .. image:: images/individual-contact-preference.png
  :width: 500
@@ -158,7 +158,7 @@ Using a Campaign action
 
 .. vale on
 
-Inside a :ref:`Campaign<campaigns overview>`, you can add or remove Contacts from Segments using the **Modify Contact's Segment** action. To add Contacts to a Segment, you must have already created the Segment and set it to **Public Segment = Yes**.
+Inside a :ref:`Campaign<campaigns overview>`, you can add or remove Contacts from Segments using the **Modify Contact's Segment** action. Create the Segment and set **Active** to **Yes** before you use this action to add Contacts to it. If your Role can't view Segments that other Users created, the action lists only your own Segments and Segments with **Visible to other users** set to **Yes**.
 
 1. In the Campaign builder, click the bottom connector.
 
@@ -375,21 +375,21 @@ Once you've selected a date field as your filter, such as the default **Date las
 
 * **Is equal to** - The value on the Contact record exactly matches the filter value.
 * **Is not equal to** - The value on the Contact record is any value that doesn't match the filter value.
-* **Greater than** - The value on the Contact record is at a later date in time than X date.
+* **More recent than** - The value on the Contact record is at a later date in time than X date.
 
-  For example, ``Greater than`` today means anytime from tomorrow until the end of time.
+  For example, ``More recent than`` today means anytime from tomorrow until the end of time.
 
-* **Greater than or equal** - The value on the Contact record is either at a later date in time than or including X date.
+* **Equal or more recent than** - The value on the Contact record is either at a later date in time than or including X date.
 
-  For example, ``Greater than or equal`` today means anytime from today until the end of time.
+  For example, ``Equal or more recent than`` today means anytime from today until the end of time.
 
-* **Less than** - The value on the Contact record is at an earlier date in time than X date.
+* **Older than** - The value on the Contact record is at an earlier date in time than X date.
 
-  For example, ``Less than today`` means anytime from the beginning of time until yesterday.
+  For example, ``Older than today`` means anytime from the beginning of time until yesterday.
 
-* **Less than or equal** - The value on the Contact record is at an earlier date in time than X date.
+* **Equal or older than** - The value on the Contact record is either at an earlier date in time than or including X date.
 
-  For example, ``Less than or equal today`` means anytime from the beginning of time until today.
+  For example, ``Equal or older than today`` means anytime from the beginning of time until today.
 
 * **Is empty** - No value exists in the field on the Contact record.
 * **Is not empty** - A value exists in the field on the Contact record.
