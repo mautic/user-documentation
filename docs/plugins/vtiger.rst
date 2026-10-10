@@ -53,24 +53,22 @@ If you want to use the Plugin, you have to activate it.
 
 .. vale off
 
-1. Set the *Active* switch to **Yes**.
+#. Set the **Active** switch to **Yes**.
 
-2. In the **Features** tab, Mautic selects the **Triggered action push contacts to integration** checkbox by default.
+#. In the **Features** tab, Mautic selects the **Triggered action push contacts to integration** checkbox by default.
+
+   .. image:: images/vtiger-mautic-features.png
+     :alt: Screenshot of Vtiger Mautic Integration
+     :width: 500
+     :align: center
+
+#. You can also configure whether you want to map Vtiger's Leads to Mautic's Contacts and Vtiger's Organizations to Mautic's Companies.
+
+#. Configure the :ref:`field mapping<field mapping>`.
+
+#. Click **Save & Close**.
 
 .. vale on
-
-.. image:: images/vtiger-mautic-features.png
-  :alt: Screenshot of Vtiger Mautic Integration
-  :width: 500
-  :align: center
-
-|
-
-3. You can also configure whether you want to map Vtiger's Leads to Mautic's Contacts and/or Vtiger's Organizations to Mautic's Companies.
-
-4. Configure the :ref:`field mapping<field mapping>`.
-
-5. Click **Save & Close**.
 
 .. vale off
 
