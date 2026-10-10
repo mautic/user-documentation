@@ -368,17 +368,21 @@ Change Contact Segments
 
 .. vale on
 
-.. image:: ../segments/images/individual-contact-preference.png
+.. image:: images/contact-actions-preferences.png
+    :width: 360
     :align: center
-    :alt: Contact detail actions drop-down menu with the Preferences option highlighted.
+    :alt: Screenshot of the open Options drop-down on the Contact detail, listing Campaigns, Export, Merge, Preferences, and Delete.
 
 |
 
-1. Click the **drop down box arrow** in the top right hand corner of the Contact detail.
+#. Click the **drop down box arrow** in the top right hand corner of the Contact detail.
+#. Select **Preferences**, then select the **Segments** tab.
+#. Add or remove Segments, then select **Save**.
 
-2. Select **Preferences**, then select the **Segments** tab.
-
-3. Add or remove Segments, then select **Save**.
+.. image:: images/contact-preferences-segments.png
+    :width: 620
+    :align: center
+    :alt: Screenshot of the Contact Preference Center with the Segments tab open, showing the My segments field and the Save button.
 
 .. vale off
 

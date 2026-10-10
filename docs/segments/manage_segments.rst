@@ -158,7 +158,13 @@ Using a Campaign action
 
 .. vale on
 
-Inside a :ref:`Campaign<campaigns overview>`, you can add or remove Contacts from Segments using the **Modify Contact's Segment** action. Create the Segment and set **Active** to **Yes** before you use this action to add Contacts to it. If your Role can't view Segments that other Users created, the action lists only your own Segments and Segments with **Visible to other users** set to **Yes**.
+Inside a :ref:`Campaign<Campaigns overview>`, you can add or remove Contacts from Segments using the **Modify Contact's Segment** action. Create the Segment and set **Active** to **Yes** before you use this action to add Contacts to it.
+
+.. vale off
+
+If your Role can't view Segments that other Users created, the action lists only your own Segments and Segments with **Visible to other users** set to **Yes**.
+
+.. vale on
 
 1. In the Campaign builder, click the bottom connector.
 
