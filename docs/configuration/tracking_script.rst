@@ -62,7 +62,7 @@ The **Consent-managed** tab gives you two snippets that you use together, and th
 
    .. vale off
 
-   Separately embedded Focus Items track views and interactions independently of Mautic website tracking. Loading only the essential script doesn't turn off Focus Item tracking, so you still need to manage consent separately for those Focus Items. See :doc:`/channels/focus_items` for how to embed a Focus Item on your website.
+   By default, separately embedded Focus Items track views and interactions independently of Mautic website tracking, so you manage their consent separately. Loading only the essential script doesn't turn off Focus Item tracking. If you turn on the 'Use Mautic consent for Focus tracking' setting, Mautic instead bridges website-tracking consent to Focus tracking. See :doc:`/channels/focus_items` for how to embed a Focus Item and manage its consent.
 
    .. vale on
 
