@@ -16,12 +16,12 @@ reviews:
           example: menu names, button labels, field names, settings,
           defaults, options, permissions and behavior. Flag
           anything that does not match the code.
-          - The PR's target branch is the Mautic version this page documents,
-          for example 8.0 or 7.3. Compare with the code branch for the same
-          version. If the code repo has a branch with the same name, use it.
-          If it does not, use the code branch for that major version, such
-          as 7.x or 8.x. Check that the content and behavior are correct for
-          that version.
+        - The PR's base branch (the branch it targets) is the Mautic version
+          the page documents. Compare the page with the code repos on the
+          branch with the same name. If there is none, use the code branch
+          for that major version. For example, for docs branch 7.3, use code
+          branch 7.3, or 7.x if 7.3 does not exist. This is only an example.
+          The same rule applies to every version.
         - If the code you compare with looks like a different version, say so
           instead of calling it an error.
         - Check that the steps in how-to instructions are complete, in the
