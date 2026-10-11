@@ -146,6 +146,8 @@ Use the command ``path/to/php bin/console mautic:install --help`` for the list o
         --admin_email=ADMIN_EMAIL            Admin email.
         --admin_password=ADMIN_PASSWORD      Admin user.
 
+The ``step`` help text lists five steps, but the command has four: ``3`` runs the final step, and any other value starts at step ``0``.
+
 Use the syntax below within a ``local.php`` file:
 
 .. code-block:: php
@@ -163,8 +165,10 @@ Use the syntax below within a ``local.php`` file:
     'db_backup_tables' => false,
     'db_backup_prefix' => 'bak_',
     'admin_email' => 'admin@example.com',
-    'admin_password' => 'Maut1cR0cks!',
+    'admin_password' => '{admin password}',
   );
+
+Replace ``{admin password}`` with a unique, complex password, both in this file and in the command in the next section.
 
 Installing with a local PHP file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -179,7 +183,7 @@ If desired, you can also add parameters in the install command:
 
   path/to/php bin/console mautic:install https://m.example.com \
     --db_driver="pdo_mysql" --db_host="db" --db_port="3306" --db_name="db" --db_user="db" --db_password="db" \
-    --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="Maut1cR0cks!"
+    --db_backup_tables="false" --admin_email="admin@mautic.local" --admin_password="{admin password}"
 
 As the installation process begins, it flags up warnings and aborts if there are any critical errors.
 
