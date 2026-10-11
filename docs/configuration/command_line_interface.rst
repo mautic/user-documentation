@@ -28,9 +28,11 @@ Options
      - Description
    * - -h, \--help
      - Display this help message
-   * - -q, \--quiet
+   * - \--silent
      - Do not output any message
-   * - | V, \--version
+   * - -q, \--quiet
+     - Only errors are displayed. All other output is suppressed
+   * - | -V, \--version
        |  \--ansi
        |  \--no-ansi
      - | Display this app version
@@ -38,10 +40,6 @@ Options
        | Disable ANSI output
    * - -n, \--no-interaction
      - 	Do not ask any interactive question
-   * - | -s, \--shell
-       |  \--process-isolation
-     - | Launch the shell.
-       | Launch commands from shell as a separate process.
    * - | -e, \--env=ENV
        |  \--no-debug
      - | The Environment name. [default: "prod"]

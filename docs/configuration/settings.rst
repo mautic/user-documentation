@@ -94,7 +94,7 @@ Miscellaneous settings
 
 * **List of IPs to not track Contacts with (one per line)** - To turn off tracking for particular IP addresses, enter the addresses, one per line. Mautic doesn't recommend adding your office IP address. If you list your internal IP address, Mautic doesn't track any activity from that IP address, such as clicks and website visits, **including when you're testing**, which can cause difficulties.
 
-* **Additional custom bots (optional - advanced only)** - Mautic has the feature to identify and turn-off tracking for several known bots. To track activity from those bots, remove them from this list. To turn off tracking for other bots, add them here - one per line.
+* **Additional custom bots (optional - advanced only)** - Mautic doesn't track activity from a visitor whose user agent contains an entry from this list. The list starts with several common bots. To stop tracking another bot, add part of its user agent here - one per line. Removing a bot from this list doesn't turn on tracking for it when Mautic also detects it automatically, as described in the following note.
 
   .. note::
 
