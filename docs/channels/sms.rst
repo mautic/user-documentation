@@ -127,7 +127,7 @@ Mautic supports sending MMS, which allows you to attach images to your Text Mess
 
 .. note::
 
-   MMS is currently available for Contacts with phone numbers in the United States, Canada, and Australia only. When sending to Contacts outside these regions, Mautic sends the image as a URL link instead.
+   Twilio delivers MMS only to phone numbers in the United States, Canada, and Australia. For Contacts in other countries, the result depends on your Twilio settings. See :doc:`/plugins/twilio` for details.
 
 .. vale off
 
