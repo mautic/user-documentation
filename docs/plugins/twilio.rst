@@ -94,7 +94,7 @@ To send MMS messages with images attached, enable MMS in your Twilio Messaging S
 
 .. note::
 
-   MMS through Twilio is available for phone numbers in the United States, Canada, and Australia only. When sending to Contacts outside these regions, Mautic sends the image as a URL link instead.
+   Twilio delivers MMS only to phone numbers in the United States, Canada, and Australia. Mautic sends the same message to every Contact, so the result for other countries depends on your Twilio settings. If you turn on **MMS Converter** in your Messaging Service, Twilio sends an SMS with a link to the image instead. Otherwise, Twilio doesn't deliver the message.
 
 For more information on creating MMS messages in Mautic, see :ref:`sending MMS in SMS section`.
 
