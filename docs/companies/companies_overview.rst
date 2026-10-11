@@ -31,15 +31,20 @@ Removing Contacts from a Company
 
 When you view a Company, the assigned Contacts table lists the Contacts in that Company. You can remove one or more of them from the Company. This removes only the Company association. Mautic keeps the Contacts and doesn't delete them.
 
-#. In the assigned Contacts table, select one or more Contacts.
-#. Open the **Options** menu and choose **Remove from Company**.
-#. In the confirmation dialog, select **Remove from Company** to confirm. Select **Cancel** to keep the Contacts in the Company.
+#. In the assigned Contacts table, select the checkboxes next to the Contacts you want to remove.
 
-.. vale off
+   .. image:: images/companies_remove_contacts_select.png
+      :alt: Two selected Contacts in the assigned Contacts table of a Company, with their checkboxes and the three-dot Options icon highlighted.
 
-The confirmation dialog reads: 'Remove the selected contacts from this company? The contacts will remain in Mautic. If this is a contact's primary company, another company may become primary or the contact will have no company.'
+#. Click the three-dot **Options** icon at the top of the table, then select **Remove from company**.
 
-.. vale on
+   .. image:: images/companies_remove_contacts_menu.png
+      :alt: The Options menu open on the assigned Contacts table, with Remove from company highlighted.
+
+#. In the confirmation dialog, click **Remove from company** to confirm, or click **Cancel** to keep the Contacts in the Company.
+
+   .. image:: images/companies_remove_contacts_confirm.png
+      :alt: The confirmation dialog for removing Contacts from a Company, with the Cancel and Remove from company buttons highlighted.
 
 After you confirm, Mautic removes only the selected Contacts from this Company and shows a notice with the number of Contacts it removed.
 
