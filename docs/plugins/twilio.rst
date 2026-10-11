@@ -16,15 +16,19 @@ In order to configure the text messages correctly, follow these steps:
 
 #. Create an account at :xref:`Twilio`.
 
-#. In Mautic, go to *Settings* (cog icon) > *Plugins*.
+#. In Mautic, go to **Settings** - cog icon > **Plugins**.
 
-#. Open *Twilio* Plugin and activate it.
+#. Open **Twilio** Plugin and activate it.
 
-#. Log into your Twilio account and go to *Dashboard*.
+#. Log into your Twilio account and go to **Dashboard**.
+
+   .. vale Google.Acronyms = NO
 
    .. image:: images/twilio-sid-authtoken.png
       :width: 400
       :alt: Screenshot of the SID and Auth Token fields
+
+   .. vale Google.Acronyms = YES
 
    .. vale Google.Parens = NO
 
@@ -34,25 +38,31 @@ In order to configure the text messages correctly, follow these steps:
 
 #. Unlock and copy the **Auth Token** and paste it to **Auth Token** field in the Twilio Plugin configuration.
 
-#. Go to *Phone Numbers* > Active numbers in Twilio, add a phone number if you haven't already commissioned one.
+#. Go to **Phone Numbers** > **Manage** > **Active numbers** in Twilio, add a phone number if you haven't already commissioned one.
 
-#. Go to *Messaging* > *Services* in Twilio, and create a new Messaging Service. Select the appropriate settings from the dropdown in the first step as relevant to your usage of SMS messages with Mautic, then click 'Create Messaging Service' at the bottom right.
+#. Go to **Messaging** > **Services** in Twilio, and create a new Messaging Service. Select the appropriate settings from the dropdown in the first step as relevant to your usage of SMS messages with Mautic, then click **Create Messaging Service** at the bottom right.
 
    .. image:: images/twilio-messaging-services.png
       :width: 400
       :alt: Screenshot of the Messaging Services interface
 
-#. Click the button to add your phone number as a Sender for this Messaging Service, then select the box and click 'Set up Integration' at the bottom right to move on to the next step.
+#. Click the button to add your phone number as a 'Sender for this Messaging Service', then select the box and click **Set up Integration** at the bottom right to move on to the next step.
 
-#. Select 'Send a Webhook' under the Integration settings.
+#. Select **Send a Webhook** under the Integration settings.
 
-#. Configure the Request URL and Fallback URL to use the callback URL of ``https://example.com/sms/twilio/callback`` where ``example.com`` is your Mautic instance domain. Also enter this in the 'Delivery Status Callback' field.
+#. Configure the **Request URL** and **Fallback URL** to use the callback URL of ``https://example.com/sms/twilio/callback`` where ``example.com`` is your Mautic instance domain. Also enter this in the **Delivery Status Callback** field.
 
    .. image:: images/twilio-webhook-callback.png
       :width: 400
       :alt: Screenshot of the Messaging Services interface
 
-#. Click the 'Add Compliance Info' button to proceed to the next step, where you can register to send Application to Person (A2P) messages using a 10 digit long code phone number. Otherwise, click the button in the bottom right to complete setup. Click on 'View my new Messaging Service' to see the details of the service you just created. Once created you can view the SID from the Messaging > Services screen.
+   .. vale Google.Parens = NO
+   .. vale Google.FirstPerson = NO
+
+#. Click the **Add Compliance Info** button to proceed to the next step, where you can register to send Application to Person (A2P) messages using a 10 digit long code phone number. Otherwise, click the button in the bottom right to complete setup. Click on **View my new Messaging Service** to see the details of the service you just created. Once created you can view the SID from the **Messaging** > **Services** screen.
+
+   .. vale Google.Parens = YES
+   .. vale Google.FirstPerson = YES
 
    .. image:: images/twilio-messaging-service-id.png
       :width: 400
@@ -114,13 +124,13 @@ Alphanumeric Sender ID is automatically supported on all new :xref:`upgraded (pa
 
 You can verify if your account has Alphanumeric Sender enabled by following these steps:
 
-#. Login to your account at :xref:`Twilio`.
+#. Log in to your account at :xref:`Twilio`.
 
-#. From the left side navigation bar, click Messaging > Overview.
+#. From the left side navigation bar, click **Messaging** > **Overview**.
 
-#. Click Settings.
+#. Click **Settings**.
 
-#. From the General Messaging Settings page, Verify the 'Alphanumeric Sender ID' setting.
+#. From the General Messaging Settings screen, verify the **Alphanumeric Sender ID** setting.
 
  .. image:: images/twilio-alpha-numeric-number-settings.png
     :width: 400

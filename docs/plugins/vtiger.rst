@@ -25,6 +25,9 @@ Authenticate the Vtiger Plugin
 
 To authenticate the Mautic Plugin to be able to communicate with Vtiger CRM you'll need these credentials:
 
+.. vale Google.WordList = NO
+.. vale Google.FirstPerson = NO
+
 * Vtiger Cloud URL - the base (root) URL starting with ``http://`` or ``https://`` where your Vtiger instance runs. For example, ``https://your_Vtiger.od2.Vtiger.com.``
 
 * Vtiger Open Source URL If you are using Open Source Vtiger you must use the base (root) URL starting with ``http://`` or ``https:// and followed by /webservice.php``. For example ``https://your_Vtiger.od2.Vtiger.com/webservice.php``.
@@ -32,6 +35,9 @@ To authenticate the Mautic Plugin to be able to communicate with Vtiger CRM you'
 * Vtiger username - The username, email address usually, which you use to log in to your Vtiger.
 
 * Vtiger access key - The access key activated in your Vtiger profile. To get it, go to Vtiger's **My Preferences**. The Access Key hash is at the bottom of the page.
+
+.. vale Google.WordList = YES
+.. vale Google.FirstPerson = YES
 
 .. image:: images/vtiger-mautic.png
   :alt: Screenshot of Vtiger Mautic Integration

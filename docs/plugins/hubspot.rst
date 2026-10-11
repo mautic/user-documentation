@@ -67,13 +67,13 @@ Configure the HubSpot CRM Plugin
 
 9. Click **Save** to save the Plugin configuration.
 
-   * If you want to use the Plugin, set the *Active* switch to **Yes**. Only do this when you have fully configured the Plugin settings.
+   * If you want to use the Plugin, set the **Active** switch to **Yes**. Only do this when you have fully configured the Plugin settings.
 
-10. Set up the :ref:`cron job<configure Mautic integration cron jobs>` if you haven't already configured it.
+10. Set up the :ref:`Cron job<configure Mautic integration Cron jobs>` if you haven't already configured it.
 
 .. tip::
 
-    Script to configure in your cron job: ``php $PATH_TO_MAUTIC_DIRECTORY/bin/console mautic:integration:fetchleads --integration=Hubspot --fetch-all``
+    Script to configure in your Cron job: ``php $PATH_TO_MAUTIC_DIRECTORY/bin/console mautic:integration:fetchleads --integration=Hubspot --fetch-all``
 
 .. vale off
 

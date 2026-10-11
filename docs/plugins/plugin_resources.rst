@@ -22,7 +22,7 @@ If you are on a freshly installed Mautic instance, there is a chance that you do
   :width: 800
   :alt: Screenshot of install Plugins
 
-If you're trying to install a new Plugin that didn't come with the original Mautic installation files and it doesn't appear after you click Install/Upgrade Plugins, clear your Mautic cache - using the command at the :doc:`command line</configuration/command_line_interface>` - and try the Install/Upgrade Plugins button again.
+If you're trying to install a new Plugin that didn't come with the original Mautic installation files and it doesn't appear after you click **Install/Upgrade Plugins**, clear your Mautic cache - using the command at the :doc:`command line</configuration/command_line_interface>` - and try the **Install/Upgrade Plugins** button again.
 
 .. vale off
 
@@ -57,8 +57,12 @@ Use any of those actions to test the Plugin and see if the Contact appears in th
 
 5. Ensure that the Integration created the new Contact.
 
+.. vale off
+
 Troubleshooting Plugins
 -----------------------
+
+.. vale on
 
 If the ``firstname`` value wasn't saved to the Integration:
 

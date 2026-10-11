@@ -112,13 +112,13 @@ The detail view shows these actions, depending on the package and your permissio
 
 * **Back to Marketplace** takes you to the list view.
 
-* **Install** installs the package. It shows when the package isn't installed and you have permission to install packages.
+* **Install** installs the package. Mautic shows this action when the package isn't installed and you have permission to install packages.
 
-* **Remove** removes the installed package. It shows when you have permission to remove packages.
+* **Remove** removes the installed package. Mautic shows this action when you have permission to remove packages.
 
-* **Documentation** opens the package's documentation. It shows only if the package provides a documentation link.
+* **Documentation** opens the package's documentation. Mautic shows this action only if the package provides a documentation link.
 
-* **Issue tracker** opens a new window with the issue tracker for the Plugin. It shows only if the Plugin has this information available. Use this option to search for issues with the Plugin and to open new issues for the maintainers.
+* **Issue tracker** opens a new window with the issue tracker for the Plugin. Mautic shows this action only if the Plugin has this information available. Use this option to search for issues with the Plugin and to open new issues for the maintainers.
 
 Ratings and reviews
 *******************
