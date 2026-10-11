@@ -12,7 +12,7 @@ General settings
 
 .. image:: images/general-settings.png
   :width: 600
-  :alt: Screenshot showing General Settings Configuration in Mautic
+  :alt: General Settings Configuration in Mautic
 
 .. _site-url:
 
@@ -32,7 +32,7 @@ System defaults
 
 .. image:: images/system-default-settings.png
   :width: 600
-  :alt: Screenshot showing System defaults Settings Configuration in Mautic
+  :alt: System defaults Settings Configuration in Mautic
 
 .. vale off
 
@@ -59,7 +59,7 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 .. image:: images/cors-settings.png
   :width: 600
-  :alt: Screenshot showing CORS Settings Configuration in Mautic
+  :alt: CORS Settings Configuration in Mautic
 
 * **Restrict Domains** - When set to No, any website can pass information to Mautic. Selecting ``Yes`` to limit communication with your Mautic instance to websites listed in Valid Domains is **strongly recommended**.
 
@@ -84,7 +84,7 @@ Miscellaneous settings
 
 .. image:: images/miscellaneous-settings.png
   :width: 600
-  :alt: Screenshot showing Miscellaneous Settings Configuration in Mautic
+  :alt: Miscellaneous Settings Configuration in Mautic
 
 * **IP lookup service** - By default, Mautic uses :xref:`MaxMind's` database to identify the city of a website visitor, based on the location of the Internet Service Provider - ISP - for their IP address.
 
@@ -120,7 +120,7 @@ Update settings
 
 .. image:: images/update-settings.png
   :width: 600
-  :alt: Screenshot showing Update Settings Configuration in Mautic
+  :alt: Update Settings Configuration in Mautic
 
 * **Update stability level** - This allows you to receive notifications for early access releases. Always read the release notes before updating to an early access release. Set the minimum stability level required for updates. 
 
@@ -131,7 +131,7 @@ Theme settings
 
 .. image:: images/theme-settings.png
   :width: 600
-  :alt: Screenshot showing Theme Settings Configuration in Mautic
+  :alt: Theme Settings Configuration in Mautic
 
 * **Default Landing Page and Form Theme** - Applies a Theme to any Form which doesn't have a Theme already applied. If you don't have a Landing Page for your Preference Center, but have preference settings turned on in Email settings, Mautic creates a default Preference Center using the Form styling from the Theme selected here.
 
@@ -140,7 +140,7 @@ API settings
 
 .. image:: images/api-settings.png
   :width: 600
-  :alt: Screenshot showing API Settings Configuration in Mautic
+  :alt: API Settings Configuration in Mautic
 
 Complete API documentation is available on the :xref:`Mautic REST API` section in the Developer Documentation.
 
@@ -159,7 +159,7 @@ Asset settings
 
 .. image:: images/assets-settings.png
   :width: 600
-  :alt: Screenshot showing Assets Settings Configuration in Mautic
+  :alt: Assets Settings Configuration in Mautic
 
 * **Path to the Asset directory** - Set the absolute path to the Assets upload folder. In order to prevent the public from accessing Assets, use a directory outside of the public web root.
 
@@ -176,7 +176,7 @@ Campaign settings
 
 .. image:: images/campaign-settings.png
   :width: 600
-  :alt: Screenshot showing Campaign Settings Configuration in Mautic
+  :alt: Campaign Settings Configuration in Mautic
 
 * **Wait time before retrying a failed action** - If for any reason a Campaign action doesn't execute, this is the length of time Mautic waits before trying again.
 
@@ -199,7 +199,7 @@ Optimal for Contact event scheduler
 
 .. image:: images/optimal-event-scheduler-settings.png
   :width: 600
-  :alt: Screenshot showing Optimal for Contact event scheduler settings configuration in Mautic
+  :alt: Optimal for Contact event scheduler settings configuration in Mautic
 
 The optimal for Contact event scheduler settings allow you to configure the default timing and caching options used in the optimized event scheduler for Campaigns.
 
@@ -370,7 +370,7 @@ Mail send settings
 
 .. image:: images/mail-send-settings.png
   :width: 600
-  :alt: Screenshot showing Mail Send Settings Configuration in Mautic
+  :alt: Mail Send Settings Configuration in Mautic
 
 * **Name to send mail as** - The default name Emails come from. This is typically something like ``{YourCompany Marketing Team}`` or ``{YourCompany}``. You can also use Contact field tokens such as ``{contactfield=companyname|Default Name}`` to personalize the sender name per Contact.
 
@@ -409,7 +409,7 @@ Default frequency rule
 
 .. image:: images/default-frequency-rule.png
    :width: 600
-   :alt: Screenshot showing Default Frequency Rule Configuration in Mautic
+   :alt: Default Frequency Rule Configuration in Mautic
 
 .. note::
 
@@ -424,7 +424,7 @@ Monitored inbox settings
 
 .. image:: images/monitored-inbox-settings.png
   :width: 600
-  :alt: Screenshot showing Monitored Settings Configuration in Mautic
+  :alt: Monitored Settings Configuration in Mautic
 
 * **Default Mailbox** - If your messages are going to bounce, this inbox is where you receive those bounce notifications.
 
@@ -439,7 +439,7 @@ Message settings
 
 .. image:: images/message-settings.png
   :width: 600
-  :alt: Screenshot showing Message Settings Configuration in Mautic
+  :alt: Message Settings Configuration in Mautic
 
 * **Text for the** ``{webview_text``} **token** - The message indicating the reader can view the Email in their browser. The default is; ``Having trouble reading this Email? Click here``.
   
@@ -470,7 +470,7 @@ Unsubscribe settings
 
 .. image:: images/unsubscribe-settings.png
   :width: 600
-  :alt: Screenshot showing Unsubscribe Settings Configuration in Mautic
+  :alt: Unsubscribe Settings Configuration in Mautic
 
 .. vale off
 
@@ -528,7 +528,7 @@ Form settings
 
 .. image:: images/form-settings.png
   :width: 600
-  :alt: Screenshot showing Form Settings Configuration in Mautic
+  :alt: Form Settings Configuration in Mautic
 
 .. vale off
 
@@ -559,7 +559,7 @@ Contact merge settings
 
 .. image:: images/contact-merge-settings.png
   :width: 600
-  :alt: Screenshot showing Contact Merge Settings Configuration in Mautic
+  :alt: Contact Merge Settings Configuration in Mautic
 
 * **Merge by unique fields with operator** - You can determine which operator to use when merging fields if there is more than one unique identifier.
 
@@ -568,7 +568,7 @@ Contact list settings
 
 .. image:: images/contact-list-settings.png
   :width: 600
-  :alt: Screenshot showing Contact List Settings Configuration in Mautic
+  :alt: Contact List Settings Configuration in Mautic
 
 * **Columns** - Select from the left which fields appear on the Contact lists (when you go to Contacts in the Mautic and view the list).
 
@@ -579,7 +579,7 @@ Import settings
 
 .. image:: images/import-settings.png
   :width: 600
-  :alt: Screenshot showing Import Settings Configuration in Mautic
+  :alt: Import Settings Configuration in Mautic
 
 * **Automatically import in the background if the CSV has more rows than defined** - If there are more than the specified number of rows in an import file, the CSV automatically sets to import in the background which requires a :ref:`Cron job<import Contacts Cron job>` to trigger. Set to 0 if you want to always import files in the background recommended for performance optimization.
 
@@ -588,7 +588,7 @@ Export settings
 
 .. image:: images/export-settings.png
   :width: 600
-  :alt: Screenshot showing Export Settings Configuration in Mautic
+  :alt: Export Settings Configuration in Mautic
 
 .. vale off
 
@@ -602,7 +602,7 @@ Segment settings
 
 .. image:: images/segment-settings.png
   :width: 600
-  :alt: Screenshot showing Segment Settings Configuration in Mautic
+  :alt: Segment Settings Configuration in Mautic
 
 * **Show warning if Segment hasn't been rebuilt for X hours** - Every time a :ref:`Cron jobs<Segment Cron jobs>` runs, Segments are rebuilt. If there is an error that prevents a Segment from rebuilding, Mautic displays a warning message. This field allows you to configure the allowable length of time between rebuilds, after which the warning message appears.
 
@@ -614,7 +614,7 @@ Company merge settings
 
 .. image:: images/company-merge-settings.png
   :width: 600
-  :alt: Screenshot showing Company Merge Settings Configuration in Mautic
+  :alt: Company Merge Settings Configuration in Mautic
 
 * **Merge by unique fields with operator** - You can determine which operator to use when merging fields if there is more than one unique identifier.
 
@@ -783,11 +783,11 @@ Notification settings
 
 .. image:: images/campaign-notification-settings.png
   :width: 600
-  :alt: Screenshot showing Campaign Notification Settings Configuration in Mautic
+  :alt: Campaign Notification Settings Configuration in Mautic
 
 .. image:: images/webhook-notification-settings.png
   :width: 600
-  :alt: Screenshot showing Webhook Notification Settings Configuration in Mautic
+  :alt: Webhook Notification Settings Configuration in Mautic
 
 If a Campaign or Webhook is automatically deactivated because of a high volume of errors, Mautic sends a notification alerting Users.
 
@@ -802,7 +802,7 @@ Landing Page settings
 
 .. image:: images/landing-page-settings.png
   :width: 600
-  :alt: Screenshot showing Landing Page Settings Configuration in Mautic
+  :alt: Landing Page Settings Configuration in Mautic
 
 * **Show Category in Page URL?** - If you use Categories, the Landing Page's associated Category displays in the URL if you select Yes.
 
@@ -816,7 +816,7 @@ Mautic tracking settings
 
 .. image:: images/tracking-settings.png
   :width: 600
-  :alt: Screenshot showing Tracking Settings Configuration in Mautic
+  :alt: Tracking Settings Configuration in Mautic
 
 * **Tracking code** - Insert this code on any page you would like to have tracked in Mautic before the ending ``</body>`` tag.
 
@@ -863,7 +863,7 @@ Facebook pixel
 
 .. image:: images/facebook-pixel-settings.png
   :width: 600
-  :alt: Screenshot showing Facebook Pixel Settings Configuration in Mautic
+  :alt: Facebook Pixel Settings Configuration in Mautic
 
 * **Facebook Pixel ID** - Enter your Facebook Pixel ID and select the options you'd like to use the pixel for.
 
@@ -877,7 +877,7 @@ Google analytics
 
 .. image:: images/google-analytics-settings.png
   :width: 600
-  :alt: Screenshot showing Google Analytics Settings Configuration in Mautic
+  :alt: Google Analytics Settings Configuration in Mautic
 
 * **Google Analytics ID** - Enter your Google Analytics ID and select the options you'd like to use the pixel for.
 
@@ -892,7 +892,7 @@ Report settings
 
 .. image:: images/report-settings.png
   :width: 600
-  :alt: Screenshot showing Report Settings Configuration in Mautic
+  :alt: Report Settings Configuration in Mautic
 
 * **Always quote data in CSV export** - Select Yes to wrap each Mautic field in double quotation marks when exported to a CSV file. For example: ``"First Name",”Last Name”,””, "some text"``.
 
@@ -901,7 +901,7 @@ Text message settings
 
 .. image:: images/text-message-settings.png
   :width: 600
-  :alt: Screenshot showing Text Message Settings Configuration in Mautic
+  :alt: Text Message Settings Configuration in Mautic
 
 * **Select default transport to use** - If you have configured a delivery service for SMS messages, select the service here to send messages. You must configure a delivery service before selecting it here.
 
@@ -913,7 +913,7 @@ SAML/SSO settings
 
 .. image:: images/SMAL-settings.png
   :width: 600
-  :alt: Screenshot showing SAML/SSO Settings Configuration in Mautic
+  :alt: SAML/SSO Settings Configuration in Mautic
 
 * **Identity provider metadata file** - Upload the metadata XML file from your Identity Provider (IDP) here.
 
@@ -940,7 +940,7 @@ Webhook settings
 
 .. image:: images/webhook-settings.png
   :width: 600
-  :alt: Screenshot showing Webhook Settings Configuration in Mautic
+  :alt: Webhook Settings Configuration in Mautic
 
 * **Queue Mode** -  Select how to process Webhook events. The process immediately executes the Webhook event as soon as it arrives. The queue mode improves performance by only adding the event to the queue and requires processing by a :ref:`Cron command<Webhooks Cron job>`.
 
@@ -951,7 +951,7 @@ Social settings
 
 .. image:: images/social-settings.png
   :width: 600
-  :alt: Screenshot showing Social Settings Configuration in Mautic
+  :alt: Social Settings Configuration in Mautic
 
 * **Twitter Handle Field** - This field stores the Twitter username for Users added to Mautic through Social Monitoring.
 

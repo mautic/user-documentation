@@ -30,20 +30,20 @@ Configure a queue when you want Mautic to process its messages in the background
 
    .. image:: images/queue-admin-menu-configuration.png
      :width: 600
-     :alt: Screenshot showing the Admin menu open with the cog icon and Configuration highlighted
+     :alt: Admin menu opened from the cog icon, with Configuration highlighted
 
 #. Select the **Queue Settings** tab.
 #. For each queue you want to use, enter the **Scheme** of your queue transport and its connection details.
 
    .. image:: images/queue-settings.png
      :width: 600
-     :alt: Screenshot showing the Queue Settings tab with both queue sections and their Scheme fields highlighted
+     :alt: Queue Settings tab with the Scheme fields of both queues highlighted
 
-#. Select **Save**.
+#. Click **Save** at the top right corner.
 
    .. image:: images/queue-settings-save.png
      :width: 600
-     :alt: Screenshot showing the Save button highlighted at the top of the Configuration screen
+     :alt: Save button highlighted at the top right of the Configuration screen
 
 For the available transports and the connection details each one needs, see :ref:`queue transports<How to enable the queuing>`.
 
