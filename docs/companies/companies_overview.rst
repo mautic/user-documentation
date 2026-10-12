@@ -26,13 +26,13 @@ Company duplicates
 *******************
 The Company name field is a unique identifier by default. You can choose any other Company field as unique identifier in the **Custom Fields** section.
 
-In *Configuration > Company Settings* you can choose the operator used when merging Companies with multiple identifiers - either **AND** or **OR**.
+In **Configuration** > **Company Settings**, use **Merge by unique fields with operator** to choose how Mautic matches Companies that have more than one unique identifier. Select **If any of the unique fields match**, the default, or **If all of the unique fields match**.
 
 .. image:: images/company-duplicates-configuration-operator.png
   :width: 600
-  :alt: Setup operator for find duplications algorithm
+  :alt: Screenshot of the Company Merge Settings in Company Settings, with the Merge by unique fields with operator drop-down set to If any of the unique fields match.
 
-These settings allow  Mautic to find and merge duplicate Companies during the import, using the Integrations Framework and in other parts of Mautic.
+Mautic uses this setting to find and merge duplicate Companies during the import, using the Integrations Framework and in other parts of Mautic.
 
 Batch changes
 *************

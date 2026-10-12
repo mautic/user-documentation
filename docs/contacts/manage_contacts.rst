@@ -127,7 +127,7 @@ So, Mautic takes care of duplicate Contacts created by the event tracking. You c
 
 .. image:: images/contact-duplicates-operator-configuration.png
     :align: center
-    :alt: Screenshot of Contact duplicates
+    :alt: Screenshot of the Contact Merge Settings in Contact Settings, with the Merge by unique fields with operator drop-down set to If any of the unique fields match.
 
 |
 
