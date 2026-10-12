@@ -286,7 +286,7 @@ The basic command to use the Recommended Project is:
 
 .. code-block:: shell
 
-  composer create-project mautic/recommended-project:^5 some-dir --no-interaction
+  composer create-project mautic/recommended-project:^8 some-dir --no-interaction
 
 With Composer you can add new dependencies to install along with Mautic:
 
@@ -414,7 +414,7 @@ New installations
 
 .. code-block:: bash
   
-  composer create-project mautic/recommended-project:^5 some-dir --no-interaction --no-install
+  composer create-project mautic/recommended-project:^8 some-dir --no-interaction --no-install
 
 * Do a find and replace in the ``composer.json`` file to change ``docroot/`` into ``public/``
 * Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements
