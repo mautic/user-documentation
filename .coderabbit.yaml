@@ -26,3 +26,7 @@ reviews:
           instead of calling it an error.
         - Check that the steps in how-to instructions are complete, in the
           right order, and that the expected result is clear.
+knowledge_base:
+  linked_repositories:
+    - repository: "mautic/mautic"
+      instructions: "Mautic core code repository. Compare the docs with the code branch that matches the docs PR's base branch."
