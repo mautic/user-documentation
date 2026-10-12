@@ -90,7 +90,7 @@ To configure a Role, leave the **Has full system access** switch at **No** and c
 
 .. image:: images/mautic-roles.png
   :width: 800
-  :alt: Screenshot showing Mautic Roles
+  :alt: Screenshot of the Permissions tab of a new Role, with Asset Permissions selected and its View, Edit, Create, Delete, Publish, and Full checkboxes.
 
 .. vale off
 
