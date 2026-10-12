@@ -95,14 +95,14 @@ Follow the steps below to activate an imported Campaign:
           
    Activating a Campaign starts execution immediately. Review all Campaign steps, configurations, and associated Assets thoroughly before turning on a Campaign to prevent unintended execution of events. 
           
-   When a Campaign goes live, scheduled events with relative delays follow the **Campaign Republish Behavior** configuration. If the Campaign uses a specific setting instead of the global default, the execution behavior changes:
+   When a Campaign goes live, scheduled events with relative delays follow the **Campaign Reactivation Behaviour** configuration. If the Campaign uses a specific setting instead of the global default, the execution behavior changes:
 
    .. vale off
    
    * **Use global setting** - Applies the default behavior configured in the global Mautic settings.
-   * **Restart on republish** - Resets the delay timer completely. The delay period starts over from zero the moment the Campaign becomes active.
-   * **Count delay only while published** - Pauses the delay timer while the Campaign is inactive. The timer resumes from where it paused once the Campaign becomes active again.
-   * **Count delay regardless of publish state** - default option. Keeps the delay timer running continuously in the background, even while the Campaign remains inactive.
+   * **Restart on reactivation** - Resets the delay timer completely. The delay period starts over from zero the moment the Campaign is reactivated.
+   * **Count delay only while published** - Pauses the delay timer while the Campaign is inactive. The timer resumes from where it paused once the Campaign is reactivated again.
+   * **Count delay regardless of activation state** - default option. Keeps the delay timer running continuously in the background, even while the Campaign remains inactive.
    
    .. vale on
 
@@ -111,7 +111,7 @@ Follow the steps below to activate an imported Campaign:
    .. vale off
 
    .. image:: images/campaign_activation_prompt_message.png
-      :alt: A prompt message with text: All scheduled events will execute according to the Republish Behavior setting. Currently set to: Count delay regardless of publish state.
+      :alt: A prompt message with text: All scheduled events will execute according to the Reactivation Behaviour setting. Currently set to: Count delay regardless of activation state.
 
    .. vale on
 
