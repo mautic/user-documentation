@@ -92,26 +92,17 @@ Follow the steps below to activate an imported Campaign:
 #. Click **Yes** when a prompt message appears.
 
    .. warning::
-          
-   Activating a Campaign starts execution immediately. Review all Campaign steps, configurations, and associated Assets thoroughly before turning on a Campaign to prevent unintended execution of events. 
-          
-   When a Campaign goes live, scheduled events with relative delays follow the **Campaign Republish Behavior** configuration. If the Campaign uses a specific setting instead of the global default, the execution behavior changes:
 
-   .. vale off
-   
-   * **Use global setting** - Applies the default behavior configured in the global Mautic settings.
-   * **Restart on republish** - Resets the delay timer completely. The delay period starts over from zero the moment the Campaign becomes active.
-   * **Count delay only while published** - Pauses the delay timer while the Campaign is inactive. The timer resumes from where it paused once the Campaign becomes active again.
-   * **Count delay regardless of publish state** - default option. Keeps the delay timer running continuously in the background, even while the Campaign remains inactive.
-   
-   .. vale on
+      Activating a Campaign allows its events to execute on the next Campaign event Cron job run. Review all Campaign steps, configurations, and associated Assets thoroughly before turning on a Campaign to prevent unintended execution of events.
+
+   Scheduled events with relative delays follow the **Campaign Reactivation Behaviour** setting. See :ref:`Campaign reactivation behavior` for the available options and how reactivation affects pending events.
 
    |
 
    .. vale off
 
    .. image:: images/campaign_activation_prompt_message.png
-      :alt: A prompt message with text: All scheduled events will execute according to the Republish Behavior setting. Currently set to: Count delay regardless of publish state.
+      :alt: Campaign activation confirmation showing the effective Reactivation Behaviour setting
 
    .. vale on
 
