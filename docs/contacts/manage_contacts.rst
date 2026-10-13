@@ -220,7 +220,7 @@ The Engagements line chart display how active the Contact was in the past 6 mont
 Image
 =====
 
-* **Gravatar** - By default, Mautic pulls images from Gravatar. If there's a :xref:`Gravatar` associated with the Contact's Email address, Mautic adds the Gravatar photo to the Contact record.
+* **Gravatar** - If there's a :xref:`Gravatar` associated with the Contact's Email address, Mautic can show that photo on the Contact record. Mautic only loads Gravatar images after you set **Load profile images from Gravatar** to **Yes** in the :ref:`Privacy Centre settings<privacy centre settings>`. Until then, Contacts without a custom or social image show a default placeholder.
 
 * **Custom** - To add a custom image file to a Contact, edit the Contact record and look for **Preferred profile image** under the image placeholder.
 
