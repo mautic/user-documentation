@@ -10,6 +10,8 @@ To open the settings, go to **Settings** > **Configuration**. Each section in th
 * **Save & Close** saves the page and returns you to the Dashboard.
 * **Cancel** discards your changes and returns you to the Dashboard.
 
+If you try to open another page or leave Configuration before you save, Mautic asks you to confirm that you want to discard your changes. Select **Confirm** to leave without saving, or **Cancel** to stay on the page.
+
 If a setting on the page isn't valid, Mautic shows an alert at the top of the page and expands the section that contains the field to correct.
 
 System settings
