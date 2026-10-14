@@ -55,6 +55,33 @@ On the Contacts list, the dropdown also reminds you that you can type a filter d
 
 The fields you select in the dropdown map to the same search filters and operators described in the following sections, so you can always type them directly instead.
 
+Filter list views by Category
+=============================
+
+Use the Category filter to show only the items that belong to one or more Categories. The filter is available on the list views for Assets, Campaigns, Dynamic Content, Emails, Focus Items, Forms, Landing Pages, Point Actions, Point Triggers, Segments, Stages, and Webhooks.
+
+To filter a list by Category:
+
+#. Open the list view, for example **Segments**.
+#. Next to the search box, click the **Quick filters** button.
+
+   .. image:: images/segments-quick-filters-button.png
+      :align: center
+      :alt: Quick filters button next to the search box on the Segments list view
+      :width: 600
+
+#. Under **More**, select one or more Categories in the Category filter.
+#. Click **Apply selected**.
+
+   .. image:: images/segments-quick-filters-category.png
+      :align: center
+      :alt: Quick filters popover with two Categories selected under More and the Apply selected button
+      :width: 600
+
+The list then shows only the items assigned to any of the selected Categories. On the Emails list, the same filter also offers Segments and Themes, and on the Campaigns list it also offers Contact sources.
+
+Mautic adds a ``category:{category alias}`` search filter to the search box for each Category you select. You can combine the Category filter with the status and ownership quick filters, a typed search, sorting, and pagination. To clear the Category filter and return to the full list, click the **Quick filters** button and click **Reset**.
+
 Search operators
 ================
 
