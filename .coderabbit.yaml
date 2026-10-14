@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+reviews:
+  auto_review:
+    enabled: true
+    # By default CodeRabbit only reviews PRs targeting the default branch.
+    # Also review PRs targeting any other branch (e.g. 8.0, 7.3).
+    base_branches:
+      - ".*"
+  path_instructions:
+    - path: "docs/**/*.rst"
+      instructions: |
+        Review for content accuracy only. Do not review or comment on style,
+        grammar, formatting, links or images. Other tools handle those.
+        - Verify the content against the Mautic codebase. Check everything
+          that users see and do in Mautic, not only the examples here. For
+          example: menu names, button labels, field names, settings,
+          defaults, options, permissions and behavior. Flag
+          anything that does not match the code.
+        - The PR's base branch (the branch it targets) is the Mautic version
+          the page documents. Compare the page with the code repos on the
+          branch with the same name. If there is none, use the code branch
+          for that major version. For example, for docs branch 7.3, use code
+          branch 7.3, or 7.x if 7.3 does not exist. This is only an example.
+          The same rule applies to every version.
+        - If the code you compare with looks like a different version, say so
+          instead of calling it an error.
+        - Check that the steps in how-to instructions are complete, in the
+          right order, and that the expected result is clear.
+knowledge_base:
+  linked_repositories:
+    - repository: "mautic/mautic"
+      instructions: "Mautic core code repository. Compare the docs with the code branch that matches the docs PR's base branch."
