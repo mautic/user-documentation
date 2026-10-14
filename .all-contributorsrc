@@ -266,7 +266,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/116097999?v=4",
       "profile": "http://andersonjeccel.com.br",
       "contributions": [
-        "review"
+        "review",
+        "doc"
       ]
     },
     {
@@ -337,6 +338,15 @@
       "name": "John Linhart",
       "avatar_url": "https://avatars.githubusercontent.com/u/1235442?v=4",
       "profile": "http://johnlinhart.com",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "RCheesley",
+      "name": "Sīlavāpi Cheesley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2930593?v=4",
+      "profile": "https://www.ruthcheesley.co.uk",
       "contributions": [
         "review"
       ]
