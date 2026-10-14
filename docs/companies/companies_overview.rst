@@ -31,10 +31,12 @@ Removing Contacts from a Company
 
 When you view a Company, the assigned Contacts table lists the Contacts in that Company. You can remove one or more of them from the Company. This removes only the Company association. Mautic keeps the Contacts and doesn't delete them.
 
+.. vale off
+
 #. In the assigned Contacts table, select the checkboxes next to the Contacts you want to remove.
 
    .. image:: images/companies_remove_contacts_select.png
-      :alt: Two selected Contacts in the assigned Contacts table of a Company, with their checkboxes and the three-dot Options icon highlighted.
+      :alt: Two selected Contacts in the assigned Contacts table of a Company, with their checkboxes highlighted.
 
 #. Click the three-dot **Options** icon at the top of the table, then select **Remove from company**.
 
@@ -44,7 +46,9 @@ When you view a Company, the assigned Contacts table lists the Contacts in that 
 #. In the confirmation dialog, click **Remove from company** to confirm, or click **Cancel** to keep the Contacts in the Company.
 
    .. image:: images/companies_remove_contacts_confirm.png
-      :alt: The confirmation dialog for removing Contacts from a Company, with the Cancel and Remove from company buttons highlighted.
+      :alt: The confirmation dialog for removing Contacts from a Company, showing the Cancel and Remove from company buttons.
+
+.. vale on
 
 After you confirm, Mautic removes only the selected Contacts from this Company and shows a notice with the number of Contacts it removed.
 
@@ -54,7 +58,7 @@ If a removed Contact had this Company as their primary Company, Mautic assigns a
 
 .. note::
 
-   You need Edit permission on Contacts - **Edit Own** or **Edit Others** - to remove Contacts. Mautic skips any Contact that's locked or that you don't have permission to edit. Users without View permission on the Company can't use this action.
+   To remove Contacts, you need View permission on the Company and Edit permission on the Contacts - **Edit Own** or **Edit Others**. Mautic skips any Contact that another User has open for editing or that you don't have permission to edit.
 
 Company duplicates
 *******************
