@@ -158,9 +158,9 @@ When creating a new Focus Item, you can set the following fields:
 
 .. vale off
 
-**Activate at (date/time)** - This allows you to define the date and time at which this Text Message is available for sending to Contacts
+**Activate at (date/time)** - This allows you to define the date and time at which this Focus Item becomes active and starts displaying to visitors.
 
-**Deactivate at (date/time)** - This allows you to define the date and time at which this Text Message ceases to be available for sending to Contacts.
+**Deactivate at (date/time)** - This allows you to define the date and time at which this Focus Item stops displaying to visitors.
 
 .. vale on
 
@@ -209,7 +209,7 @@ When you save the Focus Item, Mautic shows the code snippet required to display 
 .. note:: 
     You may need assistance from your web development team to implement the Focus Item tracking code on your website.  
 
-    You must also ensure that you have specified your website's domain where you expect to use the Focus Item in the CORS settings for your Mautic instance, otherwise it won't appear. To verify this, go to Settings > Configuration > System Settings > CORS Settings and set Restricted Domains to Yes. Ensure that you specify your domain in the relevant field. Alternatively (but not recommended, as this would allow other websites to display your Focus Items), set Restrict Domains to No and don't specify your domains.
+    You must also ensure that you have specified your website's domain where you expect to use the Focus Item in the CORS settings for your Mautic instance, otherwise it doesn't appear. To verify this, go to Settings > Configuration > System Settings > CORS and security settings and set **Restrict Domains** to Yes. Add your domain to **Valid Domains**. Alternatively, set **Restrict Domains** to No. This isn't recommended, because it lets other websites display your Focus Items.
 
 .. vale off
 
