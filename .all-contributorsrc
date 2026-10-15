@@ -350,6 +350,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "fedys",
+      "name": "Miroslav Fedeleš",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6388925?v=4",
+      "profile": "https://www.linkedin.com/in/miroslavfedeles",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
