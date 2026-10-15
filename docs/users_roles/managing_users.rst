@@ -122,3 +122,18 @@ When the invited person opens the link in the Email, Mautic shows a registration
 After the invitee clicks **Create Account**, Mautic creates the User and redirects them to the login page, where they can sign in with their new credentials.
 
 .. vale on
+
+Filtering Users who have never logged in
+****************************************
+
+The Users list offers a **Never logged in** quick filter that shows only Users who have never signed in. Use it to review these accounts as part of account hygiene.
+
+To filter the list:
+
+#. Navigate to **Settings** > **Users**.
+#. Open the quick-filter menu next to the search box.
+#. Select **Never logged in**.
+
+The list then shows only Users with no recorded last login. Select **Reset** to clear the filter and restore the full list.
+
+You can also type ``is:never_logged_in`` directly into the Users search box. For the full list of Users search filters, see :ref:`Users search filters <Users search filters>`.
