@@ -249,7 +249,7 @@ Email content preview
 
 The Email details page shows a rendered preview of the Email content in the right column, so you can see how an Email looks without opening the Builder or a separate tab. This is handy when you're comparing several Emails to find the one you want.
 
-The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Enter a Company in **Show preview for company** to fill Company field tokens, such as ``{companyfield=companyname}``, with that Company's values. If you don't select a Company, Mautic uses the selected Contact's Companies, or sample Company data when there's no Contact. Mautic reloads the preview automatically to match the version you've selected.
+The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Enter a Company in **Show preview for company** to fill Company field tokens, such as ``{companyfield=companyname}``, with that Company's values. If you don't select a Company, Mautic uses the selected Contact's Companies. When you haven't selected a Contact, or the Contact has no Companies, Mautic uses sample Company data. Mautic reloads the preview automatically to match the version you've selected.
 
 .. image:: images/emails/email_details_preview.png
    :width: 600
