@@ -37,6 +37,19 @@ Before installing a package, ensure that:
   
 * PHP's ``max_execution_time`` is at least 240 seconds.
 
+Database configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+PostgreSQL support requires PostgreSQL 16 or later, built with International Components for Unicode (ICU) support, and PHP's ``pdo_pgsql`` extension. Use a UTF8 database. The database User must own the Mautic schema objects and have permission to create functions and an ICU collation. You don't need a custom PostgreSQL server extension.
+
+In the web-based installer, select **PostgreSQL** as the database driver and use port ``5432`` unless your server uses a different port. For command-line installation, set ``--db_driver=pdo_pgsql`` and ``--db_port=5432`` alongside your database and administrator settings. The installer selects the PostgreSQL ``UTF8`` connection character set automatically.
+
+If your hosting provider creates the database for you, use that database's name and credentials. Creating a database through the installer also requires the PostgreSQL account to have ``CREATEDB`` permission.
+
+For an existing PostgreSQL installation, back up your database and schedule a maintenance window before running the normal Mautic migrations. The text collation migration takes table locks and rebuilds affected indexes and text foreign keys. If existing unique values conflict under the new collation, the migration rolls back. Resolve the conflicting Mautic records before retrying.
+
+Text equality and uniqueness use PostgreSQL's ICU collation. Rare Unicode comparisons and trailing-space behavior can differ from MySQL. Mautic translates common regular-expression patterns, but advanced ICU syntax can require changes for PostgreSQL regular expressions. Review custom Segment and Report filters when moving an installation to PostgreSQL. Switching the database driver doesn't transfer data from MySQL or MariaDB.
+
 Downloading a production package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
