@@ -40,6 +40,10 @@ Before installing a package, ensure that:
 Database configuration
 ~~~~~~~~~~~~~~~~~~~~~~
 
+.. warning::
+
+   This section describes proposed PostgreSQL support in `Mautic core PR #17854 <https://github.com/mautic/mautic/pull/17854>`_. The implementation remains a draft with no confirmed release target. The PostgreSQL features and helpers described here aren't available in released Mautic versions.
+
 PostgreSQL support requires PostgreSQL 16 or later, built with International Components for Unicode (ICU) support, and PHP's ``pdo_pgsql`` extension. Use a UTF8 database. The database User must own the Mautic schema objects and have permission to create functions and an ICU collation. You don't need a custom PostgreSQL server extension.
 
 In the web-based installer, select **PostgreSQL** as the database driver and use port ``5432`` unless your server uses a different port. For command-line installation, set ``--db_driver=pdo_pgsql`` and ``--db_port=5432`` alongside your database and administrator settings. The installer selects the PostgreSQL ``UTF8`` connection character set automatically.
