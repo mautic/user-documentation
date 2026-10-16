@@ -71,7 +71,7 @@ You can also limit the number of Contacts to process per script execution using 
 
 By default, the script processes Contacts in batches of 100. If this is too many for your server's resources, use the option ``--batch-limit=X`` replacing X with the number of events to process each batch.
 
-You can also limit the number of Contacts to process per script execution using ``--max-events`` to further limit resources used.
+You can also limit the number of Contacts to process for each Campaign per script execution using ``--campaign-limit`` to further limit resources used.
 
 Since Mautic 5.1, Mautic triggers Campaigns in order from newest to oldest. This allows you to process newer Campaigns with higher priority.
 
@@ -86,6 +86,20 @@ Since Mautic 5.1, Mautic triggers Campaigns in order from newest to oldest. This
 .. note:: 
 
     that these messages are only added to the queue when frequency rules apply either system wide or per Contact.
+
+**To build summary statistics for past Campaign events:**
+
+.. code-block:: php
+
+    php /path/to/mautic/bin/console mautic:campaigns:summarize
+
+When you turn on **Use summary statistics** in :ref:`Campaign settings`, Mautic summarizes new Campaign events as it records them. Run this command to summarize the events Mautic recorded before you turned on the setting. Each run continues back from the oldest hour already summarized, so you can run it once or schedule it until it reaches the oldest event.
+
+The command accepts these options:
+
+* ``--batch-limit=X`` or ``-l X`` - the number of hours of event data to process in each batch. Defaults to 1.
+* ``--max-hours=X`` - the maximum number of hours to summarize in one run.
+* ``--rebuild`` - summarizes all events again, starting from the current hour, including hours already summarized. Use this only if database errors caused inaccurate summary data.
 
 .. vale off
 

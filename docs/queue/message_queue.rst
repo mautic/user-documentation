@@ -13,7 +13,7 @@ Priority and number of attempts
 .. image:: images/marketing-email.png
   :width: 600
   :align: center
-  :alt: Screenshot showing marketing-Email
+  :alt: Send Email action with the Marketing Email type, Priority, and Attempts fields
 
 * You can select priority as **High** or **Normal**. When processing messages for a given date, Mautic places high priority messages at the top of the queue. Broadcasts are always treated as a normal priority.
 
@@ -24,7 +24,7 @@ Processing a message queue
 
 This command processes all pending messages that haven't reached their maximum number of attempts and are in the pending queue.
 
-Setup your :ref:`cron<processing a message queue>` as followed: ``php bin/console mautic:messages:send``
+Set up your :ref:`Cron job<Campaign Cron jobs>` as follows: ``php bin/console mautic:messages:send``
 
 
 
