@@ -42,7 +42,7 @@ Turning on OpenID Connect
 #. Fill in the remaining settings. For a description of each setting, see :ref:`OpenID Connect settings <OpenID Connect configuration options>`.
 #. Click **Save**.
 
-When you save with OpenID Connect turned on, Mautic tests the connection to the provider. If the test fails, Mautic doesn't save the settings and shows an error next to **Enable**. Check the **Client URL**, **Client ID**, and **Client Secret** values, and the redirect URL configured in the provider.
+Saving the settings doesn't confirm that the provider accepts the **Client URL**, **Client ID**, **Client Secret**, or redirect URL. To confirm the setup, log out and log in with the **Sign In with OpenID Connect** button.
 
 .. warning::
 
@@ -77,7 +77,7 @@ You can link an existing Mautic User to a provider account in two ways:
 * **As an administrator** - Open the User in **Settings** > **Users** and enter the User's ID from the provider in the **OpenID Connect identifier** field. This is the value of the claim set as the identifier field, ``sub`` by default. Mautic shows this field only when OpenID Connect is on.
 * **As the User, when Mautic requires OpenID Connect** - Log in with the Mautic username and password. Mautic then asks you to link your account. Select **Link Account** and log in to the provider.
 
-Each provider account can link to only one Mautic User, and each Mautic User can link to only one provider account.
+Each provider account can link to only one Mautic User, and each Mautic User can link to only one provider account. If you enter an identifier that's already linked to another User, Mautic shows an error on the **OpenID Connect identifier** field and doesn't save the User.
 
 To remove the link, clear the **OpenID Connect identifier** field on the User's edit page and save. Removing the link doesn't log out a User who's already logged in. To remove a User's access completely, deactivate the Mautic User or delete it. If registration is on, also remove the User's access in the provider so they can't create a new Mautic User.
 
