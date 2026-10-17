@@ -110,6 +110,8 @@ NGINX
 noindex
 OAuth
 Packagist
+Page URL
+Page hits
 PATCH
 patch
 PHP
