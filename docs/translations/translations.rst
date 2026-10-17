@@ -118,3 +118,14 @@ Save the file and clear the cache with ``bin/console cache:clear`` command. Refr
 .. image:: images/translations-banana.png
     :width: 600
     :alt: Dashboard menu item overridden to Banana
+
+Change the product name in browser titles
+=========================================
+
+Browser tab titles in Mautic end with the product name, for example 'Dashboard | Mautic', and the login screen's title is the product name alone. If you present Mautic under your own name, override the ``mautic.core.product_name`` translation key from ``app/bundles/CoreBundle/Translations/en_US/messages.ini``. Follow the same steps as in the preceding example:
+
+#. Create or open the ``messages.ini`` file in the ``translations/overrides/{locale}`` folder. Replace ``{locale}`` with the locale you're overriding, such as ``en_US``.
+#. Add the line ``mautic.core.product_name="Acme"``, replacing ``Acme`` with your product name.
+#. Clear the cache with the ``bin/console cache:clear`` command.
+
+The login screen's title now reads 'Acme', and every other title ends with '| Acme', including after you move between sections. The override only applies to the locale whose folder contains it, so add it for each locale your Users select.
