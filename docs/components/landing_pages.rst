@@ -54,3 +54,20 @@ You can preview a Landing Page Draft may by appending ``/draft`` to the end of t
   :width: 400
   :alt: Screenshot showing the Preview Draft URL link on the Landing Page edit interface.
 
+
+.. vale off
+
+Selecting an A/B test winner
+****************************
+
+.. vale on
+
+When a Landing Page has A/B test variants, its details view lists the main Landing Page and each variant in the **Variants** tab. Mautic compares the variants using the winner criteria you set, such as **Lowest bounce rate** or **Longest dwell time**.
+
+You can end the test on any variant you choose instead of following Mautic's statistics. Once the A/B test starts, each Active variant's row shows a **Make winner** trophy action. The variant the statistics currently favor shows a filled trophy, and the other Active variants show an outline trophy. Inactive variants don't show the action.
+
+#. Open the Landing Page and go to the **Variants** tab.
+#. Select the **Make winner** trophy on the variant you want to keep.
+#. Select **Make winner** in the confirmation dialog.
+
+Mautic sets the chosen variant as the main Landing Page, turns off the other variants, stops the A/B test, and resets the current A/B test stats.
