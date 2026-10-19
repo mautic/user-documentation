@@ -16,7 +16,7 @@ Getting started with Campaign Builder
 
 To build your Campaign, perform the following steps:
 
-#. Click **Launch the Campaign Builder** on the New Campaigns wizard. The Contact Sources menu appears as shown in the following image.
+#. Select **Launch Campaign Builder** on the New Campaigns wizard. The Contact Sources menu appears as shown in the following image.
 
    |
    
@@ -104,7 +104,7 @@ The actions that Mautic offers in a Campaign include:
      - Adds the Contact to the Do Not Contact - DNC - list
    * - **Add to Company's score**
      - Adds or subtracts a designated number of Points to or from the score for all Companies associated with the Contact.
-   * - **Add Company action**  
+   * - **Add to company**
      - Associates a Contact with a Company and sets the Company as the primary Company for the Contact.
    * - **Adjust Contact Points**  
      - Adds or subtracts Points from the Contact’s Point total or Group.

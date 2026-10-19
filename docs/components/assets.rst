@@ -73,21 +73,19 @@ If you need to add extra file types, configure the maximum size of upload or the
 The following fields are available:
 
 - **Title** - the title for the Asset
-- **Alias** - used to create the slug on the download URL. Created from the title automatically if not provided.
 - **Description** - an internally used description to inform other Mautic Users what the Asset is and/or where it's used.
 - **Category** - used to organize resources - see :doc:`/categories/categories-overview` for more information
 - **Language** - the language of this Asset - can be helpful in multilingual marketing Campaigns and for reporting purposes
-- **Published** - Whether the Asset is available for use - published - or not available - unpublished
+- **Available for use** - Whether the Asset is available for download. When set to **No**, the Asset is unavailable.
 
 .. vale off
 
-**Publish at (date/time)** - This allows you to define the date and time at which this Asset is available
-
-**Unpublish at (date/time)** - This allows you to define the date and time at which this Asset ceases to be available
+- **Activate at (date/time)** - the date and time at which the Asset becomes available
+- **Deactivate at (date/time)** - the date and time at which the Asset stops being available
 
 .. vale on
 
-- **Block search engines from indexing this file** - If you don't want to index files like ``PDF``, ``DOCx`` and so forth, setting this switch to Yes sends the ``X-Robots-Tag no-index`` HTTP header. If set to No, the header isn't sent and your files could become indexed by search engines.
+- **Block search engines from indexing this file** - If you don't want to index files like ``PDF``, ``DOCx`` and so forth, setting this switch to **Yes** sends the ``X-Robots-Tag no-index`` http header. If set to **No**, the header isn't sent and your files could become indexed by search engines.
 
 Depending on the type of file uploaded, a preview may display after the upload completes.
 
