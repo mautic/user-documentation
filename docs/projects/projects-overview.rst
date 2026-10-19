@@ -151,7 +151,10 @@ There are two ways to assign entities to a Project.
 
 #. **From the Project**:
 
-   #. Open a Project and select **Add Entities to Project**.
+   #. Open a Project and select the button for adding entities. Its label depends on the entity types you can edit:
+
+      * If you can edit only one entity type, the button names that type, for example **Add new to project Email**. Selecting it opens the picker for that entity type directly.
+      * Otherwise, the button reads **Add Entities to Project**.
 
       |
 
@@ -161,8 +164,8 @@ There are two ways to assign entities to a Project.
 
       |
 
-   #. Choose the type of entity you want to add.
-   #. Select the entity you want to add to the Project.
+   #. If the button reads **Add Entities to Project**, choose the entity type you want to add, such as Email, Form, or Campaign.
+   #. Select the specific entity of that type to add to the Project.
 
 .. vale off
 
