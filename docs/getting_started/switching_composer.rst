@@ -34,7 +34,7 @@ Here's the steps to follow to switch to a Composer-based installation:
 
 #. Go to ``/var/www``
 
-#. Run ``composer create-project mautic/recommended-project:^5 html-new --no-interaction``
+#. Run ``composer create-project mautic/recommended-project:^8 html-new --no-interaction``
 
 #. Copy the following files and folders from ``/var/www/html`` to ``/var/www/html-new``:
 
