@@ -42,7 +42,7 @@ Turning on OpenID Connect
 #. Fill in the remaining settings. For a description of each setting, see :ref:`OpenID Connect settings <OpenID Connect configuration options>`.
 #. Click **Save**.
 
-Saving the settings doesn't confirm that the provider accepts the **Client URL**, **Client ID**, **Client Secret**, or redirect URL. To confirm the setup, log out and log in with the **Sign In with OpenID Connect** button.
+When you save, Mautic fetches the provider's configuration from the **Client URL**. If Mautic can't reach the provider, it shows the error 'OpenID Connect test connection failed. Please check your settings.' and doesn't save the settings. Saving doesn't confirm that the provider accepts the **Client ID**, **Client Secret**, or redirect URL. To confirm the setup, log out and log in with the **Sign In with OpenID Connect** button.
 
 .. warning::
 
