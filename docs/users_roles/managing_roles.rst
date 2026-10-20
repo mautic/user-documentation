@@ -169,6 +169,23 @@ The Contact Permissions section includes several permission categories:
 
    When you upgrade from an earlier version, Mautic grants each non-administrator Role the same Notes access it already had for Contacts. Existing Roles keep working as before, so anyone who could view or edit a Contact's Notes still can. From there, you can refine each Role's Notes permissions independently of its Contact permissions.
 
+Core permissions
+~~~~~~~~~~~~~~~~
+
+.. vale off
+
+The Core Permissions section includes these permission categories:
+
+.. vale on
+
+* **Themes - User has access to** - determines which Themes a User can view, edit, create, delete, and activate.
+
+* **File Manager - User has access to** - determines whether a User can open the file manager. Users browse, upload, and select files such as images in the file manager when they insert media from the text editor, the Builder, or the **Upload Media** button on Text Messages. Select **Full** to grant access. Users without this permission get an access denied error when they try to open the file manager.
+
+.. note::
+
+   When you upgrade from an earlier version, Mautic grants the File Manager permission to each non-administrator Role that has **Create**, **Edit Own**, **Edit Others**, or **Full** permission for Emails, Landing Pages, Assets, or Dynamic Content. Users who could already work with files in the editors keep that access. Administrator Roles always have access.
+
 .. _cloning a role:
 
 .. vale off
