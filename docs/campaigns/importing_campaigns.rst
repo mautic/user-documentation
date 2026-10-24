@@ -76,6 +76,8 @@ Activating an imported Campaign
 
 .. vale on
 
+Before you activate an imported Campaign, open each event that uses a Stage, another Campaign, Focus Item, Marketing Message, Text Message, Web Notification, Mobile Notification, Company, or Contact owner. Select the correct item for any selection that Mautic cleared during the import. For details on what the import changes, see :ref:`How Campaign import works`.
+
 Follow the steps below to activate an imported Campaign:
       
 #. Click on the **Campaigns** menu.
@@ -239,5 +241,9 @@ During the import process, Mautic performs a comprehensive analysis of the data:
   * Update existing entities, allowing Administrators to update existing Campaigns.
   * Create new entities using a new ID.
 
-* **Automatic data mapping:** the system maps imported data to the correct locations and automatically creates any necessary dependent entities.
+* **Automatic data mapping:** the system maps imported data to the correct locations and automatically creates any necessary dependent entities. Campaign events point to the imported Assets, Dynamic Content, Emails, Forms, Landing Pages, Point Groups, and Segments, not to the IDs from the source instance.
+* **Custom Fields:** the import creates the Custom Fields that the Campaign uses and that don't exist on your instance yet. If another Custom Field already uses the same alias, the import gives the new Custom Field a unique alias and updates the Campaign events to use it.
+* **Tags:** the import creates the Tags that the Campaign's events use and that don't exist yet.
+* **Items not included in the export:** the import looks for the Stages, other Campaigns, Focus Items, Marketing Messages, Text Messages, Web Notifications, and Mobile Notifications that the Campaign's events use on your instance. If an item doesn't exist, the import clears that selection in the event.
+* **Companies and owners:** the import clears the Company and Contact owner selections in Campaign events, because Mautic can't match Companies and Users across instances.
 * **Campaign activation:** after a successful import, the Campaign remains inactive by default.
