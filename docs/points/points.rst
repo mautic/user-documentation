@@ -45,9 +45,9 @@ To add a new action:
 Visits specific URL
 ===================
 
-The 'Visits specific URL' action awards Points when a Contact visits a URL that matches an address you specify. When you choose this action from 'Actions taken by User', Mautic displays these fields:
+The **Visits specific URL** action awards Points when a Contact visits a tracked URL that matches an address you specify. When you choose this action from **Action taken by Contact**, Mautic displays these fields:
 
-* **Page URL** - The web address to track. Enter the full URL, including ``http://`` or ``https://``. Use ``*`` as a wildcard to match part of the address - for example, ``https://example.com/pricing*`` matches the pricing URL with any query string.
+* **Page URL** - The address to track. Plain text matches anywhere in the visited URL, and Mautic ignores ``http://`` or ``https://``. For example, ``product/123`` matches ``https://example.com/product/1234``. Wildcard patterns such as ``*product/123*`` also work.
 
 * **Total time spent** - Awards Points once the Contact has spent at least this much time on the matching URL across all their visits.
 
@@ -57,9 +57,11 @@ The 'Visits specific URL' action awards Points when a Contact visits a URL that 
 
 * **Returns within** and **Returns after** - Award Points when the Contact returns to the matching URL within, or after, the time period you set.
 
-'Total time spent' and 'Page hits' measure cumulative activity on the matching URL. Mautic evaluates them against the Contact's full visit history for that URL, so it awards the Points on the next tracked hit after the Contact crosses the threshold. The Contact doesn't need to revisit the specific URL. Because Mautic measures time spent from the tracking script, the Contact has to load another tracked URL before the most recent visit's time counts.
+Mautic checks the action on every tracked hit, including visits to Landing Pages, and awards Points only when the Contact meets every condition you set.
 
-The remaining options describe a single visit, so Mautic applies them only when the Contact's current hit matches the 'Page URL'.
+**Total time spent** and **Page hits** measure cumulative activity on the matching URL across the Contact's visit history. Once the Contact crosses the threshold, Mautic awards the Points on their next tracked hit to any URL, so the Contact doesn't need to revisit the matching URL. Mautic measures time spent from the tracking script, so the time from the most recent visit counts only after the Contact loads another tracked URL.
+
+**First visit only**, **Returns within**, and **Returns after** describe the current visit, so the Contact meets them only when the current hit matches the **Page URL**. If you combine them with **Total time spent** or **Page hits**, Mautic awards the Points only on a visit to the matching URL. If you set only **Total time spent** or **Page hits**, a visit to any tracked URL can award the Points.
 
 .. vale off
 
