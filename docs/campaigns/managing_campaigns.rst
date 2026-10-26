@@ -131,11 +131,7 @@ Events only count days when the Campaign is active. Inactive periods don't count
 Viewing last activation date
 ============================
 
-.. vale off
-
-The Campaign details dropdown menu displays the **Last Publish Date**, which indicates when you most recently activated the Campaign. Mautic uses this date as the reference point for the **Restart on republish** option to recalculate scheduled event timings.
-
-.. vale on
+The Campaign details dropdown menu displays the **Last Activation Date**, which indicates when you most recently activated the Campaign. Mautic uses this date as the reference point for the **Restart on reactivation** option to recalculate scheduled event timings.
 
 .. vale off
 
