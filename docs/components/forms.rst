@@ -76,6 +76,22 @@ When a Form reaches its submission limit:
 
    The submission count updates in real time. Deleting submissions reduces the count, potentially reopening a Form that was previously at its limit.
 
+Form submission counts
+**********************
+
+.. vale off
+
+In the Forms list, the button in the **Results** column shows how many results each Form has, such as **View 3 Results**, and you can sort the list by the **Results** column. A Form's page shows **Total submissions**, **Associated contacts**, and a **Submissions** chart over time.
+
+.. vale on
+
+These counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, Mautic hides them:
+
+* The Forms list shows **View Results** without a count, and you can't sort the list by the **Results** column.
+* The Form's page doesn't show the submission stats or the **Submissions** chart.
+
+Mautic only hides the counts. It still saves submissions, runs Form actions, and counts each submission toward the Form's submission limit. To see a Form's submissions, select **View Results**.
+
 .. vale off
 
 Configuring Forms
