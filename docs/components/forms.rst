@@ -90,7 +90,7 @@ These counts are aggregate analytics. If you set **Record aggregate analytics** 
 * The Forms list shows **View Results** without a count, and you can't sort the list by the **Results** column.
 * The Form's page doesn't show the submission stats or the **Submissions** chart.
 
-Mautic still saves submissions and runs Form actions, and submission limits still apply. To see a Form's submissions, select **View Results**.
+Mautic only hides the counts. It still saves submissions, runs Form actions, and counts each submission toward the Form's submission limit. To see a Form's submissions, select **View Results**.
 
 .. vale off
 
