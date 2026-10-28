@@ -814,7 +814,7 @@ Mautic tracking settings
 
 .. vale off
 
-* **Track asset downloads** - This setting is **Yes** by default. Select **No** to stop linking Asset downloads to the people who download them. Mautic still serves the file and adds the download to the Asset's **Total downloads**, but not to its **Unique downloads**. It doesn't use the Email or Form link, or existing ``mtc_id`` and ``mautic_device_id`` cookies, to recognize the Contact. It also doesn't set tracking cookies, store an IP address, or record the download on a Contact, so the download doesn't trigger the **Downloads asset** Campaign decision or the **Downloads an asset** Point Action.
+* **Track asset downloads** - This setting is **Yes** by default. Select **No** to stop linking Asset downloads to the people who download them. Mautic still serves the file and adds the download to the Asset's **Total downloads**, but not to its **Unique downloads**. Downloads from bots, from addresses in **List of IPs not to track Contacts with**, and from HEAD or speculative loading requests don't count. For more information, see :ref:`Automatic tracking filtering<automatic tracking filtering>`. Mautic doesn't use the Email or Form link, or existing ``mtc_id`` and ``mautic_device_id`` cookies, to recognize the Contact. It also doesn't set tracking cookies, store an IP address, or record the download on a Contact, so the download doesn't trigger the **Downloads asset** Campaign decision or the **Downloads an asset** Point Action.
 
 .. vale on
 
