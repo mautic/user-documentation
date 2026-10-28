@@ -822,7 +822,7 @@ Automatic tracking filtering
 
 .. vale off
 
-To keep your analytics focused on real people, Mautic automatically excludes certain requests from tracking. When a request matches any of the conditions below, Mautic doesn't record the page hit, Email open, Asset download, or Contact tracking activity:
+To keep your analytics focused on real people, Mautic automatically excludes certain requests from tracking. When a request matches any of the conditions below, Mautic doesn't record the page hit, Email open, or Contact tracking activity, and doesn't link an Asset download to the visitor. These requests match the filtering:
 
 .. vale on
 
@@ -837,6 +837,8 @@ To keep your analytics focused on real people, Mautic automatically excludes cer
 .. vale on
 
 This filtering is always on, and you can't turn it off. Because Mautic doesn't track these requests, it doesn't create anonymous Contacts for them, so your analytics reflect genuine human engagement and respect visitor privacy preferences.
+
+Asset downloads from these requests still count toward the Asset's total downloads, without any link to the visitor. See :ref:`Asset download counts<asset download counts>`.
 
 Facebook pixel
 ==============

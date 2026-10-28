@@ -128,6 +128,23 @@ Whether the Asset downloads or opens in a new tab depends on the Contact's brows
 
 To ensure that Contacts are providing you with valid Email addresses for high-value Assets, attach the Asset to an Email and use the send Email Form submit action rather than instantly downloading the Asset.
 
+Asset download counts
+~~~~~~~~~~~~~~~~~~~~~
+
+When you view an Asset, Mautic shows **Total downloads**, which counts every download, and **Unique downloads**, which counts each Contact only once. The Assets list shows the total in the **Download count** column.
+
+.. vale off
+
+Mautic counts downloads from visitors it doesn't track, such as visitors who send a Do Not Track or Global Privacy Control signal, bots, and prefetch requests. For the full list, see :ref:`Automatic tracking filtering<automatic tracking filtering>`. These downloads only add to **Total downloads**, because Mautic can't tell whether the visitor downloaded the Asset before. Mautic serves the file as usual, but to respect the visitor's privacy it doesn't:
+
+* Record the download on a Contact or show it in the **Downloads** chart
+* Store an IP address or set tracking cookies such as ``mtc_id`` and ``mautic_device_id``
+* Trigger the **Downloads asset** Campaign decision or the **Downloads an asset** Point Action
+
+.. vale on
+
+Download counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, **Total downloads**, **Unique downloads**, and the **Download count** column stop changing. Mautic still records each tracked Contact's downloads in their activity history.
+
 .. vale off
 
 Editing an Asset
