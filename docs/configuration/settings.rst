@@ -811,7 +811,15 @@ Mautic tracking settings
 * **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent filling your logs with hits from bots.
 
 * **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
-  
+
+.. vale off
+
+* **Track asset downloads** - This setting is **Yes** by default. Select **No** to stop linking Asset downloads to the people who download them. Mautic still serves the file, but it doesn't use the Email or Form link, or existing ``mtc_id`` and ``mautic_device_id`` cookies, to recognize the Contact. It also doesn't set tracking cookies, store an IP address, or record the download on a Contact, so the download doesn't trigger the **Downloads asset** Campaign decision or the **Downloads an asset** Point Action. When Mautic sends an Asset as an Email attachment, it doesn't record the send on the Contact either.
+
+  Mautic still counts these downloads. Downloads from the Asset's link add to the Asset's **Total downloads**, but not to its **Unique downloads**. Downloads from bots, from addresses in **List of IPs not to track Contacts with**, and from ``HTTP HEAD`` or speculative loading requests don't count. For more information, see :ref:`Automatic tracking filtering<automatic tracking filtering>`. Download counts are aggregate analytics, so the **Record aggregate analytics** setting controls them, not this one.
+
+.. vale on
+
 .. note:: 
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.

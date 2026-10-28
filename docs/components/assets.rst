@@ -126,6 +126,12 @@ Viewing an Asset
 
 Once you've uploaded an Asset, you'll want to make it available for your Contacts to access it. Using the Download URL from the Asset section in Mautic, you can track which Contacts are downloading or viewing the Assets.
 
+.. vale off
+
+To count downloads without linking them to Contacts, set **Track asset downloads** to **No** in the :ref:`Mautic tracking settings`.
+
+.. vale on
+
 Copy and paste the link into your website, on a Landing Page, or as a link in an Email. 
 
 .. note:: 
