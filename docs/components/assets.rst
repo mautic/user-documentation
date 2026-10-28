@@ -80,7 +80,7 @@ The following fields are available:
 
 .. vale off
 
-* **Track downloads** - whether Mautic links downloads of this Asset to the Contacts who download them. **Use the global setting** follows **Track asset downloads** in the :ref:`Mautic tracking settings`. Select **Always** or **Never** to override the global setting for this Asset - for example, select **Never** for a public brochure that you don't want linked to Contacts. With **Never**, Mautic still serves the file and adds the download to the Asset's **Total downloads**, but doesn't record it on a Contact. **Always** doesn't override the :ref:`automatic tracking filtering`, so Mautic never links downloads from visitors who send Do Not Track or Global Privacy Control signals. Campaign and Marketplace exports don't include this setting, so an imported Asset uses the global setting.
+* **Track downloads** - whether Mautic links downloads of this Asset to the Contacts who download them. **Use the global setting**, the default, follows **Track asset downloads** in the :ref:`Mautic tracking settings`. Select **Never** to stop linking this Asset's downloads to Contacts - for example, for a public brochure. With **Never**, Mautic handles downloads of this Asset the same way as when **Track asset downloads** is set to **No**, so it still serves the file but doesn't record the download on a Contact. **Always** doesn't override the :ref:`automatic tracking filtering`, so Mautic never links downloads from visitors who send Do Not Track or Global Privacy Control signals. Campaign and Marketplace exports don't include this setting, so an imported Asset uses the global setting.
 
 .. vale on
 
