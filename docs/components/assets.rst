@@ -135,15 +135,17 @@ When you view an Asset, Mautic shows **Total downloads**, which counts every dow
 
 .. vale off
 
-Mautic counts downloads from visitors it doesn't track, such as visitors who send a Do Not Track or Global Privacy Control signal, bots, and prefetch requests. For the full list, see :ref:`Automatic tracking filtering<automatic tracking filtering>`. These downloads only add to **Total downloads**, because Mautic can't tell whether the visitor downloaded the Asset before. Mautic serves the file as usual, but to respect the visitor's privacy it doesn't:
+Mautic counts downloads from visitors who send a Do Not Track or Global Privacy Control signal, even though it doesn't track those visitors. These downloads only add to **Total downloads**, because Mautic can't tell whether the visitor downloaded the Asset before. Mautic serves the file as usual, but to respect the visitor's privacy it doesn't:
 
 * Record the download on a Contact or show it in the **Downloads** chart
 * Store an IP address or set tracking cookies such as ``mtc_id`` and ``mautic_device_id``
 * Trigger the **Downloads asset** Campaign decision or the **Downloads an asset** Point Action
 
+Mautic doesn't count downloads from bots, from IP addresses excluded from tracking, or from ``HTTP HEAD``, prefetch, and prerender requests, because these requests don't come from a person downloading the file. For details, see :ref:`Automatic tracking filtering<automatic tracking filtering>`.
+
 .. vale on
 
-Download counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, **Total downloads**, **Unique downloads**, and the **Download count** column stop changing. Mautic still records each tracked Contact's downloads in their activity history.
+Download counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, downloads from the Asset's link no longer change **Total downloads**, **Unique downloads**, or the **Download count** column. Mautic still records each tracked Contact's downloads in their activity history.
 
 .. vale off
 
