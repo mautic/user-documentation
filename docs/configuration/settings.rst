@@ -814,7 +814,9 @@ Mautic tracking settings
 
 .. vale off
 
-* **Track asset downloads** - This setting is **Yes** by default. Select **No** to stop linking Asset downloads to the people who download them. Mautic still serves the file, but it doesn't use the Email or Form link, or existing ``mtc_id`` and ``mautic_device_id`` cookies, to recognize the Contact. It also doesn't set tracking cookies, store an IP address, or record the download on a Contact, so the download doesn't trigger the **Downloads asset** Campaign decision or the **Downloads an asset** Point Action. When Mautic sends an Asset as an Email attachment, it doesn't record the send on the Contact either.
+* **Track asset downloads** - The value that new Assets start with for their own **Track downloads** option. This setting is **Yes** by default. Changing it doesn't change existing Assets. Each Asset follows its own **Track downloads** option, so an Asset set to **Yes** tracks downloads even when this setting is **No**. For more information, see :doc:`/components/assets`.
+
+  When an Asset's **Track downloads** option is **No**, Mautic still serves the file, but it doesn't use the Email or Form link, or existing ``mtc_id`` and ``mautic_device_id`` cookies, to recognize the Contact. It also doesn't set tracking cookies, store an IP address, or record the download on a Contact, so the download doesn't trigger the **Downloads asset** Campaign decision or the **Downloads an asset** Point Action. When Mautic sends an Asset as an Email attachment, it doesn't record the send on the Contact either.
 
   Mautic still counts these downloads. Downloads from the Asset's link add to the Asset's **Total downloads**, but not to its **Unique downloads**. Downloads from bots, from addresses in **List of IPs not to track Contacts with**, and from ``HTTP HEAD`` or speculative loading requests don't count. For more information, see :ref:`Automatic tracking filtering<automatic tracking filtering>`. Download counts are aggregate analytics, so the **Record aggregate analytics** setting controls them, not this one.
 
