@@ -145,7 +145,7 @@ Mautic doesn't count downloads from bots, from IP addresses excluded from tracki
 
 .. vale on
 
-Download counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, downloads from the Asset's link no longer change **Total downloads**, **Unique downloads**, or the **Download count** column. Mautic still records each tracked Contact's downloads in their activity history.
+Download counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, downloads no longer change **Total downloads**, **Unique downloads**, or the **Download count** column. This applies to downloads from the Asset's link and to Assets that Mautic sends as Email attachments. Mautic still records each tracked Contact's downloads in their activity history.
 
 .. vale off
 
