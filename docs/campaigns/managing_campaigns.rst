@@ -41,8 +41,8 @@ The **Recent Activity** panel on the right displays the recent activities that h
 
 .. vale off
 
-Campaign reactivation behavior
-******************************
+Campaign reactivation behaviour
+*******************************
 
 .. vale on
 
