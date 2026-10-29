@@ -54,6 +54,18 @@ There is a multi-select field that allows excluding Contacts belonging given Seg
 
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
+.. vale off
+
+Segment Email sending status
+============================
+
+.. vale on
+
+The Email list and the Email details page show the sending status of each active Segment Email that has Contacts still to receive it:
+
+* **Ready to send** - The Email has no scheduled start date. To send it, select **Send** on the Email details page, or select **Schedule** to set a start date.
+* **Sending** - The Email is within its scheduled sending period.
+
 .. _ab testing for Segment Emails:
 
 .. vale off
