@@ -820,6 +820,24 @@ It's possible to turn off the tracking pixel entirely if you don't need to use i
 
 .. vale off
 
+Turning off tracking for an Email
+=================================
+
+.. vale on
+
+Some Emails, such as password resets or messages with sensitive information, shouldn't track the people who receive them. To send an Email without open and click tracking:
+
+#. Open the Email you want to edit.
+#. Click the **Advanced** tab.
+#. Set **Track opens and clicks** to **No**.
+#. Save the Email.
+
+With **Track opens and clicks** set to **No**, Mautic sends the Email without a tracking pixel, including one you placed with the ``{tracking_pixel}`` variable. Links in the Email point directly to their destinations instead of to trackable links, so Mautic doesn't record clicks. Mautic also doesn't record opens for the Email, even when a Contact views it in the browser. The browser version leaves out the **Analytics script** from the :ref:`Landing Page settings`. The Email's detail view shows that tracking is off.
+
+**Track opens and clicks** is **Yes** by default, including for Emails created before the option existed. When it's **Yes**, the tracking settings under :ref:`Message settings` apply. Clones and A/B test variants of an Email keep its **Track opens and clicks** setting.
+
+.. vale off
+
 Tracking links in Emails
 ========================
 
