@@ -35,8 +35,8 @@ The **Recent Activity** panel on the right displays the recent activities that h
 
 .. vale off
 
-Campaign reactivation behaviour
-*******************************
+Campaign republish behaviour
+****************************
 
 .. vale on
 
@@ -46,21 +46,25 @@ When you deactivate and then reactivate a Campaign, Mautic provides control over
 
    This setting only affects events that use relative delays - interval-based scheduling. Events with absolute dates aren't affected by this setting.
 
-Configuring reactivation behaviour
-==================================
+Configuring republish behaviour
+===============================
 
-You can configure the reactivation behaviour at two levels:
+You can configure the **Campaign Republish Behaviour** setting at two levels:
 
-1. **Global default** - Set in **Configuration** > **Campaign Settings** > **Campaign Reactivation Behaviour**. This applies to all Campaigns unless overridden.
+1. **Global default** - Set in **Configuration** > **Campaign Settings** > **Campaign Republish Behaviour**. This applies to all Campaigns unless overridden.
 2. **Per Campaign** - Set when creating or editing a Campaign. This overrides the global default for that specific Campaign.
 
-Reactivation behaviour options
-==============================
+Republish behaviour options
+===========================
 
 There are three options available for how scheduled events should behave after reactivation:
 
-Count delay regardless of activation state
-------------------------------------------
+.. vale off
+
+Count delay regardless of publish state
+---------------------------------------
+
+.. vale on
 
 This is the default behaviour. Mautic uses the original trigger date, and inactive time doesn't affect scheduling.
 
@@ -80,8 +84,12 @@ This is the default behaviour. Mautic uses the original trigger date, and inacti
 
 **When to use:** this option maintains the original scheduled timing, treating the Campaign's activation state as irrelevant to the delay calculation. Use this when you want consistency with the original schedule, or when temporarily deactivating a Campaign shouldn't affect when events execute.
 
-Restart on reactivation
------------------------
+.. vale off
+
+Restart on republish
+--------------------
+
+.. vale on
 
 The delay counter resets completely when you reactivate the Campaign.
 
@@ -101,8 +109,12 @@ The delay counter resets completely when you reactivate the Campaign.
 
 **When to use:** this option is useful when you want to ensure all Contacts receive the full intended delay after any Campaign changes. For example, if you deactivate a Campaign to make significant updates and want everyone to experience the complete updated workflow timing.
 
-Count delay only while active
------------------------------
+.. vale off
+
+Count delay only while published
+--------------------------------
+
+.. vale on
 
 Events only count days when the Campaign is active. Inactive periods don't count toward the delay.
 
@@ -122,12 +134,16 @@ Events only count days when the Campaign is active. Inactive periods don't count
 
 **When to use:** this option is ideal when you want precise control over the actual time Contacts spend in an active Campaign state. Use this for compliance scenarios, trial periods, or when you need to pause Campaigns without affecting the intended engagement timeline.
 
-Viewing last activation date
-============================
+.. vale off
+
+Viewing last publish date
+=========================
+
+.. vale on
 
 .. vale off
 
-The Campaign details dropdown menu displays the **Last Activation Date**, which indicates when you most recently activated the Campaign. Mautic uses this date as the reference point for the **Restart on reactivation** option to recalculate scheduled event timings.
+The Campaign details dropdown menu displays the **Last Publish Date**, which indicates when you most recently activated the Campaign. Mautic uses this date as the reference point for the **Restart on republish** option to recalculate scheduled event timings.
 
 .. vale on
 
@@ -138,11 +154,11 @@ Activate and deactivate Campaigns
 
 .. vale on
 
-When you activate or deactivate a Campaign, Mautic displays a confirmation message that shows the current reactivation behaviour setting. This helps you understand what happens to scheduled events before you confirm the action.
+When you activate or deactivate a Campaign, Mautic displays a confirmation message that shows the current **Campaign Republish Behaviour** setting. This helps you understand what happens to scheduled events before you confirm the action.
 
 .. vale off
 
-For example: 'All scheduled events execute according to the reactivation behaviour setting. Currently set to: Count delay regardless of activation state'.
+For example: 'All scheduled events will execute according to the Republish Behavior setting. Currently set to: Count delay regardless of publish state.'
 
 .. vale on
 
