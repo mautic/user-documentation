@@ -359,6 +359,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "AlexanderZlobinM1",
+      "name": "Alexander Zlobin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186687229?v=4",
+      "profile": "https://tendence.ru/zlobin",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
