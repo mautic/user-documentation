@@ -829,6 +829,8 @@ Mautic tracks clicks on each link in an Email, with stats displayed at the botto
 
 You can turn off tracking for a certain link by adding the ``data-mautic-disable-tracking="true"`` HTML attribute.
 
+To keep counting clicks without linking them to Contacts, set **Track link clicks** to **No** in the :ref:`Mautic tracking settings`.
+
 For example:
 
 .. code-block:: html
