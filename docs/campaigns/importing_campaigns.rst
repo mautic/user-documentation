@@ -100,8 +100,8 @@ Follow the steps below to activate an imported Campaign:
    .. vale off
    
    * **Use global setting** - Applies the default behavior configured in the global Mautic settings.
-   * **Restart on reactivation** - Resets the delay timer completely. The delay period starts over from zero the moment the Campaign is reactivated.
-   * **Count delay only while published** - Pauses the delay timer while the Campaign is inactive. The timer resumes from where it paused once the Campaign is reactivated again.
+   * **Restart on reactivation** - Resets the delay timer completely. The delay period starts over from zero the moment you reactivate the Campaign.
+   * **Count delay only while active** - Pauses the delay timer while the Campaign is inactive. The timer resumes from where it paused once you reactivate the Campaign.
    * **Count delay regardless of activation state** - default option. Keeps the delay timer running continuously in the background, even while the Campaign remains inactive.
    
    .. vale on
