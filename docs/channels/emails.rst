@@ -849,17 +849,19 @@ Clicks from visitors Mautic doesn't track
 
 .. vale off
 
-Mautic counts clicks on tracked links from visitors who send a Do Not Track or Global Privacy Control signal, even though it doesn't track those visitors. These clicks add to the link's **Clicks** count, but not to **Unique Clicks**, because Mautic can't tell whether the visitor clicked the link before. Mautic redirects the visitor to the link's URL as usual, but to respect their privacy it doesn't:
+Mautic counts clicks on tracked links in Emails and Text Messages from visitors who send a Do Not Track or Global Privacy Control signal, even though it doesn't track those visitors. These clicks add to the link's **Clicks** count, but not to **Unique Clicks**, because Mautic can't tell whether the visitor clicked the link before. Mautic redirects the visitor to the link's URL as usual, but to respect their privacy it doesn't:
 
 * Record the click on a Contact or in the Contact's activity history
 * Store an IP address or set tracking cookies such as ``mtc_id`` and ``mautic_device_id``
 * Replace Contact field or Owner field tokens in the link's URL
 
+Mautic only counts these clicks when the link still carries the tracking information it added when it sent the message. If that information is missing or damaged, for example because someone copied only part of the link, Mautic redirects the visitor without counting the click.
+
 Mautic doesn't count clicks from bots, from IP addresses excluded from tracking, or from ``HTTP HEAD``, prefetch, and prerender requests, because these requests don't come from a person opening the link. For details, see :ref:`Automatic tracking filtering<automatic tracking filtering>`.
 
 .. vale on
 
-Click counts from these visitors are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, Mautic stops counting them. Clicks from tracked Contacts still count and show on the Contact.
+Link click counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, Mautic stops adding to the **Clicks** and **Unique Clicks** counts for every click, including clicks from tracked Contacts. Mautic still records clicks from tracked Contacts on the Contact and in the Contact's activity history.
 
 Link validation
 ***************
