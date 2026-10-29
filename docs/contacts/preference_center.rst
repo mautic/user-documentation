@@ -104,6 +104,33 @@ Please note that if you turn off any of these options in the global settings, th
 
 |
 
+.. vale off
+
+Contact's tracking choice
+=========================
+
+.. vale on
+
+Contacts can turn off tracking for themselves from the Preference Center.
+
+.. vale off
+
+Below the Segments and Categories, the Preference Center asks **Allow my activity to be recorded and associated with my profile** with **Yes** and **No** options.
+
+.. vale on
+
+The choice works as follows:
+
+* The choice starts on **Yes**, so Mautic tracks a Contact as usual until they select **No**.
+* When a Contact selects **No** and saves their preferences, Mautic stops recording their Email opens. The Email still displays normally, but Mautic doesn't mark it as read, store the Contact's IP address or device, add the open to the Contact's history, or trigger the **Opens Email** Campaign decision.
+* The Contact can return to the Preference Center and select **Yes** at any time to turn tracking back on.
+
+Mautic saves the choice only when the Contact changes it, so saving preferences without changing it doesn't record a choice the Contact never made.
+
+The choice covers all of a Contact's activity rather than a single Channel. It currently applies to Email opens. Mautic still records other activity, such as link clicks and Landing Page visits, for Contacts who select **No**.
+
+When you turn on **Show Contact Preference Settings**, the default Preference Center always shows the choice. On a Preference Center Landing Page, add the ``{trackingpreference}`` token to show it - see :ref:`Preference tokens`.
+
 Customize Preference Center
 ***************************
 
@@ -138,6 +165,8 @@ You can use :ref:`Preference Center Landing Page tokens` to insert the different
 |
 
 See the :ref:`Variables<preference center landing page tokens>` documentation for a full list of tokens available for use with a Preference Center.
+
+To let Contacts turn tracking on or off from a Preference Center Landing Page, add the ``{trackingpreference}`` token, which shows as **Tracking choice** in the Builder. If the Landing Page doesn't include this token, it doesn't show the choice, and saving preferences there keeps the Contact's existing choice. See :ref:`Contact's tracking choice` for how the choice works.
 
 In addition, add a **Save preferences** button if you wish to save the preferences, otherwise the Contact can't save their preferences:
 
@@ -187,6 +216,9 @@ The following parameters are available for customizing slot labels in your Theme
    * - Channel Frequency
      - ``channelfrequency['label-text4']``
      - Label for the **Pause to** date setting
+   * - Tracking Choice
+     - ``trackingpreference['label-text']``
+     - Label for the tracking choice question
    * - Save Preferences Button
      - ``saveprefsbutton['btnText']``
      - Text displayed on the save button
