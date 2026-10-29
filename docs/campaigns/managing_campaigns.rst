@@ -35,8 +35,8 @@ The **Recent Activity** panel on the right displays the recent activities that h
 
 .. vale off
 
-Campaign reactivation behavior
-******************************
+Campaign reactivation behaviour
+*******************************
 
 .. vale on
 
@@ -127,7 +127,7 @@ Viewing last activation date
 
 .. vale off
 
-The Campaign details dropdown menu displays the **Last Publish Date**, which indicates when you most recently activated the Campaign. Mautic uses this date as the reference point for the **Restart on republish** option to recalculate scheduled event timings.
+The Campaign details dropdown menu displays the **Last Activation Date**, which indicates when you most recently activated the Campaign. Mautic uses this date as the reference point for the **Restart on reactivation** option to recalculate scheduled event timings.
 
 .. vale on
 
