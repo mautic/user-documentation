@@ -95,6 +95,8 @@ There are different types of documentation available to help you navigate your w
    campaigns/creating_campaigns
    campaigns/campaign_builder
    campaigns/managing_campaigns
+   campaigns/exporting_campaigns
+   campaigns/importing_campaigns
    campaigns/troubleshooting_campaigns
 
 .. toctree::
@@ -103,6 +105,13 @@ There are different types of documentation available to help you navigate your w
    :hidden:
 
    categories/categories-overview
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Projects
+   :hidden:
+
+   projects/projects-overview
 
 .. toctree::
    :caption: Channels
@@ -116,7 +125,6 @@ There are different types of documentation available to help you navigate your w
    channels/social_monitoring
    channels/web_notifications
    channels/push_notifications
-   channels/utm_tags
 
 .. toctree::
    :maxdepth: 2
@@ -222,6 +230,20 @@ There are different types of documentation available to help you navigate your w
    :hidden:
 
    stages/stages
+
+.. toctree::
+   :maxdepth: 2
+   :caption: UTM Tags
+   :hidden:
+
+   utm_tags/utm_tags_overview
+   utm_tags/utm_tags_landing_pages
+   utm_tags/utm_tags_asset_downloads
+   utm_tags/utm_tags_forms
+   utm_tags/utm_tags_emails
+   utm_tags/utm_tags_dynamic_web_content
+   utm_tags/utm_tags_campaign_conditions
+   utm_tags/utm_tags_segment_filters
 
 .. toctree::
    :maxdepth: 2
