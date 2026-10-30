@@ -134,25 +134,29 @@ Events only count days when the Campaign is active. Inactive periods don't count
 
 **When to use:** this option is ideal when you want precise control over the actual time Contacts spend in an active Campaign state. Use this for compliance scenarios, trial periods, or when you need to pause Campaigns without affecting the intended engagement timeline.
 
-Scheduling activation and deactivation
-======================================
+Scheduled activation and deactivation
+=====================================
 
-Scheduled activation and deactivation dates follow the same policy. **Count delay only while active** excludes time before the scheduled activation date and after the scheduled deactivation date. **Restart on reactivation** starts the full delay from the scheduled activation date.
+Scheduled activation and deactivation dates also follow the **Campaign Reactivation Behaviour** setting. **Count delay only while active** excludes time before the scheduled activation date and after the scheduled deactivation date. **Restart on reactivation** starts the full delay from the scheduled activation date.
 
 Viewing reactivation details
 ============================
 
-On the Campaign overview, expand **Details** to view these settings:
+On the Campaign overview, expand the **Details** drop-down menu to view these settings:
 
 .. vale off
 
 * **Campaign Reactivation Behaviour** - Shows the Campaign's selected option. If it inherits the global default, this row displays **Use global setting**.
 * **Last Activation Date** - Shows when you most recently activated the Campaign, or its scheduled activation date. Mautic uses this date to calculate pending event delays for **Restart on reactivation**. If the Campaign has never been active, this row shows 'N/A'.
 
+.. vale on
+
+.. vale Google.Headings = NO
+
 Activating and deactivating Campaigns
 =====================================
 
-.. vale on
+.. vale Google.Headings = YES
 
 When you activate an existing Campaign using its status toggle on the Campaigns list or the **Active** toggle when editing it, Mautic displays a confirmation message with the effective reactivation behavior. If the Campaign uses **Use global setting**, the message shows the global option. Review the message before confirming activation. This confirmation doesn't appear when creating a new Campaign.
 
