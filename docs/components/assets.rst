@@ -77,16 +77,9 @@ The following fields are available:
 - **Description** - an internally used description to inform other Mautic Users what the Asset is and/or where it's used.
 - **Category** - used to organize resources - see :doc:`/categories/categories-overview` for more information
 - **Language** - the language of this Asset - can be helpful in multilingual marketing Campaigns and for reporting purposes
-- **Published** - Whether the Asset is available for use - published - or not available - unpublished
-
-.. vale off
-
-**Publish at (date/time)** - This allows you to define the date and time at which this Asset is available
-
-**Unpublish at (date/time)** - This allows you to define the date and time at which this Asset ceases to be available
-
-.. vale on
-
+- **Available for use** - whether the Asset is available. Set it to **Yes** to make the Asset available, or **No** to make it unavailable.
+- **Available from (date/time)** - the date and time at which the Asset becomes available
+- **Unavailable from (date/time)** - the date and time at which the Asset stops being available
 - **Block search engines from indexing this file** - If you don't want to index files like ``PDF``, ``DOCx`` and so forth, setting this switch to Yes sends the ``X-Robots-Tag no-index`` HTTP header. If set to No, the header isn't sent and your files could become indexed by search engines.
 
 Depending on the type of file uploaded, a preview may display after the upload completes.
@@ -148,7 +141,7 @@ It's possible to delete an Asset by clicking on the **Delete** button while view
 
 .. warning::
 
-   Once you delete an Asset, you can't retrieve it, and Mautic no longer shows the download statistics for that Asset. Contacts keep any Points they earned by accessing the Asset. If Mautic stores the Asset's file locally, deleting the Asset also permanently deletes that file. If the Asset references a remote file - for example a URL or a cloud storage provider such as Amazon S3 - Mautic removes only the Asset record and doesn't delete the remote file. Where possible, deactivate Assets that you no longer use instead of deleting them.
+   Once you delete an Asset, you can't retrieve it, and Mautic no longer shows the download statistics for that Asset. Contacts keep any Points they earned by accessing the Asset. If Mautic stores the Asset's file locally, deleting the Asset also permanently deletes that file. If the Asset references a remote file - for example a URL or a cloud storage provider such as Amazon S3 - Mautic removes only the Asset record and doesn't delete the remote file. Where possible, set **Available for use** to **No** for Assets that you no longer use instead of deleting them.
 
 Display Assets directly in the browser
 ======================================
