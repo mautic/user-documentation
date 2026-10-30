@@ -68,7 +68,7 @@ Mautic adds a type command, such as ``type:mautic-plugin``, to the search box an
 
 To list every type again, select **All types** and click **Apply selected**, or click **Reset**.
 
-Mautic keeps your search and type filter when you open a package and then return to the list, and when you move between pages of results.
+Mautic keeps your search and type filter when you move through the results, and when you open a package and then return to the list.
 
 Plugin detail page
 ******************
@@ -106,13 +106,13 @@ When the package author provides them, the same table also shows:
 * Industry
 * Keywords
 * Price
-* Authors and their roles
+* Authors and their part in the project, such as Developer
 * Support links, such as the issue tracker or documentation
 * Funding links
 
 The supported Mautic versions come from the package author, so verify them before you install a package.
 
-Click the version number to open the release page for the latest stable version in a new window.
+Click the version number to open that release in the package's repository in a new window.
 
 Maintainers
 ===========
