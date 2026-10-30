@@ -788,6 +788,26 @@ Landing Page settings
 
 * **Analytics script** - To track Landing Page visits and activity in other platforms such as Google Analytics, add those tracking scripts here.
 
+.. vale off
+
+Privacy Centre settings
+***********************
+
+.. vale on
+
+The Privacy Centre controls which external services receive data about your Contacts and Users. To open it, go to **Settings** > **Configuration** and select **Privacy Centre**.
+
+Third-party services
+====================
+
+* **Load profile images from Gravatar** - Select **Yes** to show profile images for Contacts and Users from :xref:`Gravatar`. To find each image, Mautic sends Gravatar a hash of the Contact's or User's Email address. When set to **No**, Mautic shows a default placeholder image instead and sends nothing to Gravatar. This setting is **No** by default.
+
+  The setting applies wherever Mautic would otherwise show a Gravatar image, including Contact records, Contact cards, global search, the Users list, and User profiles. It doesn't affect custom profile images that you upload, or images from social Plugins.
+
+.. note::
+
+   After you upgrade to a Mautic version that includes the Privacy Centre, profile images that Mautic loaded from Gravatar show the default placeholder until you set **Load profile images from Gravatar** to **Yes**.
+
 Tracking settings
 *****************
 
