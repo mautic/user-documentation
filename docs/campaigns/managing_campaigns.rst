@@ -39,12 +39,8 @@ The **Contacts** tab displays a grid view of all the Contacts that you have adde
 
 The **Recent Activity** panel on the right displays the recent activities that have taken place in the Campaign.
 
-.. vale off
-
-Campaign reactivation behaviour
-*******************************
-
-.. vale on
+Campaign reactivation behavior
+******************************
 
 When you deactivate and then reactivate a Campaign, Mautic provides control over how scheduled events with relative delays - such as 'Send Email 5 days after joining' - should behave. This feature gives you flexibility in managing Campaign timing based on your specific use case.
 
