@@ -802,7 +802,7 @@ Support Mautic menu item
 
 Mautic shows a **Support Mautic** item in the main navigation menu. Selecting it opens ``https://mau.tc/support`` in a new browser tab, where you can learn how to support the project. Mautic shows this item by default.
 
-To hide the **Support Mautic** menu item—for example, if you run Mautic for clients and prefer not to show it—add the following line to your ``config/local.php`` file, then clear the cache:
+To hide the **Support Mautic** menu item - for example, if you run Mautic for clients and prefer not to show it - add the following line to your ``config/local.php`` file, then clear the cache:
 
 .. code-block:: php
 
