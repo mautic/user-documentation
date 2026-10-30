@@ -148,7 +148,7 @@ It's possible to delete an Asset by clicking on the **Delete** button while view
 
 .. warning::
 
-   Once deleted, you can't retrieve an Asset, and statistics relating to the number of downloads for that Asset are no longer available. Contact Points accumulated as a result of accessing the resource remain. If Mautic stores the Asset's file locally, deleting the Asset also permanently deletes that file. An Asset that references a remote file - for example a URL or a cloud storage provider such as Amazon S3 - has only its Mautic record removed, and the remote file isn't deleted. It's recommended where possible to Unpublish Assets which are no longer in use - in future there may be an archive feature.
+   Once you delete an Asset, you can't retrieve it, and Mautic no longer shows the download statistics for that Asset. Contacts keep any Points they earned by accessing the Asset. If Mautic stores the Asset's file locally, deleting the Asset also permanently deletes that file. If the Asset references a remote file - for example a URL or a cloud storage provider such as Amazon S3 - Mautic removes only the Asset record and doesn't delete the remote file. Where possible, Unpublish Assets that you no longer use instead of deleting them.
 
 Display Assets directly in the browser
 ======================================
