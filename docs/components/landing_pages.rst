@@ -70,4 +70,4 @@ You can end the test on any variant you choose instead of following Mautic's sta
 #. Select the **Make winner** trophy on the variant you want to keep.
 #. Select **Make winner** in the confirmation dialog.
 
-Mautic sets the chosen variant as the main Landing Page, turns off the other variants, stops the A/B test, and resets the current A/B test stats.
+Mautic sets the chosen variant as the main Landing Page, turns off the other variants, and stops the A/B test.

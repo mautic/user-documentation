@@ -217,7 +217,6 @@ To promote a variant, select its **Make winner** trophy, then select **Make winn
    * sets the chosen variant as the main Email
    * turns off the other variants
    * stops the A/B test
-   * resets the current A/B test stats
 
 .. vale off
 
