@@ -318,7 +318,7 @@ This is how you would configure Mautic's Email configuration:
     :width: 400
     :alt: SendGrid API DSN example
 
-To keep the API key masked on screen, leave **User** empty and enter the API key in **Password** instead. For API transports that take a single API key, such as ``sendgrid+api``, Mautic passes the **Password** value to the transport as the API key. Transports that need two credentials, such as ``ses+api`` or ``mailgun+api``, still need both **User** and **Password**.
+To keep the API key masked on screen, leave **User** empty and enter the API key in **Password** instead. For non-SMTP API transports that take a single API key, such as ``sendgrid+api``, Mautic passes the **Password** value to the transport as the API key. Transports that need two credentials, such as ``ses+api`` or ``mailgun+api``, still need both **User** and **Password**.
 
 Save the configuration. Mautic now uses the SendGrid API to send Emails.
 
