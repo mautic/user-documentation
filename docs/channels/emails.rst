@@ -626,10 +626,15 @@ Mautic redirects a Contact whose Owner's first name is 'Alex' to ``https://blog.
 
 Owner field tokens resolve to the field value of the Contact's assigned Owner, who is a Mautic User. The available Owner field tokens are ``{ownerfield=firstname}``, ``{ownerfield=lastname}``, ``{ownerfield=email}``, ``{ownerfield=position}``, and ``{ownerfield=signature}``. See :doc:`/configuration/variables` for the full list of tokens.
 
+.. vale off
+
 .. note::
 
    * Mautic resolves link URL tokens when the Contact clicks the link, so this only applies to tracked links. If you turn off tracking for a link, Mautic doesn't resolve the tokens in its URL.
+   * Mautic also doesn't resolve link URL tokens when the click comes from a visitor who sends a Do Not Track or Global Privacy Control signal, because resolving them would send the Contact's details to another site. The visitor goes to the URL with the tokens left in place. For details, see :ref:`Clicks from visitors Mautic doesn't track<clicks from visitors Mautic doesn't track>`.
    * If the Contact has no Owner, or the Owner field is empty, Mautic replaces the token with an empty string. This can produce a malformed URL, such as ``https://blog.example.com/author//``. Account for missing Owner values when you build link URLs with Owner field tokens.
+
+.. vale on
 
 Contact replies
 ===============
@@ -838,6 +843,25 @@ For example:
 .. note::
 
    Use ``data-mautic-disable-tracking="true"`` for all new Emails and templates, as Mautic has deprecated the ``mautic:disable:tracking`` attribute.
+
+Clicks from visitors Mautic doesn't track
+*****************************************
+
+.. vale off
+
+Mautic counts clicks on tracked links in Emails and Text Messages from visitors who send a Do Not Track or Global Privacy Control signal, even though it doesn't track those visitors. These clicks add to the link's **Clicks** count, but not to **Unique Clicks**, because Mautic can't tell whether the visitor clicked the link before. Mautic redirects the visitor to the link's URL as usual, but to respect their privacy it doesn't:
+
+* Record the click on a Contact or in the Contact's activity history
+* Store an IP address or set tracking cookies such as ``mtc_id`` and ``mautic_device_id``
+* Replace Contact field or Owner field tokens in the link's URL
+
+Mautic only counts these clicks when the link still carries the tracking information it added when it sent the message. If that information is missing or damaged, for example because someone copied only part of the link, Mautic redirects the visitor without counting the click.
+
+Mautic doesn't count clicks from bots, from IP addresses excluded from tracking, or from ``HTTP HEAD``, prefetch, and prerender requests, because these requests don't come from a person opening the link. For details, see :ref:`Automatic tracking filtering<automatic tracking filtering>`.
+
+.. vale on
+
+Link click counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, Mautic stops adding to the **Clicks** and **Unique Clicks** counts for every click, including clicks from tracked Contacts. Mautic still records clicks from tracked Contacts on the Contact and in the Contact's activity history.
 
 Link validation
 ***************
