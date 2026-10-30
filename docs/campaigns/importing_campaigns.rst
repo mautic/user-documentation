@@ -44,12 +44,12 @@ You can import a Campaign in three ways.
 
    These options appear when the import process detects existing Campaigns or Segments that match the imported data.
 
-.. vale off
+   .. vale off
 
    * **Update entity** - Overwrites the existing Campaign or Segment in Mautic with the imported data. Use this option to update configuration, but note that it can overwrite or destroy existing changes on your instance.
    * **Create new entity** - Forces Mautic to create a brand-new Campaign or Segment, even if a matching one already exists. This is the safer option to prevent data loss, but it can lead to duplicate resources.
 
-.. vale on
+   .. vale on
 
 #. Click the **Proceed** button.
 
@@ -91,21 +91,6 @@ Follow the steps below to activate an imported Campaign:
 
 #. Click **Yes** when a prompt message appears.
 
-   .. warning::
-          
-      Activating a Campaign starts execution immediately. Review all Campaign steps, configurations, and associated Assets thoroughly before turning on a Campaign to prevent unintended execution of events. 
-          
-      When a Campaign goes live, scheduled events with relative delays follow the **Campaign Reactivation Behaviour** configuration. If the Campaign uses a specific setting instead of the global default, the execution behavior changes:
-
-   .. vale off
-   
-   * **Use global setting** - Applies the default behavior configured in the global Mautic settings.
-   * **Restart on reactivation** - Resets the delay timer completely. The delay period starts over from zero the moment you reactivate the Campaign.
-   * **Count delay only while active** - Pauses the delay timer while the Campaign is inactive. The timer resumes from where it paused once you reactivate the Campaign.
-   * **Count delay regardless of activation state** - Default option. Keeps the delay timer running continuously in the background, even while the Campaign remains inactive.
-   
-   .. vale on
-
    |
 
    .. vale off
@@ -116,6 +101,23 @@ Follow the steps below to activate an imported Campaign:
    .. vale on
 
    |
+
+   .. warning::
+
+      Activating a Campaign starts execution immediately. Review all Campaign steps, configurations, and associated Assets thoroughly before turning on a Campaign to prevent unintended execution of events.
+
+   .. note::
+
+      Each Campaign has a **Campaign Reactivation Behaviour** setting. It controls how scheduled events with relative delays run when the Campaign goes live. You can choose one of these options:
+
+      .. vale off
+
+      * **Use global setting** - Applies the default behavior configured in the global Mautic settings. This option is available only in an individual Campaign, not in the global settings.
+      * **Restart on reactivation** - Resets the delay timer completely. The delay period starts over from zero the moment you reactivate the Campaign.
+      * **Count delay only while active** - Pauses the delay timer while the Campaign is inactive. The timer resumes from where it paused once you reactivate the Campaign.
+      * **Count delay regardless of activation state** - Default option. Keeps the delay timer running continuously in the background, even while the Campaign remains inactive.
+
+      .. vale on
 
 #. The toggle button automatically changes to green, indicating that the Campaign is active.
       
