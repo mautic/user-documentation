@@ -104,7 +104,7 @@ Follow the steps below to activate an imported Campaign:
 
    .. warning::
 
-      Activating a Campaign starts execution immediately. Review all Campaign steps, configurations, and associated Assets thoroughly before turning on a Campaign to prevent unintended execution of events.
+      Activating a Campaign doesn't run its events right away. Mautic runs scheduled events the next time the ``mautic:campaigns:trigger`` Cron job runs, and decisions run as soon as a Contact takes the matching action. For more information, see :ref:`Campaign cron jobs`. Review all Campaign steps, configurations, and associated Assets thoroughly before turning on a Campaign to prevent unintended execution of events.
 
    .. note::
 
