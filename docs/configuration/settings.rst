@@ -182,11 +182,11 @@ Campaign settings
 
   Available options:
 
-  * **Count delay regardless of activation state** - Mautic uses the original trigger date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
+  * **Count delay regardless of activation state** - Mautic keeps the originally calculated event date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
 
-  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules Events to execute the full delay period starting from the last activation date. 
+  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules events to execute the full delay period starting from the last activation date.
 
-  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules Events accordingly when you reactivate the Campaign.
+  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules events accordingly when you reactivate the Campaign.
 
 Optimal for Contact event scheduler
 ===================================
