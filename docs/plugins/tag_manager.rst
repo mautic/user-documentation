@@ -132,4 +132,4 @@ You can assign Tags to Contacts in several ways:
 
 .. vale on
 
-For more information on using Tags with the tracking pixel, see :ref:`Tracking pixel query <tracking pixel query Tags>` section.
+For more information on using Tags with the tracking pixel, see :ref:`Tags in the tracking pixel query <Tags in manage Contacts>`.

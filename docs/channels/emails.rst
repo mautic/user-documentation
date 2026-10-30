@@ -526,10 +526,8 @@ The token format follows the standard Contact field syntax. You can include an o
 
    The Contact field used in the Email address must contain a valid Email address. If using a Custom Field, ensure it's configured as an Email field type to guarantee proper validation.
 
-.. _sender resolution hierarchy:
-
 Sender resolution hierarchy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When sending Emails, Mautic determines the **From address** using the following priority order:
 
@@ -543,7 +541,7 @@ This hierarchy ensures Emails always have a valid sender while allowing personal
 .. _reply-to resolution hierarchy:
 
 ``Reply-To`` resolution hierarchy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Just as it resolves the From address, Mautic determines the ``Reply-To`` header for queued and batch Email sends - such as Campaign Emails and Segment broadcasts - using the following priority order:
 
