@@ -45,13 +45,30 @@ List of Plugins
 
 The list of Plugins available in the Marketplace is accessible from your Mautic administration menu. Click the **cog icon** in the top right hand corner to display the menu.
 
-The list view allows you to search for specific keywords. It displays quick stats including Plugin downloads and how many stars it has in :xref:`Packagist`. It also shows the vendor who has developed the Plugin. Sadly, the sorting by columns isn't available at the moment because it's not supported by the Packagist API. It's planned to add this in a future release.
+The Marketplace lists Plugins, Themes, and Campaigns. The list view shows each package's type, the vendor who developed it, its downloads, and how many stars it has in :xref:`Packagist`. You can search for specific keywords. The Packagist API doesn't support sorting, so you can't sort the list by its columns.
 
-* Click a Plugin name to view details.
+* Click a package name to view details.
 
 .. image:: images/marketplace-list.png
   :width: 800
   :alt: Screenshot of marketplace list
+
+Filtering by package type
+=========================
+
+To list only one type of package, use the **Quick filters** popover:
+
+#. Open **Quick filters** next to the search box.
+
+#. Under **Type**, select **Plugin**, **Theme**, or **Campaign**.
+
+#. Click **Apply selected**.
+
+Mautic adds a type command, such as ``type:mautic-plugin``, to the search box and shows only packages of that type. Campaign packages use the ``type:mautic-resource`` command. You can type keywords alongside the type command to search within that type. Mautic applies one type at a time, so selecting a different type replaces the previous command.
+
+To list every type again, select **All types** and click **Apply selected**, or click **Reset**.
+
+Mautic keeps your search and type filter when you move through the results, and when you open a package and then return to the list.
 
 Plugin detail page
 ******************
@@ -62,24 +79,40 @@ The detail page gives you enough information together with links to additional r
   :width: 800
   :alt: Screenshot of marketplace detail
 
+Overview
+========
+
+The **Overview** tab shows the package's description, formatted as the package author wrote it. If the author provides expected outcomes, an **Expected outcomes** panel describes what the package helps you achieve. Packages without a detailed description show their short description instead.
+
+For Plugins and Themes, the **Overview** tab also shows the command to install the package from the command line. Campaign packages don't show this command.
 
 Latest stable version
 =====================
 
-The first information you see is the latest stable version. *From Mautic 4.2, this includes the currently installed - if any - version and the ability to upgrade.*
+The **Details** tab shows the latest stable version. *From Mautic 4.2, this includes the currently installed - if any - version and the ability to upgrade.*
 
 All Plugins should follow :xref:`semantic versioning` so you can see from the first glance whether it's a breaking change version, feature version or bug fix - patch - version. In short, it's more risky to install breaking change versions and less risky to install a bug fix version.
 
 The license should be GPLv3 mostly as Mautic uses this license, and it's a viral license. This means anything using Mautic's code base should also use the same license.
 
-Required packages are dependencies. The bigger is the list of dependencies, the bigger the size of the Plugin. More dependencies also means more security risks and incompatibility issues with future upgrades.
+Required packages are dependencies, listed with the version constraint each one requires. The bigger is the list of dependencies, the bigger the size of the Plugin. More dependencies also means more security risks and incompatibility issues with future upgrades.
 
-All versions
-============
+When the package author provides them, the same table also shows:
 
-The next table shows the list of all versions. *In the future versions of the Marketplace it should be possible to select which version you want to install or upgrade to*.
+* Package name
+* Programming language
+* Content languages
+* Supported Mautic versions
+* Industry
+* Keywords
+* Price
+* Authors and their part in the project, such as Developer
+* Support links, such as the issue tracker or documentation
+* Funding links
 
-From the list you can see Plugin versions, and the release cadence. When you click a specific version, a new window opens where the Plugin maintainers should provide a changelog. This tells you what's added or bugs fixed in the specific version.
+The supported Mautic versions come from the package author, so verify them before you install a package.
+
+Click the version number to open that release in the package's repository in a new window.
 
 Maintainers
 ===========
@@ -96,7 +129,7 @@ Packagist information
 
 :xref:`Packagist` is a PHP package repository. It's not related specifically to the Mautic Community, but to the PHP community.
 
-All the PHP packages listed in Packagist are installable by Composer which is a tool for dependency management used under the hood when you install a Mautic Plugin. The Packagist section shows download stats of Plugin installations in different time frames.
+All the PHP packages listed in Packagist are installable by Composer which is a tool for dependency management used under the hood when you install a Mautic Plugin. The Packagist section shows download stats of Plugin installations in different time frames, the number of Packagist favorites, and how many other packages depend on or suggest the package.
 
 Context menu
 ============
@@ -118,7 +151,7 @@ Viewing ratings
 
 Each Plugin in the list view shows its average Mautic Marketplace community rating, as a number rather than star icons, and its total review count. This community rating is separate from the Packagist stars shown in the same list, and gives you a quick sense of community feedback before viewing full details.
 
-When you open a Plugin, a Reviews panel lists individual reviews from other community members. Each review has a 1 to 5 star rating, the review text, and the reviewer's username.
+When you open a Plugin, the Reviews panel shows the average rating out of five and the number of reviews, then lists individual reviews from other community members. Each review has a 1 to 5 star rating, the review text, and the reviewer's username.
 
 Submitting a review
 ===================
