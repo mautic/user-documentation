@@ -266,7 +266,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/116097999?v=4",
       "profile": "http://andersonjeccel.com.br",
       "contributions": [
-        "review"
+        "review",
+        "doc"
       ]
     },
     {
@@ -339,6 +340,42 @@
       "profile": "http://johnlinhart.com",
       "contributions": [
         "review"
+      ]
+    },
+    {
+      "login": "RCheesley",
+      "name": "Sīlavāpi Cheesley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2930593?v=4",
+      "profile": "https://www.ruthcheesley.co.uk",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "fedys",
+      "name": "Miroslav Fedeleš",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6388925?v=4",
+      "profile": "https://www.linkedin.com/in/miroslavfedeles",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "AlexanderZlobinM1",
+      "name": "Alexander Zlobin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186687229?v=4",
+      "profile": "https://tendence.ru/zlobin",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mahmudurrahmanlabib",
+      "name": "Mahmudur Labib",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64046440?v=4",
+      "profile": "https://mahmudurlabib.com",
+      "contributions": [
+        "doc"
       ]
     }
   ],

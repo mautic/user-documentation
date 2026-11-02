@@ -139,6 +139,39 @@ You can edit an Asset by clicking on the 'edit' button while viewing the Asset, 
 
 .. vale off
 
+Downloading multiple Assets
+===========================
+
+.. vale on
+
+To get copies of several Asset files at once, for example to back them up or reuse them elsewhere, download them from the Assets list as a single ZIP file.
+
+.. vale Mautic.FeatureList = NO
+
+#. Go to **Components > Assets**.
+#. Select the checkbox next to each Asset you want to download.
+#. In the selection bar at the top of the table, click the three-dot icon.
+#. Click **Download selected assets**.
+
+.. image:: images/assets/assets_download_selected.png
+  :width: 800
+  :alt: Three selected Assets in the Assets list, with red boxes highlighting the selected checkboxes, the three-dot icon in the selection bar, and the Download selected assets option.
+
+.. vale Mautic.FeatureList = YES
+
+Your browser downloads a ZIP file named ``assets-batch-{date}-{time}.zip``. Each file in the ZIP file keeps its original filename. If two selected Assets share a filename, Mautic adds a number to the later one, such as ``brochure (1).pdf``.
+
+A batch download has these limits:
+
+* You can select up to 100 Assets at a time.
+* The combined size of the selected files can't exceed 500 MB.
+* You can include only Assets that you uploaded to Mautic. Mautic can't add remote Assets, such as files on Amazon S3, to the ZIP file.
+* You need permission to view each selected Asset.
+
+If any selected Asset breaks one of these limits, or its file isn't available, Mautic shows an error message and doesn't download any files. Clear the Assets that cause the problem from your selection and try again.
+
+.. vale off
+
 Deleting an Asset
 =================
 
