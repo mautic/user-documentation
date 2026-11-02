@@ -175,6 +175,7 @@ There are different types of documentation available to help you navigate your w
    plugins/plugin_resources
    plugins/amazon
    plugins/clearbit
+   plugins/companyenrich
    plugins/connectwise
    plugins/fullcontact
    plugins/hubspot
