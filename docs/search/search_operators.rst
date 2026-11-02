@@ -88,7 +88,7 @@ To filter a list by Category:
 
 The list then shows only the items assigned to any of the selected Categories. On the Emails list, the same filter also offers Segments and Themes, and on the Campaigns list it also offers Contact sources.
 
-Mautic adds a ``category:{category alias}`` search filter to the search box for each Category you select. You can combine the Category filter with the status and ownership quick filters, a typed search, sorting, and pagination. To clear the Category filter and return to the full list, click the **Quick filters** button and click **Reset**.
+Mautic adds a ``category:{category alias}`` search filter to the search box for each Category you select. You can combine the Category filter with the status and ownership quick filters, a typed search, sorting, and pagination. To clear the Category filter, click the **Quick filters** button and click **Reset**. Reset keeps any text in the search box, so clear that text too to show the full list.
 
 Search operators
 ================
