@@ -65,18 +65,26 @@ To filter a list by Category:
 #. Open the list view, for example **Segments**.
 #. Next to the search box, click the **Quick filters** button.
 
+   |
+
    .. image:: images/segments-quick-filters-button.png
       :align: center
       :alt: Quick filters button next to the search box on the Segments list view
       :width: 600
 
+   |
+
 #. Under **More**, select one or more Categories in the Category filter.
 #. Click **Apply selected**.
+
+   |
 
    .. image:: images/segments-quick-filters-category.png
       :align: center
       :alt: Quick filters popover with two Categories selected under More and the Apply selected button
       :width: 600
+
+   |
 
 The list then shows only the items assigned to any of the selected Categories. On the Emails list, the same filter also offers Segments and Themes, and on the Campaigns list it also offers Contact sources.
 
