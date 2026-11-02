@@ -76,7 +76,7 @@ Activating an imported Campaign
 
 .. vale on
 
-Before you activate an imported Campaign, open each event that uses a Stage, another Campaign, Focus Item, Marketing Message, Text Message, Web Notification, Mobile Notification, Company, or Contact owner. Select the correct item for any selection that Mautic cleared during the import. For details on what the import changes, see :ref:`How Campaign import works`.
+Before you activate an imported Campaign, open each event that uses a Stage, another Campaign, Focus Item, Marketing Message, Text Message, Web Notification, Mobile Notification, or Contact owner. Select the correct item for any selection that Mautic cleared during the import. Also review the filters of any imported Segment that the import deactivated, and activate the Segment again. For details on what the import changes, see :ref:`How Campaign import works`.
 
 Follow the steps below to activate an imported Campaign:
       
@@ -245,5 +245,7 @@ During the import process, Mautic performs a comprehensive analysis of the data:
 * **Custom Fields:** the import creates the Custom Fields that the Campaign uses and that don't exist on your instance yet. If another Custom Field already uses the same alias, the import gives the new Custom Field a unique alias and updates the Campaign events to use it.
 * **Tags:** the import creates the Tags that the Campaign's events use and that don't exist yet.
 * **Items not included in the export:** the import looks for the Stages, other Campaigns, Focus Items, Marketing Messages, Text Messages, Web Notifications, and Mobile Notifications that the Campaign's events use on your instance. If an item doesn't exist, the import clears that selection in the event.
-* **Companies and owners:** the import clears the Company and Contact owner selections in Campaign events, because Mautic can't match Companies and Users across instances.
+* **Companies:** the import looks for the Companies that the Campaign's events use by name, and creates the ones that don't exist yet.
+* **Contact owners:** the import clears the Contact owner selections in Campaign events, because Mautic can't match Users across instances.
+* **Segment filters:** the import updates the filters of the imported Segments to use the matching items on your instance. If the import can't find an item that a filter selects, it removes that item from the filter and deactivates the Segment, so that Mautic doesn't build the Segment with different rules than on the source instance. This also applies when a filter selects several items and only some of them are missing. Review the filters before you activate the Segment again.
 * **Campaign activation:** after a successful import, the Campaign remains inactive by default.
