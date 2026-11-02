@@ -126,11 +126,11 @@ When you edit an MJML-based Email, you can copy one or more sections and paste t
 To copy and paste sections:
 
 #. In the canvas, select the first section you want to copy.
-#. Hold :kbd:`CTRL` - :kbd:`Cmd` on macOS - and click each additional section you want to copy.
-#. Press :kbd:`CTRL+C` - :kbd:`Cmd+C` on macOS - to copy the selected sections.
+#. Hold :kbd:`Ctrl` on Windows and Linux, or :kbd:`Cmd` on macOS, and click each additional section you want to copy.
+#. To copy the selected sections, press :kbd:`Ctrl+C` on Windows and Linux, or :kbd:`Cmd+C` on macOS.
 #. Open the Email where you want to paste the sections. This can be the same Email.
 #. Select the section you want the pasted sections to follow.
-#. Press :kbd:`CTRL+V` - :kbd:`Cmd+V` on macOS - to paste the sections.
+#. To paste the sections, press :kbd:`Ctrl+V` on Windows and Linux, or :kbd:`Cmd+V` on macOS.
 
 Mautic inserts the copied sections directly after the section you selected. The sections keep the order they have in the original Email, whatever order you selected them in. If you don't select a section before you paste, Mautic adds the copied sections to the end of the Email.
 
