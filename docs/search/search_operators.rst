@@ -136,6 +136,14 @@ Contacts search filters
     email_queued:EMAIL_ID
     email_pending:EMAIL_ID
 
+Custom Fields search filters
+----------------------------
+
+.. code-block::
+
+    is:indexed
+    is:unique
+
 Companies search filters
 ------------------------
 
@@ -291,6 +299,7 @@ Reports search filters
     is:published
     is:unpublished
     is:mine
+    is:scheduled
     Categories
     ids:ID1,ID2 (comma separated IDs, no spaces) is:published is:unpublished
 
