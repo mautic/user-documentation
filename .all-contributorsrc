@@ -377,6 +377,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "irfanhanfi",
+      "name": "Irfan Hanfi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4272642?v=4",
+      "profile": "https://stackoverflow.com/users/902161/irfan",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
