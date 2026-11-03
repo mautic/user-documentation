@@ -67,10 +67,14 @@ The available operations are:
      - Body ``{"domains":["example.com","example.org"]}``
    * - Get company by ID
      - Query parameters with the CompanyEnrich company ID, for example ``{"id":"{company ID}"}``
-   * - Search companies, Count matching companies
+   * - Search companies
      - Body ``{"semanticQuery":"Accounting software","page":1,"pageSize":10}``
-   * - Find similar companies, Count similar companies
+   * - Count matching companies
+     - Body ``{"semanticQuery":"Accounting software"}``
+   * - Find similar companies
      - Body ``{"domains":["example.com"],"pageSize":10}``
+   * - Count similar companies
+     - Body ``{"domains":["example.com"]}``
    * - Company workforce
      - Query parameters ``{"domain":"example.com"}``
    * - Look up person by existing email
