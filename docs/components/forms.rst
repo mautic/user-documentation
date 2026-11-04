@@ -511,6 +511,10 @@ Adding Forms to Pages
 
 There are several ways to add your Mautic Forms to Landing Pages or Websites.
 
+.. note::
+
+   If you add a Form to a website outside your Mautic instance, add the website's domain to **Valid Domains** in the :ref:`CORS settings <CORS Settings>`. Mautic only sends a Contact back to the website that holds the Form when that website is your Mautic site or a domain listed in **Valid Domains**, even if you set **Restrict Domains** to **No**. For a Form on any other website, Mautic ignores the return URL that the Form sends, so the submission records only the referrer URL from the visitor's browser. If the Form's **Successful Submit Action** is **Remain at Form** and the Form submits without Mautic's JavaScript, Mautic shows the Form message in Mautic instead of returning the Contact to your website. This doesn't affect the **Redirect URL** action, which always sends the Contact to the URL you set.
+
 .. vale off
 
 Shortcodes
