@@ -59,7 +59,7 @@ User avatars
 
 Mautic generates an avatar for each User and shows it in the Users list, the profile menu, the **Account** settings, and global search results. Mautic creates these avatars on your own server, so it doesn't send User Email addresses to Gravatar or any other external service.
 
-Each User keeps the same avatar, and different Users get different avatars. The same User can have a different avatar on another Mautic instance, because the avatar also depends on the instance's site URL.
+Mautic bases each avatar on the User and the instance's :ref:`Site URL <site-url>`. Each User keeps the same avatar as long as the **Site URL** doesn't change, and different Users get different avatars. If you change the **Site URL**, every User on that instance gets a new avatar. The same User can also have a different avatar on another Mautic instance.
 
 The **Load profile images from Gravatar** setting in the Privacy Centre applies only to Contact profile images. It doesn't change User avatars.
 
