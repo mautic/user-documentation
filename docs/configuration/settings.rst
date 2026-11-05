@@ -133,6 +133,12 @@ Theme settings
 
 * **Default Theme** - Applies a Theme to any Form which doesn't have a Theme already applied. If you don't have a Landing Page for your Preference Center, but have preference settings turned on in Email settings, Mautic creates a default Preference Center page using the Form styling from the Theme selected here.
 
+.. vale off
+
+* **Show the Custom Theme tab in the email and landing page editors** - Set to **Yes** to show a **Custom Theme** tab next to the **Theme** tab in the Email and Landing Page builders. The tab lists the Themes that you mark as custom Themes on the Themes page, and the **Theme** tab lists the other Themes. The default is **No**, which shows all Themes in the **Theme** tab. For more information, see :ref:`Showing custom Themes in a separate tab`.
+
+.. vale on
+
 API settings
 ************
 

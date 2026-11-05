@@ -152,11 +152,52 @@ To hide a Theme:
 
 5. Select the drop-down before the Theme, and click **Hide**.
 
-6. Mautic moves the Theme to the bottom of the table and show it in grey, which hides it within builders.
+6. Mautic moves the Theme to the bottom of the table and shows it in grey, which hides it within builders.
+
 .. vale off
 
 To revert this change open the context menu of the hidden Theme and click **Unhide**.
+
 .. vale on
+
+.. vale off
+
+Showing custom Themes in a separate tab
+***************************************
+
+.. vale on
+
+When you install your own Themes alongside the default Themes, the list of Themes in the Email and Landing Page builders can get long. To keep your own Themes apart, mark them as custom Themes and turn on the **Custom Theme** tab. The builders then show custom Themes in the **Custom Theme** tab, next to the **Theme** tab, and the **Theme** tab shows only the other Themes.
+
+.. vale off
+
+To turn on the **Custom Theme** tab, set **Show the Custom Theme tab in the email and landing page editors** to **Yes** in the :ref:`Theme settings`. The tab is off by default.
+
+To mark a Theme as a custom Theme:
+
+#. Log in to Mautic.
+
+#. Click the **Settings** icon.
+
+#. Click **Themes**.
+
+#. In the Themes section, locate the Theme that you want to mark.
+
+#. Select the drop-down before the Theme, and click **Set as custom theme**.
+
+#. In the confirmation dialog box, click **Set as custom theme**. Mautic shows a brush icon next to the Theme's name.
+
+To remove the mark, select the drop-down before the custom Theme, click **Remove from custom themes**, and confirm.
+
+.. vale on
+
+You can mark Themes even when the **Custom Theme** tab is off. Mautic keeps the marks, so custom Themes show in the **Theme** tab until you turn the **Custom Theme** tab on.
+
+When the **Custom Theme** tab is on:
+
+* If an Email or Landing Page uses a custom Theme, the builder opens the **Custom Theme** tab first.
+* If you haven't marked any Themes, the **Custom Theme** tab shows a hint about how to mark Themes.
+* Forms don't change. They list all Themes in the Theme drop-down.
 
 .. vale off
 
