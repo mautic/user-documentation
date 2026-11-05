@@ -195,10 +195,22 @@ Forms search filters
     is:mine
     is:published
     is:unpublished
+    is:expired
+    is:pending
     has:results
+    has:actions
     name:*
     is:uncategorized
     category:{category alias}
+
+The Form status and content filters match these Forms:
+
+.. vale off
+
+* ``is:expired`` - active Forms whose **Deactivate at (date/time)** has passed.
+* ``is:pending`` - active Forms whose **Activate at (date/time)** is still in the future.
+* ``has:results`` - Forms with at least one submission.
+* ``has:actions`` - Forms with at least one Form action, such as sending an Email or adding the Contact to a Segment.
 
 .. vale off
 
