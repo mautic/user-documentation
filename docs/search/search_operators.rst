@@ -190,7 +190,7 @@ The file type filters match an Asset's MIME type:
 * ``is:image`` - MIME types that start with ``image/``, such as PNG and JPEG files.
 * ``is:video`` - MIME types that start with ``video/``, such as MP4 files.
 * ``is:audio`` - MIME types that start with ``audio/``, such as MP3 files.
-* ``is:document`` - MIME types that start with ``application/`` or ``text/``, such as PDF, Word, spreadsheet, and plain text files. Because ZIP files also use an ``application/`` MIME type, ``is:document`` includes them too.
+* ``is:document`` - PDF, rich text, plain text, and CSV files, Microsoft Word, Excel, and PowerPoint files, and OpenDocument text, spreadsheet, and presentation files. Other file types, such as ZIP files, don't match.
 
 Forms search filters
 --------------------
