@@ -139,6 +139,21 @@ You can edit an Asset by clicking on the 'edit' button while viewing the Asset, 
 
 .. vale off
 
+Filtering Assets by file type
+=============================
+
+.. vale on
+
+To find Assets of one kind, such as all images, filter the Assets list by file type.
+
+#. Go to **Components > Assets**.
+#. Next to the search box, click the **Quick filters** button.
+#. Select the file type filter you want: image, video, document, or audio.
+
+Each quick filter adds the matching search filter to the search box, so you can also type it directly: ``is:image``, ``is:video``, ``is:document``, or ``is:audio``. You can combine these with other search filters, such as ``is:published``. For how Mautic matches each file type, see :ref:`Assets search filters <assets search filters>`.
+
+.. vale off
+
 Downloading multiple Assets
 ===========================
 
