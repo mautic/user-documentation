@@ -34,6 +34,24 @@ Creating a Segment
 
      On the **Details** tab, static and dynamic Segments also have the option to display a different public name for a Segment.
 
+Translating public names
+========================
+
+You can show a Segment's Public name in a Contact's preferred locale without creating a separate Segment for each language. The **Public name** on the **Details** tab is the default when no translation matches. It isn't tied to your Mautic installation's locale.
+
+To add translations:
+
+#. Create or edit a Segment and set **Available in Preference Center** to **Yes**.
+#. Enter the default **Public name** on the **Details** tab.
+#. Open the **Translations** tab and click **Add translation**.
+#. Choose a locale and enter the translated Public name. Repeat for other locales, then save the Segment.
+
+To change a translation, edit its Public name on the **Translations** tab. To delete one, use the trash button beside its row and save the Segment. Each locale can appear only once for a Segment.
+
+Mautic uses the Contact's preferred locale to choose a Public name. It tries an exact locale match first, then the base language, then the default Public name. For example, a Contact with ``fr_CH`` sees a ``fr_CH`` translation if one exists, otherwise a ``fr`` translation, otherwise the default Public name. A Contact without a preferred locale sees the default Public name.
+
+The **Translations** tab is available only while **Available in Preference Center** is **Yes**. Turning this option off hides the tab and keeps the saved translations. Turning it on again restores them. Translations change only the label shown to Contacts in the Preference Center. The Segment and its membership stay the same.
+
 .. vale off
 
 Viewing Contact Segments
