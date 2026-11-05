@@ -204,12 +204,6 @@ These are the commands you may need to use in relation to your Mautic instance.
    * - ``mautic:webhooks:process``
      - Process queued Webhook payloads
      - 
-   * - ``social:monitor:twitter:hashtags``
-     - Looks at the monitoring records and finds hashtags.
-     - 
-   * - ``social:monitor:twitter:mentions``
-     - Searches for mentioned tweets
-     -
    * - ``mautic:forms:delete-results-table``
      - Deletes orphan results tables for deleted Forms.
      -

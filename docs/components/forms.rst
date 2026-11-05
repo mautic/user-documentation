@@ -189,8 +189,6 @@ To add a new field to your Form:
 
    - **Slider** - This field provides an interactive slider control that allows visitors to select a numeric value from a predefined range by dragging a handle along a track. The slider displays the minimum and maximum values at each end and shows the current selected value as the visitor moves the handle.
 
-   - **Social login** - This allows the visitor to connect their Twitter, Facebook or LinkedIn profiles with their Contact record. You must configure the Plugin for the social network before using this field.
-
    - **Text: Short answer** - This field shows a text box with 255 characters available. Common uses include specifying the visitor's first name, last name, city, and so forth.
 
    - **Text: Paragraph** - Similar to the text field, but without the 255 character limitation. The text area field has a character limit of 65,535 characters.
