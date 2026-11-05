@@ -73,6 +73,8 @@ The following values are available:
    *  Form: {form=ID#}
    *  Focus item: {focus=ID#}
 
+   The Focus item token also supports the ``{focus=ID#|display}`` and ``{focus=ID#|tracking}`` variants. Dynamic Web Content always loads a Focus Item added with ``{focus=ID#|display}``. It loads a Focus Item added with ``{focus=ID#}`` or ``{focus=ID#|tracking}`` only after Mautic website tracking starts. See :doc:`/channels/focus_items` for details.
+
 .. vale on
 
 **Category** - Assign a Category to help you organize your Dynamic Web Content items. See :doc:`/categories/categories-overview` for more information.
