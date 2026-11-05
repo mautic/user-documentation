@@ -523,7 +523,9 @@ Some Email security gateways, such as Microsoft Safe Links, Mimecast, Proofpoint
 
 .. vale on
 
-To ignore this traffic, turn on burst detection by editing your ``config/local.php`` file. When tracked links in an Email get clicks from the set number of different IP addresses for the same Contact within a short time window, Mautic treats further opens and clicks of that Email by that Contact during the window as bot activity. Mautic doesn't mark the Email as read and doesn't record those clicks.
+To ignore part of this traffic, turn on burst detection by editing your ``config/local.php`` file. When Mautic has recorded clicks on tracked links in an Email from the set number of different IP addresses for the same Contact within a short time window, it treats further opens and clicks of that Email by that Contact during the window as bot activity. Mautic doesn't record those opens and clicks.
+
+Burst detection doesn't affect the clicks that come before the threshold. Mautic records those clicks, and the first one marks the Email as read and counts as an open. As a result, a scan can still make an Email show as read for a Contact who never opened it.
 
 * ``bot_helper_burst_max_distinct_ips`` - The number of different IP addresses that triggers burst detection. The default is ``0``, which turns burst detection off. For example, set it to ``3``.
 * ``bot_helper_burst_window_seconds`` - The length of the time window, in seconds, that Mautic checks for clicks from different IP addresses. The default is ``30``.
