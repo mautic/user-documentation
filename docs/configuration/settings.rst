@@ -178,15 +178,15 @@ Campaign settings
 
 * **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<Campaign Cron jobs>` to summarize existing data.
 
-* **Campaign Reactivation Behavior** - Configure how Mautic handles scheduled events with relative delays in the middle of the workflow when you reactivate a Campaign after a period of deactivation. This setting provides a global default that you can override for an individual Campaign. This setting affects how the :ref:`Campaign Cron jobs<Campaign Cron jobs>` schedule events. See :ref:`Campaign reactivation behavior` section for more information.
+* **Campaign Reactivation Behaviour** - Configure how Mautic handles scheduled events with relative delays in the middle of the workflow when you reactivate a Campaign after a period of deactivation. This setting provides a global default that you can override for an individual Campaign. This setting affects how the :ref:`Campaign Cron jobs<Campaign Cron jobs>` schedule events. See the :ref:`Campaign reactivation behavior` section for more information.
 
   Available options:
 
-  * **Count delay regardless of activation state** - Mautic uses the original trigger date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
+  * **Count delay regardless of activation state** - Mautic keeps the originally calculated event date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
 
-  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules Events to execute the full delay period starting from the last activation date. 
+  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules events to execute the full delay period starting from the last activation date.
 
-  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules Events accordingly when you reactivate the Campaign.
+  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules events accordingly when you reactivate the Campaign.
 
 Optimal for Contact event scheduler
 ===================================
@@ -489,6 +489,8 @@ Unsubscribe settings
 * **Show Contact's preferred Channel option** - If you have multiple Channels available within your Mautic instance. For example; Email, ``SMS``, mobile push, web notifications, etc., Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
 * **Default Preference Center Landing Page** - Select a Landing Page to use as the global default Preference Center. When a Contact unsubscribes, Mautic applies this default to any Email that doesn't have its own Preference Center, including Emails you created before setting the default and Emails you've already sent. Mautic resolves the default at unsubscribe time rather than copying it onto each Email when you create it, so changing this setting immediately updates the Preference Center for every Email without its own selection. Emails that have a Preference Center selected always use that Page. If the default Landing Page is missing, unpublished, or no longer marked as a Preference Center, Mautic falls back to its standard unsubscribe behavior. Read the :doc:`/contacts/preference_center` section for more information.
+
+* **Require email validation for unsubscribe** - Select **Yes** - the default - to route unsubscribe and resubscribe links through a confirmation page where the Contact must confirm their Email address before the action completes. This protects against abuse of leaked or forwarded links. Select **No** to let unsubscribe and resubscribe links complete the action directly on click and embed the Contact's Email address and a hash. You might choose **No** if the extra confirmation step affects deliverability or increases spam complaints for the Emails you send. See the :ref:`Unsubscribing section of the Email documentation <Unsubscribing>` for what the validation page does.
 
 .. vale on
 

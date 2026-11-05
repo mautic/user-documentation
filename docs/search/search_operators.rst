@@ -55,6 +55,41 @@ On the Contacts list, the dropdown also reminds you that you can type a filter d
 
 The fields you select in the dropdown map to the same search filters and operators described in the following sections, so you can always type them directly instead.
 
+Filter list views by Category
+=============================
+
+Use the Category filter to show only the items that belong to one or more Categories. The filter is available on the list views for Assets, Campaigns, Dynamic Content, Emails, Focus Items, Forms, Landing Pages, Point Actions, Point Triggers, Segments, Stages, and Webhooks.
+
+To filter a list by Category:
+
+#. Open the list view, for example **Segments**.
+#. Next to the search box, click the **Quick filters** button.
+
+   |
+
+   .. image:: images/segments-quick-filters-button.png
+      :align: center
+      :alt: Quick filters button next to the search box on the Segments list view
+      :width: 600
+
+   |
+
+#. Under **More**, select one or more Categories in the Category filter.
+#. Click **Apply selected**.
+
+   |
+
+   .. image:: images/segments-quick-filters-category.png
+      :align: center
+      :alt: Quick filters popover with two Categories selected under More and the Apply selected button
+      :width: 600
+
+   |
+
+The list then shows only the items assigned to any of the selected Categories. On the Emails list, the same filter also offers Segments and Themes, and on the Campaigns list it also offers Contact sources.
+
+Mautic adds a ``category:{category alias}`` search filter to the search box for each Category you select. You can combine the Category filter with the status and ownership quick filters, a typed search, sorting, and pagination. To clear the Category filter, click the **Quick filters** button and click **Reset**. Reset keeps any text in the search box, so clear that text too to show the full list.
+
 Search operators
 ================
 
@@ -87,8 +122,8 @@ Contacts search filters
     is:mine
     email:*
     segment:{segment_alias}
-    source:manually_added
-    source:filter_added
+    segment_source:manually_added (use with segment:{segment_alias})
+    segment_source:filter_added (use with segment:{segment_alias})
     name:*
     company:*
     owner:*
@@ -105,7 +140,15 @@ Contacts search filters
 
 .. note::
 
-   Combine the ``source:`` filter with the ``segment:`` filter to break down a Segment's membership by how Contacts joined it. ``source:manually_added`` returns Contacts added manually, including those who subscribed through the Preference Center, and ``source:filter_added`` returns Contacts that Mautic added automatically based on the Segment's filter rules. On its own, without a ``segment:`` filter, ``source:`` returns no results.
+   The ``segment_source`` filter finds Contacts by how they joined a Segment, so it only works together with a ``segment`` filter. For example, ``segment:newsletter segment_source:manually_added`` returns the Contacts added to the ``newsletter`` Segment manually, and ``segment:newsletter segment_source:filter_added`` returns the ones that Mautic added because they match the Segment's filters. On its own, ``segment_source`` returns no Contacts.
+
+Custom Fields search filters
+----------------------------
+
+.. code-block::
+
+    is:indexed
+    is:unique
 
 Companies search filters
 ------------------------
@@ -262,6 +305,7 @@ Reports search filters
     is:published
     is:unpublished
     is:mine
+    is:scheduled
     Categories
     ids:ID1,ID2 (comma separated IDs, no spaces) is:published is:unpublished
 
@@ -274,6 +318,7 @@ Users search filters
     is:admin
     is:active
     is:inactive
+    is:never_logged_in
     email:*
     name:*
     position:*
