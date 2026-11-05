@@ -90,6 +90,33 @@ The list then shows only the items assigned to any of the selected Categories. O
 
 Mautic adds a ``category:{category alias}`` search filter to the search box for each Category you select. You can combine the Category filter with the status and ownership quick filters, a typed search, sorting, and pagination. To clear the Category filter, click the **Quick filters** button and click **Reset**. Reset keeps any text in the search box, so clear that text too to show the full list.
 
+Filter Webhooks by event type
+=============================
+
+Filter the Webhooks list by event type to find the Webhooks that send a specific kind of activity, such as Email opens or Form submissions.
+
+To filter Webhooks by event type:
+
+#. Click the settings wheel in the top right corner and select **Webhooks**.
+#. Next to the search box, click the **Quick filters** button.
+#. Under **Event type**, select an event type.
+#. Click **Apply selected**.
+
+The list then shows only the Webhooks subscribed to at least one event of that type. Each event type covers these options from the **Webhook Events** list that you choose from when you create or edit a Webhook:
+
+.. vale off
+
+* **Company** - **Company Create/Update Event**, **Company Deleted Event**, and **Contact Company Subscription Change Event**
+* **Contact** - **Contact Identified Event**, **Contact Updated Event**, **Contact Points Changed Event**, **Contact Deleted Event**, **Contact Channel Subscription Change Event**, and **Contact Segment Membership Change Event**
+* **Email** - **Email Send Event** and **Email Open Event**
+* **Form** - **Form Submit Event**
+* **Page** - **Page Hit Event**
+* **Text message** - **Text Send Event**
+
+.. vale on
+
+Each event type adds an ``event:`` search filter to the search box, such as ``event:email``. If you select more than one event type, the list shows only the Webhooks subscribed to all of them. To show Webhooks subscribed to any of several event types, type the event types separated by commas, for example ``event:email,form``. To exclude Webhooks subscribed to an event type, add an exclamation mark, for example ``!event:email``.
+
 Search operators
 ================
 
@@ -341,6 +368,11 @@ Webhooks search filters
     is:unpublished
     is:mine
     is:uncategorized
-    is:prefcenter
+    name:*
     category:{category alias}
-    lang:{lang code}
+    event:company
+    event:lead (or event:contact)
+    event:email
+    event:form
+    event:page
+    event:text-message
