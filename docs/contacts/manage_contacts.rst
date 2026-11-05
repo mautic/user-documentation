@@ -26,6 +26,39 @@ The search box allows many different search types and follows the same search pr
 
 .. vale off
 
+Filtering Contacts with Quick filters
+=====================================
+
+.. vale on
+
+Use **Quick filters** to narrow the Contacts list without typing search commands.
+
+#. Go to **Contacts**.
+
+#. Next to the search box, click the **Quick filters** button.
+
+#. Select the filters you want, then click **Apply selected**.
+
+The following filters are available:
+
+.. vale off
+
+* **My items** - Contacts assigned to you. Adds the ``is:mine`` command.
+
+* **Unowned** - Contacts that aren't assigned to any User. Adds the ``is:unowned`` command.
+
+* **Unsegmented** - Contacts that aren't in any Segment. Adds the ``is:unsegmented`` command. Contacts that you removed manually from a Segment don't count as members of that Segment.
+
+* **Do Not Contact** - Contacts marked as Do Not Contact on any Channel. Adds the ``dnc:any`` command.
+
+.. vale on
+
+Use **Unsegmented** to find Contacts that no Segment-based Campaign or Segment Email reaches, so you can add them to a Segment. To show only Contacts that belong to at least one Segment, search for ``!is:unsegmented``.
+
+For the full list of search commands, see :doc:`Searching Mautic </search/search_operators>`.
+
+.. vale off
+
 Working with Contacts
 *********************
 
