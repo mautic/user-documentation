@@ -44,6 +44,33 @@ To add a new action:
 
 .. vale off
 
+Filter Point Actions with Quick filters
+=======================================
+
+.. vale on
+
+Use **Quick filters** on the Point Actions list to find actions by how they change a Contact's Points, or to find the actions that can award Points more than once.
+
+#. Go to **Points** > **Manage Actions**.
+
+#. Next to the search box, click the **Quick filters** button.
+
+#. Select one or more filters:
+
+   * **Point gain** under **Point change** - shows actions that add Points, and adds the ``type:gain`` command to the search box.
+
+   * **Point loss** under **Point change** - shows actions that deduct Points, and adds the ``type:loss`` command to the search box.
+
+   * **Repeatable** under **Others** - shows actions with **Is repeatable** set to **Yes**, and adds the ``is:repeatable`` command to the search box.
+
+   You can't select **Point gain** and **Point loss** together. Actions set to change Points by ``0`` don't match either option.
+
+#. Click **Apply selected**.
+
+You can also type these commands in the search box. To find one-time actions, search for ``!is:repeatable``. For the full list of search commands and operators, see :doc:`Searching Mautic </search/search_operators>`.
+
+.. vale off
+
 Point Triggers
 **************
 
