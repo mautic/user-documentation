@@ -63,7 +63,7 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 * **Restrict Domains** - When set to No, any website can pass information to Mautic. Selecting ``Yes`` to limit communication with your Mautic instance to websites listed in Valid Domains is **strongly recommended**.
 
-* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website.
+* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on the non-secure example.com website, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website. Mautic also uses this list to decide which websites a Form submission can return the Contact to. For more information, see :ref:`Adding Forms to Pages`.
 
 * **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. Enter the domain name where you installed Mautic, such as ``mautic.example.com``. Separate multiple hosts with a comma. You can also use regular expressions for advanced matching, which Mautic encloses with ``/`` delimiters. For instance, ``.*\.?example.com$`` becomes ``/.*\.?example.com$/``. If left empty, Mautic responds to all hosts.
 
