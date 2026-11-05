@@ -200,7 +200,7 @@ Once you have created your Focus Item, you're ready to activate it to your websi
 Deploying to a website
 ======================
 
-When you save the Focus Item, Mautic shows the code required to display it on your website in the 'Focus implementation' panel on the Focus Item overview. For external websites, the panel offers two options - 'Consent-managed' and 'Full tracking' - and it also provides copyable Landing Page tokens. The legacy single-script snippet still works, so previously embedded Focus Items keep working without any changes.
+When you save the Focus Item, the Focus Item overview shows the code to add it to your website in the **Focus implementation** panel. For external websites, the panel offers two options, **Consent-managed** and **Full tracking**. It also provides copyable Landing Page tokens. Focus Items that you embedded before with the single-script snippet keep working without any changes.
 
   .. image:: images/focus_items/focus_item_embed.png
     :width: 400
@@ -214,61 +214,61 @@ When you save the Focus Item, Mautic shows the code required to display it on yo
 Consent-managed embed
 ~~~~~~~~~~~~~~~~~~~~~
 
-The 'Consent-managed' option gives you two pieces that you use together:
+Use the **Consent-managed** option when your site must wait for the visitor's consent decision before Focus tracking starts. It gives you two pieces that you use together:
 
-* A *display* script that loads and shows the Focus Item without any Mautic tracking.
-* A *tracking activation* snippet that calls Mautic's public ``window.MauticFocus.enableTracking(<id>)`` API, where ``<id>`` is the Focus Item's numeric ID. Calling it activates tracking for that Focus Item. Your site's developer runs this snippet from your consent-management platform (CMP) so Focus tracking starts only after the visitor grants consent.
+* A *display* script that loads and shows the Focus Item without Mautic statistics, a tracked Contact identity, or personalization.
+* A *tracking activation* call to Mautic's public ``window.MauticFocus.enableTracking(<id>)`` API, where ``<id>`` is the Focus Item's numeric ID. Your site's developer runs this call from the consent callback of your consent-management platform, so Focus tracking starts only after the visitor grants consent.
 
 .. code-block:: js
 
    // run this from your consent-management platform once the visitor consents
    window.MauticFocus.enableTracking(123);
 
-Use the 'Consent-managed' option when your site must wait for the visitor's consent decision before Focus tracking can start.
+Add the display script to your website. Only the call to ``window.MauticFocus.enableTracking(<id>)`` waits for consent. If the visitor never consents, the call never runs, so the Focus Item still displays but Mautic doesn't track it. If the call runs before the display script has loaded, Mautic queues it and activates tracking once the Focus Item is ready. Mautic loads the tracking layer only once, even when the call runs more than once.
 
-Both the display script and the tracking activation snippet go on the page. Only the *call* to ``window.MauticFocus.enableTracking(<id>)`` is gated by consent. If the visitor never consents, that call never runs: the Focus Item still displays, and Mautic just doesn't track it.
+Mautic doesn't record or verify consent. It only separates displaying the Focus Item from activating tracking, and your site's own consent mechanism controls when tracking starts.
 
-Mautic doesn't record or verify consent - it only separates displaying the Focus Item from activating tracking. Your site's own consent mechanism controls when tracking starts.
+.. warning::
 
-If your Mautic administrator has turned on 'Use Mautic consent for Focus tracking' (see 'Bridging Mautic website-tracking consent' below), you don't need to call ``window.MauticFocus.enableTracking(<id>)`` separately - the two approaches are alternatives.
+   The display script still uses cookies to control how often the Focus Item appears and to remember interactions, such as closing it. A Focus Item can also contain a Form, custom content, or external resources. Review these before you load a Focus Item without tracking consent.
+
+If your Mautic administrator has turned on **Use Mautic consent for Focus tracking**, you don't need to call ``window.MauticFocus.enableTracking(<id>)`` yourself. See :ref:`Focus tracking with Mautic website tracking consent` for details.
 
 Full tracking embed
 ~~~~~~~~~~~~~~~~~~~
 
-The 'Full tracking' option is a single snippet that loads the display script and then immediately activates tracking. This is equivalent to the legacy embed behavior. Use it only when consent already exists at page load, or when you handle consent through another mechanism outside of Mautic. As with the 'Consent-managed' option, your web development team places this snippet on the page.
+The **Full tracking** option is a single snippet that loads the display script and activates tracking right away, like the earlier single-script embed. Use it only when the visitor has already given consent when your website loads, or when you handle consent outside of Mautic. As with the **Consent-managed** option, your web development team adds this snippet to your website.
 
-Bridging Mautic website-tracking consent
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Focus tracking with Mautic website tracking consent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is a system-wide setting in Settings > Configuration (typically administrator-only), so you may need your Mautic administrator to review or change it. Mautic's global Configuration includes a 'Use Mautic consent for Focus tracking' option under Tracking Settings, turned off by default. See :doc:`/configuration/settings` for where to find it.
+If your website already manages Mautic website tracking through consent, Focus tracking can follow the same consent. To set this up, turn on **Use Mautic consent for Focus tracking** under **Script modifiers** in the Tracking Settings of the global Configuration. It's off by default. Configuration is usually available only to administrators, so you may need your Mautic administrator to change it. See :doc:`/configuration/settings` for details.
 
-When this option is on, the copied website-tracking snippet (Mautic's main site-tracking code, separate from the Focus Item embed) bridges the visitor's Mautic website-tracking consent to Focus tracking. Focus tracking then activates automatically once the visitor grants Mautic website-tracking consent, so you don't need to call ``window.MauticFocus.enableTracking(<id>)`` from a separate CMP. This is the same consent that Mautic's website tracking script uses.
+When this setting is on, the website tracking snippets that Mautic shows for copying in the Tracking Settings tell Focus Items to follow Mautic website tracking consent. Focus tracking then activates automatically once Mautic website tracking starts, so you don't need a separate ``window.MauticFocus.enableTracking(<id>)`` call. If you keep a manual call in place, it does no harm.
 
 .. warning::
 
-   For the bridge to gate Focus tracking on consent, your website must itself manage Mautic tracking through consent. Otherwise, Focus tracking activates as soon as Mautic tracking loads, with no consent gating at all. See :doc:`/configuration/tracking_script` for how to set up consent-managed website tracking.
+   Focus tracking waits for consent only if your website itself loads Mautic website tracking after consent. Otherwise, Focus tracking activates as soon as Mautic tracking loads. See :doc:`/configuration/tracking_script` for how to set up consent-managed website tracking.
 
-This setting only affects Focus Items embedded with the 'Consent-managed' option. Focus Items using 'Full tracking' or the legacy snippet always activate tracking immediately, regardless of this setting.
+Keep the following in mind:
 
-Turning this setting on or off only changes the snippets Mautic shows for copying in the configuration UI. It doesn't alter Focus scripts already deployed on live sites. To apply the change to an existing embed, copy the updated snippet again and redeploy it.
-
-It's safe to leave a manual ``window.MauticFocus.enableTracking(<id>)`` call in place when this setting is on - you don't need both, but keeping it does no harm.
-
-When it's off, you manage Focus tracking consent independently by calling ``window.MauticFocus.enableTracking(<id>)`` as described in the 'Consent-managed embed' section.
+* The setting only affects Focus Items embedded with the **Consent-managed** option. Focus Items embedded with **Full tracking** or the single-script snippet always activate tracking right away.
+* The setting only changes the snippets that Mautic shows for copying. It doesn't change scripts already on your website. After you change the setting, save the Configuration, copy the updated website tracking snippet, and redeploy it.
+* When the setting is off, you manage Focus tracking consent yourself by calling ``window.MauticFocus.enableTracking(<id>)``, as described in :ref:`Consent-managed embed`.
 
 .. vale off
 
-Embedding in a Landing Page or Email
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Embedding in a Landing Page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. vale on
 
-You can also embed a Focus Item in a Landing Page or Email using a page-builder token. Unlike the website embed, a bare ``{focus=ID}`` token activates tracking; only the ``{focus=ID|display}`` variant is display-only. Three variants are available:
+You can also add a Focus Item to a Landing Page with a token. The Landing Page builder lists two tokens for each Focus Item:
 
-* ``{focus=ID}`` and ``{focus=ID|tracking}`` - load the display script and activate tracking together, matching the legacy behavior.
-* ``{focus=ID|display}`` - load the display script only, with no tracking.
+* ``{focus=ID|display}`` - shows the Focus Item without tracking.
+* ``{focus=ID|tracking}`` - shows the Focus Item and activates tracking right away. The ``{focus=ID}`` token works the same way.
 
-The ``{focus=ID|display}`` variant renders the Focus Item without tracking; the consent-managed activation flow in the preceding sections applies to the website script embed, not to tokens. Use ``{focus=ID}`` or ``{focus=ID|tracking}`` when you want tracking with the token embed.
+The consent-managed activation flow described earlier applies to the website embed, not to tokens. A Landing Page with ``{focus=ID|display}`` doesn't activate Focus tracking later.
 
 See :doc:`/configuration/variables` for the full list of tokens.
 

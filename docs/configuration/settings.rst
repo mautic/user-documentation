@@ -812,7 +812,7 @@ Mautic tracking settings
 
 * **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
 
-* **Use Mautic consent for Focus tracking** - Off by default. Find it under the 'Script modifiers' heading on the Tracking Settings tab. When set to **Yes**, Focus tracking activates automatically once the visitor grants Mautic website-tracking consent. This works only when your website manages Mautic tracking through consent; if it doesn't, Focus tracking activates as soon as Mautic tracking loads, with no consent gating. This setting affects only Focus Items embedded with the 'Consent-managed' option. 'Full tracking' and legacy embeds always activate tracking immediately. When off, you manage Focus tracking consent independently. See :doc:`/channels/focus_items` and :doc:`/configuration/tracking_script` for details.
+* **Use Mautic consent for Focus tracking** - Under **Script modifiers**. Select **Yes** to make Focus Items embedded with the **Consent-managed** option activate tracking once Mautic website tracking starts. This waits for consent only when your website loads Mautic tracking after consent. The setting is off by default and only changes the tracking snippets that Mautic shows for copying, so save the Configuration, copy the updated snippet, and redeploy it on your website. See :doc:`/channels/focus_items` and :doc:`/configuration/tracking_script` for details.
 
 .. note:: 
 
