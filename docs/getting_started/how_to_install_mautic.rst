@@ -252,7 +252,7 @@ Installing from GitHub
 
 It's essential to have all the files locally - including automated tests - from the GitHub repository when testing Mautic or contributing to it. Many of these files aren't included in the production build process.
 
-Node.js and npm aren't required for the production ZIP package or a standard Composer deployment. Install compatible Node.js and npm versions only when working from a GitHub source checkout or when an instruction or third-party workflow requires ``node``/``npm`` commands to build frontend resources. NVM is optional and can help you manage Node.js versions; it isn't a Mautic installation requirement.
+You don't need Node.js or npm for the production ZIP package or a standard Composer deployment. Install compatible Node.js and npm versions only when you work from a GitHub source checkout, or when an instruction or third-party workflow requires ``node`` or ``npm`` commands to build frontend resources. Node Version Manager - NVM - is optional and can help you manage Node.js versions. Mautic doesn't require it for installation.
 
 Cloning Mautic from GitHub
 ==========================
