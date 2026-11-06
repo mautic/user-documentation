@@ -73,9 +73,9 @@ If you need to add extra file types, configure the maximum size of upload or the
 The following fields are available:
 
 - **Title** - the title for the Asset
-- **Alias** - used to create the slug on the download URL. Created from the title automatically if not provided.
 - **Description** - an internally used description to inform other Mautic Users what the Asset is and/or where it's used.
 - **Category** - used to organize resources - see :doc:`/categories/categories-overview` for more information
+- **Projects** - the Projects that this Asset belongs to. You can select more than one. To select Projects, you need the **Associate with other entities** Project permission. See :doc:`/projects/projects-overview` for more information.
 - **Language** - the language of this Asset - can be helpful in multilingual marketing Campaigns and for reporting purposes
 - **Published** - Whether the Asset is available for use - published - or not available - unpublished
 
