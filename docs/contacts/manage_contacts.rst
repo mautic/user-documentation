@@ -44,6 +44,8 @@ Quick Add is a short Form with the fields you deem most important. To display fi
 
 You can add the Contact through the New Contact Form and include much more detail, but for quick entry this is the easiest and fastest way to get the Contact into the system.
 
+Select **Save & New** to save the Contact and immediately open a fresh Quick Add Form for the next Contact.
+
 .. vale off
 
 Add new Contact
@@ -150,7 +152,7 @@ You can find the following options:
 
 * **Change Channels** - Allows you to subscribe/unsubscribe the selected Contacts to/from communication Channels, such as Email and SMS, and also define frequency rules.
 
-* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner.
+* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner. To remove the owner, choose **No owner** in the **Change Owner** form and save.
 
 * **Change Segments** - Allows you to add/remove the selected Contacts to/from Segments. Note that if you add/remove a Contact to/from Segment manually, then Segment filters won't apply for them in that particular Segment.
 
