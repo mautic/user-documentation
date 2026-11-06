@@ -22,6 +22,44 @@ List of Contacts assigned
 
 You can find a table with the list of the assigned Contacts displaying the date of their last activity, preceding the information of the Company which includes the Company name, address, and all the custom Company fields, and the engagement chart. This is good way to have a view of the recent activity of the Contacts you know in this Company.
 
+.. vale off
+
+Removing Contacts from a Company
+================================
+
+.. vale on
+
+When you view a Company, the assigned Contacts table lists the Contacts in that Company. You can remove one or more of them from the Company. This removes only the Company association. Mautic keeps the Contacts and doesn't delete them.
+
+.. vale off
+
+#. In the assigned Contacts table, select the checkboxes next to the Contacts you want to remove.
+
+   .. image:: images/companies_remove_contacts_select.png
+      :alt: Two selected Contacts in the assigned Contacts table of a Company, with their checkboxes highlighted.
+
+#. Click the three-dot **Options** icon at the top of the table, then select **Remove from company**.
+
+   .. image:: images/companies_remove_contacts_menu.png
+      :alt: The Options menu open on the assigned Contacts table, with Remove from company highlighted.
+
+#. In the confirmation dialog, click **Remove from company** to confirm, or click **Cancel** to keep the Contacts in the Company.
+
+   .. image:: images/companies_remove_contacts_confirm.png
+      :alt: The confirmation dialog for removing Contacts from a Company, showing the Cancel and Remove from company buttons.
+
+.. vale on
+
+After you confirm, Mautic removes only the selected Contacts from this Company and shows a notice with the number of Contacts it removed.
+
+You can remove up to 1,000 Contacts at a time. If you select more, Mautic removes none of them and shows an error with this limit.
+
+If a removed Contact had this Company as their primary Company, Mautic assigns another Company as primary, or the Contact ends up with no Company. This works the same way as deleting a Company. For more information, see :ref:`Deleting Companies`.
+
+.. note::
+
+   To remove Contacts, you need View permission on the Company and Edit permission on the Contacts - **Edit Own** or **Edit Others**. Mautic skips any Contact that another User has open for editing or that you don't have permission to edit.
+
 Company duplicates
 *******************
 The Company name field is a unique identifier by default. You can choose any other Company field as unique identifier in the **Custom Fields** section.
