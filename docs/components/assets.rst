@@ -77,9 +77,15 @@ The following fields are available:
 - **Description** - an internally used description to inform other Mautic Users what the Asset is and/or where it's used.
 - **Category** - used to organize resources - see :doc:`/categories/categories-overview` for more information
 - **Language** - the language of this Asset - can be helpful in multilingual marketing Campaigns and for reporting purposes
-- **Available for use** - whether the Asset is available. Set it to **Yes** to make the Asset available, or **No** to make it unavailable.
+- **Available for use** - whether the Asset is available. Set it to **Yes** to make the Asset available within the scheduled dates, or **No** to make it unavailable.
+
+.. vale off
+
 - **Available from (date/time)** - the date and time at which the Asset becomes available
 - **Unavailable from (date/time)** - the date and time at which the Asset stops being available
+
+.. vale on
+
 - **Block search engines from indexing this file** - If you don't want to index files like ``PDF``, ``DOCx`` and so forth, setting this switch to Yes sends the ``X-Robots-Tag no-index`` HTTP header. If set to No, the header isn't sent and your files could become indexed by search engines.
 
 Depending on the type of file uploaded, a preview may display after the upload completes.
