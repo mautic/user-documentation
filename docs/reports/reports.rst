@@ -313,11 +313,13 @@ To view additional options for Report, click the drop-down menu next to the chec
 
 * **Clone** copies the Report so that you can make small adjustments in a similar but new Report, while maintaining the original Report.
 
+  .. note::
+
+     You can also clone a Report while viewing it. Open the actions menu at the top right of the Report's view and select **Clone**. This action appears when you have permission to create Reports.
+
 * **Export & Send** sends a link containing the ``.csv`` file with the Report data to the email address on your User profile.
 
 * **Delete** deletes the Report immediately.
-
-You can also clone a Report while viewing it. Open the actions menu at the top right of the Report's view and select **Clone**. This action appears when you have permission to create Reports. Cloning creates a copy and leaves the original Report intact, the same as cloning from the Reports list.
 
 Quick filters
 =============
