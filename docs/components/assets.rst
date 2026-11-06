@@ -77,13 +77,12 @@ The following fields are available:
 - **Description** - an internally used description to inform other Mautic Users what the Asset is and/or where it's used.
 - **Category** - used to organize resources - see :doc:`/categories/categories-overview` for more information
 - **Language** - the language of this Asset - can be helpful in multilingual marketing Campaigns and for reporting purposes
-- **Published** - Whether the Asset is available for use - published - or not available - unpublished
+- **Available for use** - whether the Asset is available. Set it to **Yes** to make the Asset available within the scheduled dates, or **No** to make it unavailable.
 
 .. vale off
 
-**Publish at (date/time)** - This allows you to define the date and time at which this Asset is available
-
-**Unpublish at (date/time)** - This allows you to define the date and time at which this Asset ceases to be available
+- **Available from (date/time)** - the date and time at which the Asset becomes available
+- **Unavailable from (date/time)** - the date and time at which the Asset stops being available
 
 .. vale on
 
@@ -139,15 +138,49 @@ You can edit an Asset by clicking on the 'edit' button while viewing the Asset, 
 
 .. vale off
 
+Downloading multiple Assets
+===========================
+
+.. vale on
+
+To get copies of several Asset files at once, for example to back them up or reuse them elsewhere, download them from the Assets list as a single ZIP file.
+
+.. vale Mautic.FeatureList = NO
+
+#. Go to **Components > Assets**.
+#. Select the checkbox next to each Asset you want to download.
+#. In the selection bar at the top of the table, click the three-dot icon.
+#. Click **Download selected assets**.
+
+.. image:: images/assets/assets_download_selected.png
+  :width: 800
+  :alt: Three selected Assets in the Assets list, with red boxes highlighting the selected checkboxes, the three-dot icon in the selection bar, and the Download selected assets option.
+
+.. vale Mautic.FeatureList = YES
+
+Your browser downloads a ZIP file named ``assets-batch-{date}-{time}.zip``. Each file in the ZIP file keeps its original filename. If two selected Assets share a filename, Mautic adds a number to the later one, such as ``brochure (1).pdf``.
+
+A batch download has these limits:
+
+* You can select up to 100 Assets at a time.
+* The combined size of the selected files can't exceed 500 MB.
+* You can include only Assets that you uploaded to Mautic. Mautic can't add remote Assets, such as files on Amazon S3, to the ZIP file.
+* You need permission to view each selected Asset.
+
+If any selected Asset breaks one of these limits, or its file isn't available, Mautic shows an error message and doesn't download any files. Clear the Assets that cause the problem from your selection and try again.
+
+.. vale off
+
 Deleting an Asset
 =================
 
 .. vale on
 
-It's possible to delete an Asset by clicking on the 'delete' button while viewing the Asset, or by selecting the arrow next to the checkbox for the Asset, and selecting 'delete'. Mautic displays a confirmation screen, prompting confirmation that you wish to delete the Asset.
+It's possible to delete an Asset by clicking on the **Delete** button while viewing the Asset, or by selecting the arrow next to the checkbox for the Asset, and selecting **Delete**. Mautic displays a confirmation screen, prompting confirmation that you wish to delete the Asset.
 
-.. warning:: 
-    Once deleted, you can't retrieve an Asset, and statistics relating to the number of downloads for that Asset are no longer be available. Contact Points accumulated as a result of accessing the resource remain. It's recommended where possible to unpublish Assets which are no longer in use - in future there may be an archive feature.
+.. warning::
+
+   Once you delete an Asset, you can't retrieve it, and Mautic no longer shows the download statistics for that Asset. Contacts keep any Points they earned by accessing the Asset. If Mautic stores the Asset's file locally, deleting the Asset also permanently deletes that file. If the Asset references a remote file - for example a URL or a cloud storage provider such as Amazon S3 - Mautic removes only the Asset record and doesn't delete the remote file. Where possible, set **Available for use** to **No** for Assets that you no longer use instead of deleting them.
 
 Display Assets directly in the browser
 ======================================
