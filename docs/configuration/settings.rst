@@ -811,7 +811,15 @@ Mautic tracking settings
 * **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent filling your logs with hits from bots.
 
 * **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
-  
+
+.. vale off
+
+* **Track link clicks** - This setting is **Yes** by default. Select **No** to stop linking clicks on tracked links in Emails and Text Messages to the people who click them. Tracked links still take visitors to their destination, but Mautic doesn't recognize the Contact from the link or from existing ``mtc_id`` and ``mautic_device_id`` cookies. It also doesn't set tracking cookies, store an IP address, record the click on the Contact, or replace Contact field tokens in the link's URL. Because Mautic doesn't know who clicked, the click doesn't trigger Campaign decisions such as **Clicks Email**.
+
+  Mautic still counts these clicks. They add to the link's total clicks, overall and for each Email or Text Message, but not to its unique clicks. Clicks from bots, from addresses in **List of IPs not to track Contacts with**, and from ``HTTP HEAD`` or prefetch requests don't count. For more information, see :ref:`Automatic tracking filtering<automatic tracking filtering>`. Click counts are aggregate analytics, so the **Record aggregate analytics** setting controls them, not this one. When a tracked link points to an Asset, the Asset's own download tracking setting decides whether Mautic links the download to the Contact.
+
+.. vale on
+
 .. note:: 
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
