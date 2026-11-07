@@ -166,6 +166,8 @@ Segments search filters
     name:*
     category:category-alias
 
+.. _assets search filters:
+
 Assets search filters
 ---------------------
 
@@ -178,6 +180,17 @@ Assets search filters
     name:*
     is:uncategorized
     category:{category alias}
+    is:image
+    is:video
+    is:audio
+    is:document
+
+The file type filters match an Asset's MIME type:
+
+* ``is:image`` - MIME types that start with ``image/``, such as PNG and JPEG files.
+* ``is:video`` - MIME types that start with ``video/``, such as MP4 files.
+* ``is:audio`` - MIME types that start with ``audio/``, such as MP3 files.
+* ``is:document`` - PDF, rich text, plain text, and CSV files, Microsoft Word, Excel, and PowerPoint files, and OpenDocument text, spreadsheet, and presentation files. Other file types, such as ZIP files, don't match.
 
 Forms search filters
 --------------------
