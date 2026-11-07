@@ -838,6 +838,12 @@ To keep your analytics focused on real people, Mautic automatically excludes cer
 
 This filtering is always on, and you can't turn it off. Because Mautic doesn't track these requests, it doesn't create anonymous Contacts for them, so your analytics reflect genuine human engagement and respect visitor privacy preferences.
 
+.. vale off
+
+Asset downloads from visitors who send a Global Privacy Control or Do Not Track signal still count toward the Asset's total downloads, without any link to the visitor. For details, see :ref:`Asset download counts<asset download counts>`.
+
+.. vale on
+
 Facebook pixel
 ==============
 
