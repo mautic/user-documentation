@@ -277,7 +277,11 @@ You can identify scheduled Reports in the list of Reports from Mautic 5.1 and la
    :align: center
    :alt: Screenshot of Mautic Scheduled Report showing a paper aeroplane icon
 
-You can also filter the Reports list to show only scheduled Reports by selecting the **Has scheduled Reports** filter, or by typing ``is:scheduled`` in the search box. Mautic then shows only the Reports set up for scheduled Email delivery - see :ref:`Reports search filters` for the related search commands.
+.. vale off
+
+You can also filter the Reports list to show only scheduled Reports by selecting the **Has scheduled reports** quick filter, or by typing ``is:scheduled`` in the search box. Mautic then shows only the Reports set up for scheduled Email delivery - see :ref:`Reports search filters` for the related search commands.
+
+.. vale on
 
 .. vale off
 
@@ -320,6 +324,43 @@ To view additional options for Report, click the drop-down menu next to the chec
 * **Export & Send** sends a link containing the ``.csv`` file with the Report data to the email address on your User profile.
 
 * **Delete** deletes the Report immediately. If the Report has scheduled Emails, deleting it also stops those sends.
+
+.. _filter reports by data source:
+
+Filter the Reports list by data source
+======================================
+
+When you have many Reports, filter the list by data source to find the Reports built on a specific type of data, such as Contacts or Emails.
+
+#. Go to **Reports**.
+#. Next to the search box, click the **Quick filters** button.
+#. Under **Data source**, select one of the following data sources:
+
+   .. vale off
+
+   * **Contacts**
+   * **Campaigns**
+   * **Assets**
+   * **Emails**
+   * **Forms**
+   * **Segment activity log**
+   * **Do Not Contact**
+   * **Landing pages**
+   * **Focus items**
+
+   .. vale on
+
+#. Click **Apply selected**.
+
+The list shows only the Reports that use the selected data source. Each option matches one data source, so **Contacts** shows Reports built on the Contacts data source but not, for example, Reports built on Contact Point Log or Segment Membership.
+
+.. vale off
+
+You can select one data source at a time, and you can combine it with the other quick filters, such as **Has scheduled reports**.
+
+.. vale on
+
+Mautic adds a ``source:{data source}`` search filter to the search box, for example ``source:leads`` for Contacts. To clear the filter, click the **Quick filters** button and click **Reset**. For the other search filters, see :ref:`Reports search filters`.
 
 Quick filters
 =============
