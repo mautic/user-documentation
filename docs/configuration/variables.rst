@@ -273,6 +273,8 @@ See :doc:`customizing preference center</contacts/preference_center>` for more i
      - ``{preferredchannel}``
    * - Channel Frequency
      - ``{channelfrequency}``
+   * - Tracking Choice
+     - ``{trackingpreference}``
    * - Save Preferences
      - ``{saveprefsbutton}``
 
@@ -438,6 +440,8 @@ Alphabetical list
      - ``{contactfield=companystate}``
    * - Subject
      - ``{subject}`` 
+   * - Tracking Choice (Preference Center)
+     - ``{trackingpreference}``
    * - Twitter
      - ``{contactfield=twitter}``
    * - Preferred Channel (Preference Center)
