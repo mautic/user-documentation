@@ -322,13 +322,13 @@ The Mautic :xref:`Recommended Project` is a template which provides a starter ki
 .. note::
   The instructions below refer to the global Composer installation. You might need to replace Composer with ``php composer.phar`` or something similar for your setup.
 
-The Mautic 7.2 Recommended Project runs ``npm ci`` and ``npx patch-package`` during Composer's install and update scripts. Install compatible Node.js and npm versions before running these commands. If you use DDEV, its web container provides Node.js and npm, so you don't need to install them separately on the host. Mautic doesn't require Node Version Manager (NVM) for installation.
+The Mautic 7.2 Recommended Project runs ``npm ci`` and ``npx patch-package`` during Composer's install and update scripts. The Mautic 7.2 DDEV configuration specifies Node.js 24, which includes a compatible npm version. To use that toolchain, run Composer inside DDEV's web container with ``ddev composer`` or from a ``ddev ssh`` session. If you run Composer on the host instead, install Node.js 24 and its bundled npm, then verify them with ``node --version`` and ``npm --version`` before running Composer. Mautic doesn't require Node Version Manager (NVM) for installation.
 
 The basic command to use the Recommended Project is:
 
 .. code-block:: shell
 
-  composer create-project mautic/recommended-project:7.2.* some-dir --no-interaction
+  composer create-project 'mautic/recommended-project:7.2.*' some-dir --no-interaction
 
 With Composer you can add new dependencies to install along with Mautic:
 
@@ -456,7 +456,7 @@ New installations
 
 .. code-block:: bash
   
-  composer create-project mautic/recommended-project:7.2.* some-dir --no-interaction --no-install
+  composer create-project 'mautic/recommended-project:7.2.*' some-dir --no-interaction --no-install
 
 * Do a find and replace in the ``composer.json`` file to change ``docroot/`` into ``public/``
 * Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements
