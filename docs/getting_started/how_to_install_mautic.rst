@@ -252,7 +252,7 @@ Installing from GitHub
 
 It's essential to have all the files locally - including automated tests - from the GitHub repository when testing Mautic or contributing to it. Many of these files aren't included in the production build process.
 
-You don't need Node.js or npm for the production ZIP package. A Composer deployment may require them when its install or update scripts invoke npm commands; for example, the Mautic 7.2 Recommended Project runs those commands to build frontend resources. Install compatible Node.js and npm versions for that Composer workflow and when you work from a GitHub source checkout or follow an instruction that requires ``node`` or ``npm`` commands. Node Version Manager - NVM - is optional and can help you manage Node.js versions. Mautic doesn't require it for installation.
+You don't need Node.js or npm for the production ZIP package. A GitHub source checkout may require compatible Node.js and npm versions when you follow instructions that run ``node`` or ``npm`` commands to build frontend resources. Node Version Manager - NVM - is optional and can help you manage Node.js versions.
 
 Cloning Mautic from GitHub
 ==========================
@@ -322,11 +322,13 @@ The Mautic :xref:`Recommended Project` is a template which provides a starter ki
 .. note::
   The instructions below refer to the global Composer installation. You might need to replace Composer with ``php composer.phar`` or something similar for your setup.
 
+The Mautic 7.2 Recommended Project runs ``npm ci`` and ``npx patch-package`` during Composer's install and update scripts. Install compatible Node.js and npm versions before running these commands. If you use DDEV, its web container provides Node.js and npm, so you don't need to install them separately on the host. Mautic doesn't require Node Version Manager (NVM) for installation.
+
 The basic command to use the Recommended Project is:
 
 .. code-block:: shell
 
-  composer create-project mautic/recommended-project:^5 some-dir --no-interaction
+  composer create-project mautic/recommended-project:7.2.* some-dir --no-interaction
 
 With Composer you can add new dependencies to install along with Mautic:
 
@@ -454,7 +456,7 @@ New installations
 
 .. code-block:: bash
   
-  composer create-project mautic/recommended-project:^5 some-dir --no-interaction --no-install
+  composer create-project mautic/recommended-project:7.2.* some-dir --no-interaction --no-install
 
 * Do a find and replace in the ``composer.json`` file to change ``docroot/`` into ``public/``
 * Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements
