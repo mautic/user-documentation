@@ -29,7 +29,7 @@ In order to configure the text messages correctly, follow these steps:
 
 5. Copy the *Account Sender ID (SID)* from Twilio account and paste it to *Account Sender ID* field in the Twilio Plugin configuration.
 
-6. Unlock and copy the *Auth Token* and paste it to *Auth Token* field in the Twilio Plugin configuration.
+6. Unlock and copy the *Auth Token* and paste it to *Auth Token* field in the Twilio Plugin configuration. The **Auth Token** field always appears empty after you save it. To keep the saved token when you edit the Plugin configuration later, leave the field blank.
 
 7. Go to *Phone Numbers* > Active numbers in Twilio, add a phone number if you haven't already commissioned one.
 
@@ -63,7 +63,7 @@ In order to configure the text messages correctly, follow these steps:
 
 14. Configure the global frequency rules for the SMS Channel as appropriate for your business.
 
-15. Select the *Published*? switch to *Yes* in the Enabled/Auth tab in Mautic and save the Plugin configuration.
+15. Set the **Is Enabled?** switch to **Yes** on the **Enabled/Auth** tab in Mautic and save the Plugin configuration.
 
 .. vale off
 
