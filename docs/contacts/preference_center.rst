@@ -115,11 +115,11 @@ Contacts can stop Mautic from recording when they open your Emails.
 
 .. vale off
 
-Below the Segments and Categories, the Preference Center asks **Allow my activity to be recorded and associated with my profile** with **Yes** and **No** options.
+Below the Segments and Categories, the Preference Center shows **Record when I open your emails** with **Yes** and **No** options.
 
 .. vale on
 
-Although the question mentions all activity, the answer only changes Email open tracking. Mautic still records other activity, such as link clicks and Landing Page visits, for Contacts who select **No**.
+The choice only covers Email opens. Mautic still records other activity, such as link clicks and Landing Page visits, for Contacts who select **No**.
 
 The choice works as follows:
 
@@ -218,7 +218,7 @@ The following parameters are available for customizing slot labels in your Theme
      - Label for the **Pause to** date setting
    * - Tracking Choice
      - ``trackingpreference['label-text']``
-     - Label for the tracking choice question
+     - Label for the tracking choice
    * - Save Preferences Button
      - ``saveprefsbutton['btnText']``
      - Text displayed on the save button
