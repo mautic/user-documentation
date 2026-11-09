@@ -230,7 +230,11 @@ Mautic doesn't record or verify consent. It only separates displaying the Focus 
 
 .. warning::
 
-   The display script still uses cookies to control how often the Focus Item appears and to remember interactions, such as closing it. A Focus Item can also contain a Form, custom content, or external resources. Review these before you load a Focus Item without tracking consent.
+   A Focus Item can contain a Form, custom content, or external resources. Review these before you load a Focus Item without tracking consent.
+
+Until tracking starts, the display script doesn't write the frequency and dismissal cookies ``mautic_focus_{id}`` and ``mautic_focus_{id}_closed``, where ``{id}`` is the Focus Item's ID. It keeps these values on the current page and writes the cookies once tracking starts. From then on, **How often to engage** and **Stop engaging after closing Focus** work as usual.
+
+Before consent, nothing carries over to the next page. For example, a Focus Item set to show **Once per session** shows again on every page the visitor opens, and a visitor who closes it sees it again on the next page. The Bar style still sets a cookie to remember whether the visitor collapsed the bar. The **Full tracking** embed writes all cookies right away.
 
 If your Mautic administrator has turned on **Use Mautic consent for Focus tracking**, you don't need to call ``window.MauticFocus.enableTracking(<id>)`` yourself. See :ref:`Focus tracking with Mautic website tracking consent` for details.
 
