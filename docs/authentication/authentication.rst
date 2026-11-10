@@ -60,10 +60,10 @@ When OpenID Connect is on, the login page shows a **Sign In with OpenID Connect*
 When the provider redirects back, Mautic looks for the Mautic User linked to that provider account:
 
 * If a linked User exists, Mautic logs in as that User.
-* If no linked User exists and **Allow new user registration** is on, Mautic creates a User with the Role set in **Role for new users**, links it to the provider account, and logs in. Mautic takes the email address, username, first name, and last name from the provider. If the provider doesn't send a username, or another User already has it, Mautic uses the email address as the username.
+* If no linked User exists and **Allow new user registration** is on, Mautic creates a User with the Role set in **Role for new users**, links it to the provider account, and logs in. Mautic takes the email address, username, first name, and last name from the provider. If the provider doesn't send a username, or the username matches another User's username or email address, Mautic uses the email address as the username.
 * If no linked User exists and registration is off, the login fails.
 
-Mautic doesn't link a provider account to an existing Mautic User by matching email addresses. If a Mautic User with the same email address exists but isn't linked, registration fails because the email address is already in use. Link the existing User instead.
+Mautic doesn't link a provider account to an existing Mautic User by matching email addresses or usernames. If the provider's email address matches the email address or username of an existing Mautic User, registration fails and Mautic shows 'Failed to register. This identity is already associated with an account.' To give that person access through the provider, link the existing User instead.
 
 .. vale off
 
