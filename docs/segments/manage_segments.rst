@@ -318,6 +318,8 @@ Configuring Segment filters
 
     * Mautic evaluates only the Contact's primary Company. Secondary Companies don't affect the result.
 
+    * Company filters saved before Mautic 7.3 appear in this group, but they keep their earlier matching rules after you update, including secondary Companies. Segments that use them keep the same Contacts. Filters you add after the update match only the primary Company. To make an older filter match only the primary Company, remove it and add it again.
+
     * Negative operators, such as **is not equal to**, **doesn't contain**, and **is empty**, also match Contacts that have no primary Company.
 
   * **Any associated company** fields
@@ -329,8 +331,6 @@ Configuring Segment filters
     * Negative operators also need only one matching Company. **Country** **is not equal to** 'Belgium' matches a Contact with a Company in France, even if another of its Companies is in Belgium.
 
     * Contacts without any associated Company never match these filters, including negative operators.
-
-    * Before Mautic 7.3, Company filters matched every Company associated with the Contact. When you update Mautic, it moves the existing Company filters in your Segments to this group, so those Segments keep the same Contacts. To match only the primary Company, edit the filter and select the field under **Contact's primary company**.
 
   .. vale on
 
