@@ -122,3 +122,40 @@ When the invited person opens the link in the Email, Mautic shows a registration
 After the invitee clicks **Create Account**, Mautic creates the User and redirects them to the login page, where they can sign in with their new credentials.
 
 .. vale on
+
+Filtering Users who have never logged in
+****************************************
+
+The Users list offers a **Never logged in** quick filter that shows only Users who have never signed in. Use it to review these accounts as part of account hygiene.
+
+To filter the list:
+
+#. Navigate to **Settings** > **Users**.
+#. Open the quick-filter menu next to the search box.
+#. Select **Never logged in**.
+
+The list then shows only Users with no recorded last login. Select **Reset** to clear the filter and restore the full list.
+
+You can also type ``is:never_logged_in`` directly into the Users search box. For the full list of Users search filters, see :ref:`Users search filters <Users search filters>`.
+
+.. vale off
+
+Deleting a User
+***************
+
+.. vale on
+
+An Administrator with the **Delete** permission for Users can delete a User from **Settings** > **Users**:
+
+* To delete one User, select **Delete** for the User in the list.
+* To delete several at once, select the checkboxes next to the Users you want to delete, then select **Delete selected**.
+
+.. warning::
+
+   Before you confirm, be aware of what happens when you delete a User:
+
+   * Mautic leaves the User's Contacts and Companies unassigned.
+   * Mautic removes the User's API access tokens.
+   * Mautic removes the User's scheduled Contact exports.
+
+   You can't undo this action.

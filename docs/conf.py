@@ -101,4 +101,6 @@ linkcheck_ignore = [
     r"https://www.vtiger.com/",
     # 403 client error from this domain (anti-bot block; URL works in a browser)
     r"https://www.howtoforge.com/a-short-introduction-to-cron-jobs",
+    # 415 client error from this domain (WAF rejects the checker; URL works in a browser)
+    r"https://aivie.ch/*",
 ]
