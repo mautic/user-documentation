@@ -101,7 +101,7 @@ The Companies list has a **Quick filters** popover you can use to filter the lis
    .. image:: images/companies_quick_filters_unowned.png
       :alt: The Quick filters popover with Unowned companies selected under Ownership, and Unowned companies and Apply selected highlighted.
 
-Selecting **Unowned companies** shows the Companies that no User owns and adds the ``is:unowned`` command to the search box. To clear the filter and return to the full list, click **Reset**. To assign an owner to the Companies this filter surfaces, select them and use the **Change Owner** batch action described under Batch changes below.
+Selecting **Unowned companies** shows the Companies that no User owns and adds the ``is:unowned`` command to the search box. To clear the filter and return to the full list, click **Reset**. To assign an owner to these Companies, select them and use the **Change Owner** batch option. For more information, see :ref:`Batch changes <batch changes for Companies>`.
 
 .. image:: images/companies_quick_filters_applied.png
    :alt: The Companies list filtered to the three unowned Companies, with is:unowned highlighted in the search box.
@@ -111,6 +111,8 @@ Selecting **Unowned companies** shows the Companies that no User owns and adds t
 Because **Quick filters** adds a command to the search box, you can edit or extend it. The full search syntax still works for more detailed or combined queries.
 
 For the full list of search commands and other filters, see :doc:`Searching Mautic </search/search_operators>`.
+
+.. _batch changes for Companies:
 
 Batch changes
 *************
