@@ -13,7 +13,11 @@ Before you commence these steps, please ensure that you have a **tested backup o
 Checking for schema updates
 ***************************
 
-Mautic has a built-in tool which enables you to verify the database and identify if there are any schema updates required. Visit ``example.com/s/update/schema`` to see if there are any updates required.
+To see whether there are any outstanding database migrations, run this command from the Mautic directory.
+
+.. code:: bash
+
+    php bin/console doctrine:migrations:status
 
 If this isn't possible, or your Mautic instance is down completely, follow the next tips.
 
