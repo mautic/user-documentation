@@ -30,7 +30,13 @@ Once configured, you can search the Marketplace using the filter, and install Pl
   :width: 800
   :alt: Screenshot of Composer enabled
 
-If you haven't correctly set the Composer setting, Mautic displays a warning that the Mautic Marketplace is available in read-only mode, with a link which explains how to transition to a :doc:`Composer-managed</getting_started/switching_composer>` installation.
+.. vale off
+
+If you haven't enabled the **Update Mautic through Composer [BETA]** setting, Mautic displays the warning 'Technical setup required to install or update plugins'.
+
+.. vale on
+
+The warning links to instructions you can send to a developer for switching to a :doc:`Composer-managed</getting_started/switching_composer>` installation. Until then, you can browse the Marketplace, but you can't install or update Plugins or Themes from it. Campaign packages don't need Composer.
 
 .. image:: images/need-to-enable-composer.png
   :width: 800
@@ -146,13 +152,17 @@ All the PHP packages listed in Packagist are installable by Composer which is a 
 
 Context menu
 ============
-The context menu shows actions you can take.
+The detail view shows these actions, depending on the package and your permissions:
 
-* Close takes you to the list view
+* **Back to Marketplace** takes you to the list view.
 
-* Install installs the Plugin
+* **Install** installs the package. Mautic shows this action when the package isn't installed and you have permission to install packages.
 
-* Issue tracker opens a new window with the issue tracker for the Plugin. It shows only if the Plugin has this information available. Use this option to search for issues with the Plugin and to report new issues to the maintainers.
+* **Remove** removes the installed package. Mautic shows this action when you have permission to remove packages.
+
+* **Documentation** opens the package's documentation. Mautic shows this action only if the package provides a documentation link.
+
+* **Issue tracker** opens a new window with the issue tracker for the Plugin. Mautic shows this action only if the Plugin has this information available. Use this option to search for issues with the Plugin and to open new issues for the maintainers.
 
 Ratings and reviews
 *******************
@@ -237,6 +247,25 @@ There are options allowing you to filter or go to next pages. To display the ful
 
 Example usage how to search for a ``Captcha`` Plugin: ``bin/console mautic:marketplace:list --filter=captcha``
 
+Install and remove packages
+===========================
+
+To install a package from the command line, run this command. Replace ``vendor/package`` with the package name, for example ``koco/mautic-recaptcha-bundle``.
+
+.. code:: shell
+
+  bin/console mautic:marketplace:install vendor/package
+
+Add ``--dry-run`` to simulate the installation without installing anything.
+
+A Campaign package needs an administrator User to own the Campaign it installs. When you run the command interactively, Mautic asks you to choose that User. In a non-interactive run, such as a script, pass the administrator User's ID with ``--user-id=ID``.
+
+To remove an installed Plugin or Campaign package, run this command:
+
+.. code:: shell
+
+  bin/console mautic:marketplace:remove vendor/package
+
 Planned features
 ================
 
@@ -246,9 +275,7 @@ Watch out for more features in future releases including:
 
 * List security advisories :xref:`API reference`,
 
-* Notifications about new versions and security vulnerabilities that identified,
-
-* Support also Theme installations and updates.
+* Notifications about new versions and security vulnerabilities that identified.
 
 .. vale off
 

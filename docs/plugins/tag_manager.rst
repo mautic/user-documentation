@@ -24,7 +24,7 @@ Accessing the Tag Manager
 
 .. vale off
 
-Go to **Contacts > Manage Tags** to open the Tag Manager list page. This page shows all existing Tags with their names, descriptions, and Contact counts.
+Select **Tags** in the main menu to open the Tag Manager list page. This page shows all existing Tags with their names, descriptions, and Contact counts.
 
 .. vale on
 
