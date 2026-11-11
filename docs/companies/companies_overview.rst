@@ -230,7 +230,7 @@ Mautic identifies Companies strictly through a matching criteria based on **Comp
 .. vale off
 
 Company actions in Campaigns
-*************************
+****************************
 
 .. vale on
 
