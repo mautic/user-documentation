@@ -12,20 +12,20 @@ OpenID Connect
 
 .. vale on
 
-OpenID Connect - OIDC - is an authentication protocol built on OAuth 2.0. When you connect Mautic to an OIDC provider such as Auth0, Users log in with their provider account instead of a Mautic password. Mautic links each provider account to one Mautic User, and can create new Users the first time someone logs in.
+OpenID Connect is an authentication protocol built on OAuth 2.0. When you connect Mautic to an OpenID Connect provider such as Auth0, Users log in with their provider account instead of a Mautic password. Mautic links each provider account to one Mautic User, and can create new Users the first time someone logs in.
 
 .. vale off
 
-Setting up the OIDC provider
-============================
+Setting up the OpenID Connect provider
+======================================
 
 .. vale on
 
-Before you turn on OpenID Connect in Mautic, create an app for Mautic in your OIDC provider. Use these settings:
+Before you turn on OpenID Connect in Mautic, create an app for Mautic in your OpenID Connect provider. Use these settings:
 
 * **Redirect or callback URL** - Use ``https://example.com/s/open_id/login_check``, replacing ``https://example.com`` with your Mautic site URL.
 * **Scopes** - Mautic requests the ``openid``, ``email``, and ``profile`` scopes.
-* **Claims** - Mautic reads the ``email``, ``preferred_username``, ``given_name``, and ``family_name`` claims, plus the claim set as the identifier field. Mautic needs the email claim to create new Users.
+* **Claims** - Mautic reads the ``email``, ``preferred_username``, ``given_name``, and ``family_name`` claims, plus the claim set as the identifier field. Mautic needs the ``email`` claim to create new Users.
 
 The provider gives you the client ID and client secret that you enter in Mautic.
 
@@ -42,7 +42,11 @@ Turning on OpenID Connect
 #. Fill in the remaining settings. For a description of each setting, see :ref:`OpenID Connect settings <OpenID Connect configuration options>`.
 #. Click **Save**.
 
+.. vale off
+
 When you save, Mautic fetches the provider's configuration from the **Client URL**. If Mautic can't reach the provider, it shows the error 'OpenID Connect test connection failed. Please check your settings.' and doesn't save the settings. Saving doesn't confirm that the provider accepts the **Client ID**, **Client Secret**, or redirect URL. To confirm the setup, log out and log in with the **Sign In with OpenID Connect** button.
+
+.. vale on
 
 .. warning::
 
@@ -55,15 +59,21 @@ Logging in with OpenID Connect
 
 .. vale on
 
-When OpenID Connect is on, the login page shows a **Sign In with OpenID Connect** button below the Mautic login form. Select the button to log in through the provider, which then redirects you back to Mautic.
+When OpenID Connect is on, the login screen shows a **Sign In with OpenID Connect** button below the Mautic username and password fields. Select the button to log in through the provider, which then redirects you back to Mautic.
 
 When the provider redirects back, Mautic looks for the Mautic User linked to that provider account:
 
 * If a linked User exists, Mautic logs in as that User.
-* If no linked User exists and **Allow new user registration** is on, Mautic creates a User with the Role set in **Role for new users**, links it to the provider account, and logs in. Mautic takes the email address, username, first name, and last name from the provider. If the provider doesn't send a username, or the username matches another User's username or email address, Mautic uses the email address as the username.
+
+  .. vale off
+
+* If no linked User exists and **Allow new user registration** is on, Mautic creates a User with the Role set in **Role for new users**, links it to the provider account, and logs in. Mautic takes the Email address, username, first name, and last name from the provider. If the provider doesn't send a username, or the username matches another User's username or Email address, Mautic uses the Email address as the username.
+
+  .. vale on
+
 * If no linked User exists and registration is off, the login fails.
 
-Mautic doesn't link a provider account to an existing Mautic User by matching email addresses or usernames. If the provider's email address matches the email address or username of an existing Mautic User, registration fails and Mautic shows 'Failed to register. This identity is already associated with an account.' To give that person access through the provider, link the existing User instead.
+Mautic doesn't link a provider account to an existing Mautic User by matching Email addresses or usernames. If the provider's Email address matches the Email address or username of an existing Mautic User, registration fails and Mautic shows 'Failed to register. This identity is already associated with an account.' To give that person access through the provider, link the existing User instead.
 
 .. vale off
 
@@ -79,7 +89,7 @@ You can link an existing Mautic User to a provider account in two ways:
 
 Each provider account can link to only one Mautic User, and each Mautic User can link to only one provider account. If you enter an identifier that's already linked to another User, Mautic shows an error on the **OpenID Connect identifier** field and doesn't save the User.
 
-To remove the link, clear the **OpenID Connect identifier** field on the User's edit page and save. Removing the link doesn't log out a User who's already logged in. To remove a User's access completely, deactivate the Mautic User or delete it. If registration is on, also remove the User's access in the provider so they can't create a new Mautic User.
+To remove the link, edit the User, clear the **OpenID Connect identifier** field, and save. Removing the link doesn't log out a User who's already logged in. To remove a User's access completely, deactivate the Mautic User or delete it. If registration is on, also remove the User's access in the provider so they can't create a new Mautic User.
 
 .. vale off
 
@@ -88,9 +98,15 @@ Requiring OpenID Connect
 
 .. vale on
 
-Turn on **Require users to authenticate with OpenID** to make every User log in through the provider before they can use Mautic. The login page then tells Users that the administrator requires OpenID Connect.
+.. vale off
 
-The Mautic login form stays on the page. When a User logs in with a Mautic username and password, Mautic doesn't open the app. It shows a page that asks the User to log in through the provider:
+Turn on **Require users to authenticate with OpenID** to make every User log in through the provider before they can use Mautic.
+
+.. vale on
+
+The login screen then tells Users that the administrator requires OpenID Connect.
+
+Users can still enter a Mautic username and password on the login screen. When they do, Mautic doesn't open the app. Instead, it asks them to log in through the provider:
 
 * If the account isn't linked yet, select **Link Account** to log in to the provider and link the two accounts.
 * If the account is already linked, select **Sign in with OpenID Connect** to log in again through the provider.

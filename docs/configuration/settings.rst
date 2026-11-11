@@ -897,9 +897,11 @@ OpenID Connect settings
 
 .. vale on
 
-Use these settings to let Users log in through an OpenID Connect - OIDC - provider. For setup steps and how Users log in, see :ref:`OpenID Connect <OpenID Connect authentication>`.
+Use these settings to let Users log in through an OpenID Connect provider. For setup steps and how Users log in, see :ref:`OpenID Connect <OpenID Connect authentication>`.
 
 * **Enable** - Turns OpenID Connect login on or off. The other settings in this section are available only when you set this to **Yes**.
+
+  .. vale off
 
 * **Require users to authenticate with OpenID** - When on, Users must log in through the provider before they can use Mautic. Users who log in with a Mautic username and password must link their account to the provider first.
 
@@ -907,7 +909,9 @@ Use these settings to let Users log in through an OpenID Connect - OIDC - provid
 
 * **Role for new users** - The Role Mautic assigns to Users it creates through OpenID Connect. Required when **Allow new user registration** is on. For more information, see :doc:`Users and Roles</users_roles/managing_roles>`.
 
-* **Client URL** - The URL of your OIDC provider, also called the issuer URL.
+  .. vale on
+
+* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL.
 
 * **Client ID** - The client ID of the app you created for Mautic in the provider.
 
