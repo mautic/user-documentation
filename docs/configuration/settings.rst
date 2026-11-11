@@ -845,7 +845,10 @@ Visitors whose requests match these conditions can submit Forms. Mautic saves ea
 
 * Link the submission to the Contact that Mautic already tracks in the visitor's browser
 * Store an IP address or device ID with the submission or the Contact
+* Record an IP address in the Contact's audit log, Points log, or Campaign event logs for changes the submission causes
 * Set tracking cookies such as ``mtc_id`` and ``mautic_device_id``
+
+Mautic also removes the query string and fragment from the submission's referrer URL, because they can carry identifiers.
 
 .. vale off
 
