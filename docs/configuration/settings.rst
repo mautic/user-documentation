@@ -905,13 +905,13 @@ Use these settings to let Users log in through an OpenID Connect provider. For s
 
 * **Require users to authenticate with OpenID** - When on, Users must log in through the provider before they can use Mautic. Users who log in with a Mautic username and password must link their account to the provider first.
 
-* **Allow new user registration** - When on, Mautic creates a User the first time someone logs in with a provider account that isn't linked to a Mautic User.
+* **Allow new user registration** - When on, Mautic creates a User the first time someone logs in with a provider account that doesn't link to any Mautic User.
 
 * **Role for new users** - The Role Mautic assigns to Users it creates through OpenID Connect. Required when **Allow new user registration** is on. For more information, see :doc:`Users and Roles</users_roles/managing_roles>`.
 
-  .. vale on
-
 * **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL.
+
+  .. vale on
 
 * **Client ID** - The client ID of the app you created for Mautic in the provider.
 
