@@ -40,6 +40,11 @@ Turning on OpenID Connect
 #. Navigate to **Configuration** > **User/Authentication Settings**.
 #. In the **OpenID Connect Settings** section, set **Enable** to **Yes**.
 #. Fill in the remaining settings. For a description of each setting, see :ref:`OpenID Connect settings <OpenID Connect configuration options>`.
+
+   .. image:: images/openid_connect_settings.png
+      :width: 800
+      :alt: Screenshot of the OpenID Connect Settings section in the User/Authentication Settings
+
 #. Click **Save**.
 
 .. vale off
@@ -60,6 +65,10 @@ Logging in with OpenID Connect
 .. vale on
 
 When OpenID Connect is on, the login screen shows a **Sign In with OpenID Connect** button below the Mautic username and password fields. Select the button to log in through the provider, which then redirects you back to Mautic.
+
+.. image:: images/openid_connect_login.png
+  :width: 400
+  :alt: Screenshot of the Mautic login screen with the Sign In with OpenID Connect button
 
 When the provider redirects back, Mautic looks for the Mautic User linked to that provider account:
 
