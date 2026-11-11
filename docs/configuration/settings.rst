@@ -178,15 +178,15 @@ Campaign settings
 
 * **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<Campaign Cron jobs>` to summarize existing data.
 
-* **Campaign Reactivation Behavior** - Configure how Mautic handles scheduled events with relative delays in the middle of the workflow when you reactivate a Campaign after a period of deactivation. This setting provides a global default that you can override for an individual Campaign. This setting affects how the :ref:`Campaign Cron jobs<Campaign Cron jobs>` schedule events. See :ref:`Campaign reactivation behavior` section for more information.
+* **Campaign Reactivation Behaviour** - Configure how Mautic handles scheduled events with relative delays in the middle of the workflow when you reactivate a Campaign after a period of deactivation. This setting provides a global default that you can override for an individual Campaign. This setting affects how the :ref:`Campaign Cron jobs<Campaign Cron jobs>` schedule events. See the :ref:`Campaign reactivation behavior` section for more information.
 
   Available options:
 
-  * **Count delay regardless of activation state** - Mautic uses the original trigger date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
+  * **Count delay regardless of activation state** - Mautic keeps the originally calculated event date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
 
-  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules Events to execute the full delay period starting from the last activation date. 
+  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules events to execute the full delay period starting from the last activation date.
 
-  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules Events accordingly when you reactivate the Campaign.
+  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules events accordingly when you reactivate the Campaign.
 
 Optimal for Contact event scheduler
 ===================================
@@ -887,6 +887,37 @@ Text message settings
 
 User/Authentication settings
 ****************************
+
+.. vale off
+
+.. _openid connect configuration options:
+
+OpenID Connect settings
+=======================
+
+.. vale on
+
+Use these settings to let Users log in through an OpenID Connect provider. For setup steps and how Users log in, see :ref:`OpenID Connect <OpenID Connect authentication>`.
+
+* **Enable** - Turns OpenID Connect login on or off. The other settings in this section are available only when you set this to **Yes**.
+
+  .. vale off
+
+* **Require users to authenticate with OpenID** - When on, Users must log in through the provider before they can use Mautic. Users who log in with a Mautic username and password must link their account to the provider first.
+
+* **Allow new user registration** - When on, Mautic creates a User the first time someone logs in with a provider account that doesn't link to any Mautic User.
+
+* **Role for new users** - The Role Mautic assigns to Users it creates through OpenID Connect. Required when **Allow new user registration** is on. For more information, see :doc:`Users and Roles</users_roles/managing_roles>`.
+
+* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL.
+
+  .. vale on
+
+* **Client ID** - The client ID of the app you created for Mautic in the provider.
+
+* **Client Secret** - The client secret of that app. After you save, Mautic doesn't show the secret again. Leave the field empty to keep the saved secret.
+
+* **Identifier field** - The provider claim that uniquely identifies each account. The default is ``sub``. Changing this value deletes the links between all Mautic Users and their provider accounts.
 
 SAML/SSO settings
 =================
