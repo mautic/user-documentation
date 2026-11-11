@@ -91,11 +91,20 @@ The Companies list has a **Quick filters** popover you can use to filter the lis
 
 #. Next to the search box, open **Quick filters**.
 
+   .. image:: images/companies_quick_filters_open.png
+      :alt: The Companies list with Companies highlighted in the main menu and the Quick filters funnel icon highlighted next to the search box.
+
 #. Under the **Ownership** group, select **Unowned companies**.
 
 #. Click **Apply selected**.
 
+   .. image:: images/companies_quick_filters_unowned.png
+      :alt: The Quick filters popover with Unowned companies selected under Ownership, and Unowned companies and Apply selected highlighted.
+
 Selecting **Unowned companies** shows the Companies that no User owns and adds the ``is:unowned`` command to the search box. To clear the filter and return to the full list, click **Reset**. To assign an owner to the Companies this filter surfaces, select them and use the **Change Owner** batch action described under Batch changes below.
+
+.. image:: images/companies_quick_filters_applied.png
+   :alt: The Companies list filtered to the three unowned Companies, with is:unowned highlighted in the search box.
 
 .. vale on
 
