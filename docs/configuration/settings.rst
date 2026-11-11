@@ -63,7 +63,7 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 * **Restrict Domains** - When set to No, any website can pass information to Mautic. Selecting ``Yes`` to limit communication with your Mautic instance to websites listed in Valid Domains is **strongly recommended**.
 
-* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website.
+* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on the non-secure example.com website, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website. Mautic also uses this list to decide which websites a Form submission can return the Contact to. For more information, see :ref:`Adding Forms to Pages`.
 
 * **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. Enter the domain name where you installed Mautic, such as ``mautic.example.com``. Separate multiple hosts with a comma. You can also use regular expressions for advanced matching, which Mautic encloses with ``/`` delimiters. For instance, ``.*\.?example.com$`` becomes ``/.*\.?example.com$/``. If left empty, Mautic responds to all hosts.
 
@@ -904,6 +904,37 @@ Text message settings
 
 User/Authentication settings
 ****************************
+
+.. vale off
+
+.. _openid connect configuration options:
+
+OpenID Connect settings
+=======================
+
+.. vale on
+
+Use these settings to let Users log in through an OpenID Connect provider. For setup steps and how Users log in, see :ref:`OpenID Connect <OpenID Connect authentication>`.
+
+* **Enable** - Turns OpenID Connect login on or off. The other settings in this section are available only when you set this to **Yes**.
+
+  .. vale off
+
+* **Require users to authenticate with OpenID** - When on, Users must log in through the provider before they can use Mautic. Users who log in with a Mautic username and password must link their account to the provider first.
+
+* **Allow new user registration** - When on, Mautic creates a User the first time someone logs in with a provider account that doesn't link to any Mautic User.
+
+* **Role for new users** - The Role Mautic assigns to Users it creates through OpenID Connect. Required when **Allow new user registration** is on. For more information, see :doc:`Users and Roles</users_roles/managing_roles>`.
+
+* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL.
+
+  .. vale on
+
+* **Client ID** - The client ID of the app you created for Mautic in the provider.
+
+* **Client Secret** - The client secret of that app. After you save, Mautic doesn't show the secret again. Leave the field empty to keep the saved secret.
+
+* **Identifier field** - The provider claim that uniquely identifies each account. The default is ``sub``. Changing this value deletes the links between all Mautic Users and their provider accounts.
 
 SAML/SSO settings
 =================
