@@ -40,16 +40,13 @@ Turning on OpenID Connect
 #. Navigate to **Configuration** > **User/Authentication Settings**.
 #. In the **OpenID Connect Settings** section, set **Enable** to **Yes**.
 #. Fill in the remaining settings. For a description of each setting, see :ref:`OpenID Connect settings <OpenID Connect configuration options>`.
+#. Click **Save**.
 
    |
 
    .. image:: images/openid_connect_settings.png
       :width: 800
       :alt: Screenshot of the OpenID Connect Settings section in the User/Authentication Settings
-
-   |
-
-#. Click **Save**.
 
 .. vale off
 
