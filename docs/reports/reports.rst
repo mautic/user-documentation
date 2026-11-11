@@ -277,6 +277,8 @@ You can identify scheduled Reports in the list of Reports from Mautic 5.1 and la
    :align: center
    :alt: Screenshot of Mautic Scheduled Report showing a paper aeroplane icon
 
+You can also filter the Reports list to show only scheduled Reports by selecting the **Has scheduled Reports** filter, or by typing ``is:scheduled`` in the search box. Mautic then shows only the Reports set up for scheduled Email delivery - see :ref:`Reports search filters` for the related search commands.
+
 .. vale off
 
 Cron job to schedule Reports
@@ -311,9 +313,13 @@ To view additional options for Report, click the drop-down menu next to the chec
 
 * **Clone** copies the Report so that you can make small adjustments in a similar but new Report, while maintaining the original Report.
 
+  .. note::
+
+     You can also clone a Report while viewing it. Open the actions menu at the top right of the Report's view and select **Clone**. This action appears when you have permission to create Reports.
+
 * **Export & Send** sends a link containing the ``.csv`` file with the Report data to the email address on your User profile.
 
-* **Delete** deletes the Report immediately.
+* **Delete** deletes the Report immediately. If the Report has scheduled Emails, deleting it also stops those sends.
 
 Quick filters
 =============
