@@ -10,7 +10,7 @@ Get MailChimp API key
 =====================
 
 #. Create a MailChimp account.
-#. Go to *Account* / *Extras* / *API Keys* and create a new one.
+#. Go to **Account** > **Extras** > **API Keys** and create a new one.
 #. Copy the created API Key.
 
   .. image:: images/plugins-mailchimp-create-api-key-1-and-2.png
