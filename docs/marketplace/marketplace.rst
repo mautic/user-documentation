@@ -89,7 +89,7 @@ For Plugins and Themes, the **Overview** tab also shows the command to install t
 Latest stable version
 =====================
 
-The **Details** tab shows the latest stable version. *From Mautic 4.2, this includes the currently installed - if any - version and the ability to upgrade.*
+The **Details** tab shows the latest stable version.
 
 All Plugins should follow :xref:`semantic versioning` so you can see from the first glance whether it's a breaking change version, feature version or bug fix - patch - version. In short, it's more risky to install breaking change versions and less risky to install a bug fix version.
 
