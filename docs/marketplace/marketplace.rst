@@ -34,7 +34,7 @@ If you haven't correctly set the Composer setting, Mautic displays a warning tha
 
 .. image:: images/need-to-enable-composer.png
   :width: 800
-  :alt: Screenshot of Composer enabled
+  :alt: Screenshot of the Marketplace in read-only mode
 
 .. vale off 
 
@@ -51,20 +51,24 @@ The Marketplace lists Plugins, Themes, and Campaigns. The list view shows each p
 
 .. image:: images/marketplace-list.png
   :width: 800
-  :alt: Screenshot of marketplace list
+  :alt: Screenshot of the Marketplace list with the Type column
 
 Filtering by package type
 =========================
 
 To list only one type of package, use the **Quick filters** popover:
 
-#. Open **Quick filters** next to the search box.
+#. Click the **Quick filters** funnel icon at the right end of the search box.
 
 #. Under **Type**, select **Plugin**, **Theme**, or **Campaign**.
 
 #. Click **Apply selected**.
 
 Mautic adds a type command, such as ``type:mautic-plugin``, to the search box and shows only packages of that type. Campaign packages use the ``type:mautic-resource`` command. You can type keywords alongside the type command to search within that type. Mautic applies one type at a time, so selecting a different type replaces the previous command.
+
+.. image:: images/marketplace-type-filter.png
+  :width: 800
+  :alt: Screenshot of the Quick filters popover with the Type options
 
 To list every type again, select **All types** and click **Apply selected**, or click **Reset**.
 
@@ -77,7 +81,7 @@ The detail page gives you enough information together with links to additional r
 
 .. image:: images/marketplace-detail.png
   :width: 800
-  :alt: Screenshot of marketplace detail
+  :alt: Screenshot of the Overview tab for a Marketplace package
 
 Overview
 ========
@@ -90,6 +94,10 @@ Latest stable version
 =====================
 
 The **Details** tab shows the latest stable version.
+
+.. image:: images/marketplace-detail-details.png
+  :width: 800
+  :alt: Screenshot of the Details tab for a Marketplace package
 
 All Plugins should follow :xref:`semantic versioning` so you can see from the first glance whether it's a breaking change version, feature version or bug fix - patch - version. In short, it's more risky to install breaking change versions and less risky to install a bug fix version.
 
@@ -113,6 +121,11 @@ When the package author provides them, the same table also shows:
 The supported Mautic versions come from the package author, so verify them before you install a package.
 
 Click the version number to open that release in the package's repository in a new window.
+
+All versions
+============
+
+Below the latest stable version, the **Details** tab lists every version of the package with its release date, so you can see the release cadence. Click a stable or pre-release version to open its release in the package's repository in a new window, where the maintainers should describe what changed.
 
 Maintainers
 ===========
