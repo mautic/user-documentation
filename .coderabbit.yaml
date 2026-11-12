@@ -6,6 +6,10 @@ reviews:
     # Also review PRs targeting any other branch (e.g. 8.0, 7.3).
     base_branches:
       - ".*"
+    ignore_usernames:
+      - "promptless-for-oss"
+      - "dependabot[bot]"
+      - "allcontributors[bot]"
   path_instructions:
     - path: "docs/**/*.rst"
       instructions: |

@@ -63,7 +63,7 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 * **Restrict Domains** - When set to No, any website can pass information to Mautic. Selecting ``Yes`` to limit communication with your Mautic instance to websites listed in Valid Domains is **strongly recommended**.
 
-* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website.
+* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on the non-secure example.com website, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website. Mautic also uses this list to decide which websites a Form submission can return the Contact to. For more information, see :ref:`Adding Forms to Pages`.
 
 * **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. Enter the domain name where you installed Mautic, such as ``mautic.example.com``. Separate multiple hosts with a comma. You can also use regular expressions for advanced matching, which Mautic encloses with ``/`` delimiters. For instance, ``.*\.?example.com$`` becomes ``/.*\.?example.com$/``. If left empty, Mautic responds to all hosts.
 
@@ -178,15 +178,15 @@ Campaign settings
 
 * **Use summary statistics** - Improves performance when viewing a Campaign with thousands of events per day by using summarized data. When you first turn on this setting you need to run a :ref:`Cron job<Campaign Cron jobs>` to summarize existing data.
 
-* **Campaign Reactivation Behavior** - Configure how Mautic handles scheduled events with relative delays in the middle of the workflow when you reactivate a Campaign after a period of deactivation. This setting provides a global default that you can override for an individual Campaign. This setting affects how the :ref:`Campaign Cron jobs<Campaign Cron jobs>` schedule events. See :ref:`Campaign reactivation behavior` section for more information.
+* **Campaign Reactivation Behaviour** - Configure how Mautic handles scheduled events with relative delays in the middle of the workflow when you reactivate a Campaign after a period of deactivation. This setting provides a global default that you can override for an individual Campaign. This setting affects how the :ref:`Campaign Cron jobs<Campaign Cron jobs>` schedule events. See the :ref:`Campaign reactivation behavior` section for more information.
 
   Available options:
 
-  * **Count delay regardless of activation state** - Mautic uses the original trigger date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
+  * **Count delay regardless of activation state** - Mautic keeps the originally calculated event date. Events execute based on the calendar days in the original schedule, regardless of whether the Campaign was active or inactive during those days. This is the default behavior.
 
-  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules Events to execute the full delay period starting from the last activation date. 
+  * **Restart on reactivation** - The delay counter resets when you reactivate the Campaign. Mautic reschedules events to execute the full delay period starting from the last activation date.
 
-  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules Events accordingly when you reactivate the Campaign.
+  * **Count delay only while active** - Events only count days when the Campaign remains active. If you deactivate the Campaign, those days don't count toward the delay. Mautic reschedules events accordingly when you reactivate the Campaign.
 
 Optimal for Contact event scheduler
 ===================================
@@ -788,6 +788,26 @@ Landing Page settings
 
 * **Analytics script** - To track Landing Page visits and activity in other platforms such as Google Analytics, add those tracking scripts here.
 
+.. vale off
+
+Privacy Centre settings
+***********************
+
+.. vale on
+
+The Privacy Centre controls which external services receive data about your Contacts. To open it, go to **Settings** > **Configuration** and select **Privacy Centre**.
+
+Third-party services
+====================
+
+* **Load profile images from Gravatar** - Select **Yes** to show Contact profile images from :xref:`Gravatar`. To find each image, Mautic sends Gravatar a hash of the Contact's Email address. When set to **No**, Mautic shows a default placeholder image instead and sends nothing to Gravatar. This setting is **No** by default.
+
+  The setting applies wherever Mautic would otherwise show a Gravatar image, including Contact records, Contact cards, and global search results for Contacts. It doesn't affect User avatars, custom profile images that you upload, or images from social Plugins.
+
+.. note::
+
+   After you upgrade to a Mautic version that includes the Privacy Centre, profile images that Mautic loaded from Gravatar show the default placeholder until you set **Load profile images from Gravatar** to **Yes**.
+
 Tracking settings
 *****************
 
@@ -887,6 +907,37 @@ Text message settings
 
 User/Authentication settings
 ****************************
+
+.. vale off
+
+.. _openid connect configuration options:
+
+OpenID Connect settings
+=======================
+
+.. vale on
+
+Use these settings to let Users log in through an OpenID Connect provider. For setup steps and how Users log in, see :ref:`OpenID Connect <OpenID Connect authentication>`.
+
+* **Enable** - Turns OpenID Connect login on or off. The other settings in this section are available only when you set this to **Yes**.
+
+  .. vale off
+
+* **Require users to authenticate with OpenID** - When on, Users must log in through the provider before they can use Mautic. Users who log in with a Mautic username and password must link their account to the provider first.
+
+* **Allow new user registration** - When on, Mautic creates a User the first time someone logs in with a provider account that doesn't link to any Mautic User.
+
+* **Role for new users** - The Role Mautic assigns to Users it creates through OpenID Connect. Required when **Allow new user registration** is on. For more information, see :doc:`Users and Roles</users_roles/managing_roles>`.
+
+* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL.
+
+  .. vale on
+
+* **Client ID** - The client ID of the app you created for Mautic in the provider.
+
+* **Client Secret** - The client secret of that app. After you save, Mautic doesn't show the secret again. Leave the field empty to keep the saved secret.
+
+* **Identifier field** - The provider claim that uniquely identifies each account. The default is ``sub``. Changing this value deletes the links between all Mautic Users and their provider accounts.
 
 SAML/SSO settings
 =================

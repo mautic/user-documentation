@@ -136,7 +136,7 @@ The actions that Mautic offers in a Campaign include:
    * - **Send Email to User** 
      - Sends an Email to an entity other than the Contact. This may be a Mautic User, the Contact's owner, or non-Users. Emails sent using this action don't generate any statistics for Contacts or Emails.
    * - **Send Marketing Message**
-     - Sends a message using the Contact's preferred Channel.
+     - Sends a message using the Contact's preferred Channel. If the selected Marketing Message contains an Email, Mautic displays whether that Email sends to unsubscribed Contacts in the action configuration.
    * - **Update Contact**
      - Updates the existing Contact's fields with the specified values. You can combine static values with Mautic variables like ``{contactfield=firstname}`` and date/time variables like ``now``, ``now+3hours`` in date/time fields or ``{datetime=now}`` in text fields.
    * - **Update Contact's primary Company**
