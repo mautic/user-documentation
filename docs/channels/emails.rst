@@ -61,10 +61,12 @@ Segment Email sending status
 
 .. vale on
 
-The Email list and the Email details page show the sending status of each active Segment Email that has Contacts still to receive it:
+The Email detail view shows the sending status of each active Segment Email that has Contacts still to receive it:
 
-* **Ready to send** - The Email has no scheduled start date. To send it, select **Send** on the Email details page, or select **Schedule** to set a start date.
+* **Ready to send** - The Email has no scheduled start date. To send it, select **Send** in the Email detail view, or select **Schedule** to set a start date. For an A/B test, Mautic hides these buttons. Add at least one variant, then select **Schedule sending** in the **A/B Test** panel. For more information, see :ref:`A/B testing <ab testing for Segment Emails>`.
 * **Sending** - The Email is within its scheduled sending period.
+
+In the Email list, hover over an Email's status icon to see the 'Ready to send' status.
 
 .. _ab testing for Segment Emails:
 
