@@ -296,7 +296,7 @@ Configuring Segment filters
 
 .. attention::
 
-  Listed below are three types of fields:
+  Listed below are four types of fields:
 
   * Contact fields
 
@@ -310,11 +310,27 @@ Configuring Segment filters
 
     .. vale on
 
-  * Primary Company fields
+  .. vale off
+
+  * **Contact's primary company** fields
 
     * Set Fields to **Available for Segments = Yes** in your Custom Field manager to appear here.
 
-    * Contacts associates with multiple Companies, but Mautic adds them to Segments based on fields for the primary Company.
+    * Mautic evaluates only the Contact's primary Company. Secondary Companies don't affect the result.
+
+    * Negative operators, such as **is not equal to**, **doesn't contain**, and **is empty**, also match Contacts that have no primary Company.
+
+  * **Any associated company** fields
+
+    * These are the same Company fields, evaluated against every Company associated with the Contact.
+
+    * Mautic adds a Contact when at least one of its Companies, primary or secondary, matches the filter. For example, **Country** **is equal to** 'Belgium' matches a Contact whose primary Company is in France if one of its secondary Companies is in Belgium.
+
+    * Negative operators also need only one matching Company. **Country** **is not equal to** 'Belgium' matches a Contact with a Company in France, even if another of its Companies is in Belgium.
+
+    * Contacts without any associated Company never match these filters, including negative operators.
+
+  .. vale on
 
 5. Add more filters, using the **And** and **Or** operators. An **Or** operator creates a new group of filters which can include And operators.
 
@@ -615,6 +631,10 @@ Deleting or deactivating a Segment
 **********************************
 
 .. vale on
+
+.. note::
+
+   Deleting a Segment doesn't delete its Contacts. It only removes them from the Segment, and the Contacts remain in Mautic.
 
 Since :xref:`Mautic 4` there is a step when deleting or deactivating a Segment to ensure that it's not required as a filter by an existing Segment.
 
