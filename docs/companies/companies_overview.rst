@@ -8,10 +8,14 @@ Companies are a way to group Contacts based on association with organizations.
   :width: 600
   :alt: Mautic Company Overview
   
+.. vale off
+
 Engagements/Points chart
 *************************
 
-Engagements shown on the chart include any tracked action the Contacts made. Some examples might include page hits, Form submissions, Email opens and so on. The engagements line chart displays how active the Contacts of the Company were in the past 6 months. The chart displays also the sum of Points the Contacts received.
+.. vale on
+
+Engagements shown on the chart include any tracked action the Contacts made. Some examples might include Landing Page and tracked website visits, Form submissions, Email opens and so on. The engagements line chart displays how active the Contacts of the Company were in the past 6 months. The chart displays also the sum of Points the Contacts received.
 
 .. vale off
 
@@ -64,13 +68,51 @@ Company duplicates
 *******************
 The Company name field is a unique identifier by default. You can choose any other Company field as unique identifier in the **Custom Fields** section.
 
+.. vale off
+
 In *Configuration > Company Settings* you can choose the operator used when merging Companies with multiple identifiers - either **AND** or **OR**.
+
+.. vale on
 
 .. image:: images/company-duplicates-configuration-operator.png
   :width: 600
   :alt: Setup operator for find duplications algorithm
 
 These settings allow  Mautic to find and merge duplicate Companies during the import, using the Integrations Framework and in other parts of Mautic.
+
+Filtering the Companies list with quick filters
+***********************************************
+
+The Companies list has a **Quick filters** popover you can use to filter the list without typing search commands manually.
+
+.. vale off
+
+#. Go to **Companies**.
+
+#. Next to the search box, open **Quick filters**.
+
+   .. image:: images/companies_quick_filters_open.png
+      :alt: The Companies list with Companies highlighted in the main menu and the Quick filters funnel icon highlighted next to the search box.
+
+#. Under the **Ownership** group, select **Unowned companies**.
+
+#. Click **Apply selected**.
+
+   .. image:: images/companies_quick_filters_unowned.png
+      :alt: The Quick filters popover with Unowned companies selected under Ownership, and Unowned companies and Apply selected highlighted.
+
+Selecting **Unowned companies** shows the Companies that no User owns and adds the ``is:unowned`` command to the search box. To clear the filter and return to the full list, click **Reset**. To assign an owner to these Companies, select them and use the **Change Owner** batch option. For more information, see :ref:`Batch changes <batch changes for Companies>`.
+
+.. image:: images/companies_quick_filters_applied.png
+   :alt: The Companies list filtered to the three unowned Companies, with is:unowned highlighted in the search box.
+
+.. vale on
+
+Because **Quick filters** adds a command to the search box, you can edit or extend it. The full search syntax still works for more detailed or combined queries.
+
+For the full list of search commands and other filters, see :doc:`Searching Mautic </search/search_operators>`.
+
+.. _batch changes for Companies:
 
 Batch changes
 *************
