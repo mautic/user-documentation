@@ -170,6 +170,7 @@ Segments search filters
 
     ids:ID1,ID2 (comma separated IDs, no spaces)
     is:global
+    is:preference
     name:*
     category:category-alias
 
