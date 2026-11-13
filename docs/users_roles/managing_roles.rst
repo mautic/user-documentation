@@ -176,9 +176,9 @@ Core permissions
 
 The Core Permissions section includes these permission categories:
 
-.. vale on
+* **Themes - User has access to** - determines which Themes a User can view, edit, create, delete, and publish.
 
-* **Themes - User has access to** - determines which Themes a User can view, edit, create, delete, and activate.
+.. vale on
 
 * **File Manager - User has access to** - determines whether a User can open the file manager. Users browse, upload, and select files such as images in the file manager when they insert media from the text editor, the Builder, or the media upload button on MMS Text Messages. Select **Full** to grant access. Users without this permission get an access denied error when they try to open the file manager.
 
