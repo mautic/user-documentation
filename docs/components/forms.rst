@@ -76,21 +76,27 @@ When a Form reaches its submission limit:
 
    The submission count updates in real time. Deleting submissions reduces the count, potentially reopening a Form that was previously at its limit.
 
-Form submission counts
-**********************
+Form submission stats
+*********************
+
+A Form's page shows these submission stats:
 
 .. vale off
 
-In the Forms list, the button in the **Results** column shows how many results each Form has, such as **View 3 Results**, and you can sort the list by the **Results** column. A Form's page shows **Total submissions**, **Associated contacts**, and a **Submissions** chart over time.
+* **Total submissions** - the number of results the Form has. Deleting results lowers this number.
+* **Associated contacts** - the number of Contacts who submitted the Form.
+* **Submissions recorded** - the number of submissions Mautic has recorded for the Form. Deleting results doesn't lower this number.
 
 .. vale on
 
-These counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, Mautic hides them:
+The **Submissions** chart shows recorded submissions over time and uses the same totals as **Submissions recorded**.
 
-* The Forms list shows **View Results** without a count, and you can't sort the list by the **Results** column.
-* The Form's page doesn't show the submission stats or the **Submissions** chart.
+Mautic doesn't add a submission to **Submissions recorded** or the **Submissions** chart when:
 
-Mautic only hides the counts. It still saves submissions, runs Form actions, and counts each submission toward the Form's submission limit. To see a Form's submissions, select **View Results**.
+* Someone submits the Form from its preview page. Mautic treats these as test submissions.
+* You've set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`. If you turn the setting back on later, Mautic doesn't add the submissions it received while the setting was off.
+
+Mautic still saves these submissions as results and runs the Form actions. The submissions also count toward **Total submissions**, the **Results** column in the Forms list, and the Form's submission limit.
 
 .. vale off
 
