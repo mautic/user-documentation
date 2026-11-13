@@ -149,6 +149,8 @@ Custom Fields search filters
 
     is:indexed
     is:unique
+    is:systemdefault
+    is:usercreated
 
 Companies search filters
 ------------------------
