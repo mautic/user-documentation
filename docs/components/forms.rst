@@ -76,6 +76,28 @@ When a Form reaches its submission limit:
 
    The submission count updates in real time. Deleting submissions reduces the count, potentially reopening a Form that was previously at its limit.
 
+Form submission stats
+*********************
+
+A Form's page shows these submission stats:
+
+.. vale off
+
+* **Total submissions** - the number of results the Form has. Deleting results lowers this number.
+* **Associated contacts** - the number of Contacts who submitted the Form.
+* **Submissions recorded** - the number of submissions Mautic has recorded for the Form. Deleting results doesn't lower this number.
+
+.. vale on
+
+The **Submissions** chart shows recorded submissions over time and uses the same totals as **Submissions recorded**.
+
+Mautic doesn't add a submission to **Submissions recorded** or the **Submissions** chart when:
+
+* Someone submits the Form from the preview that the **Preview** button opens in Mautic. Mautic treats these as test submissions. Submissions from the Form's public page, which the iframe embed code loads, still count.
+* You've set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`. If you turn the setting back on later, Mautic doesn't add the submissions it received while the setting was off.
+
+Mautic still saves these submissions as results and runs the Form actions. The submissions also count toward **Total submissions**, the **Results** column in the Forms list, and the Form's submission limit.
+
 .. vale off
 
 Configuring Forms
