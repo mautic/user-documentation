@@ -649,9 +649,6 @@ Contact replies
 
 To make use of monitoring replies from Contacts, you must have access to an IMAP server **other than Google or Yahoo** as they overwrite the return path, which prevents this feature from working.
 
-.. note::
-  To use the Monitored Email feature you must have the PHP IMAP extension enabled - most hosts already have this turned on.
-
 #. Configure all Mautic sender/reply Email addresses to send a copy to one single inbox - most Email providers support this feature in their configuration panel.
 
 .. note::
@@ -933,7 +930,7 @@ Monitored inbox configuration
 
 .. vale on
 
-To use the Monitored Email feature you must have the PHP IMAP extension enabled (most shared hosts already have this turned on).  Go to the Mautic configuration and fill in the account details for the inbox(es) you wish to monitor.
+Go to the Mautic configuration and enter the account details for each inbox you want to monitor.
 
 .. image:: images/bounce_management/asset-monitored-inbox-settings.png
   :width: 400
