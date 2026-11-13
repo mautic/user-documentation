@@ -458,6 +458,32 @@ These operators work with date and date-time fields. This includes the standard 
 
 The interval must be a whole number greater than zero. If you leave it blank or enter zero, a negative number, or a value that isn't a whole number, Mautic shows a validation error and won't save the Segment.
 
+.. _between and not between operators for number fields:
+
+.. vale off
+
+Between and not between for number fields
+=========================================
+
+.. vale on
+
+Use the **between** and **not between** operators to filter on a range of numbers in one filter, for example, to find Contacts with 50 to 100 Points. These operators work with these number fields:
+
+.. vale off
+
+* Any Custom Field of type number on a Contact or Company
+* **Points (+/-)**
+* Behavioral count filters, such as **Read any email X number of times**, **Visited any URL X number of times**, and **Has X number of browsing sessions**
+
+.. vale on
+
+When you select one of these operators, the filter shows two value boxes separated by **and**. Enter the lowest number of the range in the first box and the highest number in the second box.
+
+* **Between** - Matches Contacts whose value falls within the range, including both numbers you enter.
+* **Not between** - Matches Contacts whose value is lower than the first number or higher than the second number. For fields on the Contact record, it also matches Contacts with no value in the field.
+
+You must enter a number in both boxes. If you leave a box blank or enter a value that isn't a number, Mautic shows a validation error and doesn't save the Segment.
+
 Operators for select fields
 ===========================
 
