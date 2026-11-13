@@ -832,7 +832,7 @@ A link is valid when its ``href``:
 
 * Uses one of these seven schemes: ``http``, ``https``, ``ftp``, ``ftps``, ``mailto``, ``tel``, or ``sms``
 * Is an anchor link that starts with ``#``
-* Is a Mautic token such as ``{unsubscribe_url}``
+* Is a token wrapped in the same number of opening and closing curly braces, such as the Mautic token ``{unsubscribe_url}`` or an Email provider's merge tag like Postmark's ``{{{pm:unsubscribe}}}``
 
 .. vale on
 
