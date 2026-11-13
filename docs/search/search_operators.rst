@@ -173,6 +173,8 @@ Segments search filters
     name:*
     category:category-alias
 
+.. _assets search filters:
+
 Assets search filters
 ---------------------
 
@@ -185,6 +187,19 @@ Assets search filters
     name:*
     is:uncategorized
     category:{category alias}
+    is:image
+    is:video
+    is:audio
+    is:document
+
+The file type filters match an Asset's MIME type. Mautic ignores MIME type parameters, so an Asset with the MIME type ``text/plain; charset=utf-8`` matches ``is:document``. If an Asset has no MIME type, or has the generic ``application/octet-stream`` type, Mautic matches its file extension instead.
+
+* ``is:image`` - MIME types that start with ``image/``, and Photoshop files. Extensions: ``jpg``, ``jpeg``, ``png``, ``gif``, ``webp``, ``svg``, ``bmp``, ``tif``, ``tiff``, ``psd``, and ``ico``.
+* ``is:video`` - MIME types that start with ``video/``. Extensions: ``mp4``, ``webm``, ``ogv``, ``mov``, ``wmv``, ``avi``, ``mkv``, and ``mpeg``.
+* ``is:audio`` - MIME types that start with ``audio/``. Extensions: ``mp3``, ``wav``, ``ogg``, ``oga``, ``m4a``, ``aac``, and ``flac``.
+* ``is:document`` - PDF, rich text, plain text, and CSV files, Microsoft Word, Excel, and PowerPoint files, including macro-enabled files, and OpenDocument text, spreadsheet, and presentation files. Extensions: ``pdf``, ``doc``, ``docx``, ``docm``, ``xls``, ``xlsx``, ``xlsm``, ``ppt``, ``pptx``, ``pptm``, ``odt``, ``ods``, ``odp``, ``rtf``, ``txt``, and ``csv``.
+
+Other file types, such as ZIP files, don't match any file type filter.
 
 Forms search filters
 --------------------
