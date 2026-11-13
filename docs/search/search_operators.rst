@@ -254,6 +254,16 @@ Focus Items search filters
     is:mine
     is:uncategorized
     category:{category alias}
+    style:bar
+    style:modal
+    style:notification
+    style:fullpage
+
+.. vale off
+
+Use the ``style:`` filters to show only the Focus Items that use a given :ref:`style <Focus Items styles>`. You can also open **Quick filters** on the Focus Items list, select **Bar**, **Modal**, **Notification**, or **Full Page** under **Style**, and click **Apply selected** to add the matching filter to the search box. You can select only one style at a time.
+
+.. vale on
 
 Manage actions search filters
 -----------------------------
