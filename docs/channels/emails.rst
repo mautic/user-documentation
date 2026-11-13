@@ -721,9 +721,11 @@ If set to No, Mautic uses the address and name supplied in the Email 'From' fiel
 Send to unsubscribed contacts
 *****************************
 
-The **Send to unsubscribed contacts** toggle allows you to send Emails to Contacts who have unsubscribed from your communications. This feature is available in the **Advanced** tab for both Template and Segment Emails.
+Use the **Send to unsubscribed contacts** toggle to send an Email to Contacts who have unsubscribed from your communications, whether they unsubscribed themselves or a User unsubscribed them manually. The toggle is in the **Advanced** tab for both Template and Segment Emails.
 
 .. vale on
+
+Mautic never sends the Email to Contacts whose Email address has bounced, even when you set the toggle to **Yes**, because their address can't receive Emails. Mautic leaves these Contacts out of the Email's pending count and skips them in every send - Segment sends, Campaign actions, Form actions, and the API.
 
 Use this option for truly transactional communications that Contacts must receive regardless of their subscription status, such as:
 
