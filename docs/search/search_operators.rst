@@ -90,6 +90,37 @@ The list then shows only the items assigned to any of the selected Categories. O
 
 Mautic adds a ``category:{category alias}`` search filter to the search box for each Category you select. You can combine the Category filter with the status and ownership quick filters, a typed search, sorting, and pagination. To clear the Category filter, click the **Quick filters** button and click **Reset**. Reset keeps any text in the search box, so clear that text too to show the full list.
 
+.. vale off
+
+Filter Segments and Emails by type
+==================================
+
+.. vale on
+
+Use the type quick filters to show only one kind of Segment or Email, for example to review the Segments you maintain by hand or the Emails that Campaigns and Forms send.
+
+To filter a list by type:
+
+#. Open the **Segments** or **Emails** list view.
+#. Next to the search box, click the **Quick filters** button.
+#. Select a type:
+
+   .. vale off
+
+   * On the Segments list, under **Segment type**, select **Dynamic segment** or **Static segment**.
+   * On the Emails list, under **Type**, select **Segment emails** or **Triggered emails**.
+
+   .. vale on
+
+#. Click **Apply selected**.
+
+Each type adds a search filter to the search box, so you can also type it directly:
+
+* ``is:dynamic`` shows Segments that have filters, so Mautic adds and removes Contacts automatically.
+* ``is:static`` shows Segments without filters, where Contacts only change when you add or remove them manually.
+* ``is:segment`` shows Segment Emails.
+* ``is:triggered`` shows Triggered Emails.
+
 Search operators
 ================
 
@@ -164,6 +195,8 @@ Segments search filters
 
     ids:ID1,ID2 (comma separated IDs, no spaces)
     is:global
+    is:dynamic
+    is:static
     name:*
     category:category-alias
 
@@ -240,6 +273,8 @@ Emails search filters
     is:unpublished
     is:mine
     is:uncategorized
+    is:segment
+    is:triggered
     category:{category alias}
     lang:{lang code}
 
