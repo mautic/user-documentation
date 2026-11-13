@@ -291,7 +291,9 @@ To review the Email at full size, or to hand its rendered HTML to someone else, 
 
 You can only preview a Contact's data if you have permission to view that Contact. Otherwise, Mautic shows the preview with sample Contact data and a message that you don't have access to the Contact.
 
-To let people without a Mautic login open the Preview URL, activate the Email and turn on public preview with the toggle beside the Preview URL. Turn the toggle off to stop public access.
+The same applies to Company data. Mautic checks it against the **Contacts** permissions in your Role. **View Own** covers Companies you own - or created, if the Company has no owner - and **View Others** covers all other Companies. Administrators can preview any Company. Without permission, Mautic fills Company tokens with sample Company data and leaves the Company's name out of the downloaded filename. When you download the preview, Mautic also shows a message that you don't have access to the Company.
+
+To let people without a Mautic login open the Preview URL, activate the Email and turn on public preview with the toggle beside the Preview URL. Turn the toggle off to stop public access. People who open the Preview URL without logging in always see sample Company data, even when the URL includes a Company.
 
 Segments used
 =============
