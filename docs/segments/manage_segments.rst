@@ -51,7 +51,7 @@ To review which Segments Contacts can manage from the Preference Center, filter 
 
 The list shows only the Segments with **Available in Preference Center** set to **Yes**, and Mautic adds the ``is:preference`` command to the search box. To find the Segments that aren't available in the Preference Center, search for ``!is:preference`` instead.
 
-The filter matches Segments whether or not they're active or public. The Preference Center only displays Segments that are active and public.
+The filter also lists inactive Segments, but the Preference Center only displays Segments that are active.
 
 .. vale off
 
