@@ -206,6 +206,18 @@ When sending begins, Mautic sends the test Emails to the test audience and the p
 
 After the wait time passes, Mautic evaluates each variant against your chosen winner criteria, marks the best performer with a **Winner** badge in the panel, and sends the winning version to the remaining Contacts.
 
+You don't have to wait for the automatic pick. Once the test starts sending, you can end it on any Active variant you choose. Each Active variant's row in the **A/B Test** panel shows a **Make winner** trophy action. The variant the statistics currently favor shows a filled trophy, and the other Active variants show an outline trophy. You can promote any Active variant, whichever trophy it shows.
+
+To promote a variant, select its **Make winner** trophy, then select **Make winner** in the confirmation dialog.
+
+.. note::
+
+   Before you promote a variant, review what confirming does. Mautic:
+
+   * sets the chosen variant as the main Email
+   * turns off the other variants
+   * stops the A/B test
+
 .. vale off
 
 Viewing A/B test results
