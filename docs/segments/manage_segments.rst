@@ -67,8 +67,8 @@ When you open a Segment, the detail view shows a row of stat cards that summariz
 .. vale off
 
 * **Total contacts** - All Contacts in the Segment.
-* **Active contacts** - Contacts in the Segment who aren't marked as Do Not Contact for Email.
-* **Manually added contacts** - Contacts added to the Segment outside its filters. This includes Contacts that a User adds through the UI, the API, or a batch update; Contacts added by a Campaign action, a Form submit action, a Point Trigger, or a CSV import with a default Segment; and Contacts who subscribe through the Preference Center. Mautic keeps these Contacts in the Segment even when they don't match its filters.
+* **Active contacts** - Contacts in the Segment who don't have a 'Do Not Contact' status for Email.
+* **Manually added contacts** - Contacts who joined the Segment outside its filters. This includes Contacts that a User adds through the UI, the API, or a batch update. It also includes Contacts that a Campaign action, a Form submit action, a Point Trigger, or a CSV import with a default Segment adds, and Contacts who subscribe through the Preference Center. Mautic keeps these Contacts in the Segment even when they don't match its filters.
 * **Filter added contacts** - Contacts that Mautic added to the Segment because they match its filters. This card appears only for Segments that have filters configured.
 
 .. vale on
