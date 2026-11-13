@@ -56,7 +56,11 @@ When you save, Mautic fetches the provider's configuration from the **Client URL
 
 .. warning::
 
-   Keep the default **Identifier field** value of ``sub`` unless your provider uses a different claim as the unique, permanent ID for each account. When you change this value, Mautic deletes the links between all Mautic Users and their provider accounts, and every User has to link their account again.
+   Mautic links each User to a provider account by the account's ID, and that ID is unique only within one provider. When you change the **Client URL** or the **Identifier field** and save, Mautic deletes the links between all Mautic Users and their provider accounts. Every User then has to link their account again. For the ways to link, see :ref:`Linking existing Users <linking existing openid connect users>`.
+
+   Keep the default **Identifier field** value of ``sub`` unless your provider uses a different claim as the unique, permanent ID for each account. Mautic doesn't treat surrounding spaces, a trailing slash, or a different case in the scheme or host as a change to the **Client URL**. Turning OpenID Connect off and on again keeps the settings and the links.
+
+   Mautic deletes the links only when you save these settings in Mautic. If you change the provider by editing ``config/local.php`` directly, Mautic keeps the old links, and an account at the new provider with the same ID can log in as the linked Mautic User. Change the provider in the Mautic settings instead.
 
 .. vale off
 
@@ -86,6 +90,8 @@ When the provider redirects back, Mautic looks for the Mautic User linked to tha
 Mautic doesn't link a provider account to an existing Mautic User by matching Email addresses or usernames. If the provider's Email address matches the Email address or username of an existing Mautic User, registration fails and Mautic shows 'Failed to register. This identity is already associated with an account.' To give that person access through the provider, link the existing User instead.
 
 .. vale off
+
+.. _linking existing openid connect users:
 
 Linking existing Users
 ======================
