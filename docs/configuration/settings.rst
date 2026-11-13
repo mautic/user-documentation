@@ -514,6 +514,33 @@ How to track links in Emails
 
 Mautic tracks clicks of each link in an Email, with the stats displayed at the bottom of each Email detail view under the Click Counts tab.
 
+.. vale off
+
+How to ignore link scanners in Email stats
+==========================================
+
+Some Email security gateways, such as Microsoft Safe Links, Mimecast, Proofpoint, and Barracuda, scan every link in an incoming Email before the Contact sees it. These scans request the tracked links from several IP addresses within a few seconds, so Mautic can count them as real opens and clicks.
+
+.. vale on
+
+To ignore part of this traffic, turn on burst detection by editing your ``config/local.php`` file. When Mautic has recorded clicks on tracked links in an Email from the set number of different IP addresses for the same Contact within a short time window, it treats further opens and clicks of that Email by that Contact during the window as bot activity. Mautic doesn't record those opens and clicks.
+
+Burst detection doesn't affect the clicks that come before the threshold, so Mautic still records them as clicks. While burst detection is on, clicks on tracked links don't mark the Email as read. Mautic counts an open only when the Contact's Email client loads the tracking pixel.
+
+* ``bot_helper_burst_max_distinct_ips`` - The number of different IP addresses that triggers burst detection. The default is ``0``, which turns burst detection off. For example, set it to ``3``.
+* ``bot_helper_burst_window_seconds`` - The length of the time window, in seconds, that Mautic checks for clicks from different IP addresses. The default is ``30``.
+
+.. code-block:: php
+
+   'bot_helper_burst_max_distinct_ips' => 3,
+   'bot_helper_burst_window_seconds'   => 30, // seconds
+
+After you edit the file, clear the Mautic cache so the new values take effect.
+
+A Contact who clicks links in the same Email from several devices or networks within the time window can also reach the threshold. If Mautic ignores opens from real Contacts, increase ``bot_helper_burst_max_distinct_ips`` or decrease ``bot_helper_burst_window_seconds``.
+
+Because clicks don't count as opens while burst detection is on, Mautic doesn't record an open for a Contact whose Email client blocks images, even when that Contact clicks a link.
+
 
 Form settings
 *************
