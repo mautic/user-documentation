@@ -159,6 +159,7 @@ Companies search filters
     is:published
     is:unpublished
     is:mine
+    is:unowned
     is:uncategorized
     category:{category alias}
 
