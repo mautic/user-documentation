@@ -4,6 +4,16 @@ Mautic configuration settings
 Proper configuration is important for branding, performance, and the User experience for your team as they do their jobs. 
 These settings mostly don't need changing after initial configuration.
 
+To open the settings, go to **Settings** > **Configuration**. Each section in the left navigation, such as **System Settings** or **Email Settings**, opens as its own page. Saving updates only the settings on the current page, so save your changes before you open another page:
+
+* **Save** saves the page and keeps it open.
+* **Save & Close** saves the page and returns you to the Dashboard.
+* **Cancel** discards your changes and returns you to the Dashboard.
+
+If you try to open another page or leave Configuration before you save, Mautic asks you to confirm that you want to discard your changes. Select **Confirm** to leave without saving, or **Cancel** to stay on the page.
+
+If a setting on the page isn't valid, Mautic shows an alert at the top of the page and expands the section that contains the field to correct.
+
 System settings
 ***************
 
