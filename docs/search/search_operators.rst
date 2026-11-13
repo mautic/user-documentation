@@ -122,6 +122,8 @@ Contacts search filters
     is:mine
     email:*
     segment:{segment_alias}
+    segment_source:manually_added (use with segment:{segment_alias})
+    segment_source:filter_added (use with segment:{segment_alias})
     name:*
     company:*
     owner:*
@@ -135,6 +137,10 @@ Contacts search filters
     email_read:EMAIL_ID
     email_queued:EMAIL_ID
     email_pending:EMAIL_ID
+
+.. note::
+
+   The ``segment_source`` filter finds Contacts by how they joined a Segment, so it only works together with a ``segment`` filter. For example, ``segment:newsletter segment_source:manually_added`` returns the Contacts added to the ``newsletter`` Segment manually, and ``segment:newsletter segment_source:filter_added`` returns the ones that Mautic added because they match the Segment's filters. On its own, ``segment_source`` returns no Contacts.
 
 Custom Fields search filters
 ----------------------------
