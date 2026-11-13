@@ -784,7 +784,7 @@ Webhook settings
   :width: 600
   :alt: Screenshot showing Webhook Settings Configuration in Mautic
 
-* **Queue Mode** -  Select how to process Webhook events. The process immediately executes the Webhook event as soon as it arrives. The queue mode improves performance by only adding the event to the queue and requires processing by a :ref:`cron command<webhooks cron job>`.
+* **Queue Mode** -  Select how to process Webhook events. The process immediately executes the Webhook event as soon as it arrives. The queue mode improves performance by only adding the event to the queue and requires processing by a :ref:`Cron command<Webhooks Cron job>`.
 
 * **Order of the queued events** - Process the events in chronological or reverse chronological order if a Webhook has a queue of multiple events.
   
@@ -796,3 +796,16 @@ Social settings
   :alt: Screenshot showing Social Settings Configuration in Mautic
 
 * **Twitter Handle Field** - This field stores the Twitter username for Users added to Mautic through Social Monitoring.
+
+Support Mautic menu item
+************************
+
+Mautic shows a **Support Mautic** item in the main navigation menu. Selecting it opens ``https://mau.tc/support`` in a new browser tab, where you can learn how to support the project. Mautic enables this item by default.
+
+To hide the **Support Mautic** menu item, for example if you run Mautic for clients and prefer not to show it, add the following line to your ``config/local.php`` file:
+
+.. code-block:: php
+
+  'support_mautic_enabled' => false,
+
+Then clear the cache with the ``bin/console cache:clear`` command. To show the item again, set this value back to ``true`` or remove the line, and clear the cache.
