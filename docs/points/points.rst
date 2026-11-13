@@ -67,6 +67,10 @@ Once you have decided and entered those options, go to the **Events** tab. Here,
 .. image:: images/new_points_trigger_events.png
     :alt: Screenshot of New Points trigger events
 
+.. warning::
+
+   Deleting a Point Trigger permanently deletes its event configuration and trigger history. You can't undo this action.
+
 Campaign triggers
 =================
 
