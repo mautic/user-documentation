@@ -116,6 +116,24 @@ Mautic confirms the merge with the message **Stage 'name' was successfully merge
 
 .. vale off
 
+Viewing the Stages funnel
+*************************
+
+.. vale on
+
+The Stages list shows a funnel chart between the title and the search box, so you can see at a glance how many Contacts are in each Stage right now.
+
+The funnel shows every active Stage in order of ascending weight. Searching, filtering, sorting, or paginating the list doesn't change which Stages it shows or their order. Each band shows the number of Contacts currently in that Stage. From the second band onward, a percentage compares that count with the count in the previous band. The percentage compares current counts only - it isn't a historical conversion rate. Hover over a band to see the Stage name and its Contact count.
+
+The funnel appears when:
+
+* Your Role can view other Users' Contacts.
+* You have at least two active Stages.
+
+The funnel shows the Contact counts from when the Stages list loaded. Reload the Stages list in your browser to refresh them.
+
+.. vale off
+
 Visualizing Stage movement
 **************************
 
