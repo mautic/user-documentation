@@ -831,7 +831,9 @@ Mautic tracking settings
 * **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent filling your logs with hits from bots.
 
 * **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
-  
+
+* **Use Mautic consent for Focus tracking** - Under **Script modifiers**. Select **Yes** to make Focus Items embedded with the **Consent-managed** option activate tracking once Mautic website tracking starts. This waits for consent only when your website loads Mautic tracking after consent. The setting is off by default and only changes the tracking snippets that Mautic shows for copying, so save the Configuration, copy the updated snippet, and redeploy it on your website. See :doc:`/channels/focus_items` and :doc:`/configuration/tracking_script` for details.
+
 .. note:: 
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
