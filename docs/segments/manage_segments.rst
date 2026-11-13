@@ -330,6 +330,8 @@ Configuring Segment filters
 
     * Contacts without any associated Company never match these filters, including negative operators.
 
+    * Company filters saved in a Mautic version earlier than 7.3 appear in this group after you update and keep matching every associated Company, as they did before. To match only the primary Company, replace the filter with the same field from **Contact's primary company**.
+
   .. vale on
 
 5. Add more filters, using the **And** and **Or** operators. An **Or** operator creates a new group of filters which can include And operators.
