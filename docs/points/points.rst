@@ -38,7 +38,7 @@ To add a new action:
 
    * **Active and Activate/Deactivate at date/time** - Once you have a Point action, Mautic awards Points when a Contact completes the action. Points aren't given for inactive actions. If you have target behaviors that you want to award Points for within a certain time period, you can set the activate and deactivate dates
 
-   * **Is repeatable** - To award Points each time a Contact completes an action, select **Yes**. If you want to award Points **only** the first time someone completes the action, select **No** - this is the default.
+   * **Is repeatable** - To award Points each time a Contact completes an action, set the toggle to **Allow multiple scores**. To award Points **only** the first time someone completes the action, leave it set to **One-time scoring only** - this is the default.
 
 4. Click **Save** or **Save & Close**.
 
@@ -61,7 +61,7 @@ Use **Quick filters** on the Point Actions list to find actions by how they chan
 
    * **Point loss** under **Point change** - shows actions that deduct Points, and adds the ``type:loss`` command to the search box.
 
-   * **Repeatable** under **Others** - shows actions with **Is repeatable** set to **Yes**, and adds the ``is:repeatable`` command to the search box.
+   * **Repeatable** under **Others** - shows actions with **Is repeatable** set to **Allow multiple scores**, and adds the ``is:repeatable`` command to the search box.
 
    You can't select **Point gain** and **Point loss** together. Actions set to change Points by ``0`` don't match either option.
 
