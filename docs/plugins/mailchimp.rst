@@ -1,7 +1,7 @@
 MailChimp
 #########
 
-This Plugin can send Contacts to MailChimp lists based on Contact actions or Point Triggers.
+This Plugin adds Contacts to MailChimp lists. Mautic pushes a Contact when a **Push Contact to Integration** action runs in a Campaign, a Form, or a Point Trigger.
 
 Authorize
 *********
@@ -9,10 +9,10 @@ Authorize
 Get MailChimp API key
 =====================
 
-1. Create a MailChimp account.
-2. Go to **Account** > **Extras** > **API Keys** and create a new one.
-3. Copy the created API Key.
-   
+#. Create a MailChimp account.
+#. Go to **Account** > **Extras** > **API Keys** and create a new one.
+#. Copy the created API Key.
+
   .. image:: images/plugins-mailchimp-create-api-key-1-and-2.png
    :alt: Screenshot of MailChimp dashboard with arrows pointing at the Extras tab and the API Keys section
    :align: center
@@ -27,44 +27,48 @@ Get MailChimp API key
 
 .. vale off
 
-Authorize Mautic - MailChimp Plugin
-===================================
-1. Fill in with your MailChimp's account **username** 
-2. Add the **API key**
-3. Click on ***Save & Close***  
-
 Configure the Plugin
 ********************
 
+#. Go to **Settings** > **Plugins** and select **MailChimp**.
+#. On the **Enabled/Auth** tab, set **Is Enabled?** to **Yes**.
+#. Paste the API key in the **API Key** field.
+#. On the **Features** tab, select **Triggered action push contacts to integration**.
+#. Select **Save & Close**.
+
 .. vale on
 
-Navigate to the **Features** tab in the Plugin configuration modal box. The fields on the **Contact Mapping** tab depend on the list you select.
-
-.. image:: images/plugins-mailchimp-configure.png
-   :alt: MailChimp Plugin configuration
-   :align: center
-
-1. Select the **List** - your MailChimp Audience - to add Contacts to.
-
-   If you don't have an Audience yet, create one in the MailChimp dashboard.
-
-2. Save the Plugin configuration
-3. Open it again.
-
-   The **Contact Mapping** tab now appears.
-
-4. Configure the field mapping.
-
-Other configuration options
-===========================
+Mautic asks for the API key only when you enable the Plugin. If you connected MailChimp through the OAuth authorization of an earlier Mautic version, Mautic keeps using that connection, and you can save the settings without an API key.
 
 .. vale off
 
-- **Triggered action push contacts to integration**
+Push Contacts to MailChimp
+**************************
 
 .. vale on
 
-Mautic enables this option by default. If you turn it off, the Plugin doesn't push Contacts to MailChimp.
+Each **Push Contact to Integration** action has its own MailChimp list and field mapping, so different Campaigns, Forms, and Point Triggers can add Contacts to different lists.
 
-- **Enable double opt in** - If MailChimp should send a confirmation Email to the Contacts added by this Plugin. The Contacts must confirm that they really want to join the list.
-- **Send welcome Email** - Whether MailChimp should send the welcome Email.
+.. vale off
+
+#. Add a **Push Contact to Integration** action to a Campaign, a Form, or a Point Trigger.
+#. Select **MailChimp** as the Integration.
+#. In **List**, select the MailChimp list to add the Contacts to.
+#. Set **Enable double opt in** and **Send welcome email** to **Yes** or **No**.
+#. For each MailChimp field, select the Mautic field that provides its value. You must map a field to **Email**.
+#. Save the action.
+
+.. vale on
+
+If you don't have a list in MailChimp yet, create one in MailChimp before you add the action. The field mapping shows the merge fields of the list you select, and it reloads when you select another list. Besides Contact fields, you can map a MailChimp field to the Contact's ID, the link to the Contact's timeline, or the Contact's Do Not Contact status for Emails.
+
+The list options control what MailChimp sends to the Contact:
+
+.. vale off
+
+* **Enable double opt in** - MailChimp sends a confirmation Email, and the Contact must confirm before joining the list. Until then, MailChimp lists the Contact as pending.
+* **Send welcome email** - MailChimp sends its welcome Email to the Contact.
+
+.. vale on
+
+If the Contact has no value in the field mapped to **Email**, or MailChimp rejects the Contact, the action fails and shows the reason. In a Campaign, the reason appears on the failed event.
