@@ -406,6 +406,8 @@ Once you've selected a date field as your filter, such as the default **Date las
   For example, a value of 1 matches anyone whose field value is on the 1^st, 21^st, or 31^st of any month but a value of 01 matches the 1 st of a month. A value of 01-01 finds Contacts whose value is for January 1 of any year.
 
 * **In list** - Segment includes Contacts with the specified filter value anywhere in the field value.
+* **Between** - The value on the Contact record falls within a date range you set, including both the start and end dates. See :ref:`Between and not between <between and not between operators>`.
+* **Not between** - The value on the Contact record falls outside a date range you set. See :ref:`Between and not between <between and not between operators>`.
 
 .. vale on
 
@@ -435,6 +437,35 @@ The **In the last** and **In the next** operators let you build rolling date fil
 These operators work with date and date-time fields. This includes the standard **Date added**, **Date identified**, **Date modified**, and **Date last active** fields, any Custom Field of type date or date-time on a Contact or Company, and behavioral date fields such as **Read any email (date)**.
 
 The interval must be a whole number greater than zero. If you leave it blank or enter zero, a negative number, or a value that isn't a whole number, Mautic shows a validation error and won't save the Segment.
+
+.. _between and not between operators:
+
+.. vale off
+
+Between and not between
+=======================
+
+.. vale on
+
+Use the **between** and **not between** operators to filter on a fixed date range, for example, to find Contacts last active from January 1, 2024 to March 31, 2024. Unlike **In the last** and **In the next**, the range stays the same each time Mautic rebuilds the Segment.
+
+These operators work with date and date-time fields. When you select one of them, the filter shows a **From** box and a **To** box in place of the single value box.
+
+#. Select the **From** box and pick the first day of the range in the date picker.
+#. Select the **To** box and pick the last day of the range.
+
+The date picker doesn't let you pick a **From** date later than the **To** date, or a **To** date earlier than the **From** date.
+
+* **Between** - Matches Contacts whose date value falls from 00:00:00 on the **From** date through 23:59:59 on the **To** date. Both boundary days count as whole calendar days.
+* **Not between** - Matches Contacts whose date value falls before the **From** date or after the **To** date. For fields on the Contact record, it also matches Contacts with no value in the field.
+
+You must enter both dates in the format the date picker uses, such as 'Jan 1, 2024'. If you leave a date blank or type it in another format, Mautic doesn't save the Segment and shows this error:
+
+.. vale off
+
+'The date must be in the format 'M j, Y' (e.g. 'Jan 1, 2021'). Use the date picker to select a date.'
+
+.. vale on
 
 Operators for select fields
 ===========================
