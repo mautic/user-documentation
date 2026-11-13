@@ -504,6 +504,21 @@ You can style the message itself as you like, and you can click to insert the su
 
 .. vale off
 
+Finding Forms with Form actions
+===============================
+
+.. vale on
+
+To review which Forms change Contacts or send notifications when someone submits them, filter the Forms list to Forms with Form actions.
+
+#. Go to **Components > Forms**.
+#. Open **Quick filters**. The **Others** group contains **With actions**.
+#. Select **With actions** and click **Apply selected**. Mautic adds the ``has:actions`` search filter to the search box and lists only Forms with at least one Form action.
+
+You can also type ``has:actions`` in the search box and combine it with other search filters. For the other Forms search filters, such as ``is:expired``, ``is:pending``, and ``has:results``, see :ref:`Forms search filters <forms search filters>`.
+
+.. vale off
+
 Adding Forms to Pages
 *********************
 
