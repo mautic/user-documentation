@@ -788,6 +788,26 @@ Landing Page settings
 
 * **Analytics script** - To track Landing Page visits and activity in other platforms such as Google Analytics, add those tracking scripts here.
 
+.. vale off
+
+Privacy Centre settings
+***********************
+
+.. vale on
+
+The Privacy Centre controls which external services receive data about your Contacts. To open it, go to **Settings** > **Configuration** and select **Privacy Centre**.
+
+Third-party services
+====================
+
+* **Load profile images from Gravatar** - Select **Yes** to show Contact profile images from :xref:`Gravatar`. To find each image, Mautic sends Gravatar a hash of the Contact's Email address. When set to **No**, Mautic shows a default placeholder image instead and sends nothing to Gravatar. This setting is **No** by default.
+
+  The setting applies wherever Mautic would otherwise show a Gravatar image, including Contact records, Contact cards, and global search results for Contacts. It doesn't affect User avatars, custom profile images that you upload, or images from social Plugins.
+
+.. note::
+
+   After you upgrade to a Mautic version that includes the Privacy Centre, profile images that Mautic loaded from Gravatar show the default placeholder until you set **Load profile images from Gravatar** to **Yes**.
+
 Tracking settings
 *****************
 
@@ -969,12 +989,12 @@ Social settings
 Support Mautic menu item
 ************************
 
-Mautic shows a 'Support Mautic' item in the main navigation menu. Selecting it opens ``https://mau.tc/support`` in a new browser tab, where you can learn how to support the project. Mautic enables this item by default.
+Mautic shows a **Support Mautic** item in the main navigation menu. Selecting it opens ``https://mau.tc/support`` in a new browser tab, where you can learn how to support the project. Mautic shows this item by default.
 
-To hide the 'Support Mautic' menu item—for example, if you run Mautic for clients and prefer not to show it—add the following line to your ``config/local.php`` file:
+To hide the **Support Mautic** menu item - for example, if you run Mautic for clients and prefer not to show it - add the following line to your ``config/local.php`` file:
 
 .. code-block:: php
 
   'support_mautic_enabled' => false,
 
-To show the item again, set this value back to ``true`` or remove the line.
+Then clear the cache with the ``bin/console cache:clear`` command. To show the item again, set this value back to ``true`` or remove the line, and clear the cache.
