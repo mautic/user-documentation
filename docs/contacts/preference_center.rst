@@ -126,6 +126,7 @@ The choice works as follows:
 * The choice starts on **Yes**, so Mautic records a Contact's Email opens as usual until they select **No**.
 * When a Contact selects **No** and saves their preferences, Mautic stops recording their Email opens. The Email still displays normally, but Mautic doesn't mark it as read, store the Contact's IP address or device, add the open to the Contact's history, or trigger the **Opens Email** Campaign decision.
 * The Contact can return to the Preference Center and select **Yes** at any time to resume Email open tracking.
+* When two Contacts merge, the merged Contact keeps **No** if either Contact selected it. See :ref:`Merge two Contacts`.
 
 Mautic saves the choice only when the Contact changes it, so saving preferences without changing it doesn't record a choice the Contact never made.
 
