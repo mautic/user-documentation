@@ -62,6 +62,31 @@ The following tags are available:
 
 .. vale off
 
+Favorite Themes
+***************
+
+.. vale on
+
+Mark the Themes you use often as favorites so you can find them quickly when you create an Email or a Landing Page.
+
+.. vale off
+
+The Theme selection screen shows your favorites in the **Favorite themes** section at the top, and all other Themes in the **Other themes** section below it. Both sections list Themes in alphabetical order.
+
+To add a Theme to your favorites, select the empty star next to the Theme's name. To remove it, select the filled star. The Theme then returns to its place in **Other themes**. The code mode card always stays at the end of **Other themes** and has no star.
+
+.. vale on
+
+Mautic saves favorites for each User, so other Users don't see your favorites. Email and Landing Page favorites are separate, so a favorite Email Theme doesn't appear as a favorite when you create a Landing Page.
+
+.. vale off
+
+If you have no favorites, the **Favorite themes** section shows the message 'No favorite themes yet. Click the star on a theme to show it here.'
+
+.. vale on
+
+.. vale off
+
 Installing a Theme
 ******************
 
