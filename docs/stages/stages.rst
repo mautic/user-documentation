@@ -123,14 +123,14 @@ Viewing the Stages funnel
 
 The Stages list shows a funnel chart between the title and the search box, so you can see at a glance how many Contacts are in each Stage right now.
 
-The funnel shows active Stages in order of ascending weight, not in the order of the table. Each band shows the number of Contacts currently in that Stage. From the second band onward, a percentage compares that count with the count in the previous band. The percentage compares current counts only - it isn't a historical conversion rate. Hover over a band to see the Stage name and its Contact count.
+The funnel shows every active Stage in order of ascending weight. Searching, filtering, sorting, or paginating the list doesn't change which Stages it shows or their order. Each band shows the number of Contacts currently in that Stage. From the second band onward, a percentage compares that count with the count in the previous band. The percentage compares current counts only - it isn't a historical conversion rate. Hover over a band to see the Stage name and its Contact count.
 
 The funnel appears when:
 
 * Your Role can view other Users' Contacts.
-* The Stages list shows at least two active Stages when it first loads.
+* You have at least two active Stages.
 
-The funnel only includes the Stages that the list shows when it first loads, so it leaves out Stages that you only see after paginating. Searching, sorting, or paginating the list doesn't update the funnel. Reload the Stages list in your browser to refresh it.
+The funnel shows the Contact counts from when the Stages list loaded. Reload the Stages list in your browser to refresh them.
 
 .. vale off
 
