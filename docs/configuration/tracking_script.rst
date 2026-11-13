@@ -73,7 +73,7 @@ Essential script
 
 The essential script loads Mautic's essential features without visitor tracking. It keeps Dynamic Content fallback content visible until both scripts load, and it initializes Forms inside those fallback slots. Forms embedded directly on the page work independently of the tracking scripts, so they aren't affected by the visitor's consent state. It doesn't track Contacts, set cookies, store data in the browser, or send identifying requests. That makes it safe to place on the page before the visitor consents.
 
-Copy the exact snippet from the **Essential script (before consent)** area of the **Consent-managed** tab. Before consent, it shows :doc:`/components/dynamic_web_content` fallback content and initializes :doc:`/components/forms` in those fallback slots for every visitor; personalized Dynamic Content begins only after both scripts load.
+Copy the exact snippet from the **Essential script** block under **Before consent** on the **Consent-managed** tab. Before consent, it shows :doc:`/components/dynamic_web_content` fallback content and initializes :doc:`/components/forms` in those fallback slots for every visitor; personalized Dynamic Content begins only after both scripts load.
 
 .. vale on
 
@@ -98,7 +98,7 @@ You run this snippet from your consent manager's callback, after the visitor con
 
 .. vale off
 
-Copy the exact snippet from the **Tracking add-on (after consent)** area of the **Consent-managed** tab.
+Copy the exact snippet from the **Tracking add-on** block under **After consent** on the **Consent-managed** tab.
 
 .. vale on
 
