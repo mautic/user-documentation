@@ -135,13 +135,13 @@ Click **Next Step** to log into the Mautic server.
 Logging into Mautic
 ~~~~~~~~~~~~~~~~~~~
 
-On the Mautic login window, enter your Mautic administrator credentials to log into your Mautic instance. 
+On the Mautic login screen, enter the administrator credentials you set during installation.
 
 .. image:: images/mautic-login-screen.png
   :width: 600
-  :alt: Screenshot of Mautic login screen
+  :alt: Mautic login screen with fields for your credentials and the Login button
 
-Click **login** to continue working on your Mautic instance.
+Select **Login** to continue working on your Mautic instance.
 
 Installing with command line
 ============================
