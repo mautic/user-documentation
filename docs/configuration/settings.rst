@@ -856,7 +856,7 @@ A submission from these visitors that doesn't map any Contact fields isn't linke
 
 .. vale on
 
-Forms with **Kiosk mode** turned on handle every submission this way, whatever the visitor's request.
+Forms in **Kiosk Mode** with **Protect visitor privacy** selected handle every submission this way, whatever the visitor's request.
 
 Facebook pixel
 ==============
