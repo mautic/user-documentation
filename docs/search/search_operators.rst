@@ -232,9 +232,9 @@ Dynamic Content search filters
     is:unpublished
     is:mine
     is:uncategorized
-    is:prefcenter
     category:{category alias}
     lang:{lang code}
+    project:"Project Name"
 
 Emails search filters
 ---------------------
@@ -317,15 +317,20 @@ Users search filters
 
     ids:ID1,ID2 (comma separated IDs, no spaces)
     is:admin
-    is:active
-    is:inactive
+    is:published
+    is:unpublished
     is:never_logged_in
     email:*
     name:*
     position:*
     role:*
     username:*
-    Roles
+
+Roles search filters
+--------------------
+
+.. code-block::
+
     ids:ID1,ID2 (comma separated IDs, no spaces)
     is:admin
     name:*
@@ -341,6 +346,5 @@ Webhooks search filters
     is:unpublished
     is:mine
     is:uncategorized
-    is:prefcenter
     category:{category alias}
-    lang:{lang code}
+    name:*
