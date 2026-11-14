@@ -86,7 +86,7 @@ The following fields are available:
 
 .. vale on
 
-- **Block search engines from indexing this file** - If you don't want to index files like ``PDF``, ``DOCx`` and so forth, setting this switch to Yes sends the ``X-Robots-Tag no-index`` HTTP header. If set to No, the header isn't sent and your files could become indexed by search engines.
+- **Block search engines from indexing this file** - If you don't want to index files like ``PDF``, ``DOCx`` and so forth, setting this switch to **Yes** sends the ``X-Robots-Tag no-index`` http header. If set to **No**, the header isn't sent and your files could become indexed by search engines.
 
 Depending on the type of file uploaded, a preview may display after the upload completes.
 
