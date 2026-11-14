@@ -70,6 +70,34 @@ For more information on setting up Campaigns, see :ref:`triggering campaign even
 
 .. vale off
 
+Viewing Contacts in a Stage
+***************************
+
+.. vale on
+
+The Stages list shows how many Contacts are in each Stage, so you can see where Contacts sit in your funnel without building a Report.
+
+.. vale off
+
+The **# contacts** column shows a label such as **View 3 Contacts** for each Stage. Click the label to open the Contacts list filtered to the Contacts in that Stage. A Stage without Contacts shows 'No Contacts', which isn't a link.
+
+.. vale on
+
+You can also open the same filtered Contacts list from the Stage's **Options** menu. Click the three-dots icon on the Stage's row and select **View Contacts**.
+
+What you see depends on your Contact permissions:
+
+.. vale off
+
+* The **# contacts** column appears only if your Role can view other Users' Contacts. Mautic hides the column on small screens.
+* The **View Contacts** option appears if your Role can view your own Contacts or other Users' Contacts.
+
+.. vale on
+
+The filtered Contacts list uses the ``stage_id:{Stage ID}`` search filter, which you can also type in the Contacts search box. You can find a Stage's ID in the **ID** column of the Stages list. For more information, see :ref:`Contacts search filters`.
+
+.. vale off
+
 Merging Stages
 **************
 
