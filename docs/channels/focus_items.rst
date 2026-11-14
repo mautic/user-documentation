@@ -200,16 +200,38 @@ Once you have created your Focus Item, you're ready to activate it to your websi
 Deploying to a website
 ======================
 
-When you save the Focus Item, Mautic shows the code snippet required to display it on your website in a green box on the Focus Item overview.
+When you save the Focus Item, the Focus Item overview shows how to add it in the **Focus implementation** panel. The panel has two parts:
+
+* **Landing pages** - a ``{focus=ID}`` token to add to a Landing Page in the builder.
+* **External websites** - a script to add to your website, preferably right before the closing ``</body>`` tag.
 
   .. image:: images/focus_items/focus_item_embed.png
     :width: 400
     :alt: Screenshot showing the Focus Item code to embed within a website.
 
-.. note:: 
-    You may need assistance from your web development team to implement the Focus Item tracking code on your website.  
+.. note::
+    You may need assistance from your web development team to implement the Focus Item tracking code on your website.
 
     You must also ensure that you have specified your website's domain where you expect to use the Focus Item in the CORS settings for your Mautic instance, otherwise it won't appear. To verify this, go to Settings > Configuration > System Settings > CORS Settings and set Restricted Domains to Yes. Ensure that you specify your domain in the relevant field. Alternatively (but not recommended, as this would allow other websites to display your Focus Items), set Restrict Domains to No and don't specify your domains.
+
+.. vale off
+
+Focus Item tracking and consent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. vale on
+
+A Focus Item shows as soon as the page loads. Mautic tracks its views, clicks, and Form submissions only once Mautic website tracking starts on the page, for example after the visitor consents. Focus Items follow the same consent as Mautic website tracking, so you don't configure consent for them separately. See :doc:`/configuration/tracking_script` for how to load website tracking after consent.
+
+* Mautic Landing Pages load the tracking script, so a Focus Item that you add with the ``{focus=ID}`` token tracks from the start.
+* On an external website, add the Focus Item script together with the Mautic tracking script. If the page doesn't load the Mautic tracking script, the Focus Item still shows, but Mautic doesn't record any statistics for it.
+* If your website starts Mautic website tracking later, after the visitor consents, Focus Item tracking starts at the same time. Mautic records one view for a Focus Item that's already showing.
+
+Mautic shows the Focus Item before it knows who the visitor is. Because of this, Contact field tokens such as ``{contactfield=firstname}`` in the Focus Item's content always show their default value, and Mautic doesn't auto-fill a Focus Item's Form with Contact data.
+
+.. warning::
+
+   A Focus Item uses cookies to control how often it appears and to remember interactions, such as closing it, even before the visitor consents. A Focus Item can also contain a Form, custom content, or external resources. Review these before you show a Focus Item to visitors who haven't consented.
 
 .. vale off
 
