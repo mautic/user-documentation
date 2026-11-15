@@ -14,15 +14,15 @@ Get MailChimp API key
 #. Copy the created API Key.
 
   .. image:: images/plugins-mailchimp-create-api-key-1-and-2.png
-   :alt: Screenshot of MailChimp dashboard with arrows pointing at the Extras tab and the API Keys section
+   :alt: MailChimp account screen with arrows pointing at the Extras menu and its API keys option
    :align: center
 
   .. image:: images/plugins-mailchimp-create-api-key-3a.png
-     :alt: Screenshot of MailChimp dashboard with an arrow pointing at the Create API Key button
+     :alt: Your API keys section in MailChimp with an arrow pointing at the Create A Key button
      :align: center
 
   .. image:: images/plugins-mailchimp-create-api-key-3b-and-3c.png
-     :alt: Screenshot of the Name New API Key section with arrows pointing at the test and Generate Key button
+     :alt: Name New API Key screen in MailChimp with arrows pointing at the API Key Name field and the Generate Key button
      :align: center
 
 .. vale off
@@ -39,15 +39,15 @@ Configure the Plugin
 .. vale on
 
 .. image:: images/plugins-mailchimp-plugins-list.png
-   :alt: Screenshot of the Plugins list with the MailChimp Plugin highlighted
+   :alt: Plugins list with the MailChimp Plugin highlighted
    :align: center
 
 .. image:: images/plugins-mailchimp-enabled-auth.png
-   :alt: Screenshot of the MailChimp Plugin's Enabled/Auth tab with the enable switch set to Yes and the API Key field highlighted
+   :alt: MailChimp Plugin's Enabled/Auth tab with the enable switch set to Yes and the API Key field highlighted
    :align: center
 
 .. image:: images/plugins-mailchimp-features.png
-   :alt: Screenshot of the MailChimp Plugin's Features tab with the push feature selected and the Save & Close button highlighted
+   :alt: MailChimp Plugin's Features tab with the push feature selected and the Save & Close button highlighted
    :align: center
 
 Mautic asks for the API key only when you enable the Plugin. If you connected MailChimp through the OAuth authorization of an earlier Mautic version, Mautic keeps using that connection, and you can save the settings without an API key.
@@ -73,11 +73,11 @@ Each push action has its own MailChimp list and field mapping, so different Camp
 .. vale on
 
 .. image:: images/plugins-mailchimp-campaign-action-list.png
-   :alt: Screenshot of the Campaign Builder Actions list with the push action highlighted
+   :alt: Campaign Builder Actions list with the push action highlighted
    :align: center
 
 .. image:: images/plugins-mailchimp-push-action.png
-   :alt: Screenshot of the push action settings with the MailChimp Integration, the list, the opt-in and welcome Email switches, the Email field mapping, and the Add button highlighted
+   :alt: Push action settings with the MailChimp Integration, the list, the opt-in and welcome Email switches, the Email field mapping, and the Add button highlighted
    :align: center
 
 If you don't have a list in MailChimp yet, create one in MailChimp before you add the action. The field mapping shows the merge fields of the list you select, and it reloads when you select another list. Besides Contact fields, you can map a MailChimp field to these values:
