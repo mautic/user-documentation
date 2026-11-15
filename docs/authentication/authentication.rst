@@ -56,7 +56,7 @@ When you save, Mautic fetches the provider's configuration from the **Client URL
 
 .. warning::
 
-   Mautic links each User to a provider account by the account's ID, and that ID is unique only within one provider. When you change the **Client URL** or the **Identifier field** and save, Mautic deletes the links between all Mautic Users and their provider accounts. Every User then has to link their account again. For the ways to link, see :ref:`Linking existing Users <linking existing openid connect users>`.
+   Mautic links each User to a provider account by the account's ID, and that ID is unique only within one provider. When you change the **Client URL** or the **Identifier field** and save, Mautic deletes the links between all Mautic Users and their provider accounts. Every User then has to link their account again. For the ways to link, see :ref:`Linking existing Users <Linking existing OpenID Connect Users>`.
 
    Keep the default **Identifier field** value of ``sub`` unless your provider uses a different claim as the unique, permanent ID for each account. Mautic doesn't treat surrounding spaces, a trailing slash, or a different case in the scheme or host as a change to the **Client URL**. Turning OpenID Connect off and on again keeps the settings and the links.
 
