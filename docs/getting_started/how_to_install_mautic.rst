@@ -322,7 +322,13 @@ The Mautic :xref:`Recommended Project` is a template which provides a starter ki
 .. note::
   The instructions below refer to the global Composer installation. You might need to replace Composer with ``php composer.phar`` or something similar for your setup.
 
-The Mautic 7.2 Recommended Project runs ``npm ci`` and ``npx patch-package`` during Composer's install and update scripts. The Mautic 7.2 DDEV configuration specifies Node.js 24, which includes a compatible npm version. If you use DDEV, run the ``create-project`` commands below from a ``ddev ssh`` session. The ``ddev composer`` command runs Composer inside DDEV's web container, but it rejects the ``some-dir`` subdirectory target used here. Running Composer on the host does not use the container's Node.js. If you run Composer on the host instead, install Node.js 24 and its bundled npm, then verify them with ``node --version`` and ``npm --version`` before running Composer. Mautic doesn't require Node Version Manager (NVM) for installation.
+The Recommended Project runs ``npm ci`` and ``npx patch-package`` during Composer's install and update scripts.
+
+**If you use DDEV:** The DDEV configuration sets Node.js 24, which includes a compatible npm version. Run the ``create-project`` commands below from a ``ddev ssh`` session. Do not use ``ddev composer`` here because it rejects the ``some-dir`` subdirectory target used in these commands.
+
+**If you run Composer on the host:** Composer does not use the container's Node.js. Install Node.js 24 and its bundled npm, then verify them with ``node --version`` and ``npm --version`` before running Composer.
+
+Mautic does not require NVM for installation.
 
 The basic command to use the Recommended Project is:
 
