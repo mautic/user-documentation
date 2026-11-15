@@ -66,6 +66,7 @@ Configure the Plugin
 
 #. Paste the API key in the **API Key** field.
 #. On the **Features** tab, select **Triggered action push contacts to integration**.
+#. Click **Save & Close**.
 
    |
 
@@ -75,8 +76,6 @@ Configure the Plugin
       :align: center
 
    |
-
-#. Select **Save & Close**.
 
 .. vale on
 
@@ -108,17 +107,16 @@ Each push action has its own MailChimp list and field mapping, so different Camp
 #. In **List**, select the MailChimp list to add the Contacts to.
 #. Set **Enable double opt in** and **Send welcome email** to **Yes** or **No**.
 #. For each MailChimp field, select the Mautic field that provides its value. You must map a field to **Email**.
+#. Click **Add**.
 
    |
 
    .. image:: images/plugins-mailchimp-push-action.png
       :width: 400
-      :alt: Push action settings with the MailChimp Integration, the list, the opt-in and welcome Email switches, the Email field mapping, and the Add button highlighted
+      :alt: Push action settings with the MailChimp Integration, the list, the opt-in and welcome Email switches, and the Email field mapping highlighted
       :align: center
 
    |
-
-#. Select **Add**.
 
 .. vale on
 
