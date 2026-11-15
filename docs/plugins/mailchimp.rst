@@ -54,6 +54,7 @@ Configure the Plugin
    |
 
 #. On the **Enabled/Auth** tab, set **Is Enabled?** to **Yes**.
+#. Paste the API key in the **API Key** field.
 
    |
 
@@ -64,7 +65,6 @@ Configure the Plugin
 
    |
 
-#. Paste the API key in the **API Key** field.
 #. On the **Features** tab, select **Triggered action push contacts to integration**.
 #. Click **Save & Close**.
 
