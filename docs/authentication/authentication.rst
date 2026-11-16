@@ -58,6 +58,8 @@ When you save, Mautic fetches the provider's configuration from the **Client URL
 
    Mautic links each User to a provider account by the account's ID, and that ID is unique only within one provider. When you change the **Client URL** or the **Identifier field** and save, Mautic deletes the links between all Mautic Users and their provider accounts. Every User then has to link their account again. For the ways to link, see :ref:`Linking existing Users <Linking existing OpenID Connect Users>`.
 
+   Users that Mautic created through OpenID Connect registration don't have a password they know, so they can't log in to link their account. Their OpenID Connect login also fails, and if registration is on, Mautic shows 'Failed to register. This identity is already associated with an account.' To restore access, the User resets their Mautic password, or an administrator enters the User's identifier in the **OpenID Connect identifier** field of the User in **Settings** > **Users**.
+
    Keep the default **Identifier field** value of ``sub`` unless your provider uses a different claim as the unique, permanent ID for each account. Mautic doesn't treat surrounding spaces, a trailing slash, or a different case in the scheme or host as a change to the **Client URL**. Turning OpenID Connect off and on again keeps the settings and the links.
 
    Mautic deletes the links only when you save these settings in Mautic. If you change the provider by editing ``config/local.php`` directly, Mautic keeps the old links, and an account at the new provider with the same ID can log in as the linked Mautic User. Change the provider in the Mautic settings instead.

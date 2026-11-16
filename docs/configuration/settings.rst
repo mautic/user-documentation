@@ -909,7 +909,7 @@ Use these settings to let Users log in through an OpenID Connect provider. For s
 
 * **Role for new users** - The Role Mautic assigns to Users it creates through OpenID Connect. Required when **Allow new user registration** is on. For more information, see :doc:`Users and Roles</users_roles/managing_roles>`.
 
-* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL. Changing this value to a different provider deletes the links between all Mautic Users and their provider accounts.
+* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL. Changing this value deletes the links between all Mautic Users and their provider accounts.
 
   .. vale on
 
