@@ -718,7 +718,7 @@ When you delete a Contact, Mautic keeps the Contact's Form submissions and the v
 
    bin/console mautic:forms:delete-submissions-of-deleted-contacts
 
-This command deletes the submissions of deleted Contacts and their records in the Form results tables for all Forms. It deletes them in batches, and deletes each batch in a single transaction.
+This command deletes the submissions of deleted Contacts and their records in the Form results tables for all Forms. It deletes them in batches. In the same transaction as each batch, it updates the Form's submission count, so a Form that reached its :ref:`submission limit <Submission limits>` accepts submissions again when the count drops below the limit. If a batch fails, Mautic rolls back the whole batch, and the next run tries the batch again.
 
 The command only deletes a submission that meets all of these conditions:
 
@@ -734,11 +734,12 @@ Some submissions of deleted Contacts also have no tracking ID, so the command ke
 
 .. warning::
 
-   The command also deletes the submissions of anonymous Contacts that the ``mautic:maintenance:cleanup`` command removed. For example, when anonymous visitors answer a survey Form with no Form Fields mapped to Contact fields, the cleanup removes the visitors, and this command then deletes their answers. Run the command with ``--dry-run`` first, and export the Form results you want to keep before you delete them.
+   The command also deletes the submissions of anonymous Contacts that the ``mautic:maintenance:cleanup`` command removed. For example, when anonymous visitors answer a survey Form with no Form Fields mapped to Contact fields, the cleanup removes the visitors, and this command then deletes their answers. Mautic can't tell these submissions apart from the submissions of other deleted Contacts. Run the command with ``--dry-run`` first to see which Forms it affects. To keep the submissions of a Form, such as a survey Form, exclude it with ``--exclude``.
 
 The command accepts these options:
 
 * ``--form-id=<ID>`` or ``-i <ID>`` deletes the submissions of one Form only.
+* ``--exclude=<ID>`` or ``-d <ID>`` keeps the submissions of a Form. To exclude several Forms, repeat the option, for example ``--exclude=3 --exclude=7``. You can't combine ``--exclude`` with ``--form-id``.
 * ``--batch-limit=<number>`` or ``-l <number>`` sets how many submissions to delete in each batch. The default is 1,000.
 * ``--dry-run`` counts the submissions of deleted Contacts for each Form without deleting anything. Run this first to see what the command deletes.
 
