@@ -841,7 +841,7 @@ This filtering is always on, and you can't turn it off. Because Mautic doesn't t
 Form submissions from visitors Mautic doesn't track
 ---------------------------------------------------
 
-Visitors whose requests match these conditions can submit Forms. Mautic saves each submission and uses the Form's mapped Contact fields to update the matching Contact, or to create a new one. To respect the visitor's privacy, Mautic doesn't:
+Visitors whose requests match these conditions can submit Forms. Mautic saves each submission and uses the Form's mapped Contact and Company fields to update the matching Contact, or to create a new one. To respect the visitor's privacy, Mautic doesn't:
 
 * Link the submission to the Contact that Mautic already tracks in the visitor's browser
 * Store an IP address or device ID with the submission or the Contact
@@ -852,7 +852,7 @@ Mautic also removes the query string and fragment from the submission's referrer
 
 .. vale off
 
-A submission from these visitors that doesn't map any Contact fields isn't linked to a Contact. Without a Contact, the submission doesn't add anyone to the Form's Campaigns, trigger the **Submits form** Campaign decision, or change Points through the **Submits a form** Point Action.
+A submission from these visitors that doesn't map any Contact or Company fields isn't linked to a Contact. Without a Contact, the submission doesn't add anyone to the Form's Campaigns, trigger the **Submits form** Campaign decision, or change Points through the **Submits a form** Point Action.
 
 .. vale on
 
