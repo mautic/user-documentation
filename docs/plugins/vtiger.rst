@@ -25,6 +25,9 @@ Authenticate the Vtiger Plugin
 
 To authenticate the Mautic Plugin to be able to communicate with Vtiger CRM you'll need these credentials:
 
+.. vale Google.WordList = NO
+.. vale Google.FirstPerson = NO
+
 * Vtiger Cloud URL - the base (root) URL starting with ``http://`` or ``https://`` where your Vtiger instance runs. For example, ``https://your_Vtiger.od2.Vtiger.com.``
 
 * Vtiger Open Source URL If you are using Open Source Vtiger you must use the base (root) URL starting with ``http://`` or ``https:// and followed by /webservice.php``. For example ``https://your_Vtiger.od2.Vtiger.com/webservice.php``.
@@ -32,6 +35,9 @@ To authenticate the Mautic Plugin to be able to communicate with Vtiger CRM you'
 * Vtiger username - The username, email address usually, which you use to log in to your Vtiger.
 
 * Vtiger access key - The access key activated in your Vtiger profile. To get it, go to Vtiger's **My Preferences**. The Access Key hash is at the bottom of the page.
+
+.. vale Google.WordList = YES
+.. vale Google.FirstPerson = YES
 
 .. image:: images/vtiger-mautic.png
   :alt: Screenshot of Vtiger Mautic Integration
@@ -51,22 +57,24 @@ Configure the Vtiger CRM Plugin
 
 If you want to use the Plugin, you have to activate it. 
 
-1. Set the *Active* switch to **Yes**.
+.. vale off
 
-2. In the **Features tab** is Push Contacts to this Integration checkbox and it's checked by default.
+#. Set the **Active** switch to **Yes**.
 
-.. image:: images/vtiger-mautic-features.png
-  :alt: Screenshot of Vtiger Mautic Integration
-  :width: 500
-  :align: center
+#. In the **Features** tab, Mautic selects the **Triggered action push contacts to integration** checkbox by default.
 
-|
+   .. image:: images/vtiger-mautic-features.png
+     :alt: Screenshot of Vtiger Mautic Integration
+     :width: 500
+     :align: center
 
-3. You can also configure whether you want to map Vtiger's Leads to Mautic's Contacts and/or Vtiger's Organizations to Mautic's Companies.
+#. You can also configure whether you want to map Vtiger's Leads to Mautic's Contacts and Vtiger's Organizations to Mautic's Companies.
 
-4. Configure the :ref:`field mapping<field mapping>`.
+#. Configure the :ref:`field mapping<field mapping>`.
 
-5. Click **Save & Close**.
+#. Click **Save & Close**.
+
+.. vale on
 
 .. vale off
 
