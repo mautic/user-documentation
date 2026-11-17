@@ -53,6 +53,28 @@ When viewing all Segments, the **# contacts** column shows the number of Contact
 
 .. vale off
 
+Viewing a Segment's statistics
+******************************
+
+.. vale on
+
+When you open a Segment, the detail view shows a row of stat cards that summarize its membership. Each card shows a count and links to the Contacts interface filtered to those Contacts. The cards appear only if you have permission to view Contacts.
+
+.. image:: images/segment_contacts_stat_cards.png
+   :width: 700
+   :alt: Segment detail view showing four stat cards - Total, Active, Manually added, and Filter added - each with a count of Contacts.
+
+.. vale off
+
+* **Total contacts** - All Contacts in the Segment.
+* **Active contacts** - Contacts in the Segment who don't have a 'Do Not Contact' status for Email.
+* **Manually added contacts** - Contacts who joined the Segment outside its filters. This includes Contacts that a User adds through the UI, the API, or a batch update. It also includes Contacts that a Campaign action, a Form submit action, a Point Trigger, or a CSV import with a default Segment adds, and Contacts who subscribe through the Preference Center. Mautic keeps these Contacts in the Segment even when they don't match its filters.
+* **Filter added contacts** - Contacts that Mautic added to the Segment because they match its filters. This card appears only for Segments that have filters configured.
+
+.. vale on
+
+.. vale off
+
 Exporting Contacts of a Segment
 *******************************
 
