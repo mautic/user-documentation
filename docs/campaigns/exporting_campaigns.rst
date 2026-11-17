@@ -10,15 +10,23 @@ Before importing or exporting data, back up your database as a safety precaution
 Supported data types
 ********************
 
-When you select a Campaign, the export feature extracts all Campaign data and entities, along with any dependencies the Campaign needs to function, including:
+When you select a Campaign, the export feature extracts all Campaign data and entities, along with any dependencies the Campaign needs to function. This includes the items that the Campaign's events use:
 
+* Assets\*
 * Dynamic Content
-* Asset\*
+* Emails
+* Forms
+* Landing Pages
+* Point Groups
+* Segments
+* Custom Fields that the Campaign's events and Segment filters use
 * Other related dependencies
 
 .. note::
 
    \* The exported Campaign includes only directly associated Assets.
+
+The export doesn't include Stages, other Campaigns, Focus Items, Marketing Messages, Text Messages, Web Notifications, or Mobile Notifications that the Campaign's events use. Instead, it records a unique identifier for each of them, so that the importing instance can find the same item if it already exists there. For more information, see :ref:`How Campaign import works`.
 
 The export command:
 
@@ -27,7 +35,7 @@ The export command:
 
 .. important::
     
-   The importing instance needs the same Custom Fields and Plugins to be present.
+   The importing instance needs the same Plugins to be present.
 
 .. vale off
 
