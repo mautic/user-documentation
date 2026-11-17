@@ -3,6 +3,8 @@ docroot: "docs/build/html"
 working_dir:
   web: /var/www/html/docs
 omit_containers: [db]
+webimage_extra_packages: [make, python3-venv]
 hooks:
   post-start:
     - exec: "make html"
+ddev_version_constraint: ">= v1.25.3"
