@@ -720,6 +720,10 @@ When you delete a Contact, Mautic keeps the Contact's Form submissions and the v
 
 This command deletes the submissions of deleted Contacts and their records in the Form results tables for all Forms. It deletes them in batches, and deletes each batch in a single transaction.
 
+The command only deletes submissions that have no Contact and have a tracking ID. Some submissions never had a Contact, because Mautic didn't track the person who submitted the Form - for example, with Kiosk Mode, Do Not Track or Global Privacy Control signals, or bots. Mautic stores these submissions without a tracking ID, so the command keeps them.
+
+Some submissions of deleted Contacts also have no tracking ID, so the command keeps them too. This happens when a mapped Form Field created the Contact for a person Mautic didn't track, such as in Kiosk Mode, or when a logged-in Mautic User submitted the Form.
+
 The command accepts these options:
 
 * ``--form-id=<ID>`` or ``-i <ID>`` deletes the submissions of one Form only.
