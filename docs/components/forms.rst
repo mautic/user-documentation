@@ -732,6 +732,10 @@ Mautic also stores a submission without a Contact when it doesn't track a visito
 
 Some submissions of deleted Contacts also have no tracking ID, so the command keeps them too. This happens when a mapped Form Field created the Contact for a person Mautic didn't track, such as in Kiosk Mode, or when a logged-in Mautic User submitted the Form.
 
+.. warning::
+
+   The command also deletes the submissions of anonymous Contacts that the ``mautic:maintenance:cleanup`` command removed. For example, when anonymous visitors answer a survey Form with no Form Fields mapped to Contact fields, the cleanup removes the visitors, and this command then deletes their answers. Run the command with ``--dry-run`` first, and export the Form results you want to keep before you delete them.
+
 The command accepts these options:
 
 * ``--form-id=<ID>`` or ``-i <ID>`` deletes the submissions of one Form only.
