@@ -42,6 +42,8 @@ To set up a User manually:
 
         .. vale on
 
+   * **OpenID Connect identifier** - The User's unique ID in your OpenID Connect provider. Mautic shows this field only when OpenID Connect is on. Enter the ID to link the User to their provider account, or clear it to remove the link. For more information, see :ref:`OpenID Connect <OpenID Connect authentication>`.
+
    * **Time zone** - Set the User's time zone, or use the default. Adding the User's time zone enables them to account for time zone differences for Email scheduling and other features.
 
    * **Language** - Select a language for each User, to improve their experience in Mautic.
