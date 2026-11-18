@@ -49,7 +49,7 @@ Filter Point Actions with Quick filters
 
 .. vale on
 
-Use **Quick filters** on the Point Actions list to find actions by how they change a Contact's Points, or to find the actions that can award Points more than once.
+Use **Quick filters** on the Point Actions list to find actions by how they change a Contact's Points, or to find the actions that can run more than once.
 
 #. Go to **Points** > **Manage Actions**.
 
