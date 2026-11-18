@@ -342,7 +342,7 @@ When you have many Reports, filter the list by data source to find the Reports b
    * **Segment activity log**
    * **Do Not Contact**
    * **Landing pages**
-   * **Focus items**
+   * **Focus Stats** - this option appears only when the Mautic Focus Plugin is available
 
    .. vale on
 
@@ -356,7 +356,7 @@ You can select one data source at a time, and you can combine it with the other 
 
 .. vale on
 
-Mautic adds a ``source:{data source}`` search filter to the search box, for example ``source:leads`` for Contacts. To clear the filter, click the **Quick filters** button and click **Reset**. For the other search filters, see :ref:`Reports search filters`.
+Mautic adds a ``source:{data source}`` search filter to the search box, for example ``source:leads`` for Contacts. To switch to another data source, select it and click **Apply selected**. Mautic replaces the previous data source filter. To remove the filter, clear the selected data source and click **Apply selected**, or click **Reset**. For the other search filters, see :ref:`Reports search filters`.
 
 Quick filters
 =============
