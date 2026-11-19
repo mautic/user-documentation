@@ -439,6 +439,14 @@ Message settings
   
   To change the text, change the message between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the ``|URL|`` text, because that's a token, which creates a unique URL for each Contact.
 
+.. vale off
+
+* **Text for the {forward_text} token** - The sentence and link that the ``{forward_text}`` token inserts. The default is ``<a href='|URL|'>Forward this email</a>``. To change the text, edit the text between the ``<a>`` and ``</a>`` tags. Keep the ``|URL|`` token, which Mautic replaces with the URL of the forward page. See :ref:`Forward a copy` for how forwarding works.
+
+* **Copies per sent email** - The number of copies Contacts can send of one sent Email through its forward link. The default is ``5``. Set ``0`` for no limit.
+
+.. vale on
+
 * **Default Email signature** - The signature for your default Emails, which pairs with the name & Email address in the **Mail Send** settings.
 
 * **Append tracking pixel into Email body?** - To track Email opens, select **Yes**. Select **No** to prevent tracking, reporting on, and using decisions based on Email opens.

@@ -929,6 +929,43 @@ For example:
 
     <a href="{webview_url}" target="_blank">View in your browser</a>
 
+Forward a copy
+**************
+
+When a Contact forwards an Email from their mail client, the forwarded message still contains their personal links. Whoever receives it can unsubscribe the Contact, and their opens and clicks count as the Contact's. To let Contacts share an Email without their personal links, add one of these tokens to the Email:
+
+.. vale off
+
+* ``{forward_text}`` - inserts a sentence with a link to the forward page. By default, the sentence is 'Forward this email'. To change it, edit the **Text for the {forward_text} token** setting, described in :doc:`/configuration/settings`.
+* ``{forward_url}`` - inserts only the URL of the forward page, for use in your own link or button.
+
+.. vale on
+
+For example:
+
+.. code-block:: html
+
+    <a href="{forward_url}" target="_blank">Send this Email to a colleague</a>
+
+When the Contact selects the link, a page asks for an Email address. After the Contact enters an address and selects **Send a copy**, Mautic sends a copy of the Email to that address. The copy has nothing that acts on or identifies the original Contact:
+
+* It has no unsubscribe, resubscribe, Do Not Contact, Preference Center, or forward links, and no unsubscribe headers.
+* It has no tracking pixel and no trackable links. Links go straight to their destination, and opening the copy or clicking its links doesn't add anything to the Contact's history.
+* Contact field tokens show their default value, such as ``Friend`` in ``{contactfield=firstname|Friend}``, or nothing when the token has no default. Contact Owner tokens are empty, and Dynamic Content shows its default content.
+* ``{webview_url}`` links to the Email's public preview when public preview is on, and is empty otherwise. ``{webview_text}`` is empty.
+
+Mautic builds the copy from the Email's current content, so a copy sent after you edit the Email contains your edits. If you wrapped a token in your own link, such as ``<a href="{unsubscribe_url}">Unsubscribe</a>``, the copy keeps the link text but the link goes nowhere.
+
+.. vale off
+
+By default, each sent Email allows five copies. When a Contact reaches the limit, the page shows the message 'This email can't be forwarded any more times.' To change the limit, edit the **Copies per sent email** setting. Mautic stores only the number of copies sent for each sent Email, and nothing about the people who receive them.
+
+.. vale on
+
+If the entered address belongs to a Contact who unsubscribed or who has Do Not Contact set for Email, Mautic doesn't send the copy. The page still confirms that it sent a copy, so nobody can use it to find out who unsubscribed.
+
+The forward tokens are empty in previews and test Emails, because the link only works for an Email Mautic sent to a Contact. If you deactivate the Email, its forward links show a page-not-found error.
+
 Bounce management
 *****************
 
