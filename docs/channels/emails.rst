@@ -951,7 +951,7 @@ When the Contact selects the link, a page asks for an Email address. After the C
 
 * It has no unsubscribe, resubscribe, Do Not Contact, Preference Center, or forward links, and no unsubscribe headers.
 * It has no tracking pixel and no trackable links. Links go straight to their destination, and opening the copy or clicking its links doesn't add anything to the Contact's history.
-* Contact field tokens show their default value, such as ``Friend`` in ``{contactfield=firstname|Friend}``, or nothing when the token has no default. Contact Owner tokens are empty, and Dynamic Content shows its default content.
+* Contact field tokens show their default value, such as ``Friend`` in ``{contactfield=firstname|Friend}``, or nothing when the token has no default. A token that formats its value, such as ``{contactfield=date_added|date}`` or ``{contactfield=country|label}``, is empty. Contact Owner tokens are empty, and Dynamic Content shows its default content.
 * ``{webview_url}`` links to the Email's public preview when public preview is on, and is empty otherwise. ``{webview_text}`` is empty.
 
 Mautic builds the copy from the Email's current content, so a copy sent after you edit the Email contains your edits. If you wrapped a token in your own link, such as ``<a href="{unsubscribe_url}">Unsubscribe</a>``, the copy keeps the link text but the link goes nowhere.
