@@ -252,7 +252,7 @@ Installing from GitHub
 
 It's essential to have all the files locally - including automated tests - from the GitHub repository when testing Mautic or contributing to it. Many of these files aren't included in the production build process.
 
-You don't need Node.js or npm for the production ZIP package. A GitHub source checkout may require compatible Node.js and npm versions when you follow instructions that run ``node`` or ``npm`` commands to build frontend resources. Node Version Manager - NVM - is optional and can help you manage Node.js versions.
+You don't need Node.js or npm for the production ZIP package. However, a Composer installation or GitHub source checkout requires compatible Node.js and npm versions when its install or update scripts run commands to install JavaScript dependencies or build frontend resources. Node Version Manager, or NVM, is optional and can help you manage Node.js versions.
 
 Cloning Mautic from GitHub
 ==========================
@@ -322,13 +322,7 @@ The Mautic :xref:`Recommended Project` is a template which provides a starter ki
 .. note::
   The instructions below refer to the global Composer installation. You might need to replace Composer with ``php composer.phar`` or something similar for your setup.
 
-The Recommended Project runs ``npm ci`` and ``npx patch-package`` during Composer's install and update scripts.
-
-**If you use DDEV:** The DDEV configuration sets Node.js 24, which includes a compatible npm version. Run the ``create-project`` commands below from a ``ddev ssh`` session. Do not use ``ddev composer`` here because it rejects the ``some-dir`` subdirectory target used in these commands.
-
-**If you run Composer on the host:** Composer does not use the container's Node.js. Install Node.js 24 and its bundled npm, then verify them with ``node --version`` and ``npm --version`` before running Composer.
-
-Mautic does not require NVM for installation.
+The Recommended Project runs ``npm ci`` and ``npx patch-package`` during Composer's install and update scripts to install JavaScript dependencies and build frontend resources.
 
 The basic command to use the Recommended Project is:
 
