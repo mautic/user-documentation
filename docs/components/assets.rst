@@ -133,6 +133,8 @@ Asset download counts
 
 When you view an Asset, Mautic shows **Total downloads**, which counts every download, and **Unique downloads**, which counts each Contact only once. The Assets list shows the total in the **Download count** column.
 
+Mautic counts only downloads that succeed. A request doesn't count when Mautic can't serve the file, for example because someone deactivated the Asset or its file is missing. A failed request also doesn't stop the Contact's next successful download from counting as unique.
+
 .. vale off
 
 Mautic counts downloads from visitors who send a Do Not Track or Global Privacy Control signal, even though it doesn't track those visitors. These downloads only add to **Total downloads**, because Mautic can't tell whether the visitor downloaded the Asset before. Mautic serves the file as usual, but to respect the visitor's privacy it doesn't:
