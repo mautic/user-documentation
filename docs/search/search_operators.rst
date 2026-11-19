@@ -173,8 +173,6 @@ Segments search filters
     name:*
     category:category-alias
 
-.. _assets search filters:
-
 Assets search filters
 ---------------------
 
