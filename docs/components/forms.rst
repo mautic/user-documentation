@@ -718,23 +718,17 @@ When you delete a Contact, Mautic keeps the Contact's Form submissions and the v
 
    bin/console mautic:forms:delete-submissions-of-deleted-contacts
 
-This command deletes the submissions of deleted Contacts and their records in the Form results tables for all Forms. It deletes them in batches. In the same transaction as each batch, it updates the Form's submission count, so a Form that reached its :ref:`submission limit <Submission limits>` accepts submissions again when the count drops below the limit. If a batch fails, Mautic rolls back the whole batch, and the next run tries the batch again.
+This command deletes the submissions of deleted Contacts, their records in the Form results tables, and the files that the Contacts uploaded through **File** fields, for all Forms. It deletes them in batches. In the same transaction as each batch, it updates the Form's submission count, so a Form that reached its :ref:`submission limit <Submission limits>` accepts submissions again when the count drops below the limit. If a batch fails, Mautic rolls back the whole batch, and the next run tries the batch again.
 
-The command only deletes a submission that meets all of these conditions:
+When you delete a Contact, Mautic also records the deleted Contact in the Contact's Form submissions. This applies when you delete Contacts one at a time or in a batch, in the Mautic UI or through the API. The command only deletes submissions with this record, so it keeps these submissions:
 
-* The submission has no Contact.
-* The submission has a tracking ID.
-* No device with that tracking ID exists. When you delete a Contact, Mautic also deletes the Contact's devices.
+* Submissions that never had a Contact, because Mautic didn't track the person who submitted the Form - for example, with Kiosk Mode, Do Not Track or Global Privacy Control signals, or bots.
+* Submissions of Contacts that you deleted before you updated to a Mautic version that includes this command.
+* Submissions of Contacts that Mautic deleted without recording them, such as the anonymous Contacts that the ``mautic:maintenance:cleanup`` command removes.
 
-Some submissions never had a Contact, because Mautic didn't track the person who submitted the Form - for example, with Kiosk Mode, Do Not Track or Global Privacy Control signals, or bots. Mautic stores these submissions without a tracking ID, so the command keeps them.
+When you merge two Contacts, Mautic moves the Form submissions to the Contact that remains, so the command doesn't delete them.
 
-Mautic also stores a submission without a Contact when it doesn't track a visitor's click of a tracked link, and the visitor submits a Form within 15 seconds that has no Form Fields mapped to Contact fields. This submission has the tracking ID of the visitor's device, so the command keeps it while the device exists. If you later delete the visitor's Contact, the command deletes this submission too.
-
-Some submissions of deleted Contacts also have no tracking ID, so the command keeps them too. This happens when a mapped Form Field created the Contact for a person Mautic didn't track, such as in Kiosk Mode, or when a logged-in Mautic User submitted the Form.
-
-.. warning::
-
-   The command also deletes the submissions of anonymous Contacts that the ``mautic:maintenance:cleanup`` command removed. For example, when anonymous visitors answer a survey Form with no Form Fields mapped to Contact fields, the cleanup removes the visitors, and this command then deletes their answers. Mautic can't tell these submissions apart from the submissions of other deleted Contacts. Run the command with ``--dry-run`` first to see which Forms it affects. To keep the submissions of a Form, such as a survey Form, exclude it with ``--exclude``.
+The command deletes the uploaded files of a submission before it deletes the submission. If it can't delete a file, it keeps the submission so that the next run can try again, and shows how many submissions it kept for each Form. Check the Mautic log for the files that it couldn't delete.
 
 The command accepts these options:
 
@@ -743,7 +737,7 @@ The command accepts these options:
 * ``--batch-limit=<number>`` or ``-l <number>`` sets how many submissions to delete in each batch. The default is 1,000.
 * ``--dry-run`` counts the submissions of deleted Contacts for each Form without deleting anything. Run this first to see what the command deletes.
 
-The command doesn't delete files that Contacts uploaded through **File** fields. After it runs, some IP addresses might no longer belong to any record. To delete them, run ``bin/console mautic:unusedip:delete``.
+After the command runs, some IP addresses might no longer belong to any record. To delete them, run ``bin/console mautic:unusedip:delete``.
 
 To keep the Form data of deleted Contacts out of your database, run this command as a Cron job, for example once a day.
 
