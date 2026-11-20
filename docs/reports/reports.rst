@@ -317,7 +317,7 @@ To view additional options for Report, click the drop-down menu next to the chec
 
 * **Clone** copies the Report so that you can make small adjustments in a similar but new Report, while maintaining the original Report.
 
-* **Export & Send** sends a link containing the ``.csv`` file with the Report data to the email address on your User profile.
+* **Export & Send** sends a link containing the ``.csv`` file with the Report data to the Email address on your User profile.
 
 * **Delete** deletes the Report immediately.
 
@@ -329,7 +329,7 @@ Filter the Reports list by data source
 When you have many Reports, filter the list by data source to find the Reports built on a specific type of data, such as Contacts or Emails.
 
 #. Go to **Reports**.
-#. Next to the search box, click the **Quick filters** button.
+#. On the right of the search box, click the **Quick filters** button.
 #. Under **Data source**, select one of the following data sources:
 
    .. vale off
@@ -348,6 +348,12 @@ When you have many Reports, filter the list by data source to find the Reports b
 
 #. Click **Apply selected**.
 
+.. image:: images/reports-data-source-quick-filter.png
+   :align: center
+   :alt: Reports list with the Quick filters panel open, highlighting the Quick filters button, the Data source options with Contacts selected, and the Apply selected button
+
+|
+
 The list shows only the Reports that use the selected data source. Each option matches one data source, so **Contacts** shows Reports built on the Contacts data source but not, for example, Reports built on Contact Point Log or Segment Membership.
 
 .. vale off
@@ -357,6 +363,12 @@ You can select one data source at a time, and you can combine it with the other 
 .. vale on
 
 Mautic adds a ``source:{data source}`` search filter to the search box, for example ``source:leads`` for Contacts. To switch to another data source, select it and click **Apply selected**. Mautic replaces the previous data source filter. To remove the filter, clear the selected data source and click **Apply selected**, or click **Reset**. For the other search filters, see :ref:`Reports search filters`.
+
+.. image:: images/reports-data-source-filter-applied.png
+   :align: center
+   :alt: Reports list filtered to Reports that use the Contacts data source, with the Contacts data source filter highlighted in the search box
+
+|
 
 Quick filters
 =============
