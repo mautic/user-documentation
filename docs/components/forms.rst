@@ -512,10 +512,20 @@ Finding Forms with Form actions
 To review which Forms change Contacts or send notifications when someone submits them, filter the Forms list to Forms with Form actions.
 
 #. Go to **Components > Forms**.
-#. Open **Quick filters**. The **Others** group contains **With actions**.
-#. Select **With actions** and click **Apply selected**. Mautic adds the ``has:actions`` search filter to the search box and lists only Forms with at least one Form action.
+#. Click the **Quick filters** funnel icon next to the search box. The **Others** group contains **With actions**.
+#. Select **With actions** and click **Apply selected**.
 
-You can also type ``has:actions`` in the search box and combine it with other search filters. For the other Forms search filters, such as ``is:expired``, ``is:pending``, and ``has:results``, see :ref:`Forms search filters <forms search filters>`.
+   .. image:: images/forms/forms_quick_filters_with_actions.png
+      :width: 600
+      :alt: Forms list with the Quick filters panel open, and the Quick filters icon, the With actions option, and the Apply selected button highlighted
+
+   Mautic adds the ``has:actions`` search filter to the search box and lists only Forms with at least one Form action.
+
+   .. image:: images/forms/forms_list_has_actions_filter.png
+      :width: 600
+      :alt: Forms list with has:actions in the search box, listing only the two Forms that have Form actions
+
+You can also type ``has:actions`` in the search box and combine it with other search filters. For the other Forms search filters, such as ``is:expired``, ``is:pending``, and ``has:results``, see :ref:`Forms search filters <Forms search filters>`.
 
 .. vale off
 
