@@ -35,9 +35,17 @@ Use **Quick filters** to narrow the Contacts list without typing search commands
 
 #. Go to **Contacts**.
 
-#. Next to the search box, click the **Quick filters** button.
+#. Next to the search box, click the **Quick filters** button - the funnel icon.
+
+   .. image:: images/contacts-quick-filters-button.png
+      :align: center
+      :alt: Contacts list with Contacts highlighted in the main menu and the Quick filters funnel icon highlighted next to the search box
 
 #. Select the filters you want, then click **Apply selected**.
+
+   .. image:: images/contacts-quick-filters-apply-selected.png
+      :align: center
+      :alt: Open Quick filters panel with the Unsegmented filter selected under Others and the Apply selected button highlighted
 
 The following filters are available:
 
