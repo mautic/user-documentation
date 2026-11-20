@@ -8,15 +8,7 @@ Searching Mautic
 Search operators and filters
 ****************************
 
-Mautic offers a variety of search operators and filters for drilling down into relevant resources. You can find the available search filters and operators by clicking on the button with a question mark next to the search input.
-
-The search filters for that entity aren't available if such a button is missing.
-
-.. image:: images/contacts-search.png
-   :align: center
-   :alt: Mautic Contact search
-   
-|
+Mautic offers a variety of search operators and filters for drilling down into relevant resources. To filter a list view, type a search filter in the search box, or use the filter dropdown and the **Quick filters** button next to it. The following sections describe the available search filters and operators.
 
 Mautic also has a 'global search' feature. In the top left-hand corner, click the magnifying glass icon next to the Mautic logo/notifications icon. This opens a search input where you can search across multiple different entities.
 
