@@ -54,6 +54,20 @@ There is a multi-select field that allows excluding Contacts belonging given Seg
 
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
+.. vale off
+
+Segment Email sending status
+============================
+
+.. vale on
+
+The Email detail view shows the sending status of each active Segment Email that has Contacts still to receive it:
+
+* **Ready to send** - The Email has no scheduled start date. To send it, select **Send** in the Email detail view, or select **Schedule** to set a start date. For an A/B test, Mautic hides these buttons. Add at least one variant, then select **Schedule sending** in the **A/B Test** panel. For more information, see :ref:`A/B testing <ab testing for Segment Emails>`.
+* **Sending** - The Email is within its scheduled sending period.
+
+In the Email list, hover over an Email's status icon to see the 'Ready to send' status.
+
 .. _ab testing for Segment Emails:
 
 .. vale off
@@ -206,6 +220,21 @@ When sending begins, Mautic sends the test Emails to the test audience and the p
 
 After the wait time passes, Mautic evaluates each variant against your chosen winner criteria, marks the best performer with a **Winner** badge in the panel, and sends the winning version to the remaining Contacts.
 
+You don't have to wait for the automatic pick. Once the test starts sending, you can end it on any Active variant you choose. Each Active variant's row in the **A/B Test** panel shows a **Make winner** trophy action. The variant the statistics currently favor shows a filled trophy, and the other Active variants show an outline trophy. You can promote any Active variant, whichever trophy it shows.
+
+To promote a variant, select its **Make winner** trophy, then select **Make winner** in the confirmation dialog.
+
+.. note::
+
+   Before you promote a variant, review what confirming does. Mautic:
+
+   * sets the chosen variant as the main Email
+   * turns off the other variants
+   * stops the A/B test
+   * resets the current A/B test stats
+
+   Mautic doesn't automatically send the winning Email to the remaining Contacts.
+
 .. vale off
 
 Viewing A/B test results
@@ -276,7 +305,9 @@ To review the Email at full size, or to hand its rendered HTML to someone else, 
 
 You can only preview a Contact's data if you have permission to view that Contact. Otherwise, Mautic shows the preview with sample Contact data and a message that you don't have access to the Contact.
 
-To let people without a Mautic login open the Preview URL, activate the Email and turn on public preview with the toggle beside the Preview URL. Turn the toggle off to stop public access.
+The same applies to Company data. Your Role's **Contacts** permissions control which Companies you can preview. **View Own** covers Companies you own - or created, if the Company has no owner - and **View Others** covers all other Companies. Administrators can preview any Company. Without permission, Mautic ignores the selected Company and uses the selected Contact's Companies, or sample Company data if you haven't selected a Contact. When you download the preview, Mautic leaves the Company's name out of the filename and shows a message that you don't have access to the Company.
+
+To let people without a Mautic login open the Preview URL, activate the Email and turn on public preview with the toggle beside the Preview URL. Turn the toggle off to stop public access. People who open the Preview URL without logging in always see sample Company data, even when the URL includes a Company.
 
 Segments used
 =============

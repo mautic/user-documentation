@@ -73,17 +73,16 @@ If you need to add extra file types, configure the maximum size of upload or the
 The following fields are available:
 
 - **Title** - the title for the Asset
-- **Alias** - used to create the slug on the download URL. Created from the title automatically if not provided.
 - **Description** - an internally used description to inform other Mautic Users what the Asset is and/or where it's used.
 - **Category** - used to organize resources - see :doc:`/categories/categories-overview` for more information
+- **Projects** - the Projects that this Asset belongs to. You can select more than one. To select Projects, you need the **Associate with other entities** Project permission. See :doc:`/projects/projects-overview` for more information.
 - **Language** - the language of this Asset - can be helpful in multilingual marketing Campaigns and for reporting purposes
-- **Published** - Whether the Asset is available for use - published - or not available - unpublished
+- **Available for use** - whether the Asset is available. Set it to **Yes** to make the Asset available within the scheduled dates, or **No** to make it unavailable.
 
 .. vale off
 
-**Publish at (date/time)** - This allows you to define the date and time at which this Asset is available
-
-**Unpublish at (date/time)** - This allows you to define the date and time at which this Asset ceases to be available
+- **Available from (date/time)** - the date and time at which the Asset becomes available
+- **Unavailable from (date/time)** - the date and time at which the Asset stops being available
 
 .. vale on
 
@@ -177,10 +176,11 @@ Deleting an Asset
 
 .. vale on
 
-It's possible to delete an Asset by clicking on the 'delete' button while viewing the Asset, or by selecting the arrow next to the checkbox for the Asset, and selecting 'delete'. Mautic displays a confirmation screen, prompting confirmation that you wish to delete the Asset.
+It's possible to delete an Asset by clicking on the **Delete** button while viewing the Asset, or by selecting the arrow next to the checkbox for the Asset, and selecting **Delete**. Mautic displays a confirmation screen, prompting confirmation that you wish to delete the Asset.
 
-.. warning:: 
-    Once deleted, you can't retrieve an Asset, and statistics relating to the number of downloads for that Asset are no longer be available. Contact Points accumulated as a result of accessing the resource remain. It's recommended where possible to unpublish Assets which are no longer in use - in future there may be an archive feature.
+.. warning::
+
+   Once you delete an Asset, you can't retrieve it, and Mautic no longer shows the download statistics for that Asset. Contacts keep any Points they earned by accessing the Asset. If Mautic stores the Asset's file locally, deleting the Asset also permanently deletes that file. If the Asset references a remote file - for example a URL or a cloud storage provider such as Amazon S3 - Mautic removes only the Asset record and doesn't delete the remote file. Where possible, set **Available for use** to **No** for Assets that you no longer use instead of deleting them.
 
 Display Assets directly in the browser
 ======================================
