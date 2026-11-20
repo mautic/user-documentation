@@ -62,7 +62,7 @@ When you open a Segment, the detail view shows a row of stat cards that summariz
 
 .. image:: images/segment_contacts_stat_cards.png
    :width: 700
-   :alt: Segment detail view showing four stat cards - Total, Active, Manually added, and Filter added - each with a count of Contacts.
+   :alt: Segment detail view showing five stat cards - Total, Active, Manually added, Filter added, and Manually removed - each with a count of Contacts.
 
 .. vale off
 
@@ -70,6 +70,7 @@ When you open a Segment, the detail view shows a row of stat cards that summariz
 * **Active contacts** - Contacts in the Segment who don't have a 'Do Not Contact' status for Email.
 * **Manually added contacts** - Contacts who joined the Segment outside its filters. This includes Contacts that a User adds through the UI, the API, or a batch update. It also includes Contacts that a Campaign action, a Form submit action, a Point Trigger, or a CSV import with a default Segment adds, and Contacts who subscribe through the Preference Center. Mautic keeps these Contacts in the Segment even when they don't match its filters.
 * **Filter added contacts** - Contacts that Mautic added to the Segment because they match its filters. This card appears only for Segments that have filters configured.
+* **Manually removed contacts** - Contacts removed from the Segment outside its filters, for example by a User, through the API, or by a Campaign action, a Form submit action, or a Point Trigger. Mautic keeps these Contacts out of the Segment even when they match its filters, so they don't count toward the other cards.
 
 .. vale on
 
