@@ -12,6 +12,8 @@ To open the settings, go to **Settings** > **Configuration**. Each section in th
 
 If you select a link in Mautic before you save, such as another section or a menu item, Mautic asks you to confirm that you want to discard your changes. Select **Confirm** to leave without saving, or **Cancel** to stay. If you close or reload the browser tab instead, your browser shows its own prompt to confirm that you want to leave.
 
+Mautic doesn't treat a file you choose for upload, such as the **Identity provider metadata file** in **User/Authentication Settings**, as an unsaved change. If choosing a file is your only change, neither prompt appears and Mautic doesn't upload the file, so select **Save** after you choose it.
+
 If a setting in the section isn't valid, Mautic shows an alert at the top of the screen and expands the panel that contains the field to correct.
 
 System settings
