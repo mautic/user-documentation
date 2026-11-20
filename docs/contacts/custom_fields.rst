@@ -73,13 +73,35 @@ The Custom Fields list has a **Quick filters** popover you can use to filter the
 
 #. Go to **Settings** > **Custom Fields**.
 
-#. Open **Quick filters**. The **Others** group contains **Indexed** and **Unique**.
+#. Click the **Quick filters** funnel icon next to the search box. The **Others** group contains **Indexed** and **Unique**, and the **Origin** group contains **System default** and **User-created**.
 
-#. Select **Indexed** or **Unique**, then click **Apply selected**.
+   .. image:: images/custom-fields-quick-filters-groups.png
+      :align: center
+      :alt: Custom Fields list with the Quick filters popover open and the Quick filters icon, Others group, and Origin group highlighted
 
-Selecting **Indexed** shows the fields included in database indexes and adds the ``is:indexed`` command to the search box. Selecting **Unique** shows the unique identifier fields and adds the ``is:unique`` command. To switch to a different option, first click **Reset**.
+   |
 
-Because **Quick filters** just adds a command to the search box, you can edit or extend that command - the full search still works for combined or more detailed queries.
+#. Select the filters you want, then click **Apply selected**.
+
+   .. image:: images/custom-fields-quick-filters-apply.png
+      :align: center
+      :alt: Quick filters popover with User-created selected and the Apply selected button highlighted
+
+   |
+
+Each quick filter adds a search command to the search box:
+
+* **Indexed** - shows the fields included in database indexes and adds ``is:indexed``.
+
+* **Unique** - shows the unique identifier fields and adds ``is:unique``.
+
+* **System default** - shows the fields that Mautic provides during installation and adds ``is:systemdefault``.
+
+* **User-created** - shows the fields that Users created and adds ``is:usercreated``.
+
+In the **Origin** group, you can select only one option at a time. Selecting **User-created** clears **System default**, and the other way around.
+
+Because **Quick filters** only adds commands to the search box, you can edit or extend those commands - the full search still works for combined or more detailed queries.
 
 For the full list of search commands and other filters, see :doc:`Searching Mautic </search/search_operators>`.
 
