@@ -307,8 +307,7 @@ Reports search filters
     is:unpublished
     is:mine
     is:scheduled
-    Categories
-    ids:ID1,ID2 (comma separated IDs, no spaces) is:published is:unpublished
+    source:{data source}
 
 Users search filters
 --------------------
