@@ -73,9 +73,21 @@ The Custom Fields list has a **Quick filters** popover you can use to filter the
 
 #. Go to **Settings** > **Custom Fields**.
 
-#. Open **Quick filters**. The **Others** group contains **Indexed** and **Unique**, and the **Origin** group contains **System default** and **User-created**.
+#. Click the **Quick filters** funnel icon next to the search box. The **Others** group contains **Indexed** and **Unique**, and the **Origin** group contains **System default** and **User-created**.
+
+   .. image:: images/custom-fields-quick-filters-groups.png
+      :align: center
+      :alt: Custom Fields list with the Quick filters popover open and the Quick filters icon, Others group, and Origin group highlighted
+
+   |
 
 #. Select the filters you want, then click **Apply selected**.
+
+   .. image:: images/custom-fields-quick-filters-apply.png
+      :align: center
+      :alt: Quick filters popover with User-created selected and the Apply selected button highlighted
+
+   |
 
 Each quick filter adds a search command to the search box:
 
