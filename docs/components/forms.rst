@@ -685,7 +685,7 @@ Form data maintenance commands
 
 .. vale on
 
-Mautic provides CLI commands to clean up orphan Form data. These commands are useful for database maintenance when you delete Forms or Form submissions but related data remains.
+Mautic provides CLI commands to clean up orphan Form data. These commands are useful for database maintenance when you delete Forms, Form submissions, or Contacts but related data remains.
 
 Deleting orphan Form results tables
 ===================================
@@ -708,6 +708,38 @@ When you delete Form submissions, Mautic may not always remove the corresponding
    bin/console mautic:forms:delete-orphan-form-submission-records-from-form-results-table
 
 This command scans all Form results tables and removes records where the associated Form submission no longer exists. It processes records in batches of 5,000 to prevent performance issues on large databases.
+
+Deleting Form submissions of deleted Contacts
+=============================================
+
+When you delete a Contact, Mautic keeps the Contact's Form submissions and the values they submitted in the Form results tables, such as their name and Email address. These records no longer belong to a Contact, but they still contain personal data and still appear in the Form results. To delete them, for example to meet data protection requirements such as GDPR, run this command.
+
+.. code-block:: shell
+
+   bin/console mautic:forms:delete-submissions-of-deleted-contacts
+
+This command deletes the submissions of deleted Contacts, their records in the Form results tables, and the files that the Contacts uploaded through **File** fields, for all Forms. It deletes them in batches. In the same transaction as each batch, it updates the Form's submission count, so a Form that reached its :ref:`submission limit <Submission limits>` accepts submissions again when the count drops below the limit. If a batch fails, Mautic rolls back the whole batch, and the next run tries the batch again.
+
+When you delete a Contact, Mautic also records the deleted Contact in the Contact's Form submissions. This applies when you delete Contacts one at a time or in a batch, in the Mautic UI or through the API. The command only deletes submissions with this record, so it keeps these submissions:
+
+* Submissions that never had a Contact, because Mautic didn't track the person who submitted the Form - for example, with Kiosk Mode, Do Not Track or Global Privacy Control signals, or bots.
+* Submissions of Contacts that you deleted before you updated to a Mautic version that includes this command.
+* Submissions of Contacts that Mautic deleted without recording them, such as the anonymous Contacts that the ``mautic:maintenance:cleanup`` command removes.
+
+When you merge two Contacts, Mautic moves the Form submissions to the Contact that remains, so the command doesn't delete them.
+
+The command deletes the uploaded files of a submission before it deletes the submission. If it can't delete a file, it keeps the submission so that the next run can try again, and shows how many submissions it kept for each Form. Check the Mautic log for the files that it couldn't delete.
+
+The command accepts these options:
+
+* ``--form-id=<ID>`` or ``-i <ID>`` deletes the submissions of one Form only.
+* ``--exclude=<ID>`` or ``-d <ID>`` keeps the submissions of a Form. To exclude several Forms, repeat the option, for example ``--exclude=3 --exclude=7``. You can't combine ``--exclude`` with ``--form-id``.
+* ``--batch-limit=<number>`` or ``-l <number>`` sets how many submissions to delete in each batch. The default is 1,000.
+* ``--dry-run`` counts the submissions of deleted Contacts for each Form without deleting anything. Run this first to see what the command deletes.
+
+After the command runs, some IP addresses might no longer belong to any record. To delete them, run ``bin/console mautic:unusedip:delete``.
+
+To keep the Form data of deleted Contacts out of your database, run this command as a Cron job, for example once a day.
 
 .. note::
 
