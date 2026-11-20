@@ -114,6 +114,26 @@ To filter a list by type:
 
 #. Click **Apply selected**.
 
+   .. vale off
+
+   |
+
+   .. image:: images/segments-quick-filters-type.png
+      :align: center
+      :alt: Quick filters popover on the Segments list with Dynamic segment selected under Segment type and the Apply selected button highlighted
+      :width: 600
+
+   |
+
+   .. image:: images/emails-quick-filters-type.png
+      :align: center
+      :alt: Quick filters popover on the Emails list with Segment emails selected under Type and the Apply selected button highlighted
+      :width: 600
+
+   |
+
+   .. vale on
+
 Each type adds a search filter to the search box, so you can also type it directly:
 
 * ``is:dynamic`` shows Segments that have filters, so Mautic adds and removes Contacts automatically.
