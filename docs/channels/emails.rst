@@ -531,7 +531,7 @@ Just as it resolves the From address, Mautic determines the ``Reply-To`` header 
 
 #. **Email Reply to address** - If the Email's **Advanced** tab has a **Reply to address**, Mautic uses that address.
 #. **Contact Owner address** - If you enable **Use owner as mailer**, Mautic uses the Contact Owner's Email address for each owner group in the batch.
-#. **Email From address** - If you haven't configured a global ``reply-to`` in **Email Settings**, Mautic uses the Email's **From address**.
+#. **Email From address** - If you haven't configured a global ``reply-to`` in **Email Settings**, Mautic uses the Email's **From address**. Mautic skips this step when the **From address** contains a Contact field token, such as ``{contactfield=email}``.
 #. **System fallback** - Mautic falls back to the global **Reply to address** in **Email Settings**, or the system From address when that's blank.
 
 This means replies to queued Emails route back to the Contact Owner when you send as the Owner, matching how Mautic already resolves the From address.
