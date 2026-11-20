@@ -163,6 +163,22 @@ Companies search filters
     is:uncategorized
     category:{category alias}
 
+Campaigns search filters
+------------------------
+
+.. code-block::
+
+    ids:ID1,ID2 (comma separated IDs, no spaces)
+    is:published
+    is:unpublished
+    is:expired
+    is:pending
+    is:mine
+    is:uncategorized
+    category:{category alias}
+    source:segment
+    source:form
+
 Segments search filters
 -----------------------
 

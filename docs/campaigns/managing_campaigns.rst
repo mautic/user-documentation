@@ -181,6 +181,40 @@ Tracking rescheduled events
 
 To view the current scheduled date, open the Contact's **History** tab. Expand the **Campaign event scheduled** entry for the event. The details show the date and time when Mautic plans to execute the event. After the Campaign event Cron job reschedules an event, this date reflects the updated schedule. For instructions on manually rescheduling or canceling an event, see :ref:`Contact History<History>`.
 
+.. _filter campaigns by contact source:
+
+.. vale off
+
+Filtering Campaigns by Contact source
+*************************************
+
+.. vale on
+
+When you have many Campaigns, filter the Campaigns list by Contact source type to find the Campaigns that add Contacts from Segments, from Forms, or from both.
+
+#. Go to the Campaigns list.
+#. Next to the search box, click the **Quick filters** button.
+#. Under **Source type**, select one or both of the following options:
+
+   .. vale off
+
+   * **Contact segments** shows Campaigns that have at least one Segment as a Contact source.
+   * **Forms** shows Campaigns that have at least one Form as a Contact source.
+
+   .. vale on
+
+#. Click **Apply selected**.
+
+.. vale off
+
+If you select both options, the list shows only the Campaigns that use at least one Segment and at least one Form as Contact sources. You can combine the Source type filter with the other quick filters, such as **Active** or **My items**.
+
+.. vale on
+
+Mautic adds the ``source:segment`` or ``source:form`` search filter to the search box. To clear the filter, click the **Quick filters** button and click **Reset**. For the other search filters, see :ref:`Campaigns search filters`.
+
+To show Campaigns that use a specific Segment or Form as a Contact source, use the Contact sources filter under **More** instead. For more information, see :ref:`Filter list views by Category`.
+
 .. vale off
 
 Deleting a Campaign
