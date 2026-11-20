@@ -55,6 +55,10 @@ Use **Quick filters** on the Point Actions list to find actions by how they chan
 
 #. Next to the search box, click the **Quick filters** button.
 
+   .. image:: images/points-actions-quick-filters-button.png
+      :align: center
+      :alt: Point Actions list with the Quick filters funnel icon highlighted next to the search box
+
 #. Select one or more filters:
 
    * **Point gain** under **Point change** - shows actions that add Points, and adds the ``type:gain`` command to the search box.
@@ -65,7 +69,17 @@ Use **Quick filters** on the Point Actions list to find actions by how they chan
 
    You can't select **Point gain** and **Point loss** together. Actions set to change Points by ``0`` don't match either option.
 
+   .. image:: images/points-actions-quick-filters-options.png
+      :align: center
+      :alt: Quick filters popover with Point gain and Repeatable selected, and the Apply selected button highlighted
+
 #. Click **Apply selected**.
+
+   The list shows only the matching actions, and the search box shows the commands for the selected filters.
+
+   .. image:: images/points-actions-quick-filters-applied.png
+      :align: center
+      :alt: Point Actions list filtered to repeatable actions that add Points, with type:gain is:repeatable in the search box
 
 You can also type these commands in the search box. To find one-time actions, search for ``!is:repeatable``. For the full list of search commands and operators, see :doc:`Searching Mautic </search/search_operators>`.
 
