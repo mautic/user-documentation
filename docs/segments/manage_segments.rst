@@ -36,6 +36,37 @@ Creating a Segment
 
 .. vale off
 
+Finding Preference Center Segments
+**********************************
+
+.. vale on
+
+To review which Segments Contacts can manage from the Preference Center, filter the Segments list.
+
+#. Go to **Segments**.
+
+#. Next to the search box, click the **Quick filters** button - the funnel icon. The **Others** group contains **Preference Center**.
+
+   .. image:: images/segments-quick-filters-button.png
+      :align: center
+      :alt: Segments list with Segments highlighted in the main menu and the Quick filters funnel icon highlighted next to the search box
+
+#. Select **Preference Center**, then click **Apply selected**.
+
+   .. image:: images/segments-quick-filters-apply-selected.png
+      :align: center
+      :alt: Open Quick filters panel with Preference Center selected under Others and the Apply selected button highlighted
+
+The list shows only the Segments with **Available in Preference Center** set to **Yes**, and Mautic adds the ``is:preference`` command to the search box. To find the Segments that aren't available in the Preference Center, search for ``!is:preference`` instead.
+
+.. image:: images/segments-preference-center-filter-results.png
+   :align: center
+   :alt: Segments list filtered to Preference Center Segments, with the is:preference command highlighted in the search box
+
+The filter also lists inactive Segments, but the Preference Center only displays Segments that are active.
+
+.. vale off
+
 Viewing Contact Segments
 ************************
 
