@@ -547,12 +547,17 @@ Date options
 
 .. vale on
 
-Date filters allow you to choose a date via DatePicker:
+Date and date-time filters have two modes for the filter value. Select **Absolute** or **Relative** on the filter to switch modes. A new filter starts in **Absolute** mode.
+
+Absolute mode
+-------------
+
+In **Absolute** mode, choose a date with the date picker:
 
 .. image:: images/date-filters.png
     :alt: Screenshot showing DatePicker.
 
-However, you can specify much more here. Mautic recognizes relative formats too - these string aren't translatable:
+You can also type a relative format in the box. Mautic recognizes these formats, which aren't translatable:
 
 * ``+1 hour`` / ``-2 hours`` / ``3 hours ago``
 * ``+1 day`` - you can also use ``1 day``
@@ -599,6 +604,27 @@ Beside this you can specify your date with text. These formulas are **translatab
 * ``Date identified greater than last day of previous month`` returns all Contacts identified after 2022-02-28.
 * ``Custom Contact date field is equal to birthday -1 day`` returns all Contacts identified every year on 03-04 (4th march).
 * ``Custom Contact date field is equal to anniversary -1 month`` returns all Contacts identified every year on 02-04 (4th february)
+
+Relative mode
+-------------
+
+Use **Relative** mode to set a date that moves with the day Mautic builds or rebuilds the Segment, without typing a format. Enter a number in the box and choose a unit from the list next to it:
+
+.. vale off
+
+* **day(s)**
+* **month(s)**
+* **year(s)**
+
+Enter a negative number for a date in the past, such as ``-1``, or a positive number for a date in the future, such as ``2``. A value of ``-1`` with **day(s)** gives the same result as typing ``-1 day`` in **Absolute** mode.
+
+**Example: consider that today is ``2022-03-05``:**
+
+* ``Date identified greater than`` with ``-1`` **day(s)** returns all Contacts identified after 2022-03-04.
+* ``Date identified less than`` with ``-6`` **month(s)** returns all Contacts identified before 2021-09-05.
+* ``Date identified is equal to`` with ``1`` **year(s)** returns all Contacts identified on 2023-03-05.
+
+.. vale on
 
 Once you have created your Segment, any applicable Contact is automatically added through the execution of a :ref:`cron job<import contacts cron job>`. This is the essence of Segments.
 
