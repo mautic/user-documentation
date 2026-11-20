@@ -180,19 +180,6 @@ If you are using Bounce Management, set up the following command to fetch and pr
 
     php /path/to/mautic/bin/console mautic:email:fetch
 
-.. vale off 
-
-Social Monitoring cron job
-==========================
-
-.. vale on
-
-If you are using Social Monitoring, add the following command to your cron configuration:
-
-.. code-block:: php
-
-    php /path/to/mautic/bin/console mautic:social:monitoring
-
 .. vale off
 
 Import Contacts cron job
