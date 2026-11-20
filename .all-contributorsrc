@@ -395,6 +395,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "Richardvd",
+      "name": "Richard",
+      "avatar_url": "https://avatars.githubusercontent.com/u/971205?v=4",
+      "profile": "https://www.richardvandelft.nl",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
