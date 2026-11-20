@@ -272,6 +272,9 @@ Manage actions search filters
     is:mine
     is:uncategorized
     category:{category alias}
+    type:gain (actions that add Points)
+    type:loss (actions that deduct Points)
+    is:repeatable
 
 Manage triggers search filters
 ------------------------------
