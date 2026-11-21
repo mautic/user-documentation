@@ -470,7 +470,7 @@ Enter the URL where the Form should post to, and Email address/s for anyone who 
   :width: 600
   :alt: Screenshot showing the push to Integration Form action.
 
-- **Send Email to Contact**: to directly Email the Contact after they submit the Form, use this option. Select a Template Email from the list, or click New Email to build a new one. After selecting an Email, you can also make edits to the Email in a popup window and preview the Email.
+- **Send Email to Contact**: to directly Email the Contact after they submit the Form, use this option. Select a Template Email from the list, or click New Email to build a new one. After selecting an Email, you can also make edits to the Email in a popup window and preview the Email. Mautic treats this Email as transactional, so it sends the Email to the Contact even if they've unsubscribed. Mautic doesn't send it to a Contact whose Email address has bounced.
 
 .. image:: images/forms/send_email_to_contact.png
   :width: 600
