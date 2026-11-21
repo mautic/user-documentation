@@ -77,6 +77,13 @@ The following fields are available:
 - **Category** - used to organize resources - see :doc:`/categories/categories-overview` for more information
 - **Projects** - the Projects that this Asset belongs to. You can select more than one. To select Projects, you need the **Associate with other entities** Project permission. See :doc:`/projects/projects-overview` for more information.
 - **Language** - the language of this Asset - can be helpful in multilingual marketing Campaigns and for reporting purposes
+
+.. vale off
+
+- **Track downloads** - whether Mautic links downloads of this Asset to the Contacts who download them. A new Asset that you create in Mautic starts with the value of **Track asset downloads** in the :ref:`Mautic tracking settings`, and then keeps its own value. Changing the global setting later doesn't change existing Assets, and an Asset set to **Yes** tracks downloads even when the global setting is **No**. Set this to **No** for an Asset whose downloads you never want linked to Contacts, such as a public brochure. Mautic still serves the file but doesn't record the download on a Contact. Even with **Yes**, the :ref:`automatic tracking filtering` applies, so Mautic never links downloads from visitors who send Do Not Track or Global Privacy Control signals. When you upgrade, existing Assets start with the value of **Track asset downloads**, so they start at **No** if you had turned the global setting off. Campaign and Marketplace exports don't include this setting, so an imported Asset starts from the global setting of the Mautic instance you import it into.
+
+.. vale on
+
 - **Available for use** - whether the Asset is available. Set it to **Yes** to make the Asset available within the scheduled dates, or **No** to make it unavailable.
 
 .. vale off
@@ -86,7 +93,7 @@ The following fields are available:
 
 .. vale on
 
-- **Block search engines from indexing this file** - If you don't want to index files like ``PDF``, ``DOCx`` and so forth, setting this switch to Yes sends the ``X-Robots-Tag no-index`` HTTP header. If set to No, the header isn't sent and your files could become indexed by search engines.
+* **Block search engines from indexing this file** - If you don't want to index files like ``PDF``, ``DOCx`` and so forth, setting this switch to Yes sends the ``X-Robots-Tag no-index`` HTTP header. If set to No, the header isn't sent and your files could become indexed by search engines.
 
 Depending on the type of file uploaded, a preview may display after the upload completes.
 
@@ -117,6 +124,12 @@ Viewing an Asset
 .. vale on
 
 Once you've uploaded an Asset, you'll want to make it available for your Contacts to access it. Using the Download URL from the Asset section in Mautic, you can track which Contacts are downloading or viewing the Assets.
+
+.. vale off
+
+To count an Asset's downloads without linking them to Contacts, set the Asset's **Track downloads** option to **No**.
+
+.. vale on
 
 Copy and paste the link into your website, on a Landing Page, or as a link in an Email. 
 
