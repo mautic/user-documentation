@@ -227,6 +227,10 @@ See :doc:`Manage Emails</channels/emails>` for more information.
      - ``{webview_text}``
    * - Web View URL
      - ``{webview_url}``
+   * - Forward Text
+     - ``{forward_text}``
+   * - Forward URL
+     - ``{forward_url}``
 
 Landing Page tokens
 *********************
@@ -394,6 +398,10 @@ Alphabetical list
      - ``{contactfield=firstname}``
    * - Foursquare
      - ``{contactfield=foursquare}``
+   * - Forward Text
+     - ``{forward_text}``
+   * - Forward URL
+     - ``{forward_url}``
    * - Google+
      - ``{contactfield=googleplus}``
    * - Instagram
