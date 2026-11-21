@@ -834,6 +834,8 @@ Mautic tracking settings
 
 * **Record aggregate analytics** - Aggregate analytics are totals that Mautic doesn't link to any Contact, such as the number of submissions a Form receives. Mautic sets this to **Yes** by default. Select **No** to stop recording these totals in the features that support this setting. This setting doesn't change how Mautic tracks Contacts.
 
+* **Use Mautic consent for Focus tracking** - Under **Script modifiers**. Select **Yes** to make Focus Items embedded with the **Consent-managed** option activate tracking once Mautic website tracking starts. This waits for consent only when your website loads Mautic tracking after consent. The setting is off by default and only changes the tracking snippets that Mautic shows for copying, so save the Configuration, copy the updated snippet, and redeploy it on your website. See :doc:`/channels/focus_items` and :doc:`/configuration/tracking_script` for details.
+
 .. note:: 
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
