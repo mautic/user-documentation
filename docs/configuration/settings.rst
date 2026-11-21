@@ -795,7 +795,7 @@ Privacy Centre settings
 
 .. vale on
 
-The Privacy Centre controls which external services receive data about your Contacts. To open it, go to **Settings** > **Configuration** and select **Privacy Centre**.
+The Privacy Centre controls which external services receive data about your Contacts. To open it, go to **Settings** > **Configuration**, select **Privacy Centre**, and then select the **Integrations** tab.
 
 Third-party services
 ====================
