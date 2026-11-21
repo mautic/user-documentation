@@ -108,6 +108,9 @@ Nano
 nano
 NGINX
 noindex
+Node.js
+NVM
+npm
 OAuth
 Packagist
 PATCH

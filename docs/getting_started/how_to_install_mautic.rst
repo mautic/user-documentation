@@ -252,6 +252,8 @@ Installing from GitHub
 
 It's essential to have all the files locally - including automated tests - from the GitHub repository when testing Mautic or contributing to it. Many of these files aren't included in the production build process.
 
+You don't need Node.js or npm for the production ZIP package. However, a Composer installation or GitHub source checkout requires compatible Node.js and npm versions when its install or update scripts run commands to install JavaScript dependencies or build frontend resources. Node Version Manager, or NVM, is optional and can help you manage Node.js versions.
+
 Cloning Mautic from GitHub
 ==========================
 
@@ -320,11 +322,13 @@ The Mautic :xref:`Recommended Project` is a template which provides a starter ki
 .. note::
   The instructions below refer to the global Composer installation. You might need to replace Composer with ``php composer.phar`` or something similar for your setup.
 
+The Recommended Project runs ``npm ci`` and ``npx patch-package`` during Composer's install and update scripts to install JavaScript dependencies and build frontend resources.
+
 The basic command to use the Recommended Project is:
 
 .. code-block:: shell
 
-  composer create-project mautic/recommended-project:^5 some-dir --no-interaction
+  composer create-project 'mautic/recommended-project:7.2.*' some-dir --no-interaction
 
 With Composer you can add new dependencies to install along with Mautic:
 
@@ -452,7 +456,7 @@ New installations
 
 .. code-block:: bash
   
-  composer create-project mautic/recommended-project:^5 some-dir --no-interaction --no-install
+  composer create-project 'mautic/recommended-project:7.2.*' some-dir --no-interaction --no-install
 
 * Do a find and replace in the ``composer.json`` file to change ``docroot/`` into ``public/``
 * Review the changes in the ``composer.json`` file to ensure that there are no unintentional replacements
