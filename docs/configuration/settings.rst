@@ -753,7 +753,7 @@ User/Authentication settings
 SAML/SSO settings
 =================
 
-.. image:: images/SMAL-settings.png
+.. image:: images/SAML-settings.png
   :width: 600
   :alt: Screenshot showing SAML/SSO Settings Configuration in Mautic
 
