@@ -83,5 +83,5 @@ With the bucket details and a user with the correct credentials, it's time to se
 
 9. Click **Save & Close**, and refresh the Plugins page - the Amazon S3 Plugin icon will be in color rather than ``Grayscale``, indicating that it's active.
 
-When you upload an Asset to your S3 bucket you can select it by creating a new Asset and choosing Remote Files > S3.
+To use a file from your S3 bucket as an Asset, create a new Asset, set **Storage Location** to **Remote**, and select **Browse Remote Files**. Then select **Amazon S3** and choose the file.
 
