@@ -831,7 +831,9 @@ Mautic tracking settings
 * **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent filling your logs with hits from bots.
 
 * **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
-  
+
+* **Record aggregate analytics** - Aggregate analytics are totals that Mautic doesn't link to any Contact, such as the number of submissions a Form receives. Mautic sets this to **Yes** by default. Select **No** to stop recording these totals in the features that support this setting. This setting doesn't change how Mautic tracks Contacts.
+
 .. note:: 
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
@@ -919,7 +921,7 @@ OpenID Connect settings
 
 Use these settings to let Users log in through an OpenID Connect provider. For setup steps and how Users log in, see :ref:`OpenID Connect <OpenID Connect authentication>`.
 
-* **Enable** - Turns OpenID Connect login on or off. The other settings in this section are available only when you set this to **Yes**.
+* **Enable** - Turns OpenID Connect login on or off. The other settings in this section are available only when you set this to **Yes**. Turning OpenID Connect off keeps the other settings and the links between Users and their provider accounts.
 
   .. vale off
 
@@ -929,7 +931,7 @@ Use these settings to let Users log in through an OpenID Connect provider. For s
 
 * **Role for new users** - The Role Mautic assigns to Users it creates through OpenID Connect. Required when **Allow new user registration** is on. For more information, see :doc:`Users and Roles</users_roles/managing_roles>`.
 
-* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL.
+* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL. Changing this value deletes the links between all Mautic Users and their provider accounts.
 
   .. vale on
 
