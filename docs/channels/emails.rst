@@ -493,6 +493,27 @@ Each cloned Email has ``(copy)`` appended to its name and you can edit it indepe
 
 .. vale off
 
+Sending test Emails to yourself
+===============================
+
+Use **Send tests to me** to review several Emails without opening each one. Mautic sends one test of each selected Email to the Email address of your Mautic User. The tests use sample Contact details to fill Contact tokens, add ``[TEST]`` to the start of the subject line, and don't count toward the Email's send statistics. This action is available only from the Email listing.
+
+#. In the Email listing, select the checkbox of each Email you want to test.
+#. Open the **Options** menu and select **Send tests to me**.
+#. In the confirmation dialog, review the destination address, then select **Send tests to me**.
+
+Mautic shows how many tests it sent and to which address, for example '2 test emails were sent to admin@example.com.' If a test fails to send, Mautic names the Email in an error message, for example 'A test of “Welcome Email” could not be sent.'
+
+.. vale on
+
+Mautic doesn't send tests of Emails that your Role doesn't allow you to view.
+
+.. note::
+
+   Test Emails go to a Mautic User rather than a Contact, so trackable links and the unsubscribe link behave differently. See :ref:`Email link tracking` and :ref:`Unsubscribe link doesn't work` for details.
+
+.. vale off
+
 Sending an example Email
 ========================
 
