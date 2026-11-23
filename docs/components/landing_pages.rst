@@ -71,7 +71,33 @@ You can end the test on any variant you choose instead of following Mautic's sta
    Review the test results in **A/B Test Stats** before you make a variant the winner. Once you confirm, **A/B Test Stats** shows 'No results available at this time.' Mautic keeps the hit data, but it no longer shows the results of the ended test.
 
 #. Open the Landing Page and go to the **Variants** tab.
+
+   |
+
+   .. image:: images/landing_pages/variants-tab.png
+      :width: 800
+      :alt: The highlighted Variants tab of a Landing Page with an A/B test in progress, listing the main Landing Page and two variants.
+
+   |
+
 #. Select the **Make winner** trophy on the variant you want to keep.
+
+   |
+
+   .. image:: images/landing_pages/make-winner-trophy.png
+      :width: 800
+      :alt: Variant rows in the Variants tab, each with a trophy button, with the Make winner trophy on the second variant highlighted.
+
+   |
+
 #. Select **Make winner** in the confirmation dialog.
+
+   |
+
+   .. image:: images/landing_pages/make-winner-confirm.png
+      :width: 480
+      :alt: The Make winner confirmation dialog, which warns that the chosen variant becomes the main item and the A/B test stops, with the Make winner button highlighted.
+
+   |
 
 Mautic sets the chosen variant as the main Landing Page, turns off the other variants, and stops the A/B test.
