@@ -54,6 +54,20 @@ There is a multi-select field that allows excluding Contacts belonging given Seg
 
 Mautic initiates the sending of these Emails with a :doc:`/configuration/cron_jobs` - see section on Send Scheduled Broadcasts - for example, Segment Emails - for more details on this.
 
+.. vale off
+
+Segment Email sending status
+============================
+
+.. vale on
+
+The Email detail view shows the sending status of each active Segment Email that has Contacts still to receive it:
+
+* **Ready to send** - The Email has no scheduled start date. To send it, select **Send** in the Email detail view, or select **Schedule** to set a start date. For an A/B test, Mautic hides these buttons. Add at least one variant, then select **Schedule sending** in the **A/B Test** panel. For more information, see :ref:`A/B testing <ab testing for Segment Emails>`.
+* **Sending** - The Email is within its scheduled sending period.
+
+In the Email list, hover over an Email's status icon to see the 'Ready to send' status.
+
 .. _ab testing for Segment Emails:
 
 .. vale off
@@ -206,6 +220,21 @@ When sending begins, Mautic sends the test Emails to the test audience and the p
 
 After the wait time passes, Mautic evaluates each variant against your chosen winner criteria, marks the best performer with a **Winner** badge in the panel, and sends the winning version to the remaining Contacts.
 
+You don't have to wait for the automatic pick. Once the test starts sending, you can end it on any Active variant you choose. Each Active variant's row in the **A/B Test** panel shows a **Make winner** trophy action. The variant the statistics currently favor shows a filled trophy, and the other Active variants show an outline trophy. You can promote any Active variant, whichever trophy it shows.
+
+To promote a variant, select its **Make winner** trophy, then select **Make winner** in the confirmation dialog.
+
+.. note::
+
+   Before you promote a variant, review what confirming does. Mautic:
+
+   * sets the chosen variant as the main Email
+   * turns off the other variants
+   * stops the A/B test
+   * resets the current A/B test stats
+
+   Mautic doesn't automatically send the winning Email to the remaining Contacts.
+
 .. vale off
 
 Viewing A/B test results
@@ -249,7 +278,7 @@ Email content preview
 
 The Email details page shows a rendered preview of the Email content in the right column, so you can see how an Email looks without opening the Builder or a separate tab. This is handy when you're comparing several Emails to find the one you want.
 
-The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Mautic reloads the preview automatically to match the version you've selected.
+The preview reflects your selection in the **Preview URL** panel below it. Choose an A/B variant from **Show preview for A/B variant**, a translation from **Show preview for translation**, or enter a Contact in **Show preview for contact** to see the Email as that Contact would receive it. Enter a Company in **Show preview for company** to fill Company field tokens, such as ``{companyfield=companyname}``, with that Company's values. If you don't select a Company, Mautic uses the selected Contact's Companies. When you haven't selected a Contact, or the Contact has no Companies, Mautic uses sample Company data. Mautic reloads the preview automatically to match the version you've selected.
 
 .. image:: images/emails/email_details_preview.png
    :width: 600
@@ -259,6 +288,26 @@ The preview reflects your selection in the **Preview URL** panel below it. Choos
 |
 
 .. vale on
+
+.. vale off
+
+Opening and downloading the Email preview
+-----------------------------------------
+
+.. vale on
+
+To review the Email at full size, or to hand its rendered HTML to someone else, open it in its own tab:
+
+#. In the Email details view, select a Contact, a Company, or both in the **Preview URL** panel if you want the preview to use their data.
+#. Select the open link icon beside the Preview URL. The Email Preview opens in a new tab.
+#. To switch the data the preview uses, enter a different Contact in **Contact** or a different Company in **Company** at the top of the Email Preview. Mautic reloads the preview with your selection.
+#. To save the rendered Email, select **Download HTML**. Mautic downloads an HTML file with all tokens replaced. The filename combines the selected Company's name, or the Contact's first name when you haven't selected a Company, with the Email name. If you haven't selected a Contact or a Company, the filename uses only the Email name. Mautic writes it in lowercase with hyphens between words - for example, ``acme-welcome-email.html``, or ``welcome-email.html`` with no selection.
+
+You can only preview a Contact's data if you have permission to view that Contact. Otherwise, Mautic shows the preview with sample Contact data and a message that you don't have access to the Contact.
+
+The same applies to Company data. Your Role's **Contacts** permissions control which Companies you can preview. **View Own** covers Companies you own - or created, if the Company has no owner - and **View Others** covers all other Companies. Administrators can preview any Company. Without permission, Mautic ignores the selected Company and uses the selected Contact's Companies, or sample Company data if you haven't selected a Contact. When you download the preview, Mautic leaves the Company's name out of the filename and shows a message that you don't have access to the Company.
+
+To let people without a Mautic login open the Preview URL, activate the Email and turn on public preview with the toggle beside the Preview URL. Turn the toggle off to stop public access. People who open the Preview URL without logging in always see sample Company data, even when the URL includes a Company.
 
 Segments used
 =============
@@ -548,10 +597,8 @@ The token format follows the standard Contact field syntax. You can include an o
 
    The Contact field used in the Email address must contain a valid Email address. If using a Custom Field, ensure it's configured as an Email field type to guarantee proper validation.
 
-.. _sender resolution hierarchy:
-
 Sender resolution hierarchy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When sending Emails, Mautic determines the **From address** using the following priority order:
 
@@ -565,7 +612,7 @@ This hierarchy ensures Emails always have a valid sender while allowing personal
 .. _reply-to resolution hierarchy:
 
 ``Reply-To`` resolution hierarchy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Just as it resolves the From address, Mautic determines the ``Reply-To`` header for queued and batch Email sends - such as Campaign Emails and Segment broadcasts - using the following priority order:
 
@@ -880,10 +927,15 @@ Unsubscribing
 *************
 
 Mautic has a built in means of allowing a Contact to unsubscribe from Email communication. You can insert various tokens into your Email to provide unsubscribe options at your desired location:
+
+.. vale off
+
 - ``{unsubscribe_text}``: inserts a sentence with a link instructing the Contact to click to unsubscribe.
-- ``{unsubscribe_url}``: inserts the URL to the preferences center when it's activated, or to the unsubscribe page if not.
-- ``{resubscribe_url}``: inserts the URL to the resubscribe page regardless of whether there's a preference centre in use. It resubscribes the Contact. Useful for double opt out Campaigns.
+- ``{unsubscribe_url}``: inserts the URL to the Preference Center when you activate it, or to the unsubscribe page if you don't. When the Contact clicks the link, they first confirm their Email address, described later in this section.
+- ``{resubscribe_url}``: inserts the URL to the resubscribe page regardless of whether there's a preference centre in use. It resubscribes the Contact. Useful for double opt out Campaigns. As with unsubscribe links, the Contact confirms their Email address first, described later in this section.
 - ``{dnc_url}``: inserts the URL to unsubscribe from all Marketing Messages when you activate the preference center.
+
+.. vale on
 
 The unsubscribe URL token inserts the URL into your custom written instructions. 
 
@@ -895,6 +947,18 @@ For example:
         <a href="{dnc_url}" target="_blank">Unsubscribe from all emails</a>
 
 You can find the configuration of the unsubscribe text in the global settings.
+
+.. vale off
+
+Mautic resolves the ``{unsubscribe_url}``, ``{unsubscribe_text}``, and ``{resubscribe_url}`` tokens to a validation page rather than executing the action immediately. When a Contact clicks the link they first land on a 'Confirm your email address' page and must type the Email address Mautic sent the message to. Mautic completes the unsubscribe or resubscribe only if the entered Email address matches. The Contact's Email address is no longer embedded in the link itself, which protects against leaked or forwarded links. The confirmation step also blocks bot-triggered unsubscribes: some Email inbox providers run bots that open every link in a message to scan it, so before this page such a bot could silently unsubscribe the Contact just by opening the link. Because someone has to confirm the Email address, a bot can't complete the action. If the entered address doesn't match, Mautic shows the error 'This email address does not match the email address that was used to generate this link.' and makes no change.
+
+This validation step is on by default and you can turn it off with the **Require email validation for unsubscribe** setting in **Email Settings**, documented in :doc:`/configuration/settings`.
+
+.. note::
+
+   Links in Emails sent by older versions of Mautic no longer unsubscribe or resubscribe automatically on click. If Mautic still has a record of that send, it redirects the Contact to the same confirmation page. If it doesn't, an unsubscribe link shows a 'Record not found.' message, and a resubscribe link shows a page-not-found error - ``HTTP 404``.
+
+.. vale on
 
 Online version
 **************

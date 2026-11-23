@@ -1,16 +1,12 @@
-# Update package list and install Python 3 tools: pip and venv
-RUN apt-get update && apt-get install -y python3-pip python3-venv
+COPY --from=project --chmod=644 docs/requirements.txt /tmp/requirements.txt
+RUN install -d -o "$username" /opt/sphinx \
+    && runuser -u "$username" -- python3 -m venv /opt/sphinx \
+    && runuser -u "$username" -- /opt/sphinx/bin/pip install --no-cache-dir -r /tmp/requirements.txt \
+    && echo 'export PATH="/opt/sphinx/bin:$PATH"' > /etc/bashrc/sphinx.bashrc
 
-# Define the virtual environment location and create it
-ENV VENV_DIR=/opt/mautic-docs-venv
-RUN python3 -m venv $VENV_DIR
-
-# Copy Python dependencies into the container and install them in the virtualenv
-COPY requirements.txt /tmp/requirements.txt
-RUN . $VENV_DIR/bin/activate && pip install --upgrade pip && pip install -r /tmp/requirements.txt
-
-# Ensure the virtualenv's bin directory is added to PATH so that its tools (like sphinx-build) are accessible in all contexts
-ENV PATH="$PATH:/opt/mautic-docs-venv/bin"
-
-# Persist the updated PATH for interactive shells (e.g., when using `ddev ssh`)
-RUN echo 'export PATH="$PATH:$VENV_DIR/bin"' > /etc/profile.d/venv-path.sh
+# Keep in sync with the Vale version in .github/workflows/linting.yml
+ARG VALE_VERSION=3.7.1
+RUN case "${TARGETARCH}" in arm64) arch=arm64 ;; *) arch=64-bit ;; esac \
+    && curl -fsSL "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_${arch}.tar.gz" \
+    | tar -xz --no-same-owner -C /usr/local/bin vale \
+    && chmod 755 /usr/local/bin/vale
