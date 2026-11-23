@@ -386,6 +386,33 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "LeonOltmanns",
+      "name": "Leon Oltmanns",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55587275?v=4",
+      "profile": "http://www.leuchtfeuer.com",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "Richardvd",
+      "name": "Richard",
+      "avatar_url": "https://avatars.githubusercontent.com/u/971205?v=4",
+      "profile": "https://www.richardvandelft.nl",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "VictorMoni",
+      "name": "Victor Moni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123900844?v=4",
+      "profile": "http://victormoni.vercel.app",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
