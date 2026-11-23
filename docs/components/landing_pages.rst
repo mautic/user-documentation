@@ -101,3 +101,7 @@ You can end the test on any variant you choose instead of following Mautic's sta
    |
 
 Mautic sets the chosen variant as the main Landing Page, turns off the other variants, and stops the A/B test.
+
+.. warning::
+
+   When the winner isn't the main Landing Page, Mautic turns off the original main Landing Page, and its URL no longer redirects visitors to the winner. Visitors who open the original URL get an error instead. Before you confirm, update any links that use the original URL so they point to the winning variant's URL. You can also set **Redirect type** and **URL Redirect** on the original Landing Page to send visitors to the winning variant.
