@@ -84,6 +84,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://www.leuchtfeuer.com"><img src="https://avatars.githubusercontent.com/u/55587275?v=4&size=100" width="100px" height="100px" alt="Leon Oltmanns"/><br /><sub><b>Leon Oltmanns</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/pulls?q=is%3Apr+reviewed-by%3ALeonOltmanns" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.richardvandelft.nl"><img src="https://avatars.githubusercontent.com/u/971205?v=4&size=100" width="100px" height="100px" alt="Richard"/><br /><sub><b>Richard</b></sub></a><br /><a href="#ideas-Richardvd" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://victormoni.vercel.app"><img src="https://avatars.githubusercontent.com/u/123900844?v=4&size=100" width="100px" height="100px" alt="Victor Moni"/><br /><sub><b>Victor Moni</b></sub></a><br /><a href="https://github.com/mautic/user-documentation/commits?author=VictorMoni" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
