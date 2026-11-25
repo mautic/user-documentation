@@ -128,7 +128,7 @@ The choice works as follows:
 * The Contact can return to the Preference Center and select **Yes** at any time to resume Email open tracking.
 * When two Contacts merge, the merged Contact keeps **No** if either Contact selected it. See :ref:`Merge two Contacts`.
 
-Mautic saves the choice only when the Contact changes it, so saving preferences without changing it doesn't record a choice the Contact never made.
+When the Contact saves their preferences, Mautic saves the choice only if it differs from the Contact's current choice, which is **Yes** until they select **No**. Saving preferences without changing the choice doesn't record a choice the Contact never made.
 
 When you turn on **Show Contact Preference Settings**, the default Preference Center always shows the choice. On a Preference Center Landing Page, add the ``{trackingpreference}`` token to show it - see :ref:`Preference tokens`.
 
