@@ -459,6 +459,12 @@ Message settings
 
   The default UTMs only apply when creating a **new** Email. Editing an existing Email or cloning an Email never overwrites the values already on that Email, even if those fields are blank on the clone source.
 
+.. vale off
+
+* **Delete stored email personalisation after (days)** - For each sent Email, Mautic stores the personalized values, such as the Contact's first name, that it uses to show the Email's online version. These values take up most of the space in the Email statistics tables. Enter a number of days to have the ``mautic:maintenance:cleanup`` command delete these values for Emails sent more than that many days ago. The default, ``0``, keeps them forever. Mautic keeps all other Email statistics, so sends, Segments, Campaigns, and Reports aren't affected. After the cleanup deletes an Email's stored values, its online version shows a message instead of the Email's content, even if you later set this back to ``0``. For more information, see :ref:`Clean up old data cron job <clean up old data cron job>`.
+
+.. vale on
+
 Unsubscribe settings
 ====================
 

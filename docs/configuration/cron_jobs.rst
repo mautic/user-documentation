@@ -271,6 +271,12 @@ Currently supported are audit log entries, visitors - anonymous Contacts - and v
 
 Use the ``--gdpr`` flag to delete data to fulfill GDPR European regulation. This deletes Contacts that have been inactive for 3 years.
 
+.. vale off
+
+When you set **Delete stored email personalisation after (days)** in the Email settings, the command also deletes the stored personalized values of Emails sent more than that many days ago, in batches. It doesn't delete the Email statistics themselves. With ``--dry-run``, the command reports the number of affected Emails on the 'Stored email personalisation' lines. For more information, see :doc:`/configuration/settings`.
+
+.. vale on
+
 **This permanently deletes data. Be sure to verify database backups before using as appropriate.**
 
 .. code-block:: php

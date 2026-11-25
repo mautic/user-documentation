@@ -931,6 +931,12 @@ For example:
 
     <a href="{webview_url}" target="_blank">View in your browser</a>
 
+.. vale off
+
+If the ``mautic:maintenance:cleanup`` command has deleted the stored personalized values of an Email, opening its online version shows the message 'This email is no longer available to view in your browser.' instead of the Email's content, and Mautic doesn't record a read. The **Delete stored email personalisation after (days)** Email setting controls when this happens. Emails sent without any personalization still show their content. For more information, see :doc:`/configuration/settings`.
+
+.. vale on
+
 Bounce management
 *****************
 
