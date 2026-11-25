@@ -190,11 +190,11 @@ Filtering Campaigns by Contact source
 
 .. vale on
 
-When you have many Campaigns, filter the Campaigns list by Contact source type to find the Campaigns that add Contacts from Segments, from Forms, or from both.
+When you have many Campaigns, filter the Campaigns list by Contact source type to find the Campaigns that add Contacts from Segments or from Forms.
 
 #. Go to the Campaigns list.
 #. Next to the search box, click the **Quick filters** button.
-#. Under **Source type**, select one or both of the following options:
+#. Under **Source type**, select one of the following options:
 
    .. vale off
 
@@ -207,7 +207,7 @@ When you have many Campaigns, filter the Campaigns list by Contact source type t
 
 .. vale off
 
-If you select both options, the list shows only the Campaigns that use at least one Segment and at least one Form as Contact sources. You can combine the Source type filter with the other quick filters, such as **Active** or **My items**.
+You can select only one **Source type** option at a time, so selecting one option clears the other. You can combine the Source type filter with the other quick filters, such as **Active**, **Expired**, or **My items**.
 
 .. vale on
 
