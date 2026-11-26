@@ -976,7 +976,7 @@ Use a custom X.509 certificate and private key to secure communication between M
 Upload your:
 
 * **X.509 certificate**
-* **Private key file**
+* **Private key**
 
 Enter your **Private key encryption password**
 
