@@ -131,9 +131,9 @@ To ensure that Contacts are providing you with valid Email addresses for high-va
 Asset download counts
 ~~~~~~~~~~~~~~~~~~~~~
 
-When you view an Asset, Mautic shows **Total downloads**, which counts every download, and **Unique downloads**, which counts each Contact only once. The Assets list shows the total in the **Download count** column.
+When you view an Asset, Mautic shows **Total downloads**, which counts every download, and **Unique downloads**, which counts the first download from each browser or device that Mautic tracks. A Contact who downloads the Asset on two devices adds two unique downloads. The Assets list shows the total in the **Download count** column. Mautic doesn't count a download a User makes while logged in to Mautic, so testing your own Asset links doesn't change the counts.
 
-Mautic counts only downloads that succeed. A request doesn't count when Mautic can't serve the file, for example because someone deactivated the Asset or its file is missing. A failed request also doesn't stop the Contact's next successful download from counting as unique.
+Mautic counts only downloads that succeed. A request doesn't count when Mautic can't serve the file, for example because someone deactivated the Asset or its file is missing. A failed request also doesn't stop the Contact's next successful download from counting as unique. For a remote Asset, Mautic counts the download when it redirects the visitor to the remote URL, so the download still counts if the remote server then fails to serve the file.
 
 .. vale off
 
@@ -147,7 +147,9 @@ Mautic doesn't count downloads from bots, from IP addresses excluded from tracki
 
 .. vale on
 
-Download counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, downloads no longer change **Total downloads**, **Unique downloads**, or the **Download count** column. This applies to downloads from the Asset's link and to Assets that Mautic sends as Email attachments. Mautic still records each tracked Contact's downloads in their activity history.
+When Mautic sends an Asset as an Email attachment, it adds one to both **Total downloads** and **Unique downloads** for each recipient as it sends the Email, before the recipient opens the file. Each send counts as unique, even when the same Contact received the Asset before.
+
+Download counts are aggregate analytics. If you set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`, downloads no longer change **Total downloads**, **Unique downloads**, or the **Download count** column. This applies to downloads from the Asset's link and to Email attachments. Mautic still records each tracked Contact's downloads in their activity history.
 
 .. vale off
 

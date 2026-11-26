@@ -840,7 +840,7 @@ This filtering is always on, and you can't turn it off. Because Mautic doesn't t
 
 .. vale off
 
-Asset downloads from visitors who send a Global Privacy Control or Do Not Track signal still count toward the Asset's total downloads, without any link to the visitor. For details, see :ref:`Asset download counts<asset download counts>`.
+Asset downloads from visitors who send a Global Privacy Control or Do Not Track signal still count toward the Asset's total downloads, without any link to the visitor, when **Record aggregate analytics** is set to **Yes**. For details, see :ref:`Asset download counts<asset download counts>`.
 
 .. vale on
 
