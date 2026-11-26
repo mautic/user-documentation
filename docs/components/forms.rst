@@ -27,7 +27,7 @@ The following fields are available:
 
 - **Disable search indexing** - If Yes, Mautic prevents search engines from finding and displaying the Form in search results by sending the ``noindex`` http header.
 
-- **Kiosk mode** - If Yes, Mautic turns off tracking of Contacts created through the Form, so that the Form doesn't generate cookies or associate any IP address with the Contact record. Marketers may refer to this as 'data entry mode'. It's ideal for using at conferences or events where several Contacts may enter their information using the same device, as it prevents associating the activity on the device to Contacts.
+- **Kiosk Mode** - Use this for a Form that several people fill in on the same device at a conference or event. Marketers may refer to this as 'data entry mode'. If you select **Protect visitor privacy**, Mautic doesn't track the people who submit the Form. The Form doesn't set tracking cookies, and Mautic doesn't store the IP address or device of the person submitting it, so the IP address column in the Form's Results stays empty. Mautic also doesn't link a submission to the Contact it tracks on the device. If the Form has no fields mapped to Contact fields, the submission has no Contact, so Mautic skips Form actions that change a Contact and doesn't trigger Campaigns or Point Actions. The default, **Track visitor data**, tracks the people who submit the Form as usual.
 
 - **Use Theme style** - If Yes, the Form displays with the styling from either the selected Mautic Theme or the Attributes tab of the Form Fields. When No, the Form adopts the styling of where it's embedded.
 
@@ -399,7 +399,7 @@ Progressive Profiling Forms don't function if you embed your Form as static HTML
 
 **The kiosk mode limit**
 
-When you switch the Form to Kiosk Mode, the Progressive Profiling features are turn off. In Kiosk Mode, the Form always creates a new Contact upon each submission and doesn't track the device submitting the Form.
+When you switch the Form to Kiosk Mode, Mautic turns off the Progressive Profiling features. In Kiosk Mode, the Form doesn't track the device submitting it, so Mautic doesn't merge a submission into the Contact it tracks on that device. If a submitted unique identifier, such as an Email address, matches an existing Contact, Mautic updates that Contact. Otherwise, it creates a new Contact.
 
 Form actions
 ************
@@ -510,6 +510,10 @@ Adding Forms to Pages
 .. vale on
 
 There are several ways to add your Mautic Forms to Landing Pages or Websites.
+
+.. note::
+
+   If you add a Form to a website outside your Mautic instance, add the website's domain to **Valid Domains** in the :ref:`CORS settings <CORS Settings>`. After a submission, Mautic checks the return URL, which is usually the address where the visitor filled in the Form. Mautic only sends the Contact back to that URL when it's a relative URL, a URL on your Mautic site, or a URL on a domain listed in **Valid Domains**, even if you set **Restrict Domains** to **No**. Otherwise, Mautic ignores the return URL, so the submission records only the referrer URL from the visitor's browser. If Mautic ignores the return URL, the Form's **Successful Submit Action** is **Remain at Form**, and the Form submits without Mautic's JavaScript, Mautic shows a 'Thank you!' message in Mautic instead of returning the Contact to your website. This doesn't affect the **Redirect URL** action, which always sends the Contact to the URL you set.
 
 .. vale off
 
