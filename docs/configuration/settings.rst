@@ -440,12 +440,18 @@ Monitored inbox settings
 
 * **Contact Replies** - Similar to the monitored inbox for bounces, this is the inbox Mautic checks for Contact replies. Using :ref:`Replies to Email<email settings>` decisions in any Campaign requires configuration. With ``Use custom connection settings?`` set to ``no``, Mautic checks the default mailbox. If set to ``yes``, you may track a different mailbox for replies.
 
+.. _per-language Email texts:
+
 Message settings
 ================
 
 .. image:: images/message-settings.png
   :width: 600
   :alt: Screenshot showing Message Settings Configuration in Mautic
+
+You can set the web view text, the default Email signature, the unsubscribe text, and the unsubscribed and resubscribed confirmation messages for each language, so Contacts see these texts in the language of the Email they received. Each of these settings is a list where each row pairs a language with its text. To add a language, select **Add translation**, choose the language, and enter its text.
+
+When Mautic sends an Email, it uses the text for the Email's language. If that language has no text, Mautic uses the text for its base language - for example, Portuguese for an Email in Brazilian Portuguese - and then the text for the **Default language** in **System settings**. The unsubscribed and resubscribed confirmation messages use the language of the Email that contained the link.
 
 * **Text for the** ``{webview_text``} **token** - The message indicating the reader can view the Email in their browser. The default is; ``Having trouble reading this Email? Click here``.
   
@@ -486,7 +492,7 @@ Unsubscribe settings
 
 * **Disable unsubscribe link in header** - Select **Yes** to prevent Mautic from adding unsubscribe headers to Emails. When set to **No** - the default - Mautic automatically includes RFC 8058-compliant ``List-Unsubscribe`` and ``List-Unsubscribe-Post`` headers in Emails where you disable **Send to unsubscribed contacts**. Email clients that support this feature - such as GMail and Apple Mail - use these headers to display one-click unsubscribe capability.
 
-* **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. Don't edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
+* **Unsubscribed and resubscribed confirmation message** - If a Contact unsubscribes or resubscribes, this message displays on the page after the respective action. You can set these messages for each language - see :ref:`Message settings<per-language Email texts>`. Don't edit the ``|EMAIL|`` or the ``|URL|`` token in the ``<a href>`` tag.
 
 * **Show Contact preference settings** - Select **Yes** to direct the unsubscribe link to your configured Preference enter. If you haven't created a Preference Center, Mautic creates a default page based on the next 5 settings. The created page uses the default Theme for styling.
 
