@@ -176,7 +176,7 @@ Core permissions
 
 The Core Permissions section includes these permission categories:
 
-* **Themes - User has access to** - determines which Themes a User can view, edit, create, delete, and publish.
+* **Themes - User has access to** - determines what a User can do on the Themes page. Users with **View** can open the Themes page, download Themes, and upload new Themes. Users with **Delete** can also delete Themes. **Create** controls installing Themes through the API only, so it doesn't stop a User with **View** from uploading a Theme on the Themes page.
 
 .. vale on
 
