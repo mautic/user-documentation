@@ -176,7 +176,7 @@ Core permissions
 
 The Core Permissions section includes these permission categories:
 
-* **Themes - User has access to** - determines what a User can do on the Themes page. Users with **View** can open the Themes page, download Themes, and upload new Themes. Users with **Delete** can also delete Themes. **Create** controls installing Themes through the API only, so it doesn't stop a User with **View** from uploading a Theme on the Themes page.
+* **Themes - User has access to** - determines what a User can do on the Themes page. Users with **View** can open the Themes page, download Themes, upload Themes, and hide or show Mautic's default Themes. Uploading a Theme with the same name as an installed Theme that isn't a default Theme overwrites that Theme's files, so **View** lets a User replace existing Themes as well as add new ones. Users with **Delete** can also delete Themes. **Create** controls installing Themes through the API only, and **Edit** has no effect on the Themes page, so neither stops a User with **View** from uploading or replacing a Theme.
 
 .. vale on
 
