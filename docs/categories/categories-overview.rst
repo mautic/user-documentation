@@ -5,10 +5,10 @@ Categories
 
 .. vale on
 
-Categories are a way to organize Mautic elements. They're available for Assets, Campaigns, Emails, Focus Items, Forms, Pages, Points, Social Monitoring and Stages. There are two ways to use Categories:
+Categories are a way to organize Mautic elements. They're available for Assets, Campaigns, Emails, Focus Items, Forms, Landing Pages, Points, and Stages. There are two ways to use Categories:
 
-1. Create element-specific Categories for example only for Assets, Emails or Forms.
-2. Create global Categories for all Mautic elements.
+#. Create element-specific Categories, for example, only for Assets, Emails, or Forms.
+#. Create global Categories for all Mautic elements.
 
 .. vale off
 
@@ -26,6 +26,8 @@ To create new Categories, go to settings menu in the top right corner of Mautic.
 .. vale off
 
 When creating a new Category you can select type, title, description, alias, color and availability status. The color will be helpful to quickly find Mautic elements by their appropriate Category when viewing other areas within Mautic.
+
+To show only the items in specific Categories on a list view, such as Segments or Emails, use the Category filter. For more information, see :ref:`Filter list views by Category`.
 
 Deleting Categories
 *******************

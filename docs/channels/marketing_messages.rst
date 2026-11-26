@@ -12,7 +12,7 @@ Marketing Messages allow you to empower the customer to decide how they prefer t
     :width: 200
     :alt: Screenshot showing the Marketing Messages option in the main navigation menu of Mautic.
 
-With Marketing Messages, you can create content and make it available through multiple Channels - Email, SMS, Browser Notification, Mobile Notification, Tweets, and any other Channel you decide to create using Mautic's extendable open architecture.
+With Marketing Messages, you can create content and make it available through multiple Channels - Email, SMS, Browser Notification, Mobile Notification, and any other Channel you decide to create using Mautic's extendable open architecture.
 
 When using the 'Send Marketing Message' action in a Campaign, you can create the message in any or all of these Channels. If the Contact has a Channel preference set on their profile, Mautic sends the content on the preferred Channel. If they haven't specified a Channel, Mautic uses the default Channel - Email.
 
@@ -37,4 +37,21 @@ Provide a name and description for the Marketing Message, then choose the Channe
     :alt: Screenshot showing the creation of a new Marketing Message in Mautic.
 
 To enable a Channel, click Yes on the slider, and select - or create - the message.
+
+.. vale off
+
+Send to unsubscribed contacts indicator
+***************************************
+
+.. vale on
+
+When you add an Email Channel to a Marketing Message and select an Email, Mautic displays a **Yes** or **No** indicator showing whether that Email sends to unsubscribed Contacts.
+
+.. vale off
+
+The indicator reflects the Email's **Send to unsubscribed contacts** setting on the **Advanced** tab, so you can see at a glance whether the chosen Email reaches Contacts who have unsubscribed.
+
+See :ref:`Send to unsubscribed contacts setting <send to unsubscribed Contacts>` for what the setting means and its legal implications.
+
+.. vale on
 
