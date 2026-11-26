@@ -114,3 +114,22 @@ Follow this order in a consent-managed setup:
 #. The tracking add-on automatically waits for the essential script to finish loading, then queues the initial page view—you don't need to time this yourself.
 
 .. vale on
+
+.. vale off
+
+Withdrawn consent
+=================
+
+.. vale on
+
+When a visitor withdraws tracking consent, have your consent manager call ``MauticJS.withdrawTrackingConsent()`` in the browser. Mautic then forgets the visitor's browser:
+
+* Tracking stops on the current webpage.
+* The tracking script removes the Contact ID and device ID from your website's cookies and local storage.
+* Mautic expires its own tracking cookies and removes the tracking ID from that browser's device, so the old device ID no longer identifies the Contact.
+
+Mautic forgets only that browser and doesn't change the Contact's other devices.
+
+The function is part of the tracking add-on, so it's only available where the tracking add-on or the **Full tracking** script has loaded. If the tracking add-on isn't loaded, your consent manager can send a ``POST`` request to ``/mtc/withdraw`` on your Mautic instance instead. As with the tracking add-on, a developer or your consent platform usually sets this up.
+
+If the tracking add-on loads again later, for example after the visitor consents again, Mautic tracks the browser as a new anonymous visitor.
