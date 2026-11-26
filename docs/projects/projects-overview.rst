@@ -218,8 +218,21 @@ Use **Quick filters** on the Projects list to narrow it to the Projects you own 
 
 #. Go to **Projects**.
 #. Next to the search box, click the **Quick filters** button.
+
+   .. image:: images/projects-quick-filters-button.png
+      :align: center
+      :alt: Projects list with the Quick filters funnel button highlighted next to the search box
+
+   |
+
 #. Select one or more filters from the following table.
 #. Click **Apply selected**.
+
+   .. image:: images/projects-quick-filters-options.png
+      :align: center
+      :alt: Quick filters popover on the Projects list with the Email and Campaign filters selected and the Apply selected button highlighted
+
+   |
 
 Each filter adds its search command to the search box.
 
