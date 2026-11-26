@@ -724,7 +724,7 @@ When you delete a Contact, Mautic also records the deleted Contact in the Contac
 
 * Submissions that never had a Contact, because Mautic didn't track the person who submitted the Form - for example, with Kiosk Mode, Do Not Track or Global Privacy Control signals, or bots.
 * Submissions of Contacts that you deleted before you updated to a Mautic version that includes this command.
-* Submissions of Contacts that Mautic deleted without recording them, such as the anonymous Contacts that the ``mautic:maintenance:cleanup`` command removes.
+* Submissions of Contacts that the ``mautic:maintenance:cleanup`` command deletes, because it doesn't record them. This includes anonymous Contacts and the identified Contacts it deletes with the ``--gdpr`` option. For more information, see :ref:`Clean up old data cron job`.
 
 When you merge two Contacts, Mautic moves the Form submissions to the Contact that remains, so the command doesn't delete them.
 
