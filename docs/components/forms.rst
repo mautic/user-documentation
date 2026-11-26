@@ -720,11 +720,11 @@ When you delete a Contact, Mautic keeps the Contact's Form submissions and the v
 
 This command deletes the submissions of deleted Contacts, their records in the Form results tables, and the files that the Contacts uploaded through **File** fields, for all Forms. It deletes them in batches. In the same transaction as each batch, it updates the Form's submission count, so a Form that reached its :ref:`submission limit <Submission limits>` accepts submissions again when the count drops below the limit. If a batch fails, Mautic rolls back the whole batch, and the next run tries the batch again.
 
-When you delete a Contact, Mautic also records the deleted Contact in the Contact's Form submissions. This applies when you delete Contacts one at a time or in a batch, in the Mautic UI or through the API. The command only deletes submissions with this record, so it keeps these submissions:
+When you delete a Contact, Mautic also records the deleted Contact in the Contact's Form submissions. This applies when you delete Contacts one at a time or in a batch, in the Mautic UI or through the API, and when the ``mautic:maintenance:cleanup`` command deletes Contacts with the ``--gdpr`` option. The command only deletes submissions with this record, so it keeps these submissions:
 
 * Submissions that never had a Contact, because Mautic didn't track the person who submitted the Form - for example, with Kiosk Mode, Do Not Track or Global Privacy Control signals, or bots.
 * Submissions of Contacts that you deleted before you updated to a Mautic version that includes this command.
-* Submissions of Contacts that the ``mautic:maintenance:cleanup`` command deletes, because it doesn't record them. This includes anonymous Contacts and the identified Contacts it deletes with the ``--gdpr`` option. For more information, see :ref:`Clean up old data cron job`.
+* Submissions of anonymous Contacts that the ``mautic:maintenance:cleanup`` command deletes without the ``--gdpr`` option. Mautic keeps these so that the answers of anonymous visitors, for example to a survey, stay in the Form results. For more information, see :ref:`Clean up old data cron job`.
 
 When you merge two Contacts, Mautic moves the Form submissions to the Contact that remains, so the command doesn't delete them.
 
