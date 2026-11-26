@@ -499,8 +499,34 @@ Sending test Emails to yourself
 Use **Send tests to me** to review several Emails without opening each one. Mautic sends one test of each selected Email to the Email address of your Mautic User. The tests use sample Contact details to fill Contact tokens, add ``[TEST]`` to the start of the subject line, and don't count toward the Email's send statistics. This action is available only from the Email listing.
 
 #. In the Email listing, select the checkbox of each Email you want to test.
+
+   |
+
+   .. image:: images/emails/send_tests_to_me_select.png
+      :width: 800
+      :alt: Email listing with the checkboxes of two selected Emails highlighted
+
+   |
+
 #. Open the **Options** menu and select **Send tests to me**.
+
+   |
+
+   .. image:: images/emails/send_tests_to_me_options.png
+      :width: 800
+      :alt: Email listing with two Emails selected, the Options menu open, and the Send tests to me option highlighted
+
+   |
+
 #. In the confirmation dialog, review the destination address, then select **Send tests to me**.
+
+   |
+
+   .. image:: images/emails/send_tests_to_me_dialog.png
+      :width: 400
+      :alt: Send tests to me confirmation dialog with the destination address and the Send tests to me button highlighted
+
+   |
 
 Mautic shows how many tests it sent and to which address, for example '2 test emails were sent to admin@example.com.' If a test fails to send, Mautic names the Email in an error message, for example 'A test of “Welcome Email” could not be sent.'
 
