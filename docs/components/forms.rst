@@ -84,7 +84,7 @@ A Form's page shows these submission stats:
 .. vale off
 
 * **Total submissions** - the number of results the Form has. Deleting results lowers this number.
-* **Associated contacts** - the number of Contacts who submitted the Form.
+* **Associated contacts** - the number of different Contacts linked to the Form's results. Deleting results can lower this number, so it doesn't always include everyone who has submitted the Form.
 * **Submissions recorded** - the number of submissions Mautic has recorded for the Form. Deleting results doesn't lower this number.
 
 .. vale on
@@ -95,6 +95,8 @@ Mautic doesn't add a submission to **Submissions recorded** or the **Submissions
 
 * Someone submits the Form from the preview that the **Preview** button opens in Mautic. Mautic treats these as test submissions. Submissions from the Form's public page, which the iframe embed code loads, still count.
 * You've set **Record aggregate analytics** to **No** in the :ref:`Mautic tracking settings`. If you turn the setting back on later, Mautic doesn't add the submissions it received while the setting was off.
+
+When you upgrade Mautic to a version that shows **Submissions recorded**, Mautic starts these totals from the results each Form has at that time. The starting totals include any preview submissions Mautic saved as results before the upgrade.
 
 Mautic still saves these submissions as results and runs the Form actions. The submissions also count toward **Total submissions**, the **Results** column in the Forms list, and the Form's submission limit.
 
