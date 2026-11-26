@@ -22,7 +22,7 @@ If you are on a freshly installed Mautic instance, there is a chance that you do
   :width: 800
   :alt: Screenshot of install Plugins
 
-If you're trying to install a new Plugin that didn't come with the original Mautic installation files and it doesn't appear after you click Install/Upgrade Plugins, clear your Mautic cache - using the command at the :doc:`command line</configuration/command_line_interface>` - and try the Install/Upgrade Plugins button again.
+If you're trying to install a new Plugin that didn't come with the original Mautic installation files and it doesn't appear after you click **Install/Upgrade Plugins**, clear your Mautic cache - using the command at the :doc:`command line</configuration/command_line_interface>` - and try the **Install/Upgrade Plugins** button again.
 
 .. vale off
 
@@ -57,16 +57,20 @@ Use any of those actions to test the Plugin and see if the Contact appears in th
 
 5. Ensure that the Integration created the new Contact.
 
+.. vale off
+
 Troubleshooting Plugins
 -----------------------
 
+.. vale on
+
 If the ``firstname`` value wasn't saved to the Integration:
 
-1. Confirm that the Form General configuration tab enables the ``Save result`` option.
+#. Edit the Form Field and confirm that **Save result?** shows **Yes** on its **General** tab.
 
-2. In the Form Contact Field configuration tab, confirm the field is: ``ContactFirst Name``.
+#. On the field's **Mapped Field** tab, confirm the field maps to the Contact field **First Name**.
 
-3. Double select the Integration field mappings.
+#. Verify the Integration field mappings.
 
 .. vale off
 
@@ -75,7 +79,7 @@ Field mapping
 
 .. vale on
 
-At the *Contact Field Mapping* tab is the list of available fields from an Integration.
+The **Contact Mapping** tab lists the available fields from an Integration. Integrations that sync Companies also show a **Company Mapping** tab.
 
 You have to select the Mautic Contact Field equivalent so each field gets the right value.
 

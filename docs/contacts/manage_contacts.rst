@@ -44,6 +44,8 @@ Quick Add is a short Form with the fields you deem most important. To display fi
 
 You can add the Contact through the New Contact Form and include much more detail, but for quick entry this is the easiest and fastest way to get the Contact into the system.
 
+Select **Save & New** to save the Contact and immediately open a fresh Quick Add Form for the next Contact.
+
 .. vale off
 
 Add new Contact
@@ -150,7 +152,7 @@ You can find the following options:
 
 * **Change Channels** - Allows you to subscribe/unsubscribe the selected Contacts to/from communication Channels, such as Email and SMS, and also define frequency rules.
 
-* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner.
+* **Change Owner** - Allows you to assign/unassign the selected Contacts to/from an owner. To remove the owner, choose **No owner** in the **Change Owner** form and save.
 
 * **Change Segments** - Allows you to add/remove the selected Contacts to/from Segments. Note that if you add/remove a Contact to/from Segment manually, then Segment filters won't apply for them in that particular Segment.
 
@@ -218,7 +220,7 @@ The Engagements line chart display how active the Contact was in the past 6 mont
 Image
 =====
 
-* **Gravatar** - By default, Mautic pulls images from Gravatar. If there's a :xref:`Gravatar` associated with the Contact's Email address, Mautic adds the Gravatar photo to the Contact record.
+* **Gravatar** - If there's a :xref:`Gravatar` associated with the Contact's Email address, Mautic can show that photo on the Contact record. Mautic only loads Gravatar images after you set **Load profile images from Gravatar** to **Yes** in the :ref:`Privacy Centre settings<privacy centre settings>`. Until then, Contacts without a custom or social image show a default placeholder.
 
 * **Custom** - To add a custom image file to a Contact, edit the Contact record and look for **Preferred profile image** under the image placeholder.
 
@@ -427,6 +429,7 @@ When you merge Contacts, the main Contact receives the following data:
 
 * **Field data** - Values from the merged Contact fill empty fields on the main Contact.
 * **Owner** - If the main Contact doesn't have an owner, it inherits the merged Contact's owner.
+* **Stage** - If the main Contact doesn't have a Stage, it inherits the merged Contact's Stage. If both Contacts have a Stage, the main Contact keeps its own.
 * **Points** - Points from both Contacts combine.
 * **Tags** - Tags from both Contacts combine.
 * **Company associations** - Company associations from the merged Contact transfer to the main Contact. If both Contacts have a primary Company, the main Contact keeps its primary. If only the merged Contact has a primary Company, the main Contact inherits that primary designation.
