@@ -716,6 +716,24 @@ Mautic returns the Contact ID, the device ID, and a legacy session ID which is t
 
 The next time the tracking script sends a request to Mautic, it uses the device ID from the browser's local storage to identify the tracked Contact. If Mautic can't find it, it uses the cookies stored on it's own domain, using third party cookies to identify the Contact.
 
+Contacts who turn off tracking
+------------------------------
+
+.. vale off
+
+A Contact can turn off tracking in the :doc:`Preference Center</contacts/preference_center>` by selecting **No** for **Record when I open your emails**. When they save that choice, Mautic stops recognizing their browser:
+
+.. vale on
+
+* Mautic expires the ``mautic_device_id``, ``mtc_id``, and ``mautic_referer_id`` cookies right away.
+* Mautic removes the tracking ID from each of the Contact's devices, so a device ID that the browser keeps in local storage or in an old cookie no longer identifies the Contact.
+
+While tracking is off, Mautic doesn't write tracking cookies for the Contact, and the tracking script gets no Contact ID or device ID back. This also applies when a tracked link in an Email identifies the Contact. The link still opens. If your website loads the tracking script, Mautic tracks the browser as a new anonymous visitor.
+
+If the Contact selects **Yes** again later, Mautic tracks them with new identifiers. It doesn't restore the old ones.
+
+When you merge two Contacts and the merged Contact has tracking turned off, Mautic also removes the tracking IDs from all its devices, including the ones it takes over from the other Contact.
+
 Mobile monitoring
 =================
 
