@@ -99,8 +99,27 @@ To filter Webhooks by event type:
 
 #. Click the settings wheel in the top right corner and select **Webhooks**.
 #. Next to the search box, click the **Quick filters** button.
+
+   |
+
+   .. image:: images/webhooks-quick-filters-button.png
+      :align: center
+      :alt: Webhooks list with the Quick filters funnel button highlighted at the end of the search bar
+      :width: 600
+
+   |
+
 #. Under **Event type**, select an event type.
 #. Click **Apply selected**.
+
+   |
+
+   .. image:: images/webhooks-quick-filters-event-type.png
+      :align: center
+      :alt: Quick filters popover on the Webhooks list with the Email event type selected and the Apply selected button highlighted
+      :width: 600
+
+   |
 
 The list then shows only the Webhooks subscribed to at least one event of that type. Each event type covers these options from the **Webhook Events** list that you choose from when you create or edit a Webhook:
 
