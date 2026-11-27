@@ -39,7 +39,7 @@ Only one Draft at a time can exist for any given Landing Page. When working with
   :width: 400
   :alt: Screenshot showing the 'Apply Draft' and 'Discard Draft' buttons on the Landing Page edit interface.
 
-You can only change the content of the Landing Page itself when it's in Draft. Changes to the Subject, Internal Name, selected Segment, etc. apply to the original Landing Page even when editing a Draft version of it. The Draft content exists separately from the original Landing Page.
+You can only change the content of the Landing Page itself when it's in Draft. Changes to the Title, Alias, Category, and other settings apply to the original Landing Page even when editing a Draft version of it. The Draft content exists separately from the original Landing Page.
 
 .. vale off
 
