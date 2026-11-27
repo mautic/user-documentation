@@ -804,7 +804,7 @@ Setting a signature happens in two places:
 
    Mautic replaces the ``|FROM_NAME|`` token with the name defined in the Email Settings tab.
 
-   Mautic uses this signature when the Email doesn't have **Use owner as mailer** enabled.
+   Mautic uses this signature when the Email doesn't have **Use owner as mailer** enabled. You can set a different default signature for each language, and Mautic uses the one that matches the Email's language. For more information, see :ref:`Message settings<per-language Email texts>`.
 
 #. Each Mautic User can configure their own signature in their account settings. Mautic uses this signature when the Email has **Use owner as mailer** enabled and the Contact has an owner assigned.
 
