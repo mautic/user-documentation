@@ -85,11 +85,18 @@ Each Point Group adds a new filter for configuring the Segment.
 
 Contact details
 ---------------
-You can display Point Groups in the Contact details.
+The **Points** card on a Contact's detail page shows the Contact's Points and their score in every Point Group.
 
 .. image:: images/contact-group-points.png
   :width: 600
-  :alt: Screenshot of Contact Details with Group Points
+  :alt: Points card with a total of 85 Points, five Point Groups and their scores, and a Points distribution bar
+
+The card contains these parts:
+
+* The large number, captioned 'Individual', is the Contact's own Points. Mautic tracks it separately from the Point Group scores, so it doesn't have to equal the sum of the group scores.
+* The meter next to the total shows how many Point Groups have a positive score, such as '2 of 5 groups with points'.
+* **Group points** lists every Point Group from the highest score to the lowest, including groups where the Contact has 0 Points.
+* **Points distribution** is a bar that shows how the positive group scores split across Point Groups. Hover over a segment to see the group's name and score. Groups with a score of 0 or less don't appear in the bar.
 
 .. vale off
 
