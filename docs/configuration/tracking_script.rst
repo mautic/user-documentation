@@ -128,8 +128,10 @@ When a visitor withdraws tracking consent, have your consent manager call ``Maut
 * The tracking script removes the Contact ID and device ID from your website's cookies and local storage.
 * Mautic expires its own tracking cookies and removes the tracking ID from that browser's device, so the old device ID no longer identifies the Contact.
 
-Mautic forgets only that browser and doesn't change the Contact's other devices.
+Mautic doesn't change the Contact's other devices. Mautic can track several browsers that the same Contact uses on one computer or phone as a single device. In that case, withdrawing consent in one of these browsers also forgets the others on that device.
 
 The function is part of the tracking add-on, so it's only available where the tracking add-on or the **Full tracking** script has loaded. If the tracking add-on isn't loaded, your consent manager can send a ``POST`` request to ``/mtc/withdraw`` on your Mautic instance instead. As with the tracking add-on, a developer or your consent platform usually sets this up.
+
+If your website is on a different domain than Mautic and you set **Restrict Domains** to **Yes**, add your website's domain to **Valid Domains** in the :ref:`CORS settings <CORS Settings>`. Otherwise, the browser blocks the withdrawal request and Mautic keeps tracking the browser.
 
 If the tracking add-on loads again later, for example after the visitor consents again, Mautic tracks the browser as a new anonymous visitor.
