@@ -4,6 +4,18 @@ Mautic configuration settings
 Proper configuration is important for branding, performance, and the User experience for your team as they do their jobs. 
 These settings mostly don't need changing after initial configuration.
 
+To open the settings, go to **Settings** > **Configuration**. Each section in the left navigation, such as **System Settings** or **Email Settings**, opens on its own screen. Saving updates only the settings in the current section, so save your changes before you open another section:
+
+* **Save** saves the section and keeps it open.
+* **Save & Close** saves the section and returns you to the Dashboard.
+* **Cancel** discards your changes and returns you to the Dashboard.
+
+If you select a link in Mautic before you save, such as another section or a menu item, Mautic asks you to confirm that you want to discard your changes. Select **Confirm** to leave without saving, or **Cancel** to stay. If you close or reload the browser tab instead, your browser shows its own prompt to confirm that you want to leave.
+
+Mautic doesn't treat a file you choose for upload, such as the **Identity provider metadata file** in **User/Authentication Settings**, as an unsaved change. If choosing a file is your only change, neither prompt appears and Mautic doesn't upload the file, so select **Save** after you choose it.
+
+If a setting in the section isn't valid, Mautic shows an alert at the top of the screen and expands the panel that contains the field to correct.
+
 System settings
 ***************
 
@@ -831,7 +843,9 @@ Mautic tracking settings
 * **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent filling your logs with hits from bots.
 
 * **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
-  
+
+* **Record aggregate analytics** - Aggregate analytics are totals that Mautic doesn't link to any Contact, such as the number of submissions a Form receives. Mautic sets this to **Yes** by default. Select **No** to stop recording these totals in the features that support this setting. This setting doesn't change how Mautic tracks Contacts.
+
 .. note:: 
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
@@ -919,7 +933,7 @@ OpenID Connect settings
 
 Use these settings to let Users log in through an OpenID Connect provider. For setup steps and how Users log in, see :ref:`OpenID Connect <OpenID Connect authentication>`.
 
-* **Enable** - Turns OpenID Connect login on or off. The other settings in this section are available only when you set this to **Yes**.
+* **Enable** - Turns OpenID Connect login on or off. The other settings in this section are available only when you set this to **Yes**. Turning OpenID Connect off keeps the other settings and the links between Users and their provider accounts.
 
   .. vale off
 
@@ -929,7 +943,7 @@ Use these settings to let Users log in through an OpenID Connect provider. For s
 
 * **Role for new users** - The Role Mautic assigns to Users it creates through OpenID Connect. Required when **Allow new user registration** is on. For more information, see :doc:`Users and Roles</users_roles/managing_roles>`.
 
-* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL.
+* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL. Changing this value deletes the links between all Mautic Users and their provider accounts.
 
   .. vale on
 
@@ -962,7 +976,7 @@ Use a custom X.509 certificate and private key to secure communication between M
 Upload your:
 
 * **X.509 certificate**
-* **Private key file**
+* **Private key**
 
 Enter your **Private key encryption password**
 
@@ -977,15 +991,6 @@ Webhook settings
 
 * **Order of the queued events** - Process the events in chronological or reverse chronological order if a Webhook has a queue of multiple events.
   
-Social settings
-***************
-
-.. image:: images/social-settings.png
-  :width: 600
-  :alt: Screenshot showing Social Settings Configuration in Mautic
-
-* **Twitter Handle Field** - This field stores the Twitter username for Users added to Mautic through Social Monitoring.
-
 Support Mautic menu item
 ************************
 
