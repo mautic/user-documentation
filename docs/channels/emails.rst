@@ -631,7 +631,7 @@ Owner field tokens resolve to the field value of the Contact's assigned Owner, w
 .. note::
 
    * Mautic resolves link URL tokens when the Contact clicks the link, so this only applies to tracked links. If you turn off tracking for a link, Mautic doesn't resolve the tokens in its URL.
-   * Mautic also doesn't resolve link URL tokens when the click comes from a visitor who sends a Do Not Track or Global Privacy Control signal, because resolving them would send the Contact's details to another site. The visitor goes to the URL with the tokens left in place. For details, see :ref:`Clicks from visitors Mautic doesn't track<clicks from visitors Mautic doesn't track>`.
+   * Mautic doesn't put the Contact's details into link URLs when the click comes from a visitor who sends a Do Not Track or Global Privacy Control signal, because that would send them to another site. Instead, Mautic replaces each Contact field token with its default value, or with an empty string if the token has no default, and leaves Owner field tokens in place. For example, ``{contactfield=firstname|there}`` becomes ``there``. For details, see :ref:`Clicks from visitors Mautic doesn't track<clicks from visitors Mautic doesn't track>`.
    * If the Contact has no Owner, or the Owner field is empty, Mautic replaces the token with an empty string. This can produce a malformed URL, such as ``https://blog.example.com/author//``. Account for missing Owner values when you build link URLs with Owner field tokens.
 
 .. vale on
@@ -853,7 +853,7 @@ Mautic counts clicks on tracked links in Emails and Text Messages from visitors 
 
 * Record the click on a Contact or in the Contact's activity history
 * Store an IP address or set tracking cookies such as ``mtc_id`` and ``mautic_device_id``
-* Replace Contact field or Owner field tokens in the link's URL
+* Replace Contact field or Owner field tokens in the link's URL with the Contact's details. A Contact field token uses its default value instead, or an empty string if it has no default.
 
 Mautic only counts these clicks when the link still carries the tracking information it added when it sent the message. If that information is missing or damaged, for example because someone copied only part of the link, Mautic redirects the visitor without counting the click.
 
