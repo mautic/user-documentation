@@ -180,7 +180,6 @@ There are different types of documentation available to help you navigate your w
    plugins/icontact
    plugins/mailchimp
    plugins/microsoft_dynamics_crm
-   plugins/microsoft_outlook
    plugins/pipedrive
    plugins/salesforce
    plugins/sugar_crm
