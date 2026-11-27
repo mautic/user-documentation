@@ -184,7 +184,7 @@ The Core Permissions section includes these permission categories:
 
 .. note::
 
-   When you upgrade from an earlier version, Mautic grants the File Manager permission to each non-administrator Role that has **Create**, **Edit Own**, **Edit Others**, or **Full** permission for Emails, Landing Pages, Assets, or Dynamic Content. Mautic doesn't grant it to other Roles, even if their Users opened the file manager before the upgrade - for example, from the text editor on Forms, Focus Items, or Emails sent to a Contact, or from MMS Text Messages. If those Users need the file manager, give their Role **Full** File Manager permission. Administrator Roles always have access.
+   Mautic grants the File Manager permission automatically only once, during the first upgrade that adds it - to Mautic 7.3, or to Mautic 8.0 from an earlier version. That upgrade grants it to each non-administrator Role that has **Create**, **Edit Own**, **Edit Others**, or **Full** permission for Emails, Landing Pages, Assets, or Dynamic Content. Mautic doesn't grant it to other Roles, even if their Users opened the file manager before the upgrade - for example, from the text editor on Forms, Focus Items, or Emails sent to a Contact, or from MMS Text Messages. Later upgrades, including from Mautic 7.3 to Mautic 8.0, don't grant it to Roles created after that first upgrade. After you upgrade, review your Roles and give **Full** File Manager permission to each Role whose Users need the file manager. Administrator Roles always have access.
 
 .. _cloning a role:
 
