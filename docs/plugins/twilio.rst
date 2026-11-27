@@ -36,7 +36,7 @@ In order to configure the text messages correctly, follow these steps:
 
    .. vale Google.Parens = YES
 
-#. Unlock and copy the **Auth Token** and paste it to **Auth Token** field in the Twilio Plugin configuration.
+#. Unlock and copy the **Auth Token** and paste it to **Auth Token** field in the Twilio Plugin configuration. The **Auth Token** field always appears empty after you save it. To keep the saved token when you edit the Plugin configuration later, leave the field blank.
 
 #. Go to **Phone Numbers** > **Manage** > **Active numbers** in Twilio, add a phone number if you haven't already commissioned one.
 
@@ -76,7 +76,7 @@ In order to configure the text messages correctly, follow these steps:
 
 #. Configure the global frequency rules for the SMS Channel as appropriate for your business.
 
-#. Set the **Active** switch to **Yes** on the **Enabled/Auth** tab in Mautic and save the Plugin configuration.
+#. Set the **Is Enabled?** switch to **Yes** on the **Enabled/Auth** tab in Mautic and save the Plugin configuration.
 
 .. vale off
 
