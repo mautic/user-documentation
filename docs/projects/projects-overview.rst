@@ -209,6 +209,58 @@ If you have many Projects, use the search bar at the top of the Projects list to
 
 .. vale off
 
+Filtering Projects with Quick filters
+=====================================
+
+.. vale on
+
+Use **Quick filters** on the Projects list to narrow it to the Projects you own or the Projects that already contain a given entity type, without typing search commands.
+
+#. Go to **Projects**.
+#. Next to the search box, click the **Quick filters** button.
+#. Select one or more filters from the following table.
+#. Click **Apply selected**.
+
+Each filter adds its search command to the search box.
+
+.. vale off
+
+.. list-table::
+   :header-rows: 1
+
+   * - Group
+     - Quick filter
+     - Search command
+     - Shows
+   * - **Ownership**
+     - **My items**
+     - ``is:mine``
+     - Projects you own
+   * - **Associated resources**
+     - **With emails**
+     - ``has:emails``
+     - Projects with at least one Email assigned
+   * - **Associated resources**
+     - **With campaigns**
+     - ``has:campaigns``
+     - Projects with at least one Campaign assigned
+   * - **Associated resources**
+     - **With landing pages**
+     - ``has:pages``
+     - Projects with at least one Landing Page assigned
+   * - **Associated resources**
+     - **With assets**
+     - ``has:assets``
+     - Projects with at least one Asset assigned
+
+.. vale on
+
+When you select more than one filter, the list shows only the Projects that match all of them. For example, selecting both Email and Campaign filters shows the Projects that contain both Emails and Campaigns. You can also type these commands in the search box yourself. Add ``!`` in front of a command to exclude matching Projects, for example ``!has:assets`` shows the Projects without any Assets. To clear the filters, click the **Quick filters** button and click **Reset**.
+
+For more search commands and operators, see :doc:`Searching Mautic </search/search_operators>`.
+
+.. vale off
+
 Permissions
 ***********
 
