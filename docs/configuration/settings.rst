@@ -4,6 +4,18 @@ Mautic configuration settings
 Proper configuration is important for branding, performance, and the User experience for your team as they do their jobs. 
 These settings mostly don't need changing after initial configuration.
 
+To open the settings, go to **Settings** > **Configuration**. Each section in the left navigation, such as **System Settings** or **Email Settings**, opens on its own screen. Saving updates only the settings in the current section, so save your changes before you open another section:
+
+* **Save** saves the section and keeps it open.
+* **Save & Close** saves the section and returns you to the Dashboard.
+* **Cancel** discards your changes and returns you to the Dashboard.
+
+If you select a link in Mautic before you save, such as another section or a menu item, Mautic asks you to confirm that you want to discard your changes. Select **Confirm** to leave without saving, or **Cancel** to stay. If you close or reload the browser tab instead, your browser shows its own prompt to confirm that you want to leave.
+
+Choosing a file to upload, such as the **Identity provider metadata file** in **User/Authentication Settings**, doesn't count as an unsaved change. Mautic uploads the file only when you save the section. If the file is your only change and you leave the section without saving, neither Mautic nor your browser asks you to confirm, and Mautic doesn't upload the file.
+
+If a setting in the section isn't valid, Mautic shows an alert at the top of the screen and expands the panel that contains the field to correct.
+
 System settings
 ***************
 
@@ -63,7 +75,7 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 * **Restrict Domains** - When set to No, any website can pass information to Mautic. Selecting ``Yes`` to limit communication with your Mautic instance to websites listed in Valid Domains is **strongly recommended**.
 
-* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website.
+* **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on the non-secure example.com website, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website. Mautic also uses this list to decide which websites a Form submission can return the Contact to. For more information, see :ref:`Adding Forms to Pages`.
 
 * **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. Enter the domain name where you installed Mautic, such as ``mautic.example.com``. Separate multiple hosts with a comma. You can also use regular expressions for advanced matching, which Mautic encloses with ``/`` delimiters. For instance, ``.*\.?example.com$`` becomes ``/.*\.?example.com$/``. If left empty, Mautic responds to all hosts.
 
@@ -788,6 +800,26 @@ Landing Page settings
 
 * **Analytics script** - To track Landing Page visits and activity in other platforms such as Google Analytics, add those tracking scripts here.
 
+.. vale off
+
+Privacy Centre settings
+***********************
+
+.. vale on
+
+The Privacy Centre controls which external services receive data about your Contacts. To open it, go to **Settings** > **Configuration** and select **Privacy Centre**.
+
+Third-party services
+====================
+
+* **Load profile images from Gravatar** - Select **Yes** to show Contact profile images from :xref:`Gravatar`. To find each image, Mautic sends Gravatar a hash of the Contact's Email address. When set to **No**, Mautic shows a default placeholder image instead and sends nothing to Gravatar. This setting is **No** by default.
+
+  The setting applies wherever Mautic would otherwise show a Gravatar image, including Contact records, Contact cards, and global search results for Contacts. It doesn't affect User avatars, custom profile images that you upload, or images from social Plugins.
+
+.. note::
+
+   After you upgrade to a Mautic version that includes the Privacy Centre, profile images that Mautic loaded from Gravatar show the default placeholder until you set **Load profile images from Gravatar** to **Yes**.
+
 Tracking settings
 *****************
 
@@ -811,7 +843,9 @@ Mautic tracking settings
 * **Do Not Track 404 error for anonymous Contacts** - Select **Yes** to not track page hits on any 404 error page tracked by the tracking code. This option helps prevent filling your logs with hits from bots.
 
 * **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
-  
+
+* **Record aggregate analytics** - Aggregate analytics are totals that Mautic doesn't link to any Contact, such as the number of submissions a Form receives. Mautic sets this to **Yes** by default. Select **No** to stop recording these totals in the features that support this setting. This setting doesn't change how Mautic tracks Contacts.
+
 .. note:: 
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
@@ -888,6 +922,37 @@ Text message settings
 User/Authentication settings
 ****************************
 
+.. vale off
+
+.. _openid connect configuration options:
+
+OpenID Connect settings
+=======================
+
+.. vale on
+
+Use these settings to let Users log in through an OpenID Connect provider. For setup steps and how Users log in, see :ref:`OpenID Connect <OpenID Connect authentication>`.
+
+* **Enable** - Turns OpenID Connect login on or off. The other settings in this section are available only when you set this to **Yes**. Turning OpenID Connect off keeps the other settings and the links between Users and their provider accounts.
+
+  .. vale off
+
+* **Require users to authenticate with OpenID** - When on, Users must log in through the provider before they can use Mautic. Users who log in with a Mautic username and password must link their account to the provider first.
+
+* **Allow new user registration** - When on, Mautic creates a User the first time someone logs in with a provider account that doesn't link to any Mautic User.
+
+* **Role for new users** - The Role Mautic assigns to Users it creates through OpenID Connect. Required when **Allow new user registration** is on. For more information, see :doc:`Users and Roles</users_roles/managing_roles>`.
+
+* **Client URL** - The URL of your OpenID Connect provider, also called the issuer URL. Changing this value deletes the links between all Mautic Users and their provider accounts.
+
+  .. vale on
+
+* **Client ID** - The client ID of the app you created for Mautic in the provider.
+
+* **Client Secret** - The client secret of that app. After you save, Mautic doesn't show the secret again. Leave the field empty to keep the saved secret.
+
+* **Identifier field** - The provider claim that uniquely identifies each account. The default is ``sub``. Changing this value deletes the links between all Mautic Users and their provider accounts.
+
 SAML/SSO settings
 =================
 
@@ -911,7 +976,7 @@ Use a custom X.509 certificate and private key to secure communication between M
 Upload your:
 
 * **X.509 certificate**
-* **Private key file**
+* **Private key**
 
 Enter your **Private key encryption password**
 
@@ -938,12 +1003,12 @@ Social settings
 Support Mautic menu item
 ************************
 
-Mautic shows a 'Support Mautic' item in the main navigation menu. Selecting it opens ``https://mau.tc/support`` in a new browser tab, where you can learn how to support the project. Mautic enables this item by default.
+Mautic shows a **Support Mautic** item in the main navigation menu. Selecting it opens ``https://mau.tc/support`` in a new browser tab, where you can learn how to support the project. Mautic shows this item by default.
 
-To hide the 'Support Mautic' menu item—for example, if you run Mautic for clients and prefer not to show it—add the following line to your ``config/local.php`` file:
+To hide the **Support Mautic** menu item - for example, if you run Mautic for clients and prefer not to show it - add the following line to your ``config/local.php`` file:
 
 .. code-block:: php
 
   'support_mautic_enabled' => false,
 
-To show the item again, set this value back to ``true`` or remove the line.
+Then clear the cache with the ``bin/console cache:clear`` command. To show the item again, set this value back to ``true`` or remove the line, and clear the cache.
