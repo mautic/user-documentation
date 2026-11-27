@@ -180,7 +180,7 @@ The Core Permissions section includes these permission categories:
 
 .. vale on
 
-* **File Manager - User has access to** - determines whether a User can open the file manager. Users browse, upload, and select files such as images in the file manager when they insert media from the text editor or the media upload button on MMS Text Messages. Select **Full** to grant access. Users without this permission get an access denied error when they try to open the file manager. This permission only controls the file manager. Users without it can still upload images by pasting or dragging them into the text editor. It also doesn't apply to the GrapesJS Builder, which uses its own image manager, so Users without it can still browse, upload, and delete images in the GrapesJS Builder.
+* **File Manager - User has access to** - determines whether a User can open the file manager. Users browse, upload, and select files such as images in the file manager when they insert media from the text editor or the media upload button on MMS Text Messages. Select **Full** to grant access. **Full** also lets Users delete, rename, and move files and create folders in the file manager, including files that other Users uploaded. Users without this permission get an access denied error when they try to open the file manager. This permission only controls the file manager. Users without it can still upload images by pasting or dragging them into the text editor. It also doesn't apply to the GrapesJS Builder, which uses its own image manager, so Users without it can still browse, upload, and delete images in the GrapesJS Builder.
 
 .. note::
 
