@@ -855,7 +855,7 @@ Mautic counts clicks on tracked links in Emails and Text Messages from visitors 
 * Store an IP address or set tracking cookies such as ``mtc_id`` and ``mautic_device_id``
 * Replace Contact field or Owner field tokens in the link's URL with the Contact's details. A Contact field token uses its default value instead, or an empty string if it has no default.
 
-Mautic only counts these clicks when the link still carries the tracking information it added when it sent the message. If that information is missing or damaged, for example because someone copied only part of the link, Mautic redirects the visitor without counting the click.
+Mautic only counts these clicks when the link still carries the tracking information it added when it sent the message. If that information is damaged, for example because someone copied only part of the link, Mautic redirects the visitor without counting the click. If the information is missing entirely, Mautic also doesn't count the click, and it leaves the link's Contact field tokens in the URL as written instead of replacing them with their default values.
 
 Mautic doesn't count clicks from bots, from IP addresses excluded from tracking, or from ``HTTP HEAD``, prefetch, and prerender requests, because these requests don't come from a person opening the link. For details, see :ref:`Automatic tracking filtering<automatic tracking filtering>`.
 
