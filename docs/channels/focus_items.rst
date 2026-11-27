@@ -31,23 +31,32 @@ For each type of Focus Item, there are settings to configure which control the t
     :width: 400
     :alt: Screenshot showing the engagement settings for Focus Items.
 
-- **Animate** - When set to Yes, this applies a slide-in animation to the Focus Item. When set to No, the item appears without any kind of sliding motion.
-- **When to engage** - This setting controls the Focus Item shows. There are several options:
-   - **Upon arrival** - As soon as a visitor lands on the page
-   - **After slightly scrolling down** - Wait a little while until the visitor starts to scroll down the page
-   - **After scrolling to the middle** - Wait until the visitor scrolls to the middle of the page
-   - **After scrolling to the bottom** - Wait until the visitor scrolls right to the bottom of the page
-   - **Visitor intends to leave** - If the visitor's cursor moves over the address bar, or from the page to the tabs - for example to close the tab or open a new tab
-- **Timeout before engage** - This option allows you to set the delay in seconds after reaching the option selected in **When to engage**. For example, if the setting is **Upon arrival** and **Timeout before engage** is 2 seconds, the Focus Item appears two seconds *after* the visitor lands on the page.
-- **How often to engage** - This option allows you to control how frequently the Focus Item displays to visitors. The options available include:
-   - **Every page** - Show on every page the visitors engages with on your website
-   - **Once per session** - Show once for each time that the visitor accesses your website
-   - **Every 2 minutes** - Show the Focus Item every two minutes that the visitor is on your website
-   - **Every 15 minutes** - Show the Focus Item every 15 minutes that the visitor is on your website
-   - **Once per hour** -  Show the Focus Item once every hour that the visitor is on your website
-   - **Once per day** - Show the Focus Item once per day that the visitor is on your website
-- **Stop engaging after a conversion** - This option is only available for the types which track a conversion (Collect Data and Emphasize a Link).  If set to Yes, the Focus Item no longer displays if the visitor has either submitted the Form (Collect Data type) or clicked on the link (Emphasize a Link type).
-- **Stop engaging after closing Focus** - This option is available for Focus Items and uses cookies. If set to Yes, the Focus Item no longer displays to the visitor after they have interacted with it, until they clear their cookies.
+* **Animate** - When set to Yes, this applies a slide-in animation to the Focus Item. When set to No, the item appears without any kind of sliding motion.
+* **When to engage** - This setting controls when the Focus Item shows. There are several options:
+
+  * **Upon arrival** - As soon as a visitor lands on the page
+  * **After slightly scrolling down** - Wait a little while until the visitor starts to scroll down the page
+  * **After scrolling to the middle** - Wait until the visitor scrolls to the middle of the page
+  * **After scrolling to the bottom** - Wait until the visitor scrolls right to the bottom of the page
+  * **Visitor intends to leave** - If the visitor's cursor moves over the address bar, or from the page to the tabs - for example to close the tab or open a new tab
+
+* **Timeout before engage** - This option sets the delay in seconds after reaching the option selected in **When to engage**. For example, if the setting is **Upon arrival** and **Timeout before engage** is 2 seconds, the Focus Item appears two seconds *after* the visitor lands on the page.
+* **Engage from page view** - Use this option to keep the Focus Item off the first pages a visitor sees, such as the page they land on from an ad or a search result. Enter the page view from which the Focus Item starts to engage. Mautic counts the pages the visitor views in the current browser session, including only pages that embed this Focus Item. Set it to 2 to never engage on the page the visitor lands on, or leave it empty to engage from the first page. The value must be 1 or more.
+
+  This option works together with **When to engage** and **Timeout before engage**. For example, if **Engage from page view** is 2, **When to engage** is **Upon arrival**, and **Timeout before engage** is 4 seconds, the Focus Item appears four seconds after the visitor opens their second page. Mautic stores the count in a session cookie, so the count starts again when the visitor's browser session ends.
+
+* **How often to engage** - This option controls how frequently the Focus Item displays to visitors. The options available include:
+
+  * **Every page** - Show on every page the visitor engages with on your website
+  * **Once per session** - Show once for each time that the visitor accesses your website
+  * **Every 2 minutes** - Show the Focus Item every two minutes that the visitor is on your website
+  * **Every 15 minutes** - Show the Focus Item every 15 minutes that the visitor is on your website
+  * **Once per hour** - Show the Focus Item once every hour that the visitor is on your website
+  * **Once per day** - Show the Focus Item once per day that the visitor is on your website
+  * **Every X days** - Show the Focus Item again once a set number of days has passed since it last engaged the visitor, for example to show a newsletter popup again a week later. When you select this option, enter the number of days in the **Number of days** field. You must enter a value of 1 or more. If you save the Focus Item without a valid value, Mautic opens the builder again on the field that needs correcting.
+
+* **Stop engaging after a conversion** - This option is only available for the types which track a conversion (Collect Data and Emphasize a Link). If set to Yes, the Focus Item no longer displays if the visitor has either submitted the Form (Collect Data type) or clicked on the link (Emphasize a Link type).
+* **Stop engaging after closing Focus** - This option is available for Focus Items and uses cookies. If set to Yes, the Focus Item no longer displays to the visitor after they have interacted with it, until they clear their cookies.
 
 Styles
 ======
