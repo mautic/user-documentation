@@ -14,7 +14,7 @@ Creating a Segment
 
 #. To create a new Segment, navigate to Segments in the menu, and click the **New** button.
 
-#. In the **Details** tab, add a **Name**, **Public name**, and **Description** to your Segment.
+#. In the **Details** tab, add a **Name** and **Description** to your Segment.
 
    |
 
@@ -24,15 +24,14 @@ Creating a Segment
 
    |
 
-#. Fill in other options:
+#. In the settings panel on the right of the **Details** tab, set **Active**. If set to **No**, the Segment isn't available for use in filters for other Segments, as a Contact source in Campaigns, in modify Segment actions, and so on. You still see the Segment in your Segments list, but it doesn't exist anywhere else in Mautic.
 
-   * **Visible to other Users** - This option determines if the Segment is available for all Users to see and use, or only the User who created the Segment.
+#. To choose who can use the Segment, expand **Visibility and identification** in the same panel and set **Visible to other users**. This option determines if the Segment is available for all Users to see and use, or only the User who created the Segment.
+
+#. To let Contacts manage their membership of the Segment, open the **Preference center** tab and set these options:
+
    * **Available in Preference Center** - If set to **Yes**, Contacts can see and opt into or out of the Segment on a **Preference Center** interface. The Segments display if the Preference Center has the **Segment List** slot type.
-   * **Active** - If set to **No**, the Segment won't be available for use in filters for other Segments, as a Contact source in Campaigns, modify Segment actions, etc. You still see the Segment in your Segments list, but it won't exist anywhere else in Mautic.
-
-   * **Public name** - Users can set a different name for the Segment, which is visible to Contacts in the Preference Center options.
-
-     On the **Details** tab, static and dynamic Segments also have the option to display a different public name for a Segment.
+   * **Public name** - The name of the Segment that Contacts see in the Preference Center options, if it's different from the Segment's **Name**.
 
 .. vale off
 
@@ -310,7 +309,7 @@ Configuring Segment filters
 
 1. Create a new Segment by clicking the **+New** button.
 
-2. In the **Details** tab, add a **Name**, **Public name** and **Description** to your Segment.
+2. In the **Details** tab, add a **Name** and **Description** to your Segment.
 
 3. Click the **Filters** tab to add filters.
 
