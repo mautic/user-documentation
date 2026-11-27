@@ -171,7 +171,7 @@ The following parameters are available for customizing slot labels in your Theme
      - Label for the Segment list section heading
    * - Preferred Channel
      - ``preferredchannel['label-text']``
-     - Label for the preferred channel dropdown
+     - Label for the preferred Channel options
    * - Channel Frequency
      - ``channelfrequency['label-text']``
      - Label for the **I want to receive** checkbox
