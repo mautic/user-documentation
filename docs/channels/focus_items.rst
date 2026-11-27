@@ -211,6 +211,15 @@ When you save the Focus Item, Mautic shows the code snippet required to display 
 
     You must also ensure that you have specified your website's domain where you expect to use the Focus Item in the CORS settings for your Mautic instance, otherwise it won't appear. To verify this, go to Settings > Configuration > System Settings > CORS Settings and set Restricted Domains to Yes. Ensure that you specify your domain in the relevant field. Alternatively (but not recommended, as this would allow other websites to display your Focus Items), set Restrict Domains to No and don't specify your domains.
 
+Cookies before Mautic tracking starts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A Focus Item doesn't write its frequency and dismissal cookies, ``mautic_focus_{id}`` and ``mautic_focus_{id}_closed``, until Mautic tracking starts on the page. ``{id}`` is the Focus Item's ID. Until then, the Focus Item keeps these values on the current page only. Once Mautic tracking starts, it writes the cookies, and **How often to engage** and **Stop engaging after closing Focus** work as usual.
+
+Before Mautic tracking starts, nothing carries over to the next page. For example, a Focus Item set to show **Once per session** shows again on every page the visitor opens, and a visitor who closes it sees it again on the next page. The Bar style still sets a cookie to remember whether the visitor collapsed the bar.
+
+See :doc:`/configuration/tracking_script` for how to load Mautic tracking after consent.
+
 .. vale off
 
 Deploying through a Campaign
