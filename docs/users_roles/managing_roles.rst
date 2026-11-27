@@ -169,6 +169,23 @@ The Contact Permissions section includes several permission categories:
 
    When you upgrade from an earlier version, Mautic grants each non-administrator Role the same Notes access it already had for Contacts. Existing Roles keep working as before, so anyone who could view or edit a Contact's Notes still can. From there, you can refine each Role's Notes permissions independently of its Contact permissions.
 
+Core permissions
+~~~~~~~~~~~~~~~~
+
+.. vale off
+
+The Core Permissions section includes these permission categories:
+
+* **Themes - User has access to** - determines what a User can do on the Themes page. Users with **View** can open the Themes page, download Themes, upload Themes, and hide or show Mautic's default Themes. Uploading a Theme with the same name as an installed Theme that isn't a default Theme writes the uploaded files over that Theme's files. Files that aren't in the uploaded ZIP file stay in place. This means **View** lets a User change existing Themes as well as add new ones. Users with **Delete** can also delete Themes. **Create** controls installing Themes through the API only, and **Edit** and **Publish** have no effect on the Themes page. Selecting **Edit**, **Create**, **Delete**, or **Publish** also grants **View**, so a User with any of these permissions can upload Themes and change existing ones.
+
+.. vale on
+
+* **File Manager - User has access to** - determines whether a User can open the file manager. Users browse, upload, and select files such as images in the file manager when they insert media from the text editor or the media upload button on MMS Text Messages. Select **Full** to grant access. Users without this permission get an access denied error when they try to open the file manager. This permission only controls the file manager. Users without it can still upload images by pasting or dragging them into the text editor. It also doesn't apply to the GrapesJS Builder, which uses its own image manager, so Users without it can still browse, upload, and delete images in the GrapesJS Builder.
+
+.. note::
+
+   When you upgrade from an earlier version, Mautic grants the File Manager permission to each non-administrator Role that has **Create**, **Edit Own**, **Edit Others**, or **Full** permission for Emails, Landing Pages, Assets, or Dynamic Content. Mautic doesn't grant it to other Roles, even if their Users opened the file manager before the upgrade - for example, from the text editor on Forms, Focus Items, or Emails sent to a Contact, or from MMS Text Messages. If those Users need the file manager, give their Role **Full** File Manager permission. Administrator Roles always have access.
+
 .. _cloning a role:
 
 .. vale off
