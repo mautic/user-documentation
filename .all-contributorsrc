@@ -359,6 +359,60 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "AlexanderZlobinM1",
+      "name": "Alexander Zlobin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186687229?v=4",
+      "profile": "https://tendence.ru/zlobin",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mahmudurrahmanlabib",
+      "name": "Mahmudur Labib",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64046440?v=4",
+      "profile": "https://mahmudurlabib.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "irfanhanfi",
+      "name": "Irfan Hanfi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4272642?v=4",
+      "profile": "https://stackoverflow.com/users/902161/irfan",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "LeonOltmanns",
+      "name": "Leon Oltmanns",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55587275?v=4",
+      "profile": "http://www.leuchtfeuer.com",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "Richardvd",
+      "name": "Richard",
+      "avatar_url": "https://avatars.githubusercontent.com/u/971205?v=4",
+      "profile": "https://www.richardvandelft.nl",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "VictorMoni",
+      "name": "Victor Moni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123900844?v=4",
+      "profile": "http://victormoni.vercel.app",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

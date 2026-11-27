@@ -1,0 +1,6 @@
+# For docs/requirements.txt in .ddev/web-build/Dockerfile.sphinx
+services:
+  web:
+    build:
+      additional_contexts:
+        project: ${DDEV_APPROOT}
