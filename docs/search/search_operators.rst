@@ -123,6 +123,7 @@ Contacts search filters
     segment:{segment_alias}
     segment_source:manually_added (use with segment:{segment_alias})
     segment_source:filter_added (use with segment:{segment_alias})
+    segment_source:manually_removed (use with segment:{segment_alias})
     name:*
     company:*
     owner:*
@@ -139,7 +140,7 @@ Contacts search filters
 
 .. note::
 
-   The ``segment_source`` filter finds Contacts by how they joined a Segment, so it only works together with a ``segment`` filter. For example, ``segment:newsletter segment_source:manually_added`` returns the Contacts added to the ``newsletter`` Segment manually, and ``segment:newsletter segment_source:filter_added`` returns the ones that Mautic added because they match the Segment's filters. On its own, ``segment_source`` returns no Contacts.
+   The ``segment_source`` filter finds Contacts by how they joined or left a Segment, so it only works together with a ``segment`` filter. For example, ``segment:newsletter segment_source:manually_added`` returns the Contacts added to the ``newsletter`` Segment manually, and ``segment:newsletter segment_source:filter_added`` returns the ones that Mautic added because they match the Segment's filters. ``segment:newsletter segment_source:manually_removed`` returns the Contacts removed from the Segment manually. They aren't Segment members, so ``segment:newsletter`` alone doesn't return them. Without a ``segment`` filter, ``segment_source`` returns no Contacts.
 
 Custom Fields search filters
 ----------------------------
