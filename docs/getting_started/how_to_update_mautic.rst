@@ -5,18 +5,12 @@ How to update Mautic
 
 .. vale on
 
-There are two ways to update Mautic:
-
-1. Using the Command Line - recommended
-2. Through the User interface
+You can update Mautic at the command line, or with Composer for Composer-based installations. Mautic doesn't support updating in the browser.
 
 .. note::
     If you installed Mautic using Composer or switched to a Composer-based install, jump straight to the :ref:`Updating Mautic (Composer based installs)` section below.
 
-If your instance is in production, has a large number of Contacts and/or is  on shared hosting, it's **strongly** recommended that you update at the command line.
-
-.. warning::
-    Updating in the User interface requires a significant amount of resources, and can be error-prone if the server restricts resource allocation. A failed update or corrupted data can result from this. It's planned to remove this feature in Mautic 5.0, requiring updating at the command line.
+Before you update, make sure your server meets the requirements for the version you're updating to. Read more in :xref:`Mautic's Requirements`.
 
 Updating at the command line (non-Composer based installations)
 ***************************************************************
@@ -29,13 +23,6 @@ Checking for updates at the command line
 ========================================
 
 From Mautic 6, the default way to install, update and manage Mautic changes to Composer. 
-
-Since Mautic 4.2 deprecated the update feature within the Mautic User interface, you still receive a notification when a new version of Mautic is available until removal of this feature, but it's recommended to update via the command line. 
-
-.. image:: images/gui-update-deprecated.png
-  :width: 700
-  :height: 200
-  :alt: Screenshot showing deprecated update feature warning
 
 .. warning::
     Before starting to upgrade, it's highly recommended to take a backup of your instance. If updates are available, an update notification displays, followed by step-by-step instructions in the command-line interface to complete the process.
@@ -200,45 +187,8 @@ Follow the steps below to update your core files.
 .. code-block:: shell
 
     bin/console cache:clear
-    bin/console mautic:update:apply --finish
-    bin/console doctrine:migration:migrate --no-interaction
+    bin/console doctrine:migrations:migrate --no-interaction
     bin/console cache:clear
-
-Updating in the browser
-***********************
-
-When updating Mautic, there are several tasks which can take a long time to complete depending on the size of your Mautic instance.
-
-.. warning::
-    
-    If you have a lot of Contacts and/or use shared hosting, you might run into problems when updating with the notification 'bell' icon in older versions of Mautic. 
-
-When updating within the browser, problems usually manifest as the update hanging part way through, or crashing with an error. They often arise as a result of resource limitation, particularly on shared hosting environments. 
-
-For this reason, it's **always recommended** that you :ref:`update at the command line<installing updates at the command line>` wherever possible. From Mautic 5.0 the ability to update in the browser is completely removed, and you have to update at the command line.
-
-Before you commence updating, **please ensure that you have a tested backup of your Mautic instance**.
-
-This means that you have downloaded the files and database of your Mautic instance, and you have re-created it in a test environment somewhere and tested that everything is working as expected. This is your only recourse if there are any problems with the update. Never update without having a working, up-to-date backup.
-
-Checking for updates in the browser
-===================================
-
-When Mautic makes a new release, a notification appears in your Mautic instance.
-
-The notification links to an announcement post which explains what the release includes.
-
-.. note::
-    It's a good idea to read the announcement link for information about the release. There may be important information or steps that you may need to take before updating.
-
-Once you have thoroughly read the release notes, and have tested your backup Mautic instance, you can click the notification to complete the update.
-
-The update takes time to complete, and each step updates in the browser as it proceeds. Be patient and allow it to finish. On completion, a message confirms that the update has completed successfully.
-
-The update wasn't successful
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If this has happened to you, head over to the Troubleshooting section for a step-by-step walk-through of how to complete the update. Maybe consider using the command line next time.
 
 Stability levels
 ****************
