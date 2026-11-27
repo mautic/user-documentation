@@ -931,6 +931,41 @@ For example:
 
     <a href="{webview_url}" target="_blank">View in your browser</a>
 
+Forward a copy
+**************
+
+When a Contact forwards an Email from their mail client, the forwarded message still contains their personal links. Whoever receives it can unsubscribe the Contact, and their opens and clicks count as the Contact's. To let Contacts share an Email without their personal links, add one of these tokens to the Email:
+
+.. vale off
+
+* ``{forward_text}`` - inserts a link with the text 'Forward this email'. To change the text, edit the **Text for the {forward_text} token** setting, described in :doc:`/configuration/settings`.
+* ``{forward_url}`` - inserts only the forward link, for use in your own link or button.
+
+.. vale on
+
+For example:
+
+.. code-block:: html
+
+    <a href="{forward_url}">Send this Email to a colleague</a>
+
+.. vale off
+
+When the Contact selects the link, their mail client opens a new message with a link to a copy of the Email. By default, the subject is 'Fwd:' followed by the Email's subject, and the text is 'I thought you might like this email:' followed by the link. The Contact adds the addresses and sends the message from their own mail client, so Mautic doesn't send anything and doesn't learn who receives it. To change the subject and text for Emails in a given language, use the forwarded message settings in :ref:`Message settings`.
+
+.. vale on
+
+The copy opens in a browser, and its link is the same for every recipient of the Email. It has nothing that acts on or identifies the original Contact:
+
+* It has no unsubscribe, resubscribe, or Do Not Contact links.
+* It has no tracking pixel and no trackable links. Links go straight to their destination and keep the Email's UTM tags. Opening the copy or clicking its links doesn't add anything to the Contact's history.
+* Contact field tokens show their default value, such as ``Friend`` in ``{contactfield=firstname|Friend}``, or nothing when the token has no default. A token that formats its value, such as ``{contactfield=date_added|date}`` or ``{contactfield=country|label}``, is empty. Contact Owner tokens are empty, and Dynamic Content shows its default content. Contact field tokens in the subject of the new message also show their default value.
+* ``{webview_url}`` and ``{webview_text}`` link to the copy itself.
+
+Mautic builds the copy from the Email's current content, so a copy opened after you edit the Email shows your edits. If you wrapped a token in your own link, such as ``<a href="{unsubscribe_url}">Unsubscribe</a>``, the copy keeps the link text but the link goes nowhere.
+
+Anyone with the link can open the copy, and search engines don't index it. If you deactivate the Email, its copy shows a not-found error.
+
 Bounce management
 *****************
 

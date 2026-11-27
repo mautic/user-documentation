@@ -451,6 +451,18 @@ Message settings
   
   To change the text, change the message between the ``<a href="|URL|">`` and ``</a>`` tags. Don't change the ``|URL|`` text, because that's a token, which creates a unique URL for each Contact.
 
+.. vale off
+
+* **Text for the {forward_text} token** - The link that the ``{forward_text}`` token inserts. The default is ``<a href='|URL|'>Forward this email</a>``. To change the text, edit the text between the ``<a>`` and ``</a>`` tags. Keep the ``|URL|`` token, which Mautic replaces with the forward link. See :ref:`Forward a copy` for how forwarding works.
+
+* **Subject of the forwarded message, per language** - The subject of the new message that the forward link opens. Add a row for each language you want to customize. In the **Language (e.g. de or pt_BR)** field, enter a language code. In the **Subject, with |SUBJECT|** field, enter the subject, and put ``|SUBJECT|`` where the Email's subject goes.
+
+* **Text of the forwarded message, per language** - The text of the new message that the forward link opens. Add a row for each language you want to customize. In the **Language (e.g. de or pt_BR)** field, enter a language code. In the **Text, with |URL|** field, enter the text, and put ``|URL|`` where the link to the copy goes. If the text has no ``|URL|``, Mautic adds the link at the end.
+
+.. vale on
+
+Mautic picks the row that matches the Email's language, or the default language when the Email has none. A base language such as ``pt`` covers every Portuguese Email, including ``pt_BR``. For languages without a row, Mautic uses its built-in translation. You can't save a row with a language code Mautic doesn't recognize or with empty text.
+
 * **Default Email signature** - The signature for your default Emails, which pairs with the name & Email address in the **Mail Send** settings.
 
 * **Append tracking pixel into Email body?** - To track Email opens, select **Yes**. Select **No** to prevent tracking, reporting on, and using decisions based on Email opens.
