@@ -846,6 +846,18 @@ Mautic tracking settings
 
 * **Record aggregate analytics** - Aggregate analytics are totals that Mautic doesn't link to any Contact, such as the number of submissions a Form receives. Mautic sets this to **Yes** by default. Select **No** to stop recording these totals in the features that support this setting. This setting doesn't change how Mautic tracks Contacts.
 
+.. vale off
+
+* **Track link clicks** - This setting is **Yes** by default. Select **No** to stop linking clicks on tracked links in Emails and Text Messages to the people who click them. Tracked links still take visitors to their destination, but Mautic doesn't recognize the Contact from the link or from existing ``mtc_id`` and ``mautic_device_id`` cookies. It also doesn't set tracking cookies, store an IP address, or record the click on the Contact. Because Mautic doesn't know who clicked, the click doesn't trigger Campaign decisions such as **Clicks Email**.
+
+  Mautic still counts these clicks. They add to the link's total clicks, overall and for each Email or Text Message, but not to its unique clicks. Clicks from bots, from addresses in **List of IPs not to track Contacts with**, and from ``HTTP HEAD`` or prefetch requests don't count. For more information, see :ref:`Automatic tracking filtering<automatic tracking filtering>`. Click counts are aggregate analytics, so the **Record aggregate analytics** setting controls them, not this one.
+
+  Mautic doesn't fill Contact field values into a tracked link's URL either. Each Contact field token in the URL changes to its default value, or to nothing if it has no default. For example, ``{contactfield=firstname|there}`` becomes ``there`` and ``{contactfield=email}`` becomes empty. Before you set this to **No**, check that the links in your Emails and Text Messages still work without Contact field values.
+
+  Links to Assets work differently. Mautic still passes the Contact details from the link to the Asset download, so an Asset with **Track downloads** set to **Yes** links the download to the Contact who clicked. Set **Track downloads** to **No** on an Asset to count its downloads without linking them to anyone.
+
+.. vale on
+
 .. note:: 
 
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
