@@ -49,6 +49,8 @@ For each type of Focus Item, there are settings to configure which control the t
 - **Stop engaging after a conversion** - This option is only available for the types which track a conversion (Collect Data and Emphasize a Link).  If set to Yes, the Focus Item no longer displays if the visitor has either submitted the Form (Collect Data type) or clicked on the link (Emphasize a Link type).
 - **Stop engaging after closing Focus** - This option is available for Focus Items and uses cookies. If set to Yes, the Focus Item no longer displays to the visitor after they have interacted with it, until they clear their cookies.
 
+.. _focus items styles:
+
 Styles
 ======
 
