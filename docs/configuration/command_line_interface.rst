@@ -210,6 +210,9 @@ These are the commands you may need to use in relation to your Mautic instance.
    * - ``mautic:forms:delete-orphan-form-submission-records-from-form-results-table``
      - Deletes orphan records from results tables for deleted Form submissions.
      -
+   * - ``mautic:forms:delete-submissions-of-deleted-contacts``
+     - Deletes Form submissions of deleted Contacts and their records in the Form results tables.
+     -
 
 .. vale on
 

@@ -258,6 +258,8 @@ Currently supported are audit log entries, visitors - anonymous Contacts - and v
 
 Use the ``--gdpr`` flag to delete data to fulfill GDPR European regulation. This deletes Contacts that have been inactive for 3 years.
 
+The ``--gdpr`` flag doesn't delete the Form submissions of the Contacts it deletes, but it records the deleted Contacts in them. To delete these submissions and their Form results, run the ``mautic:forms:delete-submissions-of-deleted-contacts`` command after the cleanup. For more information, see :ref:`Deleting Form submissions of deleted Contacts`.
+
 **This permanently deletes data. Be sure to verify database backups before using as appropriate.**
 
 .. code-block:: php
