@@ -101,7 +101,9 @@ Using remote Assets
 
 .. vale on
 
-Instead of uploading a file from your computer, you can either provide a link to a file on a cloud storage provider or browse your integrated cloud storage provider - for example, an Amazon S3 bucket - by selecting the Remote tab, rather than Local.
+Instead of uploading a file from your computer, set **Storage Location** to **Remote**. Then either enter a link to the file in the **Remote URL** field, or select **Browse Remote Files** to choose a file from your integrated cloud storage provider - for example, an Amazon S3 bucket.
+
+Mautic shows **Browse Remote Files** only when a cloud storage Plugin, such as the :doc:`Amazon S3 Plugin </plugins/amazon>`, is active. Without one, you can still enter a link in the **Remote URL** field.
 
 **Optional remote URL validation:**
 
