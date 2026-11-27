@@ -118,6 +118,7 @@ Contacts search filters
     
     is:anonymous
     is:unowned
+    is:unsegmented (Contacts that aren't in any Segment)
     is:mine
     email:*
     segment:{segment_alias}
